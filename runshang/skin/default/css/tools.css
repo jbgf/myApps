@@ -1,0 +1,14 @@
+﻿@charset "utf-8";
+/* CSS Document */
+.mod-tools{position:fixed;right:0;top:200px;width:46px;overflow:visible;z-index:4;}
+.mod-tools > *{height:42px;color:#fff;line-height:42px;padding:0 0 0 8px;background-image:url(../images/youceicon.png);background-repeat:no-repeat;background-color:rgba(0,0,0,.25);border-left:0px solid rgba(0,0,0,.5);display:block;margin-top:1px;width:0;padding-left:50px;overflow:hidden;float:right;cursor:pointer;}
+.tools-qq{background-position:0 0px;}
+.tools-qq.active{ color:#fff;}
+.tools-phone{background-position:0 -44px;}
+.tools-phone.active{ color:#fff;}
+.tools-spread{background-position:0 -87px;}
+.tools-spread.active{font-size:13px; color:#fff;}
+.tools-email{background-position:0 -131px;}
+.tools-email.active{ color:#fff;}
+/*.tools-qrd{background-position:0 -126px;}
+.tools-qrd.active{background:rgba(0,0,0,.5) url(../image/common/qrd.jpg) no-repeat center center;background-size:120px 120px;height:140px;}*/
