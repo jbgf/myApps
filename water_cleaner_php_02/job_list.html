@@ -1,0 +1,52 @@
+{template header}
+<div class="sidebar inner">
+    <div class="sb_nav">
+        {php $Pcat = getParentData($catid);}
+        {if $Pcat}
+            <h3 class='title myCorner' data-corner='top 5px'>{$Pcat['catname']}</h3>
+            <div class="active" id="sidebar" data-csnow="1" data-class3="0" data-jsok="1">
+            {php $data = getCatNav($catid);}
+            {loop $data $t}
+            <dl class="list-none navnow"><dt><a class="zm {if $t['catid']==$catid}select{/if}" href="{$t['url']}">{$t['catname']}</a></dt></dl>
+            {/loop}
+            <div class="clear"></div>
+            </div>
+        {else}
+            <div class="title">{$catname}</div>
+        {/if}
+        <h3 class='title myCorner' data-corner='top 5px'>联系我们</h3>
+        <div class="editor cu">
+            <dl class="list-none navnow">
+                <dt id="part2_8"><a class="zm">
+                    <p>服务热线：18906919560 <br>
+                        招商热线：13075807280 <br>
+                        电话：0591-83562696 <br>
+                        传真：0591-83562696 </p>
+                    </a> </dt>
+            </dl>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="sb_box sbbo">
+        <div class="position">您当前位置：<a href="{SITE_PATH}">首页</a> >> {catpos($catid, ' &gt;&gt;&nbsp;&nbsp;')}</div>
+        <h3 class="title"> <span>{$catname}</span> </h3>
+        <div class="clear"></div>
+        <div class="active" id="joblist">
+            {list catid=$catid page=$page order=updatetime}
+            <dl class='list-none metlist'>
+                <dt><a href="{$t['url']}" title="{$t['title']}" target='_self'>{$t['title']}</a></dt>
+                <dd class='list '>
+                    <div class='mis'><span>发布日期：{date("Y-m-d", $t['updatetime'])}</span><span>工作地点：{$t['place']}</span><span>招聘人数：{$t['nop']}</span></div>
+                    <div class='editor'>{$t['content']}</div>
+                    <div class='dtail' style="display:none;"><span><a href="{$t['url']}" title='查看详细' target='_self'>查看详细</a></span></div>
+            </dl>
+            {/list}
+            <div class="clear"></div>
+        </div>
+        <div id="flip">
+            <div class='digg4 metpager_8'>{$pagelist}</div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+{template footer}
