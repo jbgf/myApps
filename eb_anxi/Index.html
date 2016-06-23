@@ -1,0 +1,1073 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>深圳市电子商务协会</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><style type="text/css">
+<!--
+body {
+	background-image: url(images/bg.jpg);
+}
+-->
+</style>
+	<meta name="Keywords" content="深圳市电子商务协会"/>
+	<meta name="Description" content="深圳市电子商务协会" />
+  <link href="css/home.css" rel="stylesheet" />
+	<script src="js/jquery.js" type="text/javascript"></script>	
+	<script src="js/kesion.common.js" type="text/javascript"></script>
+	<SCRIPT type=text/javascript>
+	jQuery(document).ready(function(){
+	    $(".navmain").find("li:first").addClass("curr");
+		var SDmodel = new scrollDoor();
+        SDmodel.sd(["m21","m22","m23"],["c21","c22","c23"],"sd01","sd02");
+	})
+	</SCRIPT>
+</head>
+<body>
+	
+<!--[if IE 6]>
+<script src="/ks_inc/iepng.js" type="text/javascript"></script>
+<script type="text/javascript">
+   EvPNG.fix('div, ul, img, li, input'); 
+</script>
+<![endif]-->
+<script type="text/javascript">
+$(document).ready(function() {		
+    $('.cityBar').hover(function() {
+		  $('.cityList', this).slideDown().stop(true,true);
+	  }, function() {
+		  $('.cityList', this).slideUp().stop(true,true);	
+	  });	
+	  
+	
+});
+</script>
+<div class="header"> 
+      <div class="top_bar">
+         <div class="w clearfix">                 	
+             <div class="cityqh">	
+                                 <div class="cityBar">  <a href="http://www.szec.cc/plus/ChangeCity.aspx?from=all" class="topcity">全国<i></i></a>
+          <div class="cityList">
+                                                   <ul>
+
+                                                   </ul>
+                                                </div>
+                                  </div>
+                                 </div>
+             <div class="l">
+			    
+				 <!--弹窗登录开始-->
+                    <span id="PopLoginTips">  <a href="http://www.szec.cc/reg.aspx">注册</a><b class="t-line">|</b>
+                 <a href="#" onclick="showuserlogin()">登录</a></span>
+                    <script>
+					function loginOut(){
+					 KesionJS.Confirm('确认退出吗？',"location.href='http://www.szec.cc/user/UserLoginOut.aspx';",'');
+					}
+                    jQuery(document).ready(function(){
+					   $(".site-menu").find("li:first").addClass("curr");
+                       jQuery.ajax({
+                          type:"POST",
+                          datatype: "xml",
+                          url:"/plus/ajaxs.ashx",
+                          data:"a=checkislogin",
+                          success:function(xml){
+                              var islogin=jQuery(xml).find("login islogin").text();
+                          if (islogin=='false') return;
+                          var str="<img onerror=\"this.src='images/face/boy.jpg'\" src='"+jQuery(xml).find("login userface").text()+"' align='texttop' class='userface' /> <a href='http://www.szec.cc/user/index.aspx' style='color:#059FE5'>"+jQuery(xml).find("login username").text()+"</a> <a onclick=\"loginOut();return false;\" href='#'>退出</a>  <a href='http://www.szec.cc/user/index.aspx?mainurl=message/receivedmessage.aspx'>消息"+jQuery(xml).find("login message").text()+"</a>";
+                         jQuery("#PopLoginTips").html(str);
+                          }
+                         });
+                    });
+                    </script>
+                 <!--弹窗登录结束-->
+			 
+			 
+               
+             </div>
+             <div class="fr col">
+                 <span>
+                   <a href="/3g/" target="_blank" class="head_3g">手机版</a>
+                   <i class="head_weixin">关注微信
+                     <span><img src="images/weixin.jpg" /></span>
+                   </i>
+               </span>
+            </div>
+            <div class="r"><a onclick="setHomepage('http://'+location.hostname+(location.port!=''?':':'')+location.port);" href="#">设为首页</a><b class="t-line">|</b><a href="#" onclick="javascript:AddFavorite('http://'+location.hostname+(location.port!=''?':':'')+location.port,'深圳市电子商务协会');">加入收藏</a><b class="t-line">|</b><a href="/bbs/">论坛</a> </div>
+         </div>
+     </div>
+     <div class="clear"></div>
+     <div class="logomain">
+       <div class="logobox">
+	     <table width="980" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="140"><div class="logo"><a href="/"><img src="images/logo.png" align="left" /></a></div></td>
+    <td width="840"><div class="top_text"><img src="images/tt.png" align="left" /></div></td>
+  </tr>
+  <tr>
+    <td height="30" colspan="2">&nbsp;</td>
+  </tr>
+</table>
+        
+       </div>
+	</div>
+     <div class="clear"></div>
+	<div class="navmain clearfix">
+       <div class="navbox">
+		   <ul class="menu">
+			  <li><a href="Index.html">首页</a></li>
+
+ <li><a href="zxzx.html">资讯中心</a></li>
+
+
+ <li><a href="zcfg.html">政策法规</a></li>
+
+
+ <li><a href="wzxq.html">人才服务</a></li>
+
+ <li><a href="wzxq.html">各委员会</a></li>
+
+ <li><a href="hyfc.html">会员风采</a></li>
+
+ <li><a href="hdtp.html">活动图片</a></li>
+
+ <li><a href="zxzx.html">协会新闻</a></li>
+
+
+
+		   </ul>
+ 
+        </div>
+        
+	</div>
+    
+</div> 
+
+	
+	
+    
+<script>
+//scrolltotop
+$(function(){
+        //首先将#back-to-top隐藏
+        $("#totop").hide();
+        //当滚动条的位置处于距顶部100像素以下时，跳转链接出现，否则消失
+        $(function () {
+            $(window).scroll(function(){
+                if ($(window).scrollTop()>100){
+                    $("#totop").fadeIn();
+                }
+                else
+                {
+                    $("#totop").fadeOut();
+                }
+            });
+            //当点击跳转链接后，回到页面顶部位置
+            $("#totop").click(function(){
+                $('body,html').animate({scrollTop:0},500);
+                return false;
+            });
+        });
+    }); 
+</script>
+<div id="share">
+<a id="totop" title="">返回顶部</a>
+<a href="http://weibo.com/1746776800/zFjVFob53" target="_blank" class="sina">关注KesionCMS新浪微博</a>
+<a href="http://t.qq.com/kesioncms?lang=zh_CHT"  target="_blank" class="tencent">关注KesionCMS腾讯微博</a>
+</div>
+
+	<div class="clear"></div>
+
+
+<script src="js/jquery.lazyload.js" type="text/javascript"></script>
+    <script type="text/javascript">
+	   $(function() {
+	$(".imgloading img").lazyload({
+	effect : "fadeIn" ,
+	placeholder : "images/loading.jpg",   
+	event : "scroll" 
+	});   
+	});
+	</script>
+<div style="margin-top:15px">
+	<table width="980" height="460" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td >
+	<!--<script src="js/myfocus-2.0.4.min.js"></script>-->
+	<script>!window.myFocus && document.write('<script src="js/myfocus-2.0.4.min.js"><\/script>');</script>
+<script type="text/javascript">
+myFocus.set({
+	id:'myFocus首页_顶部广告幻灯',//ID
+	pattern:'mF_pithy_tb',
+   trigger:'click',
+   wrap:'true',
+   auto:'true',
+width:860,
+height:450,
+   trigger:'click'
+});
+</script>
+<div id="myFocus首页_顶部广告幻灯">
+<div class="loading"></div>
+ <div class="pic"><!--图片列表-->
+	<ul>
+<li><a href="http://www.szec.cc/pic-2-4853.aspx" title="深圳市电子商务协会2016第三次理事会暨迎五一会长联谊会">
+<img width="860" onerror="this.src='images/nopic.gif';"  src="images/1131068899800781_S.png" thumb="" alt="深圳市电子商务协会2016第三次理事会暨迎五一会长联谊会" text="" /></a></li><li><a href="http://www.szec.cc/pic-2-4728.aspx" title="2016迎新春嘉年华">
+<img width="860" onerror="this.src='images/nopic.gif';"  src="images/D130985109058076.jpg" thumb="" alt="2016迎新春嘉年华" text="" /></a></li><li><a href="http://www.szec.cc/pic-2-4722.aspx" title="深圳市电子商务协会第二届第三次会员大会暨2016嘉年华会">
+<img width="860" onerror="this.src='images/nopic.gif';"  src="images/7130985105399638_S.jpg" thumb="" alt="深圳市电子商务协会第二届第三次会员大会暨2016嘉年华会" text="" /></a></li><li><a href="http://www.szec.cc/pic-2-4595.aspx" title="2015中国（咸宁）电子商务创新与发展高峰论坛取得圆满成功">
+<img width="860" onerror="this.src='images/nopic.gif';"  src="images/2130985112354013.jpg" thumb="" alt="2015中国（咸宁）电子商务创新与发展高峰论坛取得圆满成功" text="" /></a></li>	</ul>
+</div>
+</div>
+</td>
+  </tr>
+</table>	
+	<div class="indexmain imgloading">
+	  <div class="main">
+           <div class="main_left">
+           <!--main_left_nr start-->
+              <div class="main_left_nr">
+              
+                <!--main_left_nr01 start-->
+				<div class="main_left_nr01">
+					<div class="main_left_nr01_hd"><script>!window.myFocus && document.write('<script src="js/myfocus-2.0.4.min.js"><\/script>');</script>
+<script type="text/javascript">
+myFocus.set({
+	id:'myFocus首页_顶部幻灯',//ID
+	pattern:'mF_YSlider',
+   trigger:'click',
+   wrap:'true',
+   auto:'true',
+width:400,
+height:200,
+   trigger:'click'
+});
+</script>
+<div id="myFocus首页_顶部幻灯">
+<div class="loading"></div>
+ <div class="pic"><!--图片列表-->
+	<ul>
+<li><a href="http://www.szec.cc/v-1-4735.aspx" title="【协会动态】关于参加“2016中国国际电子商务博览会“的通知">
+<img width="400" onerror="this.src='images/nopic.gif';"  src="images/7131006849780625_S.png" thumb="" alt="【协会动态】关于参加“2016中国国际电子商务博览会“的通知" text="附: 2016(第五届)中国国际电子商务博览会相关介绍2016中国国际电子商务博览会           同期举办：2016中国（义乌）世界电子商务大会             2016中国电子商务创" /></a></li><li><a href="http://www.szec.cc/v-1-4677.aspx" title="【协会动态】关于举办2015第九届"中国电子商务创新与发展高峰论坛"的通知">
+<img width="400" onerror="this.src='images/nopic.gif';"  src="images/X130919597879004_S.jpg" thumb="" alt="【协会动态】关于举办2015第九届"中国电子商务创新与发展高峰论坛"的通知" text=" 关于举办第九届"中国电子商务创新与发展高峰论坛"的通知 各有关企业:“中国电子商务建设与发展高峰论坛”是自2008以来历年在深圳“高交会”期间配套举办的具有国内影响力的电子商务高层交流会议，是促进国" /></a></li><li><a href="http://www.szec.cc/v-1-4628.aspx" title="【行业动态】执行会长郝建强受邀参加中国（四川）电子商务发展峰会">
+<img width="400" onerror="this.src='images/nopic.gif';"  src="images/1130894508531040_S.jpg" thumb="" alt="【行业动态】执行会长郝建强受邀参加中国（四川）电子商务发展峰会" text="10月15日上午，中西部地区首个电子商务全国性峰会——2015中国（四川）电子商务发展峰会在绵阳市开幕。省委副书记、省长魏宏宣布峰会开幕并致辞。京东集团董事局主席兼CEO刘强东，唯品会高级副总裁唐倚智" /></a></li>	</ul>
+</div>
+</div>
+</div>
+                    
+                    <div class="main_left_nr01_right">
+                       
+ <div class="main_left_nr01_right_tit">
+                          <a href="http://www.szec.cc/v-1-4870.aspx"  title="【协会活动】中国（深圳）2016首届电商企业大型招聘博览会">【协会活动】中国（深圳）2016首届电商...</a>
+                       </div>
+                        <div class="main_left_nr01_right_nr">
+                          <a href="http://www.szec.cc/v-1-4870.aspx">中国（深圳）2016首届电商企业大型招聘博览会              邀 请 函各会员单位：为搭建电商行业招聘平台，满足会员单位的用人需...</a>
+                       </div>
+                       <div class="clear blank10"></div>
+                       <div class="bor_top"></div>
+                       <div class="clear blank10"></div>
+ 
+
+                      
+                       <div class="main_left_nr01_right_tit">
+                          <a href="http://www.szec.cc/v-1-4849.aspx"  title="【协会动态】协会执行会长郝建强与其他行业协会领导团赴河源考察">【协会动态】协会执行会长郝建强与其他行业...</a>
+                       </div>
+                        <div class="main_left_nr01_right_nr">
+                          <a href="http://www.szec.cc/v-1-4849.aspx">        4月21-22日，应中共河源市委、市政府的邀请，由深圳市民政局党委委员、市社会组织管理局局长凌冲率队，协会与深圳市社会组织总...</a>
+                       </div>
+
+
+                    </div>
+                    
+				</div>	
+                <!--main_left_nr01 end-->
+                
+                <!--main_left_nr02 start-->
+                <div class="main_left_nr02">
+                   <div class="main_left_nr02_left">
+                      <div class="main_left_nr02_left_l">
+                         
+ <div class="nr_box"> <a href="http://www.szec.cc/v-1-4881.aspx" title="【行业动态】从供给侧改革看农村电商破局"><img src="images/P131096741144062_S.jpg" onerror="this.src='images/nopic.gif';"/></a>
+                            <span><a href="http://www.szec.cc/v-1-4881.aspx" title="【行业动态】从供给侧改革看农村电商破局">【行业动态】从供给侧</a></span>
+                         </div>
+
+ <div class="nr_box"> <a href="http://www.szec.cc/v-1-4880.aspx" title="【政策申报】关于申报2016年“广东省自主创新示范企业、"><img src="images/Z131092337665468_S.png" onerror="this.src='images/nopic.gif';"/></a>
+                            <span><a href="http://www.szec.cc/v-1-4880.aspx" title="【政策申报】关于申报2016年“广东省自主创新示范企业、">【政策申报】关于申报</a></span>
+                         </div>
+
+
+                         
+                         
+                      </div>
+                      <ul>
+                          
+ <li><a href="http://www.szec.cc/v-1-4881.aspx" title="【行业动态】从供给侧改革看农村电商破局">【行业动态】从供给侧改革看农村电</a></li>
+
+ <li><a href="http://www.szec.cc/v-1-4878.aspx" title="【聚焦深圳】百亿元基金支持中小微企业">【聚焦深圳】百亿元基金支持中小微</a></li>
+
+ <li><a href="http://www.szec.cc/v-1-4867.aspx" title="【社会热点】分析：滴滴会“烧光”苹果的投资吗？">【社会热点】分析：滴滴会“烧光”</a></li>
+
+ <li><a href="http://www.szec.cc/v-1-4864.aspx" title="【社会热点】“早知道这些我的公司就不会死”系列（二）：Cohort Analysis">【社会热点】“早知道这些我的公司</a></li>
+
+ <li><a href="http://www.szec.cc/v-1-4863.aspx" title="【社会热点】“早知道这些我的公司就不会死”系列（一）：CAC、LTV、PBP">【社会热点】“早知道这些我的公司</a></li>
+
+ <li><a href="http://www.szec.cc/v-1-4862.aspx" title="【研究报告】商务部发布《中国对外贸易形势报告（2016年春季）》">【研究报告】商务部发布《中国对外</a></li>
+
+ <li><a href="http://www.szec.cc/v-1-4860.aspx" title="【社会热点】跨境电商新税账本：剑指保税备货 行邮税可能并轨">【社会热点】跨境电商新税账本：剑</a></li>
+
+ <li><a href="http://www.szec.cc/v-1-4859.aspx" title="【社会热点】《经济学人》：印度电子商务蓄势待发">【社会热点】《经济学人》：印度电</a></li>
+
+
+                      </ul>
+                   </div>
+                   <div class="main_left_nr02_right">
+                       <div class="main_left_nr02_right_top">
+                          <ul>
+                             
+ <li><a href="http://www.szec.cc/v-1-4881.aspx"><img src="images/P131096741144062_S.jpg" onerror="this.src='images/nopic.gif';" /></a></li>
+
+ <li><a href="http://www.szec.cc/v-1-4878.aspx"><img src="images/X131092226539375_S.jpg" onerror="this.src='images/nopic.gif';" /></a></li>
+
+ <li><a href="http://www.szec.cc/v-1-4867.aspx"><img src="images/M131079244981718.jpg" onerror="this.src='images/nopic.gif';" /></a></li>
+
+
+                          </ul>
+                       </div>
+                       <div class="main_left_nr02_right_bottom">
+                          <ul>
+                            
+ <li><a href="http://www.szec.cc/v-1-4880.aspx" title="【政策申报】关于申报2016年“广东省自主创新示范企业、">【政策申报】关于申报2016年“广东省自主创新示范</a></li>
+
+ <li><a href="http://www.szec.cc/v-1-4879.aspx" title="【政策法规】深圳市市长质量奖申报 大奖奖励200万">【政策法规】深圳市市长质量奖申报 大奖奖励200万</a></li>
+
+ <li><a href="http://www.szec.cc/v-1-4878.aspx" title="【聚焦深圳】百亿元基金支持中小微企业">【聚焦深圳】百亿元基金支持中小微企业</a></li>
+
+ <li><a href="http://www.szec.cc/v-1-4868.aspx" title="【活动通知】市经贸信息委关于组团参加第120届广交会的通知">【活动通知】市经贸信息委关于组团参加第120届广交</a></li>
+
+ <li><a href="http://www.szec.cc/v-1-4861.aspx" title="【深圳政策】市经贸信息委关于受理2016年第一批战略性新兴产业和未来产业发展资金新一代信息技术产业应用示范和产业服务项目申报的通知">【深圳政策】市经贸信息委关于受理2016年第一批战</a></li>
+
+
+                          </ul>
+                       </div>
+                   </div>
+                </div>
+                <!--main_left_nr02 end-->
+                
+              </div>  
+              <!--main_left_nr end-->
+		</div>	 
+            <div class="main_right">
+               <div class="main_right_top">
+                  <ul>
+                     
+ <li> <a href="http://www.szec.cc/v-1-4867.aspx" title="【社会热点】分析：滴滴会“烧光”苹果的投资吗？"><img src="images/M131079244981718.jpg" onerror="this.src='images/nopic.gif';"/></a>
+   </li>
+
+ <li> <a href="http://www.szec.cc/v-1-4864.aspx" title="【社会热点】“早知道这些我的公司就不会死”系列（二）：Cohort Analysis"><img src="images/U131074977842343.jpg" onerror="this.src='images/nopic.gif';"/></a>
+   </li>
+
+
+
+                  </ul>
+               </div>
+               <div class="main_right_bottom">
+                  <ul>
+                     
+
+
+
+ <li><a href="http://www.szec.cc/v-1-4867.aspx" title="【社会热点】分析：滴滴会“烧光”苹果的投资吗？">【社会热点】分析：滴滴会“烧</a></li>
+
+ <li><a href="http://www.szec.cc/v-1-4864.aspx" title="【社会热点】“早知道这些我的公司就不会死”系列（二）：Cohort Analysis">【社会热点】“早知道这些我的</a></li>
+
+ <li><a href="http://www.szec.cc/v-1-4863.aspx" title="【社会热点】“早知道这些我的公司就不会死”系列（一）：CAC、LTV、PBP">【社会热点】“早知道这些我的</a></li>
+
+ <li><a href="http://www.szec.cc/v-1-4862.aspx" title="【研究报告】商务部发布《中国对外贸易形势报告（2016年春季）》">【研究报告】商务部发布《中国</a></li>
+
+ <li><a href="http://www.szec.cc/v-1-4860.aspx" title="【社会热点】跨境电商新税账本：剑指保税备货 行邮税可能并轨">【社会热点】跨境电商新税账本</a></li>
+
+ <li><a href="http://www.szec.cc/v-1-4859.aspx" title="【社会热点】《经济学人》：印度电子商务蓄势待发">【社会热点】《经济学人》：印</a></li>
+
+ <li><a href="http://www.szec.cc/v-1-4858.aspx" title="【社会热点】李克强部署消费工业升级 推动消费品“品质革命”">【社会热点】李克强部署消费工</a></li>
+
+ <li><a href="http://www.szec.cc/v-1-4843.aspx" title="【行业动态】今天起，国内“海淘”免税时代终结！">【行业动态】今天起，国内“海</a></li>
+
+
+                  </ul>
+               </div>
+            </div>         
+                
+                <div class="clear"></div>
+  
+		  <div class="left02">
+					<h4><em>资讯中心</em>
+                    <span>
+                    
+<a href="http://www.szec.cc/a/1107.aspx">社会热点</a>
+
+<a href="http://www.szec.cc/a/1108.aspx">行业动态</a>
+
+<a href="http://www.szec.cc/a/1110.aspx">协会动态</a>
+
+<a href="http://www.szec.cc/a/1114.aspx">聚焦深圳</a>
+
+<a href="http://www.szec.cc/a/1139.aspx">研究报告</a>
+
+
+                   <a href="http://www.szec.cc/a/1104.aspx">更多</a></span></h4>
+						<div class="clear"></div>
+						
+						<div id="tab_2">
+							<del>
+							<!--BOX-->
+								<div class="flbox">
+									<dl> 
+								     
+ <dt>
+	<a href="http://www.szec.cc/v-1-4881.aspx" title="【行业动态】从供给侧改革看农村电商破局"><img src="images/P131096741144062_S.jpg" /></a><br /><a href="http://www.szec.cc/v-1-4881.aspx" title="【行业动态】从供给侧改革看农村电商破局">【行业动态】从供给侧改革看农村</a>
+  </dt>
+
+
+   <dd>
+	<a href="http://www.szec.cc/v-1-4878.aspx" title="【聚焦深圳】百亿元基金支持中小微企业"><img src="images/X131092226539375_S.jpg" onerror="this.src='images/nopic.gif';" /></a><br /><a href="http://www.szec.cc/v-1-4878.aspx" title="【聚焦深圳】百亿元基金支持中小微企业">【聚焦深圳】百亿元基</a>								
+  </dd>
+
+   <dd>
+	<a href="http://www.szec.cc/v-1-4867.aspx" title="【社会热点】分析：滴滴会“烧光”苹果的投资吗？"><img src="images/M131079244981718.jpg" onerror="this.src='images/nopic.gif';" /></a><br /><a href="http://www.szec.cc/v-1-4867.aspx" title="【社会热点】分析：滴滴会“烧光”苹果的投资吗？">【社会热点】分析：滴</a>								
+  </dd>
+
+   <dd>
+	<a href="http://www.szec.cc/v-1-4864.aspx" title="【社会热点】“早知道这些我的公司就不会死”系列（二）：Cohort Analysis"><img src="images/U131074977842343.jpg" onerror="this.src='images/nopic.gif';" /></a><br /><a href="http://www.szec.cc/v-1-4864.aspx" title="【社会热点】“早知道这些我的公司就不会死”系列（二）：Cohort Analysis">【社会热点】“早知道</a>								
+  </dd>
+
+   <dd>
+	<a href="http://www.szec.cc/v-1-4863.aspx" title="【社会热点】“早知道这些我的公司就不会死”系列（一）：CAC、LTV、PBP"><img src="images/B131074971037968.jpg" onerror="this.src='images/nopic.gif';" /></a><br /><a href="http://www.szec.cc/v-1-4863.aspx" title="【社会热点】“早知道这些我的公司就不会死”系列（一）：CAC、LTV、PBP">【社会热点】“早知道</a>								
+  </dd>
+
+  
+									</dl>
+								</div>
+                                <div class="frbox">
+									<dl> 
+							        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td><a href="http://www.szec.cc/v-1-4791.aspx" target="_blank" class="cbox">【P2P网贷指数】1月28日中国P2P网贷指数</a><span class="date"></span></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.szec.cc/v-1-4790.aspx" target="_blank" class="cbox">【P2P网贷指数】1月27日中国P2P网贷指数</a><span class="date"></span></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.szec.cc/v-1-4789.aspx" target="_blank" class="cbox">【P2P网贷指数】1月26日中国P2P网贷指数</a><span class="date"></span></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.szec.cc/v-1-4788.aspx" target="_blank" class="cbox">【P2P网贷指数】1月25日中国P2P网贷指数</a><span class="date"></span></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.szec.cc/v-1-4787.aspx" target="_blank" class="cbox">【P2P网贷指数】1月24日中国P2P网贷指数</a><span class="date"></span></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.szec.cc/v-1-4786.aspx" target="_blank" class="cbox">【P2P网贷指数】1月23日中国P2P网贷指数</a><span class="date"></span></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.szec.cc/v-1-4785.aspx" target="_blank" class="cbox">【P2P网贷指数】1月22日中国P2P网贷指数</a><span class="date"></span></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.szec.cc/v-1-4784.aspx" target="_blank" class="cbox">【P2P网贷指数】1月21日中国P2P网贷指数</a><span class="date"></span></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.szec.cc/v-1-4783.aspx" target="_blank" class="cbox">【P2P网贷指数】1月20日中国P2P网贷指数</a><span class="date"></span></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.szec.cc/v-1-4782.aspx" target="_blank" class="cbox">【P2P网贷指数】1月19日中国P2P网贷指数</a><span class="date"></span></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.szec.cc/v-1-4781.aspx" target="_blank" class="cbox">【P2P网贷指数】1月18日中国P2P网贷指数</a><span class="date"></span></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.szec.cc/v-1-4780.aspx" target="_blank" class="cbox">【P2P网贷指数】1月17日中国P2P网贷指数</a><span class="date"></span></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.szec.cc/v-1-4779.aspx" target="_blank" class="cbox">【P2P网贷指数】1月16日中国P2P网贷指数</a><span class="date"></span></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.szec.cc/v-1-4778.aspx" target="_blank" class="cbox">【P2P网贷指数】1月15日中国P2P网贷指数</a><span class="date"></span></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.szec.cc/v-1-4777.aspx" target="_blank" class="cbox">【P2P网贷指数】1月14日中国P2P网贷指数</a><span class="date"></span></td>
+  </tr>
+</table>
+ 
+									</dl>
+								</div>
+								<div class="cbox">
+									<ul> 
+								     
+								<li class="li01">
+									<a href="http://www.szec.cc/v-1-4881.aspx" class="title" title="【行业动态】从供给侧改革看农村电商破局">【行业动态】从供给侧改革看农村电商破局</a>
+	<div class="intro">2016年是“十三五”规划的启航之年，也是打响扶贫开发攻坚战的第二个年头。国家强调“中国扶贫攻坚工作实施精准扶贫方略，增加扶贫投入，出台优惠政策措施，坚持中国制度优势，坚持分类施策...</div>
+									<div class="biaoqian">标签:</div>
+								</li>
+
+
+
+								<li class="li02">
+									<a href="http://www.szec.cc/v-1-4878.aspx" class="title" title="【聚焦深圳】百亿元基金支持中小微企业">【聚焦深圳】百亿元基金支持中小微企业</a>
+	<div class="intro">&nbsp;&nbsp;&nbsp; 昨天下午，市长许勤主持召开市政府六届三十七次常务会议。会议审议并原则通过了市政府贯彻落...</div>
+								</li>
+
+
+
+								<li class="li03">
+									<a href="http://www.szec.cc/v-1-4867.aspx" class="title" title="【社会热点】分析：滴滴会“烧光”苹果的投资吗？">【社会热点】分析：滴滴会“烧光”苹果的投资吗？</a>
+								</li>
+
+
+
+								<li class="li04">
+									<a href="http://www.szec.cc/v-1-4864.aspx" class="title" title="【社会热点】“早知道这些我的公司就不会死”系列（二）：Cohort Analysis">【社会热点】“早知道这些我的公司就不会死”系列（二）</a>
+								</li>
+
+
+
+								<li class="li02">
+									<a href="http://www.szec.cc/v-1-4863.aspx" class="title" title="【社会热点】“早知道这些我的公司就不会死”系列（一）：CAC、LTV、PBP">【社会热点】“早知道这些我的公司就不会死”系列（一）</a>
+	<div class="intro">本文首发自公众号 42 章经 （ID：MyFortyTwo） 作者：曲凯创业其实是件有门槛的事情，是有很多已有的规律、科学的...</div>
+								</li>
+
+
+
+								<li class="li03">
+									<a href="http://www.szec.cc/v-1-4862.aspx" class="title" title="【研究报告】商务部发布《中国对外贸易形势报告（2016年春季）》">【研究报告】商务部发布《中国对外贸易形势报告（201</a>
+								</li>
+
+
+								<li class="li03">
+									<a href="http://www.szec.cc/v-1-4860.aspx" class="title" title="【社会热点】跨境电商新税账本：剑指保税备货 行邮税可能并轨">【社会热点】跨境电商新税账本：剑指保税备货 行邮税可</a>
+								</li>
+
+
+
+ 
+									</ul>
+								</div>
+						
+							<!--BOX END-->
+							</del>
+						
+				<div class="clear"></div>
+				<div style="margin-top:20px"><img src="images/126.gif" width="100%" height="100" /></div>
+							
+			</div>  
+              <!--main_left_nr end-->
+		</div>	 
+            <div class="main_right">
+               <div class="main_right_top">
+                  
+               </div>
+            </div>         
+                
+                <div class="clear"></div>
+  
+		  <div class="left02">
+					<h4><em>各委员会</em>
+                    <span>
+                     
+<a href="http://www.szec.cc/a/1170.aspx">应用技术工作委员会</a>
+
+<a href="http://www.szec.cc/a/1171.aspx">法律工作委员会</a>
+
+<a href="http://www.szec.cc/a/1172.aspx">人力资源工作委员会</a>
+
+<a href="http://www.szec.cc/a/1173.aspx">对外贸易工作委员会</a>
+
+<a href="http://www.szec.cc/a/1174.aspx">专家工作委员会</a>
+
+
+                   <a href="http://www.szec.cc/a/1169.aspx">更多</a></span></h4>
+				   						
+						<div class="clear"></div>
+						
+						<div id="tab_2">
+							<del>
+							<!--BOX-->
+								<div class="flbox">
+									<dl> 
+								     <table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td><a href="http://www.szec.cc/v-1-3985.aspx" target="_blank" class="flbox">执委单位：深圳软通动力科技有限公司</a><span class="date"></span></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.szec.cc/v-1-3984.aspx" target="_blank" class="flbox">执委单位：四库科技</a><span class="date"></span></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.szec.cc/v-1-3983.aspx" target="_blank" class="flbox">执委单位：信德远致</a><span class="date"></span></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.szec.cc/v-1-3982.aspx" target="_blank" class="flbox">执委单位：北京互联通</a><span class="date"></span></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.szec.cc/v-1-3981.aspx" target="_blank" class="flbox">执委单位：深圳市云来网络科技有限公司</a><span class="date"></span></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.szec.cc/v-1-3980.aspx" target="_blank" class="flbox">执委单位：新中大软件股份有限公司</a><span class="date"></span></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.szec.cc/v-1-3979.aspx" target="_blank" class="flbox">执委单位：深圳市金麦田软件有限公司</a><span class="date"></span></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.szec.cc/v-1-3978.aspx" target="_blank" class="flbox">执委单位：网宿科技</a><span class="date"></span></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.szec.cc/v-1-3977.aspx" target="_blank" class="flbox">副主席单位：易思博软件技术有限公司</a><span class="date"></span></td>
+  </tr>
+</table>
+  
+									</dl>
+								</div>
+                                <div class="frbox">
+									<dl> 
+							        	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td><a href="http://www.szec.cc/v-1-4437.aspx" target="_blank" class="cbox">专家委专家：夏德明</a><span class="date"></span></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.szec.cc/v-1-4030.aspx" target="_blank" class="cbox">专家委专家：曹友</a><span class="date"></span></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.szec.cc/v-1-4028.aspx" target="_blank" class="cbox">专家委专家：郭剑武</a><span class="date"></span></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.szec.cc/v-1-4024.aspx" target="_blank" class="cbox">专家委专家：章俊</a><span class="date"></span></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.szec.cc/v-1-4018.aspx" target="_blank" class="cbox">专家委专家：熊科淼</a><span class="date"></span></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.szec.cc/v-1-4014.aspx" target="_blank" class="cbox">专家委专家：魏强</a><span class="date"></span></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.szec.cc/v-1-4011.aspx" target="_blank" class="cbox">专家委专家：单仁</a><span class="date"></span></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.szec.cc/v-1-4008.aspx" target="_blank" class="cbox">专家委专家：向隽</a><span class="date"></span></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.szec.cc/v-1-4005.aspx" target="_blank" class="cbox">专家委专家：韩玉琦</a><span class="date"></span></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.szec.cc/v-1-4002.aspx" target="_blank" class="cbox">专家委专家：刘宏</a><span class="date"></span></td>
+  </tr>
+</table>
+ 
+									</dl>
+								</div>
+								<div class="cbox">
+									<ul> 
+								     <table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td><a href="http://www.szec.cc/v-1-3986.aspx" target="_blank" class="frbox">深圳市电子商务协会——-培训</a><span class="date"></span></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.szec.cc/v-1-3976.aspx" target="_blank" class="frbox">执委单位：淘宝大学</a><span class="date"></span></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.szec.cc/v-1-3975.aspx" target="_blank" class="frbox">执委单位：神州教育</a><span class="date"></span></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.szec.cc/v-1-3974.aspx" target="_blank" class="frbox">执委单位：深圳第二职业技术学校</a><span class="date"></span></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.szec.cc/v-1-3973.aspx" target="_blank" class="frbox">执委单位：深圳职业技术学院</a><span class="date"></span></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.szec.cc/v-1-3971.aspx" target="_blank" class="frbox">副主席单位：深圳信息职业技术学院</a><span class="date"></span></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.szec.cc/v-1-3970.aspx" target="_blank" class="frbox">副主席单位：天助人和</a><span class="date"></span></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.szec.cc/v-1-3968.aspx" target="_blank" class="frbox">主席单位：一达通</a><span class="date"></span></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.szec.cc/v-1-3967.aspx" target="_blank" class="frbox">副主席单位：亚鼎科技</a><span class="date"></span></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.szec.cc/v-1-3966.aspx" target="_blank" class="frbox">副主席单位： 华运物流</a><span class="date"></span></td>
+  </tr>
+</table>
+ 
+									</ul>
+								</div>
+						
+							<!--BOX END-->
+							</del>
+						
+				<div class="clear"></div>
+				<div style="margin-top:20px"><img src="images/4ad.png" width="100%" height="100" /></div>
+							
+			</div>  
+              <!--main_left_nr end-->
+		</div>	 
+            <div class="main_right">
+               <div class="main_right_top">
+                  
+               </div>
+            </div>         
+                
+                <div class="clear"></div>
+  
+		  <div class="left02">
+					<h4><em>会员风采</em>
+                    <span>
+                     
+<a href="http://www.szec.cc/a/1163.aspx">监事单位</a>
+
+<a href="http://www.szec.cc/a/1164.aspx">会员单位</a>
+
+<a href="http://www.szec.cc/a/1165.aspx">理事单位</a>
+
+<a href="http://www.szec.cc/a/1166.aspx">常务理事单位</a>
+
+<a href="http://www.szec.cc/a/1167.aspx">副会长单位</a>
+
+<a href="http://www.szec.cc/a/1168.aspx">常务副会长</a>
+
+
+                   <a href="http://www.szec.cc/a/1162.aspx">更多</a></span></h4>
+				   						
+						<div class="clear"></div>
+						
+						<div id="tab_2">
+							<del>
+              <div class="huiyuanfengcai">
+                  <ul>
+                  <li><a href="http://www.szec.cc/v-1-4873.aspx" target="_blank" >【会员风采】2015年度市长质量奖颁出协会会长单位创新投与其</a><span class="date"></span></li>
+                  
+                  <li><a href="http://www.szec.cc/v-1-4871.aspx" target="_blank" >深圳市嘉泽供应链管理股份有限公司介绍</a><span class="date"></span></li>
+                  <li><a href="http://www.szec.cc/v-1-4869.aspx" target="_blank" >迪蒙云上真相 BAT关键一役</a><span class="date"></span></li>
+                  <li><a href="http://www.szec.cc/v-1-4857.aspx" target="_blank" >协会副会长单位依波精品在线再获“深圳知名品牌”殊荣</a><span class="date"></span></li>
+                  <li><a href="http://www.szec.cc/v-1-4848.aspx" target="_blank" >中国中小企业协会信用管理中心</a><span class="date"></span></li>
+                  <li><a href="http://www.szec.cc/v-1-4831.aspx" target="_blank" >深圳市炬鼎力电子商务有限公司</a><span class="date"></span></li>
+                  <li><a href="http://www.szec.cc/v-1-4488.aspx" target="_blank" >深圳万商安盟科技发展有限公司</a><span class="date"></span></li>
+                  <li><a href="http://www.szec.cc/v-1-4560.aspx" target="_blank" >深圳市厂家网网络科技有限公司</a><span class="date"></span></li>
+                  <li><a href="http://www.szec.cc/v-1-4549.aspx" target="_blank" >东莞长虹置业有限公司</a><span class="date"></span></li>
+                  <li><a href="http://www.szec.cc/v-1-4640.aspx" target="_blank" >深圳市微网网络有限公司</a><span class="date"></span></li>
+                  <li><a href="http://www.szec.cc/v-1-4225.aspx" target="_blank">深圳市伟驰天下科技有限公司</a><span class="date"></span></li>
+                  <li><a href="http://www.szec.cc/v-1-4222.aspx" target="_blank" >深圳市校品汇科技有限公司</a><span class="date"></span></li>
+                  <li><a href="http://www.szec.cc/v-1-4604.aspx" target="_blank" >深圳市古尚珠宝有限公司</a><span class="date"></span></li>
+                  <li><a href="http://www.szec.cc/v-1-4568.aspx" target="_blank" >深圳黑土地电子商务有限公司</a><span class="date"></span></li>
+                  <li><a href="http://www.szec.cc/v-1-4567.aspx" target="_blank" >深圳黑土地电子商务有限公司</a><span class="date"></span></li>
+                  <li><a href="http://www.szec.cc/v-1-4565.aspx" target="_blank" >深圳市五朵梅电子商务有限公司</a><span class="date"></span></li>
+                  <li><a href="http://www.szec.cc/v-1-4559.aspx" target="_blank" >深圳市汇禾春天物流技术有限公司</a><span class="date"></span></li>
+                  <li><a href="http://www.szec.cc/v-1-4558.aspx" target="_blank" >广东唯康集团股份有限公司</a><span class="date"></span></li>
+                  <li><a href="http://www.szec.cc/v-1-4557.aspx" target="_blank" >深圳前海中融投金融控股有限公司</a><span class="date"></span></li>
+                  <li><a href="http://www.szec.cc/v-1-4876.aspx" target="_blank" >【会员风采】FEC荣获2016中国互联网行业领军企业奖</a><span class="date"></span></li>
+                  <li><a href="http://www.szec.cc/v-1-4875.aspx" target="_blank">【会员风采】深圳市人大领导一行来访FEC深圳总部</a><span class="date"></span></li>
+                  <li><a href="http://www.szec.cc/v-1-4825.aspx" target="_blank" >无忧安居网</a><span class="date"></span></li>
+                  <li><a href="http://www.szec.cc/v-1-4607.aspx" target="_blank" >深圳市经纬互联科技有限公司</a><span class="date"></span></li>
+                  <li><a href="http://www.szec.cc/v-1-4285.aspx" target="_blank" >盐田港国际资讯有限公司</a><span class="date"></span></li>
+                  <li><a href="http://www.szec.cc/v-1-4284.aspx" target="_blank" >深圳鹏凯科技有限公司</a><span class="date"></span></li>
+                  <li><a href="http://www.szec.cc/v-1-4283.aspx" target="_blank" >深圳市酷讯通科技有限公司</a><span class="date"></span></li>
+                  <li><a href="http://www.szec.cc/v-1-4282.aspx" target="_blank" >深圳蓝挚科技有限公司</a><span class="date"></span></li>
+                  <li><a href="http://www.szec.cc/v-1-4281.aspx" target="_blank" >深圳腾泽科技有限公司</a><span class="date"></span></li>
+                  <li><a href="http://www.szec.cc/v-1-4280.aspx" target="_blank" >深圳腾世纪网络科技有限公司</a><span class="date"></span></li>
+                  
+                  </ul>
+              </div>
+							
+ 
+						
+							<!--BOX END-->
+							
+							
+
+							</del>
+						</div>
+		</div>
+				<div class="clear"></div>
+				<div style="margin-top:20px"><img src="images/5ad.png" width="100%" height="100" /></div>				
+                
+              
+                <div class="clear"></div>
+                
+				<div class="clear blank10"></div>  
+				<div class="left04">
+					<h4><em>活动图片</em><span>
+                    
+
+                    <a href="http://www.szec.cc/a/1156.aspx">更多</a>
+                    
+                    </span></h4>
+					<!--<ul>
+						
+						<li class="li01"><a href="http://www.szec.cc/pic-2-4877.aspx" title="【会员风采】金蝶KIS旗舰版V4.2发布暨企业O2O转型升级创新峰会"><div class="title">【会员风采】金蝶KIS旗舰版V4.2发布暨企业O2O转型升级创新峰会<span></span></div><img src="images/G131091486845000_S.jpg" /></a></li>
+
+
+<li class="li02">
+
+<a href="http://www.szec.cc/pic-2-4866.aspx" title="【活动图片】协会主办“迎战新电商 布局企业O2O”2016移动电商发展研讨会"><div class="title">【活动图片】协会主办“迎</div><img src="images/3131078629774375_S.jpg" /></a>
+
+
+<a href="http://www.szec.cc/pic-2-4855.aspx" title="【协会活动】协会李峰秘书长参加2016年4月28日百姓通商网周年庆典"><div class="title">【协会活动】协会李峰秘书</div><img src="images/8131069160521718_S.jpg" /></a>
+
+
+</li>
+<li class="li02">
+
+<a href="http://www.szec.cc/pic-2-4854.aspx" title="【活动图片】协会执行会长郝建强参加亚交所首届39家企业集体挂牌仪式"><div class="title">【活动图片】协会执行会长</div><img src="images/F131069159862187_S.jpg" /></a>
+
+
+<a href="http://www.szec.cc/pic-2-4853.aspx" title="深圳市电子商务协会2016第三次理事会暨迎五一会长联谊会"><div class="title">深圳市电子商务协会201</div><img src="images/1131068899800781_S.png" /></a>
+
+
+</li>
+<li class="li02">
+
+<a href="http://www.szec.cc/pic-2-4847.aspx" title="协会常务副会长单位单仁资讯集团主办，协会协办“中国电子商务十大牛商颁奖典礼”4月19日在深圆满落幕"><div class="title">协会常务副会长单位单仁资</div><img src="images/6131055946165000_S.jpg" /></a>
+
+
+<a href="http://www.szec.cc/pic-2-4844.aspx" title="【活动图片】协会带团参加2016中国（义乌）国际电子商务博览会"><div class="title">【活动图片】协会带团参加</div><img src="images/7131054183459375_S.png" /></a>
+
+
+</li>
+
+
+					</ul>-->
+				</div>
+             <!--pic start--> 
+        <div class="pic_start">
+           <div class="picbox">
+              <ul>
+                 
+ <li class="ppic ppic01">
+                    <a href="http://www.szec.cc/pic-2-4877.aspx" title="【会员风采】金蝶KIS旗舰版V4.2发布暨企业O2O转型升级创新峰会"><img src="images/G131091486845000_S.jpg" onerror="this.src='images/nopic.gif';" /></a>
+                  <p></p>
+                  <span><a href="http://www.szec.cc/pic-2-4877.aspx">【会员风采】金蝶KIS旗舰版V4.2发布暨企业O2...</a></span>
+                </li>
+
+ <li class="ppic ppic02">
+                    <a href="http://www.szec.cc/pic-2-4866.aspx" title="【活动图片】协会主办“迎战新电商 布局企业O2O”2016移动电商发展研讨会"><img src="images/3131078629774375_S.jpg" onerror="this.src='images/nopic.gif';" /></a>
+                  <p></p>
+                  <span><a href="http://www.szec.cc/pic-2-4866.aspx">【活动图片】协会主办“迎战新电商 布局企业O2O”...</a></span>
+                </li>
+
+ <li class="ppic ppic03">
+                    <a href="http://www.szec.cc/pic-2-4855.aspx" title="【协会活动】协会李峰秘书长参加2016年4月28日百姓通商网周年庆典"><img src="images/8131069160521718_S.jpg" onerror="this.src='images/nopic.gif';" /></a>
+                  <p></p>
+                  <span><a href="http://www.szec.cc/pic-2-4855.aspx">【协会活动】协会李峰秘书长参加2016年4月28日...</a></span>
+                </li>
+
+ <li class="ppic ppic04">
+                    <a href="http://www.szec.cc/pic-2-4854.aspx" title="【活动图片】协会执行会长郝建强参加亚交所首届39家企业集体挂牌仪式"><img src="images/F131069159862187_S.jpg" onerror="this.src='images/nopic.gif';" /></a>
+                  <p></p>
+                  <span><a href="http://www.szec.cc/pic-2-4854.aspx">【活动图片】协会执行会长郝建强参加亚交所首届39家...</a></span>
+                </li>
+
+ <li class="ppic ppic05">
+                    <a href="http://www.szec.cc/pic-2-4853.aspx" title="深圳市电子商务协会2016第三次理事会暨迎五一会长联谊会"><img src="images/1131068899800781_S.png" onerror="this.src='images/nopic.gif';" /></a>
+                  <p></p>
+                  <span><a href="http://www.szec.cc/pic-2-4853.aspx">深圳市电子商务协会2016第三次理事会暨迎五一会长...</a></span>
+                </li>
+
+ <li class="ppic ppic06">
+                    <a href="http://www.szec.cc/pic-2-4847.aspx" title="协会常务副会长单位单仁资讯集团主办，协会协办“中国电子商务十大牛商颁奖典礼”4月19日在深圆满落幕"><img src="images/6131055946165000_S.jpg" onerror="this.src='images/nopic.gif';" /></a>
+                  <p></p>
+                  <span><a href="http://www.szec.cc/pic-2-4847.aspx">协会常务副会长单位单仁资讯集团主办，协会协办“中国...</a></span>
+                </li>
+
+ <li class="ppic ppic07">
+                    <a href="http://www.szec.cc/pic-2-4844.aspx" title="【活动图片】协会带团参加2016中国（义乌）国际电子商务博览会"><img src="images/7131054183459375_S.png" onerror="this.src='images/nopic.gif';" /></a>
+                  <p></p>
+                  <span><a href="http://www.szec.cc/pic-2-4844.aspx">【活动图片】协会带团参加2016中国（义乌）国际电...</a></span>
+                </li>
+
+
+              </ul>
+           </div>
+        </div>
+	  </div>
+
+
+
+
+
+
+
+
+		<div class="right" style="display:none">
+			<div class="rightrd">
+				<h4><span><a href="javascript:;" onclick="loadAjaxList($('[labelid=随机播报]'))">刷新</a></span><img src="images/ssrd.png" /></h4>
+				<ul>
+					<span labelid="随机播报图片" type="ajax" id="ks随机播报图片_0_0_0_0"></span>				
+					<div style="_margin-top:-20px;"><span labelid="随机播报" type="ajax" id="ks随机播报_0_0_0_0"></span></div>
+				</ul>
+			</div>
+			<div class="right01">
+				<h4><img src="images/ktw.png" /></h4>
+				<ul>
+					
+					<li style=" padding-top:0px">
+						<div class="l_ct">
+							<a href="http://www.szec.cc/v-1-4290.aspx" class="title" title="【聚焦深圳】深国际集团创建电子商务示范基地 助力前海发展">【聚焦深圳】深国际集团创</a>
+							<div class="intro">   深圳国际控股有限公司是我协会常务副会长单位，2...<span class="span01">热门</span></div>
+						</div>
+						<div class="r_ct"><a href="http://www.szec.cc/v-1-4290.aspx"><img src="images/8130836606784605_S.jpg" /></a></div>
+					</li>
+
+
+
+					<li>
+						<div class="l_ct">
+							<a href="http://www.szec.cc/v-1-4649.aspx" class="title" title="【行业动态】移动互联网时代,兴趣社交能否帮豆瓣实现突破?">【行业动态】移动互联网时</a>
+							<div class="intro">“豆瓣”是豆瓣在一年前推出的首款同名App。在此之前...<span>图文</span></div>
+						</div>
+						<div class="r_ct"><a href="http://www.szec.cc/v-1-4649.aspx"><img src="images/N130903026367754_S.jpg" /></a></div>
+					</li>
+
+
+
+					<li style="border:0px;">
+						<div class="l_ct">
+							<a href="http://www.szec.cc/v-1-4864.aspx" class="title" title="【社会热点】“早知道这些我的公司就不会死”系列（二）：Cohort Analysis">【社会热点】“早知道这些</a>
+							<div class="intro">编者按：本文作者曲凯，文章首发自微信号：42 章经 ...<span>图文</span></div>
+						</div>
+						<div class="r_ct"><a href="http://www.szec.cc/v-1-4864.aspx"><img src="images/U131074977842343.jpg" /></a></div>
+					</li>
+
+
+
+				</ul>
+			</div>
+			<div class="right02">
+				<h4><div class="r"><a href="http://www.szec.cc/specialindex.aspx">更多</a></div><img src="images/lzt.png" /></h4>
+				<ul>
+					
+<li class="lipic"><a href="/html/Special/37.html" title="9月24-26日“2015中国（咸宁）电子商务创新与发展高峰论坛”" target="_blank"><img src="images/L130855631091248.jpg" width="100%" /><br /><div class="li_tit">9月24-26日“2015中国（咸宁）电</div></a></li>
+								<div class="clear" style="height:8px"></div>
+
+
+
+				</ul>				
+			</div>
+			<div class="right03">
+				<h4><img src="images/djb.png" /></h4>
+				<dl>
+					<dt class="sd01" id=m21>文章</dt>
+					<dt class="sd02" id=m22>图片</dt>
+					<dt class="sd02" id=m23>下载</dt>
+				</dl>
+				<div class="clear"></div>
+				<div class="display productline" id=c21>
+				
+					<!--文章 点击榜-->
+					<ul>
+						
+						<li><span>52479</span><em class="em01">1</em><a href="http://www.szec.cc/v-1-4735.aspx" title="【协会动态】关于参加“2016中国国际电子商务博览会“的通知">【协会动态】关于参加“2016</a></li>
+
+
+						<li><span>12652</span><em class="em01">2</em><a href="http://www.szec.cc/v-1-4878.aspx" title="【聚焦深圳】百亿元基金支持中小微企业">【聚焦深圳】百亿元基金支持中小</a></li>
+
+
+						<li><span>5742</span><em class="em01">3</em><a href="http://www.szec.cc/v-1-4792.aspx" title="【活动通知】关于开展“双百优秀电子商务园企推荐表彰活动”的通知">【活动通知】关于开展“双百优秀</a></li>
+
+
+
+
+<li><span>5713</span><em>4</em><a href="http://www.szec.cc/v-1-4635.aspx" title="【行业动态】2015年中国国际第十七届高交会于11月16日-21日如期举办">【行业动态】2015年中国国际</a></li>
+
+
+<li><span>5497</span><em>5</em><a href="http://www.szec.cc/v-1-4291.aspx" title="【聚焦深圳】深圳赛格集团拟设创客O2O推广平台 应对电商冲击">【聚焦深圳】深圳赛格集团拟设创</a></li>
+
+
+<li><span>5392</span><em>6</em><a href="http://www.szec.cc/v-1-4290.aspx" title="【聚焦深圳】深国际集团创建电子商务示范基地 助力前海发展">【聚焦深圳】深国际集团创建电子</a></li>
+
+
+<li><span>2443</span><em>7</em><a href="http://www.szec.cc/v-1-4736.aspx" title="【活动通知】关于举办“深圳互联网和电子商务发展专项扶持政策宣讲会”的通知">【活动通知】关于举办“深圳互联</a></li>
+
+
+<li><span>2153</span><em>8</em><a href="http://www.szec.cc/v-1-4881.aspx" title="【行业动态】从供给侧改革看农村电商破局">【行业动态】从供给侧改革看农村</a></li>
+
+
+
+
+<li style="border-bottom:0px"><span>1342</span><em>9</em><a href="http://www.szec.cc/v-1-4468.aspx" title="【协会动态】关于邀请参加“2015海峡两岸电子商务展”">【协会动态】关于邀请参加“20</a></li>
+
+
+
+
+					</ul>
+					<!--END-->
+					
+				</div>	 
+				<div class="display productline" id=c22 style="display:none">
+					<!--图片 点击榜-->
+					<ul>
+						
+
+					</ul>
+					<!--END-->	
+				</div>
+				<div class="display productline" id=c23 style="display:none">
+					<!--下载 点击榜-->
+					<ul>
+						
+
+					</ul>
+					<!--END-->
+				</div>
+
+				
+			</div>
+		</div>
+	</div>
+	
+		<div class="clear"></div>
+
+		<div class="end" >
+		<div class="foot_top">
+			<a href="http://www.szec.cc/a/1094.aspx">关于我们</a>-
+		<a href="/v-1-3141.aspx">联系我们</a>-
+		<a href="/v-1-3142.aspx">法律声明</a>-
+		<a href="/v-1-3143.aspx">人才招聘</a>-
+		<a href="/v-1-3144.aspx">免责声明</a>-
+		<a href="http://www.szec.cc/map.aspx">网站地图</a>-
+		<a href="http://www.szec.cc/link.aspx">友情链接</a>
+        <a href="http://www.szec.cc/manage/login.aspx">szec.cc</a>
+		
+			</div>
+	
+       <div class="footer">
+         <div class="flink">
+           <span class="cor-fff f-l">友情链接：</span>
+            
+<a href="http://www.judingli.com" linkref="34" title="炬鼎力教育" target="_blank">炬鼎力教育</a>
+
+<a href="http://www.ehmall.com.cn" linkref="36" title="宜和购物" target="_blank">宜和购物</a>
+
+<a href="http://www.yeec.org.cn/default.asp" linkref="39" title="中国青年电商创业委员会" target="_blank">中国青年电商创业委员会</a>
+
+<a href="http://kpmg.com.cn" linkref="35" title="会计师事务所" target="_blank">会计师事务所</a>
+
+<a href="http://zdcard.com" linkref="37" title="正东源科技" target="_blank">正东源科技</a>
+
+<a href="http://www.west-logistics.com/" linkref="26" title="西部物流" target="_blank">西部物流</a>
+
+<a href="http://www.fecsoft.cn/" linkref="40" title="FEC富润电商" target="_blank">FEC富润电商</a>
+
+<a href="http://www.smq.com.cn/Web/index.aspx" linkref="27" title="计量检测" target="_blank">计量检测</a>
+
+<a href="http://www.talect.cn/en/product.asp" linkref="28" title="泰勒特科技" target="_blank">泰勒特科技</a>
+
+<a href="http://www.ewt.cc/" linkref="30" title="网通" target="_blank">网通</a>
+
+
+          </div>
+	 <div class="copyright">
+		www.szec.cc <br />深圳市电子商务协会 版权所有 © 2008-2016 <br /> 
+备案号:粤ICP备15101758号 
+<div class="clear"></div>
+        </div>
+        <div class="divimg"><img src="images/kxwz.png" /></div>
+	</div> </div>
+
+</div>
+	
+</body>
+</html>

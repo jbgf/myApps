@@ -1,0 +1,616 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="css/home.css" rel="stylesheet" />
+<title>【协会动态】关于参加“2016中国国际电子商务博览会“的通知-行业动态</title>
+<meta name="Keywords" content=""/>
+<meta name="Description" content="附: 2016(第五届)中国国际电子商务博览会相关介绍2016中国国际电子商务博览会           同期举办：2016中国（义乌）世界电子商务大会             2016中国电子商务创新规范发展高峰论坛第八届中国通讯营销行业年会第二届" />
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/kesion.common.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+<script type="text/javascript">
+$(document).ready(function() {		
+    $('.cityBar').hover(function() {
+		  $('.cityList', this).slideDown().stop(true,true);
+	  }, function() {
+		  $('.cityList', this).slideUp().stop(true,true);	
+	  });	
+	  
+	
+});
+</script>
+<div class="header"> 
+      <div class="top_bar">
+         <div class="w clearfix">                 	
+             <div class="cityqh">	
+                                 <div class="cityBar">  <a href="http://www.szec.cc/plus/ChangeCity.aspx?from=all" class="topcity">全国<i></i></a>
+          <div class="cityList">
+                                                   <ul>
+
+                                                   </ul>
+                                                </div>
+                                  </div>
+                                 </div>
+             <div class="l">
+			    
+				 <!--弹窗登录开始-->
+                    <span id="PopLoginTips">  <a href="http://www.szec.cc/reg.aspx">注册</a><b class="t-line">|</b>
+                 <a href="#" onclick="showuserlogin()">登录</a></span>
+                    <script>
+					function loginOut(){
+					 KesionJS.Confirm('确认退出吗？',"location.href='http://www.szec.cc/user/UserLoginOut.aspx';",'');
+					}
+                    jQuery(document).ready(function(){
+					   $(".site-menu").find("li:first").addClass("curr");
+                       jQuery.ajax({
+                          type:"POST",
+                          datatype: "xml",
+                          url:"/plus/ajaxs.ashx",
+                          data:"a=checkislogin",
+                          success:function(xml){
+                              var islogin=jQuery(xml).find("login islogin").text();
+                          if (islogin=='false') return;
+                          var str="<img onerror=\"this.src='images/boy.jpg'\" src='"+jQuery(xml).find("login userface").text()+"' align='texttop' class='userface' /> <a href='http://www.szec.cc/user/index.aspx' style='color:#059FE5'>"+jQuery(xml).find("login username").text()+"</a> <a onclick=\"loginOut();return false;\" href='#'>退出</a>  <a href='http://www.szec.cc/user/index.aspx?mainurl=message/receivedmessage.aspx'>消息"+jQuery(xml).find("login message").text()+"</a>";
+                         jQuery("#PopLoginTips").html(str);
+                          }
+                         });
+                    });
+                    </script>
+                 <!--弹窗登录结束-->
+			 
+			 
+               
+             </div>
+             <div class="fr col">
+                 <span>
+                   <a href="/3g/" target="_blank" class="head_3g">手机版</a>
+                   <i class="head_weixin">关注微信
+                     <span><img src="images/weixin.jpg" /></span>
+                   </i>
+               </span>
+            </div>
+            <div class="r"><a onclick="setHomepage('http://'+location.hostname+(location.port!=''?':':'')+location.port);" href="#">设为首页</a><b class="t-line">|</b><a href="#" onclick="javascript:AddFavorite('http://'+location.hostname+(location.port!=''?':':'')+location.port,'深圳市电子商务协会');">加入收藏</a><b class="t-line">|</b><a href="/bbs/">论坛</a> </div>
+         </div>
+     </div>
+     <div class="clear"></div>
+     <div class="logomain">
+       <div class="logobox">
+	     <table width="980" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="140"><div class="logo"><a href="/"><img src="images/logo.png" align="left" /></a></div></td>
+    <td width="840"><div class="top_text"><img src="images/tt.png" align="left" /></div></td>
+  </tr>
+  <tr>
+    <td height="30" colspan="2">&nbsp;</td>
+  </tr>
+</table>
+        
+       </div>
+	</div>
+     <div class="clear"></div>
+	<div class="navmain clearfix">
+       <div class="navbox">
+		   <ul class="menu">
+			  <li><a href="Index.html">首页</a></li>
+
+ <li><a href="zxzx.html">资讯中心</a></li>
+
+
+ <li><a href="zcfg.html">政策法规</a></li>
+
+
+ <li><a href="wzxq.html">人才服务</a></li>
+
+ <li><a href="wzxq.html">各委员会</a></li>
+
+ <li><a href="hyfc.html">会员风采</a></li>
+
+ <li><a href="hdtp.html">活动图片</a></li>
+
+ <li><a href="zxzx.html">协会新闻</a></li>
+
+		   </ul>
+ 
+        </div>
+        
+	</div>
+    
+</div> 
+
+	
+	
+    
+<script>
+//scrolltotop
+$(function(){
+        //首先将#back-to-top隐藏
+        $("#totop").hide();
+        //当滚动条的位置处于距顶部100像素以下时，跳转链接出现，否则消失
+        $(function () {
+            $(window).scroll(function(){
+                if ($(window).scrollTop()>100){
+                    $("#totop").fadeIn();
+                }
+                else
+                {
+                    $("#totop").fadeOut();
+                }
+            });
+            //当点击跳转链接后，回到页面顶部位置
+            $("#totop").click(function(){
+                $('body,html').animate({scrollTop:0},500);
+                return false;
+            });
+        });
+    }); 
+</script>
+<div id="share">
+<a id="totop" title="">返回顶部</a>
+<a href="http://weibo.com/1746776800/zFjVFob53" target="_blank" class="sina">关注KesionCMS新浪微博</a>
+<a href="http://t.qq.com/kesioncms?lang=zh_CHT"  target="_blank" class="tencent">关注KesionCMS腾讯微博</a>
+</div>
+
+	<div class="clear"></div>
+
+
+<script src="js/jquery.lazyload.js" type="text/javascript"></script>
+    <script type="text/javascript">
+	   $(function() {
+	$(".imgloading img").lazyload({
+	effect : "fadeIn" ,
+	placeholder : "images/loading.jpg",   
+	event : "scroll" 
+	});   
+	});
+	</script>
+
+	<div class="clear"></div>
+	<div class="Dg">您现在位置：<a href="http://www.szec.cc/">深圳市电子商务协会</a> >> <a href="http://www.szec.cc/a/1104.aspx">资讯中心</a> >> <a href="http://www.szec.cc/a/1108.aspx">行业动态</a> >> 浏览文章</div>
+	<div class="newscontent common_newsmain">
+		<div class="left">
+			<h1>【协会动态】关于参加“2016中国国际电子商务博览会“的通知</h1>
+			<div class="dp">2016-2-23 15:03:28<span>点击数(<font><font type="showhits" action="count" f="0" id="4735" t="1" modelid="1">0</font></font>)</span><span>已有<font><font type="showhits" action="cmtnum" f="0" id="4735" t="1" modelid="1">0</font></font>人评论</span>
+			<iframe name="hidfavorite" src="about:blank" width="0" height="0" style="width:0px;height:0px"></iframe>
+			<a target="hidfavorite" href="http://www.szec.cc/user/favorite.aspx?modelid=1&id=4735">加入收藏</a>
+			</div>
+			<div class="clear"></div>
+			<div class="ct">
+				<div class="ct_box">
+					<p style="text-align:center"><img src="images/6131006846777812.png"/></p><p><br/></p><p style="vertical-align: baseline;line-height: 114%"><span style=";font-family:微软雅黑;font-size:21px"><br/></span></p><p style="vertical-align: baseline;line-height: 114%"><span style=";font-family:微软雅黑;font-size:21px"><br/></span></p><p style="vertical-align: baseline;line-height: 114%"><span style=";font-family:微软雅黑;font-size:21px">附:&nbsp;2016(第五届)中国国际电子商务博览会相关介绍</span></p><p style="text-indent:96px;vertical-align:baseline"><span style="font-family: 微软雅黑;font-weight: bold;font-size: 32px;background: rgb(255, 255, 255)"><br/></span></p><p style="text-indent:96px;vertical-align:baseline"><span style="font-family: 微软雅黑;font-weight: bold;font-size: 32px;background: rgb(255, 255, 255)">2016中国国际电子商务博览会</span></p><p style=";background:rgb(255,255,255)"><span style="font-family: 微软雅黑;color: rgb(0, 0, 255);font-weight: bold;font-size: 16px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p><p style="text-indent:32px;line-height:24px"><span style=";font-family:微软雅黑;color:rgb(255,0,0);font-size:21px;background:rgb(255,255,255)">同期举办：</span><span style=";font-family:微软雅黑;color:rgb(255,0,0);font-size:21px">2016中国（义乌）世界电子商务大会</span></p><p style="line-height:24px"><span style=";font-family:微软雅黑;color:rgb(255,0,0);font-size:21px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style=";font-family:微软雅黑;color:rgb(255,0,0);font-size:21px">2016中国电子商务创新规范发展高峰论坛</span></p><p style="text-indent:138px;line-height:24px"><span style=";font-family:微软雅黑;color:rgb(255,0,0);font-size:21px">第八届中国通讯营销行业年会</span></p><p style="text-indent:138px;line-height:24px"><span style=";font-family:微软雅黑;color:rgb(255,0,0);font-size:21px">第二届中国微商大会</span></p><p style="text-indent:106px;line-height:24px"><span style=";font-family:微软雅黑;color:rgb(255,0,0);font-size:21px">&nbsp;&nbsp;&nbsp;2016中国（义乌）电子商务人才节&nbsp;&nbsp;&nbsp;&nbsp;</span></p><p style="text-indent:127px;line-height:24px"><span style=";font-family:微软雅黑;color:rgb(255,0,0);font-size:21px">“E模未来星”电商网络模特大赛</span></p><p style="text-indent:106px;line-height:24px"><span style=";font-family:微软雅黑;color:rgb(255,0,0);font-size:21px">&nbsp;</span></p><p style=";background:rgb(255,255,255)"><span style="position:absolute;z-index:1;left:0px;margin-left:57.2667px;width:2.0000px;height:2.0000px"><img width="2" height="2" src="images/spacer.gif" word_img="file:///C:\Users\ADMINI~1\AppData\Local\Temp\ksohtml\wpsDFBB.tmp.png" style="background:url(images/word.gif) no-repeat center center;border:1px solid #ddd"/></span><span style="font-family: 微软雅黑;font-size: 16px">◆</span><span style="font-family: 微软雅黑;font-weight: bold;font-size: 16px">&nbsp;&nbsp;》》》</span><span style="font-family: 微软雅黑;font-weight: bold;font-size: 21px">中国规模最大、规格最高的电子商务博览会</span><span style="font-family: 微软雅黑;font-size: 16px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p><p style="line-height:20px;background:rgb(255,255,255)"><span style="font-family: 微软雅黑;font-weight: bold;font-size: 16px">展会时间</span><span style="font-family: 微软雅黑;font-size: 16px">：2016年4月11-13日&nbsp;&nbsp;</span></p><p style="line-height:20px;background:rgb(255,255,255)"><span style="font-family: 微软雅黑;font-weight: bold;font-size: 16px">展会地点</span><span style="font-family: 微软雅黑;font-size: 16px">：浙江义乌国际博览中心</span></p><p style="line-height:20px;background:rgb(255,255,255)"><span style="font-family: 微软雅黑;font-weight: bold;font-size: 16px">指导单位</span><span style="font-family: 微软雅黑;font-size: 16px">：中华人民共和国商务部&nbsp;&nbsp;&nbsp;中华人民共和国工业和信息化部&nbsp;&nbsp;</span></p><p style="line-height:20px;background:rgb(255,255,255)"><span style="font-family: 微软雅黑;font-weight: bold;font-size: 16px">主办单位</span><span style="font-family: 微软雅黑;font-size: 16px">：浙江省人民政府</span></p><p style="line-height:20px;background:rgb(255,255,255)"><span style="font-family: 微软雅黑;font-weight: bold;font-size: 16px">承办单位</span><span style="font-family: 微软雅黑;font-size: 16px">：中国国际电子商务中心&nbsp;&nbsp;中国电子商会&nbsp;&nbsp;义乌市人民政府</span></p><p style="line-height:20px;background:rgb(255,255,255)"><span style="font-family: 微软雅黑;font-weight: bold;font-size: 16px">展务执行</span><span style="font-family: 微软雅黑;font-size: 16px">：中国国际电子商务有限公司&nbsp;&nbsp;&nbsp;义乌市网博会展有限公司</span></p><p style="line-height:20px;background:rgb(255,255,255)"><span style="font-family: 微软雅黑;font-weight: bold;font-size: 16px">展会规模</span><span style="font-family: 微软雅黑;font-size: 16px">：国际标准展位2000个（展览面积：60000平方米）</span></p><p style="line-height:20px;background:rgb(255,255,255)"><span style="font-family: 微软雅黑;font-weight: bold;font-size: 16px">预计到会专业观众</span><span style="font-family: 微软雅黑;font-size: 16px">：120000人（境外采购商：5000人）</span></p><p style="line-height:24px;background:rgb(255,255,255)"><span style="font-family: 微软雅黑;font-size: 16px">&nbsp;</span></p><p style="line-height:24px;background:rgb(255,255,255)"><span style="font-family: 微软雅黑;font-size: 21px">◆</span><span style="font-family: 微软雅黑;font-weight: bold;font-size: 21px">&nbsp;&nbsp;》》》展会概况</span><span style="font-family: 微软雅黑;font-size: 21px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p><p style="text-indent:32px;line-height:20px"><span style=";font-family:微软雅黑;font-size:16px;background:rgb(255,255,255)">中国国际电子商务博览会由商务部、工业和信息化部指导，浙江省人民政府主办，中国国际电子商务中心、中国电子商会、义乌市人民政府承办。展会集中展示国内外最新的电子商务研发和应用成果、最新的技术和产品以及电商平台、金融支付、物流快递、技术支持、数据服务、精品网货等电子商务全产业链企业，2014电商博览会被评为“中国十大品牌展览会”，</span><span style="font-family: 微软雅黑;font-size: 16px;background: rgb(255, 255, 255)">&nbsp;是国内电子商务企业形象展示、新品推介、贸易洽谈、信息传播的首选平台。</span></p><p style="text-indent:32px;line-height:20px"><span style="font-family: 微软雅黑;font-size: 16px">2015中国国际电子商务</span><span style=";font-family:微软雅黑;font-size:16px;background:rgb(255,255,255)">博览会于4月11日-13日在义乌国际博览中心隆重召开，为期三天的电商博览会</span><span style="font-family: 微软雅黑;font-size: 16px">有</span><span style="font-family: 微软雅黑;font-size: 16px">来自10个国家和地区以及国内19个省市，共1031家企业</span><span style=";font-family:微软雅黑;font-size:16px">参展，设国际标准展位2218个，展览面积5万平方米；展会吸引了</span><span style="font-family: 微软雅黑;font-size: 16px">阿里巴巴、百度、京东商城、1号店、兰亭集势、亿赞普、聚美优品、当当网、走秀网、中酒网、猪八戒网等品牌企业参展，吸引了</span><span style=";font-family:微软雅黑;font-size:16px">25个国家和地区192个团组101294人次参观，现场达成合作意向38232个</span><span style="font-family: 微软雅黑;font-size: 16px">，增长9%。中央电视台、凤凰卫视、人民网、新华社等近100家媒体聚焦义乌，全面报道博览会盛况。</span></p><p style="text-indent:32px;line-height:20px"><span style="font-family: 微软雅黑;font-size: 16px;background: rgb(255, 255, 255)">2016中国国际电子商务博览会以“电商换市，全球机遇”为主题，展览面积60000平方米，预设国际标准展位2000个，设知名电子商务平台展区、跨境电商展区、电子商务示范城市/示范基地和示范企业展区、电子商务服务产业展区、移动互联网展区、互联网金融展区、电子商务人才服务展区、精品网货/创意商品/精品农产品展区，预计到会专业观众12万。</span></p><p style="text-indent:32px;line-height:20px"><br/></p><p style="line-height:20px"><span style="font-family: 微软雅黑;font-size: 16px;background: rgb(255, 255, 255)">&nbsp;</span></p><p style="line-height:24px;background:rgb(255,255,255)"><span style="font-family: 微软雅黑;font-size: 21px">◆&nbsp;&nbsp;》》》</span><span style="font-family: 微软雅黑;font-weight: bold;font-size: 21px">义乌电子商务发展概况&nbsp;</span><span style="font-family: 微软雅黑;font-size: 21px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p><p style="text-indent:32px;line-height:20px"><span style=";font-family:微软雅黑;font-size:16px">义乌是全球最大的小商品流通中心和采购基地；市场经营面积约550万平方米，商铺7.5万余个，商品种类达180多万种，是国内最大的网络商品供应基地。2011年义乌获批国际贸易综合改革试点，成为首个由国务院批准的县级市综合改革试点；越来越多的国内知名电子商务销售平台纷纷到义乌市场采购，</span><span style="font-family: 微软雅黑;font-size: 16px">亚马逊、兰亭集势、借卖网等平台在义乌设立了采购中心。</span><span style=";font-family:微软雅黑;font-size:16px">据调查统计，全国75%的日用百货类网货直接间接来自义乌。</span></p><p style="text-indent:31px;line-height:20px"><span style=";font-family:微软雅黑;font-size:16px">近年来，依托实体市场和物流优势，义乌电子商务飞速发展，电子商务产业集群初显，全国网商集聚中心初步形成。</span><span style="font-family: 微软雅黑;font-size: 16px">义乌市被评为第二批“国家电子商务示范城市”，义乌现有在线注册帐户24万个。据阿里研究院分析，义乌内贸网商密度列全国城市排名第一；外贸网商密度列全国城市排名第二。2015年上半年义乌国内快递日均出票120万票,同比增长60%，跨境快递日均出货40万票，同比增长43%。</span></p><p style="line-height:20px;background:rgb(255,255,255)"><span style="font-family: 微软雅黑;font-size: 16px">&nbsp;</span></p><p style="text-align:center"><img src="images/N131006848239218.png"/></p><p style="line-height:20px;background:rgb(255,255,255)"><span style="font-family: 微软雅黑;font-size: 16px"></span></p><p style="text-align:center"><img src="images/7131006849780625.png"/></p><p style="line-height:20px;background:rgb(255,255,255)"><span style="font-family: 微软雅黑;font-size: 16px">◆&nbsp;&nbsp;》》》&nbsp;</span><span style="font-family: 微软雅黑;font-weight: bold;font-size: 19px">参展范围&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p><p style="line-height:20px"><span style="font-family: 微软雅黑;font-size: 16px">○知名电子商务平台展区：境内外有影响力的优秀电子商务平台</span></p><p style="line-height:20px"><span style="font-family: 微软雅黑;font-size: 16px">○跨境电商展区：</span></p><p style="text-indent:16px;line-height:20px"><span style="font-family: 微软雅黑;font-size: 16px">国外电商平台、跨境电商平台、跨境物流企业、跨境支付企业、跨境中介机构等</span></p><p style="line-height:20px"><span style="font-family: 微软雅黑;font-size: 16px">○电子商务示范城市、示范基地和示范企业展区：</span></p><p style="margin-left:16px;line-height:20px"><span style="font-family: 微软雅黑;font-size: 16px">&nbsp;&nbsp;国家发改委、商务部认定的电子商务示范单位，省级政府认定的电子商务示范单位及各地电子商务园区</span></p><p style="line-height:20px"><span style="font-family: 微软雅黑;font-size: 16px">○电子商务服务产业展区：</span></p><p style="margin-left:16px;line-height:20px;background:rgb(255,255,255)"><span style="font-family: 微软雅黑;font-size: 16px">物流快递服务、</span><span style="font-family: 微软雅黑;letter-spacing: 1px;font-size: 16px">电商园区/</span><span style="font-family: 微软雅黑;font-size: 16px">第三方仓储、</span><span style="font-family: 微软雅黑;letter-spacing: 1px;font-size: 16px">商务应用软件、</span><span style="font-family: 微软雅黑;font-size: 16px">金融投融资服务、银行、金融与会计服务、</span><span style="font-family: 微软雅黑;letter-spacing: 1px;font-size: 16px">网络营销推广、广告</span><span style="font-family: 微软雅黑;font-size: 16px">设计、人才与培训教育、电脑及相关设备、</span><span style="font-family: 微软雅黑;letter-spacing: 1px;font-size: 16px">网络及电信运营设备与服务、质量与安全认证服务</span><span style="font-family: 微软雅黑;font-size: 16px">等</span></p><p style="line-height:20px"><span style="font-family: 微软雅黑;font-size: 16px">○互联网金融展区：</span></p><p style="margin-left:16px;line-height:20px;background:rgb(255,255,255)"><span style="font-family: 微软雅黑;font-size: 16px">银行、第三方支付、P2P网贷、投融资机构</span></p><p style="line-height:20px"><span style="font-family: 微软雅黑;font-size: 16px">○移动互联网展区：</span></p><p style="margin-left:16px;line-height:20px;background:rgb(255,255,255)"><span style="font-family: 微软雅黑;font-size: 16px">云计算、数字技术、物联网、移动支付、手机二维码、微营销服务、可穿戴设备等</span></p><p style="line-height:20px"><span style="font-family: 微软雅黑;font-size: 16px">○电子商务人才服务展区</span></p><p style="line-height:20px"><span style="font-family: 微软雅黑;font-size: 16px">○精品网货展区：</span></p><p style="margin-left:16px;line-height:20px"><span style="font-family: 微软雅黑;font-size: 16px">1.服装服饰、箱包鞋帽类&nbsp;2、日用百货、家居用品、布艺家纺类3、五金、电子、电器类4、工艺礼品、饰品类&nbsp;5、母婴用品、儿童玩具、宠物用品类&nbsp;6、汽车电子、电器、美容、养护类&nbsp;7、体育用品、健身器材、户外休闲用品类&nbsp;8、化妆品、美容、美发用品类、保健品类&nbsp;9、办公文具、文化用品类&nbsp;10、包装食品、酒类等</span></p><p style="margin-top:10px;margin-bottom:10px;text-indent:16px;line-height:20px;background:rgb(255,255,255)"><span style="font-family: 微软雅黑;font-size: 19px">&nbsp;</span></p><p style="margin-top:10px;margin-bottom:10px;text-indent:16px;line-height:20px;background:rgb(255,255,255)"><span style="font-family: 微软雅黑;font-size: 19px">◆&nbsp;&nbsp;</span><span style="font-family: 微软雅黑;font-size: 16px">》》》</span><span style="font-family: 微软雅黑;font-size: 19px">&nbsp;</span><span style="font-family: 微软雅黑;font-weight: bold;font-size: 19px">收费标准&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p><p style="margin-top:10px;margin-bottom:10px;text-indent:16px;line-height:20px;background:rgb(255,255,255)"><span style="font-family: 微软雅黑;font-weight: bold;font-size: 16px">1、展位费用：</span></p><table width="612"><tbody><tr style="height:19px" class="firstRow"><td width="72" valign="center" style="padding: 0px 7px; border-width: 1px; border-color: windowtext;"><p style="line-height:20px"><span style=";font-family:微软雅黑;font-size:16px">展&nbsp;&nbsp;位</span></p><p style="line-height:20px"><span style=";font-family:微软雅黑;font-size:16px">类&nbsp;&nbsp;别</span></p></td><td width="228" valign="center" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-width: 1px; border-top-color: windowtext; border-bottom-width: 1px; border-bottom-color: windowtext;"><p style="text-indent:48px;line-height:20px"><span style=";font-family:微软雅黑;font-size:16px">国&nbsp;内&nbsp;企&nbsp;业</span></p></td><td width="175" valign="center" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-width: 1px; border-top-color: windowtext; border-bottom-width: 1px; border-bottom-color: windowtext;"><p style="text-indent:32px;line-height:20px"><span style=";font-family:微软雅黑;font-size:16px">境&nbsp;&nbsp;外&nbsp;&nbsp;企&nbsp;&nbsp;业</span></p></td><td width="137" valign="top" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-width: 1px; border-top-color: windowtext; border-bottom-width: 1px; border-bottom-color: windowtext;"><p style="text-indent:32px;line-height:20px"><span style=";font-family:微软雅黑;font-size:16px">备&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注</span></p></td></tr><tr style="height:42px"><td width="72" valign="center" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"><p style="line-height:20px"><span style=";font-family:微软雅黑;font-size:14px">光&nbsp;&nbsp;&nbsp;&nbsp;地</span></p></td><td width="228" valign="center" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"><p style="text-indent:14px;line-height:20px"><span style=";font-family:微软雅黑;font-size:14px">￥600元/㎡（&nbsp;36㎡起租）</span></p></td><td width="175" valign="center" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"><p style="line-height:20px"><span style=";font-family:微软雅黑;font-size:14px">100美元/㎡&nbsp;（36㎡起租）</span></p></td><td width="137" valign="center" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"><p style="line-height:20px"><span style=";font-family:微软雅黑;font-size:14px">光地特搭企业需另向展馆交20元/㎡施工管理费</span></p></td></tr><tr style="height:45px"><td width="72" valign="center" style="padding: 0px 7px; border-left-width: 1px; border-left-color: windowtext; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"><p style="line-height:20px"><span style="font-family:微软雅黑;font-size:14px">&nbsp;</span></p><p style="line-height:20px"><span style=";font-family:微软雅黑;font-size:14px">标准展位</span></p><p style="line-height:20px"><span style="font-family:微软雅黑;font-size:14px">&nbsp;</span></p></td><td width="228" valign="center" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"><p style="text-indent:14px;line-height:20px"><span style=";font-family:微软雅黑;font-size:14px">￥5800&nbsp;元/个（9㎡）</span></p></td><td width="175" valign="center" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"><p style="text-indent:7px;line-height:20px"><span style=";font-family:微软雅黑;font-size:14px">1000美元/个（9㎡）</span></p></td><td width="137" valign="center" style="padding: 0px 7px; border-left-style: none; border-right-width: 1px; border-right-color: windowtext; border-top-style: none; border-bottom-width: 1px; border-bottom-color: windowtext;"><p style="line-height:20px"><span style=";font-family:微软雅黑;font-size:14px">双开口加收600元</span></p></td></tr></tbody></table><p style="line-height: 20px;background: rgb(255, 255, 255)"><span style=";font-family:微软雅黑;font-size:16px">（注：1、标准展位</span><span style=";font-family:微软雅黑;font-size:16px">（</span><span style="font-family: 微软雅黑;font-size: 16px">3米×3米）</span><span style="font-family: 微软雅黑;font-size: 14px">，</span><span style=";font-family:微软雅黑;font-size:16px">配备：中英文企业楣板、1张洽谈桌、2把折椅、2个射灯、1个220V插座。&nbsp;&nbsp;&nbsp;</span><span style=";font-family:微软雅黑;font-size:16px">2、</span><span style="font-family: 微软雅黑;font-size: 16px">光地展位：36平方米起租，无任何配置，企业需提前设计好图纸并自行搭建）</span></p><p style="line-height: 20px;background: rgb(255, 255, 255)"><span style="font-family: 微软雅黑;font-weight: bold;font-size: 16px">&nbsp;</span></p><p style="line-height: 20px;background: rgb(255, 255, 255)"><span style="font-family: 微软雅黑;font-weight: bold;font-size: 16px">2、会刊及其它广告</span><span style="font-family: 微软雅黑;font-size: 16px">：</span></p><table width="615"><tbody><tr style="height:23px" class="firstRow"><td width="151" valign="top" style="padding: 0px 7px; border-width: 1px; border-color: rgb(0, 0, 0); background: rgb(255, 255, 255);"><p style="line-height: 20px"><span style="font-family: 微软雅黑;font-size: 12px">封底：18000元</span></p></td><td width="163" valign="top" style="padding: 0px 7px; border-width: 1px 1px 1px 43px; border-left-style: none; border-color: rgb(0, 0, 0) rgb(0, 0, 0) rgb(0, 0, 0) rgb(255, 255, 255); background: rgb(255, 255, 255);"><p style="line-height: 20px"><span style="font-family: 微软雅黑;font-size: 12px">封二：15000元</span></p></td><td width="162" valign="top" style="padding: 0px 7px; border-width: 1px 1px 1px 43px; border-left-style: none; border-color: rgb(0, 0, 0) rgb(0, 0, 0) rgb(0, 0, 0) rgb(255, 255, 255); background: rgb(255, 255, 255);"><p style="line-height: 20px"><span style="font-family: 微软雅黑;font-size: 12px">封三：12000元</span></p></td><td width="140" valign="top" style="padding: 0px 7px; border-width: 1px 1px 1px 43px; border-left-style: none; border-color: rgb(0, 0, 0) rgb(0, 0, 0) rgb(0, 0, 0) rgb(255, 255, 255); background: rgb(255, 255, 255);"><p style="line-height: 20px"><span style="font-family: 微软雅黑;font-size: 12px">特单页：6000元</span></p></td></tr><tr style="height:25px"><td width="151" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: rgb(0, 0, 0); border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top-style: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0); background: rgb(255, 255, 255);"><p style="line-height: 20px"><span style="font-family: 微软雅黑;font-size: 12px">彩色内页：3000元</span></p></td><td width="163" valign="top" style="padding: 0px 7px; border-left-width: 43px; border-left-style: none; border-left-color: rgb(255, 255, 255); border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top-style: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0); background: rgb(255, 255, 255);"><p style="line-height: 20px"><span style="font-family: 微软雅黑;font-size: 12px">黑白内页：2000元</span></p></td><td width="162" valign="top" style="padding: 0px 7px; border-left-width: 43px; border-left-style: none; border-left-color: rgb(255, 255, 255); border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top-style: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0); background: rgb(255, 255, 255);"><p style="line-height: 20px"><span style="font-family: 微软雅黑;font-size: 12px">胸牌（采购证）：5000元/万</span></p></td><td width="140" valign="top" style="padding: 0px 7px; border-left-width: 43px; border-left-style: none; border-left-color: rgb(255, 255, 255); border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top-style: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0); background: rgb(255, 255, 255);"><p style="line-height: 20px"><span style="font-family: 微软雅黑;font-size: 12px">升空气球：1500元/只</span></p></td></tr><tr style="height:23px"><td width="151" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: rgb(0, 0, 0); border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top-style: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0); background: rgb(255, 255, 255);"><p style="line-height: 20px"><span style="font-family: 微软雅黑;font-size: 12px">参观券：6000元/2万张</span></p></td><td width="163" valign="top" style="padding: 0px 7px; border-left-width: 43px; border-left-style: none; border-left-color: rgb(255, 255, 255); border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top-style: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0); background: rgb(255, 255, 255);"><p style="line-height: 20px"><span style="font-family: 微软雅黑;font-size: 12px">无纺布袋:6000元/3000个</span></p></td><td width="302" valign="top" colspan="2" style="padding: 0px 7px; border-left-width: 43px; border-left-style: none; border-left-color: rgb(255, 255, 255); border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top-style: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0); background: rgb(255, 255, 255);"><p style="line-height: 20px"><span style="font-family: 微软雅黑;font-size: 12px">馆外3m×6m广告牌：5000元/块</span></p></td></tr><tr style="height:23px"><td width="151" valign="top" style="padding: 0px 7px; border-left-width: 1px; border-left-color: rgb(0, 0, 0); border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top-style: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0); background: rgb(255, 255, 255);"><p style="line-height: 20px"><span style="font-family: 微软雅黑;font-size: 12px">推介会：5000元/小时</span></p></td><td width="163" valign="top" style="padding: 0px 7px; border-left-width: 43px; border-left-style: none; border-left-color: rgb(255, 255, 255); border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top-style: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0); background: rgb(255, 255, 255);"><p style="line-height: 20px"><span style="font-family: 微软雅黑;font-size: 12px">品牌推介活动:3000元/场</span></p></td><td width="302" valign="top" colspan="2" style="padding: 0px 7px; border-left-width: 43px; border-left-style: none; border-left-color: rgb(255, 255, 255); border-right-width: 1px; border-right-color: rgb(0, 0, 0); border-top-style: none; border-bottom-width: 1px; border-bottom-color: rgb(0, 0, 0); background: rgb(255, 255, 255);"><p style="line-height: 20px"><span style="font-family: 微软雅黑;font-size: 12px">LED电视墙：6000元/天</span></p></td></tr></tbody></table><p style="line-height: 20px;background: rgb(255, 255, 255)"><span style="font-family: 微软雅黑;font-size: 12px">&nbsp;</span></p><p style="line-height: 20px;background: rgb(255, 255, 255)"><span style="font-family: 微软雅黑;font-size: 16px">&nbsp;</span></p><p style="line-height: 20px;background: rgb(255, 255, 255)"><span style="font-family: 微软雅黑;font-size: 16px">◆&nbsp;》》</span><span style="font-family: 微软雅黑;font-weight: bold;font-size: 19px">了解参展事宜或报名索取申请表及展位图，请联系</span><span style="font-family: 微软雅黑;font-weight: bold;font-size: 19px">：</span></p><p style="line-height: 200%;background: rgb(255, 255, 255)"><span style="font-family: 微软雅黑;font-weight: bold;font-size: 20px"><a href="http://www.szec.cc" target="_blank" style="color:#6600FF">深圳市电子商务协会</a></span></p><p style="line-height: 200%;background: rgb(255, 255, 255)"><span style="font-family: 微软雅黑;font-size: 20px">地址：深圳市南山区临海大道88号深国际西部物流中心2楼</span></p><p style="line-height: 200%;background: rgb(255, 255, 255)"><span style="font-family: 微软雅黑;font-size: 20px">联系人1：</span><span style="font-family: 微软雅黑;font-size: 20px">郑金彦</span><span style="font-family: 微软雅黑;font-size: 20px">；座机：8621826</span><span style="font-family: 微软雅黑;font-size: 20px">5</span><span style="font-family: 微软雅黑;font-size: 20px">;&nbsp;电话：</span><span style="font-family: 微软雅黑;font-size: 20px">138&nbsp;2359&nbsp;9778</span><span style="font-family: 微软雅黑;font-size: 20px">;&nbsp;QQ：&nbsp;</span><span style="font-family: 微软雅黑;font-size: 20px">869414268</span></p><p style="line-height: 200%;background: rgb(255, 255, 255)"><span style="font-family: 微软雅黑;font-size: 20px">联系人2：罗粤瑜；座机：86218266;&nbsp;电话：135&nbsp;7088&nbsp;5061;&nbsp;QQ：1294671913</span></p><p><br/></p>
+			<div class="clear"></div>
+            
+				 <div class="pk"><style type="text/css">
+	.mark {overflow:hidden;padding:15px 0 20px 111px; clear:both;}
+	#mark0, #mark1 {background:url(images/mark.gif) no-repeat -189px 0;border:0;cursor:pointer;float:left;height:48px;margin:0;overflow:hidden;padding:0;position:relative;width:189px;}
+	#mark1 {background-position:-378px 0;margin-left:10px;}
+	#barnum1, #barnum2 {color:#333333;font-family:arial;font-size:10px;font-weight:400;left:70px;line-height:12px;position:absolute;top:30px;}
+	.bar {background-color:#FFFFFF;border:1px solid #40A300;height:5px;left:9px;overflow:hidden;position:absolute;text-align:left;top:32px;width:55px;}
+	.bar div {background:transparent url(images/bar_Footbg.gif) repeat-x ;height:5px;overflow:hidden; margin:0;}
+	#mark1 .bar {border-color:#555555;}
+	#mark1 .bar div {background:transparent url(images/Barbg.gif) repeat-x ;}
+</style>
+	<div class="mark">
+	 <div onClick="digg(0,1,4735,'/');" onfocus="this.blur()" onMouseOut="this.style.backgroundPosition='-189px 0'" onMouseOver="this.style.backgroundPosition='0 0'" id="mark0" style="background-position: -189px 0pt;">
+	 <div class="bar"><div style="width: 0px;" id="digzcimg"></div></div>
+	 <span id="barnum1"><span id="perz4735">0%</span> (<span id="s4735">0</span>)</span>
+     </div>
+	 <div onClick="digg(1,1,4735,'/');" onfocus="this.blur()" onMouseOut="this.style.backgroundPosition='-378px 0'" onMouseOver="this.style.backgroundPosition='-567px 0'" id="mark1" style="background-position: -378px 0pt;">
+	<div class="bar"><div style="width: 0px;" id="digcimg"></div></div>
+	 <span id="barnum2"><span id="perc4735">0%</span> (<span id="c4735">10</span>)</span>
+	</div>
+</div>
+<script>show_digg1(1,4735,'/');</script>
+
+     </div>
+					<div>关键字：</div>
+            
+				</div> 
+
+			
+			上一篇： <a href="http://www.szec.cc/v-1-4680.aspx">【行业动态】深圳占全国跨境电商半壁江山 前海商企“一库难求”</a><br/> 下一篇：<a href="http://www.szec.cc/v-1-4792.aspx">【活动通知】关于开展“双百优秀电子商务园企推荐表彰活动”的通知</a>
+			
+			<div class="clear"></div>
+			   <div class="ct_mood">
+			   		<!--<script src="http://www.szec.cc/plus/mood.aspx?id=6&c_id=4735&M_id=1" ></script>-->
+               		<div id="xinqing">
+                    	<table border="0" width="100%" cellspacing="0" cellpadding="0">
+                            <tr><td colspan="15">您看到此篇文章时的感受：</td></tr>
+                            <tr>
+                            	<td valign="bottom"  style="text-align:center">0<br /><img alt="0%" src="images/post.gif" height="0" width="20"><br><img alt="欠扁" src="images/bq1.gif" border="0"><br>欠扁<br><input type="radio" onclick="MoodPosition(0);" name="votebutton"></td>
+                                <td valign="bottom"  style="text-align:center">0<br /><img alt="0%" src="images/post.gif" height="0" width="20"><br><img alt="同意" src="images/bq2.gif" border="0"><br>同意<br><input type="radio" onclick="MoodPosition(1);" name="votebutton"></td>
+                                <td valign="bottom"  style="text-align:center">0<br /><img alt="0%" src="images/post.gif" height="0" width="20"><br><img alt="很好" src="images/bq3.gif" border="0"><br>很好<br><input type="radio" onclick="MoodPosition(2);" name="votebutton"></td>
+                                <td valign="bottom"  style="text-align:center">0<br /><img alt="0%" src="images/post.gif" height="0" width="20"><br><img alt="胡扯" src="images/bq4.gif" border="0"><br>胡扯<br><input type="radio" onclick="MoodPosition(3);" name="votebutton"></td>
+                                <td valign="bottom"  style="text-align:center">0<br /><img alt="0%" src="images/post.gif" height="0" width="20"><br><img alt="搞笑" src="images/bq5.gif" border="0"><br>搞笑<br><input type="radio" onclick="MoodPosition(4);" name="votebutton"></td>
+                                <td valign="bottom"  style="text-align:center">0<br /><img alt="0%" src="images/post.gif" height="0" width="20"><br><img alt="软文" src="images/bq6.gif" border="0"><br>软文<br><input type="radio" onclick="MoodPosition(5);" name="votebutton"></td>
+                                <td valign="bottom"  style="text-align:center">0<br /><img alt="0%" src="images/post.gif" height="0" width="20"><br><img alt="糊涂" src="images/bq7.gif" border="0"><br>糊涂<br><input type="radio" onclick="MoodPosition(6);" name="votebutton"></td>
+                                <td valign="bottom"  style="text-align:center">0<br /><img alt="0%" src="images/post.gif" height="0" width="20"><br><img alt="惊讶" src="images/bq8.gif" border="0"><br>惊讶<br><input type="radio" onclick="MoodPosition(7);" name="votebutton"></td>
+                            </tr>
+                        </table>
+                    </div>
+<script>
+MoodPosition=function(itemid){
+ 	jQuery.ajax({
+		url:'http://www.szec.cc/plus/Mood.aspx',
+		cache:false,
+		data:'action=hits&itemid='+itemid+'&id=6&m_ID=1&c_id=4735',
+		success:function(obj){
+			MoodPositionBack(obj)
+		}
+	});
+}
+MoodPositionBack=function(obj){
+ switch(obj){
+  case "nologin":
+   KesionJS.Alert('对不起,您还没登录不能表态!','showuserlogin()');
+   break;
+  case "standoff":
+   KesionJS.Alert('您已表态过了, 不能重复表态!');
+   break;
+  case "lock":
+   KesionJS.Alert('心情指数已关闭!');
+   break;
+  case "errstartdate":
+   KesionJS.Alert('未到表态时间!');
+   break;
+  case "errexpireddate":
+   KesionJS.Alert('表态时间已过!');
+   break;
+  case "errgroupid":
+   KesionJS.Alert('您没有表态的权限!');
+   break;
+  case "noinfo":
+   KesionJS.Alert('找不到您要表态的信息!');
+   break;
+  default:
+  // KesionJS.Message('success.gif','恭喜,您已成功表态!');
+  $("#xinqing").animate({opacity:0}, 5).html(obj).animate({opacity:0.2},200).animate({opacity:0.5},200).animate({opacity:0.7},300).animate({opacity:1},800);
+
+   break;
+ }
+}
+</script>
+               
+               </div>
+      
+				</div>
+			
+             
+				<div class="clear blank18"></div>
+			 	
+				
+                 <div class="ct_pl">
+				 <h2>网友评论</h2>
+			 	 <ul>
+                 	<table width="100%" border="0" align="left" cellpadding="0" cellspacing="0" class="comment_write_table">  <form name="form1" action="http://www.szec.cc/plus/Comment.aspx?Action=WriteSave" method="post">   <input type="hidden" value="1" name="ChannelID"><input type="hidden" value="4735" name="ID"><input type="hidden" value="1108" name="ClassID"><tr>  <td height="22" colspan="2">用户名：<input class="username" maxlength=15 name="AnounName" type="text" id="AnounName" value=""/><span id="pp"> 密码：    <input class="password" name="Pass" size="10" type="password" id="Pass" value=""></span>&nbsp;<span class="nmpub"></span><label><input onclick="if(this.checked==true){jQuery(\'#pp\').hide();}else{jQuery(\'#pp\').show();}" type="checkbox" value="1" id="Anonymous" name="Anonymous">匿名发表</label> <a href="http://www.szec.cc/reg.aspx" target="_blank" style="color:#ff3300;text-decoration:underline">注册</a></span><span class="rightcmtnum" style="float:right"><a href="http://www.szec.cc/plus/Comment.aspx?ChannelID=1&ID=4735" target="_blank"><span id="cmtnum" class="cmtnum">0</span>条评论</a></td>  </tr><tr><td width="100%"><span style="display:none" class="lc">您的立场：<input type="radio" name="viewpoint" value="0" checked>中立 <input type="radio" name="viewpoint" value="1" checked">支持 <input type="radio" name="viewpoint" value="2" checked">反对</span> <textarea wrap="PHYSICAL" onfocus=if(this.value=="文明上网，登录发言！"){this.value=""} onblur=if(this.value==""){this.value="文明上网，登录发言！"} onkeydown="checklength(this);" onkeyup="checklength(this);" name="C_Content" rows="6" id="C_Content" style="overflow:auto;width:98%">文明上网，登录发言！</textarea></td></tr><tr><td height="25" colspan="2"><input type="hidden" name="sC_Content" id="sC_Content"><span class="commenttips">特别声明：发表内容只代表网友个人观点，与本站立场无关。 还可以输入<span id="cmax" class="cmax">200</span>个字。</span><input type="button" id="SubmitComment" name="SubmitComment" value="马上发表" onclick="checkcommentform();"/></span></tr> </form></table>
+<script>
+function xmlhttp() {
+		            var A=null;
+		            try
+		            {
+			            A=new ActiveXObject("Msxml2.XMLHTTP");
+		            }
+		            catch(e)
+		            {
+			            try
+			            {
+				            A=new ActiveXObject("Microsoft.XMLHTTP");
+			            }
+			            catch(oc)
+			            {
+				            if (typeof XMLHttpRequest != 'undefined' );
+				            {
+					            A=new XMLHttpRequest();
+				            }
+			            }
+		            }			
+		            return A;
+	            }
+            	
+            var loader=new xmlhttp;
+            function ajaxLoadPage(url,request,method,fun)
+            {
+	            method=method.toUpperCase();
+	            if (method=='GET')
+	            {
+		            urls=url.split("?");
+		            if (urls[1]=='' || typeof urls[1]=='undefined')
+		            {
+			            url=urls[0]+"?"+request;
+		            }
+		            else
+		            {
+			            url=urls[0]+"?"+urls[1]+"&"+request;
+		            }
+            		
+		            request=null;
+	            }
+	            loader.open(method,url,true);
+	            if (method=='POST')
+	            {
+		            loader.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+	            }
+	            loader.onreadystatechange=function(){
+	                 eval(fun+'()');
+	            }
+	            loader.send(request);
+            }
+
+            function formToRequestString(form_obj)
+            {
+                var query_string='';
+                var and='';
+                for (var i=0;i<form_obj.length;i++ )
+                {
+                    e=form_obj[i];
+                    if (e.name) {
+                        if (e.type=='select-one') {
+                            element_value=e.options[e.selectedIndex].value;
+                        } else if (e.type=='select-multiple') {
+                            for (var n=0;n<e.length;n++) {
+                                var op=e.options[n];
+                                if (op.selected) {
+                                    query_string+=and+e.name+'='+escape(op.value);
+                                    and="&"
+                                }
+                            }
+                            continue;
+                        } else if (e.type=='checkbox' || e.type=='radio') {
+                            if (e.checked==false) {   
+                                continue;   
+                            }   
+                            element_value=e.value;
+                        } else if (typeof e.value != 'undefined') {
+                            element_value=e.value;
+                        } else {
+                            continue;
+                        }
+                        query_string+=and+e.name+'='+escape(element_value);
+                        and="&"
+                    }
+                }
+                return query_string;
+            }
+            function ajaxFormSubmit(form_obj,fun)
+            { 
+	            ajaxLoadPage(form_obj.getAttributeNode("action").value,formToRequestString(form_obj),form_obj.method,fun)
+            }
+            function insertface(Val){ 
+		              if (Val!=''){
+		               document.getElementById('C_Content').focus();
+		               var str = document.selection.createRange();
+		               str.text = Val; 
+		              }
+              }
+            	
+            function success()
+            {
+	            var loading_msg='\n\n\t请稍等，正在提交评论...';
+	            var C_Content=document.getElementById('C_Content');
+            	
+ 	            if (loader.readyState==1)
+		            {
+			            C_Content.value=loading_msg;
+		            }
+	            if (loader.readyState==4)
+		            {   var s=loader.responseText;
+			            if (s=='ok')
+			             {
+			              KesionJS.Message('success.gif','恭喜,你的评论已成功提交！');
+			              if (typeof(loadDate)!='undefined') loadDate(1,1);
+			              leavePage();
+			             }
+			            else
+			             { KesionJS.Alert(s);
+			              C_Content.value=document.getElementById('sC_Content').value;
+			             }
+		            }
+            }
+	            var OutTimes =11;
+	            function leavePage()
+	            {
+	            if (OutTimes==0)
+	             {
+	             document.getElementById('C_Content').disabled=false;
+	             document.getElementById('SubmitComment').disabled=false;
+	             document.getElementById('C_Content').value='';
+	             OutTimes =11;
+	             return;
+	             }
+	            else {
+	                document.getElementById('C_Content').disabled=true;
+		            document.getElementById('SubmitComment').disabled=true;
+		            OutTimes -= 1;
+		            document.getElementById('C_Content').value ="评论已提交，等待 "+ OutTimes + " 秒钟后您可继续发表...";
+		            setTimeout("leavePage()", 1000);
+		            }
+	            }
+            function checklength(cobj)
+            {var cmax=200;
+	            if (cobj.value.length>cmax) {
+	            cobj.value = cobj.value.substring(0,cmax);
+	            KesionJS.Alert("评论不能超过"+cmax+"个字符!");
+	            } else {
+	            jQuery('#cmax').html(cmax-cobj.value.length);
+	            }
+            }
+
+               function checkcommentform()
+               { 
+               if (jQuery('#AnounName').val()==''){
+                    KesionJS.Alert('请填写用户名！',"jQuery('#AnounName').focus();");
+                    return false;
+                 }
+	            if (jQuery('#Anonymous')[0].checked==false && jQuery('#Pass').val()=='')
+	            {
+	               KesionJS.Alert('请输入密码或选择游客发表！',"jQuery('#Pass').focus();");
+	               return false;
+	            }
+               if (jQuery('#C_Content').val()==''||jQuery('#C_Content').val()=='文明上网，登录发言！'){
+	               KesionJS.Alert('请填写评论内容!',"jQuery('#C_Content').focus();");
+	               return false;
+                }
+	            jQuery('#sC_Content').val(jQuery('#C_Content').val());
+	            ajaxFormSubmit(document.form1,'success')
+	            }
+</script>
+                 </ul>
+				</div>
+                 <div class="clear"></div>
+                 <div class="pllist">
+				  
+					<script src="js/Comment.page.js"></script>
+					<!--<script defer>var from3g=0;Page(1,1,'4735','Show','http://www.szec.cc/');</script>　-->
+					
+				</div>
+
+		</div>
+		
+		<!---->
+		<div class="right">
+		   <div class="ad325"><!--<script src="/html/AD/JS/AD325.js" language="javascript"></script>--></div>
+			<div class="right02">
+				<h4><span><a href="http://www.szec.cc/a/1115.aspx">更多<em>&raquo;</em></a></span>图片新闻</h4>
+				<ul>
+					
+
+				</ul>
+			</div>
+			<div class="clear"></div>
+			<div class="right03">
+				<h4>点击排行榜</h4>
+				<ul>
+					
+<li><span>02-23</span><em class="em01">1</em><a href="http://www.szec.cc/v-1-4735.aspx" title="【协会动态】关于参加“2016中国国际电子商务博览会“的通知">【协会动态】关于参加“2016中国国</a></li>
+
+<li><span>03-04</span><em class="em01">2</em><a href="http://www.szec.cc/v-1-4792.aspx" title="【活动通知】关于开展“双百优秀电子商务园企推荐表彰活动”的通知">【活动通知】关于开展“双百优秀电子商</a></li>
+
+<li><span>10-20</span><em class="em01">3</em><a href="http://www.szec.cc/v-1-4635.aspx" title="【行业动态】2015年中国国际第十七届高交会于11月16日-21日如期举办">【行业动态】2015年中国国际第十七</a></li>
+
+
+
+<li><span><font style="color:red">06-06</font></span><em>4</em><a href="http://www.szec.cc/v-1-4881.aspx" title="【行业动态】从供给侧改革看农村电商破局">【行业动态】从供给侧改革看农村电商破</a></li>
+
+
+<li><span>08-26</span><em>5</em><a href="http://www.szec.cc/v-1-4472.aspx" title="【行业动态】跨境电商“百淘大战”，扒一扒那些潜在危机">【行业动态】跨境电商“百淘大战”，扒</a></li>
+
+
+<li><span>11-03</span><em>6</em><a href="http://www.szec.cc/v-1-4670.aspx" title="【行业动态】在O2O磕绊数年的BAT，百度最先交出答卷">【行业动态】在O2O磕绊数年的BAT</a></li>
+
+
+<li><span>11-05</span><em>7</em><a href="http://www.szec.cc/v-1-4673.aspx" title="【行业动态】联通全面推进互联网+：布局八行业十领域">【行业动态】联通全面推进互联网+：布</a></li>
+
+
+<li><span>04-08</span><em>8</em><a href="http://www.szec.cc/v-1-4843.aspx" title="【行业动态】今天起，国内“海淘”免税时代终结！">【行业动态】今天起，国内“海淘”免税</a></li>
+
+
+<li><span>11-06</span><em>9</em><a href="http://www.szec.cc/v-1-4678.aspx" title="【行业动态】三年双11都提前打烊：今年天猫超市咋翻身">【行业动态】三年双11都提前打烊：今</a></li>
+
+
+<li><span>09-15</span><em>10</em><a href="http://www.szec.cc/v-1-4520.aspx" title="【行业动态】深圳跨境电商暴增上半年前海完成订单204.09万单">【行业动态】深圳跨境电商暴增上半年前</a></li>
+
+
+
+				</ul>
+			</div>			
+			<div class="clear"></div>
+			<div class="right03">
+				<h4>评论排行榜</h4>
+				<ul>
+					
+						<li><span>0</span><em class="em01">1</em><a href="http://www.szec.cc/v-1-3963.aspx" title="【协会动态】深圳市电子商务共性技术创新服务沙龙">【协会动态】深圳市电子商务共性技术创</a></li>
+
+
+						<li><span>0</span><em class="em01">2</em><a href="http://www.szec.cc/v-1-3955.aspx" title="【聚焦深圳】深圳战略性新兴产业与成长型企业高峰论坛">【聚焦深圳】深圳战略性新兴产业与成长</a></li>
+
+
+						<li><span>0</span><em class="em01">3</em><a href="http://www.szec.cc/v-1-3954.aspx" title="【行业动态】罗湖商天下之仙湖论剑—暨中小企业网络营销">【行业动态】罗湖商天下之仙湖论剑—暨</a></li>
+
+
+
+
+<li><span>0</span><em>4</em><a href="http://www.szec.cc/v-1-3953.aspx" title="【社会热点】房地产立冬 电商或带来调控时代春天">【社会热点】房地产立冬 电商或带来调</a></li>
+
+
+<li><span>0</span><em>5</em><a href="http://www.szec.cc/v-1-4242.aspx" title="【社会热点】跨境消费 将步入“红利期”">【社会热点】跨境消费 将步入“红利期</a></li>
+
+
+<li><span>0</span><em>6</em><a href="http://www.szec.cc/v-1-4286.aspx" title="【行业动态】2014年我国电子商务交易额已经突破16万亿元">【行业动态】2014年我国电子商务交</a></li>
+
+
+<li><span>0</span><em>7</em><a href="http://www.szec.cc/v-1-4289.aspx" title="【协会动态】我协会正式与河南焦作市签订战略合作协议">【协会动态】我协会正式与河南焦作市签</a></li>
+
+
+<li><span>0</span><em>8</em><a href="http://www.szec.cc/v-1-4290.aspx" title="【聚焦深圳】深国际集团创建电子商务示范基地 助力前海发展">【聚焦深圳】深国际集团创建电子商务示</a></li>
+
+
+<li><span>0</span><em>9</em><a href="http://www.szec.cc/v-1-4291.aspx" title="【聚焦深圳】深圳赛格集团拟设创客O2O推广平台 应对电商冲击">【聚焦深圳】深圳赛格集团拟设创客O2</a></li>
+
+
+<li><span>0</span><em>10</em><a href="http://www.szec.cc/v-1-4440.aspx" title="【聚焦深圳】借“互联网+”拓展跨境电商渠道 深圳成全球最大LED交易中心">【聚焦深圳】借“互联网+”拓展跨境电</a></li>
+
+
+
+				</ul>
+			</div>			
+		</div>
+		<!---->
+		
+	</div>
+		<div class="clear"></div>
+
+		<div class="end" >
+		<div class="foot_top">
+			<a href="http://www.szec.cc/a/1094.aspx">关于我们</a>-
+		<a href="/v-1-3141.aspx">联系我们</a>-
+		<a href="/v-1-3142.aspx">法律声明</a>-
+		<a href="/v-1-3143.aspx">人才招聘</a>-
+		<a href="/v-1-3144.aspx">免责声明</a>-
+		<a href="http://www.szec.cc/map.aspx">网站地图</a>-
+		<a href="http://www.szec.cc/link.aspx">友情链接</a>
+        <a href="http://www.szec.cc/manage/login.aspx">szec.cc</a>
+		
+			</div>
+	
+       <div class="footer">
+         <div class="flink">
+           <span class="cor-fff f-l">友情链接：</span>
+            
+<a href="http://www.judingli.com" linkref="34" title="炬鼎力教育" target="_blank">炬鼎力教育</a>
+
+<a href="http://www.ehmall.com.cn" linkref="36" title="宜和购物" target="_blank">宜和购物</a>
+
+<a href="http://www.yeec.org.cn/default.asp" linkref="39" title="中国青年电商创业委员会" target="_blank">中国青年电商创业委员会</a>
+
+<a href="http://kpmg.com.cn" linkref="35" title="会计师事务所" target="_blank">会计师事务所</a>
+
+<a href="http://zdcard.com" linkref="37" title="正东源科技" target="_blank">正东源科技</a>
+
+<a href="http://www.west-logistics.com/" linkref="26" title="西部物流" target="_blank">西部物流</a>
+
+<a href="http://www.fecsoft.cn/" linkref="40" title="FEC富润电商" target="_blank">FEC富润电商</a>
+
+<a href="http://www.smq.com.cn/Web/index.aspx" linkref="27" title="计量检测" target="_blank">计量检测</a>
+
+<a href="http://www.talect.cn/en/product.asp" linkref="28" title="泰勒特科技" target="_blank">泰勒特科技</a>
+
+<a href="http://www.ewt.cc/" linkref="30" title="网通" target="_blank">网通</a>
+
+
+          </div>
+	 <div class="copyright">
+		www.szec.cc <br />深圳市电子商务协会 版权所有 © 2008-2016 <br /> 
+备案号:粤ICP备15101758号 
+<div class="clear"></div>
+        </div>
+        <div class="divimg"><img src="images/kxwz.png" /></div>
+	</div> </div>
+
+</div>
+
+	
+</body>
+</html>

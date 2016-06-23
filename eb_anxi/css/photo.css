@@ -1,0 +1,62 @@
+.mainbox{width:980px;margin:0 auto; overflow:hidden;}
+/*图片头部*/
+
+.wrap{width:100%; background:#f1f1f1;}
+.wrap .Dg{ margin-top:5px}
+.wrap .Dg a{color:#3c8fc6}
+.photonav{width:100%;height:35px; background:#fff; overflow:hidden}
+.photonav .mainbox .l a{width:35px; float:left; height:35px;}
+.photonav .mainbox .l a.homebtn{ background:url(../images/btn.png) no-repeat}
+.photonav .mainbox .l a.downbtn{ background:url(../images/btn.png) no-repeat -35px 0px}
+.photonav .mainbox .l a:hover{ text-decoration:none}
+.photonav .mainbox .r{width:285px; background:url(../images/new.png) no-repeat 0 50%; padding-left:25px;margin-top:5px;}
+
+#lmbox001{width:auto; background:url(../images/flbg.png); padding:5px 0px; z-index:1999999; position:absolute;margin-top:10px;margin-left:35px;}
+#lmbox001 ul{}
+#lmbox001 li{ height:26px; line-height:26px; float:left;}
+#lmbox001 a{ padding:0px 15px}
+
+
+
+/*内容页*/
+.ipc_head{height:35px;background:#fff; line-height:35px;border-bottom:1px solid #ddd}
+.ipc_head .i_m{width:980px;margin:0 auto;color:#ccc}
+.ipc_head .i_m a{color:#666;margin:1px}
+.ipc_nr{width:980px;margin:0 auto;}
+.ipc_nr h1{line-height:65px;font-size:26px;padding-top:5px; height:52px;font-family:"\5FAE\8F6F\96C5\9ED1"; color:#333;}
+.ipc_nr .pic_tt{ line-height:35px; color:#666;height:50px}
+.ipc_nr .pic_tt span{color:#888;padding-left:15px}
+.ipc_nr .pic_tt font{font-size:12px;color:#2783d0; font-family:Arial;}
+.ipc_nr .tp_ct{padding:15px;background:#fff; text-align:center;}
+.ipc_nr .tp_ct .imagetop{ float:right;color:#999;}
+.ipc_nr .tp_ct .imagetop a{color:#2783d0}
+.ipc_nr .tp_ct .imagetop span{ font-family:Arial, Helvetica, sans-serif;}
+.ipc_nr .tp_ct img{ max-width:780px;_width:780px}
+.ipc_nr .tp_ct a{color:#fff;}
+.ipc_nr .fy{background:#fff;color:#999;padding-left:15px;padding-bottom:15px; line-height:20px;}
+.ipc_nr .fy a{color:#2783d0}
+.ipc_nr .tp_into{background:#fff;padding:15px;margin-top:15px;}
+.ipc_nr .tp_into h4{ font-size:16px;line-height:16px;height:30px;font-family:"\5FAE\8F6F\96C5\9ED1";font-weight:bold; border-bottom:#ddd 1px solid;}
+.ipc_nr .tp_into ul{ padding:10px; text-indent:2em; line-height:26px; font-size:14px; color:#333;}
+
+
+.wylxyzbtn{width:350px;margin:0 auto;margin-top:30px; text-align:center;font-size:18px; background:#47a1dd; height:40px; line-height:40px;}
+.wylxyzbtn a{ display:block;color:#fff;}
+.wylxyzbtn a:hover{ text-decoration:none;}
+
+
+/*分页样式*/
+#fenye{clear:both;margin:15px;height:35px; text-align:right;}
+#fenye img{ margin:0px 2px}
+#fenye a{text-decoration:none; font-size:14px;height:24px;border-radius: 3px; text-align:center; line-height:24px; float:left;color:#666;margin-left:5px;border:1px solid #e5e5e5;border-bottom:1px solid #ccc; background:#fff}
+#fenye .prev,#fenye .next{width:23px; text-align:center;}
+#fenye .prev,#fenye .next img{margin-top:8px}
+#fenye a.curr{width:23px; color:#fff; text-align:center; background:#3391cf;border:1px solid #3391cf}
+#fenye a.curr:hover{color:#fff;}
+#fenye a.num{width:23px;}
+#fenye a:hover{color:#333; text-decoration:none;}
+#fenye span{ line-height:30px;padding-left:5px; font-family:Arial, Helvetica, sans-serif}
+#fenye span#totalpage{padding-left:0px}
+
+#Scroll{width:280px; height:25px; line-height:25px; overflow:hidden}
+#Scroll a{ display:block;color:#444}
