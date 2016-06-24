@@ -3,52 +3,93 @@
 <head>
 <meta charset="utf-8">
 <meta name="keywords" content="html5,本地存储" />
-<meta name="description" content="Helloweba演示平台，演示XHTML、CSS、jquery、PHP案例和示例" />
-<title>幸运大转盘-jQuery+PHP实现的抽奖程序</title>
-<link rel="stylesheet" type="text/css" href="../css/main.css" />
-<style type="text/css">
-.demo{width:417px; height:417px; position:relative; margin:50px auto}
-#disk{width:417px; height:417px; background:url(disk.jpg) no-repeat}
-#start{width:163px; height:320px; position:absolute; top:46px; left:130px;}
-#start img{cursor:pointer}
+
+<style>
+	*{box-sizing: border-box;margin: 0;padding: 0;}
+	html,body{height: 100%;width: 100%;}
+	.background{height: 100%;width: 100%;position: fixed;z-index: -1;background: url(../img/bg.png);background-size: 100% 100%;}
+
+	
+	.content{width: 80%;height:900px;position:relative;top:20%;left:10%;}
+	.try{width:55%;height: 15%;background: url(../img/have_a_try.png);background-size: 100% 100%;}
+	.list{float:left;color:rgb(239,231,184);font-size:14px;margin-top:15px;width:70%;height:70%;background: url(../img/pc_activity_bg.png);background-size: 100% 100%; }
+	.list header{font-size:1.8em;text-align: center;padding-top: 55px;padding-right:25px;}
+	.list section{height: 70%;float:left;}
+	.list section.left{width:45%;padding-left: 65px;}
+	.list section.left>div {font-size: 1.1em;margin-bottom: 13px;}
+	.title{font-size: 1.4em;margin-bottom: 5px;}
+	.text{display: block;}
+
+	section.right{width:38%;text-align:center;width:;}
+	.prize_border{height:  5px ;background-color:rgb(185,68,13);border-radius: 3px;}
+	.list_box{color: #000;padding:8px;height:380px;width:90%;background-color: #fff;margin: 0 auto;}
+	.list_box ul{display: block;width: 100%;height: 30px;list-style: none;border-bottom: 2px solid rgb(185,68,13)}
+	.list_box ul li{display: block;float:left;width: 33%;}
+
+	.introduce table,.introduce td{border:1px solid #fff;border-collapse: collapse;text-align: center;}
+	.introduce table{margin-top: 10px;}
+	.introduce td{padding: 8px;}
+	.wheel{position: absolute;right:-5%;bottom:20%;width:550px;height: 550px;background: url(../img/wheel.png) no-repeat;background-size: 100% 100%;}
+	.pc_gift{position: absolute;right:25%;bottom:10%;width:250px ;height:250px;background: url(../img/pc_gift.png);background-size: 100% 100%;}
 </style>
+
 <script type="text/javascript" src="jquery-1.12.4.min.js"></script>
-<script type="text/javascript" src="jQueryRotate.2.2.js"></script>
-<script type="text/javascript" src="jquery.easing.min.js"></script>
-<script type="text/javascript">
-$(function(){
-	$("#startbtn").rotate({
-		bind:{
-			click:function(){
-				var a = Math.floor(Math.random() * 360);
-				 $(this).rotate({
-					 	duration:3000,
-					 	angle: 0, 
-            			animateTo:1440+a,
-						easing: $.easing.easeOutSine,
-						callback: function(){
-							alert('中奖了！');
-						}
-				 });
-			}
-		}
-	});
-});
-</script>
+
 </head>
 
 <body>
 
+	
+	<div class="background"></div>
 
-<div id="main">
+	<div class="content">
+	   <div class="try"></div>
+	   <div class="list">
+	   		<header>活动说明</header>
+	   		<section class="left">
+	   			<div>
+		   			<span class="title">活动时间</span>
+		   			<span class="text">2016年6月15日-6月21日</span>
+		   		</div>
+	   			<div>
+		   			<span class="title">游戏规则</span>
+		   			<ul>
+			   			<li>每位投票者每天均有1次抽奖机会。</li>
+						<li>通过福建自贸试验区网站或微信公众号，均可参与本次抽奖活动，两个平台不可重复参与。</li>
+						<li>相关奖励将在投票活动结束后的10个工作日内发放。</li>
+						<li>本活动最终解释权归福建省自贸办所有。</li>
+					</ul>
+				</div>
+	   			<div class="introduce">
+	   				<span class="title">奖品介绍</span>
+	   				<table>
+	   					<tr><td>奖项</td><td>名额</td><td>具体奖励</td></tr>
+	   					<tr><td>一等奖</td><td>5名</td><td>100元</td></tr>
+	   					<tr><td>二等奖</td><td>10名</td><td>50元</td></tr>
+	   					<tr><td>三等奖</td><td>30名</td><td>30元</td></tr>
+	   					<tr><td>幸运奖</td><td>300名</td><td>10元</td></tr>
+	   				</table>
+	   			</div>
+	   		</section>
+	   		<section class="right">
+	   			<div><span class="title " >中奖名单</span></div>
+	   			<div class="prize_border"></div>
+	   			<div class="list_box">
+	   				<ul>
+	   					<li>用户名</li>
+	   					<li>获奖名称</li>
+	   					<li>获奖时间</li>
+	   				</ul>
+	   			</div>
+	   		</section>
+	   </div>
+<!--转盘start-->	   
+	   <div class="wheel"></div>
+<!--转盘end-->	   
+	   <div class="pc_gift"></div>
+	</div>
    
-   <div class="msg"></div>
-   <div class="demo">
-        <div id="disk"></div>
-        <div id="start"><img src="start.png" id="startbtn"></div>
-   </div>
-   <div class="ad_demo"><script src="/js/ad_js/ad_demo.js" type="text/javascript"></script></div><br/>
-</div>
+
 
 
 </body>
