@@ -5,40 +5,20 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
    
 </script>
-<style type="text/css">
-
-	*{box-sizing: border-box;margin:0;padding: 0;}
-	body{width: 100%;font-size: 14px;color:rgb(239,231,184);background: url(../img/m_bg_0.png) no-repeat;background-size: 100%;}
-	
-	.main{width: 87%;margin:0 auto;padding-top:150px;}	
-	.wheel{width:100%;}
-	.introduce{text-align:center;position: relative;} 
-	.introduce header{font-size: 1.7em;}
-	.introduce section{text-align: left;background-color: rgb(191,17,58);padding: 15px;border-radius: 5px;margin-top: 5px;}
-	.introduce .title{font-size: 1.4em;font-weight: 700;margin-bottom: 5px;display: block;}
-	
-	.introduce .rules li{margin-bottom: 5px;}
-	.introduce table,.introduce td{border:1px solid #fff;border-collapse: collapse;text-align: center;}
-	.introduce table{width: 100%;}
-
-	/*中奖名单*/
-	.prize_border{height:  5px ;background-color:rgb(185,68,13);border-radius: 3px;}
-	.list_box{color: #000;padding:8px;height:380px;width:90%;background-color: #fff;margin: 0 auto;}
-	.list_box ul.box_header{display: block;width: 100%;height: 30px;list-style: none;border-bottom: 2px solid rgb(244,160,178)}
-	.list_box ul li{display: block;float:left;width: 33%;text-align: center;margin-bottom: 10px;}
-	.list_box .wrapper{width: 100%;height: 85%;}
-	.gift{width:40%;position: absolute;right: 0;bottom: 0;}
-	.gift img{width: 100%;height: 100%;}
-</style>
+<link rel="stylesheet" type="text/css" href="../css/mobile_css/m_index.css">
 
 <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="../js/jquery.nicescroll.min.js"></script>
+<script type="text/javascript" src="../js/scrollTop.js"></script>
+
+	
+
 <script type="text/javascript">
 		$(".wheel").css({height:$(this).width()});
 		$(".gift").css({height:$(this).width()});
-		$(document).ready(function(){
-			$(".list_box").niceScroll({touchbehavior:true});	
-		})
+		window.onload =function(){
+			startmarquee(22,20,1500);	
+		} 
 		
 	
 	
@@ -62,6 +42,8 @@
 					<li>本活动最终解释权归福建省自贸办所有。</li>
 				</ul>
 			</section>
+			
+
 		
 			<section class="prize">
 	   				<span class="title">奖品介绍</span>
@@ -82,77 +64,44 @@
 	   					<li>获奖名称</li>
 	   					<li>中奖时间</li>
 	   				</ul>
-	   				<div class="wrapper">
-	   					<ul>
+	   				<div style="overflow:hidden;height:90%;line-height:22px">
+							<!--调用marqueebox对象，行高22px，字体14px-->
+							<div id="marqueebox" style="line-height:22px;font-size:14px;height:300px;" >
+							<ul>
 	   						<li>jack</li>
 	   						<li>大奖</li>
 	   						<li>明天</li>
-	   					</ul>
-	   					<ul>
 	   						<li>jack</li>
 	   						<li>大奖</li>
 	   						<li>明天</li>
-	   					</ul>
-	   					<ul>
 	   						<li>jack</li>
 	   						<li>大奖</li>
 	   						<li>明天</li>
-	   					</ul>
-	   					<ul>
 	   						<li>jack</li>
 	   						<li>大奖</li>
 	   						<li>明天</li>
-	   					</ul>
-	   					<ul>
 	   						<li>jack</li>
 	   						<li>大奖</li>
 	   						<li>明天</li>
-	   					</ul>
-	   					<ul>
 	   						<li>jack</li>
 	   						<li>大奖</li>
 	   						<li>明天</li>
-	   					</ul>
-	   					<ul>
 	   						<li>jack</li>
 	   						<li>大奖</li>
 	   						<li>明天</li>
-	   					</ul>
-	   					<ul>
 	   						<li>jack</li>
 	   						<li>大奖</li>
 	   						<li>明天</li>
-	   					</ul>
-	   					<ul>
 	   						<li>jack</li>
 	   						<li>大奖</li>
 	   						<li>明天</li>
-	   					</ul>
-	   					<ul>
 	   						<li>jack</li>
 	   						<li>大奖</li>
 	   						<li>明天</li>
-	   					</ul>
-	   					<ul>
-	   						<li>jack</li>
-	   						<li>大奖</li>
-	   						<li>明天</li>
-	   					</ul>
-	   					<ul>
-	   						<li>jack</li>
-	   						<li>大奖</li>
-	   						<li>明天</li>
-	   					</ul>
-	   					<ul>
-	   						<li>jack</li>
-	   						<li>大奖</li>
-	   						<li>明天</li>
-	   					</ul>
-	   					<ul>
-	   						<li>jack</li>
-	   						<li>大奖</li>
-	   						<li>明天</li>
-	   					</ul>
+	   						</ul>
+	   					
+							</div>
+						</div>
 
 	   				</div>
 	   			</div>
@@ -160,7 +109,7 @@
 	   		<div class="gift"><img src="../img/m_gift.png"></div>
 		</div>  
 	</div>
-	<div class="footer"><img style="width:100%;" src="../img/m_footer.png"></div>	
+	
 
 </body>
 </html>

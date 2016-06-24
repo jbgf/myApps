@@ -3,166 +3,110 @@
 <head>
 <meta charset="utf-8">
 <meta name="keywords" content="html5,本地存储" />
-
+<link rel="stylesheet" type="text/css" href="../css/web_css/index.css">
 <style>
-	*{box-sizing: border-box;margin: 0;padding: 0;}
-	html,body{height: 100%;width: 100%;}
-	.background{height: 100%;width: 100%;position: fixed;z-index: -1;background: url(../img/bg.png);background-size: 100% 100%;}
-
 	
-	.content{width: 80%;height:900px;position:relative;top:20%;left:10%;}
-	.try{width:55%;height: 15%;background: url(../img/have_a_try.png);background-size: 100% 100%;}
-	.list{float:left;color:rgb(239,231,184);font-size:14px;margin-top:15px;width:70%;height:70%;background: url(../img/pc_activity_bg.png);background-size: 100% 100%; }
-	.list header{font-size:1.8em;text-align: center;padding-top: 55px;padding-right:25px;}
-	.list section{height: 70%;float:left;}
-	.list section.left{width:45%;padding-left: 65px;}
-	.list section.left>div {font-size: 1.1em;margin-bottom: 13px;}
-	.title{font-size: 1.4em;margin-bottom: 5px;}
-	.text{display: block;}
-
-	section.right{width:38%;text-align:center;}
-	.prize_border{height:  5px ;background-color:rgb(185,68,13);border-radius: 3px;}
-	.list_box{color: #000;padding:8px;height:380px;width:90%;background-color: #fff;margin: 0 auto;}
-	.list_box ul.box_header{display: block;width: 100%;height: 30px;list-style: none;border-bottom: 2px solid rgb(185,68,13)}
-	.list_box ul li{display: block;float:left;width: 33%;margin-bottom: 10px;}
-
-	.introduce table,.introduce td{border:1px solid #fff;border-collapse: collapse;text-align: center;}
-	.introduce table{margin-top: 10px;}
-	.introduce td{padding: 8px;}
-	.wheel{position: absolute;right:-5%;bottom:20%;width:550px;height: 550px;background: url(../img/wheel.png) no-repeat;background-size: 100% 100%;}
-	.pc_gift{position: absolute;right:25%;bottom:10%;width:250px ;height:250px;background: url(../img/pc_gift.png);background-size: 100% 100%;}
 </style>
 
 <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="../js/jquery.nicescroll.min.js"></script>
+<script type="text/javascript" src="../js/scrollTop.js"></script>
 <script type="text/javascript">
-	$(document).ready(function(){
-			$(".list_box").niceScroll({touchbehavior:true});	
-		})
+	window.onload =function(){
+		startmarquee(22,20,1500);	
+	} 
 </script>
 </head>
 
 <body>
-
-	<div class="background"></div>
-
+	<div class="try"></div>
 	<div class="content">
-	   <div class="try"></div>
-	   <div class="list">
-	   		<header>活动说明</header>
-	   		<section class="left">
-	   			<div>
-		   			<span class="title">活动时间</span>
-		   			<span class="text">2016年6月15日-6月21日</span>
-		   		</div>
-	   			<div>
-		   			<span class="title">游戏规则</span>
-		   			<ul>
-			   			<li>每位投票者每天均有1次抽奖机会。</li>
-						<li>通过福建自贸试验区网站或微信公众号，均可参与本次抽奖活动，两个平台不可重复参与。</li>
-						<li>相关奖励将在投票活动结束后的10个工作日内发放。</li>
-						<li>本活动最终解释权归福建省自贸办所有。</li>
-					</ul>
+			<div class="pc_activity">
+				<div class="text">
+					<section class="left">
+			   			<div>
+				   			<span class="title">活动时间</span>
+				   			<div>2016年6月15日-6月21日</div>
+				   		</div>
+			   			<div>
+				   			<span class="title">游戏规则</span>
+				   			<ul>
+					   			<li>每位投票者每天均有1次抽奖机会。</li>
+								<li>通过福建自贸试验区网站或微信公众号，均可参与本次抽奖活动，两个平台不可重复参与。</li>
+								<li>相关奖励将在投票活动结束后的10个工作日内发放。</li>
+								<li>本活动最终解释权归福建省自贸办所有。</li>
+							</ul>
+						</div>
+			   			<div class="introduce">
+			   				<span class="title">奖品介绍</span>
+			   				<table>
+			   					<tr><td>奖项</td><td>名额</td><td>具体奖励</td></tr>
+			   					<tr><td>一等奖</td><td>5名</td><td>100元话费</td></tr>
+			   					<tr><td>二等奖</td><td>10名</td><td>50元话费</td></tr>
+			   					<tr><td>三等奖</td><td>30名</td><td>30元话费</td></tr>
+			   					<tr><td>幸运奖</td><td>300名</td><td>10元话费</td></tr>
+			   				</table>
+			   			</div>
+		   			</section>
 				</div>
-	   			<div class="introduce">
-	   				<span class="title">奖品介绍</span>
-	   				<table>
-	   					<tr><td>奖项</td><td>名额</td><td>具体奖励</td></tr>
-	   					<tr><td>一等奖</td><td>5名</td><td>100元话费</td></tr>
-	   					<tr><td>二等奖</td><td>10名</td><td>50元话费</td></tr>
-	   					<tr><td>三等奖</td><td>30名</td><td>30元话费</td></tr>
-	   					<tr><td>幸运奖</td><td>300名</td><td>10元话费</td></tr>
-	   				</table>
-	   			</div>
-	   		</section>
-	   		<section class="right">
-	   			<div><span class="title " >中奖名单</span></div>
-	   			<div class="prize_border"></div>
-	   			<div class="list_box">
-	   				<ul class="box_header">
-	   					<li>用户名</li>
-	   					<li>获奖名称</li>
-	   					<li>中奖时间</li>
-	   				</ul>
-	   				<div class="wrapper">
-	   					<ul>
+				<div class="list">
+						
+		   			<div ><span class="title" >中奖名单</span></div>
+		   			<div class="prize_border"></div>
+		   			<div class="list_box">
+		   				<ul class="box_header">
+		   					<li>用户名</li>
+		   					<li>获奖名称</li>
+		   					<li>中奖时间</li>
+		   				</ul>
+		   				<div style="overflow:hidden;height:280px;line-height:22px">
+							<!--调用marqueebox对象，行高22px，字体14px-->
+							<div id="marqueebox" style="line-height:22px;font-size:14px;height:280px;" >
+							<ul>
 	   						<li>jack</li>
 	   						<li>大奖</li>
 	   						<li>明天</li>
-	   					</ul>
-	   					<ul>
 	   						<li>jack</li>
 	   						<li>大奖</li>
 	   						<li>明天</li>
-	   					</ul>
-	   					<ul>
 	   						<li>jack</li>
 	   						<li>大奖</li>
 	   						<li>明天</li>
-	   					</ul>
-	   					<ul>
 	   						<li>jack</li>
 	   						<li>大奖</li>
 	   						<li>明天</li>
-	   					</ul>
-	   					<ul>
 	   						<li>jack</li>
 	   						<li>大奖</li>
 	   						<li>明天</li>
-	   					</ul>
-	   					<ul>
 	   						<li>jack</li>
 	   						<li>大奖</li>
 	   						<li>明天</li>
-	   					</ul>
-	   					<ul>
 	   						<li>jack</li>
 	   						<li>大奖</li>
 	   						<li>明天</li>
-	   					</ul>
-	   					<ul>
 	   						<li>jack</li>
 	   						<li>大奖</li>
 	   						<li>明天</li>
-	   					</ul>
-	   					<ul>
 	   						<li>jack</li>
 	   						<li>大奖</li>
 	   						<li>明天</li>
-	   					</ul>
-	   					<ul>
 	   						<li>jack</li>
 	   						<li>大奖</li>
 	   						<li>明天</li>
-	   					</ul>
-	   					<ul>
-	   						<li>jack</li>
-	   						<li>大奖</li>
-	   						<li>明天</li>
-	   					</ul>
-	   					<ul>
-	   						<li>jack</li>
-	   						<li>大奖</li>
-	   						<li>明天</li>
-	   					</ul>
-	   					<ul>
-	   						<li>jack</li>
-	   						<li>大奖</li>
-	   						<li>明天</li>
-	   					</ul>
-	   					<ul>
-	   						<li>jack</li>
-	   						<li>大奖</li>
-	   						<li>明天</li>
-	   					</ul>
+	   						</ul>
+	   					
+							</div>
+						</div>
 
-	   				</div>
-	   			</div>
-	   		</section>
-	   </div>
-	   <div class="wheel"></div>
-	   <div class="pc_gift"></div>
+		   			</div>
+		   		</div>
+		   		<div class="gift"></div>
+
+			</div>
+			<div class="wheel"></div>
 	</div>
+			
+	</div>
+	
    
 
 

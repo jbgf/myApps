@@ -1,11 +1,11 @@
 *{margin:0;padding: 0;}
 	body,html{width:100%;height: 100%;}
-	body{background: url(../img/bg.png) no-repeat;background-size: 100% 100%;font-size: 14px;color:rgb(239,231,184);}
+	body{background: url(../../img/bg.png) no-repeat;background-size: 100% 100%;font-size: 14px;color:rgb(239,231,184);}
 	body>div{margin-left: 100px;}
-	.try{width:661px;height:241px;background: url(../img/have_a_try.png) no-repeat;background-size: 100% 100%;}
+	.try{width:661px;height:241px;background: url(../../img/have_a_try.png) no-repeat;background-size: 100% 100%;}
 	.content{position: relative;float: left;}
-	.pc_activity{float:left;width:840px;height: 451px;background: url(../img/pc_activity_bg.png) no-repeat;background-size: 100% 100%;}
-	.wheel{margin-left:-190px;margin-top:-120px;float:left;width:574px;height: 568px;background: url(../img/wheel.png) no-repeat;background-size: 100% 100%;}
+	.pc_activity{float:left;width:840px;height: 451px;background: url(../../img/pc_activity_bg.png) no-repeat;background-size: 100% 100%;}
+	.wheel{margin-left:-190px;margin-top:-120px;float:left;width:574px;height: 568px;background: url(../../img/wheel.png) no-repeat;background-size: 100% 100%;}
 	.text{width: 274px;height: 316px;margin-left: 60px;margin-top: 50px;}
 
 .title{font-size: 1.3em;margin-bottom: 5px;font-weight: 700;}
@@ -25,5 +25,5 @@
 	.list_box ul li{display: block;float:left;width: 33%;margin-bottom: 10px;}
 
 .list{margin-top:50px;margin-left: 20px;}	
-.gift{position: absolute;bottom: -280px;right:-35px;z-index: 999; width:228px;height:181px;background: url(../img/pc_gift.png) no-repeat;background-size: 100% 100%;}
+.gift{position: absolute;bottom: -280px;right:-35px;z-index: 999; width:228px;height:181px;background: url(../../img/pc_gift.png) no-repeat;background-size: 100% 100%;}
 
