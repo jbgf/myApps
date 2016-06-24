@@ -26,16 +26,24 @@
 	/*中奖名单*/
 	.prize_border{height:  5px ;background-color:rgb(185,68,13);border-radius: 3px;}
 	.list_box{color: #000;padding:8px;height:380px;width:90%;background-color: #fff;margin: 0 auto;}
-	.list_box ul{display: block;width: 100%;height: 30px;list-style: none;border-bottom: 2px solid rgb(244,160,178)}
-	.list_box ul li{display: block;float:left;width: 33%;text-align: center;}
+	.list_box ul.box_header{display: block;width: 100%;height: 30px;list-style: none;border-bottom: 2px solid rgb(244,160,178)}
+	.list_box ul li{display: block;float:left;width: 33%;text-align: center;margin-bottom: 10px;}
+	.list_box .wrapper{width: 100%;height: 85%;}
 	.gift{width:40%;position: absolute;right: 0;bottom: 0;}
 	.gift img{width: 100%;height: 100%;}
 </style>
 
-<script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery.nicescroll.min.js"></script>
 <script type="text/javascript">
-	$(".wheel").css({height:$(this).width()});
-	$(".gift").css({height:$(this).width()});
+		$(".wheel").css({height:$(this).width()});
+		$(".gift").css({height:$(this).width()});
+		$(document).ready(function(){
+			$(".list_box").niceScroll({touchbehavior:true});	
+		})
+		
+	
+	
 </script>
 </head>
 <body>
@@ -48,7 +56,7 @@
 		
 			<section class="rules">
 				<span class="title">游戏规则</span>
-				<ul>
+				<ul >
 					<li>每位投票者每天均有1次抽奖机会。</li>
 					<li>通过福建自贸试验区网站或微信公众号，均可参与
 本次抽奖活动，两个平台不可重复参与。</li>
@@ -71,11 +79,84 @@
 	   			<div style="text-align:center;"><span class="title " >中奖名单</span></div>
 	   			<div class="prize_border"></div>
 	   			<div class="list_box">
-	   				<ul>
+	   				<ul class="box_header">
 	   					<li>用户名</li>
 	   					<li>获奖名称</li>
 	   					<li>中奖时间</li>
 	   				</ul>
+	   				<div class="wrapper">
+	   					<ul>
+	   						<li>jack</li>
+	   						<li>大奖</li>
+	   						<li>明天</li>
+	   					</ul>
+	   					<ul>
+	   						<li>jack</li>
+	   						<li>大奖</li>
+	   						<li>明天</li>
+	   					</ul>
+	   					<ul>
+	   						<li>jack</li>
+	   						<li>大奖</li>
+	   						<li>明天</li>
+	   					</ul>
+	   					<ul>
+	   						<li>jack</li>
+	   						<li>大奖</li>
+	   						<li>明天</li>
+	   					</ul>
+	   					<ul>
+	   						<li>jack</li>
+	   						<li>大奖</li>
+	   						<li>明天</li>
+	   					</ul>
+	   					<ul>
+	   						<li>jack</li>
+	   						<li>大奖</li>
+	   						<li>明天</li>
+	   					</ul>
+	   					<ul>
+	   						<li>jack</li>
+	   						<li>大奖</li>
+	   						<li>明天</li>
+	   					</ul>
+	   					<ul>
+	   						<li>jack</li>
+	   						<li>大奖</li>
+	   						<li>明天</li>
+	   					</ul>
+	   					<ul>
+	   						<li>jack</li>
+	   						<li>大奖</li>
+	   						<li>明天</li>
+	   					</ul>
+	   					<ul>
+	   						<li>jack</li>
+	   						<li>大奖</li>
+	   						<li>明天</li>
+	   					</ul>
+	   					<ul>
+	   						<li>jack</li>
+	   						<li>大奖</li>
+	   						<li>明天</li>
+	   					</ul>
+	   					<ul>
+	   						<li>jack</li>
+	   						<li>大奖</li>
+	   						<li>明天</li>
+	   					</ul>
+	   					<ul>
+	   						<li>jack</li>
+	   						<li>大奖</li>
+	   						<li>明天</li>
+	   					</ul>
+	   					<ul>
+	   						<li>jack</li>
+	   						<li>大奖</li>
+	   						<li>明天</li>
+	   					</ul>
+
+	   				</div>
 	   			</div>
 	   		</section>	 
 	   		<div class="gift"><img src="../img/m_gift.png"></div>
