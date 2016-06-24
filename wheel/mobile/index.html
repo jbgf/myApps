@@ -16,8 +16,12 @@
 <script type="text/javascript">
 		$(".wheel").css({height:$(this).width()});
 		$(".gift").css({height:$(this).width()});
+		
+		
 		window.onload =function(){
-			startmarquee(22,20,1500);	
+			var liHeight =parseInt( $("#marqueebox li").first().css("height"))+10 || null;
+			
+			startmarquee(liHeight,20,1500);	
 		} 
 		
 	
@@ -66,7 +70,7 @@
 	   				</ul>
 	   				<div style="overflow:hidden;height:90%;line-height:22px">
 							<!--调用marqueebox对象，行高22px，字体14px-->
-							<div id="marqueebox" style="line-height:22px;font-size:14px;height:300px;" >
+							<div id="marqueebox" style="height:300px;" >
 							<ul>
 	   						<li>jack</li>
 	   						<li>大奖</li>

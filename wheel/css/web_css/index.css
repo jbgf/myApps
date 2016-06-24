@@ -17,7 +17,7 @@
 
 .list{width:256px;height: 306px;}
 .list >div{text-align:center;}
-.prize_border{height:  5px ;background-color:rgb(185,68,13);border-radius: 3px;}	
+.prize_border{height: 5px ;background-color:rgb(185,68,13);border-radius: 3px;}	
 .list_box ul li{display: block;float:left;width: 33%;margin-bottom: 10px;}
 
 .list_box{color: #000;padding:8px;height:320px;width:90%;background-color: #fff;margin: 0 auto;}
