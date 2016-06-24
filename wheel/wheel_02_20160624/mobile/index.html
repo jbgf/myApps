@@ -19,7 +19,18 @@
 		
 		
 		window.onload =function(){
-			var liHeight =parseInt( $("#marqueebox li").first().css("height"))+10 || null;
+			/*数据测试函数*/
+			var data = {name:"jack",prize:"bigPrize",time:"昨天"};
+			for(var i = 0;i<60; i++){
+				$("#marqueebox ul").append(
+					'<li>'
+					+'<span>'+data.name+'</span>'
+					+'<span>'+data.prize+'</span>'
+					+'<span>'+data.time+'</span>'
+					+'</li>');
+			}
+
+			var liHeight =parseInt( $("#marqueebox span").height())+10 || null;
 			
 			startmarquee(liHeight,20,1500);	
 		} 
@@ -71,41 +82,12 @@
 	   				<div style="overflow:hidden;height:90%;line-height:22px">
 							<!--调用marqueebox对象，行高22px，字体14px-->
 							<div id="marqueebox" style="height:300px;" >
-							<ul>
-	   						<li>jack</li>
-	   						<li>大奖</li>
-	   						<li>明天</li>
-	   						<li>jack</li>
-	   						<li>大奖</li>
-	   						<li>明天</li>
-	   						<li>jack</li>
-	   						<li>大奖</li>
-	   						<li>明天</li>
-	   						<li>jack</li>
-	   						<li>大奖</li>
-	   						<li>明天</li>
-	   						<li>jack</li>
-	   						<li>大奖</li>
-	   						<li>明天</li>
-	   						<li>jack</li>
-	   						<li>大奖</li>
-	   						<li>明天</li>
-	   						<li>jack</li>
-	   						<li>大奖</li>
-	   						<li>明天</li>
-	   						<li>jack</li>
-	   						<li>大奖</li>
-	   						<li>明天</li>
-	   						<li>jack</li>
-	   						<li>大奖</li>
-	   						<li>明天</li>
-	   						<li>jack</li>
-	   						<li>大奖</li>
-	   						<li>明天</li>
-	   						</ul>
+							<ul class="box_body"></ul>
 	   					
 							</div>
 						</div>
+
+	   				</div>
 
 	   				</div>
 	   			</div>
