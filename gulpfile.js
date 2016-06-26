@@ -26,7 +26,7 @@ gulp.task('default',function(callback){
 gulp.task('browserSync',function(){
 	browserSync.init({
         server: {
-            baseDir: "./wheel"
+            baseDir: "./wheel/wheel_02_20160624"
         }
     });
 /*	browserSync({
@@ -34,12 +34,13 @@ gulp.task('browserSync',function(){
 		proxy: "localhost:8001/water_cleaner_php_02"			//处理php文件，gulp-connect-php默认监听8000，直接设置port：8000会发生占用，启用8001；
 	})*/
 });
-gulp.task('watch',['browserSync','connectPhp'],function(){
+gulp.task('watch',['browserSync'/*,'connectPhp'*/],function(){
 
 	 gulp.watch(['./water_cleaner_php_02/**/*.js','./water_cleaner_php_02/**/*.css',
 	 			 './water_cleaner_php_02/**/*.html'],browserSync.reload);
 	 gulp.watch(['./huaxing/**/*.js','./huaxing/**/*.css','./huaxing/**/*.html'],browserSync.reload);
 	 gulp.watch(['./wheel/**/*.js','./wheel/**/*.css','./wheel/**/*.html'],browserSync.reload);
+	 gulp.watch(['./jquery.nicescroll-master/**/*.js','./jquery.nicescroll-master/**/*.css','./jquery.nicescroll-master/**/*.html'],browserSync.reload);
 	 
 });
 

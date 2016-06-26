@@ -2,16 +2,20 @@
 
 	*{box-sizing: border-box;margin:0;padding: 0;}
 	html,body{width: 100%;height:100%;background-color: rgb(228,27,71);}
-	body{font-size: 14px;color:rgb(239,231,184);background: url(../../img/m_bg_3.png) no-repeat;background-size: 100%;}
+	body{font-size: 14px;color:rgb(239,231,184);}
 	
-	.main{width: 87%;margin:0 auto 68px auto;padding-top:150px;position: relative;}	
-	.wheel{width:100%;}
-	.introduce{text-align:center;position: relative;margin-top: 80px;} 
+	.main{width: 100%;margin:0 auto 0 auto;position: relative;}
+
+	.m_top{background:url(../img/mbg6.png) no-repeat;background-size: 100% 100%;padding:30px 0 50px 0;}
+	.m_header,.wheel,.introduce section{width:80%;margin:0 auto;}
+	.m_header img{width:100%;}	
+	
+	.introduce{text-align:center;position: relative;margin-top: 20px;} 
 	.introduce header{font-size: 1.7em;}
 	.introduce section{text-align: left;background-color: rgb(191,17,58);padding: 15px;border-radius: 5px;margin-top: 15px;}
 	.introduce .title{font-size: 1.4em;font-weight: 700;margin-bottom: 5px;display: block;}
 	
-	.introduce .rules li{margin-bottom: 5px;}
+	.introduce .rules li{margin-bottom: 5px;margin-left: 8px;}
 	.introduce table,.introduce td{border:1px solid #fff;border-collapse: collapse;text-align: center;}
 	.introduce table{width: 100%;}
 
@@ -24,3 +28,5 @@
 	.list_box .wrapper{width: 100%;height: 85%;}
 	.gift{width:40%;position: absolute;right: 0;bottom: 0;}
 	.gift img{width: 100%;height: 100%;}
+
+	.m_footer{text-align: center;background-color: rgb(0,161,233);font-size: 1.5em;font-weight: 700;padding:15px;}
