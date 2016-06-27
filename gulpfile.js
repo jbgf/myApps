@@ -26,7 +26,7 @@ gulp.task('default',function(callback){
 gulp.task('browserSync',function(){
 	browserSync.init({
         server: {
-            baseDir: "./wheel/wheel_02_20160624"
+            baseDir: "./wheel"
         }
     });
 /*	browserSync({
