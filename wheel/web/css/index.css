@@ -62,7 +62,9 @@ img {
 	.try{width:661px;height:241px;background: url(../img/have_a_try.png) no-repeat;background-size: 100% 100%;}
 	.content{position: relative;float: left;}
 	.pc_activity{float:left;width:840px;height: 451px;background: url(../img/pc_activity_bg.png) no-repeat;background-size: 100% 100%;}
-	.wheel{position: relative; margin-left:-190px;margin-top:-120px;float:left;width:574px;height: 568px;background: url(../img/wheel.png) no-repeat;background-size: 100% 100%;}
+	.wheel{
+		
+		position: relative; margin-left:-190px;margin-top:-120px;float:left;width:574px;height: 568px;background: url(../img/wheel.png) no-repeat;background-size: 100% 100%;}
 	.text{width: 274px;height: 316px;margin-left: 60px;margin-top: 50px;}
 
 .title{font-size: 1.3em;margin-bottom: 5px;font-weight: 700;}

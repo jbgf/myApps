@@ -6,11 +6,11 @@
    
 </script>
 <link rel="stylesheet" type="text/css" href="css/index.css">
+<link rel="stylesheet" type="text/css" href="css/modalBox.css">
 
 <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>
 <script type="text/javascript" src="js/scrollTop.js"></script>
-
+<script type="text/javascript" src="js/modalBox.js"></script>
 	
 
 <script type="text/javascript">
@@ -32,6 +32,12 @@
 			var liHeight =parseInt( $("#marqueebox span").height())+10 || null;
 			
 			startmarquee(liHeight,20,1500);	
+			/*弹出框判断条件*/
+			if(true){
+				
+				    $(".modalBox").modalBox({});
+				
+			}
 		} 
 		
 	
@@ -103,6 +109,23 @@
 	   		<div class="gift" style="display: none;"><img src="img/m_gift.png"></div>
 		</div>
 		<div class="m_footer" >——福建自贸试验区——</div>
+		<div class="modalBox fade">
+		  		<div class="modalBox-dialog" role="document">
+				    <div class="modalBox-content">
+				      <div class="modalBox-header">
+				        <button type="button" class="close" data-dismiss="modalBox" aria-label="Close">
+				          <span aria-hidden="true">&times;</span>
+				        </button>
+	<!-- 标题栏 -->			  <h4 class="modalBox-title">福建省自贸办提示您：</h4>
+				      </div>
+				      <div class="modalBox-body">
+	<!-- 提示信息-->			        <p>恭喜您获得100元话费，我们将于投票活动结束后的10个工作日内将话费充值到您的手机号码13600805100，请留意查收！明天继续参与投票，还有机会抽奖哦!
+</p>
+				      </div>
+				      
+				    </div>
+			  </div>
+		</div>
 	</div>
 	
 
