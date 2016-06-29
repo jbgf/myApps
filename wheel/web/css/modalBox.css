@@ -64,6 +64,7 @@ button.close {
   margin: 10px;
 }
 .modalBox-content {
+  line-height: 32px;
   color:#000;
   position: relative;
   background-color: #fff;
@@ -104,6 +105,7 @@ button.close {
 .modalBox-title {
   margin: 0;
   line-height: 1.42857143;
+  color:red;
 }
 .modalBox-body {
   position: relative;

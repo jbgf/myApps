@@ -35,3 +35,5 @@
 	.wheel_wrapper{display: table-cell;vertical-align: middle;}
 	.wheel #start{margin:0 auto;width:33%;height:auto;}
 	.wheel #start img{width:100%;height: 100%;}
+
+	.m_title{width:80%;height:24px;background:url(../img/m_title.png);background-size: 100% 100%;margin: 2% auto 10px}

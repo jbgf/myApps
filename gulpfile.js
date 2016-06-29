@@ -26,7 +26,7 @@ gulp.task('default',function(callback){
 gulp.task('browserSync',function(){
 	browserSync.init({
         server: {
-            baseDir: "./water_cleaner"
+            baseDir: "./wheel"
         }
     });
 /*	browserSync({
