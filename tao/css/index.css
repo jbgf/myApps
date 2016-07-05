@@ -88,7 +88,7 @@
 .box_row:before,.box_row:after{content:" ";display:table;}
 .box_row:after{clear:both;}
 .box_row{width: 100%!important}
-/* 新闻 */
+/* jobs */
 .jobs{height: 680px;}
 .jobs>div{
 	height: 100%;position: relative;float:left; background:#fff; 
@@ -103,11 +103,72 @@
 .jobs_r h1+div{
 	height: 302px;
 }
-.news_l h1,.news_r h1{ 
+/*product*/
+.product{height: 645px;}
+.product>div{
+	height:595px;position: relative;float:left; background:#fff; 	
+}
+.product .product_l{width: 241px;}
+.product .product_r{width: 959px;}
+.product_l>div{width: 149px;height: 45px;left:46px;bottom: 85px;position: absolute;}
+
+.product_r>div.row01,.product_r>div.row02{
+	width:100%;
+	height: 50%;
+}
+.product_r>div.row01 div.pic_main:last-child,.product_r>div.row02 div.pic_main:last-child{padding-right: 0}
+.product_r>div.row01 div.pic_main{
+	width: 25%;height:100%;
+	float: left;
+	padding:0 5px 5px 0;
+}
+.product_r>div.row02 div.pic_main{
+	width: 25%;height:100%;
+	float: left;
+	padding:5px 5px 0px 0;
+}
+.product_r div.pic_main .new_pic{
+	padding:10px;
+	padding-top: 0;
+	border:1px solid #E2E0E0;
+	height: 100%;
+}
+.product_r .pic_wrapper{height: 220px;width: 100%;position: relative;}
+.product_r .product_details{height: 60px;background-color: #f0f0f0}
+
+.product_r>div img{height:100%;width: 100%}
+
+/*train*/
+.train{height: 830px;}
+.train>div {
+    height: 595px;
+    position: relative;
+    float: left;
+    background: #fff;
+}
+.train .product_r{width: 100%;}
+.train .product_r>div.row01,.train .product_r>div.row02{
+	width:100%;
+	height: 385px;
+}
+.train .product_r .pic_wrapper{height: 244px;width: 100%;position: relative;}
+.train .train_details p{text-align: center;color: #000;font-size: 20px;}
+
+/*news*/
+.news{height: 437px;}
+.news .news_left{
+	width: 135px;
+	height: 87px;
+}
+.news .news_right{
+	width:465px;
+}
+.news .news_ad{height: 108px;width: 578px;}
+.news_l h1,.news_r h1,.product h1,.friend_link h1,.train h1{ 
 	width: 100%;
-	height: 34px;
+	height: 57px;
 	border-bottom:1px solid #E2E0E0;
-	font-size: 16px;
+	font-size: 23px;
 	background-color: #f5f5f5;
 }
 .news_title{
@@ -115,12 +176,19 @@
 	padding:6px;
 	font-weight: 500;
 	width: 105px;
-	height: 34px;
+	height: 100%;
 	color: #3d3d3d;
 	border-radius: 5px 5px 0 0;
 	border-bottom: 2px solid #3d3d3d;
 }
-.jobs_l h1 .more,.jobs h1 .more{ 
+
+/*友情链接*/
+.friend_link{
+	padding: 34px 0;
+	height: 163px;
+}
+.friend_link h1{margin-bottom: 30px;}
+.jobs_l h1 .more,.jobs h1 .more,.product h1 .more,.train h1 .more,.friend_link h1 .more{ 
 	margin: 8px 15px 0 0;
 	float:right; 
 	
@@ -249,8 +317,8 @@ ul.new_thumb li a.active:after{
 
 .board li span i{color:#9b5225;width:15px;height: 15px;}
 
-.slogan{width:100%;height: 87px;margin:16px 0;}
-.slogan img{width:100%;height:100%;}
+.slogan{width:100%;height: 150px;margin:16px 0;position: relative;}
+.slogan>div{width:283px;height:28px;position: absolute;right: 40.6%;bottom: 16px;}
 
 /*公益视频，公益传递，公益法规等*/
 .new_pic .news_flash{width:100%;}
@@ -302,7 +370,7 @@ ul.new_thumb li a.active:after{
 .link_content li{display: inline;padding:7px;}
 .link_content li img{width:217px;height: 74px;}
 /*footer*/
-.footer{height: 117px;background-color: #323232;margin-top: 45px;}
+.footer{height: 117px;background-color: #323232;}
 .footer>div{float: left;position: relative;}
 .footer_l{width:179px;height: 46px;margin-top: 35px}
 .footer_l img{width:100%;height: 100%;}
@@ -499,21 +567,28 @@ ul.pagination li.triangles_right img{
 .news_fullwidth{width: 100%;}
 /*.news_fullwidth .policy_header{font-size: 20px;}
 .news_fullwidth .policy_header span{float: right;font-size: 15px;font-weight: normal;}*/
+.jobs .news_row{
+	height: 127px;
+	padding: 25px 0;
+	border-bottom: 1px dashed #d9d9d9;		
+}
 
-.div_content .news_row>div{
+.jobs .news_row>div{
 	float: left;
 	position: relative;	
+	
 }
 .news_left{
-	width:169px;
-	height: 106px;
-	border:3px solid #DEDCDC;
+	width:80px;
+	height: 80px;
+	
 }
 .news_left img{width: 100%;height: 100%;}
-.news_right{width:580px;padding-left: 21px;padding-right: 25px;}
+.news_right{width:520px;padding-left: 21px;padding-right: 25px;}
 
 .policy_header{font-size: 17px;font-weight: 600;height: 44px;line-height: 44px;}
 .policy_header span{font-size: 16px;}
+.policy_header span:last-child a{color:#ff8702;float: right;}
 
 .policy_body{line-height: 25px;font-weight: 500;}
 .policy_body span{
