@@ -242,7 +242,7 @@
 }
 
 /*footer*/
-.footer{height: 125px;background-color: #323232;padding-top: 21px;}
+.footer{height: 125px;background-color: #222;padding-top: 21px;}
 
 .footer_l{width:179px;height: 46px;margin-top: 35px}
 .footer_l img{width:100%;height: 100%;}
@@ -254,7 +254,7 @@
 
 .org{text-align: center;}
 .org img{margin-right: 10px;}
-
+.copyRight{text-align: center;color: #7e7e7e;margin-top: 16px}
 .more a{line-height: 20px;height: 20px;display: block;font-size: 12px;text-transform:uppercase;}
 
 

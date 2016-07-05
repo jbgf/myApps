@@ -65,7 +65,10 @@ input[type=text]:focus{border: 1px solid #6bafff;}
 }
 
 
-.g-topbar {height: 34px;line-height: 34px;font-size: 12px;border-bottom: 1px solid #E9E5E5;}
+.g-topbar {height: 34px;line-height: 34px;font-size: 12px;border-bottom: 1px solid #E9E5E5;
+  background-color: #2c2c2c;
+  color: #fff;
+}
 #showtime{display: inline-block;margin-left: 18px;}
 .g-topbar-r{float: right;}
 .g-topbar-r>span{display: inline-block;margin-left: 15px;}
