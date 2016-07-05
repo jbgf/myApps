@@ -130,16 +130,17 @@ input[type=text]:focus{border: 1px solid #6bafff;}
 .input_account .addon{width: 36px;background-color: #fff;}
 
 .input_account .addon.icon_account{
-    background: #fff url("../../img/icon_account.png") no-repeat scroll 6px 8px;
+    background: #f2f2f2 url("../../img/icon_account.png") no-repeat scroll 6px 8px;
 }
 
 .input_account .addon.icon_pass{
-    background: #fff url("../../img/icon_pass.png") no-repeat scroll 8px 7px;
+    background: #f2f2f2 url("../../img/icon_pass.png") no-repeat scroll 8px 7px;
+
 }
 .input_account input{
   height: 44px;
   line-height: 44px;
-  width:222px;padding-left: 10px;}
+  width:278px;padding-left: 10px;}
 .loginButton{
     text-align: left;padding-left: 24px; 
     font-size: 17px;font-weight: 500;color: #fff;
