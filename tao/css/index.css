@@ -8,18 +8,57 @@
   url('http://at.alicdn.com/t/font_1467102503_588627.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
   url('http://at.alicdn.com/t/font_1467102503_588627.svg#iconfont') format('svg'); /* iOS 4.1- */
 }
-
+*{box-sizing: border-box;}
 .g-header .logo{height: 102px;}
 .g-topbar .arrow_down img{
 	margin-left: 4px;
     margin-bottom: 3px;
 }
 .ad{margin-top: 14px;}
-.search{width: 744px;height: 83px;float: right;}                                     
-
+/*dropdown*/
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px dashed;
+  border-top: 4px solid \9;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  margin-left: 10px;
+}
+.dropdown-backdrop{top: 0;left: 0;bottom: 0;right: 0;position: absolute;}
+.dropDownMenu{
+	background-color: #fff;
+	float: left;
+	position: relative;
+	width: 76px;
+	height: 45px;
+	border: 2px solid #f48000;
+	border-right: none;
+	text-align: center;
+}
+.dropDownMenu .dropDownbutton{display: block;width: 100%;height: 100%;}
+.dropDownMenu ul{
+    float: left;
+	display: block;
+	position: absolute;
+	top:100%;
+	width: 77px;
+	list-style: none;
+	z-index: 9999;
+	background-color: #fff;
+	border: 2px solid #f48000;
+	margin-left: -2px;
+	display: none;
+}
+.dropDownMenu ul li{text-align: center;}
+/*search*/
+.search{width: 821px;height: 83px;float: right;}                                     
 .search input{
   position: relative;
-  padding-left: 15px;
+  
   float: left;
   width: 525px;
   margin-bottom: 0;
@@ -27,15 +66,18 @@
   line-height: 39px;
   display: table-cell;
   border: 2px solid #f48000;
-  
+  border-left: none;
 }
-.search .input_group,.search input[type="submit"].need{
+
+.search .input_group,.search a.need{
 	margin-top: 16px;margin-bottom: 8px;float: left;
+	height: 45px;
+	line-height: 39px;
 }
 .search input[type="submit"]{padding-left: 0;color: #fff;font-size: 16px}
-.search input[type="submit"].need{
+.search a.need{
 	width: 121px;margin-left: 16px;background-color: #00aa3c;
-	
+	color: #fff;
 }
 .search input:active,.input_group input:focus{box-shadow: inset 0 1px 1px 2px rgba(0,0,0,.075), 0 0 8px 2px rgba(102, 175, 233, .6);outline: 0}
 .search .addon{
@@ -51,7 +93,7 @@
     vertical-align: middle;
     
     width: 84px;
-    font-size: 18px;
+   
     line-height: 1.3333333;
     
 }
@@ -59,7 +101,7 @@
 	margin-bottom: -3px;
 }
 .search>span{font-size:12px;color:#827E7E;margin-right: 5px;}                 
-.iconFont{font-family:"iconfont";font-style:normal;color:#fff;margin-right: 5px;}                     
+                   
 /* 公告 */
 
 
@@ -117,7 +159,12 @@
 .container .floatWindow>div.window_r{right:92px;top: 141px;}
 .close{width:20px;height: 20px;position: absolute;top:10px;right: 10px;}
 
-.quickBar{background-color: #333;height: 333px;width: 63px;right: 0;top: -264px;}
+.container .floatWindow .quickBar{
+	background-color: #333;height: 333px;width: 63px;
+	position: fixed;
+	right: 0;
+	top: 393px;
+}
 .quickBar ul{display: block;height:100%;list-style: none;}
 .quickBar ul li{height: 16.6%;width:100%;}
 .quickBar ul li a{display: block;width:100%;height:100%;border: 1px solid #444}

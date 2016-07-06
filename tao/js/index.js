@@ -1,13 +1,35 @@
 $(document).ready(function(){
 	
 	newsImg();
-	ScrollImgLeft();
-	showTime();
-	scrollLink(20,1500);
 	
+	
+	scrollLink(20,1500);
+	dropDown();
 
 	
 });
+function dropDown(){
+	$(".dropDownButton").on("click",function(){
+		       
+		 $(this).siblings("ul").show();
+		 $(document.createElement('div'))
+          .addClass('dropdown-backdrop')
+          .appendTo($("body"))
+          .on('click', clearMenus);
+
+
+          function clearMenus(){
+          	 $(".dropDownMenu ul").hide();
+          	 $(".dropdown-backdrop").remove();
+          }
+	});
+	$(".dropDownMenu ul li").on("click",function(){
+		 $(".dropDownText").html($(this).html());
+		 $(".dropDownMenu ul").hide();
+		 $(".dropdown-backdrop").remove();
+	}).first().click()
+
+}
 function linkArrow(){
 	var ul=$(".link_content ul")[0]; //定义变量o为document.getElementByIdx_x("marqueebox")对象
 		//if(!o)return;
@@ -86,28 +108,7 @@ function scrollLink(speed,delay) {   //函数 函数名(变量1,变量2,变量3)
 function ui(){
 	$(".about_content_l .div03").css({"height":$(".about_content_r").height()-101+'px'})
 }
-function ScrollImgLeft(){
-	var speed=20
-	var scroll_begin = document.getElementById("scroll_begin");
-	var scroll_end = document.getElementById("scroll_end");
-	var scroll_div = document.getElementById("scroll_div");
-	if(!(scroll_begin && scroll_end && scroll_div))return;
-	if($("#scroll_div img").length < 6)return;
-	scroll_end.innerHTML=scroll_begin.innerHTML
-	function Marquee(){
-		if(scroll_div.scrollLeft > scroll_begin.offsetWidth)
-		scroll_div.scrollLeft=0;
-	
-		else{
-		
-			scroll_div.scrollLeft++	
-		}
-		
-	}
-	var MyMar=setInterval(Marquee,speed)
-	scroll_div.onmouseover=function() {clearInterval(MyMar)}
-	scroll_div.onmouseout=function() {MyMar=setInterval(Marquee,speed)}
-}
+
 var newsImg = function(){
 		/*测试数据*/
 		
@@ -126,27 +127,7 @@ var newsImg = function(){
 		
 }
 
-function showTime(){ 
-            var show_day=new Array('星期一','星期二','星期三','星期四','星期五','星期六','星期日'); 
-            var time=new Date(); 
-            var year=time.getFullYear(); 
-            var month=time.getMonth(); 
-            var date=time.getDate(); 
-            var day=time.getDay(); 
-            var hour=time.getHours(); 
-            var minutes=time.getMinutes(); 
-            var second=time.getSeconds(); 
-            month=month+1; 
-            month<10?month='0'+month:month; 
-            
-            hour<10?hour='0'+hour:hour; 
-            minutes<10?minutes='0'+minutes:minutes; 
-            second<10?second='0'+second:second; 
-            var now_time=year+'年'+month+'月'+date+'日'+' '+show_day[day-1]+' '+hour+':'+minutes+':'+second; 
-            document.getElementById('showtime').innerHTML=now_time; 
-            setTimeout(showTime,1000); 
-        
-        };
+
 
 
 var glide = $('.slider').glide({
