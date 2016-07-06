@@ -15,6 +15,17 @@
 <script type="text/javascript" src="js/glide.min.js"></script>
 <script src="//api.html5media.info/1.1.8/html5media.min.js"></script> 
 <script type="text/javascript" src="js/jquery.JPlaceholder.js"></script>
+<script type="text/javascript" src="js/scrollTop.js"></script>
+<script type="text/javascript">
+   $(function(){
+      $(".floatWindow .close").on('click', function(event) {
+          $(this).parent("div").hide();
+      });
+      $(".contact .close").on('click',function(){
+          $(this).parents(".contact").hide();
+      })
+   })
+</script>
 </head>
 <body>
 
@@ -25,35 +36,45 @@
         <div id="common_head" >
              
             <div class="g-topbar full-width">
-                    你好，欢迎来到淘会计！   福州   
-                    <div class="g-topbar-r"><span>加入收藏</span><span>设为首页</span><span>服务热线</span></div>
+                    你好，欢迎来到淘会计！   福州 <a class="arrow_down"><img src="img/icon_arrowdown.png"></a>
+                    <div class="g-topbar-r"><span>[登录]</span><span>[注册]</span><span>我的空间</span><a class="arrow_down"><img src="img/icon_arrowdown.png"></a>
+                    <span>网站秘籍</span><a class="arrow_down"><img src="img/icon_arrowdown.png"></a>
+                    <span>帮助中心</span><a class="arrow_down"><img src="img/icon_arrowdown.png"></a>
+                    </div>
             </div>
             <div class="full-screen">
               <div class="ad "><img src="img/ad03.PNG"></div>
             </div>
              
             <div class="g-header">
-                 <div class="box_row clearfix">
-                    <a class="g-header-logo" href="#"><img src="img/logo.png"></a>
+                 <div class="box_row clearfix logo">
+                    <a class="g-header-logo" href="#"><img src="img/tao_logo.png"></a>
                     <div class="search">
-                        <form class="input_group" style="margin-bottom:10px;">
-                            <input type="" name="" placeholder="输入关键字查找">
-                            <input type="submit" class="addon" value="">
+                        <div class="box_row">
+                        <form class="input_group" >
+                            <input type="" name="" placeholder="请输入关键字搜索" >
+                            <input type="submit" class="addon" value="搜索">
+                            
                         </form>
-                        
-                       
+                        <input type="submit" class="addon need" value="免费发需求">
+                        </div>
+                        <span style="color: #000">热门搜索</span>
+                        <span>初级会计培训</span>
+                       <span>中级会计培训</span>
+                       <span>高级会计培训</span>
                     </div>
                  </div>   
                  <div class="box_row clearfix" style="margin-top:5px;"> 
                  
                     <nav  class="g-header-nav">
                      <a href="#" class="g-header-nav-link on" id="menu_a_id_1">首页</a>
-                     <a href="#" class="g-header-nav-link" id="menu_a_id_2">关于我们</a>
-                     <a href="#" class="g-header-nav-link" id="menu_a_id_3">政策法规</a>
-                     <a href="#" class="g-header-nav-link" id="menu_a_id_5">扶助项目</a>
-                     <a href="#" class="g-header-nav-link" >企业捐赠</a>
-                     <a href="#" class="g-header-nav-link" >工资帮助</a>
-                     <a href="#" class="g-header-nav-link" >公益传递</a>
+                     <a href="#" class="g-header-nav-link" id="menu_a_id_2">需求发布</a>
+                     <a href="#" class="g-header-nav-link" id="menu_a_id_3">财税工具</a>
+                     <a href="#" class="g-header-nav-link" id="menu_a_id_5">实习培训</a>
+                     <a href="#" class="g-header-nav-link" >在线记账</a>
+                     <a href="#" class="g-header-nav-link" >在线问答</a>
+                     <a href="#" class="g-header-nav-link" >企业商城</a>
+                     <a href="#" class="g-header-nav-link" >新闻资讯</a>
                    </nav>
                   
                  </div>
@@ -66,24 +87,29 @@
 
       <div id="Carousel" class="slider">
           <div class="index_reg " id="div_wind_id">
-              <div class="box_row" ><img src="img/icon_people.png"><span class="login_text">账户登录查询</span></div>
-              <div class="box_row" style="margin-top:10px;">
-                  <input type="radio" name="acount" checked="true"><span class="login_text acount" >捐赠企业账户</span>
-                  <input type="radio" name="acount"><span class="login_text acount">个人补贴账户</span>
+              <h1>
+                <span class="news_title">我要求职</span>
+                <span class="more"><a href="#" >更多 ></a></span>
+              </h1>
+              <div class="index_reg_row" >
+                 <p><span>【福州会计培训】</span>企业的账务调整你知道多少</p>
               </div>
-              <div class="box_row" >
-                  <div class="input_group input_account">
-                      <span class="addon icon_account"></span><input type="" name="" placeholder="您的账号">
-                  </div>
+              <div class="index_reg_row" >
+                 <p><span>【福州会计培训】</span>企业的账务调整你知道多少</p>
               </div>
-              <div class="box_row">
-                  <div class="input_group input_account">
-                      <span class="addon icon_pass" ></span><input type="" name="" placeholder="您的密码">
-                  </div>
+              <div class="index_reg_row" >
+                 <p><span>【福州会计培训】</span>企业的账务调整你知道多少</p>
               </div>
-              <div class="box_row">
-                  <button class="loginButton">立即登录</button>
+              <div class="index_reg_row" >
+                 <p><span>【福州会计培训】</span>企业的账务调整你知道多少</p>
               </div>
+              <div class="index_reg_row" >
+                 <p><span>【福州会计培训】</span>企业的账务调整你知道多少</p>
+              </div>
+              <div class="index_reg_row" >
+                 <p><span>【福州会计培训】</span>企业的账务调整你知道多少</p>
+              </div>
+              
           </div>
           <div class="glide__arrows">
             <button class="glide__arrow prev" data-glide-dir="<"></button>
@@ -109,8 +135,26 @@
       </div>
     </div>
     
-    <!-- 新闻-start -->
-    <div class="jobs">
+    <div class="floatWindow">
+        <div class="window_l"><img src="img/window_l.png">
+          <div class="close"><img src="img/icon_close.png"></div>
+        </div>
+        <div class="window_r"><img src="img/window_r.png">
+          <div class="close"><img src="img/icon_close.png"></div>
+        </div>
+        <div class="quickBar">
+            <ul>
+              <li><a><img style="margin-left: 17px;margin-top: 14px"  src="img/quick_tel.png"></a></li>
+              <li><a><img style="margin-left: 17px;margin-top: 14px" src="img/quick_write.png"></a></li>
+              <li><a><img style="margin-left: 17px;margin-top: 14px" src="img/quick_location.png"></a></li>
+              <li><a><img src="img/quick_qq.png"></a></li>
+              <li><a><img src="img/quick_weibo.png"></a></li>
+              <li><a><img src="img/quick_backToTop.png"></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="jobs" >
+
           <div class="news_l new_pic">
               <h1>
                 <span class="news_title">我要求职</span>
@@ -126,8 +170,8 @@
                                 
                             </div>
                             <div class="policy_body">
-                                <p>个人：求职者的名称</p>
-                                <p>区域：鼓楼区   期待佣金：3500</p>
+                                <p>个人：求职者的名称<img src="img/icon_gold.png"> </p>
+                                <p>区域：鼓楼区   <span class="pay">期待佣金：3500</span></p>
                             </div>
 
                       </div>
@@ -141,8 +185,8 @@
                                 
                             </div>
                             <div class="policy_body">
-                                <p>个人：求职者的名称</p>
-                                <p>区域：鼓楼区   期待佣金：3500</p>
+                                <p>个人：求职者的名称<img src="img/icon_silver.png"> </p>
+                                <p>区域：鼓楼区   <span class="pay">期待佣金：3500</span></p>
                             </div>
 
                       </div>
@@ -156,8 +200,8 @@
                                 
                             </div>
                             <div class="policy_body">
-                                <p>个人：求职者的名称</p>
-                                <p>区域：鼓楼区   期待佣金：3500</p>
+                                <p>个人：求职者的名称<img src="img/icon_bronze.png"> </p>
+                                <p>区域：鼓楼区   <span class="pay">期待佣金：3500</span></p>
                             </div>
 
                       </div>
@@ -171,8 +215,8 @@
                                 
                             </div>
                             <div class="policy_body">
-                                <p>个人：求职者的名称</p>
-                                <p>区域：鼓楼区   期待佣金：3500</p>
+                                <p>个人：求职者的名称<img src="img/icon_diamond.png"> </p>
+                                <p>区域：鼓楼区   <span class="pay">期待佣金：3500</span></p>
                             </div>
 
                       </div>
@@ -186,13 +230,12 @@
                                 
                             </div>
                             <div class="policy_body">
-                                <p>个人：求职者的名称</p>
-                                <p>区域：鼓楼区   期待佣金：3500</p>
+                                <p>个人：求职者的名称<img src="img/icon_gold.png"> </p>
+                                <p>区域：鼓楼区   <span class="pay">期待佣金：3500</span></p>
                             </div>
 
                       </div>
               </div>
-              
              
           </div>
 
@@ -210,8 +253,8 @@
                                 
                             </div>
                             <div class="policy_body">
-                                <p>个人：求职者的名称</p>
-                                <p>区域：鼓楼区   期待佣金：3500</p>
+                                <p>个人：求职者的名称<img src="img/icon_crystal.png"> </p>
+                                <p>区域：鼓楼区   <span class="pay">期待佣金：3500</span></p>
                             </div>
 
                       </div>
@@ -226,7 +269,7 @@
                             </div>
                             <div class="policy_body">
                                 <p>个人：求职者的名称</p>
-                                <p>区域：鼓楼区   期待佣金：3500</p>
+                                <p>区域：鼓楼区   <span class="pay">期待佣金：3500</span></p>
                             </div>
 
                       </div>
@@ -241,7 +284,7 @@
                             </div>
                             <div class="policy_body">
                                 <p>个人：求职者的名称</p>
-                                <p>区域：鼓楼区   期待佣金：3500</p>
+                                <p>区域：鼓楼区   <span class="pay">期待佣金：3500</span></p>
                             </div>
 
                       </div>
@@ -256,7 +299,7 @@
                             </div>
                             <div class="policy_body">
                                 <p>个人：求职者的名称</p>
-                                <p>区域：鼓楼区   期待佣金：3500</p>
+                                <p>区域：鼓楼区   <span class="pay">期待佣金：3500</span></p>
                             </div>
 
                       </div>
@@ -271,7 +314,7 @@
                             </div>
                             <div class="policy_body">
                                 <p>个人：求职者的名称</p>
-                                <p>区域：鼓楼区   期待佣金：3500</p>
+                                <p>区域：鼓楼区   <span class="pay">期待佣金：3500</span></p>
                             </div>
 
                       </div>
@@ -281,18 +324,26 @@
     </div>
     <!--slogan-->
     <div class="box_row ">
-         <div class="slogan full_container" style="background:url(img/ad06.png);background-size:100% 100%;">
-            <div style="background:url(img/ad05.png);background-size:100% 100%;"></div>
+
+         <div class="slogan full_container" >
+            <img src="img/ad06.png" style="width:100%;height: 100%;">
+            <div >
+                <img src="img/ad05.png" style="width:100%;height: 100%;">                
+            </div>
          </div>
     </div>
 
     <div class="product">
           <h1>
-                <span class="news_title">热门商品</span>
+                <span class="news_title on">热门商品</span>
+                <span class="news_title service" style="">推荐服务</span>
                 <span class="more"><a href="#" >更多 ></a></span>
           </h1>
-          <div class="product_l" style="background:url(img/ad07.png);background-size:100% 100%;">
-                <div style="background:url(img/button01.png);background-size:100% 100%;"></div>
+          <div class="product_l" >
+                <img src="img/ad07.png" style="width:100%;height: 100%;">
+                <div >
+                   <img src="img/button01.png" style="width:100%;height: 100%;">
+                </div>
           </div>
 
           <div class="product_r"> 
@@ -394,14 +445,17 @@
 
 
     <!--slogan-->
-    <div class="box_row ">
-         <div class="slogan full_container" style="background:url(img/ad08.png);background-size:100% 100%;">
+    <div class="box_row " style="margin-top: 22px;">
+         <div class="slogan full_container" >
+            <img src="img/ad08.png" style="width:100%;height: 100%;">
          </div>
     </div>
 
     <div class="train">
           <h1>
                 <span class="news_title">会计培训</span>
+                <span class="news_title_s">实践培训课程</span>
+                <span class="news_title_s">/ 网络在线课程</span>
                 <span class="more"><a href="#" >更多 ></a></span>
           </h1>
           
@@ -410,6 +464,11 @@
               <div class="row01">
                 <div class="pic_main">
                   <div class="new_pic ">
+                      <div class="bg">
+                        <div class="plus"></div>
+                        
+                        
+                      </div>
                       <div class="pic_wrapper">
                           <img src="img/product_pic.png">
                           
@@ -422,6 +481,11 @@
                 </div>
                 <div class="pic_main">
                   <div class="new_pic ">
+                   <div class="bg">
+                        <div class="plus"></div>
+                        
+                        
+                      </div>
                       <div class="pic_wrapper">
                           <img src="img/product_pic.png">
                           
@@ -434,6 +498,11 @@
                 </div>
                 <div class="pic_main">
                   <div class="new_pic ">
+                   <div class="bg">
+                        <div class="plus"></div>
+                        
+                        
+                      </div>
                       <div class="pic_wrapper">
                           <img src="img/product_pic.png">
                           
@@ -446,6 +515,11 @@
                 </div>
                 <div class="pic_main">
                   <div class="new_pic ">
+                   <div class="bg">
+                        <div class="plus"></div>
+                        
+                        
+                      </div>
                       <div class="pic_wrapper">
                           <img src="img/product_pic.png">
                           
@@ -460,6 +534,11 @@
               <div class="row01">
                 <div class="pic_main">
                   <div class="new_pic ">
+                   <div class="bg">
+                        <div class="plus"></div>
+                        
+                        
+                      </div>
                       <div class="pic_wrapper">
                           <img src="img/product_pic.png">
                           
@@ -472,6 +551,11 @@
                 </div>
                 <div class="pic_main">
                   <div class="new_pic ">
+                   <div class="bg">
+                        <div class="plus"></div>
+                        
+                        
+                      </div>
                       <div class="pic_wrapper">
                           <img src="img/product_pic.png">
                           
@@ -484,6 +568,11 @@
                 </div>
                 <div class="pic_main">
                   <div class="new_pic ">
+                   <div class="bg">
+                        <div class="plus"></div>
+                        
+                        
+                      </div>
                       <div class="pic_wrapper">
                           <img src="img/product_pic.png">
                           
@@ -496,6 +585,11 @@
                 </div>
                 <div class="pic_main">
                   <div class="new_pic ">
+                   <div class="bg">
+                        <div class="plus"></div>
+                        
+                        
+                      </div>
                       <div class="pic_wrapper">
                           <img src="img/product_pic.png">
                           
@@ -512,8 +606,9 @@
     </div>
 
     <!--slogan-->
-    <div class="box_row ">
-         <div class="slogan full_container" style="background:url(img/ad09.png);background-size:100% 100%;">
+    <div class="box_row " style="margin-top: 22px;">
+         <div class="slogan full_container" >
+            <img src="img/ad09.png" style="width:100%;height: 100%;">  
          </div>
     </div>
 
@@ -576,16 +671,18 @@
                   <span class="more"><a href="#" >更多 ></a></span>
               </h1>
                   
-                  <ul class="news_list">
-                  <li>会议审议通过了《关于完善人大代表</li>
-                  <li>会议审议通过了《关于完善人大代表</li>
-                  <li>会议审议通过了《关于完善人大代表通过了《关于完善人大通过了《关于完善人大</li>
-                  <li>会议审议通过了《关于完善人大代表</li>
-                  <li>会议审议通过了《关于完善人大代表</li>
-                  <li>会议审议通过了《关于完善人大代表</li>
+                  <ul  class="news_list">
+                      <li>××××会员，您的<span>××××××</span>即将到期</li>
+                      <li>会议审议通过了《关于完善人大代表</li>
+                      <li>会议审议通过了《关于完善人大代表通过了《关于完善人大通过了《关于完善人大</li>
+                      <li>会议审议通过了《关于完善人大代表</li>
+                      <li>会议审议通过了《关于完善人大代表</li>
+                      <li>会议审议通过了《关于完善人大代表</li>
                   
-              </ul>
-              <div class="news_ad" style="background:url(img/ad10.png);background-size:100% 100%;"></div>
+                  </ul>
+              <div class="news_ad" >
+                  <img src="img/ad10.png" style="width:100%;height: 100%;">
+              </div>
           </div>
     </div>
 
@@ -606,18 +703,19 @@
           <!-- 页尾 -->
     
     <div class="contact full-width">
-        
+            
             <div class="footer_l contact_l"><img src="img/contact_bg.png"/></div>
             <div class="footer_r contact_r">
+                   <div class="close" ><img style="margin-left: 40px" src="img/icon_circle_close.png"></div>
                    <div class="input_box"  >
                       <div class="input_group input_account">
-                          <span class="addon icon_account"></span><input type="" name="" placeholder="您的账号">
+                          <span class="addon icon_account" ></span><input type="" name="" placeholder="您的需求">
                       </div>
                   
                       <div class="input_group input_account">
-                          <span class="addon icon_pass" ></span><input style="width:120px;margin-right:5px;" type="" name="" placeholder="您的密码">
+                          <span class="addon icon_tel" ></span><input style="width:120px;padding-left:12px;margin-right:5px;" type="" name="" placeholder="您的电话">
 
-                          <span class="addon icon_pass" ></span><input style="width:120px;" type="" name="" placeholder="您的密码">
+                          <span class="addon icon_pass" ></span><input style="width:120px;" type="" name="" placeholder="您的姓名">
                       </div>
                   </div>
                   <div class="contact_button" style="background:url(img/icon_button01.png);background-size:100% 100%;"></div>
@@ -659,14 +757,16 @@
             <div class="map_r ">
                 <div>
                   <h1 style="margin-bottom:20px;">关注我们</h1>
-                  <img src="img/icon_weibo.png">
+                  <img style="margin-right: 10px;" src="img/icon_weibo.png">
                   <img src="img/icon_weixin.png">
                 </div>
                 <div style="padding:10px;background-color:#fff;">
                   <img src="img/icon_pr.png">
                 </div>
-                <div class="counseling" style="background:url(img/counseling.png);background-size:100% 100%;">
-                   
+                <div class="counseling" >
+                   <p class="title">淘会计客服热线</p>
+                   <p class="hotline">400-888-8888</p>
+                   <p class="time">工作时间：9：00 - 18：00</p>
                 </div>
                 
             </div>
