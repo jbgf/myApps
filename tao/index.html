@@ -16,14 +16,7 @@
 <script type="text/javascript" src="js/jquery.JPlaceholder.js"></script>
 <script type="text/javascript" src="js/scrollTop.js"></script>
 <script type="text/javascript">
-   $(function(){
-      $(".floatWindow .close").on('click', function(event) {
-          $(this).parent("div").hide();
-      });
-      $(".contact .close").on('click',function(){
-          $(this).parents(".contact").hide();
-      })
-   })
+   
 </script>
 </head>
 <body>
@@ -342,11 +335,11 @@
             </div>
          </div>
     </div>
-
+<!--热门商品切换添加on和off类-->
     <div class="product">
-          <h1>
+          <h1 > 
                 <span class="news_title on">热门商品</span>
-                <span class="news_title service" style="">推荐服务</span>
+                <span class="news_title off service" style="">推荐服务</span>
                 <span class="more"><a href="#" >更多 ></a></span>
           </h1>
           <div class="product_l" >
@@ -355,90 +348,10 @@
                    <img src="img/button01.png" style="width:100%;height: 100%;">
                 </div>
           </div>
-
-          <div class="product_r"> 
-              <div class="row01">
-                <div class="pic_main">
-                  <div class="new_pic ">
-                      <div class="pic_wrapper">
-                          <img src="img/product_pic.png">
-                          <span class="new_pic_title">
-                              ¥30000.00 <span>成交：10</span>
-                          </span>
-                          <div class="product_details">中恒财务代理 福州代理记账 账务代理</div>
-                      </div>
-                  </div>
-                </div>
-                <div class="pic_main">
-                  <div class="new_pic ">
-                      <div class="pic_wrapper">
-                          <img src="img/product_pic.png">
-                          <span class="new_pic_title">
-                              ¥30000.00 <span>成交：10</span>
-                          </span>
-                          <div class="product_details">中恒财务代理 福州代理记账 账务代理</div>
-                      </div>
-                  </div>
-                </div>
-                <div class="pic_main">
-                  <div class="new_pic ">
-                      <div class="pic_wrapper">
-                          <img src="img/product_pic.png">
-                          <span class="new_pic_title">
-                              ¥30000.00 <span>成交：10</span>
-                          </span>
-                          <div class="product_details">中恒财务代理 福州代理记账 账务代理</div>
-                      </div>
-                  </div>
-                </div>
-                <div class="pic_main">
-                  <div class="new_pic ">
-                      <div class="pic_wrapper">
-                          <img src="img/product_pic.png">
-                          <span class="new_pic_title">
-                              ¥30000.00 <span>成交：10</span>
-                          </span>
-                          <div class="product_details">中恒财务代理 福州代理记账 账务代理</div>
-                      </div>
-                  </div>
-                </div> 
-              </div>
-
-              <div class="row02">
-                <div class="pic_main">
-                  <div class="new_pic ">
-                      <div class="pic_wrapper">
-                          <img src="img/product_pic.png">
-                          <span class="new_pic_title">
-                              ¥30000.00 <span>成交：10</span>
-                          </span>
-                          <div class="product_details">中恒财务代理 福州代理记账 账务代理</div>
-                      </div>
-                  </div>
-                </div>
-                <div class="pic_main">
-                  <div class="new_pic ">
-                      <div class="pic_wrapper">
-                          <img src="img/product_pic.png">
-                          <span class="new_pic_title">
-                              ¥30000.00 <span>成交：10</span>
-                          </span>
-                          <div class="product_details">中恒财务代理 福州代理记账 账务代理</div>
-                      </div>
-                  </div>
-                </div> 
-                <div class="pic_main">
-                  <div class="new_pic ">
-                      <div class="pic_wrapper">
-                          <img src="img/product_pic.png">
-                          <span class="new_pic_title">
-                              ¥30000.00 <span>成交：10</span>
-                          </span>
-                          <div class="product_details">中恒财务代理 福州代理记账 账务代理</div>
-                      </div>
-                  </div>
-                </div>
-                <div class="pic_main">
+<!--热门商品拆除两行更新 351-443 -->
+          <div class="product_r show"> 
+               
+                <div class="pic_main avoidTop" >
                   <div class="new_pic ">
                       <div class="pic_wrapper">
                           <img src="img/product_pic.png">
@@ -449,8 +362,176 @@
                       </div>
                   </div>
                 </div>      
-              </div>    
+                <div class="pic_main avoidTop" >
+                  <div class="new_pic ">
+                      <div class="pic_wrapper">
+                          <img src="img/product_pic.png">
+                          <span class="new_pic_title">
+                              ¥30000.00 <span>成交：10</span>
+                          </span>
+                          <div class="product_details">中恒财务代理 福州代理记账 账务代理</div>
+                      </div>
+                  </div>
+                </div>  
+                <div class="pic_main avoidTop" >
+                  <div class="new_pic ">
+                      <div class="pic_wrapper">
+                          <img src="img/product_pic.png">
+                          <span class="new_pic_title">
+                              ¥30000.00 <span>成交：10</span>
+                          </span>
+                          <div class="product_details">中恒财务代理 福州代理记账 账务代理</div>
+                      </div>
+                  </div>
+                </div>  
+                <div class="pic_main avoidTop" >
+                  <div class="new_pic ">
+                      <div class="pic_wrapper">
+                          <img src="img/product_pic.png">
+                          <span class="new_pic_title">
+                              ¥30000.00 <span>成交：10</span>
+                          </span>
+                          <div class="product_details">中恒财务代理 福州代理记账 账务代理</div>
+                      </div>
+                  </div>
+                </div> 
+                <div class="pic_main avoidBottom">
+                  <div class="new_pic ">
+                      <div class="pic_wrapper">
+                          <img src="img/product_pic.png">
+                          <span class="new_pic_title">
+                              ¥30000.00 <span>成交：10</span>
+                          </span>
+                          <div class="product_details">中恒财务代理 福州代理记账 账务代理</div>
+                      </div>
+                  </div>
+                </div>      
+                <div class="pic_main avoidBottom">
+                  <div class="new_pic ">
+                      <div class="pic_wrapper">
+                          <img src="img/product_pic.png">
+                          <span class="new_pic_title">
+                              ¥30000.00 <span>成交：10</span>
+                          </span>
+                          <div class="product_details">中恒财务代理 福州代理记账 账务代理</div>
+                      </div>
+                  </div>
+                </div>  
+                <div class="pic_main avoidBottom">
+                  <div class="new_pic ">
+                      <div class="pic_wrapper">
+                          <img src="img/product_pic.png">
+                          <span class="new_pic_title">
+                              ¥30000.00 <span>成交：10</span>
+                          </span>
+                          <div class="product_details">中恒财务代理 福州代理记账 账务代理</div>
+                      </div>
+                  </div>
+                </div>  
+                <div class="pic_main avoidBottom">
+                  <div class="new_pic ">
+                      <div class="pic_wrapper">
+                          <img src="img/product_pic.png">
+                          <span class="new_pic_title">
+                              ¥30000.00 <span>成交：10</span>
+                          </span>
+                          <div class="product_details">中恒财务代理 福州代理记账 账务代理</div>
+                      </div>
+                  </div>
+                </div>    
           </div>
+          <div class="product_r hide"> 
+               
+                <div class="pic_main avoidTop" >
+                  <div class="new_pic ">
+                      <div class="pic_wrapper">
+                          <img src="img/bigWhite.png">
+                          <span class="new_pic_title">
+                              ¥30000.00 <span>成交：10</span>
+                          </span>
+                          <div class="product_details">中恒财务代理 福州代理记账 账务代理</div>
+                      </div>
+                  </div>
+                </div>      
+                <div class="pic_main avoidTop" >
+                  <div class="new_pic ">
+                      <div class="pic_wrapper">
+                          <img src="img/product_pic.png">
+                          <span class="new_pic_title">
+                              ¥30000.00 <span>成交：10</span>
+                          </span>
+                          <div class="product_details">中恒财务代理 福州代理记账 账务代理</div>
+                      </div>
+                  </div>
+                </div>  
+                <div class="pic_main avoidTop" >
+                  <div class="new_pic ">
+                      <div class="pic_wrapper">
+                          <img src="img/product_pic.png">
+                          <span class="new_pic_title">
+                              ¥30000.00 <span>成交：10</span>
+                          </span>
+                          <div class="product_details">中恒财务代理 福州代理记账 账务代理</div>
+                      </div>
+                  </div>
+                </div>  
+                <div class="pic_main avoidTop" >
+                  <div class="new_pic ">
+                      <div class="pic_wrapper">
+                          <img src="img/product_pic.png">
+                          <span class="new_pic_title">
+                              ¥30000.00 <span>成交：10</span>
+                          </span>
+                          <div class="product_details">中恒财务代理 福州代理记账 账务代理</div>
+                      </div>
+                  </div>
+                </div> 
+                <div class="pic_main avoidBottom">
+                  <div class="new_pic ">
+                      <div class="pic_wrapper">
+                          <img src="img/product_pic.png">
+                          <span class="new_pic_title">
+                              ¥30000.00 <span>成交：10</span>
+                          </span>
+                          <div class="product_details">中恒财务代理 福州代理记账 账务代理</div>
+                      </div>
+                  </div>
+                </div>      
+                <div class="pic_main avoidBottom">
+                  <div class="new_pic ">
+                      <div class="pic_wrapper">
+                          <img src="img/product_pic.png">
+                          <span class="new_pic_title">
+                              ¥30000.00 <span>成交：10</span>
+                          </span>
+                          <div class="product_details">中恒财务代理 福州代理记账 账务代理</div>
+                      </div>
+                  </div>
+                </div>  
+                <div class="pic_main avoidBottom">
+                  <div class="new_pic ">
+                      <div class="pic_wrapper">
+                          <img src="img/product_pic.png">
+                          <span class="new_pic_title">
+                              ¥30000.00 <span>成交：10</span>
+                          </span>
+                          <div class="product_details">中恒财务代理 福州代理记账 账务代理</div>
+                      </div>
+                  </div>
+                </div>  
+                <div class="pic_main avoidBottom">
+                  <div class="new_pic ">
+                      <div class="pic_wrapper">
+                          <img src="img/product_pic.png">
+                          <span class="new_pic_title">
+                              ¥30000.00 <span>成交：10</span>
+                          </span>
+                          <div class="product_details">中恒财务代理 福州代理记账 账务代理</div>
+                      </div>
+                  </div>
+                </div>    
+          </div>
+<!--热门商品拆除两行更新-->
     </div>
 
 
@@ -460,7 +541,7 @@
             <img src="img/ad08.png" style="width:100%;height: 100%;">
          </div>
     </div>
-
+<!--培训拆除两行更新 453-599-->
     <div class="train">
           <h1>
                 <span class="news_title">会计培训</span>
@@ -468,15 +549,11 @@
                 <span class="news_title_s">/ 网络在线课程</span>
                 <span class="more"><a href="#" >更多 ></a></span>
           </h1>
-          
-
-          <div class="product_r"> 
-              <div class="row01">
+          <div class="product_r">
                 <div class="pic_main">
                   <div class="new_pic ">
-                      <div class="bg">
+                   <div class="bg">
                         <div class="plus"></div>
-                        
                         
                       </div>
                       <div class="pic_wrapper">
@@ -540,8 +617,6 @@
                       </div>
                   </div>
                 </div> 
-              </div>
-              <div class="row01">
                 <div class="pic_main">
                   <div class="new_pic ">
                    <div class="bg">
@@ -610,11 +685,9 @@
                       </div>
                   </div>
                 </div> 
-              </div>
-                
           </div>
     </div>
-
+<!--培训拆除两行更新-->
     <!--slogan-->
     <div class="box_row " style="margin-top: 22px;">
          <div class="slogan full_container" >
@@ -717,6 +790,8 @@
             <div class="footer_l contact_l"><img src="img/contact_bg.png"/></div>
             <div class="footer_r contact_r">
                    <div class="close" ><img style="margin-left: 40px" src="img/icon_circle_close.png"></div>
+
+                   <form>
                    <div class="input_box"  >
                       <div class="input_group input_account">
                           <span class="addon icon_account" ></span><input type="" name="" placeholder="您的需求">
@@ -728,8 +803,9 @@
                           <span class="addon icon_pass" ></span><input style="width:120px;" type="" name="" placeholder="您的姓名">
                       </div>
                   </div>
-                  <div class="contact_button" style="background:url(img/icon_button01.png);background-size:100% 100%;"></div>
-                
+                  <input class="contact_button" type="submit"
+                   style="background:url(img/icon_button01.png);background-size:100% 100%;" value="">
+                  </form>
             </div>
         
       

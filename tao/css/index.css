@@ -211,13 +211,18 @@
 	text-align: right;
 }
 /*product*/
+.product .product_r.show{display: block;}
+.product .product_r.hide{display: none;}
+.product_r .pic_main.avoidTop{padding-top: 0;}
+.product_r .pic_main.avoidBottom{padding-bottom: 0;}
 .product{
-	height: 677px;
-	
+	height: 677px;	
 }
+
 .product h1{margin-bottom: 25px;}
 .product h1 .news_title.on{border-bottom-color: #f48000;color:#f48000; }
-.product h1 .news_title.service{border-bottom: none;margin-left: 39px}
+.product h1 .news_title.off{border:none; }
+.product h1 .news_title.service{margin-left: 39px}
 .product>div{
 	height:595px;position: relative;float:left; background:#fff; 	
 }
@@ -225,20 +230,11 @@
 .product .product_r{width: 959px;}
 .product_l>div{width: 149px;height: 45px;left:46px;bottom: 85px;position: absolute;}
 
-.product_r>div.row01,.product_r>div.row02{
-	width:100%;
-	height: 50%;
-}
-.product_r>div.row01 div.pic_main:last-child,.product_r>div.row02 div.pic_main:last-child{padding-right: 0}
-.product_r>div.row01 div.pic_main{
-	width: 25%;height:100%;
+.product_r div.pic_main{
+	width: 25%;
+	height:50%;
 	float: left;
 	padding:0 5px 5px 0;
-}
-.product_r>div.row02 div.pic_main{
-	width: 25%;height:100%;
-	float: left;
-	padding:5px 5px 0px 0;
 }
 .product_r div.pic_main .new_pic{
 	
@@ -262,8 +258,14 @@
     float: left;
     background: #fff;
 }
-.train .product_r{width: 100%;margin: 25px 0;}
-.train .product_r .new_pic{background-color: #f4f4f4;position: relative;}
+.train .product_r{
+	width: 100%;
+	margin: 25px 0;
+	height: 770px;
+}
+.train .product_r .new_pic{
+	background-color: #f4f4f4;position: relative;
+}
 .train .product_r .new_pic .bg{
 	position: absolute;top: 0;right: 0;bottom: 0;left: 0;
 	background-color: rgba(0,0,0,.5);
@@ -277,14 +279,9 @@
 	top: 155px;
     left: 114px;
 	position: absolute;
-	background:#fff url(../img/bg_plus.png);
-	
+	background:#fff url(../img/bg_plus.png);	
 }
 
-.train .product_r>div.row01,.train .product_r>div.row02{
-	width:100%;
-	height: 385px;
-}
 .train .product_r .pic_wrapper{height: 244px;width: 100%;position: relative;}
 .train .train_details{padding:10px;line-height: 24px;}
 .train .train_details p{
@@ -374,7 +371,7 @@
 	width: 432px;background-color:rgba(72,72,72,.5);margin-left: 768px;
 	padding:33px 13px 33px 23px;	
 }
-.contact .contact_r>.input_box,.contact .contact_r>.contact_button{
+.contact .contact_r>form .input_box,.contact .contact_r>form .contact_button{
 	float: left;height: 96px;
 	margin-left: 5px;	
 }

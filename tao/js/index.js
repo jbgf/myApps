@@ -5,9 +5,27 @@ $(document).ready(function(){
 	
 	scrollLink(20,1500);
 	dropDown();
-
-	
+	floatWindowClose();
+	switchProduct();
 });
+function switchProduct(){
+	/*热门商品切换*/
+
+      $(".product h1 .news_title").on("click",function(){
+      		$(this).toggleClass("on off").siblings(".news_title").toggleClass("on off")
+      		$(".product_r").toggle();
+
+      })
+}
+function floatWindowClose(){
+	/*飘窗及底部广告的close*/
+      $(".floatWindow .close").on('click', function(event) {
+          $(this).parent("div").hide();
+      });
+      $(".contact .close").on('click',function(){
+          $(this).parents(".contact").hide();
+      });
+}
 function dropDown(){
 	$(".dropDownButton").on("click",function(){
 		       
