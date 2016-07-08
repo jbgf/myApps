@@ -12,16 +12,22 @@ $(document).ready(function(){
 function quickBar(){
 	/*返回顶部*/
 	$(".backToTop").on("click",function(){$("body").scrollTop(0)});
+	/*百度地图*/
+	$(".baidu").on("click",function(){
+		
+	})
+	/*qq客服,uin为你的qq，site为你的网址*/
+	$(".qq a").attr({href:"http://wpa.qq.com/msgrd?v=3&uin=138000000&site=qq&menu=yes"})
 	/*新浪微博*/
 	$(".weibo").on("click",function(){
 		window.sharetitle = "发现了一个不错的网站";
-		window.shareUrl = "img/tao_logo.PNG";
-		share()
-		function share(){
+	//	window.shareUrl = "img/tao_logo.PNG";
+		
+		(function share(){
 			//d指的是window,注释掉的部分为图片
 			(function(s,d,e){try{}catch(e){}var f='http://v.t.sina.com.cn/share/share.php?',u=d.location.href,p=['url=',e(u),'&title=',e(window.sharetitle),'&appkey=2924220432'
 				/*,'&pic=',e(window.shareUrl)*/].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent);
-		};
+		}());
 
 	})
 };
