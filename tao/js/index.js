@@ -10,19 +10,22 @@ $(document).ready(function(){
 	quickBar();
 });
 function quickBar(){
+	/*电话*/
+
+	$(".quick_tel").on("click",function(){
+		
+		$('html,body').scrollTop($('.bottom').offset().top);
+	})
 	/*返回顶部*/
 	$(".backToTop").on("click",function(){$("body").scrollTop(0)});
 	/*百度地图*/
-	$(".baidu").on("click",function(){
-		
-	})
+	
 	/*qq客服,uin为你的qq，site为你的网址*/
-	$(".qq a").attr({href:"http://wpa.qq.com/msgrd?v=3&uin=138000000&site=qq&menu=yes"})
+	
 	/*新浪微博*/
 	$(".weibo").on("click",function(){
 		window.sharetitle = "发现了一个不错的网站";
 	//	window.shareUrl = "img/tao_logo.PNG";
-		
 		(function share(){
 			//d指的是window,注释掉的部分为图片
 			(function(s,d,e){try{}catch(e){}var f='http://v.t.sina.com.cn/share/share.php?',u=d.location.href,p=['url=',e(u),'&title=',e(window.sharetitle),'&appkey=2924220432'
@@ -33,11 +36,9 @@ function quickBar(){
 };
 function switchProduct(){
 	/*热门商品切换*/
-
       $(".product h1 .news_title").on("click",function(){
       		$(this).toggleClass("on off").siblings(".news_title").toggleClass("on off")
       		$(".product_r").toggle();
-
       })
 }
 function floatWindowClose(){
