@@ -13,18 +13,12 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="renderer" content="webkit">
 
-
 <!--uc浏览器判断到页面上文字居多时，会自动放大字体优化移动用户体验。添加以下头部可以禁用掉该优化-->
 <meta name="wap-font-scale" content="no">
-
 <meta content="telephone=no" name="format-detection" />
 <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
 
-
-
-
 <script type="text/javascript">
-
 //html root的字体计算应该放在最前面，这样计算就不会有误差了/
 //2016.3.23 wjq update 之所以要加个判断返回一个20.5，是因为当用户在谷歌等浏览器直接输入手机端网站网址时，如果用户设置模块自定义样式的高度比较小，由于这时候的clientWidth为1920px，及返回的_htmlFontSize为40，这时候就会使模块太小，展示不完全，因此先取一个较为准确的值去展示。Mobi.resetHtmlFontSize()顺便也加了
 var _htmlFontSize = (function(){
@@ -38,32 +32,13 @@ var _htmlFontSize = (function(){
 <link rel="stylesheet" type="text/css" href="css/base.min.css" title="default" />
 <link rel="stylesheet" type="text/css" href="css/bannerAnimation.min.css" title="" />
 
-
-
-
-
 <link rel="stylesheet" id="mobiStyleTemplateCss" type="text/css" href="css/1010_1.min.css">
 
 
 <link rel="stylesheet" id="mobiCubeNavigationCss" type="text/css" href="css/cubeNavigation.min.css">
 
-
-
-
-
-
-
-
-
-
-
 <meta name="keywords" content="">
 <meta name="description" content="">
-
-
-
-
-
 
 <!-- //输出模块样式css -->
 <style id='mobiStyleModule'>
@@ -91,7 +66,6 @@ var _htmlFontSize = (function(){
 .open .navItem:nth-child(10) {transition-delay: 480ms;} 
 </style>
 
-
 <style id='mobiCubeStyleModule'>
 /*关于我们*/
 .cubeNavigationArea1 .cubeLink:nth-child(9n+1) .icon-cube:before {	content: "\e6aa"}
@@ -101,7 +75,6 @@ var _htmlFontSize = (function(){
 }
 /*新闻*/
 .cubeNavigationArea1 .cubeLink:nth-child(9n+3) .icon-cube:before {	content: "\e65f"}
-
 #module306{overflow:hidden;}
 #cubeNavigation306_cubeLink2 .icon-cube:before{content:'';}
 /*#cubeNavigation306_cubeLink3 .icon-cube:before{content:'';}*/
@@ -113,15 +86,10 @@ var _htmlFontSize = (function(){
 <style id='mobiSearchStyleModule'>
 </style>
 
-
-
 <!-- 系统特殊隐藏栏目隐藏头部、banner -->
 
-
 </head>
-<body faiscoMobi="true" id="g_body" class="g_locale2052 mobiCol3">
-	
-	
+<body faiscoMobi="true" id="g_body" class="g_locale2052 mobiCol3">	
 
 <div id="webTips" class="webTips jz-webTips">
 	<div id="mobitips" class="mobitips">
@@ -134,12 +102,6 @@ var _htmlFontSize = (function(){
 		</div>	
 	</div>
 </div>
-
-
-
-
-
-
 
 	<div class="webLeft"></div>
 	<div id="g_web" class="g_web">
@@ -321,9 +283,6 @@ var _htmlFontSize = (function(){
 	
 		document.domain = 'faisco.cn';
 	
-
-
-		
 //管理态下的预览页面提前作处理 之前这里的g_viewMode先去掉
 if( !false && window.top !== window.self){
     var g_className = document.getElementById("g_body").className;

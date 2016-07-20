@@ -46,9 +46,7 @@ function floatWindowClose(){
       $(".floatWindow .close").on('click', function(event) {
           $(this).parent("div").hide();
       });
-      $(".contact .close").on('click',function(){
-          $(this).parents(".contact").hide();
-      });
+      
 }
 function dropDown(){
 	$(".dropDownButton").on("click",function(){

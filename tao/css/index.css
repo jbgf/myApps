@@ -358,12 +358,22 @@
 }
 
 /*contact*/
+.container .post_demands{
+	 height: 163px;
+	 width: 100%;
+	 cursor: pointer;
+	 position: relative;
+	 margin-top: -163px;
+
+}
+.container .post_demands img{margin-top: -108px;}
+
 .container .contact{
+	 display: none;
 	 height: 163px;
 	 background-color: rgba(104,104,104,.9);
 	 position: relative;
 	 margin-top: -163px;
-
 }
 .container .contact>div{position: absolute;height: 163px;}
 .contact .contact_l{width: 768px;margin-top: 0;}
@@ -733,35 +743,6 @@ span.keyWord,span.resultNum{ color:#B9000d;}
 .result_list ul li span:first-child{margin-left: -14px;font-size: 14px;font-weight: 600;}
 .result_list ul li span:last-child{float: right;color: #B0ADAD}
 
-ul.pagination{
-	color: #9a9a9a;
-	list-style: none;margin: 60px auto 75px;height: 28px;
-	text-align: center;
-	display: block;
-	position: relative;
-}
-ul.pagination li{
-	display:inline-block;
-	margin-left:10px;
-	background-color: #fdfdfd;
-	border:1px solid #C9C8C8;
-	padding-top: 6px;
-	width:30px;
-	height: 30px;	
-}
-ul.pagination li.active{background-color: #ff9201;color: #fff;}
-ul.pagination li.first,ul.pagination li.last{
-	width: 69px;
-	border-radius: 5px;	
-}
-ul.pagination li.triangles_left img{
-	margin-left: -2px;
-	margin-bottom: -2px;
-}
-ul.pagination li.triangles_right img{
-	margin-right: -2px;
-	margin-bottom: -2px;
-}
 
 /*******************************************************************************
 						************policy.html************
@@ -799,3 +780,403 @@ ul.pagination li.triangles_right img{
 
 
 .policy_body{line-height: 25px;font-weight: 500;}
+
+
+/***********************************************************************************
+*********************************taxTool财税工具************************************
+***********************************************************************************/
+.container .sloganWrapper{
+	border-top: 4px solid #F48000;
+	width:100%;
+}
+.ad11{
+	width:1200px;
+	margin:0 auto;
+    height: 100px;
+    position: relative;
+    
+}
+.ad11 .adButton{
+	background:url(../img/button02.png) no-repeat;
+	width:138px;
+	height: 41px;
+	position: absolute;
+	top: 31px;
+    right: 43px;
+	
+}
+.taxTool{
+	height: 1234px;	
+	padding-top: 15px;
+}
+.taxToolWrapper{
+	margin:0 -30px;
+	float: left;
+}
+.taxTool h1 .taxTool_title.on {
+    color: #f48000;
+}
+.taxTool_title {
+    display: inline-block;
+    padding: 12px 22px 0;
+    font-weight: 500;
+    width: 205px;
+    height: 100%;
+    color: #3d3d3d;
+    border-radius: 5px 5px 0 0;
+    
+}
+.taxTool h1{
+	  
+    width: 100%;
+    height: 57px;
+    border-bottom: 1px solid #f48000;
+    font-size: 23px;
+    }
+.taxTool h1 .more{
+	margin: 19px 28px 0 0;
+    float: right;
+    background-size: 100% 100%;
+    font-size: 12px;
+    color: #333;
+    width: 337px;
+    text-align: right;
+    height: 20px;
+    display: block;
+    text-align: right;
+}
+.taxTool h1 .more a{
+	padding-left: 6px;
+    line-height: 20px;
+    height: 20px;
+    display: inline;
+    font-size: 15px;
+    color: #C2C1C1;
+}
+
+.taxTool_link{
+	padding: 30px 29px 0;
+	width: 419px;
+	height: 342px;
+	position: relative;
+	float: left;
+	
+}
+.taxTool_link img{width:100%;}
+.taxTool_link .icon_brand_wrapper{
+
+	position: absolute;
+	bottom: 70px;
+	width:367px;	
+}
+.taxTool_link .icon_brand{
+	text-align: center;
+	line-height: 52px;
+	font-size: 23px;
+	color: #004e93;
+	font-weight: 700;
+	margin:0 auto;
+	display: block;
+	width: 216px;
+	height: 52px;
+	background:url(../img/title_bg.png) no-repeat;	
+}
+.tool_title{
+	text-align: center;
+	line-height: 52px;
+	font-size: 21px;
+	
+	font-weight: 700;
+	margin:0 auto;
+	display: block;
+	width: 216px;
+	height: 52px;
+}
+
+/***********************************************************************************
+*********************************demandRelease财税工具******************************
+***********************************************************************************/
+
+.resume{
+	border:1px solid #e9e9e9;
+	padding: 41px;
+	margin-top:22px;
+}
+
+/***********************************************************************************
+*********************************news新闻资讯******************************
+***********************************************************************************/
+.row:before,.row:after{content:" ";display:table;}
+.row:after{clear:both;}
+}
+
+.taxNews{
+	/*height: 1525px;*/
+    padding-top: 15px;
+}
+.taxNews>div{
+	float: left;
+}
+.taxNews .news_row>div{
+	float: left;
+    position: relative;	
+}
+.taxNews .newsLeft{
+	width:935px;
+	padding: 0 26px;
+}
+.taxNews .news_row{
+	height: 193px;
+	padding:31px 0;
+	border-bottom: 1px dashed #d1d1d1;
+}
+.taxNews .newsLeft .img_left{
+	width: 224px;
+	height: 134px;
+}
+.taxNews .newsLeft .text_right {
+    width: 658px;
+    padding-left: 21px;
+    margin-top: -10px;
+}
+.taxNews .newsLeft .text_right .policy_header {
+    font-size: 17px;
+    font-weight: 600;
+    height: 50px;
+    /* line-height: 58px; */
+    padding-top: 8px;
+}
+.taxNews .newsLeft .text_right .policy_body {
+    line-height: 27px;
+    font-weight: 500;
+    font-size: 15px;
+    height: 61px;
+    color: #6E6D6D;
+}
+.taxNews .newsLeft .text_right .policy_footer{
+	color: #999999;
+	font-size: 15px;
+}
+
+.taxNews .adRight{
+	width: 259px;
+	margin-top: 31px;
+	border-left: 1px solid #dddddd;
+	/*height: 1313px;*/
+}
+.taxNews .adRight>div{
+	padding-left: 23px
+}
+.taxNews .adRightImg{
+	padding-top: 23px
+}
+.taxNews .adRight .adRight_title{
+	height: 50px;
+	line-height: 50px;
+	font-size: 20px;
+	border-bottom: 1px solid #dddddd;
+}
+.taxNews .adRight .adRight_title.on{
+	color: #f7731a
+}
+.adRightButton{
+	width: 118px;
+	height: 33px;
+	margin:-50px auto 0;
+
+}
+
+
+ul.pagination{
+	color: #9a9a9a;
+	list-style: none;margin: 60px auto 75px;height: 28px;
+	text-align: center;
+	display: block;
+	position: relative;
+}
+ul.pagination li{
+	display:inline-block;
+	margin-left:10px;
+	background-color: #fdfdfd;
+	border:1px solid #C9C8C8;
+	padding-top: 11px;
+	width:40px;
+	height: 40px;	
+	font-size: 17px;
+	font-weight: 700;
+	border-radius: 3px;
+}
+ul.pagination .ellipsis{
+	color: #000;
+	font-size: 20px;
+	margin:0;
+	border:0;
+	width: 26px
+}
+ul.pagination .ellipsis+li{margin-left: 0}
+ul.pagination .jumpTo {
+   	color: #989191;
+    font-size: 15px;
+    margin: 0;
+    border: 0;
+    width: 88px;
+    font-weight: normal;
+    text-align: right;
+}
+ul.pagination .pageInput{
+	border: 0;padding-top: 0;
+	margin-top: -5px;
+	position: relative;
+}
+ul.pagination .pageInput input{
+	width: 49px;
+    height: 38px;
+    border: 1px solid #C9C8C8;
+    position: absolute;
+    top: 14px;
+    left: -3px;
+    text-align: center;
+
+}
+.inset {
+    -moz-box-shadow: inset 0 2px 8px rgba(0,0,0,.4);
+    -webkit-box-shadow: inset 0 2px 8px rgba(0,0,0,.4);
+    box-shadow: inset 0 2px 8px rgba(0,0,0,.4);
+}
+ul.pagination li.active{background-color: #ffba00;color: #fff;}
+
+
+
+/***********************************************************************************
+*********************************news新闻资讯******************************
+***********************************************************************************/
+.taxNewsDetails{
+	height: auto;
+    padding-top: 15px;
+}
+.newsContent{width: 100%;padding:0 33px;}
+.newsDetails_title{
+	text-align: center;
+    color: #f48000;
+    font-size: 24px;
+    height: 90px;
+    line-height: 100px;
+}
+.newsDetails_info{
+	text-align: center;color: #D1CFCF;
+	border-bottom: 1px solid #E7E5E5;
+	height: 40px;
+	line-height: 40px;
+	
+
+}
+.abstract{
+	color: #ADAAAA;
+	background-color: #efefef;
+	margin-top: 17px;
+	padding:29px 39px;
+	font-size: 15px;
+}
+.newsDetails_summary{
+	font-size: 15px;
+    text-indent: 32px;
+    line-height: 30px;
+    padding-top: 20px;
+    color: #222222;
+}
+.newsDetails_rules{
+	
+    line-height: 24px;
+    font-size: 15px;
+    padding: 20px 0 30px;
+    color: #222222;
+    border-bottom: 1px solid #DEDCDC
+}
+.newsDetails_rules p{text-indent: 31px;}
+
+
+.shareBox {
+	padding-top: 7px;
+}
+.shareText{
+	float:left;
+	font-size: 16px;
+	margin-top: 6px;
+
+}
+
+.otherChapter{
+	border: 1px dashed #D0CDCD;
+    margin-top: 27px;
+    padding: 11px 27px;
+    font-size: 16px;
+    line-height: 27px;
+}
+.otherChapter span{
+	color:#f48000;
+}
+
+.relatedReading{
+	padding-top: 30px;
+}
+.relatedReading header{
+	position: relative;	
+}
+.relatedReading header img{
+	vertical-align: top;
+	
+}
+.relatedReading header span{
+	position: absolute;
+    font-size: 17px;
+    bottom: -1px;
+    left: 15px;
+}
+.relatedReading section{
+	padding-top: 20px;
+	
+}
+.relatedPic{
+	text-align: center;
+	position: relative;
+	width: 25%;
+	float: left;
+	position: relative;
+
+
+}
+
+.relatedPicText{
+	height: 40px;line-height: 40px;
+	font-size: 16px;
+}
+
+
+/***********************************************************************************
+*********************************mall商城******************************
+***********************************************************************************/
+#adScreen{
+	height: 434px;
+	width: 100%;
+	position: relative;
+}
+.ad19{
+	position: absolute;
+    left: 30%;
+    top: 66%;
+    width: 33%;
+    height: 33%;
+    background-size: cover;
+}
+a.adButton{
+	display:inline-block; 
+	width: 132px;
+	height: 37px;
+	line-height: 37px;
+	text-align: center;
+	font-size: 15px;
+	color: #327aba;
+	background:url(../img/bg09.png) no-repeat;
+	
+	margin-right: 20px;
+}
