@@ -1177,6 +1177,104 @@ a.adButton{
 	font-size: 15px;
 	color: #327aba;
 	background:url(../img/bg09.png) no-repeat;
-	
 	margin-right: 20px;
 }
+.hotTitle{padding-top: 30px;}
+.hotTitle>span{display:inline-block;}
+
+.hotTitle .fire{font-size:20px;} 
+.hotTitle .fire img{vertical-align:middle;margin-top: -7px;} 
+.hotTitle .fire .fireText{margin-left: 11px;} 
+.hotTitle .leftRight{
+	background:url(../img/leftRight.png);
+	width: 63px;
+	height: 20px;
+	float: right; 
+}
+.leftRight .leftButton,.leftRight .RightButton{
+	display: block;
+	float: left;
+	width: 50%;
+	height: 100%;
+}
+/*common*/
+/*picRow01:无文字*/
+.picRow01{width:100%;height: 100%;white-space: nowrap;overflow: hidden;}
+.picRow01 ul{overflow: visible;font-size:0px;/*li间有空隙*/}
+.picRow01 li{
+	display: inline-block;
+    width: 240px;
+    height: 325px;
+}
+.picRow01 li img{width:100%;height: 100%;}
+
+
+/*picRow02:有文字*/
+.picRow02{width:100%;height: 100%;white-space: nowrap;overflow: hidden;padding-top: 16px;}
+.picRow02 ul{
+	overflow: visible;font-size:0px;/*li间有空隙*/
+	display: block;
+}
+.picRow02 li{
+	font-size:15px;
+	display: inline-block;
+    width: 240px;
+    height: 325px;
+    border:1px solid #E9E6E6;
+}
+.picRow02 li .picBox{
+	height: 211px;
+}
+.picRow02 li .textBox{
+	white-space: normal;
+	width: 100%;
+	padding: 25px 20px;
+	height: 115px;
+	color: #000;
+}
+.picRow02 li .textBox .textRow{
+	display: block;
+    text-align: left;
+    line-height: 23px;
+}
+.picRow02 li .textBox .textRow.price{
+	color:#f7a244;font-size: 16px;
+
+}
+.picRow02 li .picBox img{width:100%;height: 100%;}
+
+.productBox{padding-top: 36px;}
+/*brandPic01*/
+.brandPic{
+	height: 515px;
+}
+.brandPic>div{
+	float: left;
+	height: 100%;
+}
+.brandPic>div.brandPic_left{
+	width: 320px;	
+}
+.brandPic>div.brandPic_right{
+	width: 880px;
+}
+.brandPic>div.brandPic_left .brandPic_title{
+	display: block;
+	height: 37px;
+	border-bottom: 2px solid #f48000;
+}
+.brandPic_title{
+	font-size: 19px;
+}
+.picNav{
+	list-style: none;
+}
+.picNav li{
+	display: block;
+	float: left;
+}
+
+
+
+
+
