@@ -1313,10 +1313,20 @@ a.adButton{
     font-size: 12px;
     margin-top: 9px;
 }
+
+/*覆盖·修改*/
 .brandPic_right .picRow02{padding-top: 0;height: 50%;overflow: visible;}
 .brandPic_right .picRow02 li{width: 25%;display: block;float: left;height:238px}
-
-
+.brandPic_right .picRow02 li .picBox{
+	height: 55%;
+}
+.brandPic_right .picRow02 li .textBox .textRow {
+    color:#666;
+    font-size: 12px;
+}
+.brandPic_right .picRow02 li .textBox .textRow.price{
+	color: #f7a244;
+}
 
 
 
