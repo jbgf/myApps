@@ -1257,6 +1257,10 @@ a.adButton{
 }
 .brandPic>div.brandPic_right{
 	width: 880px;
+	border:1px solid #dadada;
+}
+.brandPicBox{
+	height: 476px;
 }
 .brandPic>div.brandPic_left .brandPic_title{
 	display: block;
@@ -1266,13 +1270,51 @@ a.adButton{
 .brandPic_title{
 	font-size: 19px;
 }
-.picNav{
+
+/*nav01*/
+.nav01{
 	list-style: none;
+    display: block;
+    height: 37px;
+    line-height: 37px;
+    border-bottom: 2px solid #f48000;  
 }
-.picNav li{
+.nav01 li{
 	display: block;
-	float: left;
+    float: left;
+   
+    height: 37px;
+    line-height: 37px;
+   
 }
+.nav01 li.on{
+	border-top: 2px solid #f48000;  
+	border-left: 1px solid #f48000;  
+	border-right:  1px solid #f48000;   
+	border-bottom: 2px solid #fff;
+}
+.nav01 li.on a,
+.nav01 li.on+li a{background-image: none;}
+.nav01 li a{
+	color:#999999;
+	font-size: 13px;
+	padding:0 7px;
+	background: url(../img/line01.png) no-repeat;}
+.nav01 li:first-child a,.nav01 li:last-child a{
+	background-image: none;
+}
+.nav01 li.more{
+	float: right;
+    
+	
+}
+.nav01 li.more a{
+	color: #f48000;
+    font-size: 12px;
+    margin-top: 9px;
+}
+.brandPic_right .picRow02{padding-top: 0;height: 50%;overflow: visible;}
+.brandPic_right .picRow02 li{width: 25%;display: block;float: left;height:238px}
 
 
 

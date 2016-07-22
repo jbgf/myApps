@@ -12,7 +12,7 @@ $(document).ready(function(){
 function scrollLink(speed,delay) {   //函数 函数名(变量1,变量2,变量3)滚动高度,速度,延迟
 		var p=false; //定义变量 p为假;
 		var t; //定义变量t了
-		var $ul=$(".picRow02 ul"); //定义变量o为document.getElementByIdx_x("marqueebox")对象
+		var $ul=$("#hotPicRow ul"); //定义变量o为document.getElementByIdx_x("marqueebox")对象
 		var ul = $ul[0];
 		var blockNum = $(".picRow02 ul li").length;
 		if(blockNum<4){return}
@@ -29,8 +29,6 @@ function scrollLink(speed,delay) {   //函数 函数名(变量1,变量2,变量3)
 		//if(!o)return;
 		var list = $ul.html();
 		
-
-
 		$ul.append(list).prepend(list); //设置变量o的innerHTML对象为自加;设置为类似123123的队列。当高度大于
 		//一般，即经过一半的队列（个数）时，马上设置为margintop=0的初始位置，因为位于第二段的开始，所以没有抖动。
 		
@@ -181,14 +179,14 @@ var newsImg = function(){
 }
 
 
-/*
+
 
 var glide = $('.slider').glide({
 	type: 'carousel',
 	startAt: 1,
 	touchDistance: 2
 });
-*/
+
 
 //加载首页新闻
 function loadIndexNews(){
