@@ -1,15 +1,18 @@
 $(function(){
+	var objUrl;
 	$('.upload').on("click",function(){$("#file0").click()})
-	$('.browse').on('click',function(){$(".modalBox").modalBox();})
+	$('.browse').on('click',function(){
+		$(".modalBox").modalBox();
+		$(".modalBox").on("shown.bs.modal",function(){
+		//	alert('test')
+			$(".modalBox-body").html('<img src='+objUrl+'')
+		})
+	})
 	$("#file0").change(function(){
-	var objUrl = getObjectURL(this.files[0]) ;
-	//console.log("objUrl = "+objUrl) ;
-	if (objUrl) {
-
-		
-			
-	//	$("body").append('<img src='+objUrl+'>');
-	}
+		var objUrl = getObjectURL(this.files[0]);
+		//console.log("objUrl = "+objUrl) ;
+	
+	})
 }) ;
 	//建立一個可存取到該file的url
 	function getObjectURL(file) {
@@ -23,4 +26,4 @@ $(function(){
 		}
 		return url ;
 	}
-	})	
+		
