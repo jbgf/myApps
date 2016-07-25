@@ -1410,5 +1410,154 @@ a.adButton{
 	margin: 0;
 	border: 0;
 }
+/***********************************************************************************
+*********************************counsulting在线咨询******************************
+***********************************************************************************/
+/*content_head*/
+.content_head .search .addon {
+    background: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    margin-left: -2px;
+    color: #696868;
+    text-align: center;
+    border: 2px solid #00aa3c;
+    white-space: nowrap;
+    vertical-align: middle;
+    width: 84px;
+    line-height: 1.3333333;
+}
+.content_head .search .addon.need{
+	margin-top: 16px;
+    margin-bottom: 8px;
+    float: left;
+    height: 45px;
+    line-height: 39px;
+    
+    width: 84px;
+    margin-left: 16px;
+    background-color: #f48000;
+    border:2px solid #f48000;
+    color: #fff;
+}
+ 
+
+.content_head .search span.addon{
+	border-right: none;
+	width: 101px;
+}
+.content_head .search .addon img{
+	margin-left: -5px;
+	margin-right: 5px;
+} 
+.content_head .search input {
+    position: relative;
+    float: left;
+    width:422px;
+    margin-bottom: 0;
+    height: 45px;
+    line-height: 39px;
+    display: table-cell;
+    border: 2px solid #00aa3c;
+    border-left: none;
+}
+
+.content_head .search input[type="submit"] {
+    background:#00aa3c;
+    color: #fff;
+}
+
+.content_head .search{
+	width:737px;
+    height: 83px;
+    /* float: right; */
+    margin: 0 auto;
+    float: none;
+}
+.content_head{
+	text-align: center;
+	height: 142px;
+	background-color: #fff7ea;
+	padding-top: 28px;
+	padding-bottom: 28px;
+}
+.askInf{
+	font-size: 21px;
+	color:#666;
+}
+.askInf span{
+	color: #f48000;
+}
 
 
+.consulting_body{
+	padding-top: 15px;
+}
+.consulting_body>section{
+	float: left;
+
+
+}
+.consulting_l{
+	width: 220px;
+	height: 724px;
+}
+.consulting_r{
+	width: 980px;
+}
+.consulting_category{
+	height: 38px;
+	line-height: 38px;
+	color:#fff;
+	background:#f48000;
+	text-align: center;
+	font-size: 17px;
+}
+.category_list{
+	padding:20px 17px 16px;
+	
+	border:1px solid #dcdcdc;
+	border-top: none;
+}
+.category_title{
+	font-size: 15px;
+	color: #f48000;
+	font-weight: 500;
+}
+.category_details{
+	padding-top: 15px;
+}
+.category_details a {
+    color: #919191;
+    margin-right: 12px;
+    font-size: 12px;
+    line-height: 21px;
+}
+.consulting_r .contactUs{
+	height: 414px;
+	border:3px solid #f48000;
+	margin-left: 22px;
+}
+.consulting_r .contactUs>div{
+	float: left;
+	height: 100%;
+}
+.contactUs_l{
+	width: 592px;
+	padding:32px 32px 48px 32px;
+}
+.contactUs_r img{width: 100%;height: 100%;}
+
+.contactUs_head>div{float: left;}
+
+.title_text{padding-left: 17px;}
+.title_text span{
+	display: block;
+}
+
+.contact_form{padding-top: 30px;}
+.contact_form input,.contact_form textarea{
+	width: 100%;
+	border:1px solid #dbdbdb;
+	padding: 15px;
+}

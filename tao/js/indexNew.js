@@ -1,5 +1,5 @@
 $(function(){
-	var contact = $(".contact "),post_demands = $(".container .post_demands");
+	var contact = $(".contact "),post_demands = $(".container .post_demands img");
   var toggleContact = function(){
       contact.toggle();
       post_demands.toggle();
