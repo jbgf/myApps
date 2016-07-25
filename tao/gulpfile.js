@@ -25,8 +25,8 @@ gulp.task('browserSync',function(){
 });
 gulp.task('watch',['browserSync'],function(){
 	 
-	 gulp.watch(['./js/*.js','./**/*.css','./**/*.html'],browserSync.reload);
-	 gulp.watch(['./wheel/**/*.js','./wheel/**/*.css','./wheel/**/*.html'],browserSync.reload);
+//	 gulp.watch(['./js/*.js','./**/*.css','./**/*.html'],browserSync.reload);
+//	 gulp.watch(['./wheel/**/*.js','./wheel/**/*.css','./wheel/**/*.html'],browserSync.reload);
 	 
 	 
 });

@@ -9,14 +9,26 @@
 <link href="css/index.css"  rel="stylesheet">
 <link href="css/banner.css"  rel="stylesheet">
 <link href="css/ie.css"  rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/glide.core.css">
+<link rel="stylesheet" type="text/css" href="css/glide.theme.css">
+<link rel="stylesheet" type="text/css" href="css/affixBeta.css">
+
 
 <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-
+<script type="text/javascript" src="js/affixBeta.js"></script>
 <script type="text/javascript" src="js/jquery.JPlaceholder.js"></script>
 <script type="text/javascript" src="js/scrollTop.js"></script>
-<script type="text/javascript"></script>
+<script type="text/javascript" src="js/glide.min.js"></script>
+<script type="text/javascript">
+       window.onload = function(){
+                            var slider01 = $('#Glide01').glide({ autoheight: true });
+                            var slider01_api = slider01.data('glide_api');
+                            var slider02 = $('#Glide02').glide({ autoheight: true });
+                            var slider02_api = slider02.data('glide_api');
+                        }
+</script>
 </head>
-<body>
+<body data-spy="scroll" data-target="#myScrollspy" >
 
 <div class="container">
     <div class="head">
@@ -168,30 +180,63 @@
         </div>
         
     </div>
-    <div class="productBox">
+
+    <!--显示页面位置-->
+
+                
+    <!--显示页面位置end-->
+
+
+    <div class="productBox scrollSpyBox">
+          <div  id="myScrollspy" data-spy="affix" data-offset-top="900" data-offset-bottom="500">
+                      <div class="catalog-scroller">
+                         
+                          <div class="affixIcon"><img src="img/fireIcon.png"></div>
+                          <dl class="nav" id="myNav">
+                              <dt class="active"><a href="#section-1">工商注册</a></dt>
+                              <dt><a href="#section-2">2F</a></dt>
+                              <dt><a href="#section-3">3F</a></dt>
+                              <dt><a href="#section-4">4F</a></dt>
+                          </dl>
+                          
+                          
+                      </div>
+                  </div>
         <div class="brandPic ">
+            <div class="navTitle">
+                <h1 class="brandPic_title">
+                    <a><img src="img/iconbg09.png" ></a>
+                    <span style="font-size:23px;position:relative;top:-1px;">1F· </span> <span id="section-1" style="position:relative;top:-3px;">工商注册</span>
+                </h1>
+                <div <div class="navBox">
+                        
+                    <ul class="nav01">
+                        <li class="on"><a>内资公司注册  </a></li>
+                        <li><a>个体工商户注册 </a></li>
+                         <li><a>公司变更 </a></li>
+                         <li ><a>公司注销  </a></li>
+                         <li><a>进出口许可证  </a></li>
+                         <li><a>食品流通许可证 </a></li>
+                         <li><a>餐饮服务卫生证 </a></li>
+                         <li><a>酒类经营许可证 </a></li>
+                         <li><a>劳务派遣证</a></li>
+                         <li class="more"><a>更多 ></a></li>
+                    </ul>
+
+                </div>
+
+
+            </div>
+              
+
         <div class="brandPic_left">
-            <h1 class="brandPic_title">
-                <a><img src="img/iconbg09.png" ></a>
-                <span style="font-size:23px;position:relative;top:-1px;">1F</span> <span style="position:relative;top:-3px;">· 工商注册</span>
-            </h1>
+            
             <div class="brandImg">
                 <img src="img/ad14.png" style="height:478px ;width:100%;">
             </div>
         </div>
         <div class="brandPic_right">
-            <ul class="nav01">
-                <li class="on"><a>内资公司注册  </a></li>
-                <li><a>个体工商户注册 </a></li>
-                 <li><a>公司变更 </a></li>
-                 <li ><a>公司注销  </a></li>
-                 <li><a>进出口许可证  </a></li>
-                 <li><a>食品流通许可证 </a></li>
-                 <li><a>餐饮服务卫生证 </a></li>
-                 <li><a>酒类经营许可证 </a></li>
-                 <li><a>劳务派遣证</a></li>
-                 <li class="more"><a>更多 ></a></li>
-            </ul>
+            
             <div class="brandPicBox">
                  <div class="picRow02  ">
                       <ul  >
@@ -277,259 +322,405 @@
         </div>
     </div>
     </div>
-    
 
-
-
-    <!--slogan-->
-    <div class="box_row " style="margin-top: 22px;">
-         <div class="slogan full_container" >
-            <img src="img/ad08.png" style="width:100%;height: 100%;">
-         </div>
-    </div>
-<!--培训拆除两行更新 453-599-->
-    <div class="train">
-          <h1>
-                <span class="news_title">会计培训</span>
-                <span class="news_title_s">实践培训课程</span>
-                <span class="news_title_s">/ 网络在线课程</span>
-                <span class="more"><a href="#" >更多 ></a></span>
-          </h1>
-          <div class="product_r">
-                <div class="pic_main">
-                  <div class="new_pic ">
-                   <div class="bg">
-                        <div class="plus"></div>
-                        
-                      </div>
-                      <div class="pic_wrapper">
-                          <img src="img/product_pic.png">
-                          
-                          <div class="train_details">
-                            <p>xx实践培训课程</p>
-                          实践培训课程介绍实践培训课程介绍实践培训课程介绍实践培训课程介
-                          </div>
-                      </div>
-                  </div>
-                </div>
-                <div class="pic_main">
-                  <div class="new_pic ">
-                   <div class="bg">
-                        <div class="plus"></div>
-                        
-                        
-                      </div>
-                      <div class="pic_wrapper">
-                          <img src="img/product_pic.png">
-                          
-                          <div class="train_details">
-                            <p>xx实践培训课程</p>
-                          实践培训课程介绍实践培训课程介绍实践培训课程介绍实践培训课程介
-                          </div>
-                      </div>
-                  </div>
-                </div>
-                <div class="pic_main">
-                  <div class="new_pic ">
-                   <div class="bg">
-                        <div class="plus"></div>
-                        
-                        
-                      </div>
-                      <div class="pic_wrapper">
-                          <img src="img/product_pic.png">
-                          
-                          <div class="train_details">
-                            <p>xx实践培训课程</p>
-                          实践培训课程介绍实践培训课程介绍实践培训课程介绍实践培训课程介
-                          </div>
-                      </div>
-                  </div>
-                </div>
-                <div class="pic_main">
-                  <div class="new_pic ">
-                   <div class="bg">
-                        <div class="plus"></div>
-                        
-                        
-                      </div>
-                      <div class="pic_wrapper">
-                          <img src="img/product_pic.png">
-                          
-                          <div class="train_details">
-                            <p>xx实践培训课程</p>
-                          实践培训课程介绍实践培训课程介绍实践培训课程介绍实践培训课程介
-                          </div>
-                      </div>
-                  </div>
-                </div> 
-                <div class="pic_main">
-                  <div class="new_pic ">
-                   <div class="bg">
-                        <div class="plus"></div>
-                        
-                        
-                      </div>
-                      <div class="pic_wrapper">
-                          <img src="img/product_pic.png">
-                          
-                          <div class="train_details">
-                            <p>xx实践培训课程</p>
-                          实践培训课程介绍实践培训课程介绍实践培训课程介绍实践培训课程介
-                          </div>
-                      </div>
-                  </div>
-                </div>
-                <div class="pic_main">
-                  <div class="new_pic ">
-                   <div class="bg">
-                        <div class="plus"></div>
-                        
-                        
-                      </div>
-                      <div class="pic_wrapper">
-                          <img src="img/product_pic.png">
-                          
-                          <div class="train_details">
-                            <p>xx实践培训课程</p>
-                          实践培训课程介绍实践培训课程介绍实践培训课程介绍实践培训课程介
-                          </div>
-                      </div>
-                  </div>
-                </div>
-                <div class="pic_main">
-                  <div class="new_pic ">
-                   <div class="bg">
-                        <div class="plus"></div>
-                        
-                        
-                      </div>
-                      <div class="pic_wrapper">
-                          <img src="img/product_pic.png">
-                          
-                          <div class="train_details">
-                            <p>xx实践培训课程</p>
-                          实践培训课程介绍实践培训课程介绍实践培训课程介绍实践培训课程介
-                          </div>
-                      </div>
-                  </div>
-                </div>
-                <div class="pic_main">
-                  <div class="new_pic ">
-                   <div class="bg">
-                        <div class="plus"></div>
-                        
-                        
-                      </div>
-                      <div class="pic_wrapper">
-                          <img src="img/product_pic.png">
-                          
-                          <div class="train_details">
-                            <p>xx实践培训课程</p>
-                          实践培训课程介绍实践培训课程介绍实践培训课程介绍实践培训课程介
-                          </div>
-                      </div>
-                  </div>
-                </div> 
-          </div>
-    </div>
-<!--培训拆除两行更新-->
-    <!--slogan-->
-    <div class="box_row " style="margin-top: 22px;">
-         <div class="slogan full_container" >
-            <img src="img/ad09.png" style="width:100%;height: 100%;">  
-         </div>
-    </div>
-
-    <div class="jobs news">
-          <div class="news_l new_pic">
-              <h1>
-                <span class="news_title">新闻资讯</span>
-                <span class="more"><a href="#" >更多 ></a></span>
-              </h1> 
-              
-              
-              <div class="news_row box_row">
-                      <div class="news_left"><img src="img/policy1.png"></div>
-                      <div class="news_right">
-                            <div class="policy_header">
-                                中华人民共和国慈善法（全文）<span>2016-06-22</span>
-                                
-                            </div>
-                            <div class="policy_body">
-                                第一条　为了发展慈善事业，弘扬慈善文化，规范慈善活动，保护慈善组织、捐赠人、志
-愿者、受益人等慈善活动参与者的合法权益
-                            </div>
-
-                      </div>
-                </div>
-                <div class="news_row box_row">
-                      <div class="news_left"><img src="img/policy1.png"></div>
-                      <div class="news_right">
-                            <div class="policy_header">
-                                中华人民共和国慈善法（全文）<span>2016-06-22</span>
-                                
-                            </div>
-                            <div class="policy_body">
-                                第一条　为了发展慈善事业，弘扬慈善文化，规范慈善活动，保护慈善组织、捐赠人、志
-愿者、受益人等慈善活动参与者的合法权益
-                            </div>
-
-                      </div>
-                </div>
-                <div class="news_row box_row">
-                      <div class="news_left"><img src="img/policy1.png"></div>
-                      <div class="news_right">
-                            <div class="policy_header">
-                                中华人民共和国慈善法（全文）<span>2016-06-22</span>
-                                
-                            </div>
-                            <div class="policy_body">
-                                第一条　为了发展慈善事业，弘扬慈善文化，规范慈善活动，保护慈善组织、捐赠人、志
-愿者、受益人等慈善活动参与者的合法权益
-                            </div>
-
-                      </div>
-                </div>
-              
-             
-          </div>
-
-          <div class="news_r policy"> 
-              <h1><span class="news_title">本站公告</span>
-                  <span class="more"><a href="#" >更多 ></a></span>
+    <div class="productBox">
+        <div class="brandPic ">
+        
+        <div class="navTitle">
+              <h1 class="brandPic_title">
+                      <a><img src="img/iconbg10.png" ></a>
+                      <span style="font-size:23px;position:relative;top:-1px;">2F· </span> <span id="section-2" style="position:relative;top:-3px;">财务代理</span>
               </h1>
-                  
-                  <ul  class="news_list">
-                      <li>××××会员，您的<span>××××××</span>即将到期</li>
-                      <li>会议审议通过了《关于完善人大代表</li>
-                      <li>会议审议通过了《关于完善人大代表通过了《关于完善人大通过了《关于完善人大</li>
-                      <li>会议审议通过了《关于完善人大代表</li>
-                      <li>会议审议通过了《关于完善人大代表</li>
-                      <li>会议审议通过了《关于完善人大代表</li>
-                  
-                  </ul>
-              <div class="news_ad" >
-                  <img src="img/ad10.png" style="width:100%;height: 100%;">
+              <div class="navBox">
+                      <ul class="nav01 ">
+                        
+                          <li class="on"><a>财务代理  </a></li>
+                          <li><a>财税顾问 </a></li>
+                           <li><a>审计报告 </a></li>
+                           <li ><a>税审报告  </a></li>
+                           <li><a>清算报告  </a></li>
+                           <li><a>注册资本验资 </a></li>
+                           <li><a>资产评估 </a></li>
+                           
+                           <li class="more"><a>更多 ></a></li>
+                      </ul>
               </div>
-          </div>
+
+        </div>
+        
+
+        <div class="brandPic_left">
+            
+            <div class="brandImg">
+                <img src="img/ad21.png" style="height:478px ;width:100%;">
+                <div class="adButton" style="color:#00bcbd;">查看详情<img src="img/adRight02.png"></div>
+            </div>
+        </div>
+        <div class="brandPic_right">
+           
+            
+            <div class="brandPicBox">
+                 <div class="picRow02  ">
+                      <ul  >
+                        <li class="twoLi">
+                            <!--glide轮播-->
+                            <div id="Glide01" class="glide">
+
+                      <div class="glide__arrows">
+                        <button class="glide__arrow prev" data-glide-dir="<"><img src="img/leftBtn.png"></button>
+                        <button class="glide__arrow next" data-glide-dir=">"><img src="img/rightBtn.png"></button>
+                      </div>
+
+                      <div class="glide__wrapper">
+                        <ul class="glide__track">
+                          <li class="glide__slide">
+                            <div class="box" style="background-color: #77A7FB; ">
+                                <img src="img/slideAd01.png">
+                            </div>
+                          </li>
+                          <li class="glide__slide">
+                            <div class="box" style="background-color: #FBCB43; ">
+                                <img src="img/slideAd01.png">
+                            </div>
+                          </li>
+                          <li class="glide__slide">
+                            <div class="box" style="background-color: #34B67A; ">
+                                <img src="img/slideAd01.png">
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="glide__bullets"></div>
+                      
+                    </div>
+                        </li>
+                        <li >
+                            <div class="picBox">
+                                <img src="img/ad13.png">  
+                            </div>
+                            <div class="textBox">
+                                <span class="textRow">中恒财务代理 福州代理记账 账务代理</span>
+                                <span class="textRow price">￥300.00</span>
+                            </div>
+                        </li>
+                        <li >
+                            <div class="picBox">
+                                <img src="img/ad20.png">  
+                            </div>
+                            <div class="textBox">
+                                <span class="textRow">中恒财务代理 福州代理记账 账务代理</span>
+                                <span class="textRow price">￥300.00</span>
+                            </div>
+                        </li>
+                        <li >
+                            <div class="picBox">
+                                <img src="img/ad20.png">  
+                            </div>
+                            <div class="textBox">
+                                <span class="textRow">中恒财务代理 福州代理记账 账务代理</span>
+                                <span class="textRow price">￥300.00</span>
+                            </div>
+                        </li>
+                        <li >
+                            <div class="picBox">
+                                <img src="img/ad13.png">  
+                            </div>
+                            <div class="textBox">
+                                <span class="textRow">个人商标注册|商标注册|个人申请
+商标注册|公司注册|企业注册 </span>
+                                <span class="textRow price">￥300.00</span>
+                            </div>
+                        </li>
+                        <li >
+                            <div class="picBox">
+                                <img src="img/ad20.png">  
+                            </div>
+                            <div class="textBox">
+                                <span class="textRow">中恒财务代理 福州代理记账 账务代理</span>
+                                <span class="textRow price">￥300.00</span>
+                            </div>
+                        </li>
+                        <li >
+                            <div class="picBox">
+                                <img src="img/link_logo.png">  
+                            </div>
+                            <div class="textBox">
+                                <span class="textRow">中恒财务代理 福州代理记账 账务代理</span>
+                                <span class="textRow price">￥300.00</span>
+                            </div>
+                        </li>
+                       
+                      </ul>
+            </div> 
+
+            </div>
+            
+        </div>
+    </div>
+    </div>
+    
+    <div class="productBox">
+        <div class="brandPic ">
+        
+        <div class="navTitle">
+              <h1 class="brandPic_title">
+                      <a><img src="img/iconbg11.png" ></a>
+                      <span style="font-size:23px;position:relative;top:-1px;">3F· </span> <span id="section-3" style="position:relative;top:-3px;">知识产权</span>
+              </h1>
+              <div class="navBox">
+                      <ul class="nav01 ">
+                        
+                          <li class="on"><a>商标注册变更  </a></li>
+                          <li><a>专利申请/转让 </a></li>
+                          <li><a>著作权申请 </a></li>
+                          
+                           
+                           <li class="more"><a>更多 ></a></li>
+                      </ul>
+              </div>
+
+        </div>
+        
+
+        <div class="brandPic_left">
+            
+            <div class="brandImg">
+                <img src="img/ad22.png" style="height:478px ;width:100%;">
+                <div class="adButton" style="color:#00bcbd;">查看详情<img src="img/adRight02.png"></div>
+            </div>
+        </div>
+        <div class="brandPic_right">
+           
+            
+            <div class="brandPicBox">
+                 <div class="picRow02  ">
+                      <ul  >
+                        <li class="twoLi">
+                            <!--glide轮播-->
+                            <div id="Glide02" class="glide">
+
+                      <div class="glide__arrows">
+                        <button class="glide__arrow prev" data-glide-dir="<"><img src="img/leftBtn.png"></button>
+                        <button class="glide__arrow next" data-glide-dir=">"><img src="img/rightBtn.png"></button>
+                      </div>
+
+                      <div class="glide__wrapper">
+                        <ul class="glide__track">
+                          <li class="glide__slide">
+                            <div class="box" style="background-color: #77A7FB; ">
+                                <img src="img/slideAd03.png">
+                            </div>
+                          </li>
+                          <li class="glide__slide">
+                            <div class="box" style="background-color: #FBCB43; ">
+                                <img src="img/slideAd03.png">
+                            </div>
+                          </li>
+                          <li class="glide__slide">
+                            <div class="box" style="background-color: #34B67A; ">
+                                <img src="img/slideAd03.png">
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="glide__bullets"></div>
+                      
+                    </div>
+                        </li>
+                        <li >
+                            <div class="picBox">
+                                <img src="img/ad13.png">  
+                            </div>
+                            <div class="textBox">
+                                <span class="textRow">中恒财务代理 福州代理记账 账务代理</span>
+                                <span class="textRow price">￥300.00</span>
+                            </div>
+                        </li>
+                        <li >
+                            <div class="picBox">
+                                <img src="img/ad20.png">  
+                            </div>
+                            <div class="textBox">
+                                <span class="textRow">中恒财务代理 福州代理记账 账务代理</span>
+                                <span class="textRow price">￥300.00</span>
+                            </div>
+                        </li>
+                        <li >
+                            <div class="picBox">
+                                <img src="img/ad20.png">  
+                            </div>
+                            <div class="textBox">
+                                <span class="textRow">中恒财务代理 福州代理记账 账务代理</span>
+                                <span class="textRow price">￥300.00</span>
+                            </div>
+                        </li>
+                        <li >
+                            <div class="picBox">
+                                <img src="img/ad13.png">  
+                            </div>
+                            <div class="textBox">
+                                <span class="textRow">个人商标注册|商标注册|个人申请
+商标注册|公司注册|企业注册 </span>
+                                <span class="textRow price">￥300.00</span>
+                            </div>
+                        </li>
+                        <li >
+                            <div class="picBox">
+                                <img src="img/ad20.png">  
+                            </div>
+                            <div class="textBox">
+                                <span class="textRow">中恒财务代理 福州代理记账 账务代理</span>
+                                <span class="textRow price">￥300.00</span>
+                            </div>
+                        </li>
+                        <li >
+                            <div class="picBox">
+                                <img src="img/link_logo.png">  
+                            </div>
+                            <div class="textBox">
+                                <span class="textRow">中恒财务代理 福州代理记账 账务代理</span>
+                                <span class="textRow price">￥300.00</span>
+                            </div>
+                        </li>
+                       
+                      </ul>
+            </div> 
+
+            </div>
+            
+        </div>
+    </div>
     </div>
 
-    <div class="friend_link">
-          <h1>
-                <span class="news_title">友情链接</span>
-                <span class="more"><a href="#" >更多 ></a></span>
-          </h1>
-          <div>
-                <span>福州代理记账        </span>
-                <span>福州会计培训        </span>
-                <span>福州注册公司       </span>
-                <span>企业管理咨询</span>
-          </div>
-    </div>          
-    
-    <div class="post_demands " ><img src="img/post_demands.png"></div>
-    <div class="bottom "> 
+    <div class="productBox">
+        <div class="brandPic ">
+            <div class="navTitle">
+                <h1 class="brandPic_title">
+                    <a><img src="img/iconbg12.png" ></a>
+                    <span style="font-size:23px;position:relative;top:-1px;">4F· </span> <span id="section-4"style="position:relative;top:-3px;">企业运营</span>
+                </h1>
+                <div <div class="navBox">
+                        
+                    <ul class="nav01">
+                        <li class="on"><a>LOGO设计  </a></li>
+                        <li><a>名片设计 </a></li>
+                         <li><a>企业VI设计 </a></li>
+                         <li ><a>宣传册包装设计  </a></li>
+                         <li><a>企业管理顾问  </a></li>
+                         <li><a>企业管理培训 </a></li>
+                         <li><a>ERP软件实施与咨询 </a></li>
+                         <li><a>ERP软件租赁 </a></li>
+                         <li><a>公司网站建设</a></li>
+                         <li><a>微信开发</a></li>
+                         <li class="more"><a>更多 ></a></li>
+                    </ul>
+
+                </div>
+
+
+            </div>
+              
+
+        <div class="brandPic_left">
+            
+            <div class="brandImg">
+                <img src="img/ad23.png" style="height:478px ;width:100%;">
+                <div class="adButton" >查看详情<img src="img/adRight02.png"></div>
+            </div>
+        </div>
+        <div class="brandPic_right">
+            
+            <div class="brandPicBox">
+                 <div class="picRow02  ">
+                      <ul  >
+                        <li >
+                            
+                            <div class="picBox">
+                                <img src="img/ad13.png">  
+                            </div>
+                            <div class="textBox">
+                                <span class="textRow">中恒财务代理 福州代理记账 账务代理</span>
+                                <span class="textRow price">￥300.00</span>
+                            </div>
+                        </li>
+                        <li >
+                            <div class="picBox">
+                                <img src="img/link_logo.png">  
+                            </div>
+                            <div class="textBox">
+                                <span class="textRow">中恒财务代理 福州代理记账 账务代理</span>
+                                <span class="textRow price">￥300.00</span>
+                            </div>
+                        </li>
+                        <li >
+                            <div class="picBox">
+                                <img src="img/ad13.png">  
+                            </div>
+                            <div class="textBox">
+                                <span class="textRow">中恒财务代理 福州代理记账 账务代理</span>
+                                <span class="textRow price">￥300.00</span>
+                            </div>
+                        </li>
+                        <li >
+                            <div class="picBox">
+                                <img src="img/ad20.png">  
+                            </div>
+                            <div class="textBox">
+                                <span class="textRow">中恒财务代理 福州代理记账 账务代理</span>
+                                <span class="textRow price">￥300.00</span>
+                            </div>
+                        </li>
+                        <li >
+                            <div class="picBox">
+                                <img src="img/ad20.png">  
+                            </div>
+                            <div class="textBox">
+                                <span class="textRow">中恒财务代理 福州代理记账 账务代理</span>
+                                <span class="textRow price">￥300.00</span>
+                            </div>
+                        </li>
+                        <li >
+                            <div class="picBox">
+                                <img src="img/ad13.png">  
+                            </div>
+                            <div class="textBox">
+                                <span class="textRow">个人商标注册|商标注册|个人申请
+商标注册|公司注册|企业注册 </span>
+                                <span class="textRow price">￥300.00</span>
+                            </div>
+                        </li>
+                        <li >
+                            <div class="picBox">
+                                <img src="img/ad20.png">  
+                            </div>
+                            <div class="textBox">
+                                <span class="textRow">中恒财务代理 福州代理记账 账务代理</span>
+                                <span class="textRow price">￥300.00</span>
+                            </div>
+                        </li>
+                        <li >
+                            <div class="picBox">
+                                <img src="img/link_logo.png">  
+                            </div>
+                            <div class="textBox">
+                                <span class="textRow">中恒财务代理 福州代理记账 账务代理</span>
+                                <span class="textRow price">￥300.00</span>
+                            </div>
+                        </li>
+                       
+                      </ul>
+            </div> 
+
+            </div>
+            
+        </div>
+    </div>
+    </div>
+
+
+    <div class="bottom " > 
           <!-- 页尾 -->
 
     <div class="contact full-width" >
@@ -560,7 +751,7 @@
     </div>
     
     
-    <div class="bottom "> 
+    <div class="bottom " style="margin-top: 65px;"> 
           <!-- 页尾 -->
     
     <div class="map full-width ">
@@ -608,7 +799,7 @@
     </div>  
     </div>
 
-    <div class="bottom "> 
+    <div class="bottom " > 
           <!-- 页尾 -->
     
     <div class="footer full-width ">

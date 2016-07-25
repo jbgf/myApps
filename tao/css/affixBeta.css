@@ -1,0 +1,121 @@
+.scrollSpyBox{
+    position: relative;
+}
+#myScrollspy{
+    
+    font-family: 宋体;
+    font-size: 14px;
+    height: 230px;
+    line-height: 19px;
+    position: absolute;
+    top: 28px;
+    left: -52px;
+    width: 41px;
+}
+#myScrollspy.affix{
+    position: fixed;
+    top:240px;
+    left:23px;
+} 
+.catalog-scroller{
+    
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding-top: 15px;
+    position: absolute;
+    top: 0;
+    
+    z-index: 1;
+}  
+
+dl#myNav{
+    height: auto;
+    position: relative;
+}
+
+.nav > dt {
+
+   
+    position: relative;
+   
+}
+
+.nav > dt > a ,.affixIcon{
+
+    text-align: center;
+    display: block;
+    line-height: 19px;
+    border: 1px solid #eeeeee;
+    color: #555;
+    font-weight: 700;
+    text-decoration: none;
+    /* background: url(../images/graydot.png) no-repeat; */
+    background-color: white;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    /* margin-left: 112px; */
+}
+.affixIcon img{margin-top: 5px;}
+
+.nav > dt.active > a{
+    padding: 4px;
+    color:#fff;
+    background-color: #f48000;
+    font-size:10px;
+    font-weight: 500;
+    white-space: normal;
+    line-height: 15px;
+
+}
+   
+.sider{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 100%;
+   
+   
+    border-bottom: 0;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+     
+}
+.arrow {
+    left: 0px;
+    z-index: 2;
+    top: 5px;
+    position: absolute;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    text-align: center;
+    padding-right: 10px;
+    text-transform:uppercase;
+    font-weight: 700;
+    width: 104px;
+    cursor: pointer;
+    background:url(../images/rightArrow.png);
+
+}
+.sider .start,.sider .end{
+    background: transparent url("circle.png") no-repeat scroll 0 center;
+    height: 10px;
+    left: -5px;
+    overflow: hidden;
+    position: absolute;
+    width: 10px;
+    font-style: normal;
+}
+.sider .start{top:0;}
+.sider .end{
+    bottom: 0;
+    margin: 0;
+}
+    
+
+    .content{margin-left: 30%;}

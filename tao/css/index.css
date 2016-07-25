@@ -163,7 +163,7 @@
 	background-color: #333;height: 333px;width: 63px;
 	position: fixed;
 	right: 0;
-	top: 393px;
+	top: 30%;
 }
 .quickBar ul{display: block;height:100%;list-style: none;}
 .quickBar ul li{height: 16.6%;width:100%;}
@@ -1215,7 +1215,7 @@ a.adButton{
 	overflow: visible;font-size:0px;/*li间有空隙*/
 	display: block;
 }
-.picRow02 li{
+.picRow02>ul>li{
 	font-size:15px;
 	display: inline-block;
     width: 240px;
@@ -1243,55 +1243,79 @@ a.adButton{
 }
 .picRow02 li .picBox img{width:100%;height: 100%;}
 
-.productBox{padding-top: 36px;}
+.productBox{padding-top: 44px;}
 /*brandPic01*/
 .brandPic{
 	height: 515px;
 }
 .brandPic>div{
 	float: left;
-	height: 100%;
+    width: 100%;
 }
 .brandPic>div.brandPic_left{
-	width: 320px;	
+	width: 320px;
+	position: relative;
 }
+.adButton{
+	width: 120px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 15px;
+    background: url(../img/buttonBg05.png);
+    position: absolute;
+    top: 36%;
+    left: 11%;
+    text-align: center;
+}
+.adButton img{margin-left: 20px;}
 .brandPic>div.brandPic_right{
 	width: 880px;
 	border:1px solid #dadada;
+	border-top: none;
 }
 .brandPicBox{
 	height: 476px;
 }
-.brandPic>div.brandPic_left .brandPic_title{
+/*nav01*/
+.navTitle{
+	border-bottom: 2px solid #f48000;
+	border-right: 1px solid #dadada;
+}
+.navTitle .brandPic_title{
+	float: left;	
 	display: block;
 	height: 37px;
-	border-bottom: 2px solid #f48000;
-}
-.brandPic_title{
 	font-size: 19px;
 }
 
-/*nav01*/
+.navTitle .navBox{
+	float: right;		
+}
 .nav01{
 	list-style: none;
-    display: block;
+    display: inline-block;
+    
     height: 37px;
     line-height: 37px;
-    border-bottom: 2px solid #f48000;  
+    border-top:1px solid #dadada;
+    
 }
 .nav01 li{
 	display: block;
     float: left;
-   
+    
     height: 37px;
     line-height: 37px;
    
 }
 .nav01 li.on{
-	border-top: 2px solid #f48000;  
-	border-left: 1px solid #f48000;  
-	border-right:  1px solid #f48000;   
-	border-bottom: 2px solid #fff;
+	border-top: 2px solid #f48000;
+    border-left: 1px solid #f48000;
+    border-right: 1px solid #f48000;
+    border-bottom: 2px solid #fff;
+    height: 100px;
+    z-index: 99;
+    background: #fff;
 }
 .nav01 li.on a,
 .nav01 li.on+li a{background-image: none;}
@@ -1305,6 +1329,7 @@ a.adButton{
 }
 .nav01 li.more{
 	float: right;
+    margin-left: 13px;
     
 	
 }
@@ -1315,8 +1340,22 @@ a.adButton{
 }
 
 /*覆盖·修改*/
-.brandPic_right .picRow02{padding-top: 0;height: 50%;overflow: visible;}
-.brandPic_right .picRow02 li{width: 25%;display: block;float: left;height:238px}
+.brandPic_right .brandPicBox{    height: 477px;}
+.brandPic_right .picRow02{
+	padding-top: 0;
+    height: 50%;
+    overflow: visible;
+   
+}
+.brandPic_right .picRow02>ul>li{
+	width: 25%;
+    display: block;
+    float: left;
+    height: 239px;
+    border-top: none;
+    border-left: none;
+}
+.brandPic_right .picRow02 li.twoLi{width:50%;}
 .brandPic_right .picRow02 li .picBox{
 	height: 55%;
 }
@@ -1325,8 +1364,51 @@ a.adButton{
     font-size: 12px;
 }
 .brandPic_right .picRow02 li .textBox .textRow.price{
-	color: #f7a244;
+	color: #f60;
+    font-weight: 600;
+    font-size: 13px;
 }
 
+/*glide slider*/
+.picRow02 .glide__arrow.next,.picRow02 .glide__arrow.prev{
+	background-color: #fff;
+	width:25px;
+	height: 25px;
+	border-radius: 0;
+}
+.picRow02 .glide__arrow.next img{margin-top: -5px;}
+.picRow02 .glide__arrow.prev img{margin-top: -5px;margin-left: -5px;}
+.picRow02 .glide--horizontal .glide__arrow.next {
+    right: -18px;
+}
+.picRow02 .glide--horizontal .glide__arrow.prev {
+    left: -18px;
+}
+
+.picRow02 .glide__bullets > *.active {
+  background-color: #ffae00
+}
+
+
+
+.glide{overflow: hidden;}
+.glide li{font-size: 10px;}
+.glide li.glide__slide{height: 100%;}
+.box {
+	color: #fff;
+	font-size: 3vw;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box img{width:100%;height: 100%;}
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
 
 
