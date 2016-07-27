@@ -1840,20 +1840,31 @@ section.content1_body h1{
 	color:#ABA9A9;
 	font-size: 16px;
 	font-weight: 500;
+	height: 60px;
 }
 .content1_form .input_group span{
 	font-size: 16px;
-
+	display: inline-block;
+	height: 47px;
+	width: 76px;
+	line-height: 47px;
 }
 .content1_form .input_group input{
-	width:377px;
+	width:385px;
 	height: 47px;
 	border: 1px solid #dbdbdb;
+	border-radius: 3px;
 }
 .content1_form input[type="submit"]{
 	margin-left: 77px;
-	margin-top: 48px;
-	font-size: 16px;color:#fff;width:231px;height:44px;float: left;padding:0px;background:#ffc000;
+	margin-top: 47px;
+	font-size: 19px;
+	color:#643600;
+	width:231px;
+	height:44px;
+	float: left;
+	padding:0px;
+	background:#ffc000;
 }
 
 
