@@ -24,7 +24,7 @@ a {
 .wp_box {
   border: 1px solid #bbc9db;
   background: #fff;
-  margin: 0 50px;
+
 }
 .wp_box .hd {
   background: #e3f2fa;
@@ -45,14 +45,14 @@ a {
 }
 .plst_pt li {
   float: left;
-  margin-left: 16px;
+ 
   display: inline;
   text-align: center;
 }
 .plst_pt li img {
   display: block;
-  width: 180px;
-  height: 85px;
+  width: 356px;
+  height: 588px;
   margin-bottom: 5px;
   border: 1px solid #e3f2fa;
   padding: 1px;
@@ -77,16 +77,14 @@ a {
   left: auto;
   right: 1px;
 }
-.roll_cnt {
-  padding: 0 20px;
-}
+
 .roll_lt:hover, .roll_rt:hover {
   color: #000;
 }
 </style>
 </head>
 <body>
-<br>
+
 <div class="wp_box">
   <div class="bd">
     <div class="wp_roll jQ_roll"> <a href="javascript:;" class="roll_lt jQ_plstRoLt">&lt;</a> <a href="javascript:;" class="roll_rt jQ_plstRoRt">&gt;</a>
@@ -98,11 +96,7 @@ a {
             <li><img src="images/1337172532_-1719592020_23994_imageAddr.jpg">御龙新服四大豪礼</li>
             <li><img src="images/1337076515_-1719592020_22441_imageAddr.jpg">蓝钻大寻宝十三期</li>
             <li><img src="images/1337052580_-1719592020_7552_imageAddr.jpg">宝石总动员公测送礼包</li>
-            <li><img src="images/1336733600_-1719592020_21080_imageAddr.jpg">谁是至尊蓝钻</li>
-            <li><img src="images/1336719487_-1719592020_11807_imageAddr.jpg">乐斗派限免开启</li>
-            <li><img src="images/1336644738_-1719592020_20765_imageAddr.jpg">玩寻仙、看太极</li>
-            <li><img src="images/1336642972_-1719592020_14717_imageAddr.jpg">就要K歌内测放号</li>
-            <li><img src="images/1336642850_-1719592020_12626_imageAddr.jpg">王朝霸域竞拍紫将</li>
+            
           </ul>
         </div>
       </div>
@@ -131,17 +125,23 @@ $('.jQ_ptLst ul').css({'marginLeft':'0'});
 pLstRoLt.hide();
 pLstRoRt.show();
 var pLstWrpWth = ptListWrp.width(); //获取当前可视区域宽度
+
 valImgLth = Math.floor(pLstWrpWth / valLstLiWth); ///当前可视图片数计算*
+/*修改*/
+valImgLth = 4;
+
 //图片间距算法
 function fnpLstMg(){
 //间距 = 除去图片的宽度 /（图片数 + 1），并向上取整（避免小数误差）
 valpLstMg = Math.ceil((pLstWrpWth - valImgLth * valLstLiWth) / (valImgLth + 1));
+/*修改*/
+valpLstMg = 0;
 };
 //执行计算
 fnpLstMg();
 //间距临界值
 if(valpLstMg < pLstLesMg){
-valImgLth = valImgLth - 1; //当间距达到临界值，图片数-1
+//valImgLth = valImgLth - 1; //当间距达到临界值，图片数-1
 fnpLstMg(); //重新计算间距
 };
 //可视图片数 >= 总图片数时，总图片数即可视图片数
@@ -175,6 +175,7 @@ pLstRoWrp.not(':animated').animate({marginLeft: ptLstCssMg - (ptLstImgMg + valLs
 //回调函数判断滚动之后的箭头状态
 var ptLstCurMg = parseInt(pLstRoWrp.css('margin-left')); //获取当前已滚动宽度
 var ptLstRoWth = (pLstImgLth - valImgLth) * (ptLstImgMg + valLstLiWth);//计算非可视区域宽度
+console.log(valImgLth)
 //当已滚动宽度 = 非可视区宽度，即已滚动至最后一图
 if(ptLstCurMg + ptLstRoWth == 0){
 $this.hide(); //隐藏右箭头
@@ -203,7 +204,6 @@ fnPlstArr($(this));
 //..
 });
 </script> 
-<br>
-<p align="center"><strong>基于jquery可自适应宽度的横向图片滚动代码</strong><a href="http://www.jqcool.net">jQ酷</a>收集整理</p>
+
 </body>
 </html>
