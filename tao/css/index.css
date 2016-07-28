@@ -1867,5 +1867,69 @@ section.content1_body h1{
 	background:#ffc000;
 }
 
+.softWare{
+	background-color: #fff;
+}
+.softWare .head01{
+	background:url(../img/head01Bg.png);
+	background-size: 100% 100%;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	font-size: 29px;
+	margin:66px 0;
+}
+.introduce_content{
+	background-color: #fff;
+}
+.introduce_content h1{
+	margin-bottom: 65px;
+}
+.introduce_content h1 span{
+	font-size: 25px;
+	position:relative;
+	top:-3px;
+	left:5px;
+}
+.schedule{
+	height: 283px;
+}
+.scheduleTd{
+	width: 20%;
+	float: left;
+}
+.iconWrapper {
+    margin: 0 auto;
+    width: 86px;
+    height: 86px;
+    background: url(../img/iconbgOrange.png);
+  
+    vertical-align: middle;
+    text-align: center;
+    padding-top: 20px;
+}
+.s_title{
+	text-align: center;
+	font-size: 23px;
+	color: #f48000;
+	width: 141px;
+	height: 44px;
+	line-height: 44px;
+	margin:0 auto;
+	border-bottom: 1px dashed #ababab;
+	
+}
+.s_text{
+	text-align: center;
+	padding-top: 12px;
+	width: 141px;
+	height: 44px;
+	margin:0 auto;
+}
 
-
+.introduce .advantage{
+	float: left;
+	width: 380px;
+	height: 160px;
+	background-color: #fff;
+}
