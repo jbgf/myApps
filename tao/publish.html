@@ -18,53 +18,7 @@
 <script type="text/javascript" src="js/jquery.JPlaceholder.js"></script>
 <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
 <style type="text/css">
-    /* css 重置 */
-    *{margin:0; padding:0; list-style:none; box-sizing: border-box;}
-    body{ background:#fff; font:normal 12px/22px 宋体;  }
-    img{ border:0;  }
-    a{ text-decoration:none; color:#333;  }
-
-    /* 本例子css */
-    .picScroll-left{ 
-       overflow:hidden; 
-       position:relative; 
-       margin-top: 30px;  
-    }
-    .picScroll-left .hd{
-      position: absolute;
-      
-    }
-    .picScroll-left .prev{
-      left: 0;
-    }
-    .picScroll-left .next{
-      right: 0;
-    }
-    .picScroll-left .prev,.picScroll-left .next{ 
-      top: 43px;
-      position: absolute;
-      width: 27px;
-      height: 48px;      
-      
-      overflow: hidden;
-      cursor: pointer;
-    }
-    .picScroll-left .hd .next{ background-position:0 -50px;  }
-    .picScroll-left .hd .prevStop{ background-position:-60px 0; }
-    .picScroll-left .hd .nextStop{ background-position:-60px -50px; }
-    .picScroll-left .hd ul{ float:right; overflow:hidden; zoom:1; margin-top:10px; zoom:1; }
-    .picScroll-left .hd ul li{ float:left;  width:9px; height:9px; overflow:hidden; margin-right:5px; text-indent:-999px; cursor:pointer; background:url("images/icoCircle.gif") 0 -9px no-repeat; }
-    .picScroll-left .hd ul li.on{ background-position:0 0; }
     
-    .picScroll-left .bd ul{ overflow:hidden; zoom:1; }
-    .picScroll-left .bd ul li{ margin:0 8px; float:left; _display:inline; overflow:hidden; text-align:center;  }
-    .picScroll-left .bd ul li .pic{ text-align:center; }
-    .picScroll-left .bd ul li .pic img{ 
-      width:272px; height:140px; 
-      display:block;  padding:2px; 
-    }
-    .picScroll-left .bd ul li .pic a:hover img{ border-color:#999;  }
-    .picScroll-left .bd ul li .title{ line-height:24px;   }
 
     </style>
 </head>
@@ -557,7 +511,7 @@
     </div>
     <div class="case clear">
         <div class="caseHead">需求案例</div>
-        <div class="picScroll-left">
+        <div class="picScroll-left" style=" margin-top:30px;">
       
         <a class="prev"><img src="img/iconLeft.png"></a>
         <a class="next"><img src="img/iconRight.png" style="margin-left: 10px"></a>

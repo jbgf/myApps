@@ -2199,3 +2199,130 @@ ul.pagination li{margin-left: 7px;}
 .case .slide{
 	height: 180px;
 }
+/*superSlide*/
+/* css 重置 */
+    *{margin:0; padding:0; list-style:none; box-sizing: border-box;}
+    body{ background:#fff; font:normal 12px/22px 宋体;  }
+    img{ border:0;  }
+    a{ text-decoration:none; color:#333;  }
+
+    /* 本例子css */
+    .picScroll-left{ 
+       overflow:hidden; 
+       position:relative; 
+      
+    }
+    .picScroll-left .hd{
+      position: absolute;
+      
+    }
+    .picScroll-left .prev{
+      left: 0;
+    }
+    .picScroll-left .next{
+      right: 0;
+    }
+    .picScroll-left .prev,.picScroll-left .next{ 
+      top: 43px;
+      position: absolute;
+      width: 27px;
+      height: 48px;      
+      
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .picScroll-left .hd .next{ background-position:0 -50px;  }
+    .picScroll-left .hd .prevStop{ background-position:-60px 0; }
+    .picScroll-left .hd .nextStop{ background-position:-60px -50px; }
+    .picScroll-left .hd ul{ float:right; overflow:hidden; zoom:1; margin-top:10px; zoom:1; }
+    .picScroll-left .hd ul li{ float:left;  width:9px; height:9px; overflow:hidden; margin-right:5px; text-indent:-999px; cursor:pointer; background:url("images/icoCircle.gif") 0 -9px no-repeat; }
+    .picScroll-left .hd ul li.on{ background-position:0 0; }
+    
+    .picScroll-left .bd ul{ overflow:hidden; zoom:1; }
+    .picScroll-left .bd ul li{ margin:0 8px; float:left; _display:inline; overflow:hidden; text-align:center;  }
+    .picScroll-left .bd ul li .pic{ text-align:center; }
+    .picScroll-left .bd ul li .pic img{ 
+      width:272px; height:140px; 
+      display:block;  padding:2px; 
+    }
+    .picScroll-left .bd ul li .pic a:hover img{ border-color:#999;  }
+    .picScroll-left .bd ul li .title{ line-height:24px;   }
+
+
+
+/***************************************************************************
+**********************************intern需求发布**********************************
+***************************************************************************/
+.blue{
+	color:#38b9cf;
+}
+.proRow{
+	margin-left: -15px;
+	margin-right: -15px;
+}
+.proRow .problem{
+	padding-left: 15px;
+	padding-right: 15px;
+	float: left;
+	
+	width:33.33%;
+	height: 290px;
+}
+.proRow .imgWrapper{
+	position: relative;
+}
+.proRow .problem img{
+	width:100%;
+}
+.proRow .problem .proText{
+	width:100%;
+	position: absolute;
+	bottom: 3px;
+	background-color: #38b9cf;
+	height: 36px;
+	line-height: 36px;
+	color: #fff;
+	font-weight: 600;
+	font-size: 19px;
+	text-align: center;
+}
+.proDetails{
+	padding:20px 15px;
+	color: #999;
+	font-size: 14px;
+}
+.intern_title01{
+	font-size:42px;
+	text-align: center;
+	display: block;
+	height: 52px;
+	line-height: 52px;
+}
+.intern_title02{
+	text-align: center;
+	font-size: 22px;
+	color: #999;
+	display: block;
+	height: 44px;
+	line-height: 35px;
+}
+.green{
+	color:#00aa3c;
+}
+.bd{
+	width:967px;
+	height: 460px;
+	margin:0 auto;
+}
+.picScroll-left .bd ul li {
+    margin: 0 23px;
+    }
+.picScroll-left .bd ul li .pic img{
+	width:276px;
+	height: 477px;
+}
+.picScroll-left .prev, .picScroll-left .next{
+	width:58px;
+	height: 102px;
+	margin-top: 140px;
+}
