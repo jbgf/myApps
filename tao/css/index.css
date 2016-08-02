@@ -893,15 +893,7 @@ span.keyWord,span.resultNum{ color:#B9000d;}
 	height: 52px;
 }
 
-/***********************************************************************************
-*********************************demandRelease财税工具******************************
-***********************************************************************************/
 
-.resume{
-	border:1px solid #e9e9e9;
-	padding: 41px;
-	margin-top:22px;
-}
 
 /***********************************************************************************
 *********************************news新闻资讯******************************
@@ -2541,11 +2533,17 @@ tr.tableComments td{
 /***************************************************************************
 **********************************demandRelease发布需求-个人**********************************
 ***************************************************************************/
+.resume{
+	border:1px solid #e9e9e9;
+	padding: 41px 65px;
+	margin-top:22px;
+}
 .resume .news_row>div{
 	float: left;
 }
 .resume .news_row .news_right{
-	width:1032px;
+	width:986px;
+	margin-top: -6px;
 }
 .resume .news_row .news_right>div{
 	float: left;
@@ -2562,3 +2560,39 @@ tr.tableComments td{
 	font-size: 15px;
 	font-weight: 600;
 }
+.resume .btnBox{
+	position: relative;
+}
+.resume .btnBox p{
+	position: absolute;
+    bottom: -22px;
+    left: 21px;
+    color:#999;
+
+}
+.resume .btnBox>span{
+	width:178px;
+	height: 45px;
+	line-height: 45px;
+	border-radius: 3px;
+	margin-top: -18px;
+}
+.resume .basicInf{
+	margin-top: 35px;
+}
+.resume .basicInf p{
+	margin-bottom: 20px
+}
+.inf_title,.inf_text{
+	float: left;
+	position: relative;
+	font-size: 15px;
+	color:#686868;
+	line-height: 23px;
+}
+.inf_title{
+	width:84px;
+	height: 34px;
+	font-weight: 700;
+}
+.inf_text{width:787px;}
