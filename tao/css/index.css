@@ -2350,10 +2350,11 @@ section.content1_body h1{
 	width:276px;
 	height: 477px;
 }
-.intern .picScroll-left .prev, .picScroll-left .next{
+.intern .picScroll-left .prev,.intern .picScroll-left .next{
 	width:58px;
 	height: 102px;
 	margin-top: 140px;
+
 }
 .container>div.entered{
 	position: relative;
@@ -2380,6 +2381,9 @@ section.content1_body h1{
 .entered .btnBox>span{
 	border:none;
 }
+.timeTables{
+	padding-top: 42px;
+}
 .timeTables .btnBox{
 	float: none;
 	width: 346px;
@@ -2399,6 +2403,162 @@ section.content1_body h1{
 .timeTables .btnBox>span.on{
 	background-color: #00aa3c;
 }
-.table_title{
+.timeTables .table_t {
+	width:100%;
+	margin-top: 15px;
+	border:2px solid #00aa3c;
+}
+.timeTables .table_t thead{
+	background-color: #00aa3c;
+	color:#fff;
 	
+}
+.timeTables .table_t thead th{
+	font-size: 23px;
+	font-weight: 700;
+	padding:23px 0;
+}
+
+.table_body .table_t tbody tr{
+	border-bottom: 1px solid #e8e8e8;
+}
+.table_body .table_t tbody tr td:nth-child(2){
+	text-align: left;
+	padding-left: 20px;
+}
+.table_body .table_t tbody tr td:nth-child(3){
+	width:180px;
+}
+.table_body .table_t tbody td{
+	text-align: center;
+	font-size: 16px;
+	height: 53px;
+	vertical-align: middle;
+	border-right:1px solid #e8e8e8;
+	min-width: 100px;
+	font-weight: 600;
+	color:#000;
+}
+.table_body .table_t tbody td:last-child{
+	border-right: none;
+}
+.table_body{
+	padding:0 87px;
+}
+.table_title{
+	color:#00aa3c;
+	font-size: 23px;
+	font-weight: 600;
+}
+tr.tableComments td{
+	padding: 23px 0;
+}
+.tableComments02{
+	height: 83px;
+	width:100%;
+	line-height: 83px;
+	border: 2px solid #00aa3c;
+	margin-top: 20px;
+}
+.tableComments02>div{
+	float: left;
+
+}
+.tableComments02_brand{
+	background-color: #00aa3c; 
+    color: #fff;
+    width: 237px;
+    height: 100%;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+}
+.tableComments02_text{
+	padding:17px 74px;
+	width: 774px;
+	line-height: 24px;
+	font-size: 16px;
+	font-weight: 600;
+}
+.container>div.caseSlider{
+	height:726px;margin-top:87px;
+	background:url(../img/banner012.png);
+	background-size: 100% 100%;
+}
+.container>div.caseSlider .caseBox{
+	width:1075px;
+	height: 495px;
+	margin:165px auto 0;
+	
+}
+.container>div.caseSlider .caseBox>div{
+	background-color: #fff;
+}
+.container>div.caseSlider .caseBox>div.caseNav{
+	width: 100%;
+	height: 67px;
+}
+.caseBox>div.caseNav>div{
+	float: left;
+	position: relative;
+	width: 25%;
+	height: 100%;
+	line-height: 67px;
+	text-align: center;
+	border-right: 1px solid #bebebe;
+	font-size: 22px;
+	font-weight: 600;
+}
+.caseBox>div.caseNav>div.on{
+	background-color: #f48000;
+	color: #fff;
+	border-right: none;
+}
+.container>div.caseSlider .caseBox>div.casePic{
+	width: 100%;
+	height: 406px;
+	margin-top: 23px;
+	padding:36px 20px;
+}
+
+.casePic .picScroll-left .prev,.casePic .picScroll-left .next {
+	width: 46px;
+	height: 80px;
+	top:114px;
+}
+
+.casePic .picScroll-left .bd ul li .pic img{
+	width: 419px;
+	height: 302px;
+}
+.casePic .picScroll-left .bd ul li .title{
+	font-size: 20px;
+	padding-top: 10px;
+}
+.casePic .picScroll-left .bd .tempWrap{
+	margin:0 auto;
+}
+/***************************************************************************
+**********************************demandRelease发布需求-个人**********************************
+***************************************************************************/
+.resume .news_row>div{
+	float: left;
+}
+.resume .news_row .news_right{
+	width:1032px;
+}
+.resume .news_row .news_right>div{
+	float: left;
+}
+.resume .news_row .policy_body{
+	width:700px;
+}
+.resume .r_title span{
+	color:#838383;
+	font-size: 14px;
+}
+.resume .r_title .pay{
+	color:#fcb45e;
+	font-size: 15px;
+	font-weight: 600;
 }
