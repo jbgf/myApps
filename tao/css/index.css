@@ -2596,3 +2596,11 @@ tr.tableComments td{
 	font-weight: 700;
 }
 .inf_text{width:787px;}
+.line01{
+	background-color: #f7f7f7;
+	height: 51px;
+	line-height: 51px;
+	padding:0 23px;
+	font-size: 19px;
+	font-weight: 600;
+}
