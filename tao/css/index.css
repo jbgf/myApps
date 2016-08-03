@@ -1778,10 +1778,10 @@ a.adButton{
 
 
 /***************************************************************************
-**********************************bookKeeping在线记账**********************************
+******************************bookKeeping在线记账**********************************
 ***************************************************************************/
 body{background-color:#ededed;}
-.banner05{
+.bookKeep.banner05{
 	
 	position: relative;
 	z-index: -1;
@@ -1797,7 +1797,6 @@ body{background-color:#ededed;}
 .banner05 img.banner05{
 	width: 100%;
 	height: 530px;
-
 }
 .adWrapper{
 	width: 100%;text-align: center;
@@ -1994,7 +1993,7 @@ section.content1_body h1{
 	line-height: 103px;
 	padding-top: 35px;
 }
-.btnBox>span{
+.btnBox>span,.btnBox>a{
 	float: left;
 	margin-right: 20px;
 	font-size: 25px;
@@ -2623,4 +2622,114 @@ tr.tableComments td{
 }
 .taxTool.demandRelease{
 	height: auto;
+}
+
+/***************************************************************************
+******************************发布需求企业**********************************
+***************************************************************************/
+.l_wrapper{
+	width: 915px;
+	float: left;
+}
+.r_wrapper{
+	width:285px;
+	float: left;
+}
+.cor_l.resume{
+	width: 100%;
+	padding-top: 40px;
+	padding-bottom: 60px;
+	margin-bottom: 20px;
+
+}
+.cor_l.resume .news_row{
+	border-bottom: 1px solid #eee;
+	height: 140px;
+
+}
+.cor_l.resume .news_row .news_left{
+	width:257px;
+	line-height: 20px;
+}
+.cor_l.resume .news_row .news_left>div{
+	margin-bottom: 15px;
+}
+.cor_l.resume .news_row .news_left .cor_job{
+	font-size: 25px;
+	font-weight: 600;	
+}
+.cor_l.resume .news_row .news_left .cor_salary{
+	font-size: 18px;
+	font-weight: 600;
+}
+.cor_l.resume .news_row .news_left .cor_inf{
+	color:#a0a0a0;
+	font-size: 15px;
+	letter-spacing: -1px;
+	padding:20px 0;
+}
+.cor_l.resume .news_row .news_right {
+    width: 520px;
+    margin-top: -6px;
+}
+.resume.cor_l .experience{
+	padding-top: 37px;
+}
+.resume.cor_l .experience .Behaviorinclass p{
+	margin-top: 32px;
+}
+.resume.cor_l .inf_title{
+	width: 107px;
+	font-weight: 500;
+}
+.resume.cor_l .inf_text{
+	width:675px;
+	line-height: 25px;
+}
+.others{
+	border: 1px solid #e9e9e9;
+	width:915px;
+}
+.others>div{
+	padding-left:40px;
+	padding-right: 40px;
+}
+.others .others_head{
+	font-size: 20px;
+    width: 100%;
+    height: 62px;
+    line-height: 62px;
+    border-bottom: 1px solid #e9e9e9;
+}
+.others .job_list{
+	padding-top:23px;
+	padding-bottom: 23px;
+	border-bottom: 1px solid #e9e9e9;
+}
+.others .job_list:last-child{
+	border-bottom: none;
+}
+.others .job_list .cor_location{
+	font-size: 17px;
+}
+.others .job_list .salary{
+	color:#858484;
+	font-size: 15px;
+}
+.others .job_list .button{
+	float: right;
+	width:98px;
+	height: 31px;
+	line-height: 31px;
+	border:1px solid #dadada;
+	text-align: center;
+	margin-top: -20px;
+}
+
+.r_wrapper .incBrand{
+	height: 456px;
+	border:1px solid #e9e9e9;
+	margin-top: 22px;
+	margin-left: 20px;
+	padding:31px 23px;
 }
