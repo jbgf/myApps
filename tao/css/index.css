@@ -359,11 +359,12 @@
 
 /*contact*/
 .container .post_demands{
-	 height: 163px;
-	 width: 100%;
-	 cursor: pointer;
-	 position: relative;
-	 margin-top: -163px;
+	/*height: 163px; */
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+    /* margin-top: -163px; */
+    bottom: 20px;
 
 }
 .container .post_demands img{margin-top: -108px;}
@@ -2537,6 +2538,7 @@ tr.tableComments td{
 	border:1px solid #e9e9e9;
 	padding: 41px 65px;
 	margin-top:22px;
+	margin-bottom: 50px;
 }
 .resume .news_row>div{
 	float: left;
@@ -2591,16 +2593,34 @@ tr.tableComments td{
 	line-height: 23px;
 }
 .inf_title{
-	width:84px;
+	
 	height: 34px;
-	font-weight: 700;
+	font-weight: 600;
 }
 .inf_text{width:787px;}
 .line01{
 	background-color: #f7f7f7;
 	height: 51px;
 	line-height: 51px;
-	padding:0 23px;
+	
 	font-size: 19px;
 	font-weight: 600;
+	margin-bottom: 10px;
+	margin-top: 20px;
+}
+.company{
+	font-size: 19px;
+	font-weight: 700;
+	height: 72px;
+	line-height: 72px;
+}
+.orange{
+	color:#f48000;
+}
+.wrapper01{
+	padding-bottom: 25px;
+	border-bottom:1px solid #e4e4e4;
+}
+.taxTool.demandRelease{
+	height: auto;
 }
