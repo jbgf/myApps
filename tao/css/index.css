@@ -2564,10 +2564,11 @@ tr.tableComments td{
 }
 .resume .btnBox{
 	position: relative;
+	line-height: 0;
 }
 .resume .btnBox p{
 	position: absolute;
-    bottom: -22px;
+    bottom: 28px;
     left: 21px;
     color:#999;
 
