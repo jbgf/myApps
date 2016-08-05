@@ -132,36 +132,53 @@
                                 
                             </div>
                              <div class="btnBox " style="float:right">
-                                <span class="on" onclick="dialog()">积分查看联系方式</span>
+                                <span id="contactNum" class="on" onclick="dialog()">积分查看联系方式</span>
                                 <p>(扣除10积分即可查看TA)</p>
                              </div>
                              <!--弹窗-->
                              <div class="modalBox fade">
-                                  <div class="modalBox-dialog" role="document">
-                                    <div class="modalBox-content">
-                                      <div class="modalBox-header">
-                                        <button type="button" class="close" data-dismiss="modalBox" aria-label="Close">
-                                          <span aria-hidden="true">&times;</span>
+                              <div class="modalBox-dialog" role="document">
+                                <div class="modalBox-content">
+                                  <div class="modalBox-header">
+                                    <button type="button" class="close" data-dismiss="modalBox" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                      <!-- 标题栏 -->        <h4 class="modalBox-title">modalBox title</h4>
+                                  </div>
+                                  <div class="modalBox-body">
+                      <!-- 提示信息-->              <p>One fine body&hellip;</p>
+                                  </div>
+                                  <div class="modalBox-footer">
+                                        <button onclick="sure()" type="button" class="btn btn-primary" data-dismiss="modalBox">
+                                           确定
                                         </button>
-                          <!-- 标题栏 -->        <h4 class="modalBox-title">modalBox title</h4>
-                                      </div>
-                                      <div class="modalBox-body">
-                          <!-- 提示信息-->              <p>One fine body&hellip;</p>
-                                      </div>
-                                      <div c></div>
-                                    </div>
+                                        <button type="button" class="btn btn-default" 
+                                           data-dismiss="modalBox">取消
+                                        </button>
+                                        
+                                   </div>
                                 </div>
-                            </div> 
+
+                              </div>
+                              
+                        </div>
                              <!--弹窗end-->
                              <script type="text/javascript">
+                                  var sure = function(){
+                                    var num = document.getElementById('contactNum');
+                                      num.innerHTML= "12345678";
+                                      $(num).addClass("shown");
+                                  }
                                 
-                                
-
+                                  var checkShow = function(){
+                                    if($("#contactNum").hasClass("shown"))
+                                      return true;
+                                  }
                                   var dialog = function(){
-                                   
+                                    var check = checkShow();
+                                    if(check)return;
                                     $(".modalBox").modalBox();
                                   }
-                                  
                                
                              </script> 
                       </div>

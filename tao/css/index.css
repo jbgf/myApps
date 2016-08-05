@@ -72,7 +72,7 @@
 .search .input_group,.search a.need{
 	margin-top: 16px;margin-bottom: 8px;float: left;
 	height: 45px;
-	line-height: 39px;
+	line-height: 45px;
 }
 .search input[type="submit"]{padding-left: 0;color: #fff;font-size: 16px}
 .search a.need{
@@ -129,9 +129,8 @@
 	margin-bottom: 14px
 }
 .index_reg h1 .more{
-	margin: 16px 15px 0 0;
+	margin: 11px 15px 0 0;
 	float:right; 
-	
 	background-size: 100% 100%;
 	font-size:12px; color:#333;
 	width:58px;
@@ -2627,7 +2626,7 @@ tr.tableComments td{
 }
 
 /***************************************************************************
-******************************发布需求企业**********************************
+******************************cor_recruiters.html发布需求企业**********************************
 ***************************************************************************/
 .l_wrapper{
 	width: 915px;
@@ -2981,10 +2980,127 @@ tr.tableComments td{
 	margin-right: 5px;
 	font-weight: 700;
 }
-.orderBy>span{
-	display: inline-block;
-	width: auto;
+.orderBy>div{
+	
+	border:1px solid #dbdbdb;
+	height: 38px;
+	line-height: 38px;
+	text-align: center;
 }
 .orderBy .button{
+	margin-left: 144px;
+	text-align: right;
+	padding-right: 10px;
+}
+.orderBy .button a{
+	border:1px solid #dbdbdb;
+	padding:5px 12px;
+	margin-left: 10px;
+	color:#d1cdcd;
+}
+.orderBy .button a.on{
+	color:#f48000;
+}
+.classWrapper{
+	padding-bottom: 181px;
+}
+.classWrapper .brandPic_right .picRow02>ul>li{
+	height: 356px;
+	padding:9px;
+	border:none;
+}
+
+.classWrapper .brandPic_right .picRow02{
+	margin-left: -9px;
+	margin-right: -9px;
+	width: auto;
+}
+.classWrapper .brandPic_right .picRow02 li .picBox {
+    height: 67%;
+}
+.classWrapper .brandPic_right .picRow02 li .textBox{
+	border:1px solid #e8e8e8;
+	border-top: none;
+	padding:13px 20px;
+}
+.classWrapper .brandPic_right .picRow02 li .textBox .textRow.cName{
+	color:#8B8B8B;
+}
+.classWrapper .brandPic_right .picRow02 li .textBox .textRow.price{
+	color:#f48000;
+
+}
+/***********************************************************************************
+*********************************classDetails课时详细页*****************************
+***********************************************************************************/
+.classD{
+	padding:78px 35px;
+}
+.l_inc{
+	margin-right: 306px;
+}
+.r_inc{
+	width:283px;
+	height: 326px;
+	float: right;
+	border:1px solid #e4e4e4;
+	border-radius: 3px;
+	padding:20px;
+	font-size: 16px;
+}
+.r_inc>div.text{
+	margin-top: 13px;
+	font-weight: 600;
+}
+.r_inc>div.shareBar{
+	background-color: #f3f3f3;
+	height: 42px;
+	
+	padding-left: 10px;
+}
+.r_inc .bdsharebuttonbox{
+	padding-top: 10px;
+}
+.bdshare-button-style0-16 a:first-child{
+	background-image: none;
+	margin-left: -15px;
+}
+
+.classD .l_inc .cd_list .list_h{
+	height: 42px;
+	line-height: 42px;
+	border-bottom: 1px solid #CAC7C7
+}
+.classD .l_inc .cd_list .cd_b{
+	padding:19px 16px;
+
+}
+.classD .l_inc .cd_list .cd_b ul{
+	display: block;
+	width: 100%;
+}
+.classD .l_inc .cd_list .cd_b li{
+	display: block;
+	width:100%;
+	height: 31px;
+}
+.classD .l_inc .cd_list .cd_b label{
+	display: inline-block;
+	background:url(../img/icon-checkbox01.png) no-repeat;
+	
+}
+.classD .l_inc .cd_list .cd_b label .cd_text{
+	padding-left: 24px;
+	display: inline-block;
+	position: relative;
+    top: -3px;
+}
+.classD .l_inc .cd_list .cd_b input{
+	display: none;
+}
+.classD .l_inc .cd_list .cd_b input:checked+label{
+	background:url(../img/icon-checkbox02.png) no-repeat;
+}
+.classD .l_inc .cd_list .cd_b .iconText{
 	float: right;
 }

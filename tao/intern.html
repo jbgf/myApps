@@ -133,64 +133,122 @@
     </div>
     
     
-    <div class="introduce intern">
-        <div class="full-width introduce_content">
-            <div class="intern_title01">专为您<span class="green">量身打造</span>的学习计划</div>
-            <div class="intern_title02">在这里，总有适合自己的任务计划</div>
-            
-            <div class="picScroll-left">
-              <a class="prev"><img src="img/inArrowL.png"></a>
-              <a class="next"><img src="img/inArrowR.png" ></a>
-            <div class="bd">
-              <ul class="picList">
-                <li>
-                  <div class="pic"><a href="http://www.SuperSlide2.com" target="_blank"><img src="img/internSlide01.png" /></a></div>
-                  
-                </li>
-                <li>
-                  <div class="pic"><a href="http://www.SuperSlide2.com" target="_blank"><img src="img/internSlide02.png" /></a></div>
-                  
-                </li>
-                <li>
-                  <div class="pic"><a href="http://www.SuperSlide2.com" target="_blank"><img src="img/internSlide03.png" /></a></div>
-                  
-                </li>
-                
-              </ul>
-            </div>
-          </div>
-          <script type="text/javascript">
-          jQuery(".intern .picScroll-left").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"leftLoop",autoPlay:false,vis:3,trigger:"click"});
-          </script>
-        </div>
-        
-    </div>
-   
-    <!--slogan-->
-    <div class="box_row entered">
-
-         <div class="full_container" >
-            <img src="img/banner011.png" style="width:100%;height:100%;"/>
-            <div class="input_box"  >
-                <div class="input_group input_account">
-                    <input style="padding-left:12px;" type="" name="" placeholder="请输入您的姓名">
-
-                    <input style="" type="" name="" placeholder="请输入您的手机号码">
-                </div>
-                <div class="btnBox" >
-                  <span class="on">获取指导</span>
-                  
-                </div>
-            </div>
-         </div>
-    </div>
-
    
     <div class="timeTables clear">
         <div class="btnBox">
           <span class="on">会计实训</span>
           <span>视频教程</span>
         </div>
+        <script type="text/javascript">
+            $(".btnBox span").click(function(){
+                if($(this).hasClass("on"))return;
+                $(".btnBox span").toggleClass("on");
+                $(".table_body").toggle();
+            })
+        </script>
+        <div class="table_body" style="display:none;">
+           <div class="table_title">视频教程</div>
+           <table class="table_t">
+              <thead>
+                <tr>
+                  <th>课时</th>
+                  <th>课程内容</th>
+                  <th>上课时间</th>
+                  <th>沟通</th>
+                  <th>备注</th>
+                </tr>
+              </thead>
+              <tbody>
+                  <tr class="tableText">
+                  <td>1课时</td>
+                  <td>会计基础知识</td>
+                  <td>9：00 — 11：00</td>
+                  <td>10分钟</td>
+                  <td>每周六上午</td>
+                </tr>
+                 <tr class="tableText">
+                  <td>3课时</td>
+                  <td>小规模企业账务常识及实务处理</td>
+                  <td>9：00 — 11：00</td>
+                  <td>10分钟</td>
+                  <td>每周六上午</td>
+                </tr>
+                 <tr class="tableText">
+                  <td>1课时</td>
+                  <td>小规模其他类型企业账务常识及实务处理</td>
+                  <td>9：00 — 11：00</td>
+                  <td>10分钟</td>
+                  <td>每周六上午</td>
+                </tr>
+                 <tr class="tableText">
+                  <td>2课时</td>
+                  <td>实务处理（报表、账目处理、网上报税处理、财务软件操作）</td>
+                  <td>9：00 — 11：00</td>
+                  <td>10分钟</td>
+                  <td>每周六上午</td>
+                </tr>
+                 <tr class="tableText">
+                  <td>1课时</td>
+                  <td>看帐提问并解答（可选择行业帐套）</td>
+                  <td>9：00 — 11：00</td>
+                  <td>10分钟</td>
+                  <td>每周六上午</td>
+                </tr>
+                 <tr class="tableText">
+                  <td>2课时</td>
+                  <td>一般纳税人企业账务常识及实务处理</td>
+                  <td>9：00 — 11：00</td>
+                  <td>10分钟</td>
+                  <td>每周六上午</td>
+                </tr>
+                 <tr class="tableText">
+                  <td>1课时</td>
+                  <td>进出口企业账务常识及实务处理及其他类型账务常识</td>
+                  <td>9：00 — 11：00</td>
+                  <td>10分钟</td>
+                  <td>每周六上午</td>
+                </tr>
+                 <tr class="tableText">
+                  <td>2课时</td>
+                  <td>实务处理（报表、账目处理、网上报税、出口退税处理）</td>
+                  <td>9：00 — 11：00</td>
+                  <td>10分钟</td>
+                  <td>每周六上午</td>
+                </tr>
+                 
+                 <tr class="tableText">
+                  <td>1课时</td>
+                  <td>看帐提问并解答（可选择行业帐套）</td>
+                  <td>9：00 — 11：00</td>
+                  <td>10分钟</td>
+                  <td>每周六上午</td>
+                </tr>
+                <tr class="tableText">
+                  <td>1课时</td>
+                  <td>巩固加强前期所学，补充及其他类型账务知识与实务</td>
+                  <td>9：00 — 11：00</td>
+                  <td>10分钟</td>
+                  <td>每周六上午</td>
+                </tr>
+                 <tr class="tableComments">
+                  <td>备注</td>
+                  <td colspan="4">1.  每周六上午9:00至11:00.中间沟通20分钟，共7周，实践费用：800元/人； <br/>
+2.  参加学员应按上述计划表的时间准时，如因特殊情况不能参加者应提前1天请假，以便编排到下期实践团队（只多安排一期）；</td>
+                </tr>
+              </tbody>
+                
+              
+           </table>
+
+           <div class="tableComments02 clear">
+              <div class="tableComments02_brand">工作日实践生</div>
+              <div class="tableComments02_text">
+                   实践期两个月，2天/周（周一至周五），2小时/天，具体时间由学员与指导老师约定；
+坐在指导老师身边，协助指导老师进行各种类型企业账务处理；实践费用1000元/人；
+              </div>
+           </div> 
+        </div>
+
         <div class="table_body">
            <div class="table_title">周末实践生</div>
            <table class="table_t">
