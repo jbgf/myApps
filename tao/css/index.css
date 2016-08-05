@@ -3065,11 +3065,24 @@ tr.tableComments td{
 	background-image: none;
 	margin-left: -15px;
 }
+.classD .l_inc .cdTitle{
+	font-size: 20px;
+	font-weight: 600;
+	padding-bottom: 12px;
+}
+.classD .l_inc .cdTitle img{
+	vertical-align: middle;
+}
+.classD .l_inc .cd_list{
+	border:1px solid #ddd;
+	margin-bottom: 33px;
+}
 
 .classD .l_inc .cd_list .list_h{
 	height: 42px;
 	line-height: 42px;
-	border-bottom: 1px solid #CAC7C7
+	border-bottom: 1px solid #CAC7C7;
+	padding:0px 16px;
 }
 .classD .l_inc .cd_list .cd_b{
 	padding:19px 16px;
@@ -3094,6 +3107,8 @@ tr.tableComments td{
 	display: inline-block;
 	position: relative;
     top: -3px;
+    font-size: 13px;
+    color: #686868;
 }
 .classD .l_inc .cd_list .cd_b input{
 	display: none;
@@ -3103,4 +3118,10 @@ tr.tableComments td{
 }
 .classD .l_inc .cd_list .cd_b .iconText{
 	float: right;
+}
+.classD .l_inc .cd_list .cd_b .iconText .time{
+	position: relative;
+	top: -3px;
+	font-size: 13px;
+	color:#686868;
 }
