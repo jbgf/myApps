@@ -3125,3 +3125,64 @@ tr.tableComments td{
 	font-size: 13px;
 	color:#686868;
 }
+
+.list_h2{
+	background-color: #f5f5f5;
+	border:1px solid #eaeaea;
+	height: 51px;
+	line-height: 51px;
+	font-weight: 700;
+	font-size: 20px;
+	border-radius: 5px 5px 0 0;
+}
+.list_h2 .btn{
+	width:122px;
+	height: 100%;
+	display: inline-block;
+	text-align: center;
+}
+.list_h2 .btn.on{
+	color:#00b2be;
+	position: relative;
+	border-bottom: 2px solid #00b2be;
+}
+.list_h2 .btn.on:after {
+    position: absolute;
+     top: 35px; 
+     left: 55px;
+    content: " ";
+  
+    border: 6px solid transparent;
+    border-bottom-color: #00b2be;
+}
+.cd_b2{
+	padding:16px;
+	border:1px solid #eaeaea;
+	font-weight: 500;
+	border-radius: 0 0 5px 5px ;
+}
+.cd_b2 li{
+	height: 54px;
+	line-height: 48px;
+	font-size: 15px;
+}
+.cd_b2 li .btnbox03{
+	float: right;
+	color: #fff;
+
+}
+.cd_b2 li .btnbox03 .button01,.cd_b2 li .btnbox03 .button02{
+	background-color: #ec5369;
+	padding:0 13px;
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	display: inline-block;
+	border-radius: 8px;
+	font-size: 16px;
+}
+.cd_b2 li .btnbox03 .button02{background-color: #ffae00}
+.cd_b2 li .btnbox03 .button01 img{
+	position:relative;
+	top:5px;
+}
