@@ -839,7 +839,7 @@ span.keyWord,span.resultNum{ color:#B9000d;}
     background-size: 100% 100%;
     font-size: 12px;
     color: #333;
-    width: 345px;
+    width: 360px;
     text-align: right;
     height: 20px;
     display: block;
@@ -2348,6 +2348,38 @@ section.content1_body h1{
 	margin-top: 140px;
 
 }
+
+
+    /* 本例子css */
+    .slideGroup{ width:510px; border:1px solid #ddd; text-align:left;  }
+    .slideGroup .parHd{ height:30px; line-height:30px; background:#f4f4f4; border-bottom:1px solid #ddd;  position:relative;  }
+    .slideGroup .parHd ul{
+     float:left; position:absolute;  
+     width: 100%;
+   }
+    
+    .slideGroup .slideBox{ overflow:hidden; zoom:1;  position:relative;   }
+
+    .slideGroup .sPrev,.slideGroup .sNext{ position:absolute; left:5px; top:10px; display:block; width:30px; height:94px;  }
+    .slideGroup .sNext{ left:auto; right:5px; background:url(images/icoRight.gif) center center no-repeat #f4f4f4;  }
+    .slideGroup .sPrev:hover,.slideGroup .sNext:hover{ border-color:#f60;  }
+
+    .slideGroup .parBd ul{ overflow:hidden; zoom:1;   }
+    .slideGroup .parBd ul li{ margin:0 8px; float:left; _display:inline; overflow:hidden; text-align:center;  }
+    .slideGroup .parBd ul li .pic{ text-align:center; }
+    .slideGroup .parBd ul li .pic img{
+      width: 419px;
+      height: 302px;
+      display:block;  
+    }
+    .slideGroup .parBd ul li .pic a:hover img{ border-color:#999;  }
+    .slideGroup .parBd ul li .title{ 
+      line-height:24px;   
+      font-size: 20px;
+    padding-top: 10px;
+    }
+
+
 .container>div.entered{
 	position: relative;
 	margin-top: -26px;
@@ -2490,7 +2522,8 @@ tr.tableComments td{
 	width: 100%;
 	height: 67px;
 }
-.caseBox>div.caseNav>div{
+.caseBox>div.caseNav>div,.caseBox>div.caseNav li{
+	display: block;
 	float: left;
 	position: relative;
 	width: 25%;
@@ -2501,7 +2534,7 @@ tr.tableComments td{
 	font-size: 22px;
 	font-weight: 600;
 }
-.caseBox>div.caseNav>div.on{
+.caseBox>div.caseNav>div.on,.caseBox>div.caseNav li.on{
 	background-color: #f48000;
 	color: #fff;
 	border-right: none;
@@ -2518,6 +2551,11 @@ tr.tableComments td{
 	height: 80px;
 	top:114px;
 }
+.casePic .slideBox .sPrev,.casePic .slideBox .sNext{
+	width: 46px;
+	height: 80px;
+	top:114px;
+}
 
 .casePic .picScroll-left .bd ul li .pic img{
 	width: 419px;
@@ -2528,6 +2566,9 @@ tr.tableComments td{
 	padding-top: 10px;
 }
 .casePic .picScroll-left .bd .tempWrap{
+	margin:0 auto;
+}
+.caseSlider .caseBox .slideBox .tempWrap{
 	margin:0 auto;
 }
 /***************************************************************************
@@ -3185,4 +3226,112 @@ tr.tableComments td{
 .cd_b2 li .btnbox03 .button01 img{
 	position:relative;
 	top:5px;
+}
+
+
+
+/***********************************************************************************
+*********************************aq.html问题详细*****************************
+***********************************************************************************/
+
+.newsDetails_title02 {
+    text-align:left;
+    font-size:24px;
+    height:75px;
+    line-height:100px;
+}
+.newsDetails_title02 img{
+	vertical-align: middle;
+	position:relative;
+	top:-2px;
+}
+.newsDetails_info02 {
+    text-align: left;
+    color: #999;
+    border-bottom: 1px solid #E7E5E5;
+    height: 46px;
+    line-height: 40px;
+    font-size: 14px;
+}
+
+/***********************************************************************************
+*********************************videoList.html问题详细*****************************
+***********************************************************************************/
+.video_r{
+	float: right;
+	width:300px;
+	border:1px solid #e3e3e3;
+	padding-bottom: 80px;
+}
+.video_r .video_name{
+	height: 153px;
+	border-bottom: 1px solid #adadad;
+	font-weight: 700;
+	font-size: 20px;
+	padding:31px 26px 28px;
+}
+.video_r .video_name p{
+	color:#33bb63;
+	line-height:26px;
+}
+.video_r .video_name .teacher{
+	color: #999;
+    font-size: 14px;
+    padding-top: 15px;
+    font-weight: 500;
+}
+.video_list ul li{
+	padding:0 17px;
+	height: 62px;
+	line-height: 62px;
+	border-bottom:1px dashed #d1cdcd;
+}
+
+.video_list ul li img{
+	vertical-align: middle;
+}
+.video_list ul li .time{
+	float: right;
+}
+
+.video_l{
+	margin-right: 306px;
+	padding:73px 40px;
+	
+}
+.video_l .upButton,.video_l .downButton{
+	position: absolute;
+}
+.video_l .upButton{
+	top: 0;
+}
+.video_l .downButton{
+	bottom: 0;
+}
+.video_l .video_head{
+	height: 51px;
+	line-height: 51px;
+	padding:0 23px;
+	font-size: 18px;
+	border:1px solid #e4e4e4;
+	border-radius: 5px;
+}
+.video_l .video_head .button{
+	background-color: #f48000;
+    border-radius: 24px;
+    height: 34px;
+    line-height: 34px;
+    padding: 0px 15px;
+    color:#fff;
+    margin-top: 8px;
+}
+.video_l .playBox{
+	height: 745px;
+	padding-top: 20px;
+}
+.video_l .playBox video{
+	width:100%;
+}
+.clear.video{
+	position: relative;
 }

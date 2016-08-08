@@ -16,6 +16,7 @@
 <script type="text/javascript" src="js/jquery.JPlaceholder.js"></script>
 <script type="text/javascript" src="js/indexNew.js"></script>
 <script type="text/javascript"></script>
+
 </head>
 <body>
 
@@ -354,47 +355,102 @@
     </div>
     
 
-     <!--slogan-->
-    <div class="caseSlider box_row " >
-       <div class="caseBox">
-          <div class="caseNav">
-              <div>实践基地</div>
-              <div>零基础团队</div>
-              <div>拓展型团队</div>
-              <div class="on">学员风采</div>
+   <!--slideGroup start--> 
 
+
+  <div class="slideGroup caseSlider box_row " >
+    <div class="caseBox">
+          <div class="parHd caseNav">
+            <ul>
+              <li>实践基地</li>
+              <li>零基础团队</li>
+              <li>拓展型团队</li>
+              <li>学员风采</li>
+            </ul>
           </div>
-          <div class="casePic">
-              <div class="picScroll-left" >
+          <div class="parBd casePic">
+
+          <div class="slideBox">
+            <a class="sPrev" href="javascript:void(0)"><img src="img/iconLA.png"></a>
+            <ul>
+              <li>
+                <div class="pic"><a href="http://www.SuperSlide2.com" target="_blank"><img src="img/ad17.png" /></a></div>
+                <div class="title"><a href="http://www.SuperSlide2.com" target="_blank">效果图1.1</a></div>
+              </li>
+              <li>
+                <div class="pic"><a href="http://www.SuperSlide2.com" target="_blank"><img src="img/ad17.png" /></a></div>
+                <div class="title"><a href="http://www.SuperSlide2.com" target="_blank">效果图1.2</a></div>
+              </li>
+              
+            </ul>
+            <a class="sNext" href="javascript:void(0)"><img src="img/iconRA.png" ></a>
+          </div><!-- slideBox End -->
+
+          <div class="slideBox">
+            <a class="sPrev" href="javascript:void(0)"><img src="img/iconLA.png" ></a>
+            <ul>
+              <li>
+                <div class="pic"><a href="http://www.SuperSlide2.com" target="_blank"><img src="img/caseSlide.png" /></a></div>
+                <div class="title"><a href="http://www.SuperSlide2.com" target="_blank">效果图2.1</a></div>
+              </li>
+              <li>
+                <div class="pic"><a href="http://www.SuperSlide2.com" target="_blank"><img src="img/caseSlide.png" /></a></div>
+                <div class="title"><a href="http://www.SuperSlide2.com" target="_blank">效果图2.2</a></div>
+              </li>
+              
+            </ul>
+            <a class="sNext" href="javascript:void(0)"><img src="img/iconRA.png" ></a>
+          </div><!-- slideBox End -->
+
+          <div class="slideBox">
+            <a class="sPrev" href="javascript:void(0)"><img src="img/iconLA.png" ></a>
+            <ul>
+              <li>
+                <div class="pic"><a href="http://www.SuperSlide2.com" target="_blank"><img src="img/ad16.png" /></a></div>
+                <div class="title"><a href="http://www.SuperSlide2.com" target="_blank">效果图3.1</a></div>
+              </li>
+              <li>
+                <div class="pic"><a href="http://www.SuperSlide2.com" target="_blank"><img src="img/ad16.png" /></a></div>
+                <div class="title"><a href="http://www.SuperSlide2.com" target="_blank">效果图3.2</a></div>
+              </li>
+              
+            </ul>
+            <a class="sNext" href="javascript:void(0)"><img src="img/iconRA.png" ></a>
+          </div><!-- slideBox End -->
+
+          <div class="slideBox">
+            <a class="sPrev" href="javascript:void(0)"><img src="img/iconLA.png" ></a>
+            <ul>
+              <li>
+                <div class="pic"><a href="http://www.SuperSlide2.com" target="_blank"><img src="img/ad16.png" /></a></div>
+                <div class="title"><a href="http://www.SuperSlide2.com" target="_blank">效果图3.1</a></div>
+              </li>
+              <li>
+                <div class="pic"><a href="http://www.SuperSlide2.com" target="_blank"><img src="img/ad16.png" /></a></div>
+                <div class="title"><a href="http://www.SuperSlide2.com" target="_blank">效果图3.2</a></div>
+              </li>
+              
+            </ul>
+            <a class="sNext" href="javascript:void(0)"><img src="img/iconRA.png" ></a>
+          </div><!-- slideBox End -->
+
+      </div><!-- parBd End -->
+      </div>
       
-                <a class="prev"><img src="img/iconLA.png"></a>
-                <a class="next"><img src="img/iconRA.png" ></a>
-                <div class="bd">
-                <ul class="picList">
-                  <li>
-                    <div class="pic"><a href="#" target="_blank"><img src="img/caseSlide.png" /></a></div>
-                    <div class="title"><a href="#" target="_blank">
-                        学员风采名称学员风采名称
-                    </a></div>
-                  </li>
-                  <li>
-                    <div class="pic"><a href="#" target="_blank"><img src="img/caseSlide.png" /></a></div>
-                    <div class="title"><a href="#" target="_blank">
-                        学员风采名称学员风采名称
-                    </a></div>
-                  </li>
-                  
-                </ul>
-              </div>
-            </div>
-            <script type="text/javascript">
-            jQuery(".casePic .picScroll-left").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"leftLoop",autoPlay:true,vis:2,trigger:"click"});
-            </script>
-
-          </div>
-       </div>  
     </div>
 
+    <script type="text/javascript">
+      
+      jQuery(".slideGroup .slideBox").slide({ mainCell:"ul",prevCell:".sPrev",nextCell:".sNext",effect:"leftLoop",autoPlay:true,vis:2,trigger:"click"});
+
+      /* 外层tab切换 */
+      jQuery(".slideGroup").slide({titCell:".parHd li",mainCell:".parBd"});
+
+    </script>
+
+    <!--slideGroup End-->
+
+    
     <div class="post_demands " ><img src="img/post_demands.png"></div>
     <script type="text/javascript">
         $(function(){
@@ -532,7 +588,7 @@
       
     </div>  
     </div>
-</div>
+  </div>
 
 
 
