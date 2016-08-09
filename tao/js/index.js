@@ -115,8 +115,8 @@ function floatWindowClose(){
 }
 function dropDown(){
 	$(".dropDownButton").on("click",function(){
-		       
-		 $(this).siblings("ul").show();
+		 var $ul = $(this).siblings("ul");      
+		 $ul.show();
 		 $(document.createElement('div'))
           .addClass('dropdown-backdrop')
           .appendTo($("body"))
@@ -124,13 +124,17 @@ function dropDown(){
 
 
           function clearMenus(){
-          	 $(".dropDownMenu ul").hide();
+          	 $ul.hide();
           	 $(".dropdown-backdrop").remove();
           }
 	});
-	$(".dropDownMenu ul li").on("click",function(){
-		 $(".dropDownText").html($(this).html());
-		 $(".dropDownMenu ul").hide();
+	$('[class*="dropDownMenu"] ul li').on("click",function(){
+		 var value = $(this).html();
+		 var $ul = $(this).parent("ul"); 
+		 var $menu =  $ul.parents('[class*="dropDownMenu"]');
+		 var dropDownText = $menu.find(".dropDownText");
+		 dropDownText.html(value).val(value);
+		 $ul.hide();
 		 $(".dropdown-backdrop").remove();
 	}).first().click()
 

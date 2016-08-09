@@ -2029,7 +2029,7 @@ section.content1_body h1{
 	color: #fff;
 	border:none;
 }
-.btnBox>span.on{
+.btnBox>span.on,.btnBox>a.on{
 	background-color: #f48000;
 	color: #fff;
 }
@@ -2841,6 +2841,29 @@ tr.tableComments td{
 /***********************************************************************************
 *********************************iitax个人所得税*****************************
 ***********************************************************************************/
+.dropDownMenu02 {
+    background-color: #fff;
+    float: left;
+    position: relative;
+    /* border: 2px solid #f48000; */
+    border-right: none;
+    text-align: center;
+}
+.dropDownMenu02 ul.dropDownList{
+	position: absolute;
+	top:100%;
+	width:100%;
+	z-index: 999;
+	background-color: #fff;
+	border:1px solid #f48000;
+}
+.dropDownMenu02 ul li{
+	cursor:pointer;
+}
+.dropDownMenu02 ul li:hover{
+	background-color: #F3EEEE
+}
+
 .iiTax{
 	height: auto;
 }
