@@ -11,6 +11,26 @@ $(function(){
 	post_demands.on('click',function(){
 		  toggleContact()  ;
   });
+
+
+  $("#iiTax_type li").each(function(index){
+        $(this).click(function(){
+            location.href = "iiTax"+index+".html";
+        })
+        
+  });
+ 
+
+  $(".reset").click(function(e){
+      e.preventDefault();
+
+      $(".num").val("")
+  })
+    
+
+  
+
+ 
 })
 
 	

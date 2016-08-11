@@ -1,0 +1,27 @@
+html, body { overflow:visible }
+body {position:relative; padding:0px }
+.banner-top { position:fixed; top:0px; left:0px }
+
+
+
+
+
+
+.fp-section { position:relative; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box }
+.fp-slide { float:left }
+.fp-slide, .fp-slidesContainer { height:100%; display:block }
+.fp-slides { z-index:1; height:100%; overflow:hidden; position:relative; -webkit-transition:all 0.3s ease-out; transition:all 0.3s ease-out }
+.fp-section.fp-table, .fp-slide.fp-table { display:table; width:100% }
+.fp-tableCell { display:table-cell; vertical-align:middle; width:100%; height:100% }
+.fp-slidesContainer { float:left; position:relative }
+.fp-slidesNav { height:80px; width:100%; background: url(../../images/write_bg.png) repeat; border:solid 1px #fff; border-right:none; border-left:none;position:absolute; bottom:0px; z-index:1 }
+.fp-slidesNav ul { width:1100px; height:80px; margin:0px auto; text-align:center }
+.fp-slidesNav li { float:left; width:220px; height:80px }
+.fp-slidesNav li a { font-size:14px; color:#333; display:block; position:relative; z-index:1; padding:24px 15px 0; height:58px; line-height:1.4em; text-align:center; margin-top:-1px; }
+.fp-slidesNav li a span { display:block; width:9px; height:4px; background: url(../../images/icon.png) no-repeat; position:absolute; top:-4px; left:50%; margin-left:-4.5px; display:none }
+.fp-slidesNav li:hover{ background:url(../../images/write_bg.png) repeat;}
+.fp-slidesNav li a.active { background:#e40082; color:#fff }
+.fp-slidesNav li a.active span { display:block }
+.slide { background-size:cover; float:left; background-position:center center }
+.slide a { width:100%; height:100%; display:block }
+.section { text-align:center }

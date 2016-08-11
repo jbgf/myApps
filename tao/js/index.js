@@ -8,6 +8,10 @@ $(document).ready(function(){
 	floatWindowClose();
 	switchProduct();
 	quickBar();
+	$('.slider').glide({
+		type: 'carousel',
+		
+	});
 });
 function scrollLink(speed,delay,ele) {   //函数 函数名(变量1,变量2,变量3)滚动高度,速度,延迟
             var p=false; //定义变量 p为假;
@@ -103,7 +107,7 @@ function switchProduct(){
 	/*热门商品切换*/
       $(".product h1 .news_title").on("click",function(){
       		$(this).toggleClass("on off").siblings(".news_title").toggleClass("on off")
-      		$(".product_r").toggle();
+      		$(".product .product_r").toggle();
       })
 }
 function floatWindowClose(){
@@ -174,11 +178,7 @@ var newsImg = function(){
 
 
 
-var glide = $('.slider').glide({
-	type: 'carousel',
-	startAt: 1,
-	touchDistance: 2
-});
+
 
 
 //加载首页新闻

@@ -418,7 +418,7 @@
 .map .map_r{width: 695px;margin-left: 537px;}
 .map .map_r>div{float: left;margin-right: 20px;}
 .map .map_r .counseling{
-	width: 287px;
+	width: 295px;
 	height: 116px;
 
 }
@@ -2498,7 +2498,7 @@ tr.tableComments td{
     font-weight: 700;
 }
 .tableComments02_text{
-	padding:17px 74px;
+	padding:17px 60px;
 	width: 774px;
 	line-height: 24px;
 	font-size: 16px;
@@ -2859,9 +2859,12 @@ tr.tableComments td{
 }
 .dropDownMenu02 ul li{
 	cursor:pointer;
+	text-align: left;
+	padding-left: 15px;
 }
 .dropDownMenu02 ul li:hover{
-	background-color: #F3EEEE
+	background-color: #1e90ff;
+	color:#fff;
 }
 
 .iiTax{
@@ -2887,6 +2890,9 @@ tr.tableComments td{
 .iiTax_title{
 	font-size: 26px;
 	font-weight: 700;
+}
+.iiTax_text .iiTax_h{
+	font-weight: 600;
 }
 .iiTaxCalculator{
 	height: 406px;
@@ -2983,7 +2989,7 @@ tr.tableComments td{
 	text-indent: 31px;
 }
 .table_iiTax{
-
+	margin:0 auto;
 }
 .table_iiTax thead th{
 	color:#f48000;
@@ -2993,7 +2999,7 @@ tr.tableComments td{
 	border: 1px solid #e8e8e8;
 }
 .table_iiTax thead tr th:first-child,
-.table_iiTax thead tr th:nth-child(4),
+.table_iiTax thead tr th:nth-last-child(2),
 .table_iiTax thead tr th:last-child{
 	text-align: center;
 }
@@ -3003,7 +3009,7 @@ tr.tableComments td{
 	padding:0 33px;
 }
 .table_iiTax tbody tr td:first-child,
-.table_iiTax tbody tr td:nth-child(4),
+.table_iiTax tbody tr td:nth-last-child(2),
 .table_iiTax tbody tr td:last-child{
 	text-align: center;
 }
