@@ -51,7 +51,7 @@ img {
 }
 .pro_bg{ background:url(../images/pro_bg.jpg) no-repeat 50% 0 #11253d; width:100%;}
 .headerbox {
-	background: #0072dd;
+	background: #e15625;
 	height: 36px;
 	line-height: 36px;
 	width: 100%;
@@ -79,8 +79,13 @@ img {
 	margin-left: 14px;
 	display: inline-block;
 }
+
 .header .right li a {
 	color: #fff;
+}
+.header .right.signUpBar li:not(:last-child) a{
+	border-right: 1px solid #fff;
+	padding-right: 13px;
 }
 .english {
 	background: url(../images/english.png) left no-repeat;
@@ -133,19 +138,19 @@ img {
 	display: block;
 	width: 87px;
 	height: 52px;
-	font-size: 14px;
+	font-size: 15px;
 }
 .menucom ul li a:hover {
 	background: url(../images/menuhover.png) no-repeat;
-	color: #d72e43;
+	color: #8f2800;
 	font-weight: bold;
-	font-size: 14px;
+	
 }
 .menubox .menucom ul li .on {
 	background: url(../images/menuhover.png) no-repeat;
-	color: #d72e43;
+	color: #8f2800;
 	font-weight: bold;
-	font-size: 14px;
+	
 }
 #nav_all {
 	height: 52px;
@@ -218,24 +223,24 @@ img {
 	width: 3px;
 	height: 26px;
 	float: left;
-	background: url(../images/nav_erl.gif) no-repeat;
+	background: #ff8d3e;
 }
 .nav_erc {
 	float: left;
 	height: 26px;
-	background: #879dbf;
+	background: #ff8d3e;
 	margin-right: -1px;
 }
 .nav_err {
 	width: 3px;
 	height: 26px;
 	float: left;
-	background: url(../images/nav_err.gif) no-repeat;
+	background: #ff8d3e;
 }
 .naver_0 {
 	display: none;
 	left: 99px;
-	background: url(../images/navulbg.gif) no-repeat 38px 5px;
+	background: url(../images/navulbg02.png) no-repeat 38px 5px;
 	width: 600px;
 }
 .naver_1 {
@@ -299,7 +304,7 @@ img {
 }
 .search {
 	float: right;
-	background: url(../images/search_bg.png) no-repeat;
+	background: url(../images/search_bg02.png) no-repeat;
 	width: 250px;
 	height: 34px;
 	margin-top: 8px;
@@ -307,7 +312,7 @@ img {
 }
 .search_list {
 	float: left;
-	background: url(../images/search_listbg.png) left no-repeat;
+	background: url(../images/search_listbg02.png) left no-repeat;
 	width: 32px;
 	margin-left: 14px;
 	padding-left: 12px;
@@ -350,7 +355,7 @@ img {
 }
 .hot_news {
 	width: 956px;
-	border: solid 1px #83c4e2;
+	border: solid 1px #f3e6dd;
 	padding: 12px;
 	-moz-border-radius: 6px;
 	-webkit-border-radius: 6px;
@@ -398,12 +403,12 @@ img {
 	height: 15px;
 	line-height: 14px;
 	text-align: center;
-	background: #ffe87f;
+	background: #fff;
 	cursor: pointer;
 	font-size: 0px;
 }
 .slideBox .hd ul li.on {
-	background: #f00;
+	background: #fc9e17;
 	color: #fff;
 }
 .slideBox .bd {
@@ -436,7 +441,7 @@ img {
 }
 .newstop {
 	height: 32px;
-	border-bottom: solid 2px #005fb8;
+	border-bottom: solid 2px #e45e00;
 	line-height: 32px;
 }
 .newstop .left {
@@ -453,14 +458,15 @@ img {
 }
 .newstop .left li a {
 	float: left;
-	width: 136px;
+	width: 96px;
 	text-align: center;
 	display: inline-block;
 	float: left;
 	font-size: 14px;
+	border-radius: 3px 3px 0 0;
 }
 .newstop .left li a:hover, .newstop .left li a.on {
-	background: url(../images/newstop_list.png) no-repeat;
+	background: url(../images/newstop_list02.png) no-repeat;
 	color: #fff;
 }
 .news_hd {
@@ -486,7 +492,7 @@ img {
 	width: 340px;
 }
 .hd_box h1, .hd_box h1 a {
-	color: #0072dd;
+	color: #e97524;
 	font-size: 16px;
 	width: 340px;
 	display: block;
@@ -504,7 +510,7 @@ img {
 	color: #666
 }
 .hd_box p a {
-	color: #0072dd
+	color: #e97524;
 }
 .hd_list {
 	margin-top: 10px;
@@ -528,7 +534,7 @@ img {
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	float: left;
-	background: url(../images/square.png) no-repeat left;
+	background: url(../images/square03.png) no-repeat left;
 	padding-left: 14px;
 }
 .hd_list ul li span {
@@ -537,7 +543,7 @@ img {
 }
 .index_box .left {
 	float: left;
-	width: 732px;
+	width: 736px;
 	margin-top: 14px;
 	overflow: hidden
 }
@@ -680,12 +686,12 @@ img {
 	margin-top: 14px;
 }
 .pro_top {
-	background: url(../images/bg01.png) no-repeat;
-	width: 732px;
+	background: url(../images/bg001.png) no-repeat;
+	width: 736px;
 	height: 17px;
 }
 .pro_new_box {
-	border: solid 1px #83c4e2;
+	border: solid 1px #f3e6dd;
 	border-top: none;
 	border-radius: 0 0 4px 4px;
 	padding: 14px;

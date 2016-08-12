@@ -1,0 +1,86 @@
+@charset "gb2312";
+/* CSS Document */
+body{ background:url(../img/bodybg.gif) #FFF repeat-x left top;}
+.main{ width:980px; margin:0px auto 10px;}
+
+.current{ padding:12px 0px 12px 8px;}
+.content{ background:url(../img/mainbg.gif) repeat-x left top; width:100%; overflow:hidden;}
+
+hover { color:#ff5500; text-decoration:underline; }
+
+.txtstyleaa{ border:1px solid #ccc; font:14px "Î¢ÈíÑÅºÚ"; }
+
+.padding { padding:8px;}
+.margin{ margin-top:10px;}
+.keywordLeft{ float:left; width:560px; background:#FFFFFF; position:relative; border:1px solid #DEDEDE;}
+.logoonline{ border-bottom:1px solid #DEDEDE; padding-bottom:10px; padding-top:15px; margin-left:10px; margin-right:10px;}
+.logoonline h1 {  font:22px "Î¢ÈíÑÅºÚ"; width:380px; line-height:22px; height:40px;}
+
+.Guided {position:absolute;left: 396px;top: 15px;}
+.Guided input{ width:133px; height:36px; line-height:36px; color:#FFF; font-family:"Î¢ÈíÑÅºÚ"; font-size:16px; margin-right:8px; border:0px;  cursor:pointer; font-weight:bold;}
+.Guided input { background-image:url(../img/tabbg.png) }
+.Guided input{ background-position:0px -253px;}
+
+.regleftbar{ margin:1px 10px 0px 10px; background:url(../img/basebg.png) 0px -1350px ; padding-top:10px; }
+.regleftbar .regstep{ background-image:url(../img/step.png); background-repeat:no-repeat;}
+.regleftbar .regstep{ height:26px; margin:0px 0px 0px 20px; color:#B2B1B1;}
+.regleftbar .regstep li{ float:left;  line-height:24px; width:120px; padding-left:30px;}
+.regleftbar .regstep li.green{ color:#73D62B;}
+.regleftbar ul { width:450px;} 
+.regleftbar ul.two{ background-position:left -27px;}
+.regleftbar ul.three{ background-position:left -53px;}
+
+.boson {margin:10px 10px 10px 10px; border:1px solid #DAEBFF; background:#F7FAFF; padding:10px;}
+
+.hrefa a { float:left; margin-right:5px; background:#fff; width:25px; border:1px solid #ccc; text-align:center; padding:1px 1px 1px 1px;font-family:"Î¢ÈíÑÅºÚ"; font-size:16px; }
+.hrefa a:hover{ color:#fff; border:1px solid #ff5500; background:#ff5500; text-decoration:none; display:block; font-weight:bold}
+.hrefa span a {color:#fff; border:1px solid #ff5500; background:#ff5500; text-decoration:none; font-weight:bold}
+.sumbitbox{ text-align:center; padding:10px 0px 15px 0px; width:100%; overflow:hidden;}
+.sumbitbox input{ width:120px; height:36px; background-position:-164px -869px; line-height:36px; color:#FFF; font-family:"Î¢ÈíÑÅºÚ"; font-size:16px; margin-right:8px; border:0px; cursor:pointer; font-weight:bold;}
+.sumbitbox input,.allprice,.sumbitbox input.pcbbtn,.circuitrydetail .agree,.pdfsearch .pdfbtn,.pdfjj dd ul li a,.softwarelist a.download,.pdfsearchlist a.downloadpdf,.prodetailleft .newstips .newsonline,.pdfindexbox ul li.pdfbtnstyle1 input{ background-image:url(../img/basebg.png);}
+.sumbitbox input.btnstyle2{ background-position:-164px -912px;}
+
+
+.orderdetail em{ color:#999999; padding-right:5px; font-family:Arial, Helvetica, sans-serif}
+.txtstyle1,textarea{ border:1px solid #ccc; height:22px; line-height:22px; padding:2px 4px 2px 4px;font:14px "Î¢ÈíÑÅºÚ"; }
+
+.sumbitbox input.pcbbtna { background-position:left -1004px; width:250px; padding-top:16px; height:52px; text-align:left; padding-left:55px;}
+
+
+.font1{ font-size:12px; color:#999; padding:5px 5px 0px 0px;}
+.font2{color:#8B8B8B; font-family:Arial, Helvetica, sans-serif; }
+.font3{ font-weight:bold; background:#F7FAFF }
+.font4{ color:#0066CC; }
+.fonat5 { font-size:12px; color:#999999; margin:0px 10px 0px 10px }
+.boson1 { margin:10px 10px 5px 10px;}
+.boson1 table { border-top:1px solid #DAEBFF; border-left:1px solid #DAEBFF;}
+.boson1 table td { border-right:1px solid #DAEBFF; border-bottom:1px solid #DAEBFF;}
+.delivery{ font:20px "Î¢ÈíÑÅºÚ"; padding:5px 0px 5px 0px;}
+.delivery{background:url(../img/othericon.png) 0px -383px no-repeat; padding-left:35px;border-top:1px solid #DAEBFF; border-right:1px solid #DAEBFF; border-left:1px solid #DAEBFF;}
+.delivery1 {background:url(../img/othericon.png) 0px -452px no-repeat; padding-left:35px;border-top:1px solid #DAEBFF; border-right:1px solid #DAEBFF; border-left:1px solid #DAEBFF;}
+.delivery em { color:#ff5500}
+
+
+
+.keywordRight { float:right; border:1px solid #DEDEDE; width:410px;}
+.keywordRight .Title { margin:5px 10px 5px 10px;}
+.keywordRight .Title1 { margin:5px 0px 5px 0px; background:url(../img/basebg.png) 5px -1422px no-repeat; padding-bottom:5px;padding-left:40px; border-bottom:1px solid #DEDEDE}
+.keywordRight .fonat {font:20px "Î¢ÈíÑÅºÚ";}
+.keywordRight .tstuk { padding:0px 10px 10px 10px;height:500px;width:390px; float:left; overflow:hidden; overflow-y:scroll;}
+
+.keywordRight .foanr23{ color:#0066CC}
+.keywordRight .foanr13{ font-size:14px; font-weight:bold}
+.Titlea1 { border:1px solid #e1e1e1; padding:4px 5px 5px 8px; font-size:14px; font-weight:bold; background:url(../img/icon.png) 0px -705px   }
+.bos { border-bottom:1px solid #e1e1e1; border-left:1px solid #e1e1e1; border-right:1px solid #e1e1e1;}
+.Brief .Titlehi { font:18px "Î¢ÈíÑÅºÚ"; border-bottom:1px solid #E1E1E1; padding-bottom:5px; color:#000000; margin-top:5px; margin-bottom:10px;  }
+
+.Brief p { margin-bottom:10px; padding:0px; list-style:decimal; list-style:disc}
+
+.Brief ol li { list-style:decimal}
+.Brief ul li { list-style:disc}
+
+.Related {  font-size:14px; font-weight:bold; border-top:1px dashed #ccc; margin-top:20px; padding-top:5px; color:#666666}
+.RlKeyword li { float:left;  font-size:14px;margin-right:10px;  width:300px;white-space:nowrap;overflow: hidden; background:url(../img/dian.gif) 0px 10px no-repeat; padding-left:10px; height:25px; line-height:25px;}
+.RlKeyword li a {color:#0066CC; text-decoration:underline;}
+.RlKeyword li a:hover { color:#ff5500}
+

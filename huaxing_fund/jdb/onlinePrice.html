@@ -1,0 +1,550 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+    <title>在线计价 - 深圳捷多邦科技有限公司</title>
+    <link href="css/base.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/icon.css" rel="stylesheet" type="text/css">
+    <link href="css/easyui.css" rel="stylesheet" type="text/css">
+     <link rel="stylesheet" type="text/css" href="css/uploadify.css">
+    <link rel="stylesheet" type="text/css" href="css/upload.css">
+    <link rel="stylesheet" type="text/css" href="css/uploadify.css">
+
+    <script src="js/jquery-1.8.0.min.js" type="text/javascript"></script>
+
+    <script src="js/jquery.easyui.min.js" type="text/javascript"></script>
+
+    <script src="js/easyui-lang-zh_CN.js" type="text/javascript"></script>
+    <script src="js/swfobject.js" type="text/javascript"></script>
+
+    <script src="js/jquery.uploadify.v2.1.4.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/upload.js"></script>
+<body>
+    
+
+<script type="text/javascript" language="javascript">
+    function SubClick(type) {
+        // $("#actTop").val(type);
+        // $("#formTop").submit();
+        document.getElementById("actTop").value = type;
+        document.forms["formTop"].submit();
+    }
+</script>
+
+<div class="wrap">
+    <div class="header">
+        <div class="welcome">
+            <form id="formTop" action="" method="post">
+            <input name="actTop" type="hidden" id="actTop">
+            欢迎进入捷多邦线路板打样工厂！<a href="/member/" style="text-decoration:underline" title="登入会员系统">进入会员后台</a>&nbsp;&nbsp;<a href="javascript:void(0)" style="text-decoration:underline" onclick="SubClick('out');return false;" title="安全退出会员系统">安全退出</a>
+            | <a href="/shop/" title="积分商城">积分商城</a> | <a href="/service/ask.html" title="帮助中心">
+                帮助中心</a>
+            </form>
+        </div>
+        <div class="logo">
+            <a href="/">
+                <img src="img/logo.gif"></a></div>
+        <div class="topmenu">
+            <ul>
+                <li><a href="/online/" title="在线计价"><span><em>在线计价</em><br>
+                    足不出户轻松打样</span></a></li>
+                <li><a href="/member/login.aspx"><span class="news"><em>客户登录</em><br>
+                    快捷助您在线下单</span></a></li>
+            </ul>
+        </div>
+        <div class="clear">
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="/">首页</a></li>
+                <li><a href="/online/" class="on">在线计价</a></li>
+                 <li><a href="/smt">SMT打样</a></li>
+                <li><a href="/about/order.html">下单流程</a></li>
+                <li><a href="/equipmentshow/">工厂展示</a></li>
+                <li><a href="/modelshow/">样板展示</a></li>
+                <li><a href="/processshow/">工艺展示</a></li>
+                <li><a href="/about/">公司简介</a></li>
+                <li><a href="/about/contactus.html">联系我们</a></li>
+                
+                <li><a href="/engineerhome/">工程师家园</a></li>
+               
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <!-- 公共头部结束 -->
+    <div class="main">
+        <div class="current">
+            您的位置：<a href="../index.html">首页</a> &gt;&gt; 在线计价</div>
+        <h2 class="h2tit onlineprice">
+            <ul class="regstep two">
+                <li class="green">填写订单需求</li><li class="green">在线计算价格</li><li class="width164">保存订单</li></ul>
+            <span>在线计价</span></h2>
+        <form name="frmClac" id="frmClac" method="post">
+        <div class="content">
+            <table width="100%" cellpadding="0" cellspacing="0" class="orderdetail" style="margin-top: 20px;">
+                <tbody><tr>
+                    <td width="11%" height="34" align="center" bgcolor="#f7f7f7">
+                        下单时间：                    </td>
+                    <td colspan="5">
+                        2016-7-19 15:31:16                    </td>
+                </tr>
+                <tr>
+                    <td width="11%" align="center" bgcolor="#f7f7f7">
+                        板子长宽：                    </td>
+                  <td width="25%">
+                        10(厘米)
+                  × 10(厘米) </td>
+                    <td width="9%" align="center" bgcolor="#f7f7f7">板子数量：</td>
+                    <td width="27%">50(片) </td>
+                    <td width="10%" align="center" bgcolor="#f7f7f7">板子面积：</td>
+                  <td width="18%">5000(平方厘米) </td>
+                </tr>
+                <tr>
+                    <td align="center" bgcolor="#f7f7f7">
+                        板 材：                    </td>
+                    <td>
+                        建滔KB料                    </td>
+                    <td align="center" bgcolor="#f7f7f7">订单类型：</td>
+                    <td>样板 </td>
+                    <td align="center" bgcolor="#f7f7f7">
+                        拼板方式：                    </td>
+                    <td>
+                        PCS                    </td>
+                </tr>
+                <tr>
+                  <td align="center" bgcolor="#f7f7f7">最小线宽/线距：</td>
+                  <td>  6/6mil </td>
+                  <td align="center" bgcolor="#f7f7f7">过 孔：</td>
+                  <td>0.3 mm</td>
+                  <td align="center" bgcolor="#f7f7f7"> 焊盘喷镀：</td>
+                  <td>有铅喷锡</td>
+                </tr>
+                <tr>
+                    <td align="center" bgcolor="#f7f7f7">铜箔厚度：</td>
+                    <td>1/1oz</td>
+                    <td align="center" bgcolor="#f7f7f7">内层铜厚：</td>
+                    <td>-                 </td>
+                    <td align="center" bgcolor="#f7f7f7">开&nbsp;发&nbsp;票： </td>
+                    <td>
+                      不要发票 </td>
+                </tr>
+                <tr>
+                    <td align="center" bgcolor="#f7f7f7">
+                        板子层数：                    </td>
+                    <td>
+                        2                    </td>
+                    <td align="center" bgcolor="#f7f7f7">
+                        阻焊颜色：                    </td>
+                    <td>
+                        绿色                    </td>
+                    <td align="center" bgcolor="#f7f7f7">
+                        支付类型：                    </td>
+                    <td>
+                        等待支付                    </td>
+                </tr>
+                <tr>
+                    <td align="center" bgcolor="#f7f7f7">
+                        板子厚度：                    </td>
+                    <td>
+                        1.6                    </td>
+                    <td align="center" bgcolor="#f7f7f7">
+                        字符颜色：                    </td>
+                    <td>
+                        白色                    </td>
+                    <td align="center" bgcolor="#f7f7f7">
+                        飞针测试：                    </td>
+                    <td>
+                        全部测试                    </td>
+                </tr>
+                <tr>
+                    <td align="left" bgcolor="#f7f7f7">
+                        设计文件款数：                    </td>
+                    <td>
+                        1                    </td>
+                    <td align="center" bgcolor="#f7f7f7">
+                        阻焊覆盖：                    </td>
+                    <td>
+                        过孔盖油                    </td>
+                    <td align="center" bgcolor="#f7f7f7">&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td align="center" bgcolor="#f7f7f7">生产周期： </td>
+                    <td>正常2-3天(样板)</td>
+                  <td align="center" bgcolor="#f7f7f7">发货时间： </td>
+                    <td>2016-07-21</td>
+                    <td align="center" bgcolor="#f7f7f7">快 递：</td>
+                    <td>顺丰到付&nbsp;</td>
+                </tr>
+            </tbody></table>
+            <a name="price"></a>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tbody><tr>
+                    <td class="collecta">
+                        
+                        <table width="100%" cellpadding="0" cellspacing="0">
+                            <tbody><tr>
+                                <td height="15" colspan="9">
+                                    <div class="allmoneyb">
+                                        <span>网络支付:<em>￥330.00</em>元</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="10%" class="fonatwf">
+                                    工程费：
+                                </td>
+                                <td width="10%" class="fonatwf">
+                                    拼版费
+                                </td>
+                                <td width="10%" class="fonatwf">
+                                    板费
+                                </td>
+                                <td width="10%" class="fonatwf">
+                                    菲林费
+                                </td>
+                                <td width="10%" class="fonatwf">
+                                    税费
+                                </td>
+                                <td width="10%" class="fonatwf">
+                                    喷镀费
+                                </td>
+                                <td width="10%" class="fonatwf">
+                                    测试费
+                                </td>
+                                <td width="10%" class="fonatwf">
+                                    加急费
+                                </td>
+                               
+                                 <td class="fonatwf">
+                                    其它费用
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="fonatoi">
+                                    50.00
+                                </td>
+                                <td class="fonatoi">
+                                    0.00
+                                </td>
+                                <td class="fonatoi">
+                                    250.00
+                                </td>
+                                <td class="fonatoi">
+                                    30.00
+                                </td>
+                                <td class="fonatoi">
+                                    0.00
+                                </td>
+                                <td class="fonatoi">
+                                    0.00
+                                </td>
+                                <td class="fonatoi">
+                                    0.00
+                                </td>
+                                <td class="fonatoi">
+                                    0.00
+                                </td>
+                               
+                                 <td class="fonatoi">
+                                    0.00
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    </td>
+                </tr>
+            </tbody></table>
+            <div class="sumbitbox">
+				
+				<input name="hidNum" id="hidNum" type="hidden" value="50">
+				<input name="txtPinBanNum" id="txtPinBanNum" type="hidden" value="1">
+				<input name="hidWidth" id="hidWidth" type="hidden" value="10">
+				<input name="hidLength" id="hidLength" type="hidden" value="10">
+				<input name="hidLayers" id="hidLayers" type="hidden" value="2">
+				<input name="radFontColor" id="radFontColor" type="hidden" value="白色">
+				<input name="radSolderColor" id="radSolderColor" type="hidden" value="绿色">
+				<input name="radBoardThickness" id="radBoardThickness" type="hidden" value="1.6">
+				<input name="radDeliveryDays" id="radDeliveryDays" type="hidden" value="2">
+				<input name="hidBill" id="hidBill" type="hidden" value="0">
+				<input name="radPlatingType" id="radPlatingType" type="hidden" value="有铅喷锡">
+				<input name="radCopperThickness" id="radCopperThickness" type="hidden" value="1/1oz">
+					<input name="radInsideThickness" id="radInsideThickness" type="hidden" value="0">
+					<input name="radLineWeight" id="radLineWeight" type="hidden" value="6/6mil">
+					<input name="radVias" id="radVias" type="hidden" value="0.3">
+				<input name="radZhfg" id="radZhfg" type="hidden" value="过孔盖油">
+				<input name="radTestType" id="radTestType" type="hidden" value="全部测试">
+				<input name="selExpressName" id="selExpressName" type="hidden" value="顺丰到付">
+				<input name="txtNote" id="txtNote" type="hidden" value="">
+				<input name="txtCName" id="txtCName" type="hidden" value="">
+				<input name="txtCMobile" id="txtCMobile" type="hidden" value=""> 
+				
+				<input name="selMaterial" id="selMaterial" type="hidden" value="建滔KB料">
+				<input name="pcbfile" id="pcbfile" type="hidden">
+				<input name="orgname" id="orgname" type="hidden">
+			
+			    
+                <input id="btnUploadPcb" type="button" value="上传PCB文件并保存订单" class="pcbbtna">
+                <input id="btn1" class="btnstyle2" type="button" value="返回修改" onclick="javascript:history.back(-1)">
+                <input id="file0"  type="file" name="" style="display:none;">
+                <script type="text/javascript">
+                    $('#btnUploadPcb').on("click",function(){$("#file0").click()});
+                    $("#file0").change(function(){
+                        objUrl = getObjectURL(this.files[0]);
+                        $('#btnUploadPcb').val(this.files[0].name)
+                    });
+                    function getObjectURL(file) {
+                        var url = null ; 
+                        if (window.createObjectURL!=undefined) { // basic
+                            url = window.createObjectURL(file) ;
+                        } else if (window.URL!=undefined) { // mozilla(firefox)
+                            url = window.URL.createObjectURL(file) ;
+                        } else if (window.webkitURL!=undefined) { // webkit or chrome
+                            url = window.webkitURL.createObjectURL(file) ;
+                        }
+                        return url ;
+                    }
+                </script>
+            </div>
+        </div>
+        </form>
+    </div>
+<!--弹窗-->
+    
+<div id="uploadBox" class="panel window" style="display:none; width: 588px; left: 402.5px; top: 630px; z-index: 9017; position: absolute;">
+    <div class="panel-header panel-header-noborder window-header" style="width: 588px;"><div class="panel-title" style="">上传Pcb文件</div>
+        <div class="panel-tool"><a href="javascript:void(0)" class="panel-tool-close"></a>
+        </div>
+    </div>
+    <div id="uppcb" style="width: 586px; height: 264px;" title="" class="panel-body panel-body-noborder window-body">
+    <div class="panel" style="width: 586px;">
+    <div style="width: 586px; height: 264px;" title="" class="panel-body panel-body-noheader panel-body-noborder dialog-content">
+    
+
+    <table width="100%" cellspacing="0" cellpadding="0" border="0" style="margin: 0 auto;">
+        <tbody>
+        <tr>
+            <td height="1" bgcolor="#3399CC">
+            </td>
+        </tr>
+        
+        <tr  id="tab2">
+            <td height="141">
+                <form onsubmit="return CheckExt(this);" enctype="multipart/form-data" method="post" action="#" name="form1" id="form1">
+                <table width="100%" border="0" align="center">
+                    <tbody><tr>
+                        <td height="63" align="right">
+                            <table width="100%" border="0">
+                                <tbody><tr>
+                                    <td width="32%" height="63" align="right">
+                                        <span class="STYLE5">添加文件: </span>&nbsp;
+                                    </td>
+                                    <td align="left">
+                                        <input type="file" name="FileData" id="FileData">
+                                        <input type="hidden" value="pcbfile" id="uptype" name="uptype">
+                                        <input type="hidden" value="UploadSeccess" id="funname" name="funname">
+                                        <input type="hidden" value="1s6045" id="key" name="key">
+                                        <input type="hidden" value="96dd13a9" id="checkcode" name="checkcode">
+                                        <input type="hidden" value="web/common/upload.aspx" id="scriptPage" name="scriptPage">
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="50" align="center" id="Td1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="bottom" height="36" align="center" id="shinfo">
+                            <input type="image" src="img/btnupload.gif" id="imageField" name="imageField">
+                        </td>
+                    </tr>
+                </tbody></table>
+                </form>
+            </td>
+        </tr>
+    </tbody></table>
+   
+    
+
+</div></div></div></div>
+
+<!--弹窗end-->    
+
+<div class="footer">
+    <div class="footerbox">
+        <div class="footlink">
+
+          <div style="float:left; margin-top:30px; margin-right:10px;border-right: 1px solid #565656; padding-right:10px;">   <a href="img/iso.jpg" target="_blank"><img src="img/isotag.gif"></a><br><span style=" color:#ccc; line-height:30px; display:block; text-align:center;">已通过ISO90001:2008质量体系认证</span></div> 
+
+            <ul class="botmenu">
+                <li>全球PCB快捷打样、小批量生产服务商</li><li>PCB、钢网、SMT加工一站式服务</li><li>特色电子电路互联服务领跑者</li></ul>
+            <ul class="botmena">
+                <li>公司地址：深圳市福田区福明路雷圳大厦2001-2002</li><li>工厂地址：深圳市坑梓街道金沙社区金沙工业三路2号</li><li>咨询电话：400-852-8880</li></ul>
+            
+            
+           
+        </div>
+        <div class="copyright">
+            深圳捷多邦科技有限公司版权所有 <a href="http://www.miitbeian.gov.cn/" target="_blank">粤ICP备15005641号-2</a>
+            | <a href="http://www.jdbpcb.com/about/order.html" target="_blank">下单流程</a> | <a href="http://www.jdbpcb.com/online/searchorder.aspx" target="_blank">订单查询</a>
+            | <a href="/product/">PCB产品</a>| <a href="/keypage_1.html">推荐产品</a> | <a href="http://www.kuaidi100.com/" target="_blank">快递查询</a>
+
+            
+            
+
+            
+        </div>
+    </div>
+</div>
+<div id="floatTools" class="float0831" style="width: 128px;">
+    <div id="divFloatToolsView" class="floatR" style="clear: both; margin-bottom: 10px;">
+        <div class="tp">
+        </div>
+        <div class="cn">
+            <ul>
+                <li style="padding-top: 7px; padding-left: 7px;height: 29px; line-height: 29px;">
+                    
+                <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=76381057&amp;Site=客服1&amp;menu=yes" target="_blank">
+<img border="0" src="http://wpa.qq.com/pa?p=1:76381057:4">
+<span>&nbsp;客服1</span>
+</a>
+                </li>
+                <li style="padding-top: 7px; padding-left: 7px;height: 29px; line-height: 29px;">
+                <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=399291906&amp;Site=客服2&amp;menu=yes" target="_blank">
+<img border="0" src="http://wpa.qq.com/pa?p=1:399291906:4">
+<span>&nbsp;客服2</span>
+</a>
+                </li>
+                <li style="padding-top: 7px;padding-left: 7px; height: 29px; line-height: 29px;">
+                <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=272076037&amp;Site=客服3&amp;menu=yes" target="_blank">
+<img border="0" src="http://wpa.qq.com/pa?p=1:272076037:4">
+<span>&nbsp;客服3</span>
+</a>    
+                <!--    <script charset="utf-8" type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php?key=XzgwMDAyNjQ4MV8zOTY1N184MDAwMjY0ODFf"></script>-->
+
+                    
+                </li>
+            </ul>
+            <ul>
+             
+                    
+                <li><span class="icoTl">400-852-8880</span></li>
+                
+                <li>
+                    <img src="img/wx.gif"></li>
+                <li style="height: 110px">
+                    <img src="img/weixin.gif"></li>
+                <li style="height: 65px; line-height: 17px">&nbsp;&nbsp;在线计价、生产进度查询、下发订单消息，赶紧<b>扫一扫</b>吧!
+                </li>
+               
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<script language="javascript" src="http://counter.weiku.cn/stat.aspx?sitecode=68acc7194d5f84af"></script><script language="javascript" src="http://counter.weiku.cn/counter.aspx?isnew=&amp;sitecode=68acc7194d5f84af&amp;visitor=101d39c88fb64e909ef1339a711244c0&amp;visitedtimes=3&amp;pcfristtoday=0&amp;referrer=http%3A//www.jdbpcb.com/online/&amp;visitpage=http%3A//www.jdbpcb.com/online/onlinethree.html"></script>
+
+
+<!--[if lte IE 6]>
+<script type="text/javascript">
+function divScroll(){
+    var scrollT = document.documentElement.scrollTop;
+    floatTools.style.top = scrollT+100;
+}
+window.onscroll = function(){ setTimeout(divScroll,100);};
+</script>
+<![endif]-->
+
+<script type="text/javascript">
+    var floatTools;
+    window.onload = function() {
+        floatTools = document.getElementById("floatTools");
+    }
+</script>
+
+<!-- JiaThis Button BEGIN -->
+
+<!-- JiaThis Button END -->
+
+<script type="text/javascript">
+    document.writeln(" <script src='http://www.jdbpcb.com/common/counter.aspx?referrer=" + escape(document.referrer) + "&url= " + escape(window.location.href) + "'><\/script>");
+</script> <script src="http://www.jdbpcb.com/common/counter.aspx?referrer=http%3A//www.jdbpcb.com/online/&amp;url= http%3A//www.jdbpcb.com/online/onlinethree.html"></script>
+
+
+<script type="text/javascript" src="http://tajs.qq.com/gdt.php?sId=28132920" charset="UTF-8"></script>
+
+
+
+
+
+<script type="text/javascript">
+    var isLogin = 'true' === 'true';
+    $.extend($.fn.validatebox.defaults.rules, {
+        num: {
+            validator: function(value, param) {
+                return !isNaN(value) && value > 0;
+            },
+            message: '必须填写数值类型并大于0.'
+        }
+    });
+    var loginBox;
+    $("#btnUploadPcb,.panel-tool-close").click(function() {
+
+            $("#uploadBox").toggle()
+        
+
+    });
+
+    function UploadSeccess(filename, orgname) {
+	
+	    $("#pcbfile").val(filename);	
+		$("#orgname").val(orgname);	
+		 $.ajax({
+			url: "/member/order/ajax.aspx?act=AddOrder",
+			dataType: "json",
+			type: "POST",
+			data: $("#frmClac").serialize(),
+			success:function(d) {
+				  if(d.sucess == "True")
+				  { 
+					   window.location.href = "/member/default.aspx?url=order/order_list.aspx";
+					  
+				  }
+				  else{
+					  
+					  $.messager.alert('失败', d.msg, 'error');
+				  }
+				
+				}
+				 
+        
+        });
+	
+	
+	
+       // $.post("/member/order/ajax.aspx?act=AddOrder", { pcbfile: filename, orgname: orgname }, OrderCallBack);
+    }
+
+    function setLoginHeight(h) {
+        loginBox.height(h);
+        $(".window-shadow").height(h);
+    }
+    function logSucess() {
+        $('#regbox').dialog('close'); isLogin = true;
+        // $.messager.confirm('登录成功', "登录成功,上传pcb文件完成，系统将自动提交订单，但你还需要在后台确定下单，确定吗", function(r) { if (r) { $("#btnUploadPcb").click(); } });
+        $("#btnUploadPcb").click();
+    }
+    function regSucess() {
+        $('#regbox').dialog('close'); isLogin = true;
+        //$.messager.confirm('注册成功', "注册成功,上传pcb文件完成，系统将自动下单，并在后台订单管理里修改您的收货地址后再确定下单，确定吗", function(r) { if (r) { $("#btnUploadPcb").click(); } });
+        $("#btnUploadPcb").click();
+
+    }
+ 
+</script>
+
+<div id="qq-sendUrl-btn"></div><div id="qb-sougou-search" style="display: none; opacity: 0;"><p>搜索</p><p class="last-btn">复制</p><iframe src=""></iframe></div></body></html>

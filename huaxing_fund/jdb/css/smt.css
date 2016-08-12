@@ -1,0 +1,65 @@
+/* CSS Document */
+body{ background-color:#FFF;}
+.header .menu ul li a{ padding:0px 17px 0px 16px;}
+
+.banner{ background:url(../img/banner.jpg) #01093f no-repeat center top; height:399px; width:100%;}
+
+.menuicon{ height:118px; background-color:#f3f3f3; border-bottom:1px solid #e3e2e2; font-family:"微软雅黑"; font-size:14px; color:#000; width:100%; z-index:100;}
+.menuicon ul{ width:980px; margin:0px auto; padding-top:22px; height:96px; }
+.menuicon ul li{ width:108px; text-align:center; float:left; cursor:pointer; position:relative; height:97px;}
+.menuicon ul li span{ width:56px; height:56px; display:block; margin:0px auto; background:url(../img/menuicon.png) no-repeat left top; margin-bottom:4px;}
+.menuicon ul li span.micon2{ background-position:-60px top;}
+.menuicon ul li span.micon3{ background-position:-120px top;}
+.menuicon ul li span.micon4{ background-position:-180px top;}
+.menuicon ul li span.micon5{ background-position:-240px top;}
+.menuicon ul li span.micon6{ background-position:-300px top;}
+.menuicon ul li span.micon7{ background-position:-360px top;}
+.menuicon ul li span.micon8{ background-position:-419px top;}
+.menuicon ul li span.micon9{ background-position:-479px top;}
+.menuicon ul li.on span{ background-position:left -60px;}
+.menuicon ul li.on span.micon2{ background-position:-60px -60px;}
+.menuicon ul li.on span.micon3{ background-position:-120px -60px;}
+.menuicon ul li.on span.micon4{ background-position:-180px -60px;}
+.menuicon ul li.on span.micon5{ background-position:-240px -60px;}
+.menuicon ul li.on span.micon6{ background-position:-300px -60px;}
+.menuicon ul li.on span.micon7{ background-position:-360px -60px;}
+.menuicon ul li.on span.micon8{ background-position:-419px -60px;}
+.menuicon ul li.on span.micon9{ background-position:-479px -60px;}
+.menuicon ul li em{ width:19px; height:10px; font-size:0px; position:absolute; left:43px; background:url(../img/jt.gif) no-repeat center bottom; line-height:0px; overflow:hidden; display:none; bottom:0px; _bottom:-2px;}
+.menuicon ul li.on em{ display:block;}
+
+.boxA{ width:100%; border-bottom:1px solid #e3e2e2; background:url(../img/contbg.gif) #FFF repeat-x left bottom; font-family:"微软雅黑"; font-size:14px;}
+.w980{ width:940px; margin:0px auto; padding:40px 20px 50px; position:relative; overflow:hidden;}
+.tit{ font-size:24px; font-weight:normal; line-height:32px; color:#000; margin-bottom:35px;}
+.tit2{ font-size:18px; line-height:24px; margin-bottom:15px; font-weight:normal; color:#000;}
+.wauto{ width:100%; overflow:hidden; }
+.wzlist{ width:570px; line-height:22px;}
+.wzlist li{ width:100%; overflow:hidden; padding-bottom:8px;}
+.wzlist li b{ background:url(../img/numbg.gif) no-repeat left top; width:21px; height:21px; line-height:21px; text-align:center; color:#FFF; display:inline-block; margin-right:6px; float:left;}
+.wzlist li span{ float:left; width:540px;}
+.red{ color:#ff0000;}
+.imgbox{ position:absolute; right:10px; bottom:10px;}
+.imgbox2{ position:absolute; right:10px; top:70px; }
+.imgbox3{ position:absolute; left:0px; bottom:20px; }
+.imgbox4{ position:absolute; right:10px; bottom:0px;}
+.mt120{ margin-top:120px;}
+.w485{ width:485px;}
+.w485 .wzlist{ width:485px;}
+.w485 .wzlist span{ width:450px;}
+
+.buybox{ width:100%; overflow:hidden;}
+.buybox li{ width:103px; height:128px; text-align:center; line-height:18px; background:url(../img/icon.png) no-repeat left top; float:left; margin-right:40px; padding:14px 10px 0px;}
+.buybox li span{ display:block; width:81px; height:52px; margin:0px auto; background:url(../img/icon.png) no-repeat -130px top; margin-bottom:10px;}
+.buybox li span.dicon2{ background-position:-218px top;}
+.buybox li span.dicon3{ background-position:-306px top;}
+.buybox li span.dicon4{ background-position:-130px -58px;}
+.buybox li span.dicon5{ background-position:-218px -58px;}
+
+.prolist{ width:100%; overflow:hidden;}
+.prolist li{ float:left; padding:0px 58px 50px 0px;}
+.prolist li.nopding{ padding-right:0px;}
+
+.server{ width:406px; height:137px; color:#FFF; font-size:35px; text-align:center; margin:30px auto 0px; background-color:#ff5500; padding-top:28px; -moz-border-radius: 5px;    -webkit-border-radius: 5px;    border-radius:5px;}
+
+
+.footer{ margin-top:0px;}

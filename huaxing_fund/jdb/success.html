@@ -1,0 +1,42 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title>完成</title>
+    <link href="css/base.css" rel="stylesheet" type="text/css" />
+    <link href="css/other.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="SuccessOK">
+        <div>
+        </div>
+        <p>
+            <span><em>下单成功，请等待审核！</em><br />
+                请等捷多邦市场人员审核（3-10分钟），审核通过后，订单状态会由“等待审核”变成“已审核”。请您及时登录系统进行确认，当天未确认的订单，交货日期跟着顺延。
+            </span>
+        </p>
+        <p>
+            <span>如不方便到网上确认，请拨打 0755-33007056 申请由我们代替您在系统上进行确认。未确认的订单，我司将不安排生产。 </span>
+        </p>
+        <p>
+            <span>温馨提示：下单请尽量控制在晚上的18：00点之前，18：00点以后，我司当天不再进行订单的审核工作，于第二天上午的9点后才能审核，交期也将延后一天，谢谢您的配合。
+            </span>
+        </p>
+    </div>
+    <div class="sumbitbox">
+        <input id="btn1" type="button" value="继续下单" onclick="javascript:window.location.href='placeorder.aspx'" />
+        <input id="btn1" type="button" onclick="javascript:OpenList();" value="订单管理" class="btnstyle2" />
+    </div>
+
+    <script language="javascript">
+        function OpenList() {
+            var url = "/member/order/order_list.aspx#ref";
+            window.parent.tabs.Open(url, "客户订单管理");
+            return false;
+        }
+    </script>
+</body>
+</html>

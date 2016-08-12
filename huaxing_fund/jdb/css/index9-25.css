@@ -1,0 +1,133 @@
+﻿@charset "utf-8";
+/* CSS Document */
+body{ background:url(../img/bodybg.jpg) #FFF repeat-x left top;}
+
+.link{ background-color:#eaeaea; width:100%; border-top:0px;}
+.link table{ border-top:1px solid #ccc;}
+.w755{ width:755px;}
+.w217{ width:217px;}
+
+.aboutjdb .aboutjdbbox div span{ background-image:url(../img/newindexicon.png); background-repeat:no-repeat;}
+.pdf h4,.pdf ul li.pdfbtnstyle1 input{ background-image:url(../img/basebg.png);}
+
+.banner{ width:755px; height:290px; position:relative;  overflow:hidden; text-align:center; z-index:4; margin:0px auto; }
+.banner img{ height:290px; width:100%;}
+.jsNav{ position: absolute; bottom: 0px; font-family: Arial, Helvetica, sans-serif; height: 30px; right: 10px; font-weight: bold;}
+.jsNav a{  display: inline-block; height: 16px; margin-right: 5px; overflow: hidden; width: 16px; border:1px solid #e7e7e7; background-color:#fff; color:#000; text-align:center; line-height:16px;}
+.jsNav a.imgSelected { color:#fff; background-color:#303030; }
+
+
+
+
+.main{ width:980px; margin:8px auto; overflow:hidden;}
+.bd{ border:1px solid #dbdbdb;}
+.mtop8{ margin-top:8px;}
+.mright10{ margin-right:10px;}
+.mright9{ margin-right:9px;}
+
+
+/* 最新公告 */
+.newnotice{ border-bottom:1px solid #dbdbdb; padding:0px 8px; line-height:30px; height:30px; color:#ccc;}
+.newnotice strong{ color:#333;}
+.newnotice a{ margin:0px 5px 0px 0px; background:url(../img/dian2.gif) no-repeat left center; padding-left:12px; text-decoration:underline}
+
+/* 优惠 */
+.preferential{ border-bottom:1px solid #dbdbdb; padding:8px 0px;}
+
+/* 关于捷多邦 */
+.aboutjdb{ width:755px;}
+.alltit{ padding:0px 8px 0px 10px; font:18px/34px "微软雅黑"; border-bottom:2px solid #ccc; background:url(../img/tit_icon.jpg) no-repeat left center;}
+.alltit em{ font:12px/34px "宋体"; float:right;}
+.alltit em a,.problem h3 em a{ color:#3366cc;}
+.alltit em a:hover,.problem h3 em a:hover{ color:#ff5500;}
+.aboutjdb .aboutjdbbox{ padding:8px 0px; width:753px; overflow:hidden;}
+.aboutjdb .aboutjdbbox dl{ width:733px; overflow:hidden; border-bottom:1px solid #e6e6e6;padding:0px 10px 10px;}
+.aboutjdb .aboutjdbbox dl dt{ width:265px; float:left; height:320px; overflow:hidden;}
+.aboutjdb .aboutjdbbox dl dt img{ width:265px; height:320px;}
+.aboutjdb .aboutjdbbox dl dd{ width:457px; float:right; color:#525252; line-height:22px;}
+.aboutjdb .aboutjdbbox dl dd h3{ font:22px/27px "微软雅黑"; color:#5a5555; margin-bottom:3px;}
+.aboutjdb .aboutjdbbox dl dd p.botbd{ border-bottom:1px solid #e6e6e6; padding-bottom:8px;}
+.aboutjdb .aboutjdbbox dl dd h4{ color:#525252; font-size:14px; margin-top:10px;}
+.aboutjdb .aboutjdbbox .aboutimg{ width:733px; overflow:hidden; padding:10px 0px 0px; margin:0px 10px;}
+.aboutjdb .aboutjdbbox .aboutimg .ISL_Cont{ width:733px; float:left; overflow:hidden; height:200px;}
+.aboutjdb .aboutjdbbox .aboutimg .ScrCont{ width:10000000px;}
+.aboutjdb .aboutjdbbox .aboutimg ul{ float:left;}
+.aboutjdb .aboutjdbbox .aboutimg ul li{ float:left; margin-right:10px; display:inline;}
+.aboutjdb .aboutjdbbox .aboutimg ul li,.aboutjdb .aboutjdbbox .aboutimg ul li img{ width:254px; height:200px;}
+
+/* 制板流程 */
+.flow ul li{ background-image:url(../img/btnbg.png); background-repeat:no-repeat;}
+.flow{ background-image:url(../img/boxbg.png);}
+.flow{ width:978px; margin-top:8px; height:71px; background-position:left top; overflow:hidden;}
+.flow h3{ width:26px; border:0px; padding:0px; line-height:16px; background-color:#F1F1F1; height:71px; text-align:center; padding-top:4px; float:left;}
+.flow ul{ float:left; margin:19px 0px 0px 11px; width:941px;}
+.flow ul li{ display:block; float:left; width:106px; height:34px; padding-right:11px; text-align:center; font:17px/34px "微软雅黑"; background-position:left -86px;}
+.flow ul li.lastli{ padding:0px;}
+
+/* 客户晒单 */
+.customOrder .tit{ height:34px; font-family:"微软雅黑"; line-height:34px; color:#333; overflow:hidden; padding:0px 8px;}
+.customOrder .tit em{ float:right; font-size:14px; }
+.customOrder .tit em a{ background-position:left -419px; text-decoration:underline; padding-bottom:5px; color:#3366cc;}
+.customOrder .tit em a:hover{ color:#ff5500;}
+.customOrder .tit h3{ font-size:18px;}
+.customOrder .tit span{ font-size:14px; color:#656565; font-weight:normal; margin-left:8px;}
+.customOrder .orderList{ width:958px; overflow:hidden; padding:0px 0px 0px 20px; height:243px; margin:5px 0px 8px;}
+.customOrder .orderList dl{ width:222px; float:left; margin-right:15px; margin-bottom:10px; height:283px}
+.customOrder .orderList dl dt{ display:table-cell; *display:block; width:220px; height:200px; border:1px solid #CCC; vertical-align:middle; text-align:center; *font-size:200px; }
+.customOrder .orderList dl dt img{ vertical-align:middle;}
+.customOrder .orderList dl dd{ display:block; line-height:16px; margin-top:5px;}
+.customOrder .orderList dl dd a{ color:#3366CC;}
+.customOrder .orderList dl dd a:hover{ color:#ff5500;}
+.customOrder .orderList dl dd em{ float:right;}
+.customOrder .orderList dl dd i{ color:#999;}
+.c000{ color:#000;}
+.customOrder .orderList dl dd span{ color:#666;}
+.customOrder p{ text-align:right; padding:0px 20px 8px 0px;}
+
+/* 搜索 */
+.searchbox{ width:199px; background-color:#f6f6f6; padding:0px 8px 10px; border-top:0px;}
+.searchbox h3{ font-size:14px; color:#666; height:34px; line-height:34px;}
+.searchbox p{ vertical-align:top;}
+.txtstyle1{  height:23px; line-height:23px; padding:0px 4px; border-bottom:1px solid #bbb; border-right:1px solid #bbb; border-top:1px solid #2e2e2e; border-left:1px solid #2e2e2e; vertical-align:middle; color:#666;}
+.btnstyle1{ width:50px; height:25px; line-height:25px; color:#FFF; text-align:center; border:0px; background-color:#e4393c; vertical-align:middle; margin-left:4px; cursor:pointer;}
+
+/* 客户问答 */
+.problem,.orderlist{ width:215px;}
+.problem h3,.orderlist h3{ font-size:14px; border-bottom:0px; background-color:#f8f8f8; height:27px; line-height:27px; padding:0px 8px; color:#666;}
+.problem h3 em,.orderlist h3 em{ float:right; font-size:12px; font-weight:normal;}
+.problem div{ padding:8px 8px 0px; width:199px; margin-bottom:8px; overflow:hidden; text-align:center; word-spacing:0.3em; color:#CCCCCC}
+.problem div dl{ padding-bottom:8px; background:url(../img/problem.gif) no-repeat left 3px; padding-left:20px;}
+.problem div span{ color:#666;}
+.problem div dd{ color:#3366cc;}
+
+/* 客户下单 */
+.orderlist h3 em a{ text-decoration:underline; color:#3366CC;}
+.orderlist div{ padding:5px 8px 1px; width:199px; overflow:hidden; margin-bottom:5px; height:272px;}
+.orderlist div ul{ height:190px; width:199px; overflow:hidden;}
+.orderlist div li{ border-bottom:1px solid #dbdbdb; padding:5px 0px; line-height:14px;}
+.orderlist div li span{ display:block;}
+.orderlist div li span em{ float:right; color:#999;}
+.orderlist div li i{ color:#999;}
+.orderlist div li span em.orderok{ color:#ff9900; background:url(../img/order_icon.gif) no-repeat left top; padding-left:16px;}
+
+
+.advbox img{ margin-bottom:1px; display:block;}
+
+
+.regbox div{ border:1px solid #bdbdbd; background:url(../img/regbg.gif) #FFF repeat-x left top; padding:5px 8px; height:70px;}
+.regbox p{ font:16px/26px "微软雅黑"; border-bottom:1px solid #e5e5e5; padding:0px 0px 8px; margin-bottom:5px;}
+.regbox p a{ color:#0066cc; text-decoration:underline;}
+.regbox ul li{ line-height:24px; color:#666;}
+.regbox ul li strong{  font-size:22px; font-family:"微软雅黑"; font-weight:normal; margin-right:3px;}
+.c06c{ color:#0066cc;}
+.cf30{ color:#ff3300;}
+
+.float0831{ right:10px;}
+.float0831 .floatR{ background:none; width:124px; background-color:#ccc; padding:2px; border-bottom:1px solid #939393;} 
+.float0831 .tp{ background:none; height:29px; background-image:url(../img/customtit.jpg); margin-bottom:2px;}
+.float0831 .cn{ background:none; background-color:#FFF;}
+.float0831 .cn ul{ padding:0px 5px;}
+.float0831 .cn ul li{ height:34px; line-height:34px;}
+.fotlink{ width:980px; margin:0px auto; border-top:1px solid #ddd; padding-top:10px;}
+.fotlink .tit{ font-size:14px; font-weight:bold; margin-bottom:3px;}
+.fotlink .linkcont a{ margin-right:15px; line-height:22px;}

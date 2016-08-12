@@ -1,0 +1,200 @@
+<html><head>
+<meta content="ECSHOP v2.7.3" name="Generator">
+<meta charset="UTF-8">
+<meta content="width=device-width" name="viewport">
+<title>用户中心_洗车宝宝-一卡在手洗遍全国，做洗车行业的ATM机  </title>
+<meta content="" name="Keywords">
+<meta content="" name="Description">
+<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<link href="css/public.css" type="text/css" rel="stylesheet">
+<link href="css/user.css" type="text/css" rel="stylesheet"> 
+
+
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/jquery.json.js" type="text/javascript"></script><script src="js/transport.js" type="text/javascript"></script><script src="js/common.js" type="text/javascript"></script><script src="js/utils.js" type="text/javascript"></script><script src="js/shopping_flow.js" type="text/javascript"></script></head>
+<body>
+      <header>
+      <div class="tab_nav">
+        <div class="header">
+          <div class="h-left"><a title="返回" href="javascript:history.back(-1)" class="sb-back"></a></div>
+          <div class="h-mid">地址管理</div>
+          <div class="h-right">
+            <aside class="top_bar">
+              <div id="show_more" onclick="show_menu();$('#close_btn').addClass('hid');"><a href="#"></a> </div>
+            </aside>
+          </div>
+        </div>
+      </div>
+      </header>
+       	
+<script src="js/mobile.js" type="text/javascript"></script>
+<div id="menu" class="goods_nav hid">
+        <div class="Triangle">
+          <h2></h2>
+        </div>
+        <ul>
+          <li><a href="#"><span class="menu1"></span><i>首页</i></a></li>
+          <li><a href="#"><span class="menu2"></span><i>分类</i></a></li>
+          <li><a href="#"><span class="menu3"></span><i>购物车</i></a></li>
+          <li style=" border:0;"><a href="#"><span class="menu4"></span><i>我的</i></a></li>
+        </ul>
+      </div> 
+<div id="tbh5v0">
+													
+				
+				
+				
+		
+						         <script src="js/region.js" type="text/javascript"></script> <script type="text/javascript">
+              region.isAdmin = false;
+                            var consignee_not_null = "收货人姓名不能为空！";
+                            var country_not_null = "请您选择收货人所在国家！";
+                            var province_not_null = "请您选择收货人所在省份！";
+                            var city_not_null = "请您选择收货人所在城市！";
+                            var district_not_null = "请您选择收货人所在区域！";
+                            var invalid_email = "您输入的邮件地址不是一个合法的邮件地址。";
+                            var address_not_null = "收货人的详细地址不能为空！";
+                            var mobi_not_null = "手机不能为空！";
+                            var tele_not_null = "电话不能为空！";
+                            var shipping_not_null = "请您选择配送方式！";
+                            var payment_not_null = "请您选择支付方式！";
+                            var goodsattr_style = "1";
+                            var tele_invaild = "电话号码不有效的号码";
+                            var zip_not_num = "邮政编码只能填写数字";
+                            var mobile_invaild = "手机号码不是合法号码";
+                            
+              onload = function() {
+                if (!document.all)
+                {
+                  document.forms['theForm'].reset();
+                }
+              }
+              
+            </script>
+<div class="addressmone">
+  <form onsubmit="return checkConsignee(this)" name="theForm" method="post" action="user.php">
+	<ul>
+       <li>
+    	<span>收货人姓名</span>  <input type="text" placeholder="收货人姓名" id="consignee_" value="a" name="consignee">
+		</li>
+       <li>
+    	 <span>电子邮件地址</span> <input type="email" placeholder="电子邮件地址" id="email_" value="1292913822@qq.com" name="email">
+			</li>     
+       <li>
+          <input type="hidden" value="1" name="country">
+          
+    		<select class="province_select" onchange="region.changed(this, 2, 'selCities')" id="selProvinces" name="province">
+                     <option value="0">请选择省</option>
+                                            <option value="2">北京</option>
+                                            <option value="3">安徽</option>
+                                            <option selected="" value="4">福建</option>
+                                            <option value="5">甘肃</option>
+                                            <option value="6">广东</option>
+                                            <option value="7">广西</option>
+                                            <option value="8">贵州</option>
+                                            <option value="9">海南</option>
+                                            <option value="10">河北</option>
+                                            <option value="11">河南</option>
+                                            <option value="12">黑龙江</option>
+                                            <option value="13">湖北</option>
+                                            <option value="14">湖南</option>
+                                            <option value="15">吉林</option>
+                                            <option value="16">江苏</option>
+                                            <option value="17">江西</option>
+                                            <option value="18">辽宁</option>
+                                            <option value="19">内蒙古</option>
+                                            <option value="20">宁夏</option>
+                                            <option value="21">青海</option>
+                                            <option value="22">山东</option>
+                                            <option value="23">山西</option>
+                                            <option value="24">陕西</option>
+                                            <option value="25">上海</option>
+                                            <option value="26">四川</option>
+                                            <option value="27">天津</option>
+                                            <option value="28">西藏</option>
+                                            <option value="29">新疆</option>
+                                            <option value="30">云南</option>
+                                            <option value="31">浙江</option>
+                                            <option value="32">重庆</option>
+                                            <option value="33">香港</option>
+                                            <option value="34">澳门</option>
+                                            <option value="35">台湾</option>
+                                          </select>
+         
+	             <select onchange="region.changed(this, 3, 'selDistricts')" id="selCities" name="city">
+                   <option value="0">请选择市</option>
+                                            <option selected="" value="53">福州</option>
+                                            <option value="54">龙岩</option>
+                                            <option value="55">南平</option>
+                                            <option value="56">宁德</option>
+                                            <option value="57">莆田</option>
+                                            <option value="58">泉州</option>
+                                            <option value="59">三明</option>
+                                            <option value="60">厦门</option>
+                                            <option value="61">漳州</option>
+                                          </select>
+                    
+                    <select onchange="region.changed(this, 4, 'selXiangcun')" id="selDistricts" name="district">
+                      <option value="0">请选择区</option>
+                                            <option selected="" value="518">鼓楼区</option>
+                                            <option value="519">台江区</option>
+                                            <option value="520">仓山区</option>
+                                            <option value="521">马尾区</option>
+                                            <option value="522">晋安区</option>
+                                            <option value="523">福清市</option>
+                                            <option value="524">长乐市</option>
+                                            <option value="525">闽侯县</option>
+                                            <option value="526">连江县</option>
+                                            <option value="527">罗源县</option>
+                                            <option value="528">闽清县</option>
+                                            <option value="529">永泰县</option>
+                                            <option value="530">平潭县</option>
+                                          </select>
+
+                    <select style="display:none" id="selXiangcun" name="xiangcun">
+                      <option value="0">请选择</option>
+                                          </select>
+        	</li>
+           <li>
+    		 <span>详细地址</span> <input type="text" placeholder="详细地址" id="address_" value="东街口" name="address">
+	        </li>
+           <li>
+		<span>联系方式</span> <input type="tel" placeholder="手机（必填）" id="mobile_" value="18259068107" name="mobile">
+	        </li>
+            <li>
+    		<span>邮政编码</span> <input type="text" placeholder="邮政编码" id="zipcode_" value="350001" name="zipcode">
+	        </li>
+    	</ul>
+            <div style=" height:50px"></div>
+                  <div class="dotm_btn">
+                 <a style="color:#666;" class="dotm_btn2" onclick="if (confirm('你确认要删除该收货地址吗？'))location.href='user.php?act=drop_consignee&amp;id=63'" href="javascript:void(0);">删除</a>
+                <a style=" color:#FFF;font-size:14px;" class="dotm_btn3" href="user.php?act=set_address&amp;address_id=63">设置为默认地址</a>
+                <input type="submit" class="dotm_btn1" value="保存">
+                				
+                
+                </div>
+				<input type="hidden" value="act_edit_address" name="act">
+				<input type="hidden" value="63" name="address_id">
+
+    </form>
+</div>
+        </div>
+
+<script language="javascript">
+$(function(){ 
+$('input[type=text],input[type=password]').bind({ 
+focus:function(){ 
+ $(".global-nav").css("display",'none'); 
+}, 
+blur:function(){ 
+ $(".global-nav").css("display",'flex'); 
+} 
+}); 
+}) 
+function set_card_sn(card_sn){
+	$('#active_vc_sn').val(card_sn);
+}
+</script>
+
+
+</body></html>

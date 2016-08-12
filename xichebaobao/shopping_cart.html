@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html >
+<html>
+<head>
+<meta name="Generator" content="ECSHOP v2.7.3" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>购物流程_洗车宝宝-一卡在手洗遍全国，做洗车行业的ATM机  </title>
+  <meta name="Keywords" content="" />
+  <meta name="Description" content="" />
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <link rel="stylesheet" href="css/public.css">
+  <link rel="stylesheet" href="css/flow.css">
+  <link rel="stylesheet" href="css/style_jm.css">
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/ecsmart.js"></script>
+<script type="text/javascript" src="js/jquery.json.js"></script><script type="text/javascript" src="js/transport.js"></script>
+<script type="text/javascript" src="js/common.js"></script><script type="text/javascript" src="js/utils.js"></script><script type="text/javascript" src="js/shopping_flow.js"></script>
+</head>
+<body style="background: rgb(235, 236, 237);position:relative;">
+
+
+
+<div id="popup_window" style="background:#EFEFF4;box-shadow: 0 0 10px #ccc;border: 1px solid #ccc;border-radius: 6px;width:85%;height:auto;margin-left:-43%;margin-top:-20%;left:50%;top:50%;position:fixed;display:none;z-index:9999;">
+<label class="yezf_tit" style="float:left;margin:15px;width: 91%;text-align: center;"><span>请输入余额支付密码</span>
+</label>
+<input id="surplus_password_input" type="password" style='float:left;margin:10px 3%;width:91%;background-color:white;height:30px;border: 1px solid #ccc;padding-left: 6px;'>
+<input class='yezf_QRB' type="button" onclick="end_input_surplus()" style="float:left;width: 50%;margin: 5px; padding:2% 0px; background: #EFEFF4;" value="确定" />
+<input class='yezf_QXB' type="button" onclick="cancel_input_surplus()" style="float:left; width:40%;margin: 5px; padding:2% 0px;background: #EFEFF4;" value="取消" />
+</div>
+
+
+
+<div class="tab_nav">
+    <div class="header">
+      <div class="h-left">
+        <a class="sb-back" href="javascript:history.back(-1)" title="返回"></a>
+      </div>
+      <div class="h-mid">
+       购物车      </div>
+    </div>
+</div>
+  
+
+<div class="screen-wrap fullscreen login">
+
+<section id="cart-content">
+      <div class="qb_tac" style="padding:50px 0">
+        <img src="img/empty_cart.png" width="100" height="95">
+        <br>购物车还是空的</div>
+      <div class="qb_gap" style="width:60%; margin:0 auto;">
+        <a href="./" class="mod_btn btn_strong" >马上逛逛</a>
+      </div>
+</section>
+<div  style="height:72px;"></div>
+<section class="f_mask" style="display: none;"></section>
+<section class="f_block" id="choose" style="height:0px;"></section>
+
+
+    
+    
+    
+    <script type="text/javascript">
+  
+  function showCheckoutOther(obj)
+  {
+    var otherParent = obj.parentNode;
+    otherParent.className = (otherParent.className=='checkout_other') ? 'checkout_other2' : 'checkout_other';
+    var spanzi = obj.getElementsByTagName('span')[0];
+    spanzi.className= spanzi.className == 'right_arrow_flow' ? 'right_arrow_flow2' : 'right_arrow_flow';
+  }
+  
+      </script> 
+
+
+         </div>
+
+  </div>
+  
+ </div>
+</div>
+
+<div class="f_block" id="pop" style="position: fixed; bottom: 0px; left: 0px; height: 0px; z-index: 99999999; overflow: hidden; width: 100%; background: rgb(255, 255, 255);">
+<p class="f_title"><span>选择自提点</span><a class="c_close" href="javascript:void(0)" onclick="close_pop()"></a></p>
+<div id="pickcontent"></div>
+</div>
+
+<script type="text/javascript" src="js/order_pickpoint.js"></script>               
+<script type="text/javascript">
+var process_request = "正在处理您的请求...";
+var username_empty = "- 用户名不能为空。";
+var username_shorter = "- 用户名长度不能少于 3 个字符。";
+var username_invalid = "- 用户名只能是由字母数字以及下划线组成。";
+var password_empty = "- 登录密码不能为空。";
+var password_shorter = "- 登录密码不能少于 6 个字符。";
+var confirm_password_invalid = "- 两次输入密码不一致";
+var email_empty = "- Email 为空";
+var email_invalid = "- Email 不是合法的地址";
+var agreement = "- 您没有接受协议";
+var msn_invalid = "- msn地址不是一个有效的邮件地址";
+var qq_invalid = "- QQ号码不是一个有效的号码";
+var home_phone_invalid = "- 家庭电话不是一个有效号码";
+var office_phone_invalid = "- 办公电话不是一个有效号码";
+var mobile_phone_invalid = "- 手机号码不是一个有效号码";
+var msg_un_blank = "* 用户名不能为空";
+var msg_un_length = "* 用户名不得超过14个字符";
+var msg_un_format = "* 用户名含有非法字符";
+var msg_un_registered = "* 用户名已经存在,请重新输入";
+var msg_can_rg = "* 可以注册";
+var msg_email_blank = "* 邮件地址不能为空";
+var msg_email_registered = "* 邮箱已存在";
+var msg_email_format = "* 邮件地址不合法";
+var msg_blank = "不能为空";
+var no_select_question = "- 您没有完成密码提示问题的操作";
+var passwd_balnk = "- 密码中不能包含空格";
+var username_chana = "- 用户名不能有中文。";
+var msg_uname_length = "- 用户名不能超过 20 个字符。";
+var msg_un_chine = "* 用户名不能为中文";
+var msg_mobile_phone_blank = "* 手机号码不能为空";
+var msg_mobile_phone_registered = "* 手机号码已存在";
+var msg_mobile_phone_format = "* 手机号码不是一个有效号码";
+var msg_email_code_blank = "- 邮箱验证码不能为空";
+var msg_mobile_phone_code_blank = "- 手机验证码不能为空";
+var msg_captcha_blank = "- 验证码不能为空";
+var msg_register_type_blank = "- 注册类型不能为空";
+var username_exist = "用户名 %s 已经存在";
+var compare_no_goods = "您没有选定任何需要比较的商品或者比较的商品数少于 2 个。";
+var btn_buy = "购买";
+var is_cancel = "取消";
+var select_spe = "请选择商品属性";
+</script>
+<script type="text/javascript">
+
+function choose_gift(suppid)
+{
+
+	var sel_goods = new Array();
+	var obj_cartgoods = document.getElementsByName("sel_cartgoods[]");
+	var j = 0;
+	for (i=0; i<obj_cartgoods.length; i++)
+	{
+		//if(obj_cartgoods[i].checked == true)
+		{	
+			sel_goods[j] = obj_cartgoods[i].value;
+			j++;
+		}
+	}
+	Ajax.call('flow.php', 'is_ajax=1&suppid=' + suppid + '&sel_goods='+sel_goods, selgiftResponse, 'GET', 'JSON');
+}
+function selgiftResponse(res)
+{
+	$('#choose').html(res.result);
+	$("#choose").animate({height:'80%'},[10000]);
+		var total=0,h=$(window).height(),
+        top =$('.f_title').height()||0,
+        con = $('.f_content');
+		total = 0.8*h;
+		con.height(total-top+'px');
+	$(".f_mask").show();
+}
+function close_choose(){	
+
+	$(".f_mask").hide();
+	$('#choose').animate({height:'0'},[10000]);
+
+}
+</script>
+<script type="text/javascript">
+var process_request = "正在处理您的请求...";
+var username_empty = "- 用户名不能为空。";
+var username_shorter = "- 用户名长度不能少于 3 个字符。";
+var username_invalid = "- 用户名只能是由字母数字以及下划线组成。";
+var password_empty = "- 登录密码不能为空。";
+var password_shorter = "- 登录密码不能少于 6 个字符。";
+var confirm_password_invalid = "- 两次输入密码不一致";
+var email_empty = "- Email 为空";
+var email_invalid = "- Email 不是合法的地址";
+var agreement = "- 您没有接受协议";
+var msn_invalid = "- msn地址不是一个有效的邮件地址";
+var qq_invalid = "- QQ号码不是一个有效的号码";
+var home_phone_invalid = "- 家庭电话不是一个有效号码";
+var office_phone_invalid = "- 办公电话不是一个有效号码";
+var mobile_phone_invalid = "- 手机号码不是一个有效号码";
+var msg_un_blank = "* 用户名不能为空";
+var msg_un_length = "* 用户名不得超过14个字符";
+var msg_un_format = "* 用户名含有非法字符";
+var msg_un_registered = "* 用户名已经存在,请重新输入";
+var msg_can_rg = "* 可以注册";
+var msg_email_blank = "* 邮件地址不能为空";
+var msg_email_registered = "* 邮箱已存在";
+var msg_email_format = "* 邮件地址不合法";
+var msg_blank = "不能为空";
+var no_select_question = "- 您没有完成密码提示问题的操作";
+var passwd_balnk = "- 密码中不能包含空格";
+var username_chana = "- 用户名不能有中文。";
+var msg_uname_length = "- 用户名不能超过 20 个字符。";
+var msg_un_chine = "* 用户名不能为中文";
+var msg_mobile_phone_blank = "* 手机号码不能为空";
+var msg_mobile_phone_registered = "* 手机号码已存在";
+var msg_mobile_phone_format = "* 手机号码不是一个有效号码";
+var msg_email_code_blank = "- 邮箱验证码不能为空";
+var msg_mobile_phone_code_blank = "- 手机验证码不能为空";
+var msg_captcha_blank = "- 验证码不能为空";
+var msg_register_type_blank = "- 注册类型不能为空";
+var username_exist = "用户名 %s 已经存在";
+var compare_no_goods = "您没有选定任何需要比较的商品或者比较的商品数少于 2 个。";
+var btn_buy = "购买";
+var is_cancel = "取消";
+var select_spe = "请选择商品属性";
+</script>
+</body>
+</html>
+
+

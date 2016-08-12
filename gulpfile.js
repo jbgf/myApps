@@ -26,7 +26,7 @@ gulp.task('default',function(callback){
 gulp.task('browserSync',function(){
 	browserSync.init({
         server: {
-            baseDir: "./wheel"
+            baseDir: "./eccyy"
         }
     });
 /*	browserSync({
@@ -46,8 +46,8 @@ gulp.task('watch',['browserSync'/*,'connectPhp'*/],function(){
 
 gulp.task('connectPhp',function(){
 	connect.server({
-		bin:'D:/wamp/bin/php/php5.4.16/php.exe',
-		ini: 'D:/wamp/bin/php/php5.4.16/php.ini',
+		bin:'f:/xampp/php/php.exe',
+		ini: 'f:/xampp/php/php.ini',
 		port:8001
   	});
   	

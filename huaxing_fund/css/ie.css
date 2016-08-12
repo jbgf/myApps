@@ -1,0 +1,6 @@
+.index_reg{background-color: rgb(17,9,48)\0}
+
+#div_wind_id > .box_row{
+    margin-top: 20px\0;
+}
+#div_wind_id > .box_row:first-child{margin-top: 0\0;}

@@ -1,6 +1,7 @@
 ﻿//首页广告和banner
 $(function(){
 	
+
 /*导航切换*/	
 
 	for(i=0;i<7;i++){$(".nav-ul li a").eq(i).wrapInner( '<span class="out out'+i+' "></span>' );}
@@ -47,3 +48,5 @@ $(function(){
 		$("#safety_right_conl").children('div').hide().eq(_index).show().children('span').stop(true,false).animate({bottom:'0px'},500);
 	});
 })
+
+

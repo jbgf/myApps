@@ -1,0 +1,1032 @@
+﻿
+
+<!DOCTYPE html>
+<html >
+<head>
+    
+    <title>线路板在线计价 - 深圳捷多邦科技有限公司</title>
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/icon.css" rel="stylesheet"  type="text/css" >
+    <link href="css/easyui.css" rel="stylesheet" type="text/css" >
+    <style type="text/css">
+        input[type='radio']{
+            position: relative;
+
+        }
+        input[type='radio']:checked{
+            outline: none;
+
+        }
+        input[type='radio']:before{
+            content: " ";
+            display: inline-block;
+            background:#fff;
+            border:1px solid #AEAEB2;
+            border-radius: 15px;
+            width:11px;
+            height: 10px;
+            position: absolute;
+            text-align: center;
+            vertical-align: middle;
+            padding-bottom: 1px;
+            line-height: 13px;
+            font-size: 12px;
+            left: 1px;
+            
+        }
+        input[type='radio']:checked:before{
+            content: "\2713";
+            background-color: #3797fc;
+            color:#fff;
+            border:none;
+            
+            
+            
+            
+        }
+        ins
+        {
+            background: url(img/ico_allbgs.png) no-repeat;
+            background-position: 1px -1113px;
+            padding-left: 15px;
+            width: 1px;
+            height: 24px;
+            line-height: 24px;
+            margin-left: 3px;
+            cursor: help;
+            vertical-align: middle;
+            text-decoration: none;
+            float: right;
+            padding-right: 10px;
+        }
+        #divtip
+        {
+            position: absolute;
+            visibility: visible;
+            background-color: #fafafa;
+            border: 1px solid #666;
+            padding: 6px;
+            -moz-border-radius: 8px;
+            -webkit-border-radius: 8px;
+            font-size: 12px;
+            font-family: arial;
+            line-height: 1.5;
+            width: 300px;
+            margin: 0px;
+            z-index: 9999;
+            display: block;
+        }
+        #divtip b
+        {
+            padding: 4px 0;
+            display: inline-block;
+        }
+        #divtip .tip-top
+        {
+            position: absolute;
+            top: -10px;
+            width: 10px;
+            height: 10px;
+        }
+        #divSelectNum li
+        {
+            float: left;
+            width: 55px;
+            line-height: 25px;
+        }
+        #divSelectNum ul
+        {
+            margin-left: 10px;
+        }
+        .jofi
+        {
+            position: absolute;
+            top: 0px;
+            left: 473px;
+        }
+        .jofia
+        {
+            position: absolute;
+            top: 0px;
+            left: 280px;
+        }
+        .witFc
+        {
+            position: relative;
+            width: 100%;
+        }
+        a.btnhoverstyle:hover input
+        {
+            background-position: left -134px;
+            color: #447307;
+            text-decoration: none;
+        }
+        a.btnhoverstyle input
+        {
+            width: 60px;
+            height: 23px;
+            line-height: 23px;
+            text-align: center;
+            background-position: -63px -134px;
+            border: 0px;
+            padding-left: 0px;
+            cursor: pointer;
+            color: #3D3D3D;
+            text-decoration: none;
+        }
+        a.btnhoverstyle input
+        {
+            background-image: url(img/bg.png);
+        }
+        img
+        {
+            border: 0px;
+        }
+        .w600
+        {
+            width: 600px;
+            margin: 0px auto;
+            padding: 10px 0px;
+        }
+        .table1
+        {
+            border-left: 1px solid #000;
+            border-bottom: 1px solid #000;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+        .table1 td, .table1 th
+        {
+            border-right: 1px solid #000;
+            border-top: 1px solid #000;
+            padding: 5px;
+            line-height: 18px;
+        }
+    </style>
+    <script src="js/jquery-1.8.0.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    /*0.4只能选沉金*/
+        $(function(){
+            
+            $("[name='radBoardThickness']").click(function(){
+        /*判断*/        if($("[name='radBoardThickness']").index($(this))==0){
+                  
+                    $("[name='radPlatingType']:not(:last)").attr("disabled",true)
+                }else{
+                    
+                    $("[name='radPlatingType']").attr("disabled",false);
+                    
+                }
+                
+
+            });
+
+        /*数量*/
+            $("[name='countNumer']").click(function(){
+
+                if($(this).val()>=100){
+                    alert("big")
+                }else{
+                    alert("small")
+                }
+            })            
+        })
+    </script>
+</head>
+<body>
+    <!-- 公共头部开始 -->
+    
+
+<script type="text/javascript" language="javascript">
+    function SubClick(type) {
+        // $("#actTop").val(type);
+        // $("#formTop").submit();
+        document.getElementById("actTop").value = type;
+        document.forms["formTop"].submit();
+    }
+</script>
+
+<div class="wrap">
+    <div class="header">
+        <div class="welcome">
+            <form id="formTop" action="" method="post">
+            <input name="actTop" type="hidden" id="actTop" />
+             亲！欢迎进入捷多邦线路板打样工厂！<a href="#">免费注册</a> | <a href="#">登录</a>
+            | <a href="shop/" title="积分商城">积分商城</a> | <a href="service/ask.html" title="帮助中心">
+                帮助中心</a>
+            </form>
+        </div>
+        <div class="logo">
+            <a href="#">
+                <img src="img/logo.gif" /></a></div>
+        <div class="topmenu">
+            <ul>
+                <li><a href="online/" title="在线计价"><span><em>在线计价</em><br />
+                    足不出户轻松打样</span></a></li>
+                <li><a href="#"><span class="news"><em>客户登录</em><br />
+                    快捷助您在线下单</span></a></li>
+            </ul>
+        </div>
+        <div class="clear">
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="online/" class="on">在线计价</a></li>
+                 <li><a href="#">SMT打样</a></li>
+                <li><a href="#">下单流程</a></li>
+                <li><a href="#">工厂展示</a></li>
+                <li><a href="#">样板展示</a></li>
+                <li><a href="#">工艺展示</a></li>
+                <li><a href="#">公司简介</a></li>
+                <li><a href="#">联系我们</a></li>
+                
+                <li><a href="#">工程师家园</a></li>
+               
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <!-- 公共头部结束 -->
+    <div class="main">
+        <div class="current">
+            您的位置：<a href="#">首页</a> &gt;&gt; 在线计价</div>
+        <h2 class="h2tit onlineprice">
+            <ul class="regstep">
+                <li class="green">填写订单需求</li><li>在线计算价格</li><li class="width164">保存订单</li></ul>
+            <span>在线计价</span></h2>
+        <form method="post" id="onlineForm" action="onlinethree.html">
+        <div class="topborder">
+            <div class="content">
+                <table cellpadding="0" cellspacing="0" class="onlinepricetable">
+                    <tr>
+                        <td width="89" align="center">
+                            <i>板子大小：</i>
+                        </td>
+                        <td width="823">
+                            <input id="hidWidth" name="hidWidth" type="text" class="txtstyle1 easyui-validatebox"
+                                data-options="required:true,validType:'num'" value="宽度" onfocus="this.style.borderColor='#d5210d'; if(this.value=='宽度'){this.style.textAlign='left';this.style.color='#333'; this.value=''}"
+                                onblur="this.style.borderColor='#ccc'; if(this.value==''){this.style.textAlign='right'; this.style.color='#ccc'; this.value='宽度'}"
+                                style="text-align: right; color: #ccc" missingmessage="请填写板子宽度" invalidmessage="请正确填写板子宽度" />
+                            X
+                            <input id="hidLength" name="hidLength" type="text" class="txtstyle1 easyui-validatebox"
+                                data-options="required:true,validType:'num'" onfocus="this.style.borderColor='#d5210d'; if(this.value=='长度'){this.style.textAlign='left';this.style.color='#333'; this.value=''}"
+                                onblur="this.style.borderColor='#ccc'; if(this.value==''){this.style.textAlign='right'; this.style.color='#ccc'; this.value='长度'}"
+                                value="长度" style="text-align: right; color: #ccc" missingmessage="请填写板子长度" invalidmessage="请正确填写板子长度" />
+                            <span style="color: #7f7f7f; font-size: 12px">( 单位：cm )</span>
+                        </td>
+                        <td width="66" align="center">
+                            <em id="help_widthlength">[说明]</em>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="89" height="26" align="center">
+                            <i>板子层数：</i>
+                        </td>
+                        <td>
+                            <input type="radio" name="hidLayers" value="1" />
+                            1
+                            <input type="radio" name="hidLayers" value="2" checked="checked" />
+                            2
+                            <input type="radio" name="hidLayers" value="4" />
+                            4
+                            <input type="radio" name="hidLayers" value="6" />
+                            6
+                            <input type="radio" name="hidLayers" value="8" />
+                            8
+                            <input type="radio" name="hidLayers" value="10" />
+                            10
+                        </td>
+                        <td align="center">
+                            <em id="help_layers">[说明]</em>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="89" height="26" align="center">
+                            <i>板子数量：</i>
+                        </td>
+                        <td style="position: relative; display: block;">
+                            <input id="hidNum" name="hidNum" readonly="readonly" type="text" class="txtstyle1 easyui-validatebox"
+                                data-options="required:true,validType:'num'" onfocus="this.style.borderColor='#d5210d'; this.style.borderBottomWidth='1';"
+                                onblur="this.style.borderBottomWidth='1px'; this.style.borderColor='#ccc'; "
+                                style="position: relative; z-index: 2;" invalidmessage="请正确填写板子长度" />
+                        </td>
+                        <td align="center">
+                            <em id="help_ordertype">[说明]</em>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="89" height="26" align="center">
+                            <i>设计文件款数：</i>
+                        </td>
+                        <td>
+                            <input id="txtPinBanNum" name="txtPinBanNum" type="text" class="txtstyle1 easyui-validatebox"
+                                data-options="required:true,validType:'num'" onfocus="this.style.borderColor='#d5210d'"
+                                onblur="this.style.borderColor='#ccc'" value="1" />
+                        </td>
+                        <td align="center">
+                            <em id="help_pinban">[说明]</em>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="89" height="26" align="center">
+                            <i>订单类型：</i>
+                        </td>
+                        <td>
+                             <span id="spOrderType"></span> &nbsp; 板材类型
+                            <select class="seli" name="selMaterial"  id="selMaterial">
+                                <option value="FR-4">FR-4</option>
+                                <option value="铝基板1.3">铝基板(导热系数1.3)</option>
+                                <option value="铝基板2.0">铝基板(导热系数2.0)</option>
+                            </select>
+                            <span id="spCailiao" style="display: none"></span>
+                        </td>
+                        <td align="center">
+                            <em id="help_ordertype">[说明]</em>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="89" height="26" align="center">
+                            <i>板子厚度：</i>
+                        </td>
+                        <td>
+                            <input type="radio" name="radBoardThickness" value="0.4" title="提示(单位mm) 建议选择板厚0.6~1.6 其它板厚价格比0.6~1.6工程费要高100~200元" />
+                            0.4
+                            <input type="radio" name="radBoardThickness" value="0.6" title="提示(单位mm) 建议选择板厚0.6~1.6 其它板厚价格比0.6~1.6工程费要高100~200元" />
+                            0.6
+                            <input type="radio" name="radBoardThickness" value="0.8" />
+                            0.8
+                            <input type="radio" name="radBoardThickness" value="1.0" />
+                            1.0
+                            <input type="radio" name="radBoardThickness" value="1.2" />
+                            1.2
+                            <input type="radio" name="radBoardThickness" value="1.6" checked="checked" />
+                            1.6
+                            <input type="radio" name="radBoardThickness" value="2.0" title="提示(单位mm) 建议选择板厚0.6~1.6 其它板厚价格比0.6~1.6工程费要高100~200元" />
+                            2.0
+                            <input type="radio" name="radBoardThickness" value="2.4" />
+                            2.4
+                        </td>
+
+                        <td align="center">
+                            <em id="help_houdu">[说明]</em>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="26" align="center">
+                            <i>最小线宽/线距</i>
+                        </td>
+                        <td>
+                            <input type="radio" name="radLineWeight" value="4/4mil" />
+                            4/4mil<input type="radio" name="radLineWeight" value="5/5mil" />
+                            5/5mil
+                            <input name="radLineWeight" type="radio" value="6/6mil" checked="checked" />
+                            6/6mil ↑
+                        </td>
+                        <td align="center">
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="26" align="center">
+                            <i>过孔：</i>
+                        </td>
+                        <td>
+                            <input type="radio" name="radVias" value="0.2" />
+                            0.2mm
+                            <input type="radio" name="radVias" value="0.25">
+                            0.25mm
+                            <input name="radVias" type="radio" value="0.3" checked="checked" />
+                            0.3mm ↑
+                        </td>
+                        <td align="center">
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="89" height="26" align="center">
+                            <i>阻焊颜色：</i>
+                        </td>
+                        <td>
+                            <input type="radio" name="radSolderColor" value="绿色" checked="checked" />
+                            <font size="4" color="green">■</font>绿色
+                            <input type="radio" name="radSolderColor" value="红色" title="免颜色费" />
+                            <font size="4" color="red">■</font>红色
+                            <input type="radio" name="radSolderColor" value="黄色" title="免颜色费" />
+                            <font size="4" color="yellow">■</font>黄色
+                            <input type="radio" name="radSolderColor" value="蓝色" title="免颜色费" />
+                            <font size="4" color="blue">■</font>蓝色
+                            <input type="radio" name="radSolderColor" value="白色" title="" />
+                            <font size="4">□</font>白色
+                            <input type="radio" name="radSolderColor" value="黑色" title="" />
+                            <font size="4">■</font>黑色
+                            <input type="radio" name="radSolderColor" value="无" title="无阻焊" />
+                            无
+                        </td>
+                        <td align="center">
+                            <em id="help_zhys">[说明]</em>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="89" height="26" align="center">
+                            <i>字符颜色：</i>
+                        </td>
+                        <td>
+                            <input type="radio" name="radFontColor" value="白色" checked="checked">
+                            <font size="4">□</font>白色
+                            <input type="radio" name="radFontColor" value="黑色" disabled="disabled">
+                            <font size="4">■</font>黑色
+                            <input type="radio" name="radFontColor" value="无">
+                            无
+                        </td>
+                        <td align="center">
+                            <em id="help_fontcolor">[说明]</em>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="89" height="26" align="center">
+                            <i>焊盘喷镀：</i>
+                        </td>
+                        <td>
+                            <input type="radio" name="radPlatingType" value="有铅喷锡" checked="checked">
+                            有铅喷锡
+                            <input type="radio" name="radPlatingType" value="无铅喷锡" title="无铅喷锡比有铅喷锡,喷镀费每款高20元">
+                            无铅喷锡
+                            <input type="radio" name="radPlatingType" value="沉金" title="沉金比有铅喷锡,喷镀费每款高100元">
+                            沉金
+                        </td>
+                        <td align="center">
+                            <em id="help_pingdu">[说明]</em>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="89" height="26" align="center">
+                            <i>阻焊覆盖：</i>
+                        </td>
+                        <td>
+                            <input type="radio" name="radZhfg" value="过孔盖油" checked="checked" title="过孔盖油指的是过孔上不做表面喷锡/沉金 ，过孔开窗指的是过孔上做表面喷锡/沉金，如无特殊要求，如果不做特殊说明一般为过孔盖油">
+                            过孔盖油
+                            <input type="radio" name="radZhfg" value="过孔塞油" title="">
+                            过孔塞油
+                            <input type="radio" name="radZhfg" value="过孔开窗" title="过孔盖油指的是过孔上不做表面喷锡/沉金 ，过孔开窗指的是过孔上做表面喷锡/沉金，如无特殊要求，如果不做特殊说明一般为过孔盖油">
+                            过孔开窗 <span style="color: #FF0000; font-size: 12px; padding-left: 50px;">注：如是gerber文件，一律按文件加工，此选项无效！</span>
+                        </td>
+                        <td align="center">
+                            <em id="help_zhfg">[说明]</em>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="89" height="26" align="center">
+                            <i>测试：</i>
+                        </td>
+                        <td><p>
+                         <input type="radio" value="全部测试" name="radTestType" checked="checked" title="对于线宽线距小于0.5mm,过孔小于0.5mm,请选择全部测试,保证100%的产品合格率。" />
+                        全部测试(样板及多层板免费测试)</p><p>
+                        <input type="radio" value="抽测试" name="radTestType" title="线宽大于0.5mm,过孔大于0.5mm，路线比较少的可以选择抽测试，合格率95%以上，当合格率小于95%,我司免费全测。" />
+                        抽测试(免费AOI光学扫描+飞针抽测)</p><p>
+                         <input type="radio" value="测试架测试" name="radTestType" title="测试架费用以审核后为准" />
+                        测试架测试(免费AOI光学扫描+测试架测试),速度快,一次性费用,返单不收费。测试架费用预计600-800元,以审核后为准。</p>
+                        <input type="radio" value="不测试" name="radTestType" />
+                        不测试
+                        </td>
+                        <td align="center">
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="89" height="26" align="center">
+                            <i>铜箔厚度：</i>
+                        </td>
+                        <td>
+                            <input type="radio" name="radCopperThickness" value="1/1oz" checked="checked">
+                            1/1oz
+                            <input type="radio" name="radCopperThickness" value="2/2oz">
+                            2/2oz
+                            <input type="radio" name="radCopperThickness" value="3/3oz" disabled="disabled" />
+                            3/3oz <span style="display: none" id="spInsideThickness">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;内层铜厚
+                                <input disabled="disabled" type="radio" name="radInsideThickness" value="1" />
+                                1 OZ
+                                <input disabled="disabled" type="radio" name="radInsideThickness" value="1.5" />
+                                1.5 OZ</span> <font color="red">内层铜厚免费升级为1OZ</font>
+                        </td>
+                        <td align="center">
+                            <em id="help_tonghou">[说明]</em>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="89" height="26" align="center">
+                            <i>生产周期：</i>
+                        </td>
+                        <td>
+                            <select class="seli" id="radDeliveryDays" name="radDeliveryDays">
+                                <option value="3">正常3-4天(样板)</option>
+                            </select>
+                        </td>
+                        <td align="center">
+                            <em id="help_jiaohuo">[说明]</em>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="89" height="26" align="center">
+                            <i>需要发票：</i>
+                        </td>
+                        <td>
+                            <input type="radio" name="hidBill" value="0" checked="checked" />
+                            不需要
+                            <input type="radio" name="hidBill" value="1" />
+                            普通发票
+                            <input type="radio" name="hidBill" value="2" />
+                            增值税发票
+                        </td>
+                        <td align="center">
+                            <em id="help_bill">[说明]</em>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="89" height="26" align="center">
+                            <i>快递公司：</i>
+                        </td>
+                        <td>
+                            <select class="seli" id="selExpressType">
+                                <option value="广东省内">广东省内</option>
+                                <option value="广东省外">广东省外</option>
+                            </select>
+                            <select class="seli" id="selExpressName" name="selExpressName">
+                                <option value="">请选择</option>
+                                <option value="港中能达">港中能达</option>
+                                <option value="联昊通">联昊通</option>
+                                <option value="顺丰">顺丰</option>
+                                <option value="德邦物流">德邦物流</option>
+                            </select>
+                        </td>
+                        <td align="center">
+                            <em id="help_paytype">[说明]</em>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="89" align="center">
+                            <i>备注：</i>
+                        </td>
+                        <td colspan="2">
+                            <textarea style="width: 96%; height: 50px" class="textarea1" name="txtNote" id="txtNoet"></textarea>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="sumbitbox">
+                <input id="btn1" type="submit" value="测算价格" />
+            </div>
+        </div>
+        </form>
+    </div>
+    <div id="divtip" style="left: 610.5px; top: 310.7px; display: none">
+        <div style="position: absolute; z-index: -1; left: -1px; top: 0; width: 315px;">
+            <iframe style="width: 100%; height: 100%; filter: alpha(opacity=0); -moz-opacity: 0;
+                border: none;"></iframe>
+        </div>
+        <div class="tip-top" style="right: 20px;" id="tipnote">
+        </div>
+        <span id="spnote"></span>
+    </div>
+    <div id="expressTip" style="display: none">
+        <div class="w600">
+            <p style="text-indent: 24px;">
+                为满足不同客户群体的要求，我司推出PCB打样广东省外包邮活动，（注：1.订单类型为“样板”的，广东省外选择时使用天天快递，全部免费包邮；2.订单类型为“小批量”客户选择天天快递时，暂不参与包邮活动，需收取如下所示表格的快递费用）
+            </p>
+            <table cellpadding="0" cellspacing="0" class="table1" width="100%">
+                <tr>
+                    <th>
+                        到达区域
+                    </th>
+                    <th>
+                        快递时效
+                    </th>
+                    <th>
+                        小批量包邮价
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        广西、江浙沪、湖北、湖南、北京
+                    </td>
+                    <td>
+                        约2-3天
+                    </td>
+                    <td>
+                        首重5元/KG，续重3元/KG
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        江西、福建、安徽、贵州、重庆、天津、河北、河南、海南、云南、四川
+                    </td>
+                    <td>
+                        约3-4天
+                    </td>
+                    <td>
+                        首重5元/KG，续重5元/KG
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        陕西、山东、黑龙江、山西、吉林、辽宁
+                    </td>
+                    <td>
+                        约4-5天
+                    </td>
+                    <td>
+                        首重5元/KG，续重7元/KG
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        甘肃
+                    </td>
+                    <td>
+                        约5-6天
+                    </td>
+                    <td>
+                        首重5元/KG，续重7元/KG
+                    </td>
+                </tr>
+            </table>
+            <p>
+                <strong>选择天天快递，表示愿意接受以下条款：</strong></p>
+            <p>
+                1. 因天天样板订单快递免费包邮，且小批量包邮时运费比顺丰便宜得多，那么快递时效上是不如顺丰的，加急订单或者对时效要求较高的，请客户慎重选择。
+            </p>
+            <p>
+                2. 天天快递从捷多邦深圳工厂发出到全国各地的时效也不一样，我司只保证发货时间，不保证物流时间，需要追件请客户自己联系快递公司（在客户端可以查看快递进度），快递到全国各地的时效及如上表所示；
+            </p>
+            <p>
+                3. 内蒙古、青海、宁夏、西藏、新疆、香港、台湾、澳门等地比较偏远或因天天快递无法送达，以上五省不包邮，全部按之前的顺丰到付发货。
+            </p>
+        </div>
+        <div class="sumbitbox">
+            <input id="Submit1" type="submit" value="接受" onclick="AccpetTTExpress()">
+        </div>
+    </div>
+    
+<div class="footer">
+    <div class="footerbox">
+        <div class="footlink">
+
+          <div style="float:left; margin-top:30px; margin-right:10px;border-right: 1px solid #565656; padding-right:10px;">   <a href="img/iso.jpg" target="_blank"><img src="img/isotag.gif" /></a><br /><span style=" color:#ccc; line-height:30px; display:block; text-align:center;">已通过ISO90001:2008质量体系认证</span></div> 
+
+            <ul class="botmenu" >
+                <li>全球PCB快捷打样、小批量生产服务商</li><li>PCB、钢网、SMT加工一站式服务</li><li>特色电子电路互联服务领跑者</li></ul>
+            <ul class="botmena">
+                <li>公司地址：深圳市福田区福明路雷圳大厦2001-2002</li><li>工厂地址：深圳市坑梓街道金沙社区金沙工业三路2号</li><li>咨询电话：400-852-8880</li></ul>
+            <!--
+            <ul class="botmenb">
+                <li>全国办事处：</li><li>
+                    
+                            <a href="http://hangzhou.jdbpcb.com" target="_blank">
+                                杭州</a>
+                        
+                            <a href="http://henan.jdbpcb.com" target="_blank">
+                                河南</a>
+                        
+                            <a href="http://zhengzhou.jdbpcb.com" target="_blank">
+                                郑州</a>
+                        
+                            <a href="http://shandong.jdbpcb.com" target="_blank">
+                                山东</a>
+                        
+                            <a href="http://jinan.jdbpcb.com" target="_blank">
+                                济南</a>
+                        
+                            <a href="http://fujian.jdbpcb.com" target="_blank">
+                                福建</a>
+                        
+                            <a href="http://fuzhou.jdbpcb.com" target="_blank">
+                                福州</a>
+                        
+                            <a href="http://guangzhou.jdbpcb.com" target="_blank">
+                                广州</a>
+                        
+                            <a href="http://guangdong.jdbpcb.com" target="_blank">
+                                广东</a>
+                        
+                            <a href="http://dongguan.jdbpcb.com" target="_blank">
+                                东莞</a>
+                        
+                            <a href="http://zhejiang.jdbpcb.com" target="_blank">
+                                浙江</a>
+                        
+                            <a href="http://ningbo.jdbpcb.com" target="_blank">
+                                宁波</a>
+                        
+                            <a href="http://wenzhou.jdbpcb.com" target="_blank">
+                                温州</a>
+                        
+                            <a href="http://anhui.jdbpcb.com" target="_blank">
+                                安徽</a>
+                        
+                            <a href="http://xiamen.jdbpcb.com" target="_blank">
+                                厦门</a>
+                        
+                            <a href="http://hunan.jdbpcb.com" target="_blank">
+                                湖南</a>
+                        
+                            <a href="http://jiangsu.jdbpcb.com" target="_blank">
+                                江苏</a>
+                        
+                            <a href="http://nanjing.jdbpcb.com" target="_blank">
+                                南京</a>
+                        
+                            <a href="http://jiangxi.jdbpcb.com" target="_blank">
+                                江西</a>
+                        
+                            <a href="http://shantou.jdbpcb.com" target="_blank">
+                                汕头</a>
+                        
+                            <a href="http://zhuhai.jdbpcb.com" target="_blank">
+                                珠海</a>
+                        
+                            <a href="http://sichuan.jdbpcb.com" target="_blank">
+                                四川</a>
+                        
+                            <a href="http://chengdu.jdbpcb.com" target="_blank">
+                                成都</a>
+                        
+                            <a href="http://guangxi.jdbpcb.com" target="_blank">
+                                广西</a>
+                        
+                            <a href="http://beijing.jdbpcb.com" target="_blank">
+                                北京</a>
+                        
+                            <a href="http://shanghai.jdbpcb.com" target="_blank">
+                                上海</a>
+                        
+                            <a href="http://tianjin.jdbpcb.com" target="_blank">
+                                天津</a>
+                        
+                            <a href="http://chongqing.jdbpcb.com" target="_blank">
+                                重庆</a>
+                        
+                            <a href="http://jinhua.jdbpcb.com" target="_blank">
+                                金华</a>
+                        
+                            <a href="http://suzhou.jdbpcb.com" target="_blank">
+                                苏州</a>
+                        
+                            <a href="http://kunshan.jdbpcb.com" target="_blank">
+                                昆山</a>
+                        
+                            <a href="http://wuxi.jdbpcb.com" target="_blank">
+                                无锡</a>
+                        
+                            <a href="http://hubei.jdbpcb.com" target="_blank">
+                                湖北</a>
+                        
+                </li>
+            </ul>
+            -->
+           
+        </div>
+        <div class="copyright">
+            深圳捷多邦科技有限公司版权所有 <a href="http://www.miitbeian.gov.cn/" target="_blank">粤ICP备15005641号-2</a>
+            | <a href="about/order.html" target="_blank">下单流程</a> | <a
+                href="online/searchorder.aspx" target="_blank">订单查询</a>
+            | <a href="#">PCB产品</a>| <a href="#">推荐产品</a> | <a href="http://www.kuaidi100.com/"
+                target="_blank">快递查询</a>
+
+            <script type="text/javascript">
+                var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+                document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F020f889b5d07e64770632ad47a127e88' type='text/javascript'%3E%3C/script%3E"));
+            </script>
+
+            <script type="text/javascript">
+                var _sogou_sa_q = _sogou_sa_q || [];
+                _sogou_sa_q.push(['_sid', '204951-210623']);
+                (function() {
+                    var _sogou_sa_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");
+                    var _sogou_sa_src = _sogou_sa_protocol + "hermes.sogou.com/sa.js%3Fsid%3D204951-210623";
+                    document.write(unescape("%3Cscript src='" + _sogou_sa_src + "' type='text/javascript'%3E%3C/script%3E"));
+                })();
+            </script>
+
+            
+
+            
+
+        </div>
+    </div>
+</div>
+<div id="floatTools" class="float0831" style="width: 128px;">
+    <div id="divFloatToolsView" class="floatR" style="clear: both; margin-bottom: 10px;">
+        <div class="tp">
+        </div>
+        <div class="cn">
+            <ul>
+                <li style="padding-top: 7px; padding-left: 7px;height: 29px; line-height: 29px;">
+                    
+                <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=76381057&amp;Site=客服1&amp;menu=yes" target="_blank">
+<img border="0" src="http://wpa.qq.com/pa?p=1:76381057:4">
+<span>&nbsp;客服1</span>
+</a>
+                </li>
+                <li style="padding-top: 7px; padding-left: 7px;height: 29px; line-height: 29px;">
+                <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=399291906&amp;Site=客服2&amp;menu=yes" target="_blank">
+<img border="0" src="http://wpa.qq.com/pa?p=1:399291906:4">
+<span>&nbsp;客服2</span>
+</a>
+                </li>
+                <li style="padding-top: 7px;padding-left: 7px; height: 29px; line-height: 29px;">
+                <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=272076037&amp;Site=客服3&amp;menu=yes" target="_blank">
+<img border="0" src="http://wpa.qq.com/pa?p=1:272076037:4">
+<span>&nbsp;客服3</span>
+</a>    
+                <!--    <script charset="utf-8" type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php?key=XzgwMDAyNjQ4MV8zOTY1N184MDAwMjY0ODFf"></script>-->
+
+                    
+                </li>
+            </ul>
+            <ul>
+             
+                    
+                <li><span class="icoTl">400-852-8880</span></li>
+                
+                <li>
+                    <img src="img/wx.gif"></li>
+                <li style="height: 110px">
+                    <img src="img/weixin.gif"></li>
+                <li style="height: 65px; line-height: 17px">&nbsp;&nbsp;在线计价、生产进度查询、下发订单消息，赶紧<b>扫一扫</b>吧!
+                </li>
+               
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+<!--[if lte IE 6]>
+<script type="text/javascript">
+function divScroll(){
+    var scrollT = document.documentElement.scrollTop;
+    floatTools.style.top = scrollT+100;
+}
+window.onscroll = function(){ setTimeout(divScroll,100);};
+</script>
+<![endif]-->
+
+<script type="text/javascript">
+    var floatTools;
+    window.onload = function() {
+        floatTools = document.getElementById("floatTools");
+    }
+</script>
+
+<!-- JiaThis Button BEGIN -->
+
+<!-- JiaThis Button END -->
+
+
+
+<script type="text/javascript" src="http://tajs.qq.com/gdt.php?sId=28132920" charset="UTF-8"></script>
+
+
+    
+
+    <script src="js/jquery.easyui.min.js" type="text/javascript"></script>
+
+    <script src="js/easyui-lang-zh_CN.js"
+        type="text/javascript"></script>
+
+    <script src="js/ordertip.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        var isShowExpressTip = true;
+         $("#selExpressName").change(function() {
+            var expressName = $(this).val(); 
+            if (expressName == "天天快递" && $("#radDeliveryDays :selected").text().indexOf("加急") > -1) {
+                $.messager.alert('提示', '加急订单不能选择天天快递', 'show');
+                $("#selExpressName").val('顺丰寄付');
+                return;
+            }
+            else if(expressName=="顺丰特惠")
+            {
+               $.messager.alert('顺丰特惠', '每天只发一班，晚上收件，第二天下午派送，如果是急件，请选择顺丰（运费到付）', 'show'); 
+
+            }
+            else if (expressName == "天天快递" && isShowExpressTip)
+            {
+             $("#expressTip").show();
+             $('#expressTip').dialog({
+                title: '天天快递须知',
+                width: 700,
+                height: 510,
+                closed: false,
+                cache: true,
+                modal: true
+            });
+            }
+        });
+         function AccpetTTExpress() {
+            isShowExpressTip = false;
+            $("#expressTip").dialog("close");
+            $.get("member/ajax.aspx?act=SetAccpetTTExpress");
+        }
+      $("#radDeliveryDays").change(function() { $("#selExpressType").val(''); $("#selExpressName").empty().append('<option value="">请选择...</option>');});
+
+    </script>
+
+   <!-- <script src="js/online.js?v=201501123" type="text/javascript"></script>-->
+   <script type="text/javascript">
+       // JavaScript Document
+       // JavaScript Document
+
+
+var online = {
+
+    selectNumHtmlIsAdd: false,
+    selectNumHtml: '<div class="boardnumber" id="boardnumber" >' +
+                            '<ul>' +
+                            '<li><input type="radio" value="5" name="countNumer"/>5</li>' +
+                            '<li><input type="radio" value="10" name="countNumer"/>10</li>' +
+                            '<li><input type="radio" value="15" name="countNumer"/>15</li>' +
+                            '<li><input type="radio" value="20" name="countNumer"/>20</li>' +
+                            '<li><input type="radio" value="25" name="countNumer"/>25</li>' +
+                            '<li><input type="radio" value="30" name="countNumer"/>30</li>' +
+                            '<li><input type="radio" value="40" name="countNumer"/>40</li>' +
+                            '<li><input type="radio" value="50" name="countNumer"/>50</li>' +
+                            '<li><input type="radio" value="75" name="countNumer"/>75</li>' +
+                            '<li><input type="radio" value="100" name="countNumer"/>100</li>' +
+                            '<li><input type="radio" value="125" name="countNumer"/>125</li>' +
+                            '<li><input type="radio" value="150" name="countNumer"/>150</li>' +
+                            '<li><input type="radio" value="200" name="countNumer"/>200</li>' +
+                            '<li><input type="radio" value="250" name="countNumer"/>250</li>' +
+                            '<li><input type="radio" value="300" name="countNumer"/>300</li>' +
+                            '<li><input type="radio" value="350" name="countNumer"/>350</li>' +
+                            '<li><input type="radio" value="400" name="countNumer"/>400</li>' +
+                            '<li><input type="radio" value="450" name="countNumer"/>450</li>' +
+                            '<li><input type="radio" value="500" name="countNumer"/>500</li>' +
+                            '<li><input type="radio" value="600" name="countNumer"/>600</li>' +
+                            '<li><input type="radio" value="700" name="countNumer"/>700</li>' +
+                            '<li><input type="radio" value="800" name="countNumer"/>800</li>' +
+                            '<li><input type="radio" value="900" name="countNumer"/>900</li>' +
+                            '<li><input type="radio" value="1000" name="countNumer"/>1000</li>' +
+                            '<li><input type="radio" value="1500" name="countNumer"/>1500</li>' +
+                            '<li><input type="radio" value="2000" name="countNumer"/>2000</li>' +
+                            '<li><input type="radio" value="2500" name="countNumer"/>2500</li>' +
+                            '<li><input type="radio" value="3000" name="countNumer"/>3000</li>' +
+                            '<li><input type="radio" value="3500" name="countNumer"/>3500</li>' +
+                            '<li><input type="radio" value="4000" name="countNumer"/>4000</li>' +
+                            '<li><input type="radio" value="4500" name="countNumer"/>4500</li>' +
+                            '<li><input type="radio" value="5000" name="countNumer"/>5000</li>' +
+                            '<li><input type="radio" value="5500" name="countNumer"/>5500</li>' +
+                            '<li><input type="radio" value="6000" name="countNumer"/>6000</li>' +
+                            '<li><input type="radio" value="6500" name="countNumer"/>6500</li>' +
+                            '<li><input type="radio" value="7000" name="countNumer"/>7000</li>' +
+                            '<li><input type="radio" value="7500" name="countNumer"/>7500</li>' +
+                            '<li><input type="radio" value="8000" name="countNumer"/>8000</li>' +
+                            '<li style="width: 200px;">其他数量：<input id="txtSelNum" name="txtSelNum" type="text" class="txtstyle2"></li>' +
+                            '</ul>' +
+                            '<div class="boardnumberbtn">' +
+                            '<a href="javascript:void(0)" onclick="online.SetInputNum()">' +
+                            '<input id="btn2" type="button" value="提交"></a><a href="javascript:void(0)" onclick="online.CloseSelectNumDiv();"><input id="btn3" type="button" value="取消"></a></div>' +
+                            '</div>',
+
+
+    CloseSelectNumDiv: function () {
+        $('#boardnumber').hide();
+
+    },
+
+    
+
+
+    Init: function () {
+
+        
+
+        if (!online.selectNumHtmlIsAdd && $("#boardnumber").size() == 0) {
+
+            $(online.selectNumHtml).hide().insertAfter($("#hidNum")); online.electNumHtmlIsAdd = true;
+
+        }
+        $(":radio[name='countNumer']").click(function () { $("#hidNum").val($(this).val()); $("#txtSelNum").val(""); online.CloseSelectNumDiv(); /*online.SetDeliveryDays(0);*/ });
+        $(":radio[name='radPlatingType']").click(function () { /*online.SetDeliveryDays(0); */});
+
+        $("#onlineForm").submit(function () {
+            if ($("#onlineForm").form('validate')) {
+                if ($("#selExpressName").val() == "") { $.messager.alert('提示', '请选择快递类型!', 'show'); return false; } return true;
+            };
+            return false;
+        });
+      
+    }
+}
+
+online.Init();
+
+$("#hidNum").click(function () { $("#boardnumber").show(); });
+
+   </script>
+</body>
+</html>
+

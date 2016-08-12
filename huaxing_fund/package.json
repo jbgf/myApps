@@ -1,0 +1,27 @@
+{
+  "name": "huaxing_fund",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbgf/huaxing_fund.git"
+  },
+  "author": "ww",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jbgf/huaxing_fund/issues"
+  },
+  "homepage": "https://github.com/jbgf/huaxing_fund#readme",
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "connect-php": "0.0.2",
+    "gulp": "^3.9.1",
+    "gulp-if": "^2.0.1",
+    "gulp-uglify": "^1.5.4",
+    "run-sequence": "^1.2.2"
+  }
+}

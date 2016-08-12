@@ -1,0 +1,514 @@
+@charset "gb2312";
+/* CSS Document */
+body{ background: url(../img/bodybg.gif) repeat-x scroll left top #FFFFFF;}
+.main{ width:980px; margin:0px auto 20px;}
+
+
+.seli { width:170px; border:1px solid #ccc;}
+.seli option { padding:2px; font-weight:bold}
+.aboutleft .tit,.aboutleft ul li a:hover,.aboutright .rcontact dl,.smallimg ul li a:hover b,.smallimg ul li a.on b,.sumbitbox input,.allprice,.sumbitbox input.pcbbtn,.circuitrydetail .agree,.pdfsearch .pdfbtn,.pdfjj dd ul li a,.softwarelist a.download,.pdfsearchlist a.downloadpdf,.prodetailleft .newstips .newsonline,.pdfindexbox ul li.pdfbtnstyle1 input,.serviceleft ul li a:hover,.serviceleft ul li a.on,.problemfrom dl dd input,.serviceleft ul li{ background-image:url(../img/basebg.png);}
+.aboutright .rservice dl dd a,.h2tit,.bigimgbox .imgtit em a,.smallimg .pre,.smallimg .next{ 
+	background-image:url(../img/icon01.png); background-repeat:no-repeat;}
+.onlineorderbox dl dd.tip span,.error,.onlineorderbox dl dd.tip span.error,.yes,.onlinepricebox dl dd.tip span.yes{ background-image:url(../img/othericon.png); background-repeat:no-repeat;}
+.regbox .regform dd.btnstyle1 input,.regbox .regform dd.phone .freeyzm a,.regbox .changetab li,.message dd.btnstyle1 input{ background-image:url(../img/tabbg.png);}
+
+.current{ padding:12px 0px 12px 8px;}
+
+.content{ background:url(../img/mainbg.gif) repeat-x left top; width:100%; overflow:hidden;}
+
+.aboutleft{ width:172px; float:left; margin-top:20px;}
+.aboutleft .tit{ height:30px; background-position:left -590px; font-size:0px; line-height:30px; text-indent:10000px; overflow:hidden; width:100%;}
+.aboutleft ul{ width:100%;}
+.aboutleft ul li{ height:29px; line-height:29px;}
+.aboutleft ul li a{ display:block; padding-left:10px; background-color:#F4F4F4; border:1px solid #E9E9E9; border-top:1px solid #fff; width:160px;}
+.aboutleft ul li a:hover{ background-position:left -625px; color:#333; text-decoration:none;}
+.aboutleft ul li a.on{ border-left:2px solid #FF2A00; width:159px; background-color:#FFF;}
+
+.aboutcenter{ 
+	width:700px; float:left; margin:20px 29px 0px;
+}
+.aboutcenter .tit,.engineerright .tit{ font:18px/30px "Î¢ÈíÑÅºÚ"; border-bottom:1px solid #DDD; color:#4C4C4C;}
+.aboutcenter .boxA,.engineerright .boxA{ width:100%; overflow:hidden; padding-top:10px; line-height:20px;}
+
+
+.paytable{ width:98%; border-left:1px solid #E8E8E8; border-top:1px solid #E8E8E8;}
+.paytable th,.paytable td{ height:28px; line-height:28px;  border-right:1px solid #E8E8E8; border-bottom:1px solid #E8E8E8; padding:0px 20px;}
+.paytable th{ background-color:#F8FDFF; color:#2D8BCA;}
+
+.aboutright{ width:200px; float:right; margin-top:20px; overflow:hidden;}
+.aboutright .rcontact,.aboutright .rservice,.aboutright .rshare{ width:100%;}
+.aboutright .rcontact .tit,.aboutright .rservice .tit{ border-bottom:1px solid #DDD; line-height:30px; color:#4C4C4C; font:bold 14px/30px "Î¢ÈíÑÅºÚ"; margin-bottom:10px;}
+.aboutright .rcontact dl{ width:200px; height:191px; background-position:left -664px; overflow:hidden;}
+.aboutright .rcontact dl dt{ padding-left:45px; height:44px; line-height:44px; font-family:"Î¢ÈíÑÅºÚ"; font-size:16px;}
+.aboutright .rcontact dl dd span{ display:block; height:51px; padding:17px 10px 0px 55px;}
+.aboutright .rcontact dl dd p{ height:40px; color:#FFF; font-weight:bold; line-height:40px; padding-left:45px;}
+.aboutright .rcontact dl dd p em{ font-family:Arial, Helvetica, sans-serif; font-size:14px;}
+.aboutright .rcontact dl p a{ color:#FFF;}
+
+.aboutright .rservice,.aboutright .rshare{ margin-top:10px;}
+.aboutright .rservice dl{ border:1px solid #DDD; border-top:0px; background-color:#F5F5F5; padding:8px 10px; width:178px;}
+.aboutright .rservice dl dt{ margin-bottom:8px;}
+.aboutright .rservice dl dd{ margin-bottom:3px;}
+.aboutright .rservice dl dd a{ color:#1E307C; background-position:left -233px; padding-left:10px;}
+
+.h2tit{ font:30px/30px "Î¢ÈíÑÅºÚ"; color:#666; margin-bottom:10px; background-position:8px -285px; padding:3px 0px 3px 48px;}
+.h2tit ul{ float:right; width:422px; font-size:12px; color:#B2B1B1; background:url(../img/step.png) no-repeat left top; overflow:hidden; height:23px; margin-top:8px;}
+.h2tit ul li{ float:left; height:23px; line-height:23px; padding-left:28px; width:115px;}/* ÐÞ¸ÄÓÚ6-14 */
+.green{ color:#73D62B;}
+.h2tit ul li.width164{ width:104px;}/* ÐÞ¸ÄÓÚ6-14 */
+.h2tit ul li.width30{ width:30px;}
+.h2tit ul.two{ background-position:left -27px;}
+.h2tit ul.three{ background-position:left -53px;}
+
+
+.imglist{ width:100%; overflow:hidden; margin:20px 0px;}
+.imglist li{ width:319px; float:left; text-align:center; margin-right:10px; padding-bottom:15px;}
+.imglist li span{ display:table-cell; *display:block; width:317px; height:290px; border:1px solid #E0E0E0; vertical-align:middle; *font-size:175px;}
+.imglist li span img{ vertical-align:middle; width:300px; }
+.imglist li a{ font-size:14px;}
+.imglist li em{ display:block; margin-top:5px;}
+.imglist li.nomright{ margin-right:0px;}
+
+
+
+.imgshowbox{ width:978px; border:1px solid #E0E0E0; margin:20px 0px; overflow:hidden;}
+.bigimgbox{ width:778px; float:left; background-color:#F5F5F5; padding:15px; }
+.bigimgbox .bigimg{  width:778px; min-height:511px; text-align:center; _height:511px; overflow:hidden;}
+.bigimgbox .imgtit{ margin-bottom:20px;}
+.bigimgbox .imgtit span{ font-size:14px; font-weight:bold;}
+.bigimgbox .imgtit em{ float:right;}
+.bigimgbox .imgtit em a{ display:inline-block; width:24px; height:24px; background-position:left -347px; margin-left:6px;}
+.bigimgbox .imgtit em a.fullscreen{ background-position:left -376px;}
+.smallimg{ width:170px; float:right; padding-top:15px;}
+.smallimg .pre,.smallimg .next{ display:block; width:143px; height:14px; line-height:0px; font-size:0px; cursor:pointer; background-position:center -406px; margin-left:9px;}
+.smallimg .next{ background-position:center -425px;}
+.smallimg ul{ width:143px; height:512px; overflow:hidden; margin:10px 0px; padding-left:9px; position:relative; z-index:2;}
+.smallimg ul li{ width:143px; height:120px;  margin-bottom:10px; text-align:center; position:relative; z-index:1; _margin-bottom:8px;}
+.smallimg ul li a{ display:block; border:1px solid #E0E0E0; width:141px; height:118px;}
+.smallimg ul li img{ width:141px; height:118px;}
+.smallimg ul li a b{ display:none;}
+.smallimg ul li a:hover b,.smallimg ul li a.on b{ display:block; width:152px; height:120px; position:absolute; top:0px; left:-9px; background-position:left -869px;}
+.imgjj{ font-size:14px; line-height:22px; padding:15px 15px 15px 15px; border-top:1px solid #E0E0E0; color:#666;}
+
+
+.onlineprice{ background-position:8px top;}
+.onlinepricebox{  width:980px; overflow:hidden;}
+.onlinepricebox .content{ padding:30px 0px; border:1px solid #E0E0E0; border-top:0px; width:978px;}
+.onlinepricebox dl{ width:100%; padding:4px 0px; overflow:hidden; margin-bottom:1px; font-size:12px;}
+.onlinepricebox dl dt{ width:127px; float:left; text-align:right; line-height:25px;}
+.onlinepricebox dl dt em{ color:#D50048; font-size:12px;}
+.onlinepricebox dl dd{ width:390px; float:left; line-height:21px;}
+.onlinepricebox dl dd input{ width:196px; margin-right:3px; border:1px solid #ABABAB; height:25px; line-height:25px; padding-left:4px;}
+.onlinepricebox dl dd div{ color:#999; font-size:12px;}
+.onlinepricebox dl dd.tip{ width:40%;}
+.onlinepricebox dl dd.tip span{ background-position:left -125px; padding-left:15px; color:#434343; font-size:12px;}
+.error,.onlinepricebox dl dd.tip span.error{ background-position:left -161px; color:#E50E00; padding-left:15px;}
+.yes,.onlinepricebox dl dd.tip span.yes{ background-position:left -199px; color:#358508; padding-left:15px;}
+
+.sumbitbox{ text-align:center; padding:20px 0px; width:100%; overflow:hidden;}
+.sumbitbox input,.problemfrom dl dd input{ width:120px; height:36px; background-position:-164px -869px; line-height:36px; color:#FFF; font-family:"Î¢ÈíÑÅºÚ"; font-size:16px; margin-right:8px; border:0px; cursor:pointer; font-weight:bold;}
+.sumbitbox input.btnstyle2{ background-position:-164px -912px;}
+.sumbitbox input.pcbbtn{ background-position:left -1004px; width:250px; padding-top:16px; height:52px; text-align:left; padding-left:58px;}
+.sumbitbox input.pcbbtna { background-position:left -1004px; width:250px; padding-top:16px; height:52px; text-align:left; padding-left:48px;}
+.onlinepricebox table tr td{ font-size:14px; padding:6px 0px 6px 10px; }
+.txtstyle1,textarea{ border:1px solid #ABABAB; height:22px; line-height:22px; padding:2px 4px 2px 4px;font:14px "Î¢ÈíÑÅºÚ"; font-weight:bold}
+.font1{ font-size:12px; color:#999; padding:5px 5px 0px 0px;}
+
+
+.contentbox{ border-top:1px solid #CCC;  width:980px;}
+.orderdetail,.collect table{ border-top:1px solid #E3E6EB; border-left:1px solid #E3E6EB; background-color:#FFF;}
+.orderdetail td em{ color:#FF0000;}
+.orderdetail td,.collect table td{  border-right:1px solid #E3E6EB; border-bottom:1px solid #E3E6EB; padding:5px;}
+.orderdetail td.allmoney{ padding-top:8px; padding-bottom:8px;}
+.orderdetail td.allmoney span{ font:22px/25px "Î¢ÈíÑÅºÚ"; }
+.orderdetail td.allmoney span em{ color:#FF0000;}
+.orderdetail td.allmoney p{ margin-top:3px;}
+.orderdetail td.allmoney div{ background-position:left -244px; padding-left:52px;}
+
+
+.collecta table{  border-top:1px solid #E3E6EB; border-left:1px solid #E3E6EB; margin:20px 0px 0px 0px; background-color:#FFF; }
+.collecta table td{  border-right:1px solid #E3E6EB; border-bottom:1px solid #E3E6EB; padding:5px 10px; text-align:center;}
+.collecta .fonatwf { font-weight:bold; background:#F4F4F4;}
+.collecta .fonatoi { color:#1461E0; font-size:14px}
+.collecta .allmoneya {background-image:url(../img/othericon.png); background-repeat:no-repeat;background-position:0px -245px; padding:5px 0px 0px 40px;}
+.collecta .allmoneya span{ font:22px/25px "Î¢ÈíÑÅºÚ"; }
+.collecta .allmoneya span em{ color:#ff5500}
+.collecta .allmoneyb {background-image:url(../img/othericon.png); background-repeat:no-repeat;background-position:0px -306px; padding:5px 0px 0px 40px;}
+.collecta .allmoneyb span{ font:22px/25px "Î¢ÈíÑÅºÚ"; }
+.collecta .allmoneyb span em{ color:#ff5500}
+
+
+
+
+
+.othercost{ float:right; width:25%;}
+.othercost td{ font-size:12px;}
+.othercost td span{ font-weight:bold; font-size:14px;}
+
+.allprice{ border:1px solid #E3E6EB; margin-top:10px; padding:10px 0px 10px 70px; background-position:-202px -670px; background-repeat:no-repeat;}
+.allprice span{ font:22px/25px "Î¢ÈíÑÅºÚ"; }
+.allprice span em{ color:#FF0000;}
+.allprice p{ margin-top:3px;}
+
+
+
+.orderleft{ width:762px; float:left; margin-top:20px; font-family:"Î¢ÈíÑÅºÚ"; color:#666;}
+.orderleft .ordertit{ font-size:18px;}
+.orderleft .orderbox{ width:720px; border:1px solid #E9E9E9; overflow:hidden; padding:10px 20px; margin-top:5px; font-size:14px; line-height:20px;}
+
+
+.regbox{position:absolute;width:600px;background-color:#FFF; left:4px;
+
+}
+.regbox .regtit{ padding:0px 10px; color:#FFF; height:35px; line-height:35px; background-color:#FF3F00; font-size:14px; font-weight:bold;}
+.regbox .regtit em{ float:right; font-family:"Î¢ÈíÑÅºÚ"; font-size:18px; font-weight:normal; cursor:pointer;}
+.regbox .regcontent{ width:550px; border:1px solid #E0E0E0; border-top:0px;}
+
+.regbox .changetab{ width:300px; margin:0px auto; height:35px; line-height:33px; font-size:14px; padding:20px 0px;}
+.regbox .changetab li{ width:128px; float:left; cursor:pointer; text-align:center; background-position:left top; border:1px solid #B5B5B5; height:33px; margin-left:-1px; position:relative; z-index:1}
+.regbox .changetab li.on{ background-position:left -38px; color:#FFF; font-weight:bold; border:1px solid #228C09; z-index:2}
+
+.regbox .regform{ width:550px;}
+.regbox .mtop20{ margin-top:20px;}
+.regbox .regform dl{ overflow:hidden; margin-bottom:8px; width:550px; _margin-bottom:7px;}
+.regbox .regform dt{ float:left; width:90px; text-align:right; font-size:14px; line-height:22px; color:#555; padding-right:5px;}
+.regbox .regform dt em{ color:#F00; margin-right:4px;}
+.regbox .regform dd{ width:380px; float:left; color:#999; overflow:hidden;}
+.regbox .regform dd input{ width:300px; height:25px; line-height:25px; padding-left:4px; border:1px solid #ABABAB; color:#666;   font-size:14px;}
+.regbox .regform dd div{ margin-top:3px;}
+.regbox .regform dd.yzm img{  vertical-align:top; margin-left:8px;}
+.regbox .regform dd.yzm a{ color:#0000cc;}
+.regbox .regform dd.agree{ color:#666; line-height:13px;}
+.regbox .regform dd.agree input{ width:13px; height:13px; border:none; margin-right:3px; vertical-align:middle; padding-left:0px;}
+.regbox .regform dd.btnstyle1 input,.message dd.btnstyle1 input{ width:222px; height:47px; background-position:left -79px; line-height:47px; border:0px; padding:0px; color:#FFF;  font-size:18px; cursor:pointer; font-family:"Î¢ÈíÑÅºÚ";}
+.regbox .regform dd.phone input{ background:url(../img/phone.gif) no-repeat 4px center; padding-left:17px; width:244px;}
+.regbox .regform dd.phone .freeyzm a{ display:block; width:145px; height:28px; text-align:center; line-height:28px; border:1px solid #BBB; background-position:left -179px; color:#555; font-size:14px; font-weight:bold; text-decoration:none;}
+
+.regbox .loginform{ width:320px; margin:30px auto 0px; overflow:hidden;}
+.regbox .loginform dt{ width:50px;}
+.regbox .loginform dd{ width:240px;}
+.regbox .loginform dd input{ font-size:12px; width:228px;}
+.regbox .loginform dd.agree em{ float:right;}
+.regbox .loginform dd.agree em a{ color:#0000cc;}
+.regbox .loginform dd.agree em a:hover{ color:#ff5500;}
+
+
+.aboutleft .engineertit{ background-position:left -1125px;}
+.engineerright{ width:779px; float:right; margin:20px 0px 0px 0px;}
+.engineerright .nobotbd{ border-bottom:0px;}
+.engineerright .tit{ font-size:30px; padding-bottom:10px;}
+.circuitryclass{ font-size:14px; line-height:24px; color:#ccc; border-bottom:1px solid #DDD; padding:0px 5px 10px;}
+.circuitryclass2{ font-size:12px; line-height:18px; width:657px; float:right; border-bottom:0px;}
+.circuitryclass a{ color:#666; margin:0px 8px; font-family:"ËÎÌå";}
+.circuitryclass a:hover{ color:#ff5500;}
+.circuitryclass a.on{ font-weight:bold; color:#ff5500;}
+.circuitryclass a.nomleft{ margin-left:0px;}
+.circuitrycont{ width:100%;}
+.circuitrycont .circuitrylist{ width:510px; padding:10px 0px; font-size:14px; line-height:24px; border-bottom:1px dashed #DDD;}
+.circuitrycont .circuitrylist a{ background:url(../img/dian.gif) no-repeat left center; padding-left:10px;}
+
+.circuitrydetail{ width:737px; border:1px solid #DDD; overflow:hidden; padding:20px;}
+.circuitrydetail .newstit{ font:30px/32px "Î¢ÈíÑÅºÚ"; text-align:center;}
+.circuitrydetail .newstime{ text-align:center; color:#999; border-top:1px solid #DDD; border-bottom:1px solid #DDD; padding:4px 0px; margin-top:8px;}
+.circuitrydetail .newstime a{ color:#0000cc; text-decoration:underline;}
+.circuitrydetail .newstime a:hover{ color:#ff5500;}
+.circuitrydetail .newscont{ width:100%; overflow:hidden; line-height:22px; font-size:14px; padding:20px 0px;}
+.newscont ul, .newscont ol { padding-left:15px;}
+.newscont ol li, .newscont ul li  { list-style:disc; }
+.circuitrydetail .newstip{ text-align:right; color:#999;}
+.circuitrydetail .newstip span{ color:#FF0000;}
+.circuitrydetail .newstip img{ vertical-align:middle;}
+.circuitrydetail .agree{ width:77px; height:61px; background-position:-230px -1074px; margin:40px auto 20px; text-align:center; padding-right:4px;}
+.circuitrydetail .agree p{ font-weight:bold; font-size:14px; height:38px; line-height:38px; cursor:pointer;}
+.circuitrydetail .agree p a:hover{ color:#333; text-decoration:none;}
+.circuitrydetail .agree span{ display:block; height:18px; line-height:18px; color:#CC0000;}
+.circuitrydetail .newsmenu{ text-align:center; padding-bottom:20px;}
+.circuitrydetail .newsmenu a{ text-decoration:underline;}
+.circuitrydetail .share{ width:100%; overflow:hidden;}
+.circuitrydetail .share img{ vertical-align:middle;}
+.circuitrydetail .prenext{ border-top:1px dashed #DDD; padding-top:10px; margin-top:20px;}
+.circuitrydetail .prenext a{ color:#000099;}
+.circuitrydetail .prenext a:hover{ color:#ff5500;}
+
+
+
+.pdfsearch{ float:right; font-size:12px; width:700px; margin-top:2px;}
+.pdfsearch .pdftxt{ width:376px; height:27px;  line-height:27px; border:1px solid #CCC; padding-left:4px;}
+.pdfsearch .pdfbtn{ width:64px; height:29px; text-align:center; line-height:29px; font-size:14px; font-weight:bold; color:#FFF; background-position:-165px -954px; border:0px; margin-left:4px; cursor:pointer;}
+.pdflist{ width:100%; overflow:hidden; margin:10px 0px;}
+.pdflist li{ width:155px; float:left; height:30px; overflow:hidden;}
+.pdflist li a{ color:#0000cc; text-decoration:underline;}
+.pdflist li a:hover{ color:#ff5500;}
+.pdflist li img{ vertical-align:middle; margin-left:2px;}
+
+.pdftit{ font:24px/24px Tahoma, Geneva, sans-serif; padding:6px 0px 0px;}
+.pdfjj{ width:100%; overflow:hidden; margin-top:15px;}
+.pdfjj dt{ width:140px; height:140px; border:1px solid #DDD; float:left; text-align:center;}
+.pdfjj dt span{ display:table-cell; *display:block; width:140px; height:140px; vertical-align:middle; *font-size:122px;}
+.pdfjj dd{ display:block; float:left; width:630px;}
+.pdfjj dd ul{ width:100%;}
+.pdfjj dd ul li{ width:100%; overflow:hidden;}
+.pdfjj dd ul li em{ width:120px; float:left; text-align:right;}
+.pdfjj dd ul li span{ width:510px; float:left;}
+.pdfjj dd ul li a{ display:block; width:177px; height:41px; line-height:41px; color:#FFF; background-position:left -1160px; font-family:"Î¢ÈíÑÅºÚ"; font-size:14px; font-weight:bold; text-align:center; padding-left:15px; margin:8px 0px 5px;}
+.pdfjj dd ul li a:hover{ text-decoration:none;}
+.c909090{ color:#909090;}
+.pdfcatalogue{ width:346px; border:1px solid #ddd; margin:30px 0px 0px; padding:0px 10px;}
+.pdfcatalogue h3{ font-size:16px; font-weight:bold; border-bottom:1px dashed #ddd; padding:8px 0px 5px 5px;}
+.pdfcatalogue ul{ margin:10px 0px;}
+.pdfcatalogue li{ display:block; font-size:14px; padding-bottom:3px;}
+.pdfcatalogue li a{ background:url(../img/dian2.gif) no-repeat left center; padding-left:13px; color:#0063DC;}
+.pdfcatalogue li a:hover,.otherpdf table a:hover{ color:#ff5500;}
+.otherpdf{ width:100%; margin-top:25px;}
+.otherpdf h3{ font:18px/24px "Î¢ÈíÑÅºÚ"; background:url(../img/hr.gif) no-repeat left bottom; padding-bottom:5px; padding-left:3px;}
+.otherpdf table{ border-left:1px solid #DDD; border-top:1px solid #DDD; margin-top:10px;}
+.otherpdf table th{ background-color:#E3E3E3; height:27px; text-align:center;}
+.otherpdf table th,.otherpdf table td{ border-right:1px solid #DDD; border-bottom:1px solid #DDD;}
+.otherpdf table td{ padding:4px; font-family:Tahoma, Geneva, sans-serif;}
+.otherpdf table a{ color:#0063DC;}
+.datasheet{ width:777px; height:500px; margin-top:15px; overflow:auto; overflow-x:hidden; padding:5px 0px; background-color:#F4F4F4; border:1px solid #ddd;}
+
+
+.pdfsearchlist{ width:100%; border-top:1px solid #ddd; border-left:1px solid #ddd; line-height:18px;}
+.pdfsearchlist th,.pdfsearchlist td{ padding:5px; border-right:1px solid #ddd; border-bottom:1px solid #ddd;}
+.pdfsearchlist th{ background-color:#F3F3F3; text-align:left; font-size:14px; color:#666; border-bottom:0px;} 
+.pdfsearchlist a.downloadpdf{ display:block; width:144px; height:30px; background-position:-138px -1206px;}
+.pdfsearchlist a{ color:#0063dc; font-weight:bold; font-size:14px;}
+.pdfsearchlist span{ background:url(../img/pdf2.gif) no-repeat left top; padding-left:30px; display:inline-block;}
+.pdfsearchlist a:hover{ color:#ff5500;}
+
+
+.softwarelist{ width:777px; border:1px solid #DDD; overflow:hidden; margin-bottom:10px; padding-bottom:8px;}
+.softwarelist dt{ display:block; height:27px; line-height:27px; background-color:#F9F9F9; font-size:14px; font-weight:bold; padding-left:8px; color:#666; margin-bottom:10px;}
+.softwarelist dd{ float:left; width:135px;  line-height:18px; color:#999; padding-left:10px; overflow:hidden;}
+.softwarelist dd.width475{ width:470px; color:#666; line-height:22px;}
+.softwarelist a.download{ display:block; width:133px; height:41px; background-position:left -1206px; margin-bottom:5px;}
+
+.mycustombox{ width:584px;  padding:35px 0px 00px 0px; overflow:hidden;}
+.mycustombox dt{ width:161px; height:183px; border:1px solid #E8E8E8; text-align:center; padding-top:4px; float:left;}
+.mycustombox dt img{ width:151px; height:179px;}
+.mycustombox dd{ float:left; width:401px; padding:10px 0px 0px 20px;}
+.mycustombox dd strong{ font-size:14px; display:block; margin-bottom:3px;}
+.mycustombox dd span{ display:block; line-height:24px; vertical-align:top; height:24px; _height:18px; _padding:3px 0px; _line-height:18px; }
+.mycustombox dd span img{ vertical-align:middle; _vertical-align:inherit;}
+.boxB,.boxB div{ width:100%; overflow:hidden; color:#666; line-height:24px;}
+.boxB{ margin-top:30px;}
+.boxB h3{ font:24px/24px "Î¢ÈíÑÅºÚ"; border-bottom:1px solid #EBEBEB; padding:0px 5px 8px;}
+.boxB h3 em{ font-size:12px; font-family:"ËÎÌå"; float:right; margin-top:5px;}
+.boxB h3 em a{ background:url(../img/pl.gif) no-repeat left center; padding-left:18px; color:#136EC2; text-decoration:underline;}
+.boxB h3 em a:hover{ color:#ff5500;}
+.boxB div{ font-size:14px; padding:10px 5px 0px; width:970px;}
+.boxB dl{ width:970px; overflow:hidden; padding:10px 5px; border-bottom:1px solid #EBEBEB;}
+.boxB dl dt{ font-size:14px; font-weight:bold;}
+.boxB dl dt em{ float:right;}
+.boxB dl dd{ font-size:14px;}
+.boxB dl.nobdtop{ border-bottom:0px;}
+.message{ width:958px; border:1px solid #EBEBEB; margin-top:20px; padding:10px;}
+.message h3{ font-size:14px; font-weight:bold; margin-bottom:20px;}
+.message dl{ width:100%; overflow:hidden; padding-bottom:10px;}
+.message dl dt{ width:120px; float:left; font-size:14px; text-align:right; padding-right:5px;}
+.message dl dd{ width:600px; float:left; line-height:27px;}
+.message dl dt em{ margin-right:3px; color:#C82658;}
+.message dl dd input{ width:340px; height:25px; line-height:25px; padding-left:4px; border:1px solid #ABABAB;}
+.message dl dd textarea{ width:680px; height:145px; padding-left:4px; border:1px solid #ABABAB;}
+
+.pdfindexbox{ width:580px; margin:60px auto; color:#666;}
+.pdfindexbox dl{ width:281px; margin:0px auto; background:url(../img/bigimg.gif) no-repeat right top; padding-right:55px; padding-top:5px;}
+.pdfindexbox dl dt h2{ font:44px/50px "Î¢ÈíÑÅºÚ";}
+.pdfindexbox dl dt em{ color:#FF2A00;}
+.pdfindexbox dl dt span{ font:14px/22px "Î¢ÈíÑÅºÚ"; display:block; text-align:center;}
+.pdfindexbox ul{ width:100%; overflow:hidden; height:39px; margin:30px 0px;}
+.pdfindexbox ul li{ float:left;}
+.pdfindexbox ul li.pdftxtstyle1{ width:480px; background-color:#3A67BC; padding:4px;}
+.pdfindexbox ul li.pdftxtstyle1 span{ display:block; background:url(../img/search.gif) #FFF no-repeat 5px center; width:447px; height:31px; padding-left:33px;}
+.pdfindexbox ul li.pdftxtstyle1 span input{ border:0px; width:100%; height:30px; line-height:30px; font-size:14px; font-weight:bold;}
+.pdfindexbox ul li.pdfbtnstyle1{ width:85px;}
+.pdfindexbox ul li.pdfbtnstyle1 input{ width:85px; height:39px; background-position:left -1254px; text-align:center; color:#FFF; line-height:39px; font-weight:bold; font-size:14px; border:0px; margin-left:5px; cursor:pointer;}
+.pdfindexbox p{ text-align:center; line-height:20px;}
+.pdfindexbox p a{ margin-left:3px; font-family:Tahoma, Geneva, sans-serif; color:#666;}
+.pdfindexbox p span a{ margin-right:8px;}
+.pdfindexbox p a:hover{ color:#ff5500;}
+
+.yourlike{ border-top:1px solid #ddd; text-align:center; padding:20px 0px;}
+.yourlike a{ padding:8px 20px; border:1px solid #DADADA; margin-right:8px;}
+.yourlike a:hover{ border:1px solid #FF7155; text-decoration:none; color:#333;}
+
+
+/* ²úÆ·ÁÐ±í */
+.producttit{ font:30px/30px "Î¢ÈíÑÅºÚ"; color:#666; padding:15px 0px 10px; border-bottom:1px solid #D7D7D7;}
+.productlist{ width:980px; float:left; padding:20px 0px; border-bottom:1px dashed #ddd;}
+.productlist li{ font-size:14px; width:490px;  float:left; height:24px; line-height:24px;}
+.productlist li a{ background:url(../img/dian.gif) no-repeat left center; padding-left:10px;}
+
+/* ²úÆ·ÏêÏ¸Ò³ */
+.prodetailleft{ margin-top:20px; border:0px; border-right:1px solid #ddd; width:753px; padding-left:0px; float:left; padding-right:30px;}
+.prodetailleft .newstips{ background-color:#f6f6f6; border:1px solid #DDD; padding:10px 15px; font-size:14px; margin-top:10px; color:#666; vertical-align:middle;}
+.prodetailleft .newstips .newsonline{ display:inline-block; width:89px; height:27px; background-position:-203px -1160px; overflow:hidden; line-height:0px; font-size:0px; text-indent:11111px; vertical-align:middle;}
+.prodetailright{ width:160px; float:right; overflow:hidden; margin-top:20px; margin-right:8px; display:inline;}
+
+/* ²úÆ·ÍÆ¼öÒ³*/
+.Productmain { margin-top:20px;}
+.Productmain .homeimg { float:left; width:320px; margin-right:20px;}
+.Productmain .homeimg .imgltu { border:1px solid #DDDDDD; width:320px;height:280px;text-align:center;display:table-cell;vertical-align:middle; }
+.Productmain .homeimg .imgltu img {  vertical-align:middle; width:250px;}
+.Productmain .homeimg  .Scroll { margin-top:5px; text-align:center;}
+.Productmain .homeimg  .Scroll a { border:3px solid #fff; display:block; float:left; height:73px; margin-bottom:10px; margin-right:1px;}
+.Productmain .homeimg  .Scroll a:hover { border:3px solid #E30404;}
+
+
+
+.Productmain .porcon { float:left; width:420px;}
+.Productmain .porcon h1 {font:22px "Î¢ÈíÑÅºÚ"; margin-bottom:10px;}
+.Productmain .porcon dl {  width:400px; height:25px; line-height:25px;}
+.Productmain .porcon dl dt { float:left; width:90px; font-weight:bold;}
+.Productmain .porcon dl dd em { color:#FF0000; font:16px "Î¢ÈíÑÅºÚ"; }
+.Productmain .porcon .Phone { border:1px solid #f2d9b3; background:#fffeec; padding:10px; margin-top:10px;}
+.Productmain .porcon .Phone .foant { font-weight:100}
+.Productmain .porcon .Phone .foant em {font:26px "Î¢ÈíÑÅºÚ"; color:#009900; font-weight:bold; background:url(http://img.jdbpcb.com//img/icon.png) left -575px no-repeat; padding-left:25px;}
+.Productmain .porcon .inquiry { margin-top:10px;}
+
+.Productmain .cojdb  { float:right; margin-left:10px;}
+.Productmain .cojdb .Title { font-size:14px; font-weight:bold; background:#efefef; height:29p; line-height:29px; width:200px; padding-left:10px;}
+.Productmain .cojdb .Content { border:1px solid #dedede; padding:10px;width:188px;}
+.Productmain .cojdb .Content .aprv  {  border-bottom:1px solid #dedede; border-top:1px solid #dedede; margin-top:10px; margin-bottom:10px; padding-top:10px; padding-bottom:10px;}
+.Productmain .cojdb .Content .aprv em {font-weight:bold;}
+.Productmain .cojdb .Content ul li { line-height:22px; }
+.Productmain .cojdb .Content ul li em { font-weight:bold}
+.Productmain .cojdb .Content ul li a { color:#0083e8; text-decoration:underline; font-family:Arial, Helvetica, sans-serif} 
+.porad { margin-top:15px;}
+.Titlepo { font-size:14px; font-weight:bold; margin-top:10px; padding-top:5px; background:url(http://img.jdbpcb.com//img/icon.png) left -642px ; padding-left:5px;}
+.txt { line-height:22px; padding:5px;}
+
+
+
+.onlinepricetable{ width:980px; border:1px solid #E3E6EB; margin:20px auto 15px; border-bottom:0px;}
+.onlinepricetable td{ border-bottom:1px solid #E3E6EB; padding:5px 0px 5px 0px;}
+.onlinepricetable td i{ color:#666;}
+.onlinepricetable td input{ vertical-align:middle; }
+.onlinepricetable em{ color:#0066cc; cursor:pointer;}
+.onlinepricetable .txtstyle1{ height:20px; line-height:20px; border:1px solid #ccc; padding-left:4px; padding-right:4px;}
+.seli {height:24px; line-height:24px; border: 1px solid #CCCCCC; width: 170px;}
+.allmoneya,.allmoneyb{  background-position: left -12px;  background-repeat: no-repeat;  padding: 5px 0 7px 40px; }
+.allmoneya span,.allmoneyb span{ font: 22px/25px "Î¢ÈíÑÅºÚ"; }
+.allmoneya span em,.allmoneyb span em{  color: #FF5500;}
+.allmoneyb{ background-position:left -72px;}
+.c1461E0{ color:#1461E0;}
+
+.boardnumber{ width:356px; border:1px solid #d5210d; overflow:hidden; position:absolute; left:0px; top:29px; top:30px\9;  _top:31px; background-color:#FFF; z-index:1;}
+.boardnumber ul{ width:347px; overflow:hidden; padding:0px 4px;}
+.boardnumber li{ float:left; width:57px; padding-bottom:4px; font-size:12px;}
+.boardnumber li input.txtstyle2{ width:95px; height:20px; line-height:20px; border:1px solid #d8d8d8; color:#c0c0c0; padding-left:3px;}
+.boardnumber .boardnumberbtn{ padding-bottom:10px;}
+.boardnumber .boardnumberbtn input{ width:60px; height:23px; text-align:center; line-height:23px; cursor:pointer; background-position:-63px -134px; border:0px; font-size:12px; margin-left:6px; background-image:url(../img/member/bg/bg.png);}
+.boardnumber .boardnumberbtn a:hover{ text-decoration:none;}
+.boardnumber .boardnumberbtn a:hover input{background-position:left -134px; color:#447307; text-decoration:none;}
+
+/* ¿Í·þÖÐÐÄ 2013 07 02*/
+.servicebanner{ width:100%; padding:8px 0px; overflow:hidden;}
+.servicecontent{ border:1px solid #dfdfdf; width:978px; background-color:#f6f6f6;}
+.serviceleft{ width:184px; float:left; border-right:1px solid #e3e3e3;}
+.serviceleft ul{ width:166px; padding-left:18px; padding-top:20px;}
+.serviceleft ul li{ display:block; line-height:38px;  font-size:14px; position:relative; width:100%; height:38px; background-position:left -1891px;}
+.serviceleft ul li.topbd{ border-top:0px;}
+.serviceleft ul li a{ color:#4c4c4c; display:block; position:absolute; width:168px; height:43px; left:-19px; line-height:43px; padding-left:32px; z-index:2; top:-2px;}
+.serviceleft ul li a:hover,.serviceleft ul li a.on{ background-position:left -1834px; color:#FFF; font-weight:bold; text-decoration:none;}
+.serviceright{ 
+	float:left; margin-left:-1px; border-left:1px solid #e3e3e3; background-color:#FFF; padding:0px 15px 20px 20px;  _height:240px; min-height:240px; 
+	width: 936px;
+}
+.serviceright .tit{ font:bold 18px/40px "Î¢ÈíÑÅºÚ"; border-bottom:1px solid #e3e3e3; color:#494848; padding:6px 0px 0px 10px;}
+.problemfrom{ background-color:#f8f8f8; width:100%; margin:10px 0px; padding:15px 0px;}
+.problemfrom dl{ width:100%; overflow:hidden; padding-bottom:8px;}
+.problemfrom dl dt{ width:77px; float:left; text-align:right; padding-right:8px; font-weight:bold; color:#666;}
+.problemfrom dl dd{ width:650px; float:left;}
+.problemfrom dl dd textarea{ width:745px; height:132px;}
+.problemlist{ width:100%; padding-top:10px;}
+.problemlist dl{ background:url(../img/problem.gif) no-repeat 10px 4px; line-height:22px; border-bottom:1px solid #ededed; margin-bottom:8px; padding:0px 10px 8px 30px;}
+.problemlist dl dt cite{ margin:0px 15px; color:#ccc; font-style:normal;}
+.problemlist dl dt em{ color:#989898; margin-left:15px;}
+.problemlist span{ color:#666;}
+.problemlist dd{ color:#3366cc;}
+.cyproblem dl{ background:none; padding-left:10px; border-bottom:0px;}/* 2013 7 4 */
+.serviceright .orderbox{ padding:10px; width:738px; overflow:hidden;}
+.activebox{ 
+	width:935px; overflow:hidden; padding:10px 0px;
+}
+.activelist ul{ width:100%;}
+.activelist ul li{ line-height:20px; padding:0px 10px 8px 10px; border-bottom:1px solid #ededed; margin-bottom:8px;}
+.activelist ul li a{background:url(../img/dian.gif) no-repeat left center; padding-left:8px;}
+.activelist ul li em{ float:right; color:#999; font-family:Arial, Helvetica, sans-serif; }
+.activebox h1{ padding:15px 0px 0px; text-align:center; font:20px/26px "Î¢ÈíÑÅºÚ";}
+.activebox .time{ text-align:center; color:#999;  border-bottom:1px dashed #ededed; font-family:Arial, Helvetica, sans-serif; padding-bottom:10px; margin-bottom:10px;}
+.activecontent{ padding:10px 20px; overflow:hidden; width:718px; font-size:14px;}
+
+
+/* ¹¤³ÌÊ¦¼ÒÔ° 2013 7 16 */
+.clear{ float:none; clear:both; font-size:0px; line-height:0px; height:0px; width:100%;}
+.mtop8{ margin-top:8px;}
+.height460{ height:460px;}
+.height271{ height:271px;}
+.important,.pdf .p_left,.pdf .p_middle,.pdf .p_right,.pdf .p_middle li input,.pdf .p_middle .enter,.schematic,.schematic .box02 .tit,.pdfinfo .container .title,.pdfinfo .container ul li,.rjdownload .title{ background-image:url(../img/inico.gif);}
+.width430{ width:432px;}
+.width540{ width:540px;}
+.important,.schematic{ border: 1px solid #DDDDDD;  overflow: hidden; padding: 6px 12px 12px; background-position:0 -639px; background-repeat:repeat-x;}
+.important .title,.schematic .title{ border-bottom: 1px solid #FFFFFF;  margin: 0 0 10px;}
+.important .title h2,.schematic .title h2{ border-bottom: 1px solid #DDDDDD;  color: #404040;  height: 34px; font:24px/34px "Microsoft Yahei","Î¢ÈíÑÅºÚ",simHei; }
+.important dl,.box02 dl{ border-bottom:1px dashed #DDDDDD; padding-bottom:8px;}
+.important dl dt,.box02 dl dt{ font-size:14px; font-weight:bold;}
+.important dl dd,.box02 dl dd{ color:#6c6c6c; text-indent:26px;}
+.important ul,.schematic .box02 ul{ padding-top:8px; line-height:20px; width:100%; overflow:hidden;}
+.important ul li,.schematic .box02 ul li{ background:url(../img/dian.gif) no-repeat left center; padding-left:10px;}
+
+.imgbox{ border:1px solid #ddd; width:430px; overflow:hidden; 
+	height:289px; position:relative;}
+.slider{position:absolute;}
+.slider div{ list-style:none;display:inline;}
+.slider div span,.slider div em{display:block; height:58px; line-height:58px; position:absolute; bottom:0px; width:100%;}
+.slider div span{  filter:alpha(opacity=50); -moz-opacity:0.5;	-khtml-opacity: 0.5;	opacity: 0.5; background-color:#000; }
+.slider div em{ color:#FFF; font:24px/58px "Microsoft Yahei","Î¢ÈíÑÅºÚ",simHei; padding-left:5px; width:425px;}
+.slider img{ width:430px; height:289px; display:block;}
+.slider2{width:2000px;}
+.slider2 div{float:left;}
+.num{ position:absolute; right:5px; bottom:8px;}
+.num li{ float: left; width: 12px; height: 12px; cursor: pointer; margin: 3px 2px;	background-color: #9a9a9a; font-size:0px; line-height:0px;}
+.num li.on{ background-color:#e70101;}
+
+.pdf{ overflow: hidden; width:100%;}
+.pdf .p_left{ float: left; height: 66px; width: 3px;}
+.pdf .p_middle{  float: left;  height: 58px;  padding: 4px; width: 526px; background-position:0px -66px; background-repeat:repeat-x;}
+.pdf .p_right{ float: left;  height: 66px;  width: 3px; background-position:right top;}
+.pdf .p_middle h2 { color: #FFEA00;  float: left;  width: 110px; font:24px/54px "Microsoft Yahei","Î¢ÈíÑÅºÚ",simHei;}
+.pdf .p_middle ul {  float: left;  padding: 2px 0 0;  width: 414px; margin-top:11px;}
+.pdf .p_middle li {  color: #FFFFFF;  overflow: hidden;  padding: 0 0 6px;  width: 100%; vertical-align:top;}
+.pdf .p_middle li input { background-position:4px -150px; background-color:#fff; background-repeat:no-repeat;  float: left;  height: 25px;  line-height: 23px;
+padding: 4px 0 0 24px;  width: 330px; border:1px solid #434343; vertical-align:middle;}
+.pdf .p_middle .enter {  background-position:0 -314px; border: 0 none; color: #fff;  font-size: 14px; font-weight: bold;  height: 31px;  padding: 0;   text-align: center; width: 57px; cursor:pointer;}
+.schematic{  padding: 6px 12px 0;}
+.schematic .box01 {  overflow: hidden; width:100%;}
+.schematic .box01 a {  color: #000099;  float: left;  height: 18px;  line-height: 18px;  width: 85px;}
+.schematic .box01 a:hover{ color:#ff5500;}
+.schematic .box02 .tit { background-position:0px -188px;  border-bottom: 1px solid #DDDDDD;  height: 22px;  line-height: 22px;  margin: 8px 0;  overflow: hidden; }
+.schematic .box02 .tit a {  float: right;   font-family: "ËÎÌå";}
+.schematic .box02 .tit h2 {  color: #FF0000;  font-size: 14px;}
+.schematic .box02 ul li{ height:20px; overflow:hidden; width:100%;}
+.schematic .box02 ul.noptop{ padding-top:0px;}
+.advbox{ padding-top:8px; width:100%; overflow:hidden;}
+.pdfinfo{ width:730px; float:left; overflow:hidden;}
+.pdfinfo .container{ width:483px; border:1px solid #ddd; height:240px; float:left; margin-right:8px; overflow:hidden;}
+.pdfinfo .container .title,.rjdownload .title{ background-position:0px -196px; background-repeat:repeat-x; border-bottom: 1px solid #DDDDDD;  height: 24px; line-height: 24px;
+}
+.pdfinfo .container .title .more,.rjdownload .title .more{   float: right;  font-family: "ËÎÌå";  margin: 0 8px 0 0;}
+.pdfinfo .container .title h2,.rjdownload .title h2{  color: #404040;  font-size: 14px;  padding: 0 0 0 8px;}
+.pdfinfo .container ul{ padding:8px;}
+.pdfinfo .container ul li{ height:20px; line-height:20px; width:327px; overflow:hidden; display:block; text-overflow: ellipsis;  white-space: nowrap; padding: 0 0 0 10px; background-position:0px -228px; background-repeat:no-repeat;}
+.pdfinfo .container ul li a{ color: #000099;  }
+.pdfinfo .container ul li a:hover{ color:#ff5500;} 
+.rjdownload{ width:242px; float:right; overflow:hidden; border:1px solid #ddd; height:490px;}
+.rjdownloadlist{ padding:15px 0px 5px; width:100%; overflow:hidden;}
+.rjdownloadlist li{ width:60px; float:left; margin:0px 10px; text-align:center; height:90px; overflow:hidden; display:inline; font-family:Tahoma, Geneva, sans-serif; line-height:14px;}
+.rjdownloadlist li img{ width:48px; height:48px; margin-bottom:5px;}
+.rjdownloadlist li a{ display:block;}
+
+
+
+

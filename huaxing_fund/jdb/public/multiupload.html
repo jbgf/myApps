@@ -1,0 +1,309 @@
+
+    <html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <meta content="text/html; charset=gb2312" http-equiv="Content-Type">
+    <title>文件上传</title>
+    <link rel="stylesheet" type="text/css" href="../css/uploadify.css">
+
+   
+    <script src="../js/jquery-1.6.4.min.js" type="text/javascript"></script>
+
+    <script src="../js/swfobject.js" type="text/javascript"></script>
+
+    <script src="../js/jquery.uploadify.v2.1.4.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+    
+   var canup  = "";
+    function loadConfig(ext,allowSize){ 
+        if(ext==""||allowSize ==0){
+            alert("配置载入出错！");
+            parent.$(document).colorbox.close();
+        } 
+        $("#sizeSpan").html(GetFileSize(allowSize));
+        $("#fileSpan").html(ext.replace(/\|/g,",").replace(/\./g,""));
+        canup = ext.replace(/\./g, "");
+        
+        $('#file_upload').uploadify({
+            'uploader': 'public/uploadify.swf',
+            'script': 'http://upload.jdbpcb.com/web/common/upload.aspx',
+            'buttonImg':'../img/seluploadpic.gif',
+            'width': '74',
+            'height': '23',
+            'cancelImg': '../img/cancel.png',        
+            'scriptData': { 'uptype': "pcbfile" ,'key':"1s6045",'checkcode':"96dd13a9"},
+            'auto': false,
+            'multi': false,
+            'queueID': 'fileQueue',
+            'queueSizeLimit':1,
+            'sizeLimit': allowSize,
+                        
+             'onSelect': function(e, queueId, fileObj)
+             {
+                    $("#showfilename").val(fileObj.name);               
+             },             
+            'fileDesc':'请选择要上传的文件',
+            'fileExt': ext.replace(/\|/g,";").replace(/\./g,"*."), 
+            'onComplete': function(event, queueID, fileObj, response, data) {//返回函数
+                var value = response;
+                //alert("上传后的文件名:" + value + "");
+                vars = value.split('|'); 
+                if(vars.length==2){
+                        parent.UploadSeccess(vars[1],fileObj.name.replace("'", "").replace('"', "").replace(" ","_").replace("+","_"));
+                        parent.$(document).colorbox.close();
+                }
+                else{
+                    alert("出错:" + value);
+                    parent.$(document).colorbox.close();
+                }
+            }
+        });
+        
+        $(".background,.loading").hide();
+    }
+    function upload(){
+        
+        $('#file_upload').uploadify({
+            'swf': '../public/uploadify.swf',
+            'script': 'http://upload.jdbpcb.com/web/common/upload.aspx',
+            'buttonImg':'../img/seluploadpic.gif',
+            'width': '74',
+            'height': '23',
+            'cancelImg': '../img/cancel.png',        
+           // 'scriptData': { 'uptype': "pcbfile" ,'key':"1s6045",'checkcode':"96dd13a9"},
+            'auto': false,
+            'multi': false,
+            'queueID': 'fileQueue',
+            'queueSizeLimit':1,
+            'onSelect': function(e, queueId, fileObj)
+             {
+                    $("#showfilename").val(fileObj.name);               
+             }
+            
+        });
+
+    };
+    $(document).ready(function() {
+        //设置提示框位置
+        $(".loading").css({ "top": $(document).height() / 2 - 20 + "px", "left": ($(document).width() - $(".loading").width()) / 2 + "px" });
+        //绑定切换事件
+        $("#aChangeType").toggle(function(){
+            $("#tab1").hide();
+            $("#tab2").show();
+            $("#aChangeType").html("最新上传方式");
+        },function(){
+            $("#tab2").hide();
+            $("#tab1").show();
+            $("#aChangeType").html("传统上传方式");
+        });
+        
+        //自动提交获取配置的表单
+        $("#configform").submit();
+        upload();
+    });
+
+    function clear(){
+        $('#file_upload').uploadifyClearQueue();
+        $('#showfilename').val('');
+    }
+
+    function CheckExt(form){
+        if(form.FileData.value==""){
+            alert("请选择需要上载的文件！");
+            form.FileData.focus();
+            return false;    
+        }
+        var ext = form.FileData.value.substr(form.FileData.value.lastIndexOf(".")+1).toLowerCase();
+        canupstr = "|" + canup + "|";
+        if(canupstr.indexOf("|"+ext+"|")==-1){
+            alert("上传文件格式出错，只能上传"+canup);
+            return false;
+        }    
+        $("#shinfo").html("正在上传中....");
+        return true; 
+    }
+    
+    function GetFileSize(filesize)
+    {
+        filesize = filesize / 1024;
+        if (filesize <1024)
+        {
+            return Math.ceil(filesize) + "K";
+        }
+        else
+        {
+            filesize = filesize / 1024;
+            return Math.round(filesize, 2) + "M";
+        }
+
+    }
+    
+    
+    </script>
+
+    <style type="text/css">
+        .STYLE3
+        {
+            font-size: 12px;
+        }
+        body
+        {
+            margin-left: 0px;
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+        }
+        .STYLE5
+        {
+            font-size: 12px;
+            color: #666666;
+        }
+        .STYLE2
+        {
+            font-size: 12px;
+            color: #006699;
+        }
+        .background
+        {
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 998;
+            background: #ccc;
+            filter: alpha(opacity=50);
+            -moz-opacity: 0.5;
+            -khtml-opacity: 0.5;
+            opacity: 0.5;
+        }
+        .loading
+        {
+            position: fixed;
+            left: 47%;
+            top: 40%;
+            z-index: 999;
+            color: #F5811D;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+   <div class="background" style="display: none;"></div>
+    <div class="loading" style="top: 112px; left: 251px; display: none;">
+        <img width="20" src="http://img.jdbpcb.com/img/wait.gif">
+        <span>&nbsp;正在加载...</span>
+    </div>
+
+
+    <table width="100%" cellspacing="0" cellpadding="0" border="0" style="margin: 0 auto;">
+        <tbody><tr>
+            <td height="27" bgcolor="#EEF5F9">
+                <table width="98%" border="0" align="center">
+                    <tbody><tr>
+                        <td>
+                            <span class="STYLE2">.上传限制(<span id="sizeSpan">20M</span>),如果您在上传过程中遇到问题，请试试 <a id="aChangeType" href="javascript:void(0);">传统上传方式</a>.</span>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+        <tr>
+            <td height="1" bgcolor="#3399CC">
+            </td>
+        </tr>
+        <tr style="display:" id="tab1">
+            <td height="141">
+                <table width="100%" border="0" align="center">
+                    <tbody><tr>
+                        <td height="63" align="right">
+                            <table width="100%" border="0">
+                                <tbody><tr>
+                                  <td height="21" align="center" colspan="3">请选择 <span style="color:#FF0000" id="fileSpan">rar,zip</span> 文件进行上传</td>
+                                </tr>
+                                <tr>
+                                    <td width="32%" height="63" align="right">
+                                        <span class="STYLE5">添加文件:</span>&nbsp;                                    </td>
+                                    <td width="25%">
+                                        <input type="text" style="border: 1px  solid #7E9DB9" name="showfilename" id="showfilename">                                    </td>
+                                    <td width="43%" align="left">
+                                        <input type="file" style="width: 120px; display: none;" name="file_upload" id="file_upload">
+                                    <!--    <object width="74" height="23" type="application/x-shockwave-flash" data="../public/uploadify.swf" id="file_uploadUploader" style="visibility: visible;">
+                                        <param name="quality" value="high">
+                                        <param name="wmode" value="opaque">
+                                        <param name="allowScriptAccess" value="sameDomain">
+                                        <param name="flashvars" value="uploadifyID=file_upload&amp;pagepath=/upload/&amp;buttonImg=http%3A//img.jdbpcb.com/js/jqueryplus/uploadify/2.1/seluploadpic.gif&amp;script=http://upload.jdbpcb.com/web/common/upload.aspx&amp;folder=&amp;scriptData=uptype%3Dpcbfile%26key%3D1s6045%26checkcode%3D96dd13a9&amp;width=74&amp;height=23&amp;wmode=opaque&amp;method=POST&amp;queueSizeLimit=1&amp;simUploadLimit=1&amp;fileDesc=请选择要上传的文件&amp;fileExt=*.rar;*.zip&amp;sizeLimit=20971520&amp;fileDataName=Filedata&amp;queueID=fileQueue"></object>-->
+                                        <span class="STYLE3"><a href="javascript:clear()">清除</a></span>                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="40" align="center">
+                            <span id="fileQueue" class="uploadifyQueue"></span>                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="bottom" height="36" align="center" id="showbtm">
+                            <img border="0" style="cursor: pointer" onclick="if ($('.fileName').length) { $('#file_upload').uploadifyUpload();} else { alert('请选择要上传的文件!');}" alt="上传" src="../img/btnupload.gif" id="shangchuan">
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+        <tr style="display:none" id="tab2">
+            <td height="141">
+                <form onsubmit="return CheckExt(this);" enctype="multipart/form-data" method="post" action="http://upload.jdbpcb.com/web/common/uploadfilennormal.aspx" name="form1" id="form1">
+                <table width="100%" border="0" align="center">
+                    <tbody><tr>
+                        <td height="63" align="right">
+                            <table width="100%" border="0">
+                                <tbody><tr>
+                                    <td width="32%" height="63" align="right">
+                                        <span class="STYLE5">添加文件: </span>&nbsp;
+                                    </td>
+                                    <td align="left">
+                                        <input type="file" name="FileData" id="FileData">
+                                        <input type="hidden" value="pcbfile" id="uptype" name="uptype">
+                                        <input type="hidden" value="UploadSeccess" id="funname" name="funname">
+                                        <input type="hidden" value="1s6045" id="key" name="key">
+                                        <input type="hidden" value="96dd13a9" id="checkcode" name="checkcode">
+                                        <input type="hidden" value="web/common/upload.aspx" id="scriptPage" name="scriptPage">
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="50" align="center" id="Td1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="bottom" height="36" align="center" id="shinfo">
+                            <input type="image" src="../img/btnupload.gif" id="imageField" name="imageField">
+                        </td>
+                    </tr>
+                </tbody></table>
+                </form>
+            </td>
+        </tr>
+    </tbody></table>
+    <form target="loadConfig" action="test.php" method="post" name="configform" id="configform">
+    <input type="hidden" value="loadConfig" name="funname">
+    <input type="hidden" value="pcbfile" name="uptype">
+    <input type="hidden" value="1s6045" name="key">
+    <input type="hidden" value="96dd13a9" name="checkcode">
+    </form>
+    <iframe width="0" height="0" id="loadConfig" name="loadConfig"></iframe>
+    <div style="display:none" id="baidu">
+     <script type="text/javascript">
+                var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+                document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F020f889b5d07e64770632ad47a127e88' type='text/javascript'%3E%3C/script%3E"));
+ </script><script type="text/javascript" src=" http://hm.baidu.com/h.js?020f889b5d07e64770632ad47a127e88"></script><a target="_blank" href="http://tongji.baidu.com/hm-web/welcome/ico?s=020f889b5d07e64770632ad47a127e88"><img width="20" height="20" border="0" src="http://eiv.baidu.com/hmt/icon/21.gif"></a>
+   </div>
+<div class="window-shadow" style="display: block; left: 436.5px; top: 320.5px; z-index: 9004; width: 550px; height: 600px;"></div>
+<div class="window-mask" style="width: 1423px; height: 1076px; display: block; z-index: 9003;"></div>
+
+</body></html>
+
+
+
