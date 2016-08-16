@@ -171,6 +171,26 @@
 	margin-left: 14px;
     margin-top: 10px;
 }
+.weChat{
+	cursor: pointer;
+}
+.weChat+li{position: relative;}
+.weChat+li:before{
+	content: " ";
+    width: 105px;
+    height: 105px;
+    background: url(../img/icon_pr.png);
+    display: table;
+    right: 84px;
+    position: absolute;
+    border: 4px solid #fff;
+    box-shadow: 0px 0px 25px 5px #000;
+    display: none;
+    top:-100%;
+}
+.weChat:hover+li:before{
+	display: block;
+}
 /* jobs */
 .container .jobs{
 	height: 680px;
@@ -1265,6 +1285,10 @@ a.adButton{
 	width: 880px;
 	border:1px solid #dadada;
 	border-top: none;
+}
+div.brandPic_right .glide{
+	width:50%;
+	float: left;
 }
 .brandPicBox{
 	height: 476px;

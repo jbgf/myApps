@@ -16,7 +16,12 @@
     position: fixed;
     top:240px;
     left:23px;
-} 
+}
+.floatWindow.affix {
+    position: fixed;
+    top: -140px;
+    z-index: 99;
+}
 .catalog-scroller{
     
     width: 100%;
