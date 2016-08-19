@@ -5,9 +5,10 @@ $(document).ready(function(){
 	
 	
 	dropDown();
-	floatWindowClose();
+	
 	switchProduct();
 	quickBar();
+	if($(".slider").length!=0)
 	$('.slider').glide({
 		type: 'carousel',
 		
@@ -110,13 +111,7 @@ function switchProduct(){
       		$(".product .product_r").toggle();
       })
 }
-function floatWindowClose(){
-	/*飘窗及底部广告的close*/
-      $(".floatWindow .close").on('click', function(event) {
-          $(this).parent("div").hide();
-      });
-      
-}
+
 function dropDown(){
 	$(".dropDownButton").on("click",function(){
 		 var $ul = $(this).siblings("ul");      

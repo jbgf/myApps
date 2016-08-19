@@ -8,8 +8,8 @@ var gulp=require('gulp'),
 	uglify=require('gulp-uglify'),
 
 	connect = require('gulp-connect-php'),
+	
 	runSequence = require('run-sequence');
-
 
 /*优化线路*//*
 gulp.task('build',function(callback){
@@ -26,7 +26,7 @@ gulp.task('default',function(callback){
 gulp.task('browserSync',function(){
 	browserSync.init({
         server: {
-            baseDir: "./eccyy"
+            baseDir: "."
         }
     });
 /*	browserSync({

@@ -1,1 +1,1 @@
-[Tue Aug 16 2016 08:57:49 GMT+0800 (中国标准时间)] layer "+": Expected Either a default asset specification or a layer asset specification but "+" found.
+[Fri Aug 19 2016 15:24:37 GMT+0800 (中国标准时间)] layer "+": Expected Either a default asset specification or a layer asset specification but "+" found.

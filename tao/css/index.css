@@ -14,7 +14,10 @@
 	margin-left: 4px;
     margin-bottom: 3px;
 }
-.ad{margin-top: 14px;}
+.ad{
+	margin-top: 14px;
+	position: relative;
+}
 /*dropdown*/
 .caret {
   display: inline-block;
@@ -153,23 +156,71 @@
 	min-height: 1px;width:100%;
 	position: relative;
 }
-.container .floatWindow>div{position: absolute;z-index: 999;}
+.floatWindow.affix{
+    position: fixed;
+    top: 0;
+    
+}
+.container .floatWindow>div,
+.container .floatWindow.affix{
+	z-index: 10;
+}
+.container .floatWindow.appointment.affix{
+	z-index: 999;
+}
+.container .floatWindow>div{position: absolute;}
 .container .floatWindow>div.window_l{left:92px;top: 141px;}
 .container .floatWindow>div.window_r{right:92px;top: 141px;}
 .close{width:20px;height: 20px;position: absolute;top:10px;right: 10px;}
-
+.container .floatWindow .post_demands{
+	top: 492px;
+	z-index: 999;
+}
 .container .floatWindow .quickBar{
 	background-color: #333;height: 333px;width: 63px;
 	position: fixed;
 	right: 0;
 	top: 30%;
 }
+
 .quickBar ul{display: block;height:100%;list-style: none;}
-.quickBar ul li{height: 16.6%;width:100%;}
-.quickBar ul li a{display: block;width:100%;height:100%;border: 1px solid #444}
-.quickBar ul li a img{
+.quickBar ul li{height: 16.6%;width:100%;position: relative;}
+.quickBar ul li>a{display: block;width:100%;height:100%;border: 1px solid #444}
+.quickBar ul li>a>img{
 	margin-left: 14px;
     margin-top: 10px;
+}
+.quickBar .qq .qq_list{
+	width: 160px;
+    height: 180px;
+    position: absolute;
+    z-index: -1;
+    left:0;
+    padding-left: 27px;
+    padding-top: 51px;
+    top: -12px;
+    background: #f1eeee;
+    background: url(../img/qq_bg.png);
+    background-size: 100% 100%;
+     display: none; 
+}
+.quickBar .qq:hover .qq_list{
+	display: block;
+	
+}
+.quickBar .qq .qq_list .qq-item{
+	height: 30px;
+	position: relative;
+}
+.quickBar .qq .qq_list .qq-item span.name{
+	position: absolute;
+    display: inline-block;
+    left: 82px;
+    top: 0px;
+}
+.quickBar .qq .qq_list a{
+	display: inline;
+	border:none;
 }
 .weChat{
 	cursor: pointer;
@@ -379,14 +430,11 @@
 /*contact*/
 .container .post_demands{
 	height: 0;
-    width: 100%;
+    width: 0;
     cursor: pointer;
-    position: relative;
-    /* margin-top: -163px; */
-    bottom: 20px;
-
+    top: 400px;
 }
-.container .post_demands img{margin-top: -108px;}
+
 
 .container .contact{
 	 display: none;
@@ -394,6 +442,7 @@
 	 background-color: rgba(104,104,104,.9);
 	 position: relative;
 	 margin-top: -163px;
+	 z-index: 9;
 }
 .container .contact>div{position: absolute;height: 163px;}
 .contact .contact_l{width: 768px;margin-top: 0;}
@@ -1257,6 +1306,15 @@ a.adButton{
 .picRow02 li .picBox img{width:100%;height: 100%;}
 
 .productBox{padding-top: 44px;}
+
+.productBox .affix_p{
+	min-height: 1px;   
+    position: relative;
+}
+.affix_p.affix{
+    position: fixed;
+    top:0px;   
+}
 /*brandPic01*/
 .brandPic{
 	height: 515px;
@@ -3387,4 +3445,39 @@ tr.tableComments td{
 }
 .clear.video{
 	position: relative;
+}
+
+
+
+/***********************************************************************************
+*********************************searchResult.html问题详细*****************************
+***********************************************************************************/
+.resultBox{
+	padding:0 22px;
+}
+.resultList{
+	padding:20px 0;
+	width:800px;
+}
+.resultList .r_title{
+	font-size: 20px;
+	color: #001ba0;
+}
+.resultList .r_title:visited {
+    color: #600090;
+}
+.resultList .r_text{
+	line-height: 20px;
+    font-size: 13px;
+}
+
+.resultBox .r_time{
+	color: #006d21;
+	font-weight: 600;
+	padding: 3px 0;
+}
+.resultBox .r_time .r_time{
+	color: #006d21;
+	font-weight: 500;
+	margin-left: 50px;
 }

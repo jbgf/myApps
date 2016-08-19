@@ -1439,7 +1439,7 @@ margin:5px 0 !important;
 	font-size:18px;
 	color:#fff;
 	line-height:150%;
-	font-family:"Times New Roman";
+	font-family:"Humanist";
 }
 .icon_box {
 	margin-top:30px;
@@ -1845,6 +1845,21 @@ top:80%
 .it_left strong{ color:#f8ea12; font-size:26px; font-family:Arial, Helvetica, sans-serif;}
 .it_left p{ color:#fff; line-height:180%;}
 .detail_box{ margin-top:50px;} 
+.detail_box a{
+	display: block;
+}
+.detail_text{
+	text-align: center;
+    font-size: 16px;
+    line-height: 19px;
+    height: 50px;
+    background: #ff6600;
+    /* z-index: 99; */
+    /* position: absolute; */
+    width: 100%;
+    padding-top: 10px;
+}
+
 .block_name{ font-size:1.5em; font-weight:bold; font-family:Arial, Helvetica, sans-serif; margin-bottom:30px; color:#f8ea12;margin-top:20px;}
 .cp_img{ margin-bottom:15px; display:inline-block;}
 .cp_list{ height:130px; margin-bottom:15px; display:inline-block}
