@@ -1,0 +1,46 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot?-7oavri');
+	src:url('fonts/icomoon.eot?#iefix-7oavri') format('embedded-opentype'),
+		url('fonts/icomoon.woff?-7oavri') format('woff'),
+		url('fonts/icomoon.ttf?-7oavri') format('truetype'),
+		url('fonts/icomoon.svg?-7oavri#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+
+.icon-bi:before{content: "\e9a8";}
+.icon-chun:before{content:"\e972";}
+.icon-chuzhou:before{content:"\ea83";}
+.icon-jfcz:before{content:"\e9c9";}
+.icon-jgqd:before{content:"\e904";}
+.icon-jgtm:before{content:"\e921";}
+.icon-jpmd:before{content:"\e983";}
+.icon-jptd:before{content:"\ea85";}
+.icon-mei:before{content:"\e922";}
+.icon-mian:before{content:"\e937";}
+.icon-pfmr:before{content:"\e9ca";}
+.icon-simi:before{content:"\e60b";}
+.icon-slz:before{content:"\e920";}
+.icon-tcsx:before{content:"\e940";}
+.icon-xingti:before{content:"\e92b";}
+.icon-xiong:before{content:"\e60f";}
+.icon-yan:before{content:"\ea7d";}
+.icon-zscz:before{content:"\e955";}
+.icon-zsss:before{content:"\e9ae";}
