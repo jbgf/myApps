@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/booklet.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.booklet.latest.css">
+	<script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.10.4.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="js/jquery.booklet.latest.js"></script>
+	
+	<script type="text/javascript">
+		$(function() {
+			$('#mybook').booklet({
+		        arrows: true
+		    });
+		});
+	</script>
+</head>
+<body>
+	<div id="mybook" ng-include="'gh-pages-src/app/includes/sample-booklet.html'" class="ng-scope booklet" >
+	<div class="b-page b-page-0 b-pN" ><div class="b-wrap b-wrap-left" style="left: 0px; width: 280px; height: 380px; padding: 10px;"><div class="ng-scope">
+	<h3>Yay, Page 1!</h3>
+</div><div class="b-counter">1</div></div></div>
+<div class="b-page b-page-1 b-p0 ui-draggable ui-draggable-handle b-grab" style="left: 0px; width: 0px; height: 400px; cursor: pointer;"><div class="b-wrap b-wrap-right" style="left: auto; width: 280px; height: 380px; padding: 10px; right: 0px;"><div class="ng-scope">
+	<h3>Yay, Page 2!</h3>
+</div><div class="b-counter">2</div></div><div class="b-shadow-b" style="left: -114px; width: 300px; height: 400px;"></div></div>
+<div class="b-page b-page-2 b-p1" style="left: 0px; width: 300px; height: 400px;"><div class="b-wrap b-wrap-left" style="left: 0px; width: 280px; height: 380px; padding: 10px;"><div class="ng-scope">
+	<h3>Yay, Page 3!</h3>
+</div><div class="b-counter">3</div></div></div>
+<div class="b-page b-page-3 b-p2" ><div class="b-wrap b-wrap-right" ><div class="ng-scope">
+	<h3>Yay, Page 4!</h3>
+</div><div class="b-counter">4</div></div></div><div class="b-controls"><div class="b-arrow b-arrow-prev b-prev" title="Previous Page" style="cursor: pointer;"><div style="display: block;">Previous</div></div><div class="b-arrow b-arrow-next b-next" title="Next Page" style="cursor: default; display: none;"><div style="display: block;">Next</div></div></div></div>
+</body>
+</html>

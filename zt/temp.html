@@ -1,0 +1,81 @@
+<<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<script type="text/javascript">
+	index = layer.open({
+					    type: 1,
+					    //skin: 'layui-layer-lan',
+					    title: false,
+					   /* fix: false,*/
+					    shadeClose: true,
+					    /*maxmin: true,*/
+					    area: ['1000px', '500px'],
+					    content: '<div class="thumbWrapper ">'
+					    			
+						    		+'<div class=" thumb" >'
+						    		
+						    		+'<div class="thumb_body"><img src="img/enter01.jpg"></div>'
+									
+									+'</div>'
+									+'<div class="thumb">'
+									
+									+'<div class="thumb_body"><img src="img/enter02.jpg"></div>'
+									
+									+'</div>'
+									+'<div class="thumb">'
+									
+									+'<div class="thumb_body"><img src="img/enter03.jpg"></div>'
+									
+									+'</div>'
+									
+								+'</div>',
+					    success: function(){
+									
+
+					      		$(".thumb").click(function(e){
+									e.preventDefault();
+									var index = layer.open({
+										type: 2,
+										fix: false,
+									    //skin: 'layui-layer-lan',
+									    title: false,
+									   /* fix: false,*/
+									    shadeClose: true,
+									    /*maxmin: true,*/
+									    area: ['320px', '580px'],
+									    move: false,
+									    content: "enter.html",
+									    scrollbar: false,
+									    success:function(layero, index){
+									    	var Glide = $("iframe").contents().find("#Glide")[0];
+									    	
+									    	var hammertime = new Hammer(Glide,{});
+
+									    	hammertime.get('pinch').set({ enable: true });
+											hammertime.on('pinchin', function(ev) {
+												layer.close(index);
+											});
+									    	/*var $box = $("iframe").contents().find(".box");*/
+									    	/*$box.on("touchmove",function(e){
+									    		var _touch = e.originalEvent.targetTouches;
+									    		if(_touch.length>=1){
+									    			layer.close(index);
+									    		}
+									    	})*/
+
+									    }
+
+									});
+									layer.full(index);
+
+									
+								})
+					    }
+					});
+</script>
+<body>
+
+</body>
+</html>

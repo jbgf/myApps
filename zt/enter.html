@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <title></title>
+   <meta charset="utf-8">
+	 <link rel="stylesheet" type="text/css" href="css/glide.core.css">
+  	 <link rel="stylesheet" type="text/css" href="css/glide.theme.css">
+  	 <link rel="stylesheet" type="text/css" href="css/index.css">
+	 <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+  	 <script type="text/javascript" src="js/glide.min.js"></script>
+    
+  	 <style type="text/css">
+	
+	body{width:1920px;height: 1080px;}
+	.box {
+	    color: #fff;
+	    font-size: 3vw;
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+	    height: 2031px;
+      	position: relative;
+      
+		}
+    .glide{height: auto;}
+	.glide__wrapper {
+    overflow: visible;
+}	
+  .link01{
+    position: absolute;
+    top: 13%;
+    left: 36%;
+    width:403px;
+    height: 40px;
+ 
+  }
+  .link01 a{
+      display: inline-block;
+      width:25%;
+      height: 100%;
+      float: left;
+      cursor: pointer;
+    }
+     .link02{
+    position: absolute;
+    top: 0%;
+    left: 55%;
+    width:170px;
+    height: 65px;
+   
+ 
+  }
+  .link02 a{
+      display: inline-block;
+      width:50%;
+      height: 100%;
+      float: left;
+      cursor: pointer;
+    }
+  .link03{
+      position: absolute;
+      top: 28%;
+      left: 19%;
+      width: 193px;
+      height: 131px;
+ 
+  }
+  .link03 a{
+      display: inline-block;
+      width:100%;
+      height: 50%;
+      float: left;
+      cursor: pointer;
+    }
+      
+    .link-l{
+      width:240px;
+      height:282px;
+      position: fixed;
+      left: 0;
+      top: 48%;
+      z-index: 999;
+
+    }
+    .link-l a{
+      display: inline-block;
+      width:242px;
+      height: 77px;
+      line-height: 69px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 28px;
+      
+
+    }
+  	 </style>
+</head>
+<body>
+          <div class="sideBtnBg link-l" style="z-index: 999;">
+            <a class="buyer" href="#" style="padding-left: 64px;background:url(img/btn-l-001.png)no-repeat" >消费者</a>
+            <a class="manager" href="#" style="padding-left: 64px;background:url(img/btn-l-001.png)no-repeat" >管理者</a>
+
+            <a href="#" class="back" style="color:#003e71;padding-left:54px;background:url(img/btn-l-03.png)no-repeat" target="_parent">上一步</a>
+            <a href="index.html" target="_parent" style="color:#003e71;padding-left: 40px;background:url(img/btn-l-03.png)no-repeat">返回首页</a>
+          </div> 
+            <div id="Glide" class="glide">
+
+                <div class="glide__wrapper">
+                  <ul class="glide__track">
+                    <li class="glide__slide">
+                      <div class="box" style="height:2040px;background:url(img/enter01.jpg)no-repeat; " >
+                      		<div class="link01 ">
+                              <a ></a>
+                              <a ></a>
+                              <a ></a>
+                              <a ></a>  
+                          </div>
+                      </div>
+                    </li>
+                    <li class="glide__slide">
+                      <div class="box" style="height:1330px;background:url(img/enter02.jpg); background-repeat: no-repeat;">
+                      	  <div class="link02">
+                              <a ></a>
+                              <a ></a>
+                          </div>
+
+                          <div class="link03">
+                              <a ></a>
+                              <a ></a>
+                          </div>
+                      </div>
+                    </li>
+                    <li class="glide__slide">
+                      <div class="box" style="height:1420px;background:url(img/enter03.jpg); background-repeat: no-repeat;">
+                      	   <div class="link02">
+                              <a ></a>
+                              <a ></a>
+                          </div>
+
+                          <div class="link03" style="top:36%;">
+                              <a ></a>
+                              <a ></a>
+                          </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+            <script type="text/javascript">
+                var glide = $('.glide').glide({
+                  type: 'carousel',
+                  startAt: 1,
+                  touchDistance: 2,
+                  autoplay:false,
+                  autoheight:true
+
+                });
+                
+            </script>
+        </div>
+
+    	
+</body>
+</html>

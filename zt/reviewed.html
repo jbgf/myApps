@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <title></title>
+   <meta charset="utf-8">
+	 <link rel="stylesheet" type="text/css" href="css/glide.core.css">
+  	 <link rel="stylesheet" type="text/css" href="css/glide.theme.css">
+  	 <link rel="stylesheet" type="text/css" href="css/index.css">
+	 <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+  	 <script type="text/javascript" src="js/glide.min.js"></script>
+     <script type="text/javascript" src="js/hammer.min.js"></script>
+  	 <style type="text/css">
+	
+	body{width:1920px;}
+	.box {
+	    color: #fff;
+	    font-size: 3vw;
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+	    height: 1080px;
+		}
+	.glide__wrapper {
+    overflow: visible;
+}	
+  .link-l{
+      width:240px;
+      height:282px;
+      position: fixed;
+      left: 0;
+      top: 48%;
+      z-index: 999;
+
+    }
+    .link-l a{
+      display: inline-block;
+      width:242px;
+      height: 77px;
+      line-height: 69px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 28px;
+      
+
+    }
+  	 </style>
+</head>
+<body>
+	          <div class="sideBtnBg link-l" style="z-index: 999;">
+            <a class="buyer" href="#" style="padding-left: 57px;background:url(img/btn-l-001.png)no-repeat" >消费者</a>
+            <a class="enter" href="#" style="padding-left: 44px;background:url(img/btn-l-001.png)no-repeat" >入驻企业</a>
+
+
+            <a class="back" target="_parent" href="introduce.html" style="color:#003e71;padding-left: 54px;background:url(img/btn-l-03.png)no-repeat">上一步</a>
+            <a href="index.html" style="color:#003e71;padding-left: 40px;background:url(img/btn-l-03.png)no-repeat">返回首页</a>
+          </div> 
+            <div id="Glide" class="glide">
+
+                <div class="glide__wrapper">
+                  <ul class="glide__track">
+                    <li class="glide__slide">
+                      <div class="box" style="background:url(img/reviewed01.jpg); height:1412px;" >
+                      		
+                      </div>
+                    </li>
+                    <li class="glide__slide">
+                      <div class="box" style="background:url(img/reviewed02.jpg); height:1449px;">
+                      	
+                      </div>
+                    </li>
+                    <li class="glide__slide">
+                      <div class="box" style="background:url(img/reviewed02.jpg); height:1449px;">
+                        
+                      </div>
+                    </li>
+                    <li class="glide__slide">
+                      <div class="box" style="background:url(img/reviewed03.jpg); ">
+                        
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+            <script type="text/javascript">
+                var glide = $('.glide').glide({
+                  type: 'carousel',
+                  startAt: 1,
+                  touchDistance: 2,
+                  autoplay:false
+                });
+
+            </script>
+        </div>
+
+    	</div>
+    	</div>
+</body>
+</html>

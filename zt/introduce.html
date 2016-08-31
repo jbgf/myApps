@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" /> 
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/modalBox.css">
+	<link href="css/animate.min.css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/modalBox.js"></script>
+	<script type="text/javascript" src="js/layer.js"></script>
+	<script type="text/javascript" src="js/glide.min.js"></script>
+	<script type="text/javascript" src="js/hammer.min.js"></script>
+	
+	
+	<style type="text/css">
+		.link-l{
+			width:240px;
+			height:276px;
+			
+			top: 20%;
+    		position:absolute;
+
+		}
+		.link-l a{
+			display: inline-block;
+			width:242px;
+			height: 77px;
+			line-height: 69px;
+			color: #fff;
+			text-decoration: none;
+			font-size: 28px;
+			text-align: center;
+		}
+		.link-r{
+			width: 1555px;
+			height: 766px;
+			left: 15%;
+			top:20%;
+			position: relative;	
+			padding:88px 98px;
+		}
+		.link-r .header .title{
+			font-size: 30px;
+			color:#006dff;
+			border-bottom: 1px solid #92c3ec;
+			padding-bottom: 20px;
+		}
+		.link-r .text{
+			font-size: 21px;
+			color:#3e3e3e;
+			text-indent: 43px;
+			line-height: 2.3;
+			padding:23px 0;
+		}
+		.link02{
+			width: 595px;
+		    height: 233px;
+		    /* margin: 0 auto; */
+		    top: 23%;
+		    position: absolute;
+		    right: 7%;
+		}
+		.link02 a{
+			display: inline-block;
+			width:33.33%;
+			height: 100%;
+			float: left;
+			text-align: center;
+		}
+		.service{
+			float: left;
+			width: 710px;
+		}
+		.character{
+			margin-left: 760px;
+			position: relative;
+		}
+		.service .title,.character .title{
+			font-size: 25px;
+			color:#006dff;
+			
+			padding-bottom: 20px;
+		}
+		.service .text p{
+			font-size: 17px;
+			color:#333;
+			position: relative;
+		}
+		.service .text p:before{
+			content: " ";
+		    background: url(img/rightA.png)no-repeat;
+		    width: 17px;
+		    height: 18px;
+		    position: absolute;
+		    top: 12px;
+		    left: 12px;
+
+		}
+		body{
+			width:1920px;
+			height: 1080px;
+		}
+		.thumbWrapper{
+			white-space: nowrap;
+			overflow: hidden;
+			height: 100%
+		}
+		.thumb{
+			width:33.33%;
+			height:100%;
+			display: inline-block;
+			
+			padding: 10px;
+		}
+		.thumb_body{
+			width: 100%;
+    		height: 100%;
+		}
+		.thumb_body img{width:100%;height: 100%;}
+		.glide__track{height: 100%;padding:0;margin:0;}
+	</style>
+	<script type="text/javascript">
+		
+			$(function(){
+
+
+				$('.modal02').one('shown.bs.modalBox', function (e) {
+
+					$(".reviewed").click(function(e){
+	 					
+									e.preventDefault();
+									var index = layer.open({
+										type: 2,
+										fix: false,
+									    //skin: 'layui-layer-lan',
+									    title: false,
+									   /* fix: false,*/
+									    shadeClose: true,
+									    /*maxmin: true,*/
+									     area: ['1920px', '1080px'],
+									    move: false,
+									    content: "reviewed.html",
+									    scrollbar: false,
+									    closeBtn: 0,
+									    success:function(layero, index){
+									    	var $iframe = $("iframe").contents();
+									    	var Glide = $iframe.find("#Glide")[0];
+									    	
+									    	var hammertime = new Hammer(Glide,{});
+
+									    	hammertime.get('pinch').set({ enable: true });
+											hammertime.on('pinchin', function(ev) {
+												e.preventDefault();
+												layer.close(index);
+											});
+											$iframe.find(".back").on("click tap",function(e){
+
+												e.preventDefault();
+												layer.close(index);
+												
+											});
+											$iframe.find(".buyer").on("click tap",function(e){
+
+												e.preventDefault();
+												layer.close(index);
+												$(".close").trigger("click");
+												$(".box00").trigger("click");
+											})
+											$iframe.find(".enter").on("click tap",function(e){
+
+												e.preventDefault();
+												layer.close(index);
+												$(".close").trigger("click");
+												$(".box01").trigger("click");
+												
+											})
+									    	/*var $box = $("iframe").contents().find(".box");*/
+									    	/*$box.on("touchmove",function(e){
+									    		var _touch = e.originalEvent.targetTouches;
+									    		if(_touch.length>=1){
+									    			layer.close(index);
+									    		}
+									    	})*/
+									    }
+									});
+									layer.full(index);
+					});
+					$(".sys").click(function(e){
+	 					
+									e.preventDefault();
+									var index = layer.open({
+										type: 2,
+										fix: false,
+									    //skin: 'layui-layer-lan',
+									    title: false,
+									   /* fix: false,*/
+									    shadeClose: true,
+									    /*maxmin: true,*/
+									     area: ['1920px', '1080px'],
+									    move: false,
+									    content: "sys.html",
+									    scrollbar: false,
+									    closeBtn: 0,
+									    success:function(layero, index){
+									    	var $iframe = $("iframe").contents();
+									    	var Glide = $iframe.find("#Glide")[0];
+									    	
+									    	
+											$iframe.find(".back").on("click tap",function(e){
+
+												e.preventDefault();
+												layer.close(index);
+												
+											})
+											$iframe.find(".buyer").on("click tap",function(e){
+
+												e.preventDefault();
+												layer.close(index);
+												$(".close").trigger("click");
+												$(".box00").trigger("click");
+											})
+											$iframe.find(".enter").on("click tap",function(e){
+
+												e.preventDefault();
+												layer.close(index);
+												$(".close").trigger("click");
+												$(".box01").trigger("click");
+												
+											})
+									    	/*var $box = $("iframe").contents().find(".box");*/
+									    	/*$box.on("touchmove",function(e){
+									    		var _touch = e.originalEvent.targetTouches;
+									    		if(_touch.length>=1){
+									    			layer.close(index);
+									    		}
+									    	})*/
+
+									    }
+
+									});
+									layer.full(index);
+
+									
+					})
+				});
+				$('.modal01').one('shown.bs.modalBox', function (e) {
+
+	 				$(".thumb").click(function(e){
+	 					
+									e.preventDefault();
+									var index = layer.open({
+										type: 2,
+										fix: false,
+									    //skin: 'layui-layer-lan',
+									    title: false,
+									   /* fix: false,*/
+									    shadeClose: true,
+									    /*maxmin: true,*/
+									     area: ['1920px', '1080px'],
+									    move: false,
+									    content: "enter.html",
+									    scrollbar: false,
+									    closeBtn: 0,
+									    success:function(layero, index){
+									    	var $iframe = $("iframe").contents();
+									    	var Glide = $iframe.find("#Glide")[0];
+									    	
+									    	var hammertime = new Hammer(Glide,{});
+
+									    	hammertime.get('pinch').set({ enable: true });
+											hammertime.on('pinchin', function(ev) {
+												e.preventDefault();
+												layer.close(index);
+											});
+											$iframe.find(".back").on("click tap",function(e){
+
+												e.preventDefault();
+												layer.close(index);
+												
+											})
+											$iframe.find(".buyer").on("click tap",function(e){
+
+												e.preventDefault();
+												layer.close(index);
+												$(".box00").trigger("click");
+												
+											});
+											$iframe.find(".manager").on("click tap",function(e){
+
+												e.preventDefault();
+												layer.close(index);
+												$(".close").trigger("click");
+												$(".box02").trigger("click");
+											})
+									    	/*var $box = $("iframe").contents().find(".box");*/
+									    	/*$box.on("touchmove",function(e){
+									    		var _touch = e.originalEvent.targetTouches;
+									    		if(_touch.length>=1){
+									    			layer.close(index);
+									    		}
+									    	})*/
+
+									    }
+
+									});
+									layer.full(index);
+
+									
+					})		
+	            });	
+
+				$(".box00").click(function(e){
+					e.preventDefault();
+					var index = layer.open({
+										type: 2,
+										fix: false,
+									    //skin: 'layui-layer-lan',
+									    title: false,
+									   /* fix: false,*/
+									    shadeClose: true,
+									    /*maxmin: true,*/
+									     area: ['1920px', '1080px'],
+									    move: false,
+									    content: "mall.html",
+									    scrollbar: false,
+									    closeBtn: 0,
+									    success:function(layero, index){
+									    	var $iframe = $("iframe").contents();
+									    	var Glide = $iframe.find("#Glide")[0];
+									    	
+											$iframe.find(".back").on("click tap",function(e){
+
+												e.preventDefault();
+												layer.close(index);
+												
+											});
+											$iframe.find(".enter").on("click tap",function(e){
+
+												e.preventDefault();
+												layer.close(index);
+												$(".box01").trigger("click")
+											});
+											$iframe.find(".manager").on("click tap",function(e){
+
+												e.preventDefault();
+												layer.close(index);
+												$(".box02").trigger("click")
+											});
+									    	
+									    }
+
+									});
+									layer.full(index);
+				});
+
+				$(".box01").click(function(e){
+
+					e.preventDefault();
+					$(".modal01").modalBox("show");
+					
+				});
+				
+				$(".box02").click(function(e){
+					e.preventDefault();
+					$(".modal02").modalBox();
+				});
+
+
+				 
+			});
+			
+		
+	</script>
+</head>
+<body >
+
+	<div id="wrapper" class="wrapper" style="background:url(img/sysbg.png);background-size:100%">
+		<div class="link-l ">
+			
+
+			<a href="#" style="background:url(img/btn-l-01.png)">正统商城</a>
+			<a href="index.html" style="background:url(img/btn-l-02.png)">返回首页</a>
+		</div>
+		<div class="link-r" style="background:url(img/introduce-r-bg.png)">
+			<section class="header">
+				<h1 class="title">正统商城总体介绍</h1>
+				<div class="text"> “正统商城”将作为官方为优质网销商品提供信用背书的电商导购平台，实现一站式无缝对接的“1 to N”的电商平台购物新体验。“正统商城”展示的每一样商品都将是电商企业的在销商品，“正统网”为其完成三道“正统商品”认证手续后，将为其提供信用背书。</div>
+			</section>
+			<section>
+				<div class="service" style="">
+					<h1 class="title">核心服务</h1>
+					<div class="text">
+					<p>导购服务消费—帮助消费者购买到具有一定资质及信用保障的正统商品。</p>
+<p>导流服务商家—为入驻商城的企业和商品带来关注及购买流量，并将流量持续导入企业“自营或入驻的第三方商城平台”。</p>
+<p>数据服务政府—实时统计福建电商企业在各应用平台的分布情况，监测服务效果，为相关政府部门的决策提供数据支持。</p>
+					</div>
+				</div>
+				<div class="character clear">
+					<h1 class="title">三类用户角色</h1>	
+					<div class="link02 ">
+						<a class="box00" href="#" ><img class="heart margin-l-14" src="img/icon01.png"><img class="margin-t-21 margin-l-10" src="img/c01.png"></a>
+						<a class="box01" href=""><img class="heart margin-r-8" src="img/icon02.png"><img class="margin-t-21 margin-r-10" src="img/c02.png"></a>
+						<a class="box02"  ><img class="heart margin-r-40" src="img/icon03.png"><img class="margin-t-21 margin-r-37" src="img/c03.png"></a>
+					</div>
+				</div>
+			</section>
+		</div>
+		
+		<div class="modalBox fade modal01">
+		  		<div class="modalBox-dialog" role="document">
+				    <div class="modalBox-content" style="width:1032px;">
+				      <div class="modalBox-header" style="backround:#fff;">
+				        <button type="button" class="close" data-dismiss="modalBox" aria-label="Close">
+				          <span aria-hidden="true">&times;</span>
+				        </button>
+	<!-- 标题栏 -->			  <h4 class="modalBox-title">入驻企业</h4>
+				      </div>
+				      <div class="modalBox-body linkWrapper" style=" background:url(img/box01Bg.png)no-repeat;">
+	<!-- 提示信息-->			      
+	   					  <div class="thumbWrapper ">
+					    			
+						    		<div class=" thumb" >
+						    		
+						    		<div class="thumb_body"></div>
+									
+									</div>
+									<div class="thumb">
+									
+									<div class="thumb_body"></div>
+									
+									</div>
+									<div class="thumb">
+									
+									<div class="thumb_body"></div>
+									
+									</div>
+									
+								</div>
+				      </div>
+				     
+				    </div>
+			  </div>
+		</div>
+
+		<div class="modalBox fade modal02">
+		  		<div class="modalBox-dialog" role="document">
+				    <div class="modalBox-content">
+				      <div class="modalBox-header">
+				        <button type="button" class="close" data-dismiss="modalBox" aria-label="Close">
+				          <span aria-hidden="true">&times;</span>
+				        </button>
+	<!-- 标题栏 -->			  <h4 class="modalBox-title">管理员</h4>
+				      </div>
+				      <div class="modalBox-body linkWrapper" style=" background:url(img/box02Bg.png)no-repeat;">
+	<!-- 提示信息-->			      
+	   									<a class="reviewed" href="#"></a>
+									    <a class="sys" href="#"></a>
+				      </div>
+				     
+				    </div>
+			  </div>
+		</div>
+
+		
+
+	</div>
+</body>
+</html>

@@ -14,6 +14,9 @@ $(document).ready(function(){
 		
 	});
 });
+
+
+
 function scrollLink(speed,delay,ele) {   //函数 函数名(变量1,变量2,变量3)滚动高度,速度,延迟
             var p=false; //定义变量 p为假;
             var t; //定义变量t了

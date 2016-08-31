@@ -1,0 +1,70 @@
+   <!DOCTYPE html>
+   <html>
+   <head>
+   	<title></title>
+   	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+   	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+   	<script type="text/javascript" src="js/jquery.validate.js"></script>
+   	<script type="text/javascript" src="js/messages_zh.js"></script>
+   	<script type="text/javascript" src="js/tooltip.js"></script>
+
+   </head>
+   <body>
+   		<form class="content1_form" action="/index.php?c=form_account" method="post" name="myform" id="myform">
+            <div class="input_group" style="margin-top:20px">
+                <span style="float: left;color:#707070">公司简称</span>
+                <input   style="float: left;padding-left:12px;" type="text" name="data[title]" id="dr_title" value=""/>
+            </div>
+            <div class="input_group" style="margin-top:20px">
+                 <span style="float: left;;color:#707070">所属行业</span>
+                 <input  style="float: left;padding-left:12px;" type="text" name="data[nature]" id="dr_nature" value="" />
+            </div>                
+            <div class="input_group" style="margin-top:20px">
+                 <span style="float: left;;color:#707070">联系方式</span>
+                 <input  style="float: left;padding-left:12px;"  type="text" name="data[mobile]" id="dr_mobile" value=""/>
+            </div> 
+            <input type="submit" name="" value="开账申请" >
+        </form>
+    <script type="text/javascript">
+    	$(function(){
+    			jQuery.validator.addMethod("isTel", function(value,element) {   
+			        var length = value.length;   
+			        var mobile = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/;   
+			        var tel = /^(\d{3,4}-?)?\d{7,9}$/g;       
+			        return this.optional(element) || tel.test(value) || (length==11 && mobile.test(value));   
+			    }, "请正确填写您的联系方式"); 
+    			
+			    $("#myform").validate({
+			    	 rules: {
+						      "data[title]":"required",
+						      "data[nature]":"required",
+						      "data[mobile]":{
+						      	required:true,
+					      		isTel:true
+						      	
+						      }
+						  	},
+				      messages:{
+					      	"data[title]":"请填写公司名称",
+					      	"data[nature]":"请填写行业",
+					      	"data[mobile]":{
+					      		required:"请填写联系方式"
+					      	}
+				      	},
+				      errorPlacement: function (label, element) {
+	                    $(element).tooltip('destroy'); /*必需*/
+	                    $(element).attr('title', $(label).text()).tooltip({
+	                    	placement:"right"
+	                    }); 
+	                  }
+				      
+						      
+						      
+						  
+			    });
+			
+    	})
+    </script>
+        
+   </body>
+   </html>

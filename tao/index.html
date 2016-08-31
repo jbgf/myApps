@@ -23,8 +23,14 @@
     visibility: hidden;
   }
   .glide--horizontal button.glide__arrow{
-    visibility: visible;
-
+    visibility:visible;
+  }
+  #rightDiv{background:#e2e2e2;}
+  #rightDiv_top,#rightDiv_bottom{
+    height:25px;background:#2a2a2a;position:relative;
+  }
+  #rightDiv_middle a{
+    display: block;
   }
 </style>
 
@@ -45,7 +51,7 @@
                     </div>
             </div>
             <div class="full-screen">
-              <div class="ad ">
+              <div class="ad topAd" data="top">
                 <img src="img/ad03.PNG">
                 <div class="close"><img src="img/icon_close.png"></div>
               </div>
@@ -84,9 +90,9 @@
                  
                     <nav  class="g-header-nav">
                      <a href="#" class="g-header-nav-link on" id="menu_a_id_1">首页</a>
-                     <a href="publish.html?c=publish" class="g-header-nav-link" id="menu_a_id_2">需求发布</a>
+                     <a href="publish.html?c=job" class="g-header-nav-link" id="menu_a_id_2">需求发布</a>
                      <a href="#" class="g-header-nav-link" id="menu_a_id_3">财税工具</a>
-                     <a href="#" class="g-header-nav-link" id="menu_a_id_5">实习培训</a>
+                     <a  class="g-header-nav-link" id="menu_a_id_5">实习培训</a>
                      <a href="#" class="g-header-nav-link" >在线记账</a>
                      <a href="#" class="g-header-nav-link" >在线问答</a>
                      <a href="#" class="g-header-nav-link" >企业商城</a>
@@ -152,33 +158,45 @@
         <div class="post_demands"><a href="#contact"><img src="img/post_demands.png"></a></div>
     </div>
     <div class="floatWindow" data-spy="affix" data-offset-top="662" data-offset-bottom="1100">
-        <div class="window_l"><img src="img/window_l.png">
+        <div class="window_l ad leftAd" data="left"><img src="img/window_l.png">
           <div class="close"><img src="img/icon_close.png"></div>
         </div>
-        <div class="window_r"><img src="img/window_r.png">
+        <div class="window_r ad rightAd" data="left"><img src="img/window_r.png">
           <div class="close"><img src="img/icon_close.png"></div>
         </div>
         <div class="quickBar">
+        <div style="z-index: -1;">
+             
+          </div>
             <ul>
               <li class="quick_tel"><a><img style="margin-left: 17px;margin-top: 14px"  src="img/quick_tel.png"></a></li>
               <li class="weChat"><a><img style="margin-left: 17px;margin-top: 14px" src="img/quick_write.png"></a></li>
               <li class="baidu"><a href="baiduMap.html" target="_blank"><img style="margin-left: 17px;margin-top: 14px" src="img/quick_location.png"></a></li>
               <li class="qq">
               <div class="qq_list" >
-                  <div class="qq-item">
-                      <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1292913822&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:1292913822:51" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>
-                      <span class="name">王某某</span>
+                  <div id="rightDiv" style="">
+                  
+                  <div id="rightDiv_top" style="">
+                    <img src="img/qq007.png" style="position:absolute;top:-10px;left:-10px;">
+                  </div>
+                  <div id="rightDiv_middle" style="">
+                  <a  target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=76381057&amp;Site=客服1&amp;menu=yes">
+                    客服1<img src="img/qq009.gif">
+                  </a>
+                  <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=399291906&amp;Site=客服2&amp;menu=yes">
+                    客服2<img src="img/qq009.gif">
+                  </a>
+                  <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=272076037&amp;Site=客服3&amp;menu=yes">
+                    客服3<img src="img/qq009.gif">
+                  </a>
+                  </div>
+                  <div id="rightDiv_bottom" style=""></div>
                   </div>
 
-                  <div class="qq-item">
+                  <!-- <div class="qq-item">
                       <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1292913822&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:1292913822:51" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>
                       <span class="name">王某某</span>
-                  </div>
-
-                  <div class="qq-item">
-                      <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1292913822&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:1292913822:51" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>
-                      <span class="name">王某某</span>
-                  </div>
+                  </div> -->
                   
               </div>  
               <a href=""><img src="img/quick_qq.png"></a></li>
@@ -186,19 +204,7 @@
               <li class="backToTop"><a><img src="img/quick_backToTop.png"></a></li>
             </ul>
         </div>
-        <script type="text/javascript">
-            $(function(){
-                $(".quickBar li.qq").hover(
-                  function(){
-                    
-                    $(".qq_list").animate({"left":"-="+"160px"});
-                    
-                  },
-                  function(){
-                    $(".qq_list").animate({"left":"0px"});
-                  })
-            })
-        </script>
+       
     </div>
     <div class="jobs" >
 
@@ -397,12 +403,13 @@
                
                 <div class="pic_main avoidTop" >
                   <div class="new_pic ">
-                      <div class="pic_wrapper">
+                      <div class="pic_wrapper" style="height:188px;">
                           <img src="img/product_pic.png">
-                          <span class="new_pic_title">
-                              ¥30000.00 <span>成交：10</span>
-                          </span>
+                          
                           <div class="product_details">中恒财务代理 福州代理记账 账务代理</div>
+                          <span class="new_pic_title">
+                              ¥30000.00 <span>成交：10000</span>
+                          </span>
                       </div>
                   </div>
                 </div>      
@@ -856,6 +863,7 @@
       
     </div>  
     </div>
+    
     
     
     <div class="bottom "> 

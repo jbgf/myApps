@@ -190,38 +190,38 @@
 	margin-left: 14px;
     margin-top: 10px;
 }
-.quickBar .qq .qq_list{
-	width: 160px;
-    height: 180px;
-    position: absolute;
+
+.quickBar .qq_list{
+	position: absolute;
     z-index: -1;
-    left:0;
-    padding-left: 27px;
-    padding-top: 51px;
-    top: -12px;
-    background: #f1eeee;
-    background: url(../img/qq_bg.png);
-    background-size: 100% 100%;
-     display: none; 
+    left: -117px;
+    /*padding-left: 28px;*/
+    /* padding-top: 51px; */
+    /* top: -52px; */
+    /* display: none; */
+    width: 117px;
+    height: 133px;
+}
+.quickBar .qq_list a{
+	display: block;
+	height:28px;
+}
+.quickBar .qq_list a img{
+	vertical-align: middle;
+	margin-top: -3px;
 }
 .quickBar .qq:hover .qq_list{
 	display: block;
 	
 }
-.quickBar .qq .qq_list .qq-item{
+.quickBar  .qq_list .qq-item{
 	height: 30px;
 	position: relative;
 }
-.quickBar .qq .qq_list .qq-item span.name{
-	position: absolute;
-    display: inline-block;
-    left: 82px;
-    top: 0px;
+.quickBar .qq_list #rightDiv_middle{
+	padding:5px;
 }
-.quickBar .qq .qq_list a{
-	display: inline;
-	border:none;
-}
+
 .weChat{
 	cursor: pointer;
 }
@@ -2147,14 +2147,16 @@ section.content1_body h1{
 	overflow: hidden;
 }
 .inf_m>div{
-	padding: 15px 0px;
+	/*padding: 15px 0px;*/
 	border-bottom: 1px solid #eee;
 }
-.inf_m>div.onTop{
+.inf_m div.onTop{
 	position: relative;
 	overflow: hidden;
 	padding-left: 23px;
 	padding-right: 23px;
+	padding-bottom: 23px;
+	border-top: 1px solid #eee;
 }
 .slideTopBox .news_row{
 	border-bottom: 1px solid #eee;
@@ -2172,11 +2174,13 @@ section.content1_body h1{
 .inf_m .infBtn,.inf_m01 .infBtn{
 	padding-left: 23px;
 	padding-right: 23px;
+	padding-top: 17px;
 	display: block;
 	height: 55px;
 	position: relative;
 	font-size: 19px;
 	color:#f48000;
+	border-bottom: 1px solid #eee;
 }
 .inf_m .triggerBtn,.inf_m01 .triggerBtn{
 	float: right;
