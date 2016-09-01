@@ -1,0 +1,113 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family:  Arial, Helvetica, sans-serif;
+	font-size: 12px; min-width:1200px;
+}
+a {
+	text-decoration: none;
+	color: #333;
+	outline: none;
+	cursor: pointer;
+bblr:expression(this.onFocus=this.blur());
+}
+a:hover {
+	color: #0070d9;
+}
+* {
+	padding: 0px;
+	margin: 0px;
+}
+ul, li {
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+img {
+	border: none;
+}
+.clear {
+	clear:both
+}
+.red{ color:red}
+.blue{ color:#0065cb !important}
+
+.main_index{ background: url(../images/index-bg.png) no-repeat center; width:100%; height:1080px; overflow:hidden}
+.img_block{ display:block; margin:280px auto 40px}
+.main_index p{ color:#003f85;  font-size:26px; width:92%; margin:0 auto; line-height:46px; text-indent:2em} 
+.main_index ul{ margin:80px auto 0; width:56%;}
+.main_index ul li{ float:left; margin-right:40px;}
+.main_index ul li a{     width: 150px;
+    height: 114px;
+    display: block;
+    color: #6e1f00;
+    font-size: 22px;
+    padding-left: 134px;
+    padding-top: 49px;
+    position: relative;
+}
+.main_index ul li a img{position: absolute;top: -8px;left: 0;}
+.btn_01{ background: url(../images/index-btn-bg.png) no-repeat;}
+.btn_02{ background: url(../images/index-btn-bg.png) no-repeat; padding-left:130px !important; width:155px !important;}
+.btn_03{ background: url(../images/index-btn-bg.png) no-repeat;}
+.btn_04{ background: url(../images/cn_btn_01.png) no-repeat;}
+
+
+.main_pages{ background:url(../images/pages_bg.jpg) no-repeat center; width:100%; height:1080px; overflow:hidden}
+.pages_box{ background:rgba(255,255,255,0.5) !important; width:84%; margin:120px auto 0; height:700px; overflow-y:auto; border-style: solid;
+  border-width: 5px; border-color: rgba(255,255,255,0.9) !important; box-shadow:0 0 5px #666; border-radius:20px; padding:3% 4% 0 4%; filter:Alpha(opacity=80);/* 只支持IE6、7、8、9 */
+  position:static; /* IE6、7、8只能设置position:static(默认属性) ，否则会导致子元素继承Alpha值 */
+  *zoom:1; /* 激活IE6、7的haslayout属性，让它读懂Alpha */background:#fff; border-color:#fff;}
+.left{ float:left; width:48%;}
+.right{ float:right; width:48%;}
+.pages_box ul li{
+background:url(../images/list_bg.png) repeat-x;
+height:48px; margin-bottom:10px; line-height:48px; font-size:14px; color:#333; padding-left:2%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+
+.pages{ margin:30px auto 0; width:350px;}
+.pages .prev a{ background:url(../images/prev.png) no-repeat; width:149px; height:47px; display:block; float:left; color:#fff; font-size:18px; line-height:44px; text-align:center; font-weight:bold; text-shadow:0 1px 0 #333}
+.pages .next a{ background:url(../images/next.png) no-repeat; width:149px; height:47px; display:block; float:right;color:#fff; font-size:18px; line-height:44px; text-align:center; font-weight:bold; text-shadow:0 1px 0 #333}
+.pages .next a:hover{ background: url(../images/next_active.png) no-repeat;}
+.pages .prev a:hover{ background: url(../images/prev_active.png) no-repeat;}
+.pages_nav{ background:url(../images/nav_bg.png) no-repeat center bottom; width:942px; margin:40px auto 0; overflow:hidden; height:200px; background-position:0 66px;}
+.pages_nav ul{ margin:0 auto}
+.pages_nav li{ float:left;  padding-top:30px; margin-right:13px;}
+.pages_nav li a{ background: url(../images/pages_nav_bg.png) no-repeat; width:151px; height:79px; display:block; color:#fff; font-size:15px; text-align:center; line-height:68px; }
+.page_en{ background: url(../images/cn_btn_02.png) no-repeat !important; width:73px !important; height:114px !important;  }
+.back{ background:url(../images/back.png) no-repeat !important}
+.pages_nav li a:hover, .pages_nav li a.on{ background:url(../images/pages_nav_bg_active.png) no-repeat}
+
+.title_box{ background:url(../images/line.png) no-repeat bottom; padding-bottom:20px; font-size:26px; font-weight:bold; color:#006bd8; text-align:center; margin-bottom:30px;}
+.pages_box02{ background:rgba(255,255,255,0.5) !important; width:84%; margin:120px auto 0; height:700px; overflow-y:auto; border-style: solid;
+  border-width: 5px; border-color: rgba(255,255,255,0.9) !important; box-shadow:0 0 5px #666; border-radius:20px; padding:3% 4% 0 4%; filter:Alpha(opacity=80);/* 只支持IE6、7、8、9 */
+  position:static; /* IE6、7、8只能设置position:static(默认属性) ，否则会导致子元素继承Alpha值 */
+  *zoom:1; /* 激活IE6、7的haslayout属性，让它读懂Alpha */background:#fff; border-color:#fff;}
+
+.pages_box02 p{ font-size:18px; color:#333; line-height:42px;}
+.middle{ border-left: 1px dotted #cbcbcb;
+    float: left;
+    height: 490px;
+    width: 1px; margin-left:30px}
+
+.pages_box02 p{ text-indent:2em; line-height:38px; font-size:18px; color:#333;}
+.ul_list{ margin-top:30px;}
+.ul_list li{ float:left; margin-right:1%; margin-left:1%; display:inline; width:23%; overflow:hidden;}
+.ul_list li a{  display:block; overflow:hidden; position:relative;}
+.ul_list li a p{ position:absolute; left:0; bottom:0; height:40px; line-height:40px; background:url(../images/black_bg.png) repeat-x ; width:100%; color:#fff; text-align:center; text-indent:0;}
+.ul_list li a img{ width:100%}
+.pages .prev_no a{ background:url(../images/prev_no.png) no-repeat; width:149px; height:47px; display:block; float:left; color:#333; font-size:18px; line-height:44px; text-align:center; font-weight:bold; text-shadow:0 1px 0 #fff}
+.pages .next_no a{ background:url(../images/next_no.png) no-repeat; width:149px; height:47px; display:block; float:right; color:#333; font-size:18px; line-height:44px; text-align:center; font-weight:bold; text-shadow:0 1px 0 #fff}
+
+.heart {
+	
+	animation: pound 2.5s infinite;
+	transform-origin: center;
+}
+@keyframes pound {
+	50% { transform: scale(1.1); }
+}
+
+

@@ -2,18 +2,148 @@
 <html>
 <head>
 	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.clear:before,.clear:after{content:" ";display:table;}
+		.clear:after{clear:both;}
+		.progressWrapper{
+			overflow: hidden;
+		}
+		.progress{position:relative;left:-49px;}
+		.progress #pro-ul{margin:0;padding:0;position: relative;}
+		.progress .progress-wrapper{
+			height: 3px;
+		    position: absolute;
+		    width: 100%;
+		    top: 8px;
+		}
+		.progress .progress-wrapper	.progress-bar{
+			background: #e4e4e4;
+    		height:4px;
+    		position: relative;
+    		width:100%;
+    		margin: 0;
+    		padding: 0;
+		}
+		.progress .progress-wrapper	.progress-bar+.rightA{
+			content: " ";
+		    position: absolute;
+		    background: #e4e4e4;
+		    left: 100%;
+		    height: 4px;
+		    width: 140px;
+		    float: left;
+		    display: block;
+		    top: 0px;
+		}
+		.progress #pro-ul.complete+.progress-wrapper .rightA{background:#fa7606;}
+		.progress .progress-wrapper	.progress-bar #progress-highlight{
+			display: block;
+			background: #fa7606;
+			height: 4px;
+		}
+		.progress .wrapper{
+			display: inline-block;
+		    text-align: center;
+		    float: left;
+		    width: 25%;
+		    display: block;
+		    position: relative;
+    		z-index: 99;
+    		text-align: center;
+		}
+		.progress .wrapper .circle{display:inline-block;
+			width:20px;height:20px;border-radius: 50%;background:#e4e4e4;
+			position: relative;
+    		left: -50%;
+		}
+		.progress .wrapper .circle.on{background:#fa7606;}
+		.progress .wrapper .circle.current:after{
+			position:absolute;
+			content: " ";
+			background:url(img/tick.png);
+			width:16px;
+			height:16px;
+			left: 1px;
+		 }
+		.progress .wrapper .text{
+			font-size: 12px;
+			padding-top: 4px;
+			left: -50%;
+    		position: relative;
+		}
+
+	</style>
+	<script type="text/javascript">
+		window.onload = function(){
+			function progress(step){
+				var ul = document.getElementById("pro-ul");
+				var li = ul.getElementsByClassName("circle");
+				var stepNum = li.length;	
+									
+				
+				var highlight = document.getElementById("progress-highlight");
+				highlight.style.width=step/stepNum*100+"%";
+
+				//active;
+				for(var i=0;i<step;i++){
+					li[i].className +=" on" ;
+					if(i==step-1){
+						li[i].className+=" current";
+					}else if(i == stepNum-1){
+						ul.className +=" complete"
+					}
+				}
+				var stepWidth = ul.getElementsByTagName("li")[0].clientWidth+'px';
+				ul.style.left = stepWidth;
+			}
+			progress(2);
+			
+		}
+		
+	</script>
 </head>
 <body>
-	<div class="prev_no"><a>上一页</a></div>
-	
-
-	
-
-<script type="text/javascript">
-	var prev_no = document.getElementsByClassName("prev_no")[0];
-	    prev_no.getElementsByTagName("a")[0].innerHTML = "prev page";
-	
-</script>
+	<table>
+	<tr >
+		<th><font color="red">*</font> 审核进度：</th>
+		<td>
+			<div class="progressWrapper" style="width:400px;">
+				
+			
+			<div  class="progress"  style="width:400px;" >
+			<ul id="pro-ul">	
+				<li class="wrapper">
+					<i class="circle "></i>
+					<div class="text">项目报备</div>	
+				</li>
+				<li class="wrapper">
+					<i class="circle "></i>
+					<div class="text">项目部审核</div>	
+				</li>
+				<li class="wrapper">
+					<i class="circle "></i>
+					<div class="text">督导部审核</div>	
+				</li>
+				<li class="wrapper">
+					<i class="circle "></i>
+					<div class="text">市场部审核</div>	
+				</li>
+			</ul>
+			
+			<div class="progress-wrapper">
+				<p class="progress-bar">
+					<span id="progress-highlight"></span>
+					<div class="rightA">
+				</div>
+				</p>
+				
+			</div>
+			
+			</div>
+		</td>
+	</tr>
+	</table>
 
 </body>
 </html>
