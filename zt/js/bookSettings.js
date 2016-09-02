@@ -33,6 +33,7 @@ flippingBook.settings.downloadURL = "http://www.page-flip.com/new-demos/03-kitch
 flippingBook.settings.flipSound = "";
 flippingBook.settings.flipCornerStyle = "first page only";
 flippingBook.settings.zoomHintEnabled = false;
+ 
 
 // default settings can be found in the flippingbook.js file
 flippingBook.create();

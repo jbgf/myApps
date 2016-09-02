@@ -205,9 +205,16 @@
 									    closeBtn: 0,
 									    success:function(layero, index){
 									    	var $iframe = $("iframe").contents();
-									    	var Glide = $iframe.find("#Glide")[0];
+									    	var wrapper = $iframe.find(".wrapper")[0];
 									    	
-									    	
+									    	var hammertime = new Hammer(wrapper,{});
+
+									    	hammertime.get('pinch').set({ enable: true });
+											hammertime.on('pinchin', function(ev) {
+												e.preventDefault();
+												layer.close(index);
+											});
+
 											$iframe.find(".back").on("click tap",function(e){
 
 												e.preventDefault();
@@ -328,8 +335,16 @@
 									    closeBtn: 0,
 									    success:function(layero, index){
 									    	var $iframe = $("iframe").contents();
-									    	var Glide = $iframe.find("#Glide")[0];
+									    	var mall = $iframe.find(".mall")[0];
 									    	
+									    	var hammertime = new Hammer(mall,{});
+
+									    	hammertime.get('pinch').set({ enable: true });
+											hammertime.on('pinchin', function(ev) {
+												e.preventDefault();
+												layer.close(index);
+											});
+
 											$iframe.find(".back").on("click tap",function(e){
 
 												e.preventDefault();
