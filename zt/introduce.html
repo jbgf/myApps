@@ -124,7 +124,7 @@
 	<script type="text/javascript">
 		
 			$(function(){
-
+				document.addEventListener('touchmove',function(event){event.preventDefault(); },false);
 
 				$('.modal02').one('shown.bs.modalBox', function (e) {
 
