@@ -62,3 +62,7 @@ body {
   margin: 0;
   border: 0;
 }
+
+#Glide,#mall,#wrapper{
+        touch-action: pan-x pan-y !important;
+}

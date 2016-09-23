@@ -3,28 +3,38 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit">
 
 <link  href="css/base.css"  rel="stylesheet">
 <link href="css/index.css"  rel="stylesheet">
 <link href="css/banner.css"  rel="stylesheet">
-<link href="css/ie.css"  rel="stylesheet">
+
+
 <link rel="stylesheet" type="text/css" href="css/glide.core.css">
 <link rel="stylesheet" type="text/css" href="css/glide.theme.css">
+
 <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="js/glide.min.js"></script>
 <script type="text/javascript" src="js/jquery.JPlaceholder.js"></script>
 <script type="text/javascript" src="js/indexNew.js"></script>
-<script type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        
+    })
+</script>
+<!--[if lt IE 9]>
+    
+    <link href="css/ie.css" rel="stylesheet">
+    
+<![endif]-->
 </head>
 <body>
 
 <div class="container">
     <div class="head">
         <!--*页头-->
-        
         <div id="common_head" >
-             
             <div class="g-topbar full-width">
                     你好，欢迎来到淘会计！   福州 <a class="arrow_down"><img src="img/icon_arrowdown.png"></a>
                     <div class="g-topbar-r"><span>[登录]</span><span>[注册]</span><span>我的空间</span><a class="arrow_down"><img src="img/icon_arrowdown.png"></a>
@@ -96,7 +106,7 @@
     </div>
     <div class="content1">
         <h1>只需一分钟，您将在24小时内获得免费在线记账软件的使用权限。</h1>
-        <section class="content1_body">
+        <div class="content1_body">
             <h1>如果您是首次使用在线记账功能或申请新开账套，请在此申请
 开账，我们会在24小时内回复您：</h1>
             
@@ -119,8 +129,8 @@
             
             
 
-        </section>
-        <section class="content1_body" style="padding-left:58px;padding-right:0;border-right:none;">
+        </div>
+        <div class="content1_body" style="padding-left:58px;padding-right:0;border-right:none;">
             <h1>如果您已有在线记账账套信息，请在此登陆记账：</h1>
             <form class="content1_form">
                 <div class="input_group" style="margin-top:20px">
@@ -138,7 +148,7 @@
 
                 <input type="submit" name="" value="立即登录" style="color:#fff;background:#00aa3c;">
             </form>
-        </section>
+        </div>
     </div>
     
     <div class="box_row banner05 softWare" style="margin-top:26px;">
@@ -325,7 +335,7 @@
             
         })
      </script>
-    <div class="bottom "> 
+    <div class="bottom bookKeeping"> 
           <!-- 页尾 -->
 
     <div class="contact full-width" style="background:rgba(20,20,20,.8);">
@@ -337,13 +347,16 @@
                    <form>
                    <div class="input_box"  >
                       <div class="input_group input_account">
-                          <span class="addon icon_account" ></span><input type="" name="" placeholder="您的需求">
+                          <span class="addon icon_account" ></span>
+                          <input type="text" name="" placeholder="您的需求">
                       </div>
                   
                       <div class="input_group input_account">
-                          <span class="addon icon_tel" ></span><input style="width:120px;padding-left:12px;margin-right:5px;" type="" name="" placeholder="您的电话">
+                          <span class="addon icon_tel" ></span>
+                          <input id="tel_input" style="padding-left:12px;margin-right:5px;" type="text" name="" placeholder="您的电话">
 
-                          <span class="addon icon_pass" ></span><input style="width:120px;" type="" name="" placeholder="您的姓名">
+                          <span class="addon icon_pass" ></span>
+                          <input id="pass_input" style="" type="text" name="" placeholder="您的姓名">
                       </div>
                   </div>
                   <input class="contact_button" type="submit"

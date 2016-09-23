@@ -1,0 +1,40 @@
+.btnRow{position: relative;}
+.button{cursor: pointer;}
+.button .icon{vertical-align: middle;}
+
+
+.heart-btn{
+	display: inline-block;
+}
+.heart-btn .heart{
+	display: block;
+	animation: pound 2.5s infinite;
+	transform-origin: center;
+}
+@keyframes pound {
+	50% { transform: scale(1.1); }
+}	
+
+.btn-r-m{
+	padding: 0 13px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.btn-s{font-size: 13px;}
+
+
+.input-set{}
+.input-set input{display: inline-block;float:left;height: 100%;font-size: 16px;font-weight: 500;}
+.input-set input.input{width:72%;padding-left:10px;}
+.input-set input.button{width:28%;}
+.input-set-l{height: 48px;}
+
+
+
+    
+    

@@ -98,7 +98,7 @@
 .toolbar a:hover span{ background-position:left -224px; text-decoration:none;}
 
 
-.iconlink,.iconorder,.iconcomplian,.icondetail,.icondelete,.iconreturn,.iconremove,.iconconfirm,.icondetail,.iconaddress,.iconsingle,.iconfollowing,.iconfolloa,.iconfollob,.iconpro{ padding-left:20px; display:inline-block; background-image:url(../img/icon/btnicon.png); background-repeat:no-repeat;}
+.iconlink,.iconorder,.iconcomplian,.icondetail,.icondelete,.iconreturn,.iconremove,.iconconfirm,.icondetail,.iconaddress,.iconsingle,.iconfollowing,.iconfolloa,.iconfollob,.iconpro{ padding-left:20px; display:inline-block; background: url(../img/icon/btnicon.png) no-repeat;}
 .iconlink{ background-position:left 3px;}
 .iconorder{ background-position:left -35px;}
 .iconcomplian{ background-position:2px -71px;}

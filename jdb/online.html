@@ -166,46 +166,244 @@
     </style>
     <script src="js/jquery-1.8.0.min.js" type="text/javascript"></script>
     <script type="text/javascript">
-    /*0.4只能选沉金*/
+        
+        
+
         $(function(){
             
-            $("[name='radBoardThickness']").click(function(){
-        /*判断*/        if($("[name='radBoardThickness']").index($(this))==0){
-                  
-                    $("[name='radPlatingType']:not(:last)").attr("disabled",true)
-                }else{
-                    
-                    $("[name='radPlatingType']").attr("disabled",false);
-                    
-                }
-                
+            select1();
 
+            $("[name='spray']").click(function(){
+                $("[name='spray']").attr("checked",false);
+                $(this).attr("checked",true);
             });
 
-        /*数量*/
-            $("[name='countNumer']").click(function(){
+            $("input[name='scolor']").click(function(){
+                var data = $(this).attr('data');
+                
+                $("input[name='color_cost']").val(data);
+            });
 
-                if($(this).val()>=100){
-                    alert("big")
-                }else{
-                    alert("small")
+            $("input[name='spray']").click(function(){
+
+                var data = $(this).attr('data');
+                
+                $("input[name='spray_cost']").val(data);
+            });
+            
+
+            function select1(){
+                function f(){
+                    return $("[name='tboard']:first").is(":checked") 
                 }
-            })            
+                function fyes(){
+                     $("[name='spray']:not(:last)").attr("disabled",true);
+                        $("[name='spray']").attr("checked",false);
+                        $("[name='spray']").parent().attr("class","");
+                        $("[name='spray']:last").parent().attr("class","checked");
+                        $("[name='spray']:last").attr("checked",true);
+                }
+                function fno(){
+                        $("[name='spray']").attr("disabled",false);
+                       
+                }   
+                
+                var status = f();
+                if(status){fyes()}else{fno()};
+                $("[name='tboard']").click(function(){
+                   
+                    if(f()){fyes()}else{fno()}
+                });
+            }
+
+
+
+            (function(){
+                var d = $("#radDeliveryDays").detach();
+                
+                //快递
+                var s = $("#selExpressName").detach();
+                
+                countNum(d);
+                
+                // 发票
+                jInvoice();    
+
+                //快递省份
+                jType(s);
+                //判断~数量
+                jNum(d);
+                $("[name='board_layer']").click(function(){
+                   if(countNum(d))return; 
+                   $(".d-day").empty();
+                   $(this).val()==1 || $(this).val()==2? fun1(d)
+                   :$(this).val()==4?fun2(d)
+                   :$(this).val()==6?fun3(d)
+                   :fun0(d);
+                });
+                //快递    
+                
+                $("#selExpressType").change(function(){
+                    var t = $(this).val();     
+                    fun4(s,t);
+
+                })
+            })();
+
+            // 发票
+            function jInvoice(){
+                if ($(":radio[name='hidBill'][checked]").val() == "0"){
+                     //发票
+                   $("[name='hidBill']").parent("td").append('<span style="color: #FF0000; font-size: 12px; padding-left: 50px;">注：如是gerber文件，一律按文件加工，此选项无效！</span>')
+                       
+                }
+                $(":radio[name='hidBill']").click(function () { 
+                    if ($(":radio[name='hidBill'][checked]").val() == "0") { return; } 
+                    else { $.messager.alert('开票提示', '· 17%增值税票，收取10个点的税金<br>增值税票需要<font color="red">累积货款2000元以上</font>，在系统上点“通知开票”，我方会尽快安排开好并寄出，寄发票的快递费用由捷多邦支付。每月只允许开一次增票，开票公司为“深圳捷多邦科技有限公司”。<br>因增值税票需要走对公帐户，我司不接受：a.之前未要求开票，后面要补开发票的，b.要求快递代收存现作帐的，敬请理解！<br>· 增值税普通发票，收取8个点的税金<br><b><font color="red">普通发票必须是消费满500元累积开出，一个月开一次，不随货寄出</font></b>，快递运费由捷多邦支付。<b><font color="red">当批多个订单金额累积开出，不接受分几张发票开出</font></b>。<b><font color="red">（如果不能接受，请慎重下单，以免造成不必要的误会）</font></b>。<br>如果贵司是一般纳税人，建议您选择17%增值税票，我司增值税票可以进行17%税点的抵扣', 'show'); } });
+            }    
+
+            //快递
+            function jType(s){
+               
+               var t = $("#selExpressType").val();
+               var status = fun4(s,t);
+               if(status){
+                    $("#onlineForm").on("submit",function(){
+                        alert('请选择快递');
+                        return false;
+                    })
+               }
+            };
+
+            function jNum(d){
+                var v = $("[name='board_layer']:checked").val();
+                
+                v==1 || v==2? fun1(d)
+               :v==4?fun2(d)
+               :v==6?fun3(d)
+               :fun0(d);
+
+            };
+
+            function countNum(d){
+                
+                $("input[name='countNumer']").click(function(){
+                    if($(this).val()>=75){
+                        fun0(d);
+                        $("#radDeliveryDays").attr("disabled",true);
+                        $("#radDeliveryDays option").attr("selected",false);
+                        $("#radDeliveryDays option:last").attr("selected",true);
+                        text();
+                        return true;
+                    }else{
+                       $("#radDeliveryDays").attr("disabled",false);
+                       textClear();
+                       jNum(d);
+                       return false;
+                    }
+                });
+                if($("[name='num']").val()>=75){
+                    $("#radDeliveryDays").attr("disabled",true);
+                    $("#radDeliveryDays option").attr("selected",false);
+                    $("#radDeliveryDays option:last").attr("selected",true);
+                    text();
+                    return true;
+                }else{
+                    textClear();
+                    return false} ;
+
+                function text(){
+                    var text = $("<font color='red'>内层铜厚免费升级为1OZ</font>");
+                    if($("#radDeliveryDays").next().length ==0)
+                    $("#radDeliveryDays").after(text);
+                }
+                function textClear(){
+                    if($("#radDeliveryDays").next().length !=0)
+                    $("#radDeliveryDays").next().remove()    
+                }
+            }
+
+            function fun0(d) {
+                var select0 = d.clone();
+                $(".d-day").empty();
+                select0.appendTo(".d-day");
+
+            }
+            function fun1(d){
+               $(".d-day").empty();
+               var select0 = d.clone();
+               var select1 = d.clone();
+               select0.empty();
+  
+               select1.find("option[value='1']").appendTo(select0); 
+
+               select1.find("option[value='2']").appendTo(select0); 
+               select1.find("option[value='3']").appendTo(select0); 
+               
+               select0.find("option[value='3']").attr({"selected":true}).end().appendTo(".d-day");
+             
+            }
+
+            function fun2(d){
+               $(".d-day").empty();
+               var select0 = d.clone();
+               var select1 = d.clone(); 
+               select0.empty();
+               
+               select1.find("option[value='2']").appendTo(select0); 
+
+               select1.find("option[value='5']").appendTo(select0); 
+               select1.find("option[value='7']").appendTo(select0); 
+               
+               select0.find("option[value='7']").attr({"selected":true}).end().appendTo(".d-day");
+            }
+            function fun3(d){
+                $(".d-day").empty();
+               var select0 = d.clone();
+               var select1 = d.clone(); 
+               select0.empty();
+               
+               select1.find("option[value='6']").appendTo(select0); 
+               select1.find("option[value='8']").appendTo(select0); 
+               
+               select0.find("option[value='8']").attr({"selected":true}).end().appendTo(".d-day");
+            }
+            //快递
+            function fun4(s,t){
+               $("#selExpressName").remove();
+               var e = false;
+               var select0 = s.clone();
+               var select1 = s.clone();
+               
+               select0.empty();
+               t == ""? e = true
+               :t == 1?select1.find("option[value='4']").remove()
+               :"";
+
+               if(e)return e;
+
+               select1.find("option").appendTo(select0); 
+
+               select0.appendTo(".s-province");
+               return e;                 
+            }
+           
         })
+            
     </script>
 </head>
 <body>
     <!-- 公共头部开始 -->
     
 
-<script type="text/javascript" language="javascript">
+<!-- <script type="text/javascript" language="javascript">
     function SubClick(type) {
         // $("#actTop").val(type);
         // $("#formTop").submit();
         document.getElementById("actTop").value = type;
         document.forms["formTop"].submit();
     }
-</script>
+</script> -->
 
 <div class="wrap">
     <div class="header">
@@ -257,7 +455,8 @@
             <ul class="regstep">
                 <li class="green">填写订单需求</li><li>在线计算价格</li><li class="width164">保存订单</li></ul>
             <span>在线计价</span></h2>
-        <form method="post" id="onlineForm" action="onlinethree.html">
+        <form method="post" id="onlineForm" action="onlinethree.html" 
+        ><!-- onsubmit="return check(this)" -->
         <div class="topborder">
             <div class="content">
                 <table cellpadding="0" cellspacing="0" class="onlinepricetable">
@@ -286,17 +485,17 @@
                             <i>板子层数：</i>
                         </td>
                         <td>
-                            <input type="radio" name="hidLayers" value="1" />
+                            <input type="radio" name="board_layer" value="1" />
                             1
-                            <input type="radio" name="hidLayers" value="2" checked="checked" />
+                            <input type="radio" name="board_layer" value="2" checked="checked" />
                             2
-                            <input type="radio" name="hidLayers" value="4" />
+                            <input type="radio" name="board_layer" value="4" />
                             4
-                            <input type="radio" name="hidLayers" value="6" />
+                            <input type="radio" name="board_layer" value="6" />
                             6
-                            <input type="radio" name="hidLayers" value="8" />
+                            <input type="radio" name="board_layer" value="8" />
                             8
-                            <input type="radio" name="hidLayers" value="10" />
+                            <input type="radio" name="board_layer" value="10" />
                             10
                         </td>
                         <td align="center">
@@ -308,7 +507,7 @@
                             <i>板子数量：</i>
                         </td>
                         <td style="position: relative; display: block;">
-                            <input id="hidNum" name="hidNum" readonly="readonly" type="text" class="txtstyle1 easyui-validatebox"
+                            <input id="hidNum" name="num" readonly="readonly" type="text" class="txtstyle1 easyui-validatebox"
                                 data-options="required:true,validType:'num'" onfocus="this.style.borderColor='#d5210d'; this.style.borderBottomWidth='1';"
                                 onblur="this.style.borderBottomWidth='1px'; this.style.borderColor='#ccc'; "
                                 style="position: relative; z-index: 2;" invalidmessage="请正确填写板子长度" />
@@ -352,21 +551,21 @@
                             <i>板子厚度：</i>
                         </td>
                         <td>
-                            <input type="radio" name="radBoardThickness" value="0.4" title="提示(单位mm) 建议选择板厚0.6~1.6 其它板厚价格比0.6~1.6工程费要高100~200元" />
+                            <input type="radio" name="tboard" value="0.4" title="提示(单位mm) 建议选择板厚0.6~1.6 其它板厚价格比0.6~1.6工程费要高100~200元" />
                             0.4
-                            <input type="radio" name="radBoardThickness" value="0.6" title="提示(单位mm) 建议选择板厚0.6~1.6 其它板厚价格比0.6~1.6工程费要高100~200元" />
+                            <input type="radio" name="tboard" value="0.6" title="提示(单位mm) 建议选择板厚0.6~1.6 其它板厚价格比0.6~1.6工程费要高100~200元" />
                             0.6
-                            <input type="radio" name="radBoardThickness" value="0.8" />
+                            <input type="radio" name="tboard" value="0.8" />
                             0.8
-                            <input type="radio" name="radBoardThickness" value="1.0" />
+                            <input type="radio" name="tboard" value="1.0" />
                             1.0
-                            <input type="radio" name="radBoardThickness" value="1.2" />
+                            <input type="radio" name="tboard" value="1.2" />
                             1.2
-                            <input type="radio" name="radBoardThickness" value="1.6" checked="checked" />
+                            <input type="radio" name="tboard" value="1.6" checked="checked" />
                             1.6
-                            <input type="radio" name="radBoardThickness" value="2.0" title="提示(单位mm) 建议选择板厚0.6~1.6 其它板厚价格比0.6~1.6工程费要高100~200元" />
+                            <input type="radio" name="tboard" value="2.0" title="提示(单位mm) 建议选择板厚0.6~1.6 其它板厚价格比0.6~1.6工程费要高100~200元" />
                             2.0
-                            <input type="radio" name="radBoardThickness" value="2.4" />
+                            <input type="radio" name="tboard" value="2.4" />
                             2.4
                         </td>
 
@@ -450,11 +649,11 @@
                             <i>焊盘喷镀：</i>
                         </td>
                         <td>
-                            <input type="radio" name="radPlatingType" value="有铅喷锡" checked="checked">
+                            <input type="radio" name="spray" value="有铅喷锡" checked="checked">
                             有铅喷锡
-                            <input type="radio" name="radPlatingType" value="无铅喷锡" title="无铅喷锡比有铅喷锡,喷镀费每款高20元">
+                            <input type="radio" name="spray" value="无铅喷锡" title="无铅喷锡比有铅喷锡,喷镀费每款高20元">
                             无铅喷锡
-                            <input type="radio" name="radPlatingType" value="沉金" title="沉金比有铅喷锡,喷镀费每款高100元">
+                            <input type="radio" name="spray" value="沉金" title="沉金比有铅喷锡,喷镀费每款高100元">
                             沉金
                         </td>
                         <td align="center">
@@ -519,10 +718,17 @@
                         <td width="89" height="26" align="center">
                             <i>生产周期：</i>
                         </td>
-                        <td>
-                            <select class="seli" id="radDeliveryDays" name="radDeliveryDays">
-                                <option value="3">正常3-4天(样板)</option>
-                            </select>
+                        <td class="d-day">
+                            <select class="seli" id="radDeliveryDays" name="production_cycle">
+                            <option value="1">样板24小时加急</option>
+                            <option value="2">样板48小时加急</option>
+                            <option value="5">样板72小时加急</option>
+                            <option value="6">样板96小时加急</option>
+                            <option value="3" >正常3-4天（样板）</option>
+                            <option value="7" selected="selected">正常4-5天（样品）</option>
+                            <option value="8">正常7-8天（样品）</option>
+                            <option value="4">小批量</option>
+                        </select>
                         </td>
                         <td align="center">
                             <em id="help_jiaohuo">[说明]</em>
@@ -535,8 +741,7 @@
                         <td>
                             <input type="radio" name="hidBill" value="0" checked="checked" />
                             不需要
-                            <input type="radio" name="hidBill" value="1" />
-                            普通发票
+                            
                             <input type="radio" name="hidBill" value="2" />
                             增值税发票
                         </td>
@@ -548,17 +753,17 @@
                         <td width="89" height="26" align="center">
                             <i>快递公司：</i>
                         </td>
-                        <td>
-                            <select class="seli" id="selExpressType">
-                                <option value="广东省内">广东省内</option>
-                                <option value="广东省外">广东省外</option>
+                        <td class="s-province">
+                            <select class="seli" id="selExpressType" name="province">
+                                <option value="">请选择省份...</option>    
+                                <option value="1">福建省内</option>
+                                <option value="2">福建省外</option>
                             </select>
-                            <select class="seli" id="selExpressName" name="selExpressName">
-                                <option value="">请选择</option>
-                                <option value="港中能达">港中能达</option>
-                                <option value="联昊通">联昊通</option>
-                                <option value="顺丰">顺丰</option>
-                                <option value="德邦物流">德邦物流</option>
+                            <select class="seli" id="selExpressName" name="selExpressName" name="express">
+                                <option value="3">顺丰标准(运费预付)</option>
+                                <option value="4">顺丰经济(运费预付)</option>
+                                <option value="5">德邦物流(运费到付)</option>
+                                <option value="6">顺丰标准(运费到付)</option>
                             </select>
                         </td>
                         <td align="center">
@@ -794,24 +999,6 @@
             | <a href="#">PCB产品</a>| <a href="#">推荐产品</a> | <a href="http://www.kuaidi100.com/"
                 target="_blank">快递查询</a>
 
-            <script type="text/javascript">
-                var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-                document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F020f889b5d07e64770632ad47a127e88' type='text/javascript'%3E%3C/script%3E"));
-            </script>
-
-            <script type="text/javascript">
-                var _sogou_sa_q = _sogou_sa_q || [];
-                _sogou_sa_q.push(['_sid', '204951-210623']);
-                (function() {
-                    var _sogou_sa_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");
-                    var _sogou_sa_src = _sogou_sa_protocol + "hermes.sogou.com/sa.js%3Fsid%3D204951-210623";
-                    document.write(unescape("%3Cscript src='" + _sogou_sa_src + "' type='text/javascript'%3E%3C/script%3E"));
-                })();
-            </script>
-
-            
-
-            
 
         </div>
     </div>
@@ -840,7 +1027,7 @@
 <img border="0" src="http://wpa.qq.com/pa?p=1:272076037:4">
 <span>&nbsp;客服3</span>
 </a>    
-                <!--    <script charset="utf-8" type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php?key=XzgwMDAyNjQ4MV8zOTY1N184MDAwMjY0ODFf"></script>-->
+                
 
                     
                 </li>
@@ -887,7 +1074,6 @@ window.onscroll = function(){ setTimeout(divScroll,100);};
 
 
 
-<script type="text/javascript" src="http://tajs.qq.com/gdt.php?sId=28132920" charset="UTF-8"></script>
 
 
     
@@ -1010,7 +1196,7 @@ var online = {
 
         }
         $(":radio[name='countNumer']").click(function () { $("#hidNum").val($(this).val()); $("#txtSelNum").val(""); online.CloseSelectNumDiv(); /*online.SetDeliveryDays(0);*/ });
-        $(":radio[name='radPlatingType']").click(function () { /*online.SetDeliveryDays(0); */});
+        $(":radio[name='spray']").click(function () { /*online.SetDeliveryDays(0); */});
 
         $("#onlineForm").submit(function () {
             if ($("#onlineForm").form('validate')) {
