@@ -8,7 +8,10 @@
   <link rel="stylesheet" type="text/css" href="css/frame.css">
   
   <link rel="stylesheet" type="text/css" href="css/index.css">
- 
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" type="text/css" href="css/ie8.css">
+    
+  <![endif]-->  
   <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
   <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
   <script type="text/javascript" src="js/index.js"></script>
@@ -89,7 +92,7 @@
   <!--最新公告publish start-->
         <div class="publish clear">
             <div class="tip title-s float-l">最新公告</div>
-            <span class="button float-r green marin-t-7">更多 >></span>
+            <a class="button float-r green more marin-t-7">更多 >></a>
   <!--文字滚动 start-->          
             <div  class="txtScroll-left">
                 
@@ -107,24 +110,335 @@
   <!--文字滚动 start-->          
         </div>
   <!--最新公告publish end-->  
+
+  <!--content01 start-->
         <div class="content01">
+      <!--侧边栏 r-sider01 START-->
             <div class="r-sider01 float-r">
                 <ul>
-                    <li class="floor bg-green f00"><div class="link big-title">服务支持</div></li>
-                    <li class="floor f01"><div class="link"><p>IQTC服务指南<p/><p>IQTC service guide</p></div></li>
-                    <li class="floor bg-green f02"><div class="link"><p>常见问题<p/><p>Common problem</p></div></li>
-                    <li class="floor f03"><div class="link"><p>相关表格下载<p/><p>Download</p> </div></li>
-                    <li class="floor f04"><div class="link"><p>报告查询<p/><p>Report query</p></div></li>
-                    <li class="floor f05"><div class="link"><p>在线咨询<p/><p>Consulting</p></div></li>
-                    <li class="floor f06"><div class="link"><p>在线留言<p/><p>Leaving a message.</p></div></li>
+                    <li class="floor on f00"><div class="link big-title">服务支持</div></li>
+                    <li class="floor f01"><a class="link">
+                    <div class="p-wrapper">
+                        <p class="t01">IQTC服务指南</p><p class="t02">IQTC service guide</p>
+                    </div>
+                    </a></li>
+                    <li class="floor   f02"><a class="link">
+                    <div class="p-wrapper">
+                    <p class="t01">常见问题</p><p class="t02">Common problem</p>
+                    </div>
+                    </a></li>
+                    <li class="floor f03"><a class="link">
+                    <div class="p-wrapper">
+                    <p class="t01">相关表格下载</p><p class="t02">Download</p> 
+                    </div>
+                    </a></li>
+                    <li class="floor f04"><a class="link">
+                    <div class="p-wrapper">
+                    <p class="t01">报告查询</p><p class="t02">Report query</p>
+                    </div>
+                    </a></li>
+                    <li class="floor f05"><a class="link">
+                    <div class="p-wrapper">
+                    <p class="t01">在线咨询</p><p class="t02">Consulting</p>
+                    </div>
+                    </a></li>
+                    <li class="floor f06"><a class="link">
+                    <div class="p-wrapper">
+                    <p class="t01">在线留言</p><p class="t02">Leaving a message.</p>
+                    </div>
+                    </a></li>
                 </ul>
             </div>
-            <div class=" margin-r-328 "></div>
-        </div>
-        <div class="content02"></div>
+      <!--侧边栏 r-sider01  END-->
+      <!--左侧 -->
+            <div class="l-content margin-r-360 ">
+                <div class="news">
+                <!--新闻图片切换 start-->                       
+                    <div id="newsBox01" class="newsBox n-pic float-l">
+                        <div class="hd">
+                          <ul>
+                            <li><a></a></li>
+                            <li><a></a></li>
+                            <li><a></a></li>
+                            
+                          </ul>
+                        </div>
+                        <div class="bd">
+                          <ul>
+                            <li>
+                                <a href="#" target="_blank"><img src="img/n-pic.png" />
+                                    <div class="title n-pic-text bg-green white">
+                                          <p class="n-pic-title">第六届中国国际服务外包交易博览会...</p>
+                                          <p class="n-pic-content">8月29日下午，中国国际投资促进会与杭会在北京关村软件园联合召开了第六... </p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="img/n-pic.png" />
+                                    <div class="title n-pic-text bg-green white">
+                                          <p class="n-pic-title">第六届中国国际服务外包交易博览会...</p>
+                                          <p class="n-pic-content">8月29日下午，中国国际投资促进会与杭会在北京关村软件园联合召开了第六... </p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="img/n-pic.png" />
+                                    <div class="title n-pic-text bg-green white">
+                                          <p class="n-pic-title">第六届中国国际服务外包交易博览会...</p>
+                                          <p class="n-pic-content">8月29日下午，中国国际投资促进会与杭会在北京关村软件园联合召开了第六... </p>
+                                    </div>
+                                </a>
+                            </li>
+                          </ul>
+                        </div>
+                    </div> 
+                <!--新闻图片切换 end-->                       
+                    <div class="test margin-l-300">
+                <!--新闻tab切换 start-->                               
+                        <div class="slideTxtBox">
+                            <div class="hd">
 
+                              <ul><li>新闻专题</li><li>行业观察</li></ul>
+                            </div>
+                            <div class="bd">
+                              <ul>
+                                <li>
+                                      <p class="stb-text">第六届中国国际服务外包交易博览会...</p>
+                                      <p>8月29日下午，中国国际投资促进会与杭州市商务委员会在北京中关村软件园联合召开了第六...<a class="button green" >[查看详情]</a></p>
+                                </li>
+                                
+                              </ul>
+                              <ul>
+                                <li><span class="date">2011-11-11</span><a href="http://www.SuperSlide2.com" target="_blank">中国打破了世界软件巨头规则</a></li>
+                                
+                              </ul>
+                            </div>
+                        </div>
+              <!--新闻图片切换 end--> 
+                        <div class="tabNews-list">
+                            <ul>
+                                <li><a>2014年度上海市服务贸易发展专项资金申   <span class="date">09-04</span></a></li>
+                                <li><a>“高企认定”提速生产性服务业发展<span  class="date">09-04</span></a></li>
+                                <li><a>重庆将大力发展五类服务贸易<span class="date">09-04</span></a></li>
+                                <li><a>中国海运服务业服务贸易<span class="date">09-04</span></a></li>
+                                <li><a>中国海运服务业服务贸易长期处于逆差状态<span class="date">09-04</span></a></li>
+                                <li><a>2014年度上海市服务贸易发展专项资金申报指南<span class="date">09-04</span></a></li>
+                                <li><a>2014年度上海市服务贸易发展专项资金申<span class="date">09-04</span></a></li>
+                            </ul>  
+                        </div>                                    
+                  </div>
+                </div> 
+      <!-- news END -->
+      <!-- 检测类别range start --> 
+                <div class="range ">
+                      <div class="header clear">
+                            <span class="h-title01 green">产品检测范围</span>
+                            <a class="more float-r">更多</a>
+                      </div>
+                      <div class="rangePic clear">
+                           
+                               <a class="rp-img">
+                                 <img src="img/rpic01.png">
+                                 <div class="rp-bg">
+                                      <div class="num">01</div>
+                                      <div class="type">食品类
+                                          <div class="b-line"></div>
+                                      </div>
+                                 </div>
+                               </a>
+
+                               <a class="rp-img on">
+                                 <img src="img/rpic02.png">
+                                 <div class="rp-bg">
+                                      <div class="num">02</div>
+                                      <div class="type">水产类
+                                          <div class="b-line"></div>
+                                      </div>
+                                 </div>
+                               </a>
+
+                               <a class="rp-img">
+                                 <img src="img/rpic03.png">
+                                 <div class="rp-bg">
+                                      <div class="num">03</div>
+                                      <div class="type">动物及<br>动物产品类
+                                          <div class="b-line"></div>
+                                      </div>
+                                      
+                                 </div>
+                               </a>
+
+                               <a class="other rp-img">
+                                 <img src="img/rpic04.png">
+                                 <div class="rp-bg">
+                                      <div class="num">04</div>
+                                      <div class="type">其他类
+                                          <div class="b-line"></div>
+                                      </div>
+                                 </div>
+                               </a>
+                            
+                      </div>
+                </div>
+      <!-- 检测类别 end --> 
+            </div>
+      <!--左侧  END-->
+
+
+        </div>
+      <!--content01 END-->
+
+      <!--content02 start-->
+        <div class="content02">
+          <div class="r-sider01 float-r">
+                <div class="aboutUs">
+                    <div class="header clear">
+                    
+                        <span class="h-title01 green float-l">关于我们</span>
+                        <span class="float-l h-title02 upCase">ABOUT US</span>
+                        <div class="h-line">
+                            
+                           
+                            <div class="h-line02"> </div>
+                        </div>
+                        
+                    </div> 
+                    <div class="a-content">
+                        <div class="a01">
+                              <div class="a01-img float-l"><img src="img/a01.png"></div>
+                              <div class="a01-text">
+                                <p class="a01-title">技术中心简介</p>
+                                <p class="a01-text02">中国国际投资促进会与杭州市商务委员会在北京中关村软件园联合召开了第六届中...</p>
+                              </div>
+                        </div>  
+                        <div class="a02 clear">
+                              <div class="abtn-wrapper on"><a class="a02-btn btn01">中心简介</a></div>
+                              <div class="abtn-wrapper"><a class="a02-btn btn02">组织机构</a></div>
+                              <div class="abtn-wrapper"><a class="a02-btn btn03">中心文化</a></div>
+                              <div class="abtn-wrapper"><a class="a02-btn btn04">重点实验室</a></div>
+                              <div class="abtn-wrapper"><a class="a02-btn btn05">中心资质</a></div>
+                              <div class="abtn-wrapper"><a class="a02-btn btn06">联系我们</a></div>
+                        </div>  
+                    </div> 
+                </div>
+          </div>  
+          <div class="l-content margin-r-360">
+      <!-- 中心动态activity start -->                  
+                <div class="activity">
+                <div class="header clear">
+                    
+                    <span class="h-title01 green float-l">中心动态</span>
+                    <span class="float-l h-title02 upCase">dynamic</span>
+                    <div class="h-line">
+                        
+                        <a class="more float-r">更多</a>
+                        <div class="h-line02"> </div>
+                    </div>
+                    
+                </div>
+                <div class="news">
+                    <div class="newsBox n-pic float-l">
+                        
+                        <div class="bd">
+                          
+                               
+                                    <img src="img/n-pic.png" />
+                                    <div class="title n-pic-text ">
+                                          <p class="n-pic-title">第六届中国国际服务外包交易博览会...
+                                          </p>
+                                          <p class="n-pic-content">
+                                          8月29日下午，中国国际投资促进会与杭州市商务委员会在北京中关村软件园联合...<a class="button green">[查看详情]</a>
+                                          </p>
+                                    </div>
+                                
+                           
+                        </div>
+                    </div>                            
+                    <div class="test margin-l-300">
+               
+                        <div class="tabNews-list">
+                            <ul>
+                                <li><a>高企认定”提速生产性服务业发展     <span class="date">09-04</span></a></li>
+                                <li><a> 重庆将大力发展五类服务贸易<span class="date">09-04</span></a></li>
+                                <li><a>中国海运服务业服务贸易长期处于逆差状态<span class="date">09-04</span></a></li>
+                                <li><a>2014年度上海市服务贸易<span class="date">09-04</span></a></li>
+                                <li><a>中国海运服务业服务贸易长期处于逆差状态<span class="date">09-04</span></a></li>
+                                <li><a>2014年度上海市服务贸易发展专项资金申报指南<span class="date">09-04</span></a></li>
+                                <li><a>2014年度上海市服务贸易发展专项资金申<span class="date">09-04</span></a></li>
+                                <li><a>2014年度上海市服务贸易发展专项资金申报指南<span class="date">09-04</span></a></li>
+                                <li><a>2014年度上海市服务贸易发展专项资金申<span class="date">09-04</span></a></li>
+                                <li><a>2014年度上海市服务贸易发展专项资金申报指南<span class="date">09-04</span></a></li>
+                                <li><a>2014年度上海市服务贸易发展专项资金申<span class="date">09-04</span></a></li>
+                            </ul>  
+                        </div>                                    
+                  </div>
+
+                </div>
+                </div>
+      <!-- 中心动态activity end -->                  
+          </div>
+        </div>
+      <!--content02 end-->
+      <!-- friend link  start -->
+      <div class="friendLink">
+          <div class="header clear">
+                    
+              <span class="h-title01 green float-l">合作伙伴</span>
+              <span class="float-l h-title02 upCase">cooperation</span>
+              <div class="h-line" style="margin-left:170px;">
+                  
+                  <a class="more float-r">更多</a>
+                  <div class="h-line02"> </div>
+
+              </div>
+          </div>
+          <div class="linkPic clear">
+                <a class="link-wrapper">
+                  <img src="img/linkpic01.png">
+                  <p>意林食品有限公司</p>
+                </a>
+                <a class="link-wrapper">
+                  <img src="img/linkpic02.png">
+                  <p>意林食品有限公司</p>
+                </a>
+                <a class="link-wrapper">
+                  <img src="img/linkpic03.png">
+                  <p>意林食品有限公司</p>
+                </a>
+                <a class="link-wrapper">
+                  <img src="img/linkpic04.png">
+                  <p>意林食品有限公司</p>
+                </a>
+                <a class="link-wrapper">
+                  <img src="img/linkpic05.png">
+                  <p>意林食品有限公司</p>
+                </a>
+          </div>
+            
+      </div>
+      <!-- friend link  end -->
       </div>
   </div>
+   <!-- middleWrapper end -->
+   <!-- footer start -->
+   <div class="footer">
+      <div class="container1000">
+        <div class="footer-link clear">
+          <a class="fl01" href="">首页</a>
+          <a class="fl01" href="">关于我们</a>
+          <a class="fl01" href="">产品检测范围 </a>
+          <a class="fl01" href="">服务支持</a>
+          <a class="fl01" href="">咨询中心</a>
+          <a class="fl01" href="">信息公开</a>
+        </div>
+        <div class="footer-content clear">
+          <div class="f-content logo"><img src="img/flogo.png"></div>
+          <div class="f-content address"><img src="img/address.png"></div>
+          <div class="f-content qr"><img src="img/qr.png"></div>
+        </div>
+      </div>
+   </div>
+   <!-- footer end -->
 </body>
 </html>
 
