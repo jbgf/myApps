@@ -1,0 +1,83 @@
+/**{box-sizing: border-box;margin:0;padding:0;}ie8+*/
+*{margin:0; padding:0; list-style:none; }
+
+body{padding:0;margin:0; background:#fff; font:normal 12px/22px 宋体; color:#666;}
+a{text-decoration: none;cursor: pointer;color:inherit;}
+
+a:visited{color:inherit;}
+ul{list-style: none;}
+body{font-family: 'Microsoft YaHei',"Helvetica Neue", Helvetica, 'Hiragino Sans GB',  'WenQuanYi Micro Hei', Arial,sans-serif;}
+input{border:none;}
+img{ border:0;  }
+.container1000{
+	width:1000px;margin:0 auto;
+	
+}
+.container1200{
+	width:1200px;margin:0 auto;
+	
+}
+
+.line{margin: -15px 0;}
+.block-1{width:100%;}
+.block-2{width:50%;}
+.block-3{width:33.3333333333%;}
+.block-4{width:25%;}
+.block{
+	padding-left:15px;padding-right: 15px;float: left;position: relative;
+	min-height: 1px;
+}
+.box{padding:10px;}
+
+.container1200:before,.container1200:after,
+.line:before,.line:after,
+.block:before,.block:after{
+	content:" ";display:table;	
+}
+.container1200:after,
+.line:after,
+.block:after{
+	clear:both;
+}
+
+.full-width{width:100%;}
+.extend-width{margin: 0 -9999px;padding: 0 9999px;}
+
+.hide{display: none;}
+
+.clear:after{clear: both;}
+.clear:before,
+.clear:after{
+	 display: table;
+  	 content: " ";
+}
+.over-flow{
+    overflow: auto; zoom: 1; /*zoom: 1; 是在处理兼容性问题*/
+}
+
+.padding-15{padding-left: 15px;padding-right: 15px;}
+.padding-37{
+	padding-left:37px;padding-right:37px;
+}
+.padding-r-25{padding-right: 25px;}
+
+
+.padding-l-64{padding-left: 64px;}
+.marin-t-7{margin-top: 7px;}
+
+.margin-r-328{margin-right: 328px;}
+.margin-r-350{margin-right:350px}
+.margin-r-360{margin-right:360px}
+
+.margin-l-40{margin-left: 40px}
+.margin-l-150{margin-left: 150px;}
+.margin-l-165{margin-left: 165px;}
+.margin-l-185{margin-left: 185px;}
+.margin-l-200{margin-left: 200px;}
+.margin-l-226{margin-left: 226px;}
+.margin-l-240{margin-left: 240px;}
+.margin-l-265{margin-left: 265px}
+.margin-l-300{margin-left: 300px}
+.margin-l-308{margin-left: 308px}
+.margin-l-493{margin-left: 493px}
+

@@ -1,0 +1,25 @@
+.button{cursor: pointer;}
+.box{height:100%;text-align: center;}
+
+/*color*/
+.white{color:#fff;}
+.blue{color:#0c8ae1;}
+.l-blue{color:#54a4d5;}
+.orange{color:#ff8702;}
+.gray{color:#C2C1C1;}
+.black{color:#333;}
+.green{color:#6eb92b;}
+
+.bg-gray{background:#e1e9f6;}
+.bg-l-gray{background-color: #d2d2d2}
+
+.bg-blue{background:#1978cf;}
+.bg-l-blue{background:#54a4d5;}
+.bg-black{background:#0f1014;}
+.bg-yellow{background: #ffae00;}
+.bg-pink{background:#ec5369;}
+.bg-green{background: #6eb92b}
+
+
+.float-r{float: right;}
+.float-l{float: left;}
