@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="css/base.css">
+  <link rel="stylesheet" type="text/css" href="css/frame.css">
+  
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+  <link rel="stylesheet" type="text/css" href="css/affixBeta.css">
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" type="text/css" href="css/ie8.css">
+    
+  <![endif]-->  
+  <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+  <script type="text/javascript" src="js/affixBeta.js"></script>
+   <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=bT5d3SyGp0VfmwROzCumXsl551zI7WcD"></script>
+  
+</head>
+  <body>
+  <!-- topWrapper START -->
+  <div class="topWrapper">
+      <div class="container1000" ><!-- data-set="set" -->
+             
+             <div class="g-topbar ">
+                <span class="green title-g" style="text-transform: uppercase;">ADJKF</span> <span>欢迎进入福建检验检疫技术中心!</span>
+                
+                <div class="float-r"><a class="green">会员登录</a><a class="green">会员注册</a><a>收藏</a></div>
+             </div>
+             
+          
+          <div class="logoRow ">
+                <div class="logo float-l"><img src="img/logo.png"></div>
+                <div class="margin-l-493 clear">
+                  <div class="float-r">
+                     <div class="float-l clear"><img src="img/iconphone.png"></div>
+                     <div class="margin-l-40">
+                        <div>联系电话:</div>
+                        <div class="phoneNumber titleColor">0591-87065571</div>
+                     </div>
+                  </div>
+                </div>
+          </div><!--logoRow line-->
+          
+          
+      </div><!--container1000 end-->  
+
+  <!-- navbar-line start -->
+      <div class="bg-green">
+        <div class="container1000">
+           
+            <div class="navbar-line clear white"> 
+                <div class="navbar-block ">首页</div>
+                <div class="navbar-block on">关于我们
+                    <ul class="naver_0">
+                        
+                        <div class="nav_erc">
+                          <li class="nav_center"><a href="#">中心简介</a></li>
+                          <li class="nav_center"><a href="#">组织机构</a></li>
+                          <li class="nav_center"><a href="#">关于我们</a></li>
+                          <li class="nav_center"><a href="#"> 联系我们</a></li>
+                        </div>
+                        
+                    </ul>
+                </div>
+                <div class="navbar-block">产品检测范围</div>
+                <div class="navbar-block">服务支持</div>
+                <div class="navbar-block">资讯中心</div>
+                <div class="navbar-block">信息公开</div>
+              
+            </div>
+          
+        </div>
+      </div>
+  <!-- navbar-line end -->      
+      <!-- slider begin -->
+      <div class="banner">
+        <a href="#" target="_blank"><img src="img/banner01.png" /></a>
+      </div>
+      <!-- slider end -->
+
+  </div>
+  <!-- topWrapper END -->
+  
+    <!-- middleWrapper start -->
+  <div class="middleWrapper">
+      <div class="container1000">
+          <div class="about clear">
+  <!-- l-sider01 start-->
+              <div class="l-sider01 float-l">
+                  <ul>
+                      <li>
+                          <a class="floor bg-green f00">
+                              <div class="link">
+                                <div class="p-wrapper ">
+                                  <p class="t01 white">关于我们</p><p class="t02">About us</p>
+                                </div>
+                              </div>
+                          </a>
+                      </li>
+                      <li><a class="floor f01"><p class="t01">中心简介</p></a></li>
+                      <li><a class="floor f02"><p class="t01">组织架构</p></a></li>
+                      <li><a class="floor f03"><p class="t01">重点实验室介绍</p></a></li>
+                      <li><a class="floor f04"><p class="t01">中心资质</p></a></li>
+                      <li><a class="floor f05"><p class="t01">中心文化</p></a></li>
+                      <li><a class="floor f06 "><p class="t01">联系我们</p></a></li>
+
+                  </ul>
+                  <div class="border"><img src="img/border.png"></div>
+              </div>
+  <!-- l-sider01 end-->
+  <!-- contact  start-->
+          <div class="contact margin-l-265">
+              <div class="header02 clear">
+                  <span class="h-title01float-l">联系我们</span>
+                  <div class="more float-r">你的位置：<a>网站首页</a> > <a>联系我们</a> </div>
+              </div>
+  <!-- map  start-->              
+              <div class="map">
+                    
+                      <div style="width:100%;height:255px;border:#ccc solid 1px;font-size:12px" id="map"></div>
+                         
+                        <script type="text/javascript">
+                           //创建和初始化地图函数：
+                        function initMap(){
+                          createMap();//创建地图
+                          setMapEvent();//设置地图事件
+                          addMapControl();//向地图添加控件
+                          addMapOverlay();//向地图添加覆盖物
+                        }
+                        function createMap(){ 
+                          map = new BMap.Map("map"); 
+                          map.centerAndZoom(new BMap.Point(119.32016,26.100697),19);
+                        }
+                        function setMapEvent(){
+                          map.enableScrollWheelZoom();
+                          map.enableKeyboard();
+                          map.enableDragging();
+                          map.enableDoubleClickZoom()
+                        }
+                        function addClickHandler(target,window){
+                          target.addEventListener("click",function(){
+                            target.openInfoWindow(window);
+                          });
+                        }
+                        function addMapOverlay(){
+                          var markers = [
+                            {content:"福建省福州市湖东路312号国检广场B座",title:"",imageOffset: {width:0,height:0},position:{lat:26.100588,lng:119.320173}}
+                          ];
+                          for(var index = 0; index < markers.length; index++ ){
+                            var point = new BMap.Point(markers[index].position.lng,markers[index].position.lat);
+                            //标注图片路径，大小
+                            var marker = new BMap.Marker(point,{icon:new BMap.Icon("img/icon-adr.png",new BMap.Size(22,29),{
+                              imageOffset: new BMap.Size(markers[index].imageOffset.width,markers[index].imageOffset.height)
+                            })});
+                            var label = new BMap.Label(markers[index].title,{offset: new BMap.Size(25,5)});
+                            
+                            //给标注 用label 设置样式，任意的CSS都是可以的
+                            /*label.setStyle({                                   
+
+                                color:"red",                   //颜色
+                                fontSize:"14px",               //字号
+                                border:"0",                    //边
+                                height:"120px",                //高度
+                                width:"125px",                 //宽
+                                textAlign:"center",            //文字水平居中显示
+                                lineHeight:"120px",            //行高，文字垂直居中显示
+                                background:"url(img/about.png)",    //背景图片，这是房产标注的关键！
+                                cursor:"pointer"
+                            });*/
+
+                            var opts = {
+                              width: 200,
+                              title: markers[index].title,
+                              enableMessage: false
+                            };
+                            var infoWindow = new BMap.InfoWindow(markers[index].content,opts);
+                            marker.setLabel(label);
+                            addClickHandler(marker,infoWindow);
+                            map.addOverlay(marker);
+                          };
+                        }
+                        //向地图添加控件
+                        function addMapControl(){
+                          /*var scaleControl = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+                          scaleControl.setUnit(BMAP_UNIT_IMPERIAL);
+                          map.addControl(scaleControl);*/
+                          /*var navControl = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+                          map.addControl(navControl);*/
+
+
+                        }
+                        var map;
+                          initMap();
+                        </script>
+              </div>
+  <!-- map  end-->
+  <!-- tel start-->
+              <div class="tel">
+                   <p class="adr">福建省福州市湖东路312号国检广场B座</p>
+                   <p class="phone">0591-87065571   83667754</p>
+                   <p class="email">linjiyi@163.com</p>
+              </div>              
+  <!-- tel end-->
+          </div>
+  <!-- contact  end-->
+          </div>
+      </div>
+  </div>
+    <!-- middleWrapper end -->
+
+  <!-- footer start -->
+   <div class="footer">
+      <div class="container1000">
+        <div class="footer-link clear">
+          <a class="fl01" href="">首页</a>
+          <a class="fl01" href="">关于我们</a>
+          <a class="fl01" href="">产品检测范围 </a>
+          <a class="fl01" href="">服务支持</a>
+          <a class="fl01" href="">资讯中心</a>
+          <a class="fl01" href="">信息公开</a>
+        </div>
+        <div class="footer-content clear">
+          <div class="f-content logo"><img src="img/flogo.png"></div>
+          <div id="contact" class="f-content address"><!-- <img src="img/address.png"> -->
+              <p>福建省福州市湖东路312号国检广场B座  邮编：350003</p>
+              <p>312Hudong Road, Fuzhou Fujian 350003 P.R OF CHINA</p>
+              <p>电话 (Tel) : 0591-87065571 83667754</p>
+              <p>传真 (Fax) : 0591-87065500 </p>
+              <p>E-mail: linjiyi@163.com</p>
+          </div>
+          <div class="f-content qr"><img src="img/qr.png"></div>
+        </div>
+      </div>
+   </div>
+   <!-- footer end -->
+  </body>
+  </html>

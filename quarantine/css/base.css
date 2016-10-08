@@ -18,6 +18,7 @@ img{ border:0;  }
 	
 }
 
+.line{margin: -15px 0;}
 .block-1{width:100%;}
 .block-2{width:50%;}
 .block-3{width:33.3333333333%;}
@@ -44,14 +45,24 @@ img{ border:0;  }
 
 .hide{display: none;}
 
-.clear:before,.clear:after{content:" ";display:table;}
-.clear:after{clear:both;}
+.clear:after{clear: both;}
+.clear:before,
+.clear:after{
+	 display: table;
+  	 content: " ";
+}
+.over-flow{
+    overflow: auto; zoom: 1; /*zoom: 1; 是在处理兼容性问题*/
+}
 
-
+.padding-15{padding-left: 15px;padding-right: 15px;}
 .padding-37{
 	padding-left:37px;padding-right:37px;
 }
+.padding-r-25{padding-right: 25px;}
 
+
+.padding-l-64{padding-left: 64px;}
 .marin-t-7{margin-top: 7px;}
 
 .margin-r-328{margin-right: 328px;}
@@ -59,7 +70,15 @@ img{ border:0;  }
 .margin-r-360{margin-right:360px}
 
 .margin-l-40{margin-left: 40px}
+.margin-l-150{margin-left: 150px;}
+.margin-l-165{margin-left: 165px;}
+.margin-l-168{margin-left: 168px;}
+.margin-l-185{margin-left: 185px;}
+.margin-l-200{margin-left: 200px;}
+.margin-l-226{margin-left: 226px;}
+.margin-l-240{margin-left: 240px;}
+.margin-l-265{margin-left: 265px}
 .margin-l-300{margin-left: 300px}
-.margin-l-300{margin-left: 308px}
+.margin-l-308{margin-left: 308px}
 .margin-l-493{margin-left: 493px}
 
