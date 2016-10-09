@@ -41,7 +41,7 @@ gulp.task('watch',['browserSync'/*,'connectPhp'*/],function(){
 	 gulp.watch(['./huaxing/**/*.js','./huaxing/**/*.css','./huaxing/**/*.html'],browserSync.reload);
 	 gulp.watch(['./wheel/**/*.js','./wheel/**/*.css','./wheel/**/*.html'],browserSync.reload);
 	 gulp.watch(['./jquery.nicescroll-master/**/*.js','./jquery.nicescroll-master/**/*.css','./jquery.nicescroll-master/**/*.html'],browserSync.reload);
-	 
+	 gulp.watch(['./quarantine/**/*.js','./quarantine/**/*.css','./quarantine/**/*.html'],browserSync.reload);
 });
 
 gulp.task('connectPhp',function(){

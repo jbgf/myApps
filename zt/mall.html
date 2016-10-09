@@ -13,11 +13,15 @@
 
 <link rel="stylesheet" href="css/idangerous.swiper2.7.6.css" />
 <link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="css/index.css">
 
 <script type="text/javascript" src="js/idangerous.swiper2.7.6.min.js"></script>
 <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
 <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/indexNew.js"></script>
+<script type="text/javascript">  
+</script>
 <style type="text/css">
     .link-l{
       width:240px;
@@ -38,20 +42,20 @@
       font-size: 28px;
     }
 </style>
-<body style="width:1920px;">
+<body style="width:1920px;" id="mall">
 
 <div class="sideBtnBg link-l" >
   <a class="enter" href="#" style="padding-left: 45px;background:url(img/btn-l-001.png)no-repeat" >入驻企业</a>
   <a class="manager" href="#" style="padding-left: 57px;background:url(img/btn-l-001.png)no-repeat" >管理员</a>
   
   <a class="back" href="#" style="padding-left: 54px;background:url(img/btn-l-001.png)no-repeat">上一步</a>
-  <a href="index.html" style="padding-left: 43px;background:url(img/btn-l-001.png)no-repeat">返回首页</a>
+  <a href="index.html" style="padding-left: 43px;background:url(img/btn-l-001.png)no-repeat" target="_parent">返回首页</a>
 </div>
 
 <div class="top">
   <div class="container row">
     <span class="welcome">
-    <span>欢迎进入正统商城！</span><span id="today">今天是2016年6月16日&nbsp;下午02：59</span>
+    <span>欢迎进入正统商城！</span><span id="today"><!-- 今天是2016年6月16日&nbsp;下午02：59 --></span>
     </span><!--welcome-->
     <span class="user_ctrl">
       <a href="#">请登录</a>
@@ -103,7 +107,7 @@
     <div class="index_nav_header">
       <a class="index_nav_header_a" class="">全部商品分类</a>
       <ul class="index_nav_col">
-        <a href="first_list_1.html"><li>农特产品</li></a>
+        <a href="first_list_1.html" ><li>农特产品</li></a>
         <a href="first_list_2.html"><li>特色工艺</li></a>
         <a href="first_list_3.html"><li>女装&nbsp;男装&nbsp;户外&nbsp;内衣</li></a>
         <a href="first_list_4.html"><li>女鞋&nbsp;男鞋&nbsp;箱包</li></a>
@@ -121,7 +125,7 @@
     <div class="index_nav_line">
       <ul class="index_nav_ul">
         <a href="mall.html"><li>首页</li></a>
-        <a href="#section0"><li>品牌推荐</li></a>
+        <!-- <a href="#section0"><li>品牌推荐</li></a> -->
         <a href="first_list_1.html"><li>农特产品</li></a>
         <a href="first_list_2.html"><li>特色工艺</li></a>
         <a href="first_list_3.html"><li>服饰</li></a>
@@ -206,20 +210,21 @@ var bannerSwiper = new Swiper('#banner_swiper',{
     <div class="brand_column row">
       <div class="brand_left"><a target="_blank" href="http://www.gxyj.com/index.html"><img src="images/brand_left.jpg" alt="" /></a></div><!--brand_left-->
       <ul class="brand_center">
-        <li><a target="_blank" href="http://shop.zg5166.com/"><img class="img_center" src="images/brand01.jpg" alt="" /></a></li>
-        <li><a target="_blank" href="http://jygxmall.com/"><img class="img_center" src="images/brand02.jpg" alt="" /></a></li>
+        <li><a target="_blank" href="http://www.gxyj.com/index.html"><img class="img_center" src="images/brand01.jpg" alt="" /></a></li>
+        <li><a target="_blank" href="http://shop.zg5166.com/"><img class="img_center" src="images/brand02.jpg" alt="" /></a></li>
         <li><a target="_blank" href="http://www.zsgx0598.com/"><img class="img_center" src="images/brand03.jpg" alt="" /></a></li>
         <li><a target="_blank" href="http://www.33m.com/"><img class="img_center" src="images/brand04.jpg" alt="" /></a></li>
         
-        <li><a target="_blank" href="http://www.fjtxdz.com/"><img class="img_center" src="images/brand05.jpg" alt="" /></a></li>
-        <li><a target="_blank" href="http://597yp.com/"><img class="img_center" src="images/brand06.jpg" alt="" /></a></li>
-        <li><a target="_blank" href="http://www.nitamall.com/"><img class="img_center" src="images/brand07.jpg" alt="" /></a></li>
-        <li><a target="_blank" href="http://www.zggoods.com/"><img class="img_center" src="images/brand08.jpg" alt="" /></a></li>
+        <li><a target="_blank" href="http://597yp.com/"><img class="img_center" src="images/brand11.jpg" alt="" /></a></li>
+        <li><a target="_blank" href="http://www.zggoods.com/"><img class="img_center" src="images/brand06.jpg" alt="" /></a></li>
+        <li><a target="_blank" href="http://www.ifuhuo.com/"><img class="img_center" src="images/brand07.jpg" alt="" /></a></li>
+        <li><a target="_blank" href="http://www.inthank.cn/"><img class="img_center" src="images/brand08.jpg" alt="" /></a></li>
         
-        <li><a target="_blank" href="http://www.ifuhuo.com/"><img class="img_center" src="images/brand09.jpg" alt="" /></a></li>
-        <li><a target="_blank" href="http://www.inthank.cn/"><img class="img_center" src="images/brand10.jpg" alt="" /></a></li>
-        <li><a target="_blank" href="http://www.33m.com/"><img class="img_center" src="images/brand11.jpg" alt="" /></a></li>
-        <li><a target="_blank" href="http://jygxmall.com/"><img class="img_center" src="images/brand12.jpg" alt="" /></a></li>
+        <li><a target="_blank" href="http://www.fjtxdz.com/"><img class="img_center" src="images/brand09.jpg" alt="" /></a></li>
+        <li><a target="_blank" href="http://www.33m.com/"><img class="img_center" src="images/brand10.jpg" alt="" /></a></li>
+        <li><a target="_blank" href="http://597yp.com/"><img class="img_center" src="images/brand11.jpg" alt="" /></a></li>
+        <li><a target="_blank" href="http://shop.zg5166.com/
+"><img class="img_center" src="images/brand12.jpg" alt="" /></a></li>
         <!--3行4列固定-->
       </ul><!--brand_center-->
       <div class="brand_right"><a target="_blank" href="http://www.nitamall.com/"><img src="images/brand_right.jpg" alt="" /></a></div><!--brand_right-->
@@ -261,7 +266,7 @@ var bannerSwiper = new Swiper('#banner_swiper',{
           <div class="pagination1 section_swiper_pagination"></div>
         </div><!--section_swiper-->
 
-        <dl class="section_goods"><a href="http://shop.zg5166.com/index.php?app=goods&id=369" >
+        <dl class="section_goods"><a href="http://shop.zg5166.com/index.php?app=goods&id=369" target="_blank">
           <dd class="goods_show"><img class="img_center" src="images/goods01-01.jpg" alt="" /></dd>
           <h4 class="goods_title">闽北特色茶点糕点80g长寿酥 320g孝母饼</h4>
           <dt class="goods_price">
@@ -269,7 +274,7 @@ var bannerSwiper = new Swiper('#banner_swiper',{
           <!--  <del>市场价：&yen;15.80</del>-->
           </dt>
         </a></dl><!--1-->
-        <dl class="section_goods"><a href="http://www.zsgx0598.com/goods.php?id=14211">
+        <dl class="section_goods"><a href="http://www.zsgx0598.com/goods.php?id=14211" target="_blank">
           <dd class="goods_show"><img class="img_center" src="images/goods01-02.jpg" alt="" /></dd>
           <h4 class="goods_title">【安溪特色】五阆米粉 湖头特产米粉 2000g</h4>
           <dt class="goods_price">
@@ -277,7 +282,7 @@ var bannerSwiper = new Swiper('#banner_swiper',{
             <!--  <del>市场价：&yen;18.00</del>-->
           </dt>
         </a></dl><!--2-->
-        <dl class="section_goods"><a href="http://www.zsgx0598.com/goods.php?id=10468">
+        <dl class="section_goods"><a href="http://www.zsgx0598.com/goods.php?id=10468" target="_blank">
           <dd class="goods_show"><img class="img_center" src="images/goods01-03.jpg" alt="" /></dd>
           <h4 class="goods_title">{其门堂}野生五香手剥笋460g江南味道自然鲜美特产竹笋开袋即食</h4>
           <dt class="goods_price">
@@ -285,7 +290,7 @@ var bannerSwiper = new Swiper('#banner_swiper',{
            <!--   <del>市场价：&yen;15.80</del>-->
           </dt>
         </a></dl><!--3-->
-        <dl class="section_goods"><a href="http://www.zsgx0598.com/goods.php?id=2548">
+        <dl class="section_goods"><a href="http://www.zsgx0598.com/goods.php?id=2548" target="_blank">
           <dd class="goods_show"><img class="img_center" src="images/goods01-04.jpg" alt="" /></dd>
           <h4 class="goods_title">福州闽侯 淡咸橄榄 地方口味特产500g 开胃零食小吃 自家腌制食品</h4>
           <dt class="goods_price">
@@ -293,7 +298,7 @@ var bannerSwiper = new Swiper('#banner_swiper',{
            <!--   <del>市场价：&yen;18.80</del>-->
           </dt>
         </a></dl><!--4-->
-        <dl class="section_goods"><a href="http://www.zsgx0598.com/goods.php?id=6923">
+        <dl class="section_goods"><a href="http://www.zsgx0598.com/goods.php?id=6923" target="_blank">
           <dd class="goods_show"><img class="img_center" src="images/goods01-05.jpg" alt="" /></dd>
           <h4 class="goods_title">【高人】莲子 建宁莲子 通芯 无芯 白莲 一煮就烂 50克</h4>
           <dt class="goods_price">
@@ -301,7 +306,7 @@ var bannerSwiper = new Swiper('#banner_swiper',{
             <!--  <del>市场价：&yen;6.80</del>-->
           </dt>
         </a></dl><!--5-->
-        <dl class="section_goods"><a href="http://www.zsgx0598.com/goods.php?id=6911">
+        <dl class="section_goods"><a href="http://www.zsgx0598.com/goods.php?id=6911" target="_blank">
           <dd class="goods_show"><img class="img_center" src="images/goods01-06.jpg" alt="" /></dd>
           <h4 class="goods_title">建宁莲子通芯无芯 特级建莲白莲子银耳百合羹 一煮就烂不熏硫250g</h4>
           <dt class="goods_price">
@@ -352,7 +357,7 @@ var section1Swiper = new Swiper('#section1_swiper',{
           <div class="pagination2 section_swiper_pagination"></div>
         </div><!--section_swiper-->
 
-        <dl class="section_goods"><a href="http://shop.zg5166.com/index.php?app=goods&id=1664">
+        <dl class="section_goods"><a href="http://shop.zg5166.com/index.php?app=goods&id=1664" target="_blank">
           <dd class="goods_show"><img class="img_center" src="images/files/image014.jpg" alt="" /></dd>
           <h4 class="goods_title">耀变孔雀银莲花建盏</h4>
           <dt class="goods_price">
@@ -360,7 +365,7 @@ var section1Swiper = new Swiper('#section1_swiper',{
             <!--  <del>市场价：&yen;35.80</del>-->
           </dt>
         </a></dl><!--1-->
-        <dl class="section_goods"><a href="http://shop.zg5166.com/index.php?app=goods&id=1620">
+        <dl class="section_goods"><a href="http://shop.zg5166.com/index.php?app=goods&id=1620" target="_blank">
           <dd class="goods_show"><img class="img_center" src="images/files/image016.jpg" alt="" /></dd>
           <h4 class="goods_title">手工剪纸 黑桃木相框25*25cm 有机玻璃 拍下备注图案 浦城剪纸 手工剪纸</h4>
           <dt class="goods_price">
@@ -445,7 +450,7 @@ var section2Swiper = new Swiper('#section2_swiper',{
           <div class="pagination3 section_swiper_pagination"></div>
         </div><!--section_swiper-->
 
-        <dl class="section_goods"><a href="http://www.ifuhuo.com/goods.php?id=46">
+        <dl class="section_goods"><a href="http://www.ifuhuo.com/goods.php?id=46" target="_blank">
           <dd class="goods_show"><img class="img_center" src="images/files/image026.jpg" alt="" /></dd>
           <h4 class="goods_title">2015夏季小西装女外套夏装薄款韩版修身短款小西服</h4>
           <dt class="goods_price">
@@ -453,7 +458,7 @@ var section2Swiper = new Swiper('#section2_swiper',{
             <!--  <del>市场价：&yen;150</del>-->
           </dt>
         </a></dl><!--1-->
-        <dl class="section_goods"><a href="http://www.ifuhuo.com/goods.php?id=33">
+        <dl class="section_goods"><a href="http://www.ifuhuo.com/goods.php?id=33" target="_blank">
           <dd class="goods_show"><img class="img_center" src="images/files/image028.jpg" alt="" /></dd>
           <h4 class="goods_title">夏装新款修身假两件无袖绣花蕾丝连衣裙</h4>
           <dt class="goods_price">
@@ -537,7 +542,7 @@ var section1Swiper = new Swiper('#section3_swiper',{
           <div class="pagination4 section_swiper_pagination"></div>
         </div><!--section_swiper-->
 
-        <dl class="section_goods"><a href="http://www.zggoods.com/product/product/3851">
+        <dl class="section_goods"><a href="http://www.zggoods.com/product/product/3851" target="_blank">
           <dd class="goods_show"><img class="img_center" src="images/files/image038.jpg" alt="" /></dd>
           <h4 class="goods_title">韩版14寸可爱化妆箱 手提箱</h4>
           <dt class="goods_price">
@@ -545,7 +550,7 @@ var section1Swiper = new Swiper('#section3_swiper',{
          <!--     <del>市场价：&yen;15.80</del>-->
           </dt>
         </a></dl><!--1-->
-        <dl class="section_goods"><a href="http://www.zggoods.com/product/product/3856">
+        <dl class="section_goods"><a href="http://www.zggoods.com/product/product/3856" target="_blank">
           <dd class="goods_show"><img class="img_center" src="images/files/image040.jpg" alt="" /></dd>
           <h4 class="goods_title">文派24寸 拉杆箱行李箱 航空箱 旅行箱包</h4>
           <dt class="goods_price">
@@ -629,7 +634,7 @@ var section1Swiper = new Swiper('#section4_swiper',{
           <div class="pagination5 section_swiper_pagination"></div>
         </div><!--section_swiper-->
 
-        <dl class="section_goods"><a href="http://www.ifuhuo.com/goods.php?id=136">
+        <dl class="section_goods"><a href="http://www.ifuhuo.com/goods.php?id=136" target="_blank">
           <dd class="goods_show"><img class="img_center" src="images/files/image050.jpg" alt="" /></dd>
           <h4 class="goods_title">迪奥唇膏/变色润唇膏/粉红魅惑润唇膏3.5g 润唇蜜/口红 唇彩 唇膏</h4>
           <dt class="goods_price">
@@ -637,7 +642,7 @@ var section1Swiper = new Swiper('#section4_swiper',{
           <!--    <del>市场价：&yen;15.80</del>-->
           </dt>
         </a></dl><!--1-->
-        <dl class="section_goods"><a href="http://www.zsgx0598.com/goods.php?id=13549">
+        <dl class="section_goods"><a href="http://www.zsgx0598.com/goods.php?id=13549" target="_blank">
           <dd class="goods_show"><img class="img_center" src="images/files/image052.jpg" alt="" /></dd>
           <h4 class="goods_title">COCOVEL沐浴露 男士女士正品高端持久留香型 嫩白补水保湿沐浴乳</h4>
           <dt class="goods_price">
@@ -724,7 +729,7 @@ var section1Swiper = new Swiper('#section5_swiper',{
         </div><!--section_swiper-->
 
         <dl class="section_goods">
-            <a href="https://detail.1688.com/offer/42911282152.html?spm=a2615.2177701.0.0.Jz0w8m">
+            <a href="https://detail.1688.com/offer/42911282152.html?spm=a2615.2177701.0.0.Jz0w8m" target="_blank">
           <dd class="goods_show"><img class="img_center" src="images/files/image066.jpg" alt="" /></dd>
           <h4 class="goods_title">猴年小金条 0.05金箔金条红包 金店促销活动赠送礼品</h4>
           <dt class="goods_price">
@@ -734,7 +739,7 @@ var section1Swiper = new Swiper('#section5_swiper',{
         </a>
 
         </dl><!--1-->
-        <dl class="section_goods"><a href="https://detail.1688.com/offer/521609431834.html?spm=a2615.2177701.0.0.Jz0w8m">
+        <dl class="section_goods"><a href="https://detail.1688.com/offer/521609431834.html?spm=a2615.2177701.0.0.Jz0w8m" target="_blank">
           <dd class="goods_show"><img class="img_center" src="images/files/image064.jpg" alt="" /></dd>
           <h4 class="goods_title">和田玉镶金路路通 转运珠项链吊坠 促销活动赠送礼品</h4>
           <dt class="goods_price">
@@ -823,7 +828,7 @@ var section1Swiper = new Swiper('#section6_swiper',{
           <div class="pagination7 section_swiper_pagination"></div>
         </div><!--section_swiper-->
 
-        <dl class="section_goods"><a href="http://www.zggoods.com/product/product/4172">
+        <dl class="section_goods"><a href="http://www.zggoods.com/product/product/4172" target="_blank">
           <dd class="goods_show"><img class="img_center" src="images/files/image074.jpg" alt="" /></dd>
           <h4 class="goods_title">漫步者电脑音箱 R101T 06款</h4>
           <dt class="goods_price">
@@ -831,7 +836,7 @@ var section1Swiper = new Swiper('#section6_swiper',{
       <!--        <del>市场价：&yen;15.80</del>-->
           </dt>
         </a></dl><!--1-->
-        <dl class="section_goods"><a href="http://www.zggoods.com/product/product/4751">
+        <dl class="section_goods"><a href="http://www.zggoods.com/product/product/4751" target="_blank">
           <dd class="goods_show"><img class="img_center" src="images/files/image076.jpg" alt="" /></dd>
           <h4 class="goods_title">DOCO 锂聚合物大容量移动电源13200mAH 手机平板充电宝 P132</h4>
           <dt class="goods_price">
@@ -920,7 +925,7 @@ var section1Swiper = new Swiper('#section7_swiper',{
           <div class="pagination8 section_swiper_pagination"></div>
         </div><!--section_swiper-->
 
-        <dl class="section_goods"><a href="http://597yp.com/index.php?act=goods&goods_id=2965">
+        <dl class="section_goods"><a href="http://597yp.com/index.php?act=goods&goods_id=2965" target="_blank">
           <dd class="goods_show"><img class="img_center" src="images/files/image086.jpg" alt="" /></dd>
           <h4 class="goods_title">优创纯正天然有机野山茶籽孕妇精华油 30ml外用</h4>
           <dt class="goods_price">
@@ -928,7 +933,7 @@ var section1Swiper = new Swiper('#section7_swiper',{
          <!--     <del>市场价：&yen;15.80</del>-->
           </dt>
         </a></dl><!--1-->
-        <dl class="section_goods"><a href="http://www.zggoods.com/product/product/1447">
+        <dl class="section_goods"><a href="http://www.zggoods.com/product/product/1447" target="_blank">
           <dd class="goods_show"><img class="img_center" src="images/files/image088.jpg" alt="" /></dd>
           <h4 class="goods_title">爽贝比婴儿电热蚊香液套装DYE33</h4>
           <dt class="goods_price">
@@ -1013,7 +1018,7 @@ var section1Swiper = new Swiper('#section8_swiper',{
           <div class="pagination9 section_swiper_pagination"></div>
         </div><!--section_swiper-->
 
-        <dl class="section_goods"><a href="http://shop.zg5166.com/index.php?app=goods&id=1549">
+        <dl class="section_goods"><a href="http://shop.zg5166.com/index.php?app=goods&id=1549" target="_blank">
           <dd class="goods_show"><img class="img_center" src="images/files/image098.jpg" alt="" /></dd>
           <h4 class="goods_title">好鼎汇 越南新华园 榴莲饼 新鲜榴莲酥 进口点心零食正宗特产美食400gX2包</h4>
           <dt class="goods_price">
@@ -1021,7 +1026,7 @@ var section1Swiper = new Swiper('#section8_swiper',{
         <!--      <del>市场价：&yen;15.80</del>-->
           </dt>
         </a></dl><!--1-->
-        <dl class="section_goods"><a href="http://shop.zg5166.com/index.php?app=goods&id=1583">
+        <dl class="section_goods"><a href="http://shop.zg5166.com/index.php?app=goods&id=1583" target="_blank">
           <dd class="goods_show"><img class="img_center" src="images/files/image100.jpg" alt="" /></dd>
           <h4 class="goods_title">好鼎汇 马蒂诺意大利面(小海螺形73号)、（蜗牛壳形102号）</h4>
           <dt class="goods_price">
@@ -1110,7 +1115,7 @@ var section1Swiper = new Swiper('#section9_swiper',{
           <div class="pagination10 section_swiper_pagination"></div>
         </div><!--section_swiper-->
 
-        <dl class="section_goods"><a href="http://www.zggoods.com/product/product/2605">
+        <dl class="section_goods"><a href="http://www.zggoods.com/product/product/2605" target="_blank">
           <dd class="goods_show"><img class="img_center" src="images/files/image110.jpg" alt="" /></dd>
           <h4 class="goods_title">Eupa/灿坤TSK-2223CG多功能电火锅电炒锅微压力电锅</h4>
           <dt class="goods_price">
@@ -1118,7 +1123,7 @@ var section1Swiper = new Swiper('#section9_swiper',{
          <!--     <del>市场价：&yen;15.80</del>-->
           </dt>
         </a></dl><!--1-->
-        <dl class="section_goods"><a href="http://www.zggoods.com/product/product/2677">
+        <dl class="section_goods"><a href="http://www.zggoods.com/product/product/2677" target="_blank">
           <dd class="goods_show"><img class="img_center" src="images/files/image112.jpg" alt="" /></dd>
           <h4 class="goods_title">Eupa/灿坤TSK-1948A多功能茗茶咖啡机美式滴漏咖啡机</h4>
           <dt class="goods_price">
@@ -1206,7 +1211,7 @@ var section1Swiper = new Swiper('#section10_swiper',{
           <div class="pagination11 section_swiper_pagination"></div>
         </div><!--section_swiper-->
 
-        <dl class="section_goods"><a href="http://www.fjtxdz.com/display.asp?id=154&third_id=0">
+        <dl class="section_goods"><a href="http://www.fjtxdz.com/display.asp?id=154&third_id=0" target="_blank">
           <dd class="goods_show"><img class="img_center" src="images/files/image122.jpg" alt="" /></dd>
           <h4 class="goods_title">经典二十一T</h4>
           <dt class="goods_price">
@@ -1214,7 +1219,7 @@ var section1Swiper = new Swiper('#section10_swiper',{
           <!--    <del>市场价：&yen;15.80</del>-->
           </dt>
         </a></dl><!--1-->
-        <dl class="section_goods"><a href="http://www.zsgx0598.com/goods.php?id=14234">
+        <dl class="section_goods"><a href="http://www.zsgx0598.com/goods.php?id=14234" target="_blank">
           <dd class="goods_show"><img class="img_center" src="images/files/image124.jpg" alt="" /></dd>
           <h4 class="goods_title">床头寝室宿舍神器置物架挂篮木质储物收纳架收纳盒电脑书桌</h4>
           <dt class="goods_price">
@@ -1297,7 +1302,7 @@ var section1Swiper = new Swiper('#section11_swiper',{
           <div class="pagination12 section_swiper_pagination"></div>
         </div><!--section_swiper-->
 
-        <dl class="section_goods"><a href="http://www.zsgx0598.com/goods.php?id=10343">
+        <dl class="section_goods"><a href="http://www.zsgx0598.com/goods.php?id=10343" target="_blank">
           <dd class="goods_show"><img class="img_center" src="images/files/image134.jpg" alt="" /></dd>
           <h4 class="goods_title">清流鲜切花</h4>
           <dt class="goods_price">
@@ -1305,7 +1310,7 @@ var section1Swiper = new Swiper('#section11_swiper',{
        <!--       <del>市场价：&yen;15.80</del>-->
           </dt>
         </a></dl><!--1-->
-        <dl class="section_goods"><a href="http://www.zsgx0598.com/goods.php?id=4968">
+        <dl class="section_goods"><a href="http://www.zsgx0598.com/goods.php?id=4968" target="_blank">
           <dd class="goods_show"><img class="img_center" src="images/files/image136.jpg" alt="" /></dd>
           <h4 class="goods_title">花茶杯</h4>
           <dt class="goods_price">

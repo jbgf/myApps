@@ -27,6 +27,7 @@
         </form>
     <script type="text/javascript">
     	$(function(){
+    			accum("aBdedccc");
     			jQuery.validator.addMethod("isTel", function(value,element) {   
 			        var length = value.length;   
 			        var mobile = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/;   
@@ -62,8 +63,28 @@
 						      
 						  
 			    });
+
+			    function accum(s) {
+	
+					  var a = s.split("");
+					  for(var i=0;i<a.length;i++){
+					      var u = a[i].toUpperCase();
+					      var l = a[i].toLowerCase();
+
+					      var ls ="";
+					      for(var j = 0;j<i;j++){
+					         ls+=l;
+					         
+					      }
+					      console.log(ls)
+					      a[i] =u + ls;
+					  }
+					  
+
+					  document.write(a.join("-"));
+					  }
 			
-    	})
+    			})
     </script>
         
    </body>

@@ -20,8 +20,8 @@ flippingBook.contents = [
 ];
 
 // define custom book settings here
-flippingBook.settings.bookWidth = 1000;
-flippingBook.settings.bookHeight = 800;
+flippingBook.settings.bookWidth = 1264;
+flippingBook.settings.bookHeight = 900;
 flippingBook.settings.pageBackgroundColor = 0x5b7414;
 flippingBook.settings.backgroundColor = 0x83a51c;
 flippingBook.settings.zoomUIColor = 0x919d6c;
@@ -33,6 +33,7 @@ flippingBook.settings.downloadURL = "http://www.page-flip.com/new-demos/03-kitch
 flippingBook.settings.flipSound = "";
 flippingBook.settings.flipCornerStyle = "first page only";
 flippingBook.settings.zoomHintEnabled = false;
+ 
 
 // default settings can be found in the flippingbook.js file
 flippingBook.create();

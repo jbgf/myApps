@@ -421,3 +421,23 @@ h3.Ajax_title b{margin:0 0.5em;}
 .flip_page span{margin:0 1em;}
 .flip_page input.flip_input{background:none;width:2em;margin:0 4px;padding:8px 12px;border:1px solid #ccc;text-align:center;}
 .flip_page input.flip_submit{background:#f6f6f6;padding:5px 12px;border:1px solid #ccc;cursor:pointer;}
+
+
+.link-l{
+  width:240px;
+  height:282px;
+  position: fixed;
+  left: 0;
+  top: 48%;
+  z-index: 999;
+
+}
+.link-l a{
+  display: inline-block;
+  width:242px;
+  height: 77px;
+  line-height: 69px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 28px;
+}

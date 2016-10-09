@@ -81,7 +81,7 @@
             <ul class="regstep two">
                 <li class="green">填写订单需求</li><li class="green">在线计算价格</li><li class="width164">保存订单</li></ul>
             <span>在线计价</span></h2>
-        <form name="frmClac" id="frmClac" method="post">
+        <form name="frmClac" id="frmClac" method="post" >
         <div class="content">
             <table width="100%" cellpadding="0" cellspacing="0" class="orderdetail" style="margin-top: 20px;">
                 <tbody><tr>
@@ -287,25 +287,9 @@
 			    
                 <input id="btnUploadPcb" type="button" value="上传PCB文件并保存订单" class="pcbbtna">
                 <input id="btn1" class="btnstyle2" type="button" value="返回修改" onclick="javascript:history.back(-1)">
+                <input type="submit" name="">
                 <input id="file0"  type="file" name="" style="display:none;">
-                <script type="text/javascript">
-                    $('#btnUploadPcb').on("click",function(){$("#file0").click()});
-                    $("#file0").change(function(){
-                        objUrl = getObjectURL(this.files[0]);
-                        $('#btnUploadPcb').val(this.files[0].name)
-                    });
-                    function getObjectURL(file) {
-                        var url = null ; 
-                        if (window.createObjectURL!=undefined) { // basic
-                            url = window.createObjectURL(file) ;
-                        } else if (window.URL!=undefined) { // mozilla(firefox)
-                            url = window.URL.createObjectURL(file) ;
-                        } else if (window.webkitURL!=undefined) { // webkit or chrome
-                            url = window.webkitURL.createObjectURL(file) ;
-                        }
-                        return url ;
-                    }
-                </script>
+                
             </div>
         </div>
         </form>
@@ -346,7 +330,7 @@
                                         <input type="hidden" value="UploadSeccess" id="funname" name="funname">
                                         <input type="hidden" value="1s6045" id="key" name="key">
                                         <input type="hidden" value="96dd13a9" id="checkcode" name="checkcode">
-                                        <input type="hidden" value="web/common/upload.aspx" id="scriptPage" name="scriptPage">
+                                        <input type="hidden" value="" id="scriptPage" name="scriptPage">
                                     </td>
                                 </tr>
                             </tbody></table>
@@ -492,12 +476,7 @@ window.onscroll = function(){ setTimeout(divScroll,100);};
         }
     });
     var loginBox;
-    $("#btnUploadPcb,.panel-tool-close").click(function() {
-
-            $("#uploadBox").toggle()
-        
-
-    });
+   
 
     function UploadSeccess(filename, orgname) {
 	

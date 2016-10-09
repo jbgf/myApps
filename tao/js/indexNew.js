@@ -20,35 +20,39 @@ $(function(){
  
 });
 
-  var navHeightLight = function(){
+    var navHeightLight = function(){
       var href = location.href,
-          reg = /[a-zA-Z]+=/;
-      var navIndex = href.split(reg)[1];
-      var tabArray = ["first","publish&qiuzhi&job","taxtool","video","account","answer","shop","news"]
+          reg = /(\w+\.com\/){1}/;
+      var navIndex = href.split(reg)[2];
+      
+      var tabArray = ["first","publish&publish_job","taxtool","video","account","answer-list-nzgs","shop","news"]
       var tabIndex ;
           getIndex();
       function getIndex(){
           if(!navIndex){tabIndex = 0;return;}
           $.each(tabArray,function(index){
               var t = searchArray(tabArray[index],"&");
+
               if(t != -1){
                 tabIndex = index; return false; 
               }
           });
+
+          function searchArray(i,selector){
+              var a = i.split(selector);
+              var t;
+              for(var j=0;j<a.length;j++){
+                  
+                  if(navIndex)t = navIndex.indexOf(a[j]);
+                  if(t != -1){
+                    return t; 
+                  }
+              }
+              return t;
+          }
       };
        
-      function searchArray(i,selector){
-          var a = i.split(selector);
-          var t;
-          for(var j=0;j<a.length;j++){
-              
-              if(navIndex)t = navIndex.indexOf(a[j]);
-              if(t != -1){
-                return t; 
-              }
-          }
-          return t;
-      }
+      
       $(".head .g-header-nav a").eq(tabIndex).addClass("on");
   }
 
