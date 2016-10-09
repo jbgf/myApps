@@ -1,10 +1,8 @@
-@charset "utf-8"
+@charset "utf-8";
 
 /*导航栏 start*/
-.navbar-line{margin:0 -37px;}
+.navbar-line{}
 
-
-	
 .navbar-wrapper .naver_0{
 	display: none;
     position: absolute;

@@ -87,7 +87,7 @@ $(function(){
 
 
            function showTime(){ 
-            var show_day=new Array('星期一','星期二','星期三','星期四','星期五','星期六','星期日'); 
+            var show_day=new Array('星期日','星期一','星期二','星期三','星期四','星期五','星期六'); 
             var time=new Date(); 
             var year=time.getFullYear(); 
             var month=time.getMonth(); 
@@ -102,7 +102,7 @@ $(function(){
             hour<10?hour='0'+hour:hour; 
             minutes<10?minutes='0'+minutes:minutes; 
             second<10?second='0'+second:second; 
-            var now_time=year+'年'+month+'月'+date+'日'+' '+show_day[day-1]+' '+hour+':'+minutes+':'+second; 
+            var now_time=year+'年'+month+'月'+date+'日'+' '+show_day[day]+' '+hour+':'+minutes+':'+second; 
             var st = document.getElementById('showtime');
             if(st)st.innerHTML=now_time; 
             setTimeout(showTime,1000); 
