@@ -36,11 +36,6 @@ gulp.task('browserSync',function(){
 });
 gulp.task('watch',['browserSync'/*,'connectPhp'*/],function(){
 
-	 gulp.watch(['./water_cleaner_php_02/**/*.js','./water_cleaner_php_02/**/*.css',
-	 			 './water_cleaner_php_02/**/*.html'],browserSync.reload);
-	 gulp.watch(['./huaxing/**/*.js','./huaxing/**/*.css','./huaxing/**/*.html'],browserSync.reload);
-	 gulp.watch(['./wheel/**/*.js','./wheel/**/*.css','./wheel/**/*.html'],browserSync.reload);
-	 gulp.watch(['./jquery.nicescroll-master/**/*.js','./jquery.nicescroll-master/**/*.css','./jquery.nicescroll-master/**/*.html'],browserSync.reload);
 	 gulp.watch(['./quarantine/**/*.js','./quarantine/**/*.css','./quarantine/**/*.html'],browserSync.reload);
 });
 
