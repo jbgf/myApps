@@ -1,9 +1,10 @@
 $(function(){
+
           //欢迎栏
           showTime();
+          
           //导航栏
           
-
           var st = 180;
           $('.navbar-block').mouseenter(function () {
               $(this).find('ul').stop(false, true).slideDown(st);
@@ -87,6 +88,7 @@ $(function(){
               $(this).find(".riRow-t02").slideToggle("fast");
            })
 
+
            function showTime(){ 
             var show_day=new Array('星期日','星期一','星期二','星期三','星期四','星期五','星期六'); 
             var time=new Date(); 
@@ -104,9 +106,13 @@ $(function(){
             minutes<10?minutes='0'+minutes:minutes; 
             second<10?second='0'+second:second; 
             var now_time=year+'年'+month+'月'+date+'日'+' '+show_day[day]+' '+hour+':'+minutes+':'+second; 
-            document.getElementById('showtime').innerHTML=now_time; 
+
+            var st = document.getElementById('showtime');
+            if(st)st.innerHTML=now_time; 
+
             setTimeout(showTime,1000); 
             
           };
+
 
 })

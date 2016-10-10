@@ -1,7 +1,7 @@
-@charset "utf-8"
+@charset "utf-8";
 
 /*导航栏 start*/
-.navbar-line{margin:0 -37px;}
+.navbar-line{}
 
 .navbar-wrapper .naver_0{
 	display: none;
@@ -14,15 +14,18 @@
 .navbar-block{
 	
 	float: left;position: relative;
+
 	min-height: 1px;
 	cursor: pointer;
 	font-size:14px;
 	position: relative;
+
 	display: block;
 }
 .navbar-block a.navLink{
 	display: block;
 	padding:13px 37px;
+
 }
 .navbar-block.on,.navbar-block:hover{background: #fff;color:#6eb92b;}
 .navbar-block .naver_0{
@@ -30,6 +33,20 @@
     position: absolute;
     z-index: 99;
     top: 48px;
+
+    padding-top: 10px;
+	background:url(../img/topTri.png) no-repeat 50% 5px;
+	left: -6%;
+}
+.navbar-block .naver_0 .nav_erc{
+	color:#6eb92b;
+	
+    background-color: #ecf8fc;
+    background-color: rgba(236,248,252,.9);
+    text-align: center;
+}
+.navbar-block .naver_0 .nav_erc li {
+
     padding-top: 3px;
     left: 0;
 }
@@ -74,14 +91,27 @@
 .navbar-block .naver_0 .nav_erc .navBox01Link .linkContent .navLi a{padding: 0px 10px;}
 .navbar-block .naver_0 .nav_erc .navBox01Link .linkContent .navLi.nvali-l{width: 150px;}
 .navbar-block .naver_0 .nav_erc .navBox01Link .linkContent .navLi.nvali-r{}
-/*.navbar-block .naver_0 .nav_erc li {
+.navbar-block .naver_0 .nav_erc li {
+
 	padding: 5px 45px;
 }
 .navbar-block .naver_0 .nav_erc li:hover{background-color: #6eb92b;}
 .navbar-block .naver_0 .nav_erc li:hover a{color: #fff;}
 .navbar-block .naver_0 .nav_erc li a{
 	white-space: nowrap;
-}*/
+
+}
+/*导航栏 end*/
+
+.g-topbar span.title-g{margin-left: 0;}
+.g-topbar{
+	.height: 34px;
+    line-height: 34px;
+    font-size: 12px;
+    
+}
+
+}
 /*导航栏 end*/
 
 
@@ -93,6 +123,7 @@
     background-color: rgb(243,243,243);
     
 }
+
 
 .g-topbar span,.g-topbar a{
 	display: inline-block;
@@ -243,7 +274,9 @@
 }     
 .slideTxtBox .hd ul li{ 
 	float:left; padding:0 20px;
+
 	cursor:pointer;  
+
 }     
 .slideTxtBox .hd ul li.on{ 
 	height:35px;
@@ -412,10 +445,12 @@
 	background: url(../img/ibtn006.png) no-repeat 47% 35%;    
 }
 
+
 .friendLink .linkPic{
 	padding-bottom: 15px;
     background: rgb(243,243,243);	
 }
+
 
 .friendLink .linkPic .link-wrapper{display:block;width:20%;text-align: center;float: left;}
 .friendLink .linkPic .link-wrapper p{text-align: center;padding:15px 0;font-size: 17px;}
