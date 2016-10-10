@@ -124,8 +124,8 @@ input[type=text]:focus{border: 1px solid #6bafff;}
 .banner{min-width:1000px;position: relative; clear:both;background-color: #f1f1f1;}
 
 .glide__arrows>button{border:0;width: 52px;height: 94px;}
-.container .banner .glide__arrow.prev{background:url(../../img/slider_left.png);}
-.container .banner .glide__arrow.next{background:url(../../img/slider_right.png);}
+.container .banner .glide__arrow.prev{background:url(../img/slider_left.png);}
+.container .banner .glide__arrow.next{background:url(../img/slider_right.png);}
 #div_wind_id>.box_row:not(:first-child){height: 43px;margin-top: 20px;}
 
 

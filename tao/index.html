@@ -9,29 +9,18 @@
 <link href="css/index.css"  rel="stylesheet">
 <link href="css/banner.css"  rel="stylesheet">
 <link href="css/ie.css"  rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="css/glide.core.css">
-<link rel="stylesheet" type="text/css" href="css/glide.theme.css">
+<!-- <link rel="stylesheet" type="text/css" href="css/glide.core.css">
+<link rel="stylesheet" type="text/css" href="css/glide.theme.css"> -->
 <link rel="stylesheet" type="text/css" href="css/affixBeta.css">
 <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="js/glide.min.js"></script>
+<!-- <script type="text/javascript" src="js/glide.min.js"></script> -->
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
 <script type="text/javascript" src="js/jquery.JPlaceholder.js"></script>
 <script type="text/javascript" src="js/scrollTop.js"></script>
 <script type="text/javascript" src="js/affixBeta.js"></script>
 <script type="text/javascript"></script>
 <style type="text/css">
-  .glide__arrows>button{
-    visibility: hidden;
-  }
-  .glide--horizontal button.glide__arrow{
-    visibility:visible;
-  }
-  #rightDiv{background:#e2e2e2;}
-  #rightDiv_top,#rightDiv_bottom{
-    height:25px;background:#2a2a2a;position:relative;
-  }
-  #rightDiv_middle a{
-    display: block;
-  }
+ 
 </style>
 
 </head>
@@ -108,7 +97,7 @@
     <div class="banner full-screen">
 
       <div id="Carousel" class="slider">
-          <div class="index_reg " id="div_wind_id">
+           <div class="index_reg " id="div_wind_id">
               <h1>
                 <span class="news_title">我要求职</span>
                 <span class="more"><a href="#" >更多 ></a></span>
@@ -133,7 +122,7 @@
               </div>
               
           </div>
-          <div class="glide__arrows">
+       <!--   <div class="glide__arrows">
             <button class="glide__arrow prev" data-glide-dir="<"></button>
             <button class="glide__arrow next" data-glide-dir=">"></button>
           </div>
@@ -151,7 +140,75 @@
               </li>
             </ul>
           </div>
-          <div class="glide__bullets"></div>
+          <div class="glide__bullets"></div> -->
+           <!-- slider begin -->
+            <div class="slideBox">
+                <div class="hd">
+                  <ul>
+                    <li><a></a></li>
+                    <li><a></a></li>
+                    <li><a></a></li>
+                    <li><a></a></li>
+                  </ul>
+                </div>
+                <div class="bd">
+                  <ul>
+                    <li><a href="#" target="_blank"><img src="img/slider01.jpg" /></a></li>
+                    <li><a href="#" target="_blank"><img src="img/slider01.jpg" /></a></li>
+                    <li><a href="#" target="_blank"><img src="img/slider01.jpg" /></a></li>
+                    <li><a href="#" target="_blank"><img src="img/slider01.jpg" /></a></li>
+                  </ul>
+                </div>
+                
+                  <button class="su-arrow prev" data-glide-dir="<"></button>
+                  <button class="su-arrow next" data-glide-dir=">"></button>
+               
+            </div>
+            <style type="text/css">
+              /*banner轮播slider*/
+
+              .slideBox{ width:100%; overflow:hidden; position:relative; border-top:1px solid #ddd;  }
+              .slideBox .hd{text-align: center; width:100%; overflow:hidden; position:absolute; bottom:5px; z-index:1; }
+              .slideBox .hd ul{ overflow:hidden; zoom:1; display: inline-block; }
+              .slideBox .hd ul li{ float:left; margin-right:12px;  width:15px; height:15px; border-radius:50%;line-height:14px; text-align:center; background:#fff; cursor:pointer; }
+              .slideBox .hd ul li.on{ background:#6eb92b; color:#fff; }
+              .slideBox .bd{ position:relative; width:100%; z-index:0;   }
+              .slideBox .bd li{ width:100%;display:block;vertical-align:middle; }
+              .slideBox .bd li a{width: 100%;display: block;}
+              .slideBox .bd img{ width:100%; display: block;  }
+
+              /* 下面是前/后按钮代码，如果不需要删除即可 */
+              .slideBox  button.su-arrow{
+                    border:0;
+                    width: 52px;
+                    height: 94px;
+                    position:absolute; 
+                    top:50%; 
+                    margin-top:-25px; 
+                    display:block;
+                    background-repeat: no-repeat;
+                    background-color: transparent;
+                    outline: none;
+              }
+              .slideBox .prev{
+                    background-image:url(img/slider_left.png);
+                    left:3%;
+              }
+              .slideBox .next{
+                    background-image:url(img/slider_right.png);
+                    left:auto; 
+                    right:3%; 
+                    
+              }
+              .slideBox .prevStop{ display:none;  }
+              .slideBox .nextStop{ display:none;  }
+            </style>
+            <script type="text/javascript">
+                //banner 轮播
+          jQuery(".slideBox").slide({mainCell:".bd ul",autoPlay:true,effect:"leftLoop",easing:"swing",interTime:"3500"});
+          
+            </script>
+            <!-- slider end -->
       </div>
     </div>
     <div class="floatWindow appointment" data-spy="affix" data-offset-top="662" data-offset-bottom="972">
