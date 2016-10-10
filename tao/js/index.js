@@ -8,11 +8,7 @@ $(document).ready(function(){
 	
 	switchProduct();
 	quickBar();
-	if($(".slider").length!=0)
-	$('.slider').glide({
-		type: 'carousel',
-		
-	});
+	
 });
 
 

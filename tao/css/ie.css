@@ -32,3 +32,24 @@
 .bookKeeping .contact{
     background:rgb(20,20,20);
 }
+
+@media \0screen\,screen\9 {/* 只支持IE6、7、8 */
+    .new_pic_title{
+        background-color:#fff;
+        filter:Alpha(opacity=50);
+        position:static; 
+        *zoom:1; 
+      }
+    .product_r .product_details {
+        height: 62px;
+        line-height: 20px;
+    }
+    .container .contact, .container01 .contact {
+        background-color: rgb(104,104,104);
+    }
+    /*.glide--horizontal .glide__arrow.prev,
+    .glide--horizontal .glide__arrow.next {
+        
+        top: -45px;
+    }*/
+}
