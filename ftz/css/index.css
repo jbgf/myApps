@@ -1,0 +1,36 @@
+.full-width{width:100%;}
+
+.input-set{padding:5px 1.5%;width:100%;}
+.input-set input{display: inline-block;float:left;height: 100%;font-size: 16px;font-weight: 500;border:none;}
+.input-set input.input{width:69%;padding-left:2%;}
+.input-set input.button{width:26%;padding:0;height:50px;}
+.input-set-l{height: 48px;}
+
+.clear:before,.clear:after{content:" ";display:table;}
+.clear:after{clear:both;}
+
+/*color*/
+.white{color:#fff;}
+.blue{color:#0c8ae1;}
+.orange{color:#ff8702;}
+.gray{color:#C2C1C1;}
+.black{color:#333;}
+
+.bg-gray{background:#e1e9f6;}
+.bg-green{background:#61ac4a;}
+.bg-blue{background:#1978cf;}
+.bg-black{background:#0f1014;}
+.bg-red{background: #d64167;}
+.bg-pink{background: #c045be;}
+.bg-orange{background:#d96131;}
+.bg-lightBlue{background:#3abdd5;}
+
+.cubeLink_ico img{width:51px;height: 49px;}
+
+.bottomContent{background:#091c2e;}
+
+.bottomContent .title{border-bottom: 1px solid #223343;}
+.bottomContent .title>.link{display:block;color:inherit;width:33%;text-align: center;float: left;padding:15px 0;}
+
+.bottomContent .inf{padding:20px 0;text-align: center;}
+.bottomContent .inf>p{padding:3px 0;}

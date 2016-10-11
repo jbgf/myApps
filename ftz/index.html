@@ -1,0 +1,308 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="layoutmode" content="standard">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="renderer" content="webkit">
+
+<!--uc浏览器判断到页面上文字居多时，会自动放大字体优化移动用户体验。添加以下头部可以禁用掉该优化-->
+<meta name="wap-font-scale" content="no">
+<meta content="telephone=no" name="format-detection" />
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+
+<script type="text/javascript">
+//html root的字体计算应该放在最前面，这样计算就不会有误差了/
+//2016.3.23 wjq update 之所以要加个判断返回一个20.5，是因为当用户在谷歌等浏览器直接输入手机端网站网址时，如果用户设置模块自定义样式的高度比较小，由于这时候的clientWidth为1920px，及返回的_htmlFontSize为40，这时候就会使模块太小，展示不完全，因此先取一个较为准确的值去展示。Mobi.resetHtmlFontSize()顺便也加了
+var _htmlFontSize = (function(){
+    var clientWidth = document.documentElement ? document.documentElement.clientWidth : document.body.clientWidth;
+    if(clientWidth > 640) clientWidth = 640;
+    document.documentElement.style.fontSize = clientWidth * 1/16+"px";
+  	return clientWidth * 1/16;
+})();
+
+</script>
+<link rel="stylesheet" type="text/css" href="css/base.min.css" title="default" />
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<link rel="stylesheet" id="mobiStyleTemplateCss" type="text/css" href="css/1010_1.min.css">
+<link rel="stylesheet" id="mobiCubeNavigationCss" type="text/css" href="css/cubeNavigation.min.css">
+<link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css">
+<meta name="keywords" content="">
+<meta name="description" content="">
+
+
+</head>
+<body faiscoMobi="true" id="g_body" class="g_locale2052 mobiCol3 clear">	
+
+	<div id="g_web" class="g_web">
+<!--下拉列表-->		
+	    <div id="webTopBox" class="webTopBox  ">
+	    	<div id="webTop" class="webTop" style='top:30px'>
+	    		
+				<div id='navbar' class='navbar navBaseIcon'>
+				<div id='navbarList' class='navbarList'>
+						<div 3 id='itemSep_3' class='itemSep'></div>
+						<div id='navItem_3' class='navItem navItem_3 itemSelected icon-navItem'>
+						<a href="#">
+						<span class='navItemIcon icon-navItemIcon'></span>
+						<span class='navItemName'>首页</span>
+						</a>
+						</div>
+
+						<div 1 id='itemSep_104' class='itemSep'></div>
+						<div id='navItem_104' class='navItem navItem_104  icon-navItem'><a href="#"><span class='navItemIcon icon-navItemIcon'></span><span class='navItemName'>党的建设</span></a>
+						</div>
+
+						<div 1 id='itemSep_101' class='itemSep'></div>
+						<div id='navItem_101' class='navItem navItem_101  icon-navItem'><a href="#"><span class='navItemIcon icon-navItemIcon'></span><span class='navItemName'>乡村风情</span></a>
+						</div>
+
+						<div 1 id='itemSep_102' class='itemSep'></div>
+						<div id='navItem_102' class='navItem navItem_102  icon-navItem'><a href="#"><span class='navItemIcon icon-navItemIcon'></span><span class='navItemName'>新闻动态</span></a>
+						</div>
+
+						<div 1 id='itemSep_103' class='itemSep'></div>
+						<div id='navItem_103' class='navItem navItem_103  icon-navItem'><a href="#"><span class='navItemIcon icon-navItemIcon'></span><span class='navItemName'>关于我们</span></a>
+						</div>
+						
+				</div>
+				</div>
+
+	    	</div>
+	    </div>
+<!--下拉列表 END-->		
+		<div id="webHeaderBox" class="webHeaderBox  " style='top:30px' >
+			<div class='navButton' id='navButton'>
+				<div class='navButtonPanel'></div>
+				<div class='menuNav'>
+				<div class='menuNavTip icon-menuNavTip'></div>
+				</div>
+			</div>
+
+			<div id='webHeader' class='webHeader webHeaderBg' >
+				<div id='header' class='header' style='padding:0px;'>
+					<span class='pageTitle' id='pageTitle' >中国(福建)自由贸易试验区</span>
+				</div>
+			</div>
+		</div>
+<!-- swiper -->		
+		<div id="webBannerBox" class="webBannerBox  ">
+			<div class="swiper-container">
+			    <div class="swiper-wrapper">
+			        <div class="swiper-slide"><img src="image/banner01.png"></div>
+			        <div class="swiper-slide"><img src="image/banner01.png"></div>
+			        <div class="swiper-slide"><img src="image/banner01.png"></div>
+			    </div>
+			    <!-- 如果需要分页器 -->
+			    <div class="swiper-pagination"></div>
+			</div>
+		</div>
+<!-- swiper END-->			
+<!--内容部分-->
+		<div id="webContainerBox" class="webContainerBox">
+<!--搜索栏-->
+		<div class="input-set input-set-l ">
+	                    <input class="input bg-gray" type="" name="" placeholder="输入关键词">
+	                    <input class="button bg-blue white" type="submit" class="addon" value="搜索">
+        </div>	
+					
+<!--磁贴方块tile-->
+<div class='cubeNavigationArea cubeNavigationArea2' value='2' id='cubeNavigation306'>
+<!--  -->
+<div class='cubeLink cubeLink1 ' id='cubeNavigation306_cubeLink1' linkid='1' >
+<a class='cubeLink_a ' href='#'  target='_self' id='cubeLink_a1_cubeNav306' >
+<div class='cubeLink_bg bg-red'></div><div class='cubeLink_curtain'></div>
+<div class='cubeLink_ico '><img src="image/icon01.png"></div>
+<div class='cubeLink_text g_link'>
+<div class='cubeLink_text_p '>走进自贸区<p class='cubeLink_subText_p'></p></div>
+</div>
+</a>
+</div>
+<!--  -->
+<div class='cubeLink cubeLink2 ' id='cubeNavigation306_cubeLink2' linkid='2' ><a class='cubeLink_a ' href='#'  target='_self' id='cubeLink_a2_cubeNav306' >
+<div class='cubeLink_bg bg-blue'></div><div class='cubeLink_curtain'></div>
+<div class='cubeLink_ico '><img src="image/icon02.png"></div>
+<div class='cubeLink_text g_link'><div class='cubeLink_text_p '>新闻资讯<p class='cubeLink_subText_p'></p>
+</div></div>
+</a></div>
+<!--  -->
+<div class='cubeLink cubeLink3 ' id='cubeNavigation306_cubeLink3' linkid='3' ><a class='cubeLink_a ' href='#'  target='_self' id='cubeLink_a3_cubeNav306' >
+<div class='cubeLink_bg bg-orange'></div><div class='cubeLink_curtain'></div>
+<div class='cubeLink_ico '><img src="image/icon03.png"></div>
+<div class='cubeLink_text g_link'><div class='cubeLink_text_p '>信息公开<p class='cubeLink_subText_p'></p>
+</div></div>
+</a></div>
+<!--  -->
+<div class='cubeLink cubeLink4 ' id='cubeNavigation306_cubeLink4' linkid='4' ><a class='cubeLink_a ' href='#'  target='_self' id='cubeLink_a4_cubeNav306' >
+<div class='cubeLink_bg bg-lightBlue'></div><div class='cubeLink_curtain'></div>
+<div class='cubeLink_ico '><img src="image/icon04.png"></div>
+<div class='cubeLink_text g_link'><div class='cubeLink_text_p '>对台直通车<p class='cubeLink_subText_p'></p>
+</div></div>
+</a></div>
+<!--  -->
+<div class='cubeLink cubeLink5 ' id='cubeNavigation306_cubeLink5' linkid='5' ><a class='cubeLink_a ' href='#'  target='_self' id='cubeLink_a5_cubeNav306' >
+<div class='cubeLink_bg bg-green'></div><div class='cubeLink_curtain'></div>
+<div class='cubeLink_ico '><img src="image/icon05.png"></div>
+<div class='cubeLink_text g_link'><div class='cubeLink_text_p '>专栏导读<p class='cubeLink_subText_p'></p>
+</div></div>
+</a></div><div class='cubeLink cubeLink6 ' id='cubeNavigation306_cubeLink6' linkid='6' ><a class='cubeLink_a ' href='javascript:;' style='cursor:default;'  id='cubeLink_a6_cubeNav306' >
+<div class='cubeLink_bg bg-pink'></div><div class='cubeLink_curtain'></div>
+<div class='cubeLink_ico '><img src="image/icon06.png"></div>
+<div class='cubeLink_text g_link'><div class='cubeLink_text_p '>互动交流<p class='cubeLink_subText_p'></p>
+</div></div>
+</a></div>
+<!--  -->
+</div>
+<!--磁贴方块tile END-->
+
+<!--新闻-->
+<div id='module302'  class='form Handle  formStyle6 ' _autoHeight='1' _height='0'>
+	<div   class='formBannerTitle formBannerTitle302'>
+		<div class='titleCenter titleCenter302'>
+		<div class='titleText titleText302'>
+		<div class='textContent'>最新动态</div></div>
+		<div class='formBannerMore formBannerMore302'><a class='titleMoreLink titleMoreLink302' href="#"><span class='titleMoreIcon icon-titleMore titleMoreIcon302'>&nbsp;</span></a>
+		</div>
+		</div>
+	</div>
+<!--新闻列表list-->
+	<div class='newsList' id='newsList302'>
+		<div id='newsLine49' topClassName='top1' topSwitch='on' newsId='49' newsName='首届华东六省一市红歌赛闭幕' class='  wWLine mixNewsStyleLine newsLine picNum1 J_picNum' picnum='3' >
+		<div  class='lineBody' >
+		<div class='mixNewsStyleImgBox1'>
+		<a hidefocus='true'  href='#'  target=_self style='width:auto;height:auto;'>
+		<img  alt='文章附图' title='' src='image/ABUIABACGAAg9d_p9gQo4peptwQwwgM4sQI!160x160.png' />
+		</a>
+		</div>
+		<div class='mixNewsStyleTitleContainer' >
+		<div class='' ></div>
+		<a hidefocus='true' href='#' target=_self  class='mixNewsStyleTitle1'>福建自贸试验区厦门片区....
+		</a>
+		</div>
+		<a  hidefocus='true' href='#' target=_self  class='mixNewsStyleSummary' >近日，“厦门自贸片区大数据平台”首期工程已基本完成，该平台由厦门自贸委规划建设局牵头，经半.....</a>
+		</div>
+		</div>
+		<div class='g_separator separatorLine'></div>
+		<div id='newsLine48' topClassName='top1' topSwitch='on' newsId='48' newsName='张宝顺会见毛里塔尼亚总统阿齐兹' class='newsLine line icon-gline  wWLine  firstClass  wholeLine J_lineH j-lineH' >
+		<div id='lineBody48' class='lineBody lineBodyTable'>
+		<div class='linkTableCell'><div class='linkTable'><a hidefocus='true' href='#' target=_self >梁建勇副省长赴自贸试验区平潭片区调研......</a></div></div>
+		</div>
+		</div>
+		<div class='g_separator separatorLine'></div>
+		
+		<div  topClassName='top1' topSwitch='on' newsId='47' newsName='张宝顺会见陈晓华一行' class='newsLine line icon-gline  wWLine    lastClass wholeLine J_lineH j-lineH' >
+		<div id='lineBody47' class='lineBody lineBodyTable'>
+		<div class='linkTableCell'><div class='linkTable'><a hidefocus='true' href='#' target=_self >梁建勇副省长赴自贸试验区平潭片区调研......</a></div></div>
+		</div>
+		</div>
+		<div class='g_separator separatorLine'></div>
+
+		<div  topClassName='top1' topSwitch='on' newsId='47' newsName='张宝顺会见陈晓华一行' class='newsLine line icon-gline  wWLine    lastClass wholeLine J_lineH j-lineH' >
+		<div id='lineBody47' class='lineBody lineBodyTable'>
+		<div class='linkTableCell'><div class='linkTable'><a hidefocus='true' href='#' target=_self >梁建勇副省长赴自贸试验区平潭片区调研......</a></div></div>
+		</div>
+		</div>
+		<div class='g_separator separatorLine'></div>
+
+		<div  topClassName='top1' topSwitch='on' newsId='47' newsName='张宝顺会见陈晓华一行' class='newsLine line icon-gline  wWLine    lastClass wholeLine J_lineH j-lineH' >
+		<div id='lineBody47' class='lineBody lineBodyTable'>
+		<div class='linkTableCell'><div class='linkTable'><a hidefocus='true' href='#' target=_self >梁建勇副省长赴自贸试验区平潭片区调研......</a></div></div>
+		</div>
+		</div>
+		<div class='g_separator separatorLine'></div>
+
+		<div  topClassName='top1' topSwitch='on' newsId='47' newsName='张宝顺会见陈晓华一行' class='newsLine line icon-gline  wWLine    lastClass wholeLine J_lineH j-lineH' >
+		<div id='lineBody47' class='lineBody lineBodyTable'>
+		<div class='linkTableCell'><div class='linkTable'><a hidefocus='true' href='#' target=_self >梁建勇副省长赴自贸试验区平潭片区调研......</a></div></div>
+		</div>
+		</div>
+		<div class='g_separator separatorLine'></div>
+
+		<div  topClassName='top1' topSwitch='on' newsId='47' newsName='张宝顺会见陈晓华一行' class='newsLine line icon-gline  wWLine    lastClass wholeLine J_lineH j-lineH' >
+		<div id='lineBody47' class='lineBody lineBodyTable'>
+		<div class='linkTableCell'><div class='linkTable'><a hidefocus='true' href='#' target=_self >梁建勇副省长赴自贸试验区平潭片区调研......</a></div></div>
+		</div>
+		</div>
+		<div class='g_separator separatorLine'></div>
+
+		<div  topClassName='top1' topSwitch='on' newsId='47' newsName='张宝顺会见陈晓华一行' class='newsLine line icon-gline  wWLine    lastClass wholeLine J_lineH j-lineH' >
+		<div id='lineBody47' class='lineBody lineBodyTable'>
+		<div class='linkTableCell'><div class='linkTable'><a hidefocus='true' href='#' target=_self >梁建勇副省长赴自贸试验区平潭片区调研......</a></div></div>
+		</div>
+		</div>
+		<div class='g_separator separatorLine'></div>
+	
+	</div>
+<!--新闻列表list END-->	
+</div>
+<!--新闻 END-->
+<div style="background:#e4e4e4;font-size:18px;padding:10px 0;text-align:center;"><a>查看更多</a></div>		
+</div>
+<!--内容部分 END-->
+<!--footer-->		
+	<div id="webFooterBox" class="webFooterBox  ">
+		
+		<div id='webFooter' class='webFooter'>
+		<div id='footer'  class='footer'>
+			<div class='bottomdiv'>
+			<div class='bottom'>
+				<div class='backtop' ><a style="color:inherit;" href="#fk-gWebPlaceholdPT">top</a><b></b>
+				</div>
+			</div>
+			<div class="bottomContent clear white">
+				<div class="title clear">
+					<a class="link">联系我们</a>
+					<a class="link">法律申明</a>
+					<a class="link">电脑完整版</a>
+				</div>
+				<div class="inf">
+					<p>主办：福建自贸试验区工作领导小组办公室</p>
+					<p>版权所有：福建省商务厅 闽ICP备14009608号-3</p>
+					<p>技术支持：CIECC 润商网络</p>
+				</div>
+			</div>	
+			</div>
+		</div>
+		</div>
+	</div>
+	
+</div>
+
+<script type="text/javascript" charset="utf-8" src="js/jqmobi.min.js"></script>
+<script id="mobiOperationJS" type="text/javascript" charset="utf-8" src="js/mobi.min.js"></script>
+<script type="text/javascript" src="js/swiper-3.3.1.min.js"></script>
+<script type="text/javascript">
+
+if (typeof Fai == 'undefined'){
+	Fai = {};
+	//解决页面被嵌套在iframe的场景
+	
+	Fai.top = window;	
+}
+
+jm(document).ready(function() {
+	//手机视图初始化函数
+	Mobi.initMobiPage({"type":1,"moduleStyle":0,"designType":1,"presetIndex":0,"cube":0,"layout":2,"imagePage":347,"backgroundImage":0,"colors":[],"colorsName":[]});
+	//swiper轮播
+
+	var mySwiper = new Swiper ('.swiper-container', {
+	    autoplay:5000,
+	    loop: true,
+	    pagination: '.swiper-pagination'
+	})        
+	  
+});
+
+</script>
+
+</body>
+</html>
+
+
+
