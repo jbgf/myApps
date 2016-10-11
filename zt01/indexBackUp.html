@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="renderer" content="webkit"><!--使用Google Chrome Frame-->
+
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/video-js.min.css">
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="css/ie7.css">
+		
+	<![endif]-->	
+	
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/1.2.2/html5media.min.js"></script>
+	<!-- <script type="text/javascript" src="js/video.min.js"></script> -->
+	<style type="text/css">
+
+		/* 焦点图效果 */
+	.picBtnTop{  position:relative;  overflow:hidden;  zoom:1;   }
+	.picBtnTop .hd{  position:absolute; right:0px; overflow:hidden; }
+
+	.hd .sPrev,.hd .sNext{
+		padding-left: 3px;
+	}
+	.picBtnTop .hd ul li{ text-align:center;   }
+	.picBtnTop .hd ul li img{ width:225px; height:127px; border:4px solid #ddd; cursor:pointer; vertical-align:bottom; }
+	.picBtnTop .hd ul li.on{ background:url("images/icoleft.gif") no-repeat 0 28px; }
+	.picBtnTop .hd ul li.on img{ border-color:#f60;  }
+	.picBtnTop .bd{ position:relative; width: 966px; }
+	.picBtnTop .bd li{ position:relative; zoom:1; vertical-align:middle;}
+	.picBtnTop .bd li .pic{ position:relative; z-index:0;  }
+	.picBtnTop .bd li .pic img{ width:966px; height:637px; vertical-align:bottom; }
+	.picBtnTop .bd li .bg{display: none; width:966px; height:80px; position:absolute; left:0; bottom:0; z-index:1;  background:#000; filter:alpha(opacity=60);opacity:0.6;    }
+	.picBtnTop .bd li .title{display: none; width:966px; height:80px; line-height:80px; left:0; bottom:0;   position:absolute; z-index:2;  }
+	.picBtnTop .bd li .title a{ color:#fff; padding-left:15px; font-size: 25px; }
+	
+	</style>
+</head>
+<body>
+
+	<div class="content">
+		
+	
+		<div class="banner01">
+			<img src="img/013.jpg">
+		</div>
+
+		<div class="floatWindow">
+			<a href="#speak02">领导致辞</a>
+			<a href="#focus">聚焦会场</a>
+			<a href="#media">媒体报道</a>
+			<a href="#progress">发展历程</a>
+			<a href="#video">正统网宣传片</a>
+			<a class="backTop" href="#top"></a>
+		</div>
+
+		<div class="foreword">
+			<div class="fTop" style="height:22px;">
+				<img src="img/fTop.png">
+			</div>
+			<div class="fMiddle">
+				<div class="fLeft">
+					<span class="w01">前言</span>
+				</div>
+				<div class="text_w" style="height:auto;">
+				<p class="text01">
+				9月8日，第十九届中国国际投资贸易洽谈会(简称投洽会)在厦门盛大开幕，福建省统计局携“正统网”项目首次参加。当天上午，福建省统计局在厦门国际会展中心C4厅的正统网展馆现场主办了面向海峡两岸企业服务的正统网宣传推介活动，着重介绍了正统网理念、服务、创新和未来发展。福建省统计局孙希有局长、台北市电脑商业同业公会张永美副总干事、福建省商务厅电商处领导以及部分设区市统计局领导、台湾工商业知名企业和福建省互联网龙头企业代表等参加了本次宣传推介活动。
+				</p>
+				
+	   			<p class="text01">
+	   				值得关注的是，作为正统网服务项目的延伸，“正统商城”在此次推介活动上正式亮相。“正统商城”定位为官方主办的电商导购平台，将实现一站式无缝对接的“1 to N”电商平台购物新体验。正统商城将电商平台交易功能与正统网的服务功能相结合的方式，为已入驻正统网的电商企业提供在销商品展示，完成 “正统推荐”认证手续的商品，正统网为其提供信用背书，形成独一无二的“正统推荐”影响力，将为入驻企业带来实实在在的推广效应。
+	   			</p>
+	   			<p class="text01 ">
+	   				通过此次宣传推介活动，正统网的影响力进一步扩展，随着功能的丰富完善和发展壮大，“正统网”将成为取得经济大数据，为各级领导决策和国民经济核算服务的平台。
+	   			</p>
+	   			<!-- <span class="tBtn" style="background:#f6f6f6">【详细】 </span> -->
+	   			</div>
+			</div>
+			<div class="fBottom" style="height:22px;">
+				<img src="img/fBottom.png">
+			</div>
+		</div>
+
+
+		<div class="titleRow" id="speak02" >
+				<div class="title_center"> 
+					<div class="tb">领导致辞 </div>
+					<div class="ts">正统网宣传推介活动</div>
+					<img src="img/circleBlue.png">
+				</div>
+				
+				<div class="line01">
+					<div class="line02"></div>
+				</div>
+		</div>
+		<div id="speak" class="speak">
+			
+			<div class="speakContent row" >
+				<div class="block clear">
+					<div class="innerBlock ">
+						<div class="innerBlock01 clear">
+							<img class="character" src="img/c01.png">
+							<div class="character_text">
+								<div class="text_w">
+								<p>【根据录音整理】</p>
+								<p class="text01">在我的头脑当中，9·8投洽会一直是个传统的展会，但是今天我到了展馆之后，看到“正统网”...
+	   							</p>
+	   							
+	   							<a class="tBtn" href="http://www.fjess.gov.cn/tzgg/26690.jhtml" target="_blank">【详细】 </a>
+	   							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="block ">
+					<div class="innerBlock ">
+						<div class="innerBlock01 clear">
+							<img class="character" src="img/c02.png">
+							<div class="character_text">
+								<div class="text_w">
+								<p>【根据录音整理】</p>
+								<p class="text01">在今年的“5·18”海峡两岸经贸交易会上，福建省统计局和我们台北市电脑公会共同成功...
+	   							</p>
+	   							
+	   							<a class="tBtn" href="http://www.fjess.gov.cn/tzgg/26782.jhtml" target="_blank">【详细】 </a>
+	   							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="focus" class="focus"> 
+			<div class="titleRow">
+				<div class="title_center"> 
+					<div class="tb">聚焦会场 </div>
+					<div class="ts">正统网宣传推介活动</div>
+					<img src="img/circleBlue.png">
+				</div>
+				
+				<div class="line01">
+					<div class="line02"></div>
+				</div>
+			</div>
+			<!-- superslide	 -->
+			<div id="demo1" class="picBtnTop">
+					<div class="hd" id="demo2">
+						<a class="sPrev" href="javascript:void(0)"><img src="img/upArrow.png"></a>
+						<ul>
+							<li><img src="slider/1.jpg" /></li>
+							<li><img src="slider/2.jpg" /></li>
+							<li><img src="slider/3.jpg" /></li>
+							<li><img src="slider/4.jpg" /></li>
+							<li><img src="slider/5.jpg" /></li>
+							<li><img src="slider/6.jpg" /></li>
+							<li><img src="slider/7.jpg" /></li>
+							
+							<li><img src="slider/9.jpg" /></li>
+							<li><img src="slider/10.jpg" /></li>
+							<li><img src="slider/11.jpg" /></li>
+							<li><img src="slider/12.jpg" /></li>
+							<li><img src="slider/13.jpg" /></li>
+							<li><img src="slider/14.jpg" /></li>
+							<li><img src="slider/15.jpg" /></li>
+							<li><img src="slider/16.jpg" /></li>
+							<li><img src="slider/17.jpg" /></li>
+							<li><img src="slider/18.jpg" /></li>
+							
+						</ul>
+						<a class="sNext" href="javascript:void(0)"><img src="img/downArrow.png" ></a>
+					</div>
+					<div class="bd" id="bd">
+						
+						<ul>
+							<li>
+								<div class="bg"></div>
+								<div class="pic"><a href=""><img src="slider/1.jpg" /></a></div>
+								<div class="title"><a href="">孙希有局长致辞</a></div>
+							</li>
+							<li>
+								<div class="bg"></div>
+								<div class="pic"><a href=""><img src="slider/2.jpg" /></a></div>
+								<div class="title"><a href=""></a></div>
+							</li>
+							<li>
+								<div class="bg"></div>
+								<div class="pic"><a href=""><img src="slider/3.jpg" /></a></div>
+								<div class="title"><a href=""></a></div>
+							</li>
+							<li>
+								<div class="bg"></div>
+								<div class="pic"><a href=""><img src="slider/4.jpg" /></a></div>
+								<div class="title"><a href=""></a></div>
+							</li>
+							<li>
+								<div class="bg"></div>
+								<div class="pic"><a href=""><img src="slider/5.jpg" /></a></div>
+								<div class="title"><a href=""></a></div>
+							</li>
+							<li>
+								<div class="bg"></div>
+								<div class="pic"><a href=""><img src="slider/6.jpg" /></a></div>
+								<div class="title"><a href=""></a></div>
+							</li>
+							<li>
+								<div class="bg"></div>
+								<div class="pic"><a href=""><img src="slider/7.jpg" /></a></div>
+								<div class="title"><a href=""></a></div>
+							</li>
+							
+							<li>
+								<div class="bg"></div>
+								<div class="pic"><a href=""><img src="slider/9.jpg" /></a></div>
+								<div class="title"><a href=""></a></div>
+							</li>
+							<li>
+								<div class="bg"></div>
+								<div class="pic"><a href=""><img src="slider/10.jpg" /></a></div>
+								<div class="title"><a href=""></a></div>
+							</li>
+							<li>
+								<div class="bg"></div>
+								<div class="pic"><a href=""><img src="slider/11.jpg" /></a></div>
+								<div class="title"><a href=""></a></div>
+							</li>
+							<li>
+								<div class="bg"></div>
+								<div class="pic"><a href=""><img src="slider/12.jpg" /></a></div>
+								<div class="title"><a href=""></a></div>
+							</li>
+							<li>
+								<div class="bg"></div>
+								<div class="pic"><a href=""><img src="slider/13.jpg" /></a></div>
+								<div class="title"><a href=""></a></div>
+							</li>
+							<li>
+								<div class="bg"></div>
+								<div class="pic"><a href=""><img src="slider/14.jpg" /></a></div>
+								<div class="title"><a href=""></a></div>
+							</li>
+							<li>
+								<div class="bg"></div>
+								<div class="pic"><a href=""><img src="slider/15.jpg" /></a></div>
+								<div class="title"><a href=""></a></div>
+							</li>
+							<li>
+								<div class="bg"></div>
+								<div class="pic"><a href=""><img src="slider/16.jpg" /></a></div>
+								<div class="title"><a href=""></a></div>
+							</li>
+							<li>
+								<div class="bg"></div>
+								<div class="pic"><a href=""><img src="slider/17.jpg" /></a></div>
+								<div class="title"><a href=""></a></div>
+							</li>
+							<li>
+								<div class="bg"></div>
+								<div class="pic"><a href=""><img src="slider/18.jpg" /></a></div>
+								<div class="title"><a href=""></a></div>
+							</li>
+							
+						</ul>
+						
+					</div>
+			</div>
+		
+			<!-- superslide	 -->
+
+		</div>
+
+		<div id="media" class="media"> 
+			<div class="titleRow">
+				<div class="title_center"> 
+					<div class="tb">媒体报道 </div>
+					<div class="ts">正统网宣传推介活动</div>
+					<img src="img/circleBlue.png">
+				</div>
+				
+				<div class="line01">
+					<div class="line02"></div>
+				</div>
+
+			</div>	
+			<div >
+				<div class="mediaContent ">
+					<div class="row">
+						<div class="block clear">
+							<a href="http://www.fjess.gov.cn/tzgg/26628.jhtml" target="_blank">
+							<div class="innerBlock">
+								<div class="mediaTitle text-blue"><img src="img/squareBlue.png">正统网亮相9·8投洽会　成功举办宣传推介活动</div>
+								<div class="mediaText">
+									
+								<p class="text01">9月8日，第十九届中国国际投资贸易洽谈会(简称投洽会)在厦门盛大开幕，福建省统计局携“正统网”项目首次参加。
+								<a class="tBtn" href="http://www.fjess.gov.cn/tzgg/26628.jhtml" target="_blank">【详细】 </a>
+								</p>
+								
+								</div>
+
+							</div>
+							</a>
+						</div>
+						<div class="block clear">
+							<a href="http://media.fjtv.net/folder844/2016-09-08/794262.html" target="_blank">
+							<div class="innerBlock">
+								<div class="mediaTitle text-blue"><img src="img/squareBlue.png">首个官方电商导购平台“正统网”亮相(视频报道)
+								</div>
+								<div class="mediaText">
+									
+								<p class="text01">9•8投洽会期间，福建省统计局推出的首个官方电商导购平台“正统网”正式亮相，“正统商城”吸引了闽台两岸企业积极入驻。
+								<a class="tBtn" href="http://media.fjtv.net/folder844/2016-09-08/794262.html" target="_blank">【详细】 </a>
+								</p>
+								
+								</div>
+							</div>
+							</a>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="block clear">
+							<a href="http://difang.gmw.cn/newspaper/2016-09/09/content_116057195.htm" target="_blank">
+							<div class="innerBlock ">
+								
+								<div class="mediaTitle text-blue"><img src="img/squareBlue.png">省统计局推“正统网” 为电商提供信用背书</div>
+								<div class="mediaText">
+									
+								<p class="text01">本报讯（记者王颖达）昨天上午的展会上，福建省统计局携“正统网”项目首次参加，并对外演示“正统商城”。
+
+								<a class="tBtn" href="http://difang.gmw.cn/newspaper/2016-09/09/content_116057195.htm " target="_blank">【详细】 </a>	
+								
+								</p>
+		
+								</div>
+							</div>
+							</a>
+						</div>
+						<div class="block clear">
+							<a href="http://www.xmnn.cn/dzbk/xmrb/20160909/201609/t20160909_4994185.htm" target="_blank">
+							<div class="innerBlock">
+								<div class="mediaTitle text-blue"><img src="img/squareBlue.png">全国首个互联网经济统计公共服务平台“正统网”亮相投洽会</div>
+								<div class="mediaText">
+									
+								<p class="text01">本报讯 （记者 林雯）福建省统计局的“正统网”项目昨首次亮相第十九届中国国际投资贸易洽谈会。
+    记者获悉...
+								<a class="tBtn" href="http://www.xmnn.cn/dzbk/xmrb/20160909/201609/t20160909_4994185.htm" target="_blank">【详细】 </a>
+								</p>
+								
+								</div>
+							</div>
+							</a>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="block clear">
+							<a href="http://www.huaxunwang.com.cn/mskx/bwyc/2016-09-09/252197.html?from=singlemessage&isappinstalled=0" target="_blank">
+							<div class="innerBlock">
+								<div class="mediaTitle text-blue"><img src="img/squareBlue.png">“正统网”成功亮相厦门9.8国际投洽会
+								</div>
+								<div class="mediaText">
+									
+								<p class="text01">华讯网（弓少星/文图）2016年9月8日上午，第十九届中国国际投资贸易洽谈会(以下简称投洽会)在厦门开幕...
+								<a class="tBtn" href="http://www.huaxunwang.com.cn/mskx/bwyc/2016-09-09/252197.html?from=singlemessage&isappinstalled=0" target="_blank">【详细】 </a>
+								</p>
+								
+								</div>
+							</div>
+							</a>
+						</div>
+						<div class="block clear">
+							<a href="http://fj.china.com.cn/p/27161?page=1" target="_blank">
+							<div class="innerBlock">
+								<div class="mediaTitle text-blue"><img src="img/squareBlue.png">“正统商城”首次亮相9.8投洽会 官方电商导购平台</div>
+								<div class="mediaText">
+									
+								<p class="text01">
+								中国网9月8日讯（记者 李永贵）9月8日，第十九届中国国际投资贸易洽谈会(简称投洽会)在厦门开幕...
+								<a class="tBtn" href="http://fj.china.com.cn/p/27161?page=1" target="_blank">【详细】 </a>
+								</p>
+								
+								</div>
+							</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div  id="progress" class="progress"> 
+			<div class="titleRow">
+				<div class="title_center"> 
+					<div class="tb">发展历程 </div>
+					<div class="ts">正统网宣传推介活动</div>
+					<img src="img/circleBlue.png">
+				</div>
+				
+				<div class="line01">
+					<div class="line02"></div>
+				</div>
+			</div>	
+			<div class="progressBox">
+			<div class="progressContent">
+				<img src="img/banner_02.jpg"/>
+			</div>
+			</div>
+		</div>
+		<div id="video" class="video"> 
+			<div class="titleRow">
+				<div class="title_center"> 
+					<div class="tb">正统网宣传片</div>
+					<div class="ts">正统网宣传推介活动</div>
+					<img src="img/circleBlue.png">
+				</div>
+				
+				<div class="line01">
+					<div class="line02"></div>
+				</div>
+			</div>
+			 <div class="videoContent">
+
+			 	<embed src="img/player.swf" allowfullscreen="true" flashvars="controlbar=over&amp;image=img/firstPage.png&amp;file=movie05.mp4" width="980" height="552" align="center" >	
+				<!-- <video src="img/movie.mp4" width="980" height="552" autoplay="autoplay" style="width:100%;" controls="controls" preload="preload"></video> -->
+			 
+			<!-- <video id="example_video_1" class="video-js vjs-default-skin" controls preload="none" width="980" height="264"
+      poster="http://video-js.zencoder.com/oceans-clip.png"
+      data-setup="{}">
+    <source src="img/movie02.mp4" type='video/mp4' />
+    <source src="http://vjs.zencdn.net/v/oceans.webm" type='video/webm' />
+    <source src="http://vjs.zencdn.net/v/oceans.ogv" type='video/ogg' />
+    <track kind="captions" src="demo.captions.vtt" srclang="en" label="English"></track>
+    <track kind="subtitles" src="demo.captions.vtt" srclang="en" label="English"></track>
+</video> -->
+			</div>	
+		</div>
+		<div class="footer">
+			<div class="titleRow"></div>
+			<div class="footerContent"><img src="img/footerContent.png"></div>
+		</div>
+	</div>
+</body>
+</html>

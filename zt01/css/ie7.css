@@ -1,0 +1,31 @@
+.mediaContent .mediaText .text01 {color: #373737;}
+
+a{text-decoration: none;cursor: pointer;}
+a:link {color: inherit}		/* 未访问的链接 */
+a:visited {color: inherit}	/* 已访问的链接 */
+a:hover {color: inherit}	/* 鼠标移动到链接上 */
+a:active {color: inherit}
+
+
+.row{margin-right: 0;margin-left: 0;}
+
+.foreword .fMiddle .fLeft{
+	background:none;
+	background:url(../img/fLeft02.png) no-repeat!important;
+}
+.foreword .fMiddle .fLeft .w01{display: none;}
+
+.speakContent .block{width:568px;height:185px;}
+.speakContent .block .innerBlock{height:185px;}
+.speakContent .block .innerBlock .innerBlock01{height:185px;}
+.mediaContent .block{width:568px;height:153px;}
+.mediaContent .block .innerBlock{height:153px;}
+
+.picBtnTop .hd ul li img{
+    height: 118px!important;
+}
+
+.floatWindow a.backTop {
+    background: url(../img/bTop.png) no-repeat;
+}
+
