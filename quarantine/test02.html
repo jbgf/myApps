@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+  <title></title>
+  
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" type="text/css" href="css/ie8.css">
+    
+  <![endif]-->  
+  <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+ 
+  <script type="text/javascript">
+     $(function(){
+          var checkAll = $("#checkAll") ;
+          var checkBoxs = $("input[name=item]");
+          checkAll.click(function(){ 
+            
+              checkBoxs.prop('checked', this.checked)
+            });
+          
+          checkBoxs.click(function(){
+              var flag = true;
+              checkBoxs.each(function(){
+                  if(!this.checked){
+                    flag = false;
+                  }
+              })
+              checkAll.prop("checked",flag)
+          })
+     })
+     
+  </script>
+  
+</head>
+  <body>
+  <form>
+    <label for="checkAll">全选</label><input type="checkbox" id="checkAll" name="" value="">
+     <br/>
+    <input type="checkbox" name="item">
+    <input type="checkbox" name="item">
+    <input type="checkbox" name="item">
+    <input type="checkbox" name="item">
+    <input type="checkbox" name="item">
+    <input type="checkbox" name="item">
+
+  </form>
+
+  </body>
+  </html>
