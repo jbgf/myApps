@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <title></title>
+  
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/base.css">
+  <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+  <link rel="stylesheet" type="text/css" href="css/iconfont.css">
+  <link rel="stylesheet" type="text/css" href="css/m-index.css">
+  <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" src="js/swiper.min.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+  <script type="text/javascript" src="js/affixBeta.js"></script>
+  <script type="text/javascript">
+      var _htmlFontSize = (function(){
+          var clientWidth = document.documentElement ? document.documentElement.clientWidth : document.  body.clientWidth;
+              if(clientWidth > 640) clientWidth = 640;
+              document.documentElement.style.fontSize = clientWidth * 1/23/*16*/+"px";
+              return clientWidth * 1/23;
+      })();
+  </script>
+</head>
+  <body>
+
+  <div class="topWrapper">
+      <!-- logoRow begin -->
+      <div class="m-logoRow container">
+             <img src="img/logo.png">  
+      </div>
+      <!-- logoRow end -->   
+      <!-- slider begin -->
+      <div class="m-slideBox01">
+             <!-- swiper -->    
+                  <div id="webBannerBox" class="webBannerBox  ">
+                    <div id="swiper-container01" class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="img/banner01.png"></div>
+                            <div class="swiper-slide"><img src="img/banner01.png"></div>
+                            <div class="swiper-slide"><img src="img/banner01.png"></div>
+                        </div>
+                        <!-- 如果需要分页器 -->
+                        <div id="swiper-pagination01" class="swiper-pagination"></div>
+                    </div>
+                  </div>
+             <!-- swiper END-->
+      </div>
+      
+      <!-- slider end -->
+
+  </div>
+  <!-- topWrapper END -->
+
+  <!-- middleWrapper start -->
+  <div class="middleWrapper">
+     
+<!-- floatwindow start
+        <div class="affix_p affix-top" data-spy="affix" data-offset-top="510" data-offset-bottom="550">
+          <div class="myScrollspyWrapper" >
+            <div id="myScrollspy">
+                    <div class="catalog-scroller">
+                       
+                        <dl class="nav" id="myNav">
+                            <dt><a href="#contact"><img src="img/tel.png">联系我们</a></dt>
+                            <dt><a href="http://wpa.qq.com/msgrd?v=3&uin=138000000&site=qq&menu=yes"><img src="img/qq.png">在线咨询</a></dt>
+                            <dt><a href="#section-3"><img src="img/qr01.png">扫一扫关注</a></dt>
+                            <dt><a class="top" href="#top"><img src="img/upArrow.png">TOP</a></dt>
+                        </dl>
+                        
+                    </div>
+            </div>
+          </div>
+        </div>
+ floatwindow end-->
+
+      <!-- /*m-slideBox01 start*/ -->
+      <div class="m-iconLink01 container">
+          <div class="row">
+              <div class="col-xs-4 link-zone">
+                  <a class="link-wrapper">
+                    <div class="Linkpic">
+                        <img class="img-center" src="img/icon01.png">
+                    </div>
+                    <div class="LinkText">关于我们</div>
+                  </a>
+              </div>
+              <div class="col-xs-4 link-zone">
+                  <a class="link-wrapper">
+                    <div class="Linkpic">
+                        <img class="img-center" src="img/icon02.png">
+                    </div>
+                    <div class="LinkText">产品检测范围</div>
+                  </a>
+              </div>
+              <div class="col-xs-4 link-zone">
+                  <a class="link-wrapper">
+                    <div class="Linkpic">
+                        <img class="img-center" src="img/icon03.png">
+                    </div>
+                    <div class="LinkText">服务支持</div>
+                  </a>
+              </div>
+          <!-- </div>
+          <div class="row"> -->
+              <div class="col-xs-4  link-zone">
+                  <a class="link-wrapper">
+                    <div class="Linkpic">
+                        <img class="img-center" src="img/icon04.png">
+                    </div>
+                    <div class="LinkText">资讯中心</div>
+                  </a>
+              </div>
+              <div class="col-xs-4  link-zone">
+                  <a class="link-wrapper">
+                    <div class="Linkpic">
+                        <img class="img-center" src="img/icon05.png">
+                    </div>
+                    <div class="LinkText">信息公开</div>
+                  </a>
+              </div>
+              <div class="col-xs-4 link-zone">
+                  <a class="link-wrapper">
+                    <div class="Linkpic">
+                        <img class="img-center" src="img/icon06.png">
+                    </div>
+                    <div class="LinkText">联系我们</div>
+                  </a>
+              </div>
+          </div>
+          
+      </div>
+      <!-- /*m-slideBox01 end*/ -->
+      
+      <!-- m-news01 start -->
+      <div class="m-news01">
+          <!-- swiper group start-->    
+                  <div class="swiperGroup01 container" >
+                      <div class="row">
+                        <div id="swiper-container02" class="swiper-container float-l ">
+                                <div class="tabRow swiper-wrapper">
+                                    <div class="tab swiper-slide">新闻专题</div>
+                                    <div class="tab swiper-slide">行业观察</div>
+                                    <div class="tab swiper-slide">政策法规</div>
+                                    <div class="tab swiper-slide">政策法规02</div>
+                                </div>
+                        </div>
+                        <a class="moreLink gray"><i class="iconfont">&#xe60c;</i> </a>
+                      </div>
+                      <div class="row">
+                        <div id="swiper-container03" class="swiper-container ">
+                            <div class="swiper-wrapper ">
+                                <div class="swiper-slide content-p">
+                                    <div class="newsPic">
+                                        <img src="img/newsPic.png">
+                                        <p class="newsPic_t">中国海运服务业服务贸易长期处于逆差状态</p>
+                                    </div>
+
+                                    <div class="news-list01">
+                                        <ul>
+                                            <li><a>
+                                            <span class="margin-t-2 float-r gray"><i class="iconfont">&#xe60c;</i></span>  
+                                            <span class="list-text ellipsis">中国海运服务业服务贸易长期处于逆差状态易长期处于逆差状态易长期处于逆差状态</span>   
+                                            
+                                            </a></li>
+                                            <li><a>
+                                            <span class="float-r gray"><i class="iconfont">&#xe60c;</i></span>  
+                                            <span class="list-text ellipsis">中国海运服务业服务贸易长期处于逆差状态</span>   
+                                            
+                                            </a></li>
+                                            <li><a>
+                                            <span class="float-r gray"><i class="iconfont">&#xe60c;</i></span>  
+                                            <span class="list-text ellipsis">中国海运服务业服务贸易长期处于逆差状态</span>   
+                                            
+                                            </a></li>
+                                            
+                                        </ul>  
+                                    </div>
+                                  
+                                </div>
+                                <div class="swiper-slide content-p">
+                                    <div class="newsPic">
+                                        <img src="img/newsPic.png">
+                                        <p class="newsPic_t">中国海运服务业服务贸易长期处于逆差状态</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide content-p">
+                                    <div class="newsPic">
+                                        <img src="img/newsPic.png">
+                                        <p class="newsPic_t">中国海运服务业服务贸易长期处于逆差状态</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide content-p">
+                                    <div class="newsPic">
+                                        <img src="img/newsPic.png">
+                                        <p class="newsPic_t">中国海运服务业服务贸易长期处于逆差状态</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                  </div>
+          <!-- swiper group END-->
+
+
+             <style type="text/css">
+                
+             </style>
+      </div>
+      <!-- m-news01 end -->
+
+  </div>
+   <!-- middleWrapper end -->
+   <!-- footer start -->
+   <div class="footer">
+      
+   </div>
+   <!-- footer end -->
+</body>
+</html>
+

@@ -177,6 +177,20 @@
  	   position: relative;
 	}
 /*content01*/
+.input-set { }.input-set-l {width:328px; height: 38px; }
+
+.input-set input { display: inline-block; float: left; height: 100%; font-size: 16px; font-weight: 500; }
+.input-set input.input {
+    box-sizing:border-box; width: 80%; padding-left: 2%;border:1px solid #f6f6f6;
+    border-right: none;
+    background-color: #fff;
+}
+
+.input-set input.button { width: 20%; 
+    background-image: url(../img/search-icon.jpg);background-repeat:  no-repeat;
+    background-color: #f6f6f6;
+}
+
 .r-sider01{width:328px;}
 .r-sider01 .floor{width:100%;display: block;padding:19px 0;}
 .r-sider01 .floor:not(.bg-green){background:#f6f6f6;}
