@@ -14,7 +14,7 @@
   <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
   <script type="text/javascript" src="js/swiper.min.js"></script>
   <script type="text/javascript" src="js/index.js"></script>
-  <script type="text/javascript" src="js/affixBeta.js"></script>
+  <script type="text/javascript" src="js/affix-m-01.js"></script>
   <script type="text/javascript">
       var _htmlFontSize = (function(){
           var clientWidth = document.documentElement ? document.documentElement.clientWidth : document.  body.clientWidth;
@@ -56,25 +56,8 @@
 
   <!-- middleWrapper start -->
   <div class="middleWrapper">
-     
-<!-- floatwindow start
-        <div class="affix_p affix-top" data-spy="affix" data-offset-top="510" data-offset-bottom="550">
-          <div class="myScrollspyWrapper" >
-            <div id="myScrollspy">
-                    <div class="catalog-scroller">
-                       
-                        <dl class="nav" id="myNav">
-                            <dt><a href="#contact"><img src="img/tel.png">联系我们</a></dt>
-                            <dt><a href="http://wpa.qq.com/msgrd?v=3&uin=138000000&site=qq&menu=yes"><img src="img/qq.png">在线咨询</a></dt>
-                            <dt><a href="#section-3"><img src="img/qr01.png">扫一扫关注</a></dt>
-                            <dt><a class="top" href="#top"><img src="img/upArrow.png">TOP</a></dt>
-                        </dl>
-                        
-                    </div>
-            </div>
-          </div>
-        </div>
- floatwindow end-->
+
+
 
       <!-- /*m-slideBox01 start*/ -->
       <div class="m-iconLink01 container">
@@ -203,19 +186,135 @@
                       </div>
                   </div>
           <!-- swiper group END-->
+                  <div class="more-Row bg-light-gray02">查看更多</div>
 
-
-             <style type="text/css">
-                
-             </style>
       </div>
       <!-- m-news01 end -->
+      <!-- m-testRange01 start -->
+      <div class="m-testRange01 container ">
+          <div class="row">
+            
+            <a class="moreLink gray float-r"><i class="iconfont">&#xe60c;</i> </a>
+            <div class="tRange ">产品检测范围</div>  
+          </div>
+          <div class="row">
+            <div class="content-p">
+              <a class="typeRow clearfix">
+                <div class="typePic float-l"><img src="img/vege.png"></div>
+                <div class="typeName float-l middleTable">
+                  <div class="middleRow"> 
+                      <span class="typeNameText">食品类</span>
+                      <span class="button btn-num01 float-r mar-r-20">01</span>
+                  </div>
+                  
+                </div>
+              </a>
+              <a class="typeRow clearfix">
+                <div class="typePic float-l"><img src="img/vege.png"></div>
+                <div class="typeName float-l middleTable">
+                  <div class="middleRow"> 
+                      <span class="typeNameText">食品类</span>
+                      <span class="button btn-num01 float-r mar-r-20">01</span>
+                  </div>
+                  
+                </div>
+              </a>
+              <a class="typeRow clearfix">
+                <div class="typePic float-l"><img src="img/vege.png"></div>
+                <div class="typeName float-l middleTable">
+                  <div class="middleRow"> 
+                      <span class="typeNameText">食品类</span>
+                      <span class="button btn-num01 float-r mar-r-20">01</span>
+                  </div>
+                  
+                </div>
+              </a>
+            </div>
+          </div>
+      </div>
+      <!-- m-testRange01 end -->
 
   </div>
    <!-- middleWrapper end -->
+   
+   <!-- floatwindow start -->
+        <div class="affix_p_sideBar">
+          <div class="sideBarBtn blue"><i class="iconfont">&#xe601;</i></div>
+          <div class="siderBar01">
+                <ul class="">
+                    <li class="item"><a><i class="iconfont">&#xe605;</i>首页    </a></li>
+                    <li class="item"><a><i class="iconfont">&#xe609;</i>关于我们</a></li>
+                    <li class="item"><a class="on"><i class="iconfont">&#xe60b;</i>产品检测范围</a></li>
+                    <li class="item"><a><i class="iconfont02">&#xe653;</i>服务支持 </a></li>
+                    <li class="item"><a><i class="iconfont">&#xe604;</i>资讯中心 </a></li>
+                    <li class="item"><a><i class="iconfont">&#xe606;</i>信息公开 </a></li>
+                </ul>
+          </div>
+        </div>
+        <script type="text/javascript">
+          $(".sideBarBtn").on("tap click",function(){
+              $(".affix_p_sideBar .siderBar01").toggleClass("on");
+          })
+
+        </script>
+  <style type="text/css">
+        .affix_p_sideBar .siderBar01{
+          position: fixed;left: 0;top: 0;
+          background:#f7fbff;  
+          height: 60%;
+          z-index: 99;  
+          width: 0;
+          visibility: hidden;
+          transition: all .1s;
+          opacity: 0;
+        }  
+          
+        .affix_p_sideBar .siderBar01.on{width: 45%;visibility: visible;opacity: 1;}
+        .affix_p_sideBar .siderBar01 .item{}
+        .affix_p_sideBar .siderBar01 .item a{display: block;width: 100%;padding:.5rem 0 .5rem 1rem;}
+        .affix_p_sideBar .siderBar01 .item a.on{border-left: 3px solid #005bac;background-color: #cdddee}
+        .affix_p_sideBar .siderBar01 .item a i{margin-right: .5rem}
+        .affix_p_sideBar{position: relative;}
+        .affix_p_sideBar.affix,.affix_p_sideBar.affix-top{
+          position: fixed;
+          bottom:3.5rem;
+          width: 100%;  
+          z-index: 99;
+          padding: .5rem 0 0 1rem;
+        }
+        .affix_p_sideBar.affix-top .siderBar01{top:56px; }
+        .affix_p_sideBar .sideBarBtn .iconfont{
+          font-size: 1.8rem;position:absolute;left: 1rem;bottom:0;
+        }
+  </style>
+  
+ <!-- floatwindow end -->
+
    <!-- footer start -->
-   <div class="footer">
+   
+   <div class="footer padding-t-65" >
+      <div class="affix_p_bottom">
+            <div class="bottomBar bg-blue white clearfix" >
+                <a class="bb_btn bg-blue" href="" style="border-right:1px solid #4c8dc5">
+                <i class="iconfont icon-sousuo"></i>
+                报告查询
+                </a>
+                <a class="bb_btn bg-blue" href="" >
+                <i class="iconfont icon-dianhua"></i>
+                联系我们
+
+                </a>
+            </div>
+      </div>
       
+      <div class="f_content bg-blue">
+          <div class="b_logo">
+            <img src="img/b_logo.png">      
+          </div>
+          <p class="white tech_surport">技术支持：润商网络</p>
+      </div>
+      
+     
    </div>
    <!-- footer end -->
 </body>

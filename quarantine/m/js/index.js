@@ -1,4 +1,6 @@
 $(function(){
+	
+
 	//banner swiper轮播
 	var mySwiper = new Swiper ('#swiper-container01', {
 	    autoplay:5000,
@@ -6,6 +8,7 @@ $(function(){
 	    pagination: '#swiper-pagination01'
 
 	}) 
+
 
 
 	//news tab切换
@@ -23,4 +26,22 @@ $(function(){
 	mySwiper02.params.control = mySwiper03;  /*双向控制*/
 	mySwiper03.params.control = mySwiper02;
 	
+	//bottomBar 
+	
+    $(".affix_p_bottom").Affix({
+        offset:{
+            bottom: $('.footer').innerHeight()
+        }
+    })
+    
+    $(window).load(function(){
+    	$(".affix_p_sideBar").Affix({
+	        offset:{
+	        	top:$(".m-logoRow").height(),	
+	            bottom: $('.footer').innerHeight()
+	        }
+	    })
+    })
+    	
+    
 })

@@ -51,7 +51,7 @@ margin-top: 100%; /* margin 百分比相对父元素宽度计算 */
   margin-right: 9px;
 }
 .swiperGroup01 #swiper-container03{
-  padding: 1rem 0;
+  padding: 1rem 0 0 0;
 }
 .swiperGroup01 #swiper-container03 .newsPic{position: relative;}
 .swiperGroup01 #swiper-container03 .newsPic .newsPic_t{
@@ -86,3 +86,67 @@ margin-top: 100%; /* margin 百分比相对父元素宽度计算 */
 	width: 90%;
 }
 /*.news-list01 end*/
+
+ .more-Row{text-align: center;padding:.4rem 0;}
+
+
+/*m-testRange01 start*/
+.middleTable{display: table;}
+.middleTable .middleRow{display: table-cell;vertical-align: middle;}
+.mar-r-20{margin-right: 20px;}
+.mar-center { margin: 0px auto; }
+.btn-num01 { width: 30px; height: 30px; line-height: 30px; text-align: center; border-radius: 50%; font-size: 12px; 
+  background-color: #fff; color: #c8c8c8; 
+  display: inline-block; 
+}
+.m-testRange01 .typeRow{
+  margin-top: 1rem;
+  position: relative;
+  height: 7rem; 
+  display: block;
+}
+.m-testRange01 .typeRow .typePic {width: 40%;height: 100%;}
+.m-testRange01 .typeRow .typePic img{height: 100%;width: 100%;}
+.m-testRange01 .typeRow .typeName{
+    width: 60%;
+    text-align: center;
+    background-color: #eaf7ff;
+    height: 100%;
+}
+.m-testRange01 .typeRow .typeName .typeNameText{padding-left: -1rem;}
+.m-testRange01 .tRange {
+    display: inline-block;
+    color: #005bac;
+    border-bottom: 2px solid #005bac;
+    text-align: center;
+    padding:6px .7rem;
+}
+/*m-testRange01 end*/
+
+/*footer start*/
+.f_content{padding:1.5rem 0;}
+.f_content .tech_surport{font-size: .8rem;text-align: center;/*padding:.7rem 0 0 0;*/}
+.b_logo{
+  padding:0 0 1.5rem 0 ;
+  width: 57%;
+  margin: 0 auto;
+}
+
+/*footer end*/
+
+/*bottomBar start*/
+.affix_p_bottom{position: relative;min-height: 1px;z-index: 99;}
+.affix_p_bottom.affix{
+  position: fixed;
+  bottom:0;
+  width: 100%;  
+}
+.affix_p_bottom .bottomBar{position: absolute;left: 0;right: 0;bottom: 0;}
+
+.bottomBar{z-index: 99;width: 100%;text-align: center;border-bottom:1px solid #4c8dc5}
+.bottomBar .bb_btn{width: 50%;float: left;height: 3rem;line-height: 3rem;}
+.bb_btn .iconfont{font-size: 1rem;margin-right: .4rem;}
+.bb_btn .icon-sousuo{font-size: 1.3rem;}
+.bb_btn .icon-dianhua{font-size: 1.6rem}
+/*bottomBar end*/
+
