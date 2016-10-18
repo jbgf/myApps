@@ -9,8 +9,6 @@ $(function(){
 
 	}) 
 
-
-
 	//news tab切换
 	var mySwiper02 = new Swiper ('#swiper-container02', {
 	    /*autoplay:5000,*/
@@ -26,6 +24,11 @@ $(function(){
 	mySwiper02.params.control = mySwiper03;  /*双向控制*/
 	mySwiper03.params.control = mySwiper02;
 	
+	/*sideBar*/
+	$(".sideBarBtn").on("tap click",function(){
+              $(".affix_p_sideBar .siderBar01").toggleClass("on");
+    })
+
 	//bottomBar 
 	
     $(".affix_p_bottom").Affix({
