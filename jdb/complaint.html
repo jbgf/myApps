@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/other.css">
+    <link rel="stylesheet" type="text/css" href="css/easyui.css">
+    <link rel="stylesheet" type="text/css" href="css/icon.css">
+    <link rel="stylesheet" type="text/css" href="http://lib.sinaapp.com/js/bootstrap/3.0.0/css/bootstrap.min.css">
+    <script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="js/easyui-lang-zh_CN.js"></script>
+    <style type="text/css">
+        .o-details .row{
+            border-bottom: 1px solid #ddd !important;
+            padding:10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="mainbox">
+            <div class="toolbar">
+                <a onclick="tousu()" href="javascript:void(0)"><span><em class="iconcomplian">投诉</em></span></a><a href="javascript:void(0)"><span><em onclick="DeleteComplain()" class="icondelete">删除</em></span></a>
+                <div class="searchbox" id="searchbox">
+                    <dl>
+                        <dt>搜索：</dt>
+                        <dd>
+                            <input type="text" style="margin-right: 3px;" value="" id="keyword" name="keyword">
+                            <a href="javascript:void(0)">
+                                <input type="button" value="查询" onclick="search()" id="btnsearch"></a>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            <!-- 投诉框开始 -->
+                <div id="complaint" class="panel window" style="display: none; width: 588px; left: 420px; top: 159.5px; z-index: 9005; position: absolute;">
+                    <div class="panel-header panel-header-noborder window-header" style="width: 588px;">
+                        <div class="panel-title" style="">投诉信息填写</div>
+                        <div class="panel-tool"><a href="javascript:void(0)" class="panel-tool-close"></a>
+                        </div>
+                    </div>
+
+                <div id="boxA" style="overflow: hidden; width: 586px; height: 384px;" title="" class="panel-body panel-body-noborder window-body"><div class="panel" style="width: 586px;"><div style="width: 586px; height: 384px;" title="" class="panel-body panel-body-noheader panel-body-noborder dialog-content">
+                <div class="boxAcont">
+                    <form id="formAdd" method="post" action="quality_list.aspx">
+                    
+                    <div style="z-index: -1" id="addcomplain" class="boxB addcomplain">
+                        
+                        <dl>
+                            <dt>投诉主题：</dt><dd><input type="text" class="easyui-validatebox validatebox-text " data-options="required:true,validType:'length[2,150]'" name="title" id="title" style="border: 1px solid rgb(174, 174, 174);"><i>*</i></dd></dl>
+                        <dl>
+                            <dt>投诉单号：</dt><dd><input type="text" class="easyui-validatebox validatebox-text " data-options="required:true,validType:'length[2,150]'" name="orderno" id="orderno" style="border: 1px solid rgb(174, 174, 174);"><i>*</i></dd></dl>
+                                <dl>
+                            <dt>照片：</dt><dd><input type="text" style="width: 160px; border: 1px solid rgb(174, 174, 174);" id="txtPic">
+                            <input type="file" name="txtHidPic" id="file0" style="display:none;">
+                             <a id="btnUploadPcb" style="color:Blue;cursor:pointer;" >选择文件</a></dd></dl>
+                        <dl>
+                            <dt>投诉内容：</dt><dd><textarea class="easyui-validatebox validatebox-text " data-options="required:true,validType:'length[2,250]'" name="note" id="note"></textarea><i>*</i></dd></dl>
+                        <dl>
+                            <dt>&nbsp;</dt>
+                            <dd>
+                                <a class="btnhoverstyle" href="javascript:void(0)">
+                                    <input type="button" onclick="SaveComplain()" value="提交" id="btn1"></a> <a class="btnhoverstyle" href="javascript:void(0)">
+                                        <input type="reset" value="重置" id="btn2"></a>
+                            </dd>
+                        </dl>
+                    </div>
+                    </form>
+                </div>
+            </div></div></div></div>
+            <!-- 投诉框结束 -->
+    </div>
+
+    <div  class="container table o-details"  style="margin-top: 20px;">
+                <div class="row">
+                    <b>处理状态：</b>{loop $options.c_status $c}{if $list['c_status'] == $c[1]}{$c[0]}{/if}{/loop}
+                </div>
+                <div class="row">
+                    <b>处理结果：</b>{loop $options.result $c}{if $list['c_status'] == $c[1]}{$c[0]}{/if}{/loop}
+                </div>
+                <div class="row">
+                    <b>投诉时间：</b>{dr_date($list.inputtime, NULL, 'red')}
+                </div>
+                <div class="row">
+                    <b>投诉单号：</b>{$list.c_oid}
+                </div>
+                <div class="row">
+                    <b>投诉主题：</b>{$list.title}
+                </div>
+                <div class="row">
+                    <b>投诉内容：</b>{$list.c_content}{$list.c_content}{$list.c_content}{$list.c_content}{$list.c_content}{$list.c_content}{$list.c_content}{$list.c_content}{$list.c_content}{$list.c_content}{$list.c_content}{$list.c_content}{$list.c_content}{$list.c_content}{$list.c_content}{$list.c_content}{$list.c_content}{$list.c_content}{$list.c_content}{$list.c_content}{$list.c_content}{$list.c_content}{$list.c_content}{$list.c_content}{$list.c_content}{$list.c_content}{$list.c_content}
+                </div>
+                <div class="row">
+                    <b>照片：</b><img style="vertical-align:top;max-width:80%" src="images/01.jpg" alt="" >
+                </div>
+            
+    </div>
+
+
+    
+        <script type="text/javascript">
+        $(function(){
+            UpPic();
+        })
+        //文本框获得焦点时边框变色
+        var allinput = document.getElementById("addcomplain").getElementsByTagName("input");
+        for (var i = 0; i < allinput.length - 2; i++) {
+            allinput[i].onfocus = function() {
+                this.style.border = "1px solid #A0DB45";
+
+            }
+            allinput[i].onblur = function() {
+                this.style.border = "1px solid #AEAEAE";
+            }
+        };
+
+        $(document).on("click",".panel-tool-close",function(){
+            $("#complaint").hide();
+        })
+
+        function tousu() {
+
+            $("#boxA").show();
+            $('#boxA').dialog({
+                title: '投诉信息填写',
+                width: 600,
+                height: 420,
+                closed: false,
+                modal: true
+            });
+        }
+        function ShowInfo(id) {
+            return id;
+        };
+        function UpPic() {
+            $('#btnUploadPcb').on("click",function(){$("#file0").click()});
+            $("#file0").change(function(){
+                objUrl = getObjectURL(this.files[0]);
+                $('#txtPic').val(this.files[0].name)
+            });
+
+            function getObjectURL(file) {
+                var url = null ; 
+                if (window.createObjectURL!=undefined) { // basic
+                    url = window.createObjectURL(file) ;
+                } else if (window.URL!=undefined) { // mozilla(firefox)
+                    url = window.URL.createObjectURL(file) ;
+                } else if (window.webkitURL!=undefined) { // webkit or chrome
+                    url = window.webkitURL.createObjectURL(file) ;
+                }
+                return url ;
+            }
+        };
+        
+    
+        
+    </script>
+</body>
+</html>
