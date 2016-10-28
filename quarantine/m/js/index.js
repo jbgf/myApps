@@ -8,7 +8,7 @@ $(function(){
 	}) 
 
 	//首页news tab切换
-	tab("#swiper-container02",3,"#swiper-container03");
+	tab_index("#swiper-container02",3,"#swiper-container03");
 	
 	//center tab切换
 	var numPerView = $("#swiper-container04").find(".tab").length;
@@ -85,4 +85,24 @@ function tab(tab,perView,slider){
 			mySwiper02.params.control = mySwiper03;  /*双向控制*/
 			mySwiper03.params.control = mySwiper02;
 	    }
+}
+
+function tab_index(tab,perView,slider){
+		if($(tab).length == 0)return;
+    	var mySwiper02 = new Swiper (tab, {
+		    /*autoplay:5000,*/
+		    loop: true,
+		    slidesPerView:perView,
+		    slideToClickedSlide:true,
+		})
+		
+		var num01 = $(slider).find(".swiper-slide").length;
+
+		var mySwiper03 = new Swiper (slider, {
+		    loop: true,
+		    slidesPerView:1,
+		    loopAdditionalSlides:(mySwiper02.slides.length-num01)/2-1   //复制后的slide数量要一样
+		})
+		mySwiper02.params.control = mySwiper03;  /*双向控制*/
+		mySwiper03.params.control = mySwiper02;
 }

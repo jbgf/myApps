@@ -9,8 +9,8 @@ img{max-height:100%;max-width:100%;*height:100%;*width:100%;margin:auto;}
 body{
 	font-family: 'Microsoft YaHei',"Helvetica Neue", Helvetica, 'Hiragino Sans GB',  'WenQuanYi Micro Hei', Arial,sans-serif;
 	overflow-x: hidden;
-    color: #4b4b4b;
-    }
+  color: #4b4b4b;
+}
 input{border:none;}
 .text-color{color:#868686;}
 
