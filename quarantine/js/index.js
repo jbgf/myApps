@@ -80,8 +80,6 @@ $(function(){
                 var textBody = $(this).parents(".r-row").find(".text-body");
                 textBody.toggle();
               }
-
-              
            })
            /*测试范围详情*/
            $(".riRow").click(function(){

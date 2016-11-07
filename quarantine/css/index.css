@@ -33,7 +33,6 @@
     position: absolute;
     z-index: 99;
     top: 48px;
-
     padding-top: 10px;
 	
 }
@@ -348,6 +347,17 @@
 }
 .header .more{color:#888;}
 
+
+.rangePic .bd li {
+    width: 160px;
+    float: left;
+}
+.rangePic .rp-img {
+    width: 145px;
+    display: block;
+    margin: 0 auto;
+    float: none;
+}
 .range .rangePic .rp-img{width: 145px;display: block;}
 .range .rangePic .rp-img img{width:100%;display: block;}
 .range .rangePic .rp-img .rp-bg{

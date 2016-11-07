@@ -1,45 +1,32 @@
-.scrollSpyBox{
+.scrollSpyBox {
     position: relative;
 }
-#myScrollspy{
-    
+#myScrollspy {
     font-family: 宋体;
     font-size: 14px;
-    
     line-height: 19px;
     position: absolute;
     top: 28px;
     right: -115px;
     width: 85px;
 }
-
-
-.catalog-scroller{
-    
+.catalog-scroller {
     width: 100%;
-   
     overflow: hidden;
-    
     position: absolute;
     top: 0;
-    
     z-index: 1;
     border: 1px solid #dcdcdc;
-}  
-
-dl#myNav{
+}
+dl#myNav {
     height: auto;
     position: relative;
 }
-
 .nav > dt {
-
-   
     position: relative;
-   
 }
-
-.nav > dt > a ,.affixIcon{
+.nav > dt > a,
+.affixIcon {
     text-align: center;
     display: block;
     line-height: 19px;
@@ -52,39 +39,36 @@ dl#myNav{
     /* margin-left: 112px; */
     line-height: 35px;
 }
-.nav > dt > a{border-bottom: 1px solid #b8b8b8}
-.nav > dt > a.top{border-bottom: none;}
-.affixIcon img{margin-top: 5px;}
-
-.nav > dt.active > a{
-    
-    
+.nav > dt > a {
+    border-bottom: 1px solid #b8b8b8
+}
+.nav > dt > a.top {
+    border-bottom: none;
+}
+.affixIcon img {
+    margin-top: 5px;
+}
+.nav > dt.active > a {
     text-align: center;
-    font-size:10px;
+    font-size: 10px;
     font-weight: 500;
     white-space: normal;
-    
-
 }
-.nav > dt > a img{
+.nav > dt > a img {
     display: block;
-    margin:0 auto;
+    margin: 0 auto;
 }
-   
-.sider{
+.sider {
     position: absolute;
     top: 0;
     left: 0;
     width: 1px;
     height: 100%;
-   
-   
     border-bottom: 0;
     -moz-border-bottom-colors: none;
     -moz-border-left-colors: none;
     -moz-border-right-colors: none;
     -moz-border-top-colors: none;
-     
 }
 .arrow {
     left: 0px;
@@ -96,14 +80,14 @@ dl#myNav{
     font-size: 16px;
     text-align: center;
     padding-right: 10px;
-    text-transform:uppercase;
+    text-transform: uppercase;
     font-weight: 700;
     width: 104px;
     cursor: pointer;
-    background:url(../images/rightArrow.png);
-
+    background: url(../images/rightArrow.png);
 }
-.sider .start,.sider .end{
+.sider .start,
+.sider .end {
     background: transparent url("circle.png") no-repeat scroll 0 center;
     height: 10px;
     left: -5px;
@@ -112,11 +96,13 @@ dl#myNav{
     width: 10px;
     font-style: normal;
 }
-.sider .start{top:0;}
-.sider .end{
+.sider .start {
+    top: 0;
+}
+.sider .end {
     bottom: 0;
     margin: 0;
 }
-    
-
-    .content{margin-left: 30%;}
+.content {
+    margin-left: 30%;
+}

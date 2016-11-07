@@ -5003,7 +5003,7 @@ a.badge:focus {
 .nav-pills > li > a > .badge {
   margin-left: 3px;
 }
-.jumbotron {
+.jumbotron{
   padding-top: 30px;
   padding-bottom: 30px;
   margin-bottom: 30px;
@@ -5011,7 +5011,7 @@ a.badge:focus {
   background-color: #eee;
 }
 .jumbotron h1,
-.jumbotron .h1 {
+.jumbotron .h1{
   color: inherit;
 }
 .jumbotron p {
