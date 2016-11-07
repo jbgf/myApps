@@ -1,16 +1,19 @@
 @charset "utf-8";
 *{padding:0;margin:0;box-sizing: border-box;}
+
 body{background:#edf6fd;font-family:"微软雅黑", "宋体","simsun" ;}
 a{text-decoration: none;cursor: pointer;}
 a:link {color: inherit}		/* 未访问的链接 */
 a:visited {color: inherit}	/* 已访问的链接 */
 a:hover {color: inherit}	/* 鼠标移动到链接上 */
 a:active {color: inherit}
+
 p{line-height: 1.8;}
 .clear:before,.clear:after{content:" ";display:table;}
 .clear:after{clear:both;}
 
 .content{
+
 	font-size: 16px;
 	color:#373737;
 }
@@ -22,6 +25,7 @@ p{line-height: 1.8;}
 }
 .row{
 	margin:0 -16px;
+
 }
 .row:before,.row:after{content:" ";display:table;}
 .row:after{clear:both;}
@@ -54,10 +58,12 @@ p{line-height: 1.8;}
 	position: absolute;
 	left: -20px;
     top: 16px;
+
 	background:url(../img/fLeft.png) no-repeat;
 	width: 65px;
 	height: 137px;
 	text-align: center;
+
 }
 .foreword .fMiddle .fLeft .w01{
 	display: table-cell;
@@ -77,6 +83,7 @@ p{line-height: 1.8;}
 }
 .tBtn{
 	display: block;
+
     color: #0c8ae1!important;
     cursor: pointer;
     position: absolute;
@@ -88,17 +95,20 @@ p{line-height: 1.8;}
     text-align: right;
     height: 32px;
     line-height: 34px;
+
 }
 .text01{
 	text-indent: 30px;
 	text-align:justify;/*(火狐)*/
 	text-justify:inter-ideograph;/*(IE)*/
+
 	
 	position: relative;
 
 	line-height: 30px;
 	font-size: 16px;
 	margin-bottom: 8px;
+
 
 
 }
@@ -156,6 +166,7 @@ p{line-height: 1.8;}
 	background:#fff;
 	opacity: .8;
 }
+
 .speakContent .tBtn{
 	bottom:-5px;
 }
@@ -163,6 +174,7 @@ p{line-height: 1.8;}
 	height: 113px;
     overflow: hidden;
 }
+
 
 /*focus*/
 .focus .picBtnTop{
@@ -189,6 +201,7 @@ p{line-height: 1.8;}
 .video .videoContent{width:980px;margin:0 auto;}
 
 .footer{background:#fff;}
+
 .footer .footerContent img{width:100%;}
 
 /*floatWindow*/
@@ -211,3 +224,4 @@ p{line-height: 1.8;}
 	border-bottom: 1px solid #2d82bf;
 }
 .floatWindow a.backTop{background:url(../img/bTop.png)no-repeat;}
+
