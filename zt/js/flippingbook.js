@@ -104,8 +104,8 @@ FlippingBook.prototype.create = function(){
 		this.settings.firstPageNumber = location.hash.substr(1);
 	
 	this.addLoadEvent( this.onWindowLoad );
-
-	swfobject.embedSWF("FlippingBook.swf", this.containerId, this.stageWidth, this.stageHeight, "8.0.0", "js/expressInstall.swf", this.settings, {allowScriptAccess: "always", bgcolor:  "#" + this.settings.backgroundColor.toString( 16 ),height:"1080px;" });
+//swf资源
+	swfobject.embedSWF("js/FlippingBook.swf", this.containerId, this.stageWidth, this.stageHeight, "8.0.0", "js/expressInstall.swf", this.settings, {allowScriptAccess: "always", bgcolor:  "#" + this.settings.backgroundColor.toString( 16 ),height:"1080px;" });
 }
 
 FlippingBook.prototype.getFlippingBookReference = function() {
