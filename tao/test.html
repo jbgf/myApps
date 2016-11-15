@@ -27,7 +27,7 @@
         </form>
     <script type="text/javascript">
     	$(function(){
-    			accum("aBdedccc");
+    			/*accum("aBdedccc");*/
     			jQuery.validator.addMethod("isTel", function(value,element) {   
 			        var length = value.length;   
 			        var mobile = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/;   
@@ -55,7 +55,7 @@
 				      errorPlacement: function (label, element) {
 	                    $(element).tooltip('destroy'); /*必需*/
 	                    $(element).attr('title', $(label).text()).tooltip({
-	                    	placement:"right"
+	                    	placement:"top"
 	                    }); 
 	                  }
 				      

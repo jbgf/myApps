@@ -11,7 +11,7 @@
             $('#btnUploadPcb').on("click",function(){$("#file0").click()});
             $("#file0").change(function(){
                 objUrl = getObjectURL(this.files[0]);
-                $('#btnUploadPcb').val(this.files[0].name)
+                $('#btnUploadPcb').val(this.files[0].name);
             });
 
             function getObjectURL(file) {
@@ -29,7 +29,8 @@
         CheckExt:function(form){
 
             var isIE = /msie/i.test(navigator.userAgent) && !window.opera; 
-            var filemaxsize = 1024*2;
+            /*单位M*/
+            var filemaxsize = 20;
             var fileSize = 0;
             var fileName = $("#btnUploadPcb").val();
             var fileEle = document.getElementById("file0");
@@ -61,10 +62,10 @@
 
                 } 
 
-                var size = fileSize / 1024; 
+                var size = fileSize / (1024*1024); 
                 if(size>filemaxsize){ 
                     clearFile();
-                    alert("pcb文件最大限制为20M"+filemaxsize/1024+"M！"); 
+                    alert("pcb文件最大限制为"+filemaxsize+"M！"); 
                     
                     return false; 
                 }else{return true} 
