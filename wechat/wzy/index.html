@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+   
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- Mobile Devices Support @begin -->
+<meta name="referrer" content="always">
+<meta content="application/xhtml+xml;charset=UTF-8" http-equiv="Content-Type">
+<meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+<meta content="no-cache" http-equiv="pragma">
+<meta content="0" http-equiv="expires">
+<meta name="referrer" content="always">
+<meta content="telephone=no, address=no" name="format-detection">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes"> <!-- apple devices fullscreen -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>参与活动赢大奖</title>
+<link href="css/base.css" rel="stylesheet" type="text/css">
+<link href="css/wzytzs.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript">
+    var g_rem = 20;
+    (function(docElem,win){
+        var setFontSize = function(){
+            g_rem = (docElem.getBoundingClientRect().width || docElem.clientWidth || win.innerWidth)/16;
+            !g_rem && (g_rem = 20);
+            docElem.style.fontSize = g_rem + 'px';
+            document.getElementsByTagName('html')[0].style.fontSize = g_rem + 'px';
+        }
+        win.addEventListener("resize",setFontSize,false);
+        setFontSize();
+    })(document.documentElement,window);
+    
+    function loadGamePreAssets(){}
+</script>
+<script type="text/javascript" src="//res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</head>
+<body>
+    <div id="preloadPage" class="bg leftClose" ><!--  -->
+        
+        <div class="spinner">
+          <div class="spinner-container container1">
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+            <div class="circle4"></div>
+          </div>
+          <div class="spinner-container container2">
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+            <div class="circle4"></div>
+          </div>
+          <div class="spinner-container container3">
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+            <div class="circle4"></div>
+          </div>
+        </div>
+        
+        <div class="info"><span id="loadPercent">100</span>%</div>
+        <div id="userPreload" data-src="http://7020498.h40.faiusr.com/4/IW4yEeM4bjZ1cT4xM8Mi2zYlBzN0QDO.png"></div>
+    </div>
+    <div id="homeBgBox" style="">
+                <img id="homeBg" src="img/homeBg.png"> 
+    </div>
+</body>
+</html>
