@@ -252,28 +252,28 @@ img {
 }
 
 .gopng_3 {
-	background: url(/image/wzytzs/bigImage.png?v=201606271739) -4.15rem -0rem no-repeat;
+	background: url(../img/bigImage.png) -4.15rem -0rem no-repeat;
 	background-size: 7.5rem 10rem;
 	width: 2.3rem;
 	height: 2.85rem
 }
 
 .gopng_2 {
-	background: url(/image/wzytzs/bigImage.png?v=201606271739) -1.55rem -0rem no-repeat;
+	background: url(../img/bigImage.png) -1.55rem -0rem no-repeat;
 	background-size: 7.5rem 10rem;
 	width: 2.6rem;
 	height: 2.95rem
 }
 
 .gopng_1 {
-	background: url(/image/wzytzs/bigImage.png?v=201606271739) -0rem -0rem no-repeat;
+	background: url(../img/bigImage.png) -0rem -0rem no-repeat;
 	background-size: 7.5rem 10rem;
 	width: 1.55rem;
 	height: 3rem
 }
 
 .gopng_seal {
-	background: url(/image/wzytzs/bigImage.png?v=201606271739) -0rem -3rem no-repeat;
+	background: url(../img/bigImage.png) -0rem -3rem no-repeat;
 	background-size: 7.5rem 10rem;
 	width: 5.3rem;
 	height: 2.6rem;
@@ -283,7 +283,7 @@ img {
 }
 
 .gopng_readyBtn {
-	background: url(/image/wzytzs/bigImage.png?v=201606271739) -0rem -5.6rem no-repeat;
+	background: url(../img/bigImage.png) -0rem -5.6rem no-repeat;
 	background-size: 7.5rem 10rem;
 	width: 5.5rem;
 	height: 2.05rem;
@@ -292,7 +292,7 @@ img {
 }
 
 .gopng_readyTips {
-	background: url(/image/wzytzs/bigImage.png?v=201606271739) -0rem -7.65rem no-repeat;
+	background: url(../img/bigImage.png) -0rem -7.65rem no-repeat;
 	background-size: 7.5rem 10rem;
 	width: 7.4rem;
 	height: 1.75rem;
@@ -301,21 +301,21 @@ img {
 }
 
 .gopng_circle {
-	background: url(/image/wzytzs/bigImage.png?v=201606271739) -5.3rem -3rem no-repeat;
+	background: url(../img/bigImage.png) -5.3rem -3rem no-repeat;
 	background-size: 7.5rem 10rem;
 	width: 1.3rem;
 	height: 1.3rem
 }
 
 .gopng_error {
-	background: url(/image/wzytzs/bigImage.png?v=201606271739) -5.33rem -4.3rem no-repeat;
+	background: url(../img/bigImage.png) -5.33rem -4.3rem no-repeat;
 	background-size: 7.5rem 10rem;
 	width: 1.3rem;
 	height: 1.3rem
 }
 
 .gopng_right {
-	background: url(/image/wzytzs/bigImage.png?v=201606271739) -5.53rem -5.6rem no-repeat;
+	background: url(../img/bigImage.png) -5.53rem -5.6rem no-repeat;
 	background-size: 7.5rem 10rem;
 	width: 1.3rem;
 	height: 1.3rem

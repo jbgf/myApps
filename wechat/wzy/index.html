@@ -33,10 +33,10 @@
     function loadGamePreAssets(){}
 </script>
 <script type="text/javascript" src="//res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
-<script type="text/javascript" src="js/index.js"></script>
+
 </head>
 <body>
-    <div id="preloadPage" class="bg leftClose" ><!--  -->
+    <div id="preloadPage" class="bg " ><!-- leftClose -->
         
         <div class="spinner">
           <div class="spinner-container container1">
@@ -62,8 +62,189 @@
         <div class="info"><span id="loadPercent">100</span>%</div>
         <div id="userPreload" data-src="http://7020498.h40.faiusr.com/4/IW4yEeM4bjZ1cT4xM8Mi2zYlBzN0QDO.png"></div>
     </div>
-    <div id="homeBgBox" style="">
-                <img id="homeBg" src="img/homeBg.png"> 
+    <div id="pageMusic">
+            <audio preload="auto" src="music/bgmusic04H.mp3"></audio>
     </div>
+    <div class="home" >
+            <div id="homeBgBox" style="">
+                        <img id="homeBg" src="img/homeBg.png"> 
+            </div>
+            
+
+            <div class="gameInfoBox">
+                        <div class="titleImg imgContainer absCenter titleDown">
+                            <img id="titleImg" class="slaveImg abs" src="//hdg.faisys.com/image/wzytzs/title.png?v=201509051300">
+                        </div>
+            </div>
+            <div class="ruleImg imgContainer absCenter" _mousein="0" onclick="showRule();">
+                        <img id="ruleImg" class="slaveImg abs ruleImgAnimate" src="img/ruleImg_special.png" >
+            </div>
+            <div id="startBtn" class="startBtn imgContainer absCenter" >
+                        <img id="startBtnImg" class="slaveImg abs startTada" src="img/startBtn.png" >
+            </div>
+    </div>
+
+    <div class="gameBox hide gameBgBox">
+            <div id="gameBgBox">
+                <img id="gameBg" src="//hdg.faisys.com/image/wzytzs/gameBg.png?v=201509081300" style="width:100%;height:auto;">
+            </div>
+            
+<div id="gameTopBar" class="gameTopBar" >
+    <div class="userInfoBox">
+        <div class="userImgBox" ><img src="http://wx.qlogo.cn/mmopen/ajNVdqHZLLDXebVxqmbF5CvwDrzYL7NJCRtIKKc3CtE4l3BWiblQkY9OjTIX4ia2dExGgAKMMzhglmvT4L7lHeiaQ/0" class="userImg"></div>
+                    
+            <div id="grade" class="grade">0</div>
+            
+    </div>
+    <div class="timeBox" >
+        时间<br><span class="time">0</span>
+    </div>
+</div>  
+            <div class="timeUpImg hide" ></div>
+            <div id="gameLayerBox">
+                <div class="poupMask">
+                    <div class="gopng_readyTips abs"></div>
+                    <div id="readBtn" class="gopng_readyBtn abs"></div>
+                    <div class="timer gopng_3 abs hide" ></div>
+                </div>
+                <img id="paper" class="editTarget-paper abs" src="//hdg.faisys.com/image/wzytzs/paper.png" style="top: 4.35rem; left: 1.7rem; width: 12.55rem; height: 16.4rem;">
+                <div id="txtContBox" class="txtContBox abs" style="color: rgb(114, 73, 24);">
+                    <div id="titleList" class="abs">中国农历的哪个节气有着北方吃饺子、南方吃汤圆的习俗？</div>
+                    <div id="answerList" class="abs">
+                        <div class="answerItem">
+                            <span class="gopng_circle"></span>
+                            <div class="answerBox"><span class="answer">冬至</span></div>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="answerItem">
+                            <span class="gopng_circle"></span>
+                            <div class="answerBox"><span class="answer">春节</span></div>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="answerItem">
+                            <span class="gopng_circle"></span>
+                            <div class="answerBox"><span class="answer">元宵</span></div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+
+                <div class="nextBtn"><img id="nextBtn" class="editTarget-nextBtn abs" src="//hdg.faisys.com/image/wzytzs/nextBtn.png" style="top: 21.05rem; left: 4.9rem; width: 6rem; height: 2.25rem;"></div>
+                <div class="checkBtn hide" style="display: none;"><img id="checkBtn" class="editTarget-nextBtn-1 abs" src="//hdg.faisys.com/image/wzytzs/checkBtn.png" style="top: 21.05rem; left: 4.9rem; width: 6rem; height: 2.25rem;"></div>
+                
+            </div>
+        <div class="soundIconOff soundIcon soundIconPlay" style="z-index: 100;"></div></div>
+
+    <div id="poupInfoBox" class="poupFadIn" > 
+        <div class="poupHead">
+            <div class="poupTitleBox">
+                <div id="actionExpBtn" class="poupTitleMune checked" _flag="2" style="width: 6.625rem;">
+                    <div class="item">活动说明</div>
+                </div>
+                
+                <div id="prizeBtn" class="poupTitleMune" _flag="3" style="width: 6.625rem;">
+                    <div class="item">我的奖品<span id="Award_Round_Dot" class="redDot hide"></span></div>
+                </div>   
+                <div id="winnerBtn" class="poupTitleMune hide" _flag="4" style="width: 6.625rem;">
+                    <div class="item">获奖名单</div>
+                </div>
+                <div class="poupSlideBar">
+                    <div class="slideBarTip transitionPanel" style="width: 6.625rem; left: 2rem;"></div>
+                </div>
+            </div>
+            <div class="poupClose"></div>
+            <div style="clear:both; height:0"></div>
+            <!--<div class="poupTitle">活动及奖品说明</div>-->
+        </div>
+        <div id="popTabBox" class="popTabBox transitionPanel" style="left: 0px; width: 750px;">
+            <div id="ruleBox" class="poupMain" _flag="2" style="width: 50%; height: 521.703px;">
+            <div id="awardLine" class="poupLine" data-sortkey="a">
+                    <div class="mainTitle">活动奖品</div>
+                    <div id="awardLineBox">
+                    <div class="unComfortLine awardItem "><span class="awardStyle">一等奖</span> : <span class="award">价值100元礼品</span></div>
+    <div class="unComfortLine awardItem "><span class="awardStyle">二等奖</span> : <span class="award">价值50元礼品</span></div>
+    <div class="unComfortLine awardItem "><span class="awardStyle">三等奖</span> : <span class="award">价值10元礼品</span></div>
+    <div class="unComfortLine awardItem hide"><span class="awardStyle">四等奖</span> : <span class="award">价值5元小礼品</span></div>
+    <div class="unComfortLine awardItem hide"><span class="awardStyle">五等奖</span> : <span class="award">价值5元小礼品</span></div>
+    <div class="unComfortLine awardItem hide"><span class="awardStyle">六等奖</span> : <span class="award">价值5元小礼品</span></div>
+    <div class="unComfortLine awardItem hide"><span class="awardStyle">七等奖</span> : <span class="award">价值5元小礼品</span></div>
+    <div class="unComfortLine awardItem hide"><span class="awardStyle">八等奖</span> : <span class="award">价值5元小礼品</span></div>
+    <div class="awardItem anwei hide"><span class="awardStyle">安慰奖</span> : <span class="award">价值5元小礼品</span></div>
+
+                    </div>  
+                    <div id="selfAwardLine" class="hide" style="word-wrap: break-word; display: none;"></div>
+                </div><div id="gameDateTime" class="poupLine" data-sortkey="b">
+                    <div class="mainTitle">活动时间</div>
+                    <p><span id="startDate">2016年11月17日 22:23</span>&nbsp;-&nbsp;<span id="endDate">2016年11月24日 22:23</span></p>
+                </div><div class="hostLine poupLine" data-sortkey="c">
+                    <div class="mainTitle">主办单位</div>
+                    <p>本次活动主办单位为 <a class="hostName" href="#" style="text-decoration: none;">请输入企业名称</a></p>
+                    <p>主办单位在法律允许的范围内拥有活动解释权</p>
+                </div><div id="skillLine" class="skillLine poupLine" data-sortkey="d">
+                    <div class="skillCont">
+                        <div class="mainTitle">技术支持</div>
+                        <p>页面技术由 <a class="skillName" href="http://mp.weixin.qq.com/s?__biz=MjM5MTk5MjI3OA==&amp;mid=209854000&amp;idx=1&amp;sn=82241d924839270d3ea820ad2d56c01b#wechat_redirect">凡科互动</a> 提供，技术支持方仅提供页面技术，不承担由活动引起的相关法律责任</p>
+                    </div>
+                </div><div id="explainBox" class="poupLine" data-sortkey="e">
+                    <div class="mainTitle">活动及兑奖说明</div>
+                    
+                        <p id="explaiDrawInfoBox">
+                            <span id="haveScore">达到 <span id="scoreLimit" class="scoreLimit">60</span><span class="gameScoreUnit">分</span><span id="exlainDrawFont">即可获得抽奖机会，</span></span>
+                            
+                            <span id="directDrawInfoBox" class="">
+                                每人<span class="dayFont">每日</span>有 <span id="drawTimesLimit">3</span> 次抽奖机会<span class="drawTotalFont" style="display: none;">，每人最多可抽奖 <span id="totalDrawTimeLimit">6</span> 次</span>。<br>
+                            </span> 
+                            
+                        </p>
+                           
+                    <div id="exlainInfo">获奖后凭兑奖码联系活动主办单位即可兑奖。</div>
+                </div></div>
+            
+            <div id="awardBox" class="poupMain" _flag="3" style="height: 521.703px; width: 50%;">
+                <div id="awardInfo" style="height: 16rem; overflow-y: auto;">暂无中奖纪录</div>    
+                <div class="attentionBox">
+                    <div class="menuBtnBox">
+                        <a class="menuName">关注我们</a>
+                    </div>
+                    
+                    <div class="skillInfo"><a href="http://mp.weixin.qq.com/s?__biz=MjM5MTk5MjI3OA==&amp;mid=209854000&amp;idx=1&amp;sn=82241d924839270d3ea820ad2d56c01b#rd">我也要免费创建活动</a><span class="gotoFlag"></span></div>
+                    <div class="holdBox"></div>
+                </div>
+            </div>
+            <div id="regAwardBox" class="poupMain" _flag="4" style="width: 50%; height: 521.703px;">
+                <div id="noRegAward" class="hide" style="margin-left:3px;">尚未公布获奖名单，详情请查看活动说明</div>
+
+                <div id="regAwardMain" style="display:none;">         
+                          
+                            <div class="regAwardList">
+                                <div class="mainTitle">一等奖</div>
+                                <div class="playerName" style="margin-bottom:12px;"></div>
+                            </div>  
+                          
+                            <div class="regAwardList">
+                                <div class="mainTitle">二等奖</div>
+                                <div class="playerName" style="margin-bottom:12px;"></div>
+                            </div>  
+                          
+                            <div class="regAwardList">
+                                <div class="mainTitle">三等奖</div>
+                                <div class="playerName" style="margin-bottom:12px;"></div>
+                            </div>  
+                    
+                </div>  
+            </div>  
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="js/base.js"></script>
+    <script type="text/javascript" src="js/jquery-core.min.js"></script>
+    <script type="text/javascript" src="js/hdgame.min.js"></script>
+    <script type="text/javascript" src="js/hdUtil.min.js"></script>
+    <script type="text/javascript" src="js/lufylegend.min.js"></script>
+    <script type="text/javascript" src="js/base01.js"></script>
+    <script type="text/javascript" src="js/base02.js"></script>
+    <script type="text/javascript" src="js/base03.js"></script>
+    <script type="text/javascript" src="js/base04.js"></script>
+    <script type="text/javascript" src="js/base05.js"></script>
 </body>
 </html>

@@ -95,7 +95,7 @@ input::-webkit-inner-spin-button {
 	left: 0;
 	top: 0;
 	z-index: 9999;
-	background: url('/image/unpub.png?v=201605161742') no-repeat;
+	background: url('../img/unpub.png') no-repeat;
 	background-size: 100%
 }
 
@@ -216,7 +216,7 @@ input::-webkit-inner-spin-button {
 }
 
 .gameBox .timeUpImg {
-	background: url(/image/timeUp.png?v=201605161742) no-repeat;
+	background: url(../img/timeUp.png) no-repeat;
 	background-size: 100%;
 	position: absolute;
 	width: 6.8rem;
@@ -886,7 +886,7 @@ input::-webkit-inner-spin-button {
 	right: 0;
 	width: 2.25rem;
 	height: 2.25rem;
-	background: url('/image/close.png?v=201605161742') no-repeat;
+	background: url('../img/close.png') no-repeat;
 	background-size: 70%;
 	background-position: center
 }
@@ -1344,7 +1344,7 @@ input::-webkit-inner-spin-button {
 .soundIcon {
 	width: 40px;
 	height: 40px;
-	background: url('/image/musicOn.png?v=201605161742') no-repeat;
+	background: url('../img/musicOn.png') no-repeat;
 	background-size: 100%;
 	position: absolute;
 	top: 20px
@@ -1358,7 +1358,7 @@ input::-webkit-inner-spin-button {
 }
 
 .soundIconOff {
-	background-image: url('/image/musicOff.png?v=201605161742');
+	background-image: url('../img/musicOff.png');
 	animation: initial;
 	-o-animation: initial;
 	-moz-animation: initial;
@@ -1731,7 +1731,7 @@ input::-webkit-inner-spin-button {
 	width: .4rem;
 	height: .4rem;
 	vertical-align: baseline;
-	background-image: url(/image/jt.png?v=201605161742);
+	background-image: url(../img/jt.png);
 	background-size: 100% 100%;
 	margin-left: .3rem
 }
