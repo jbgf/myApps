@@ -1,0 +1,161 @@
+﻿<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>新闻中心</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" href="css/nstyle.css">
+
+    <script type="text/template" id="news-template">
+        <% for(var i = 0 , length = data.length ; i < length ; ++ i){ %>
+            
+            <div class="news_feed" id="<%= data[i].id %>">
+                <div class="news_tt">
+                    <h2><a target="_blank" href="http://www.xunlei.com/newscenter/news/<%= data[i].id %>.html"><%= data[i].title %></a></h2>
+                    <p class="txt_brief clearfix">
+                        <span><a href="http://www.xunlei.com/newscenter/news.html?type=<%= data[i].type.split('_')[0] %>" class="txt_type <%= data[i].type.split('_')[2] %>"><%= data[i].type.split('_')[1] %></a></span>
+                        <span class="txt_time"><%= data[i].date %></span>
+                        <span class="txt_read"><i class="ic_read png"></i><em name="views-time">0</em></span>
+                    </p>
+                </div>
+                <% if(data[i].img){ %>
+                    <div class="news_cont">
+                        <a target="_blank" href="http://www.xunlei.com/newscenter/news/<%= data[i].id %>.html"><img src="<%= data[i].img %>"></a>
+                    </div>
+                    <% } %>
+                        <div class="news_cont">
+                            <p class="txt_news">
+                                <%= data[i].desc %>
+                            </p>
+                        </div>
+                        <div class="news_bot clearfix">
+                            <a target="_blank" href="http://www.xunlei.com/newscenter/news/<%= data[i].id %>.html" class="btn_read">阅读全文&gt;&gt;</a>
+                        </div>
+            </div>
+            <% } %>
+    </script>
+<!-- 数据     -->
+    <script type="text/javascript" src="js/news_data.js"></script>
+<!-- 数据     -->
+    <script src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script src="js/underscore-min.js"></script>
+    <script src="js/scrollpagination.js"></script>
+    <script src="js/scrolltop.js"></script>
+    <script src="js/news.js"></script>
+</head>
+
+<body class="news_sec">
+    <div class="header" style="background: rgba(0,0,0,.1);;">
+      <h1 class="logo_link"><a href=" www.sky-deep.com" title="迅雷网络"><img src="img/logo.png" class="png" alt="迅雷网络"></a></h1>
+      <ul class="nav_list">
+        <li class="nav_li">
+          <a href="product.html" class="btn_nav" clickid="gwcpzx"><i class="ic_product png" target="_blank"></i>产品</a>
+        </li>
+        <li class="nav_li">
+            <a href="newscenter.html" class="btn_nav" clickid="gwxwzx"><i class="ic_new png"></i>资质</a>
+          </li>
+        <li class="nav_li">
+          <a href="javascript:;" class="btn_nav" id="nav_more"><i class="ic_more png"></i>更多</a>
+          <div class="more_nav" id="more_nav">
+            <!--[if lt IE 9]>
+            <span class="opc_bg"></span>
+            <![endif]-->
+            <i class="ic_bdot png" id="h_bdot"></i>
+            <ul id="h_nav">
+              <li>
+                <a href="http://www.xycdn.com/" clickid="gwgd1" target="_blank" class="btn_snav">登录</a>
+              </li>
+              
+              <li>
+                <a href="http://hr.xunlei.com/"  clickid="gwgd3" class="btn_snav" target="_blank">深空新闻</a>
+              </li>
+              <li>
+                <a href="http://ir.xunlei.com/"  clickid="gwgd4" target="_blank" class="btn_snav">成功案例</a>
+              </li>
+              <li>
+                <a href="introduction.html"  clickid="gwgd5" target="_blank" class="btn_snav">联系我们</a>
+              </li>
+              <li>
+                <a href="connection.html"  clickid="gwgd6" target="_blank" class="btn_snav">关于深空</a>
+              </li>
+
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="wrap" id="wrap">
+        <div class="wrapper">
+            <div class="innerBanner01">
+                    <div class="ib_container abs-full">
+                        <div class="container1100" style="height:100%;width:1200px;">
+                        </div>
+                    </div>
+                    <img class="ib_bg" src="img/banner03.jpg">
+                    
+            </div>
+            <div class="content">
+                <div class="news_wp">
+                    <div id="content" index="1" scrollpagination="enabled">
+                        
+                    </div>
+                    <div class="loading_box" style="display:none" id="loading">
+                        <p class="txt_load"><i class="ic_load"></i>正在加载中，请稍后····</p>
+                    </div>
+                    <div class="loading_box" style="display:none" id="nomoreresults">
+                        <p class="txt_load">没有更多的数据了</p>
+                    </div>
+                </div>
+            </div>
+            <a style="display:none" href="javascript:void(0)" class="btn_totop hide_txt png gobacktop">返回顶部</a>
+        </div>
+    </div>
+    <div class="footer" id="footer">
+            <div class="foot">
+              <div class="container1100 clearfix">
+                <div class="follow_box">
+                  <div class="txt_follow">
+                    <img src="img/footer_logo.png">
+                    <p class="main_links"> 
+                      <a href="#" target="_blank">产品</a> 
+                      <a href="#" target="_blank">资质</a> 
+                      <a href="#" target="_blank">登录</a> 
+                      <a href="#" target="_blank">深空新闻</a> 
+                      <a href="#" target="_blank">成功案例</a>
+                      <a href="#" target="_blank">关于深空</a>
+                    </p>
+                  </div>
+                  <div class="follow_list"> 
+                      <a href="javascript:void(0)" class="wechat hide_txt">官方微信 <span class="code_box"><i class="ic_arr"></i><img src="img/qr.png" alt="官方微信"></span> </a> 
+                      <a target="_blank" href="http://weibo.com/xunleigf?from=myfollow_all&amp;is_all=1" class="sina hide_txt">新浪微博</a> 
+                      
+                  </div>
+                </div>
+                <div class="qr_box">
+                      
+                    <div class="adr_box02">
+                                <p class="adr" style="background-position: 16px 11px;">地址：福州市 晋安区 儒江西路 东方名城           华郡25号楼01-02单元 2502室 </p>
+                                <p class="phone">电话: 400-0300</p>
+                                <p class="fax">传真: 0591-22856511</p>
+                                <p class="qq">QQ: 652500285</p>
+                                <p class="email">E-mail: sales@sky-deep.com</p>
+                    </div>
+                    <div class="qr">
+                        <img src="img/qr.png">
+                    </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+    
+    
+    
+   
+</body>
+
+</html>

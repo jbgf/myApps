@@ -1,0 +1,32 @@
+{template header}
+<div class="sub_page contact">
+  <div class="innerBanner01">
+    <div class="ib_container abs-full">
+      <div class="container1100" style="height:100%;width:1200px;"> </div>
+    </div>
+    <img class="ib_bg" src="img/banner06.jpg"> </div>
+  <div class="content">
+    <div class="nav_box">
+      <p><a  href="{SITE_PATH}">首页</a> > {catpos($catid, ' &gt;&nbsp;&nbsp;')}</p>
+    </div>
+    <h2 class="sub_title">{$t['catname']}</h2>
+    <div class="content news_sec">
+        <div class="news_wp">
+            {list catid=$catid page=$page order=updatetime}
+                <div class="news_feed" id="15852" rel="loaded">
+                  <div class="news_tt">
+                    <h2><a target="_blank" href="{$t['url']}">{$t['title']}</a></h2>
+                    <p class="txt_brief clearfix"> <span><a href="{$cats[$t[catid]][url]}" class="txt_type orange">{$cats[$t[catid]][catname]}</a></span> <span class="txt_time">{date("Y-m-d", $t['updatetime'])}</span> <span class="txt_read"><i class="ic_read png"></i><em name="views-time">0</em></span> </p>
+                  </div>
+                  <div class="news_cont">
+                    <p class="txt_news"> {$t[description]} </p>
+                  </div>
+                  <div class="news_bot clearfix"> <a target="_blank" href="{$t['url']}" class="btn_read">阅读全文&gt;&gt;</a> </div>
+                </div>
+            {/list}
+        </div>
+        {$pagelist}
+    </div>
+  </div>
+</div>
+{template footer}
