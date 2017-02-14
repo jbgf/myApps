@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/frame.css">
+    
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <script type="text/javascript" src="js/fastclick.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    
+    <script type="text/javascript" src="js/home.js"></script>
+    <script type="text/javascript">
+    	   /*fastclick start*/
+           if ('addEventListener' in document) {
+                document.addEventListener('DOMContentLoaded', function() {
+                    FastClick.attach(document.body);
+                }, false);
+            }
+          /*fontSize */
+          (function htmlFontSize (){
+                    var rate = 19;
+                    var baseFontSize;
+                    var clientWidth = document.documentElement ? document.documentElement.clientWidth : document.body.clientWidth;
+                        if(clientWidth > 640) clientWidth = 640;
+
+                        baseFontSize = clientWidth * 1/rate;
+                        document.documentElement.style.fontSize = baseFontSize+"px";
+                        /*document.body.style.fontSize = baseFontSize+"px";*/
+                        
+                        return clientWidth * 1/rate;
+          })();
+         $(function(){
+            $(".share_guide").click(function(){
+                $(".share_pic").show();
+            })
+         })
+    </script>
+    
+</head>
+<body>
+<div class="pageWrapper">
+    <!-- 首页 start -->
+    <div class="page">
+	    <!-- 背景 start -->
+    	<div class="a_bg"><img src="img/a_bg.png" alt=""></div>
+    	<!-- 背景 end -->
+        <div class="first_wrapper">
+            
+
+                 <div class="absBottom ">
+                     <div class="wrapper01 mar-center">
+                            <a id="start_answer" class="button cbutton return_first  i_white zindex" href="answer.html">
+                                <img class="full-img" src="img/btnbg04.png">
+                                
+                            </a>
+                            <a class="ruleBtn zindex">
+                                <img src="img/btnbg02.png" >
+                            </a>
+                     </div>
+                 </div>    
+                 
+                 <!-- 规则页 start -->
+                <div class="homePoupMask02 " >
+                         <div class="share_pic abs zindex hide" style="top:0;right:0;"><img style="height:143px" src="img/share.png"></div>
+                        <div id="skillSupPoup" class="homePoupInner img-center align-center ">
+                           
+                            <div class="a_bg">
+                                <img src="img/notprize.png" style="width: 120%;height: 100%;    display: block;">
+                            </div>
+                            <div class="skillSupPoup_wrapper relative" >
+                                <div id="rule_details" style="padding:23% 1rem .5rem;font-size:.8rem;text-align:left;line-height:1.3rem;">
+                                    
+                                    <div class="text red mar-center">
+                                        <p class="title">正统网祝您</p>
+                                        <p class="row">九域涌新潮，四海雄鸡争唱晓；<br/> 三春辉紫气，八方彩凤共朝阳。 </p>
+                                    </div>
+                                    
+                                    <div class="gift_pic " style="bottom: -13%;">
+                                        
+                                        <a class="share_guide align-center " style="display:block;"><img style="width:60%;" src="img/btnbg06.png"></a>
+                                    </div>
+                                    
+                                </div>
+                            
+                            
+                            </div>
+                        </div>
+                </div>
+                <!-- 规则页 end -->
+
+                
+         </div>                             
+    </div>
+    <!-- 首页 end -->
+    
+
+    
+    
+</div>
+</body>
+</html>

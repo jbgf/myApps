@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/frame.css">
+    
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <script type="text/javascript" src="js/fastclick.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    
+    <script type="text/javascript" src="js/home.js"></script>
+    <script type="text/javascript">
+    	   /*fastclick start*/
+           if ('addEventListener' in document) {
+                document.addEventListener('DOMContentLoaded', function() {
+                    FastClick.attach(document.body);
+                }, false);
+            }
+          /*fontSize */
+          (function htmlFontSize (){
+                    var rate = 19;
+                    var baseFontSize;
+                    var clientWidth = document.documentElement ? document.documentElement.clientWidth : document.body.clientWidth;
+                        if(clientWidth > 640) clientWidth = 640;
+
+                        baseFontSize = clientWidth * 1/rate;
+                        document.documentElement.style.fontSize = baseFontSize+"px";
+                        /*document.body.style.fontSize = baseFontSize+"px";*/
+                        
+                        return clientWidth * 1/rate;
+          })();
+        
+    </script>
+    
+</head>
+<body>
+<div class="pageWrapper">
+    <!-- 首页 start -->
+    <div class="page">
+	    <!-- 背景 start -->
+    	<div class="a_bg"><img src="img/a_bg.png" alt=""></div>
+    	<!-- 背景 end -->
+        <div class="first_wrapper">
+            
+
+                 <div class="absBottom ">
+                     <div class="wrapper01 mar-center">
+                            <a id="start_answer" class="button cbutton return_first  i_white zindex" href="answer.html">
+                                <img class="full-img" src="img/btnbg04.png">
+                                
+                            </a>
+                            <a class="ruleBtn zindex">
+                                <img src="img/btnbg02.png" >
+                            </a>
+                     </div>
+                 </div>    
+                 
+                 <!-- 规则页 start -->
+                <div class="homePoupMask02 " >
+
+                        <div id="skillSupPoup" class="homePoupInner img-center align-center ">
+                            <div class="a_bg">
+                                <img src="img/input_bg.png" style="width: 100%;height: 100%;    display: block;">
+                            </div>
+                            <div class="skillSupPoup_wrapper relative" >
+                                <form>
+                                
+                                <div id="rule_details" style="padding:35% 1rem .5rem;font-size:.8rem;text-align:left;line-height:1.3rem;">
+                                    
+                                 
+                                    <div class="form">
+                                    
+                                         <p class="white">请输入手机，以便为您发放奖励。   </p>
+                                         <input type="text" name="" placeholder="您的姓名">   
+                                         <input type="text" name="" placeholder="手机号码">   
+                                         <p>
+                                        <!-- 修改1 start -->
+                                            <img style="position: relative;top: 4px;" src="img/icon06.png">
+                                            <span style="margin-left:.2rem;font-size:.9em;">奖励将于活动结束后10个工作日内发放</span>
+                                        </p>
+                                        
+                                    </div>
+                                    <div class="gift_pic " style="">
+                                        
+                                        <a class="align-center shareBtn" style="display:block;"><img style="width:60%;" src="img/btnbg03.png"></a>
+                                        <input id="submit" type="submit" name="" class="hide">
+                                    </div>
+                                    <script type="text/javascript">
+                                        $(".shareBtn").click(function(){
+                                            $("#submit").trigger("click");
+                                        })
+                                    </script>
+                                </div>
+                                </form>
+                            
+                            </div>
+                        </div>
+                </div>
+                <!-- 规则页 end -->
+
+                
+         </div>                             
+    </div>
+    <!-- 首页 end -->
+    
+<!-- 修改1 start  -->
+<script type="text/javascript">
+        $(function(){
+            var ratew = 0.9;
+            var wh = $(window).height(),
+                ww = $(window).width();
+          
+            var rateh = 0.61;
+            $("#rule_details").css({"height":wh*rateh,'width':ww*ratew}).parents("#skillSupPoup").css({"height":wh*rateh,'width':ww*ratew})
+        })
+            
+
+</script>
+    
+    
+</div>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/frame.css">
+    
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <script type="text/javascript" src="js/fastclick.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    
+    <script type="text/javascript" src="js/home.js"></script>
+    <script type="text/javascript">
+    	   /*fastclick start*/
+           if ('addEventListener' in document) {
+                document.addEventListener('DOMContentLoaded', function() {
+                    FastClick.attach(document.body);
+                }, false);
+            }
+          /*fontSize */
+          (function htmlFontSize (){
+                    var rate = 19;
+                    var baseFontSize;
+                    var clientWidth = document.documentElement ? document.documentElement.clientWidth : document.body.clientWidth;
+                        if(clientWidth > 640) clientWidth = 640;
+
+                        baseFontSize = clientWidth * 1/rate;
+                        document.documentElement.style.fontSize = baseFontSize+"px";
+                        /*document.body.style.fontSize = baseFontSize+"px";*/
+                        
+                        return clientWidth * 1/rate;
+          })();
+        
+    </script>
+    
+</head>
+<body>
+<div class="pageWrapper">
+    <!-- 首页 start -->
+    <div class="page">
+	    <!-- 背景 start -->
+    	<div class="a_bg"><img src="img/newfollow.png" alt=""></div>
+    	<!-- 背景 end -->
+        <div class="first_wrapper">
+            
+
+                   
+                 
+                 <!-- 规则页 start -->
+                <div class="homePoupMask02 hide" >
+
+                        <div id="skillSupPoup" class="homePoupInner img-center align-center ">
+                            <div class="a_bg">
+                                <img src="img/rule-bg.png" style="width: 100%;height: 100%;    display: block;">
+                            </div>
+                            <div class="skillSupPoup_wrapper relative" >
+                                <div id="rule_details" style="padding:23% 1rem .5rem;font-size:.8rem;text-align:left;line-height:1.3rem;">
+                                    
+                                 
+                                    <div style="">
+                                        <p style="margin-bottom:.6rem;">1、用户转发贺卡成功即可获得1个福袋，参与拆福袋活动；
+                                        </p>
+                                        <p style="margin-bottom:.6rem;">
+                                                2、在活动期间，同一个用户可以无限次发贺卡
+                                                     拆福袋；
+                                        </p>
+                                         <p style="margin-bottom:.6rem;">
+                                                3、福袋中藏有10元话费或新春祝福，若中得10
+                                                 元话费，请正确填写手机号码，以收到短信
+                                                 为准；
+                                        </p>
+                                        <p style="margin-bottom:.6rem;">
+                                                4、奖励于活动结束后10个工作日内发放。
+                                        </p>
+                                        
+                                    </div>
+                                    <div class="gift_pic " style="">
+                                        
+                                        <div class="align-center closeBtn"><img style="width:60%;" src="img/shut.png"></div>
+                                    </div>
+                                    
+                                </div>
+                            
+                            
+                            </div>
+                        </div>
+                </div>
+                <!-- 规则页 end -->
+
+                
+         </div>                             
+    </div>
+    <!-- 首页 end -->
+    
+
+    
+    
+</div>
+</body>
+</html>

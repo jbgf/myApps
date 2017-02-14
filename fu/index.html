@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/frame.css">
+    
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <script type="text/javascript" src="js/fastclick.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    
+    <script type="text/javascript" src="js/home.js"></script>
+    <script type="text/javascript">
+    	   /*fastclick start*/
+           if ('addEventListener' in document) {
+                document.addEventListener('DOMContentLoaded', function() {
+                    FastClick.attach(document.body);
+                }, false);
+            }
+          /*fontSize */
+          (function htmlFontSize (){
+                    var rate = 19;
+                    var baseFontSize;
+                    var clientWidth = document.documentElement ? document.documentElement.clientWidth : document.body.clientWidth;
+                        if(clientWidth > 640) clientWidth = 640;
+
+                        baseFontSize = clientWidth * 1/rate;
+                        document.documentElement.style.fontSize = baseFontSize+"px";
+                        /*document.body.style.fontSize = baseFontSize+"px";*/
+                        
+                        return clientWidth * 1/rate;
+          })();
+          $(function(){
+                var t = setInterval(function(){
+                    $(".ruleBtn").toggleClass("shake");
+                },6000)
+          })
+
+    </script>
+    <!-- 修改1 start -->
+    <style type="text/css">
+        #rule_details .ruleinner{color:#715235;}
+        #rule_details .num{display: block;float:left;width:8%;}
+        #rule_details .ruletext{display: block;float:left;width:90%;}
+    </style>
+</head>
+<body>
+<div class="pageWrapper">
+    <!-- 首页 start -->
+    <div class="page">
+	    <!-- 背景 start -->
+    	<div class="a_bg"><img src="img/a_bg.png" alt=""></div>
+    	<!-- 背景 end -->
+        <div class="first_wrapper">
+            
+
+                 <div class="absBottom ">
+                     <div class="wrapper01 mar-center">
+                            <a id="start_answer" class="button cbutton return_first  i_white zindex" href="answer.html">
+                                <img class="full-img" src="img/btnbg04.png">
+                                
+                            </a>
+                            <a class="ruleBtn zindex shake">
+                                <img src="img/btnbg02.png" >
+                            </a>
+                     </div>
+                 </div>    
+                 
+                 <!-- 规则页 start -->
+                <div class="homePoupMask02 hide" >
+
+                        <div id="skillSupPoup" class="homePoupInner img-center align-center ">
+                            <div class="a_bg">
+                                <img src="img/rule-bg.png" style="width: 100%;height: 100%;    display: block;">
+                            </div>
+                            <div class="skillSupPoup_wrapper relative" >
+                                        
+                                <div id="rule_details" style="padding: 15% 1rem 0.5rem;font-size:.8rem;text-align:left;line-height:1rem;">
+                                    
+                                    <!-- 修改2 start -->
+                                    <div class="ruleinner" style="">
+                                        
+                                        <p class="clear" style="margin-bottom:.3rem;">
+                                        <span class="num">1、</span>
+                                        <span class="ruletext">用户转发贺卡成功即可获得1个福袋，参与拆福袋活动；
+                                        </span>
+                                        </p>
+                                        <p class="clear" style="margin-bottom:.3rem;">
+                                                <span class="num">2、</span>
+                                                <span class="ruletext">在活动期间，每位用户每天可以无限次转发贺卡，并且每天有5次拆福袋的机会；</span>
+                                        </p>
+                                         <p class="clear" style="margin-bottom:.3rem;">
+                                                <span class="num">3、</span>
+                                                <span class="ruletext">福袋中藏有10元话费、100M流量或新春祝福，随机抽取。若中得10元话费或100M流量，请正确填写手机号码，以便发放奖励。
+                                                 </span>
+                                        </p>
+                                        <p class="clear" style="margin-bottom:.3rem;">
+                                                <span class="num">4、</span>
+                                                <span class="ruletext">奖励将于活动结束后10个工作日内发放。</span>
+                                        </p>
+                                        
+                                        <p>
+                                            【温馨提示】<br/>
+                                             关注正统网微信号，正确填写自己的手机号码哦！
+                                        </p>
+                                        
+                                    </div>
+                                    <div class="gift_pic " style="">
+                                        
+                                        <div class="align-center closeBtn"><img style="width:60%;" src="img/shut.png"></div>
+                                    </div>
+                                    
+                                </div>
+                            
+                            
+                            </div>
+                        </div>
+                </div>
+                <!-- 规则页 end -->
+
+                
+         </div>                             
+    </div>
+    <!-- 首页 end -->
+    
+<!-- 修改3 start  -->
+<script type="text/javascript">
+        $(function(){
+            var ratew = 0.9;
+            var wh = $(window).height(),
+                ww = $(window).width();
+          
+            var rateh = 0.7;
+            $("#rule_details").css({"height":wh*rateh,'width':ww*ratew}).parents("#skillSupPoup").css({"height":wh*rateh,'width':ww*ratew})
+        })
+            
+
+</script> 
+    
+    
+</div>
+</body>
+</html>
