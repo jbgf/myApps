@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" >
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="css/frame.css">
+        <link rel="stylesheet" href="css/index.css">
+        
+
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+        <script src="js/main.js"></script>
+
+    </head>
+    <body>
+
+    <!-- header start -->
+        <div class="header">
+                <!-- g-topbar start -->
+                        <div class="g-topbar02">
+                              <div class="container1200 clear">
+                                
+                                <!-- <span id="showtime">2016年11月22日 星期二 10:18:07</span> -->
+                                <div class="float-r">
+                                    
+                                    <a class="topbar_link">登录</a>
+                                    <a class="topbar_link">免费注册</a>
+                                    <span class="topbar_link">
+                                        <span>服务热线：0591-88888888</span>
+                                        <span><a id="top_wechat"><img src="img/icon_01.png"></a></span>
+                                        <span><a><img src="img/icon_02.png"></a></span>
+                                    </span>
+                                    <script type="text/javascript">
+                                        $(function(){
+                                            $("#top_wechat").hover_window({
+                                                content:'<img class="full"  src="img/qr.png">'
+                                            });        
+                                        })
+                                        
+                                    </script>
+                                    
+                                </div>
+                              </div>
+                        </div>
+                <!-- g-topbar end -->
+                <!-- logoRow start -->
+                <div class="logoRow ">
+                    <div class="container1200">
+                            <div class="logo float-l"><img src="img/logo.png"></div>
+                            <form class="margin-l-493 clear">
+                              <div class="input_group float-r">
+                                <div class="dropDownMenu">
+                                    <div class="dropDownButton">
+                                      <span class="dropDownText">全站搜索</span><span class="caret"></span>
+                                    </div>
+                                    <ul style="display: none;">
+                                        <li class="on">全站搜索</li>
+                                        <li>新闻资讯</li>
+                                        <li>政策解读</li>
+                                        
+                                    </ul>
+                                </div> 
+                                <div class="input-set input-set-l">
+                                    <input class="input" type="" name="" placeholder="输入搜索关键词">
+                                    <div id="searchButton" class="button bg-blue white" ><img src="img/icon_03.png">搜&nbsp;索</div>
+                                    <input id="hideSubmit" type="submit" name="" style="display:none;">
+                                </div>
+                    
+                              </div>
+                            </form>      
+                    </div>
+                    
+                </div>
+                <!-- logoRow end -->    
+                
+                <!-- navbar start -->
+                <div class="">
+                    <div class="container1200">
+                        
+                        <div class="navbar-line02 clear "> 
+                            <div class="navbar-block on"><a class="navLink">首页                                                     </a></div>
+                            <div class="navbar-block"><a class="navLink">中心介绍</a>
+                                <ul class="naver_0" style="display: none;">
+                                    
+                                    <div class="nav_erc">
+                                      <li class="nav_center"><a href="#">中心简介</a></li>
+                                      <li class="nav_center"><a href="#">组织机构</a></li>
+                                      <li class="nav_center"><a href="#">关于我们</a></li>
+                                      <li class="nav_center"><a href="#"> 联系我们</a></li>
+                                    </div>
+                                    
+                                </ul>
+                            </div>
+                            <div class="navbar-block"><a class="navLink">新闻资讯</a></div>
+                            <div class="navbar-block"><a class="navLink">我要找产品</a></div>
+                            <div class="navbar-block"><a class="navLink">政策解读</a></div>
+                            <div class="navbar-block"><a class="navLink">资金申报</a></div>
+                            <div class="navbar-block"><a class="navLink">创客空间</a></div>
+                            <div class="navbar-block"><a class="navLink">专家团队</a></div>
+                          
+                        </div>
+                       
+                    </div>
+                </div>
+                <!-- navbar end -->    
+        </div>
+    <!-- header end -->
+        <script type="text/javascript">
+            
+	        (function dropDown(){
+	            var $ul = $(".dropDownMenu ul");
+	            var dropBtn = $(".dropDownButton");
+	            
+	            dropBtn.on("click",function(){
+	                 $(this).addClass("on");
+	                     
+	                 $ul.show();
+	                 $(document.createElement('div'))
+	                  .addClass('dropdown-backdrop')
+	                  .appendTo($("body"))
+	                  .on('click', clearMenus);
+
+	            });
+	            $('[class*="dropDownMenu"] ul li').on("click",function(){
+	                 var value = $(this).html();
+	                 var $ul = $(this).parent("ul"); 
+	                 var $menu =  $ul.parents('[class*="dropDownMenu"]');
+	                 var dropDownText = $menu.find(".dropDownText");
+	                 dropDownText.html(value).val(value);
+	                 clearMenus();
+	            }).first().click()
+/*模拟隐藏的按钮*/
+                $("#searchButton").click(function(){
+                    $("#hideSubmit").trigger("click");
+                })
+
+	            function clearMenus(){
+	                 $ul.hide();
+	                 dropBtn.removeClass("on");
+	                 $(".dropdown-backdrop").remove();
+	            }
+	        })();
+	        (function navbar(){
+
+	                      var st = 180;
+	                      $('.navbar-line02 .navbar-block').mouseenter(function () {
+	                          $(this).find('ul').stop(false, true).slideDown(st);
+	                      }).mouseleave(function () {
+	                          $(this).find('ul').stop(false, true).slideUp(st);
+	                      });
+
+	                      $('.navbar-line02 .navLink').addClass("divider").first().removeClass("divider");
+	        })();
+        </script>
+	    

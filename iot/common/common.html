@@ -1,0 +1,260 @@
+<div class="common">
+    <div id="headTag" class="head">
+        
+    </div>
+
+    <div id="header">
+        <!-- header start -->
+            <div class="header">
+                    <!-- g-topbar start -->
+                            <div class="g-topbar02">
+                                  <div class="container1200 clear">
+                                    
+                                    <!-- <span id="showtime">2016年11月22日 星期二 10:18:07</span> -->
+                                    <div class="float-r">
+                                        <a class="topbar_link">登录</a>
+                                        <a class="topbar_link">免费注册</a>
+                                        <span class="topbar_link">
+                                            <span>服务热线：0591-88888888</span>
+                                            <span><a><img src="img/icon_01.png"></a></span>
+                                            <span><a><img src="img/icon_02.png"></a></span>
+                                        </span>
+                                    </div>
+                                  </div>
+                            </div>
+                    <!-- g-topbar end -->
+                    <!-- logoRow start -->
+                    <div class="logoRow ">
+                        <div class="container1200">
+                                <div class="logo float-l"><img src="img/logo.png"></div>
+                                <div class="margin-l-493 clear">
+                                  <div class="input_group float-r">
+                                    <div class="dropDownMenu">
+                                        <div class="dropDownButton">
+                                          <span class="dropDownText">全站搜索</span><span class="caret"></span>
+                                        </div>
+                                        <ul style="display: none;">
+                                            <li class="on">全站搜索</li>
+                                            <li>新闻资讯</li>
+                                            <li>政策解读</li>
+                                            
+                                        </ul>
+                                    </div> 
+                                    <div class="input-set input-set-l">
+                                        <input class="input" type="" name="" placeholder="输入搜索关键词">
+                                        <div class="button bg-blue white" ><img src="img/icon_03.png">搜&nbsp;索</div>
+                                    </div>
+                        
+                                  </div>
+                                </div>      
+                        </div>
+                        
+                    </div>
+                    <!-- logoRow end -->    
+                    
+                    <!-- navbar start -->
+                    <div class="">
+                        <div class="container1200">
+                            
+                            <div class="navbar-line02 clear "> 
+                                <div class="navbar-block on"><a class="navLink">首页                                                     </a></div>
+                                <div class="navbar-block"><a class="navLink">中心介绍</a>
+                                    <ul class="naver_0" style="display: none;">
+                                        
+                                        <div class="nav_erc">
+                                          <li class="nav_center"><a href="#">中心简介</a></li>
+                                          <li class="nav_center"><a href="#">组织机构</a></li>
+                                          <li class="nav_center"><a href="#">关于我们</a></li>
+                                          <li class="nav_center"><a href="#"> 联系我们</a></li>
+                                        </div>
+                                        
+                                    </ul>
+                                </div>
+                                <div class="navbar-block"><a class="navLink">新闻资讯</a></div>
+                                <div class="navbar-block"><a class="navLink">我要找产品</a></div>
+                                <div class="navbar-block"><a class="navLink">政策解读</a></div>
+                                <div class="navbar-block"><a class="navLink">资金申报</a></div>
+                                <div class="navbar-block"><a class="navLink">创客空间</a></div>
+                                <div class="navbar-block"><a class="navLink">专家团队</a></div>
+                              
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <!-- navbar end -->    
+            </div>
+        <!-- header end -->
+        <script type="text/javascript">
+            
+        (function dropDown(){
+            var $ul = $(".dropDownMenu ul");
+            var dropBtn = $(".dropDownButton");
+            
+            dropBtn.on("click",function(){
+                 $(this).addClass("on");
+                     
+                 $ul.show();
+                 $(document.createElement('div'))
+                  .addClass('dropdown-backdrop')
+                  .appendTo($("body"))
+                  .on('click', clearMenus);
+
+                  
+            });
+            $('[class*="dropDownMenu"] ul li').on("click",function(){
+                 var value = $(this).html();
+                 var $ul = $(this).parent("ul"); 
+                 var $menu =  $ul.parents('[class*="dropDownMenu"]');
+                 var dropDownText = $menu.find(".dropDownText");
+                 dropDownText.html(value).val(value);
+                 clearMenus();
+            }).first().click()
+
+            function clearMenus(){
+                 $ul.hide();
+                 dropBtn.removeClass("on");
+                 $(".dropdown-backdrop").remove();
+            }
+        })();
+        (function navbar(){
+
+                      var st = 180;
+                      $('.navbar-line02 .navbar-block').mouseenter(function () {
+                          $(this).find('ul').stop(false, true).slideDown(st);
+                      }).mouseleave(function () {
+                          $(this).find('ul').stop(false, true).slideUp(st);
+                      });
+
+                      $('.navbar-line02 .navLink').addClass("divider").first().removeClass("divider");
+        })();
+        </script>
+    </div>
+
+    <div id="footer">
+        <!-- footer start -->   
+            <div class="footer">
+                <div class="container1200">
+                    <div class="fridend_link">
+                        <div class="left blue">友情链接：</div>
+                        <div class="right">
+                            <a>工业和信息化部 </a>   
+                            <a>人民网福建频道 </a>
+                            <a>厦门市人民政府 </a>
+                            <a>厦门国际物联网博览会  </a>
+                            <a>中国物联网中心 </a>
+                            <a>物联中国    </a>
+                            <a>物联网智库 </a>
+                            <a>RFID中国网 </a>
+                            <a> 中国M2M产业联盟 </a>
+                            <a>物联网在线 </a>
+                            <a>中华传感器 </a>
+                            <a> RFID世界网 </a>
+                            <a> 中国物联网 </a>
+                            <a> 中国物联网智慧谷</a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="foot">
+                    <div class="container1200 relative">
+                       <div>
+                           <div class="linkZone">
+                                <div class=" row">
+                                        <ul>
+                                            <li class="row-block">
+                                                <div class="inner">
+                                                    <div class="fl_header"><a>中心介绍</a></div>
+                                                    <div class="other_link">
+                                                        <div class="relative_link"><a>中心简介  </a></div>
+                                                        <div class="relative_link"><a>领导介绍</a></div>
+                                                        <div class="relative_link"><a>组织机构</a></div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="row-block">
+                                                <div class="inner">
+                                                    <div class="fl_header"><a>新闻资讯</a></div>
+                                                    <div class="other_link">
+                                                        <div class="relative_link"><a>行业资讯    </a></div>
+                                                        <div class="relative_link"><a>最新公告</a></div>
+                                                        <div class="relative_link"><a>中心新闻</a></div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="row-block">
+                                                <div class="inner">
+                                                    <div class="fl_header"><a>我要找产品</a></div>
+                                                    <div class="other_link">
+                                                        <div class="relative_link"><a>产品分类    </a></div>
+                                                        <div class="relative_link"><a>产品展示</a></div>
+                                                        <div class="relative_link"><a>企业展示</a></div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="row-block">
+                                                <div class="inner">
+                                                    <div class="fl_header"><a>政策解读</a></div>
+                                                    <div class="other_link">
+                                                        <div class="relative_link"><a>国家新闻    </a></div>
+                                                        <div class="relative_link"><a>省内新闻</a></div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="row-block">
+                                                <div class="inner">
+                                                    <div class="fl_header"><a>资金申报</a></div>
+                                                    <div class="other_link">
+                                                        <div class="relative_link"><a>政府扶助    </a></div>
+                                                        <div class="relative_link"><a>投创基金</a></div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="row-block">
+                                                <div class="inner">
+                                                    <div class="fl_header"><a>创客空间</a></div>
+                                                    <div class="other_link">
+                                                        <div class="relative_link"><a>痛点     </a></div>
+                                                        <div class="relative_link"><a>项目孵化</a></div>
+                                                        <div class="relative_link"><a>众创空间</a></div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="row-block">
+                                                <div class="inner">
+                                                    <div class="fl_header"><a> 专家团队</a></div>
+                                                    <div class="other_link">
+                                                        <div class="relative_link"><a>院校专家     </a></div>
+                                                        <div class="relative_link"><a>个人专家</a></div>
+                                                        <div class="relative_link"><a>企业专家</a></div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                           </div>          
+                           <div class="qrZone">
+                                <div class="left">
+                                    <img src="img/qr.png">
+                                </div>
+                                <div class="right">
+                                    <img src="img/foot-logo.png">
+                                    <div>
+                                        <p>电话：0591-88888888</p>
+                                        <p>传真：0591-88888888</p>
+                                        <p>地址：福州市马尾区新高园区兴业西路16号 </p>
+                                    </div>
+                                </div>
+                           </div>          
+                       </div>
+
+                    </div>
+                    
+                </div>
+                <div class="copyRight">
+                        <div class="container1200">Copyright © 2016 海峡物联网行业促进中心 All Rights Reserved.   粤ICP备130067号-2</div>
+                </div>
+            </div>                             
+        <!-- footer end -->
+    </div>
+</div>
