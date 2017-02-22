@@ -178,7 +178,7 @@
 					    </div>
 					    <div class="iot_right iot_right01 height_d">
 					    	
-			                <div class="loginZone hide">
+			                <div class="loginZone ">
 			                    	<h4 class="title title01 blue bg-lightGray align-center"><img class="icon" src="img/icon_04.png">会员登录</h4>
 			                        <form class="login-form" action="" method="post">
 			                            <div class="form-row ">
@@ -203,7 +203,7 @@
 			                    
 			                </div>
 <!-- 新增 登录状态 -->			                
-			                <div class="loginZone">
+			                <div class="loginZone hide">
 			                    	<h4 class="title title01 blue bg-lightGray align-center"><img class="icon" src="img/icon_04.png">会员登录</h4>
 			                        <div class="bg relative">
 			                        	<img class="full" src="img/logined.jpg">

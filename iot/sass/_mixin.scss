@@ -173,7 +173,7 @@
                 line-height: $height;
                 input.baseInput{
                     @include baseInput($height:100%);
-                    &[type="text"],&[type="password"]{padding:5px 10px;}
+                    &[type="text"],&[type="password"]{padding:0px 10px;}
                 }
                 a.baseInput,button.baseInput{
                     @include baseInput($height:100%);
@@ -446,8 +446,8 @@
             span {
                 @extend %relative;
                 @extend %float-l;
-                padding: 0 2px 0 6px;
-                & + span{@include divider(inherit);}
+                
+                & + span{@include divider(inherit);padding: 0 2px 0 6px;}
             }
             @include button_groupBeta($height,auto,$height/2,h)
             

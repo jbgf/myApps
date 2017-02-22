@@ -34,8 +34,8 @@
                                 </div>
                                 <a class="orange float-r">查看更多>>></a>
                                 
-                            </div>
-                            <div class="wanted_gallary">
+                           </div>
+                           <div class="wanted_gallary">
                                 <img class="bg" src="img/w_pic.png">
 <!-- 悬赏通电gallary start -->                                
                                 <div class="bottom_gallary">
@@ -126,7 +126,7 @@
                                     <div class="serviceBtn">
                                         
                                         <div class="w_inner">
-                                            <div class="hover absCenter"></div>
+                                            
                                             <div class="pt_line">
                                                 <div class="pic">
                                                     <img src="img/icon_wanted.png">
@@ -152,8 +152,13 @@
                                         </div>
                                     </div>
                                     <script type="text/javascript">
-                                        $(".serviceBtn .hover").mouseenter(function(){
-                                            $(this).parents(".w_inner").height("500%")
+                                        $(".w_inner .text").mouseenter(function(e){
+
+                                            
+                                            $(this).parents(".w_inner").height("500%")    
+                                            
+                                            
+                                            
                                         })
 
                                         $(".w_inner").mouseleave(function(){
@@ -163,8 +168,8 @@
                                     </script>
                                 </div>
 <!-- 悬赏通电gallary start -->                                              
-                            </div>
-                            </div>
+                           </div>
+                           </div>
                        </div>
 
                        <div class="p_navbar navbar01 bg-blue">

@@ -96,7 +96,17 @@ $cyan:#f0f4f6;
       height: auto;
   }
 }
-
+%ellipsis{
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  /*text-align:center;*/
+  max-width: 100%;
+  line-height: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 
 /* clearfix*/
 /* 闭合子元素的浮动*/

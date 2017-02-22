@@ -57,6 +57,17 @@ a[href].white, .white {
 .vm {
   vertical-align: middle; }
 
+.ellipsis {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  /*text-align:center;*/
+  max-width: 100%;
+  line-height: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
+
 /* clearfix*/
 /* 闭合子元素的浮动*/
 .relative {
@@ -146,6 +157,10 @@ input {
 
 input[type="checkbox"] {
   outline: none; }
+
+.disabledLink {
+  background: gray !important;
+  cursor: not-allowed; }
 
 .full-height {
   height: 100%; }
@@ -262,17 +277,6 @@ input[type="checkbox"] {
   display: table-cell;
   vertical-align: middle;
   height: auto; }
-
-.ellipsis {
-  display: inline-block;
-  *display: inline;
-  zoom: 1;
-  /*text-align:center;*/
-  max-width: 100%;
-  line-height: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis; }
 
 .img-center {
   position: absolute;

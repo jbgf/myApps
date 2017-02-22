@@ -27,14 +27,14 @@ $(function(){
 
 		(function slider(){
 
-			      	 jQuery(".slideBox01").slide({mainCell:".bd ul",autoPlay:true,effect:"leftLoop",easing:"swing",interTime:"3500"});
+			      	$(".slideBox01").length > 0 && jQuery(".slideBox01").slide({mainCell:".bd ul",autoPlay:true,effect:"leftLoop",easing:"swing",interTime:"3500"});
 			      
 		})();
 
 		/* login row slide start */
 		(function(){
 	        
-	                 jQuery(".picScroll04").slide({mainCell:".bd ul",autoPlay:true,effect:"leftLoop",easing:"swing",interTime:"3500"});  
+	                $(".picScroll04").length > 0 && jQuery(".picScroll04").slide({mainCell:".bd ul",autoPlay:true,effect:"leftLoop",easing:"swing",interTime:"3500"});  
 	          
 		})();
 		/* login row slide end */
@@ -144,8 +144,8 @@ function showMessage(msg){
     var _self = this;
     var fixleft,fixtop,posFixObj;
     
-      ele.load(function(){
-          $(this).addClass("loaded");
+      ele.find("img").load(function(){
+          ele.addClass("loaded");
           call_f();
       })
       

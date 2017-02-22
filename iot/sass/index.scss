@@ -655,8 +655,8 @@ $news_line_th:$news_tab_h+$news_line_gutter+$news_h;
 }
 $application_h:513px;
 $application_gutter:90px;
-.application_zone{padding-top:$application_gutter;
-	min-height:($application_h)-$application_gutter;background:#f0f4f6;
+.application_zone{padding:$application_gutter 0;
+	/* min-height:($application_h)-$application_gutter; */background:#f0f4f6;
 	.inner{@extend %clear;display:block;}
 	.cell-l{width:percentage(280/1000);
 		.inner{
@@ -673,11 +673,17 @@ $application_gutter:90px;
     	&.on{-webkit-box-shadow:0 0 20px lighten($mainColor,30%);box-shadow:0 0 20px lighten($mainColor,30%);   }   
 	}
 	.cell-r{
-		@include row(4,10px)
+		@include row(4,8px)
 		.row-block{display:block;
-			.rb_box{background:white;padding:15px 15px 10px;
-				.imgbox{height:167px;@extend %relative;img{@extend %absfull;}}
-				.text{@extend %align-center;padding:10px 15px 0;}
+			.rb_box{background:white;padding:10px 10px 10px;
+				.imgbox{height:117px;@extend %relative;img{@extend %absfull;}}
+				.text{
+					@extend %align-center;
+					
+					padding: 10px 15px 0;
+					height: 20px;
+    				overflow: hidden;
+				}
 			}  
 		} 
 	}
@@ -829,7 +835,7 @@ $coope_gutter:15px;
 			  	@include border($position:bottom,$width:1px,$color:none);
 			  }
 			  img.grayfilter{
-			  	@extend %boxflect;
+			  	/* @extend %boxflect; */
 			  	@extend %grayfilter;
 			  	
 			  }
@@ -1034,21 +1040,20 @@ $content_head:60px;
 	    border-bottom-style: dashed;
 	    border-bottom-color: rgb(194, 194, 194);
 	}
-
+	$nuheight:175px;
 	.news-ul01 .newsRow .cl-pic {
-	    width: 177px;
-	    height: 175px;
+	    width: $nuheight/3*4;
+	    height: $nuheight;
 	    
 	    img{@extend %full;}
 	}
-
+	.news-ul01 .newsRow .cl-newsBox {
+	    text-align: left;
+	    margin-left: $nuheight/3*4 + 20px;
+	}
 	.news-ul01 .newsRow .cl-pic img{
 	    width: 100%;
 	    display: block;
-	}
-
-	.news-ul01 .newsRow .cl-newsBox {
-	    text-align: left;
 	}
 
 	.news-ul01 .newsRow .cl-newsBox .cl-title .cl-p01 {
@@ -1114,7 +1119,11 @@ $content_head:60px;
 	.clock,.view{
 		
 		margin-right: 15px;
-		img{margin-right:5px;}	
+		img{
+			margin-right:5px;
+			position: relative;
+    		top: 1px;
+		}	
 	}
     
 }
@@ -1317,8 +1326,12 @@ $productImg_gutter:15px;
 				@extend %relative;	
 				.tips{text-align:right;}
 				.name{
-					img{margin-right:5px;}
-					color:gray;@extend %abs;left:10px;bottom:0;
+					img{
+						margin-right:5px;
+						position: relative;
+    					top: -1px;
+					}
+					color:gray;@extend %abs;left:0px;bottom:0;
 			};
 			
 		}
@@ -1755,9 +1768,16 @@ $p_news_pp:5px;
 		.text_introduce{padding:23px 0;
 
 		}
-		.interact{span{
-			margin-left:13px;.icon{margin-right:3px;}
+		.interact{
+			span{
 			cursor:pointer;  
+			margin-left:13px;
+			.icon{margin-right:3px;
+				position: relative;
+    			top: -3px;
+    			
+			}
+			
 			}}
 		.view{margin-left:40px}
 	}
@@ -1832,7 +1852,7 @@ $wr3:0.5,2.2,2.5,0.6,1.5,1.5;
 	    		left: 7px;
 	    		}}
 
-	}
+	}  
 	.pnum{background:#f7f8f8;margin-top:12px;padding:5px 10px;}
 }
 $wdr:1,3.5,1.5;
@@ -1938,9 +1958,9 @@ $articl_p:$wd_plr;
 	.avatar{@include circleImg($size:111px,$color:transparent);
 		
 	}
-	
-	.c_picBox{@include textTab($width:305px,$height:$cmp_h,$position:"left");
-		.border{@include borderImg(305px,$cmp_h,5px,#ddd);}
+	$c_picBox_w:287px;
+	.c_picBox{@include textTab($width:$c_picBox_w,$height:$cmp_h,$position:"left");
+		.border{@include borderImg($c_picBox_w,$cmp_h,5px,#ddd);}
 	}
 	.c_infoBox{@include newsTab_img($height:$cmp_h,$margin:305px + $cmp,$position:"left");
 		.ul02{margin-left:10px}
@@ -2034,7 +2054,7 @@ $imgthumb_w:130px;
 			line-height:30px;
 			background: #f6f6f6;
 			border-radius: 3px;
-			margin-top:$sf_mt/2;
+			margin-top:$sf_mt/4;
     		@include border(); 
     		@include cursor();
     		&:hover{background: #ece9e9;}
@@ -2313,24 +2333,33 @@ $fc_p:46px;
 
 
 .creator_row{
-	@include picText_row($width:32%,$height:290px,$abs_pos:"left",$mar-gutter:0%);
+	/* $height:290px; */
+	@include picText_row($width:32%,$height:200px,$abs_pos:"left",$mar-gutter:0%);
 
 	.text{padding:0 35px;
 		.cl-p01{
-			padding:15px 0;
+			margin:12px 0;
 			line-height: 26px;
+			height: 52px;
+			overflow: hidden;
 		}
 		.avatarWrapper{
 			padding:15px 0 0;
 		}
 		
 		.cl-text{
-			margin: 30px 0;
-		    height: 65px;
+			margin: 5px 0;
+    		height: 50px;
 		    overflow: hidden;
 
 		}
-		.cl-btn{span{@extend %smallSize;;margin-right:20px;img{margin-right:5px;}}}
+		.cl-btn{span{@extend %smallSize;;margin-right:20px;
+			img{
+				margin-right:5px;
+				position: relative;
+			    vertical-align: middle;
+			    top: -2px;
+				}}}
 		
 	}
 }
