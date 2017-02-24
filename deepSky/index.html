@@ -25,25 +25,38 @@ RSA加密和签名,电脑哨兵,HASH计算工具" />
     <div class="header" >
       <h1 class="logo_link"><a href="/" title="福州深空"><img src="img/logo.png" class="png" alt="福州深空"/></a></h1>
       <ul class="nav_list">
-                <li class="nav_li"> <a href="javascript:;" class="btn_nav" id="nav_more"><i class="ic_more png"></i>更多</a>
+              
+              <li class="nav_li">
 
-                <li class="nav_li"> <a href="/products/index.html" class="btn_nav" clickid="gwxwzx2"><i class="ic_img2 png"></i>产品</a> </li>
-                
-                
-          <div class="more_nav" id="more_nav"> 
-            <!--[if lt IE 9]>
-              <span class="opc_bg"></span>
-              <![endif]--> 
-            <i class="ic_bdot png" id="h_bdot"></i>
-            <ul id="h_nav">
-            <li> <a href="" clickid="gwgd0" class="btn_snav" target="_blank">登录</a> </li>
-                        <li><a href="/news/index.html" clickid="gwgd1" class="btn_snav" target="_blank">深空新闻</a></li>
-                        <li><a href="/customers/index.html" clickid="gwgd3" class="btn_snav" target="_blank">成功案例</a></li>
-                        <li><a href="/contact/index.html" clickid="gwgd5" class="btn_snav" target="_blank">联系我们</a></li>
-                        <li><a href="/introduction/index.html" clickid="gwgd6" class="btn_snav" target="_blank">关于深空</a></li>
+              <a href="#" class="btn_nav" id="nav_more"><i class="ic_more png"></i>更多</a>      
+                  <div class="more_nav" id="more_nav">
+<!-- __________________________________________________________________                   -->
+                        <a href="javascript:;" class="btn_close hide_txt">关闭</a>
+<!-- __________________________________________________________________                   -->
+                          <!--[if lt IE 9]>
+                          <span class="opc_bg"></span>
+                          <![endif]--> 
+                        <i class="ic_bdot png" id="h_bdot"></i>
+                        <ul id="h_nav">
+                            <li> <a href="" clickid="gwgd0" class="btn_snav" target="_blank">登录</a> </li>
+                            <li><a href="/news/index.html" clickid="gwgd1" class="btn_snav" target="_blank">深空新闻</a></li>
+                            <li><a href="/customers/index.html" clickid="gwgd3" class="btn_snav" target="_blank">成功案例</a></li>
+                            <li><a href="/contact/index.html" clickid="gwgd5" class="btn_snav" target="_blank">联系我们</a></li>
+                            <li><a href="/introduction/index.html" clickid="gwgd6" class="btn_snav" target="_blank">关于深空</a>
+                            </li>
                         </ul>
-          </div>
-        </li>
+                  </div>
+              </li>  
+<!-- __________________________________________________________________                   -->
+              <script type="text/javascript">
+                  $('a.btn_close').on("touchend",function(){
+                      $(this).closest('#more_nav').removeClass("show");
+                      return false;
+                  })
+
+              </script>
+<!-- __________________________________________________________________                   -->
+              <li class="nav_li"><a href="#" class="btn_nav" id=""><i class="ic_more png"></i>产品</a></li>  
       </ul>
     </div>
     <div class="page_wp" id="page_wp">

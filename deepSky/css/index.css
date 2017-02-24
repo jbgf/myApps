@@ -44,7 +44,7 @@ table {
     bottom: 12px;
     width: 100%;
     left: 0;
-    z-index: 99;
+/**/z-index: 90;
     text-align: center;
     font-size: 14px;
     color: #4c4c4c;
@@ -735,6 +735,8 @@ img {
         transform-origin: center center;
     -webkit-transform-origin: center center
 }
+
+
 /*@media only screen and (min-width:1600px) {
     .scale_box {
         -ms-transform: scale(1);

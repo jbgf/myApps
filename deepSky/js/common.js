@@ -37,6 +37,29 @@
                   $hSdot.css({left:-9999});
                 }); 
              
+            var ww = $(window).width();
+
+            /*判断是否移动设备：isMobileDevice start*/
+            var device = isMobileDevice();
+            if(device == "mobile"){
+                var nav = $(".header .more_nav");
+                nav.width(ww).on("touchmove",function(e){
+                    e.preventDefault();
+                });  
+
+            }    
+
           })();
   });
 
+
+  /*判断是否移动设备：isMobileDevice start*/
+  function isMobileDevice(){
+        var d;
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) && $(window).width()<700 ){
+          d="mobile";
+        }else{
+          d="web";  
+        } 
+        return d;
+  }
