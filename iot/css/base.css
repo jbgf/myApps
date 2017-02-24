@@ -30,7 +30,7 @@
   background: #f0f4f6; }
 
 .baseFontColor {
-  color: #333; }
+  color: #666; }
 
 .light-gray {
   color: #f8f8f8; }
@@ -121,7 +121,7 @@ body {
   overflow-x: hidden;
   font-size: 14px;
   line-height: 22px;
-  color: #333; }
+  color: #666; }
 
 a {
   text-decoration: none;
@@ -211,7 +211,7 @@ input[type="checkbox"] {
 
 /*color*/
 .titleColor {
-  color: black; }
+  color: #1a1a1a; }
 
 .i_white {
   color: #fff !important; }

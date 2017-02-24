@@ -265,6 +265,7 @@ function showMessage(msg){
     this.text = $.trim(this.$element.text());
     this.sub = "";
     this.flag = 0;
+    this.logined = 0;
     this._sub();  
    
   }
@@ -289,9 +290,14 @@ function showMessage(msg){
   elli_text.prototype._bindClick = function(id){
     var that = this;
     var callback = this.options.test_function;
-    if(!that.options.ajax_a && typeof(callback) == "function" && callback()){
+    var proxy = $.proxy(callback,that.$element[0]);
+    
+    if(!that.options.ajax_a && typeof(callback) == "function" && proxy()){
+        this.logined = 1;
         _onclick();
-
+    }else{
+        this.logined = 0;
+        _onclick();
     }
 
     if(that.options.ajax_a){
@@ -311,12 +317,20 @@ function showMessage(msg){
 
     function _onclick(){
         var trigger = '[data-id='+id+']';
+        var failCall = that.options.failCall,
+            fail = $.proxy(failCall,that.$element[0])
+
         $(document).on("click",trigger,function(){
+                if(that.logined == 0 && that.options.failCall){
+                    fail();
+                    return false;
+                }
                /* console.log(that.$element)*/
                 if(that.flag ==1){
                   that.$element.html(that.text);
                   /*console.log(that.$element.data("id"))*/
-                }     
+                }
+                     
         })
         
     }  

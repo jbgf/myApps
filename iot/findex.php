@@ -3,23 +3,15 @@
         	$(function(){
         		var c = function(){
         			
-        			
-        			
           		    jQuery("#textTab02").slide({mainCell:".bd ul",titCell:".hd li"}); 
 
           		    jQuery(".application_zone").slide({mainCell:".bd ul.app_ul",titCell:".hd li"}); 
-
            
           		    jQuery("#textTab03").slide({mainCell:".bd ul",titCell:".hd li" }); 
-
                
 					jQuery(".creator_slide .creator_inner_slide").slide({mainCell:"ul",vis:4,prevCell:".sprev",nextCell:".snext",effect:"leftLoop"})
 					
 					jQuery(".creator_slide").slide({mainCell:".creator_li_ul",vis:3,titCell:".creator_title li"})
-
-        											
-						
-	    			
 
 	    			$(".cooperate_link img").addClass("grayfilter").hover(
 	    				function(){
@@ -46,10 +38,10 @@
 	          </div>
 	          <div class="bd">
 	            <ul>
-	              <li><a href="#" target="_blank"><img src="img/slider01.png"></a></li>
-	              <li><a href="#" target="_blank"><img src="img/slider01.png"></a></li>
-	              <li><a href="#" target="_blank"><img src="img/slider01.png"></a></li>
-	              <li><a href="#" target="_blank"><img src="img/slider01.png"></a></li>
+	              <li><a href="#" target="_blank" style="background:url(img/slider01.jpg) center center no-repeat"></a></li>
+	              <li><a href="#" target="_blank" style="background:url(img/slider01.jpg) center center no-repeat"></a></li>
+                  <li><a href="#" target="_blank" style="background:url(img/slider01.jpg) center center no-repeat"></a></li>
+                  <li><a href="#" target="_blank" style="background:url(img/slider01.jpg) center center no-repeat"></a></li>
 	            </ul>
 	          </div>
 	    </div>
@@ -265,21 +257,33 @@
 				                                      <div class="news-list01">
 				                                          <ul>
 				                                              <li>
-				                                              	<a class="t blue float-l">行业展会</a>
-				                                              	<a class="divider float-l"><span class="text">2014年度上海市服务贸易发展专项资金申 </span>  </a>
+				                                              	
+				                                              	<a class="ellipsis float-l">
+                                                                2014年度上海市服务贸易发展专项资展专项资展专项资展专项资展专项资金申
+                                                                </a>
+                                                                <span class="date blue">2017-01-25</span>  
 				                                              </li>
-				                                              <li>
-				                                              	<a class="t blue float-l">行业展会</a>
-				                                              	<a class="divider float-l"><span class="text">2014年度上海市服务贸易发展专项资金申 </span>  </a>
-				                                              </li>
-				                                              <li>
-				                                              	<a class="t blue float-l">行业展会</a>
-				                                              	<a class="divider float-l"><span class="text">2014年度上海市服务贸易发展专项资金申 </span>  </a>
-				                                              </li>
-				                                              <li>
-				                                              	<a class="t blue float-l">行业展会</a>
-				                                              	<a class="divider float-l"><span class="text">2014年度上海市服务贸易发展专项资金申 </span>  </a>
-				                                              </li>
+                                                              <li>
+                                                                
+                                                                <a class=" float-l">
+                                                                <span class="ellipsis">2014年度上海市服务贸易发展专项资展专项资展专项资展专项资展专项资金申 </span>
+                                                                </a>
+                                                                <span class="date blue">2017-01-25</span>  
+                                                              </li>
+                                                              <li>
+                                                                
+                                                                <a class=" float-l">
+                                                                <span class="ellipsis">2014年度上海市服务贸易发展专项资展专项资展专项资展专项资展专项资金申 </span>
+                                                                </a>
+                                                                <span class="date blue">2017-01-25</span>  
+                                                              </li>
+                                                              <li>
+                                                                
+                                                                <a class=" float-l">
+                                                                <span class="ellipsis">2014年度上海市服务贸易发展专项资展专项资展专项资展专项资展专项资金申 </span>
+                                                                </a>
+                                                                <span class="date blue">2017-01-25</span>  
+                                                              </li>
 				                                              
 
 				                                          </ul>  

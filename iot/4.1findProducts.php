@@ -124,8 +124,9 @@
                             <div class="right_linkBar">
                                 <ul class="linkBar_ul">
                                     <li>
-                                        <a class="wrapper"><div class="brand_img">
-                                            <img class="" src="img/icon_brand.png">
+                                        <a class="wrapper">
+                                        <div class="brand_img">
+                                            <div class="full"><img class="" src="img/brand02.jpg"></div>
                                             
                                         </div>
                                         <p>华为技术有限公司</p>

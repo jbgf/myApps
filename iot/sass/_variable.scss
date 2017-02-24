@@ -29,7 +29,12 @@ $container_width: 1200px!default ;
  
 $baseImgUrl:'../img/';
 
+$text-lr:20px;
+$text-pr:10px;
 
+%text-lr{padding-left:$text-lr;}
+%text-pr{padding-right:$text-pr;}
+ 
 /* color start */
 $white:#fff;
 $mainColor:#006acf;
@@ -41,7 +46,7 @@ $blue:$mainColor;
 $light-green:#4bd8a3;
 $orange:#efa506;
 $red:#ec5369;
-$baseFontColor : #333;
+$baseFontColor : #666;
 $baseBorderColor:#ddd;
 $titleColor:darken($baseFontColor, 30%);
 $cyan:#f0f4f6;

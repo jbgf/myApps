@@ -9,7 +9,7 @@ body{
     font-size: $baseSize;
     line-height: $baseLineHeight;
     color: $baseFontColor;
-}
+} 
   
 a{text-decoration: none;cursor: pointer;}
 a[href].white{@extend %white;}

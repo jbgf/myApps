@@ -64,7 +64,7 @@
 		    table-layout: fixed;
 		    border-collapse: separate;
 		    cursor: pointer;
-
+		    form{display:table;}
 		    .dropDownMenu {
 		    	$padding-left:10px;
 			    background-color: #fff;
@@ -216,7 +216,7 @@
 			    opacity: 0.9;
 			    text-align: center;
 			    li{
-			    	padding: 5px 45px;
+			    	padding: 5px 0px;
 				    &:hover a{
 				    	color: $mainColor;
 				    	font-weight: 700;
@@ -269,11 +269,13 @@
 		@include slide_hd_li(9px,12px,none,#fff);
 		border:2px solid #fff;
 	}
-	
+$slidb01H:410px;
 	.slideBox01 .bd {
 	    position: relative;
 	    width: 100%;
 	    z-index: 0;
+	    height: $slidb01H;
+	    ul,ul li,ul li a{height:$slidb01H;}
 	}
 	.slideBox01 .bd li {
 	    width: 100%;
@@ -564,14 +566,30 @@ $news_line_th:$news_tab_h+$news_line_gutter+$news_h;
 	.textTab01.case02 {
 	    height: auto;
 	    border-bottom: none;
-	}
+	} 
 	.row02{ 
 		@include slideTxtBox_li($news_tab_h);
+		.switch-li{
+			
+			.news-list01 {li{
+				padding-left:15px;position:relative;
+				@include persudo($color:$mainColor,$content:"\25aa",$position:before,$bg:none);	
+				a{
+					width: 75%;
+					height: 26px;
+					@extend %float-l;
+					.ellipsis{line-height:inherit;}
+				}
+				.ellipsis{line-height:inherit;}
+				.date{width:25%;display:block;@extend %float-l;@extend %align-right;}
+				}
+			}
+		}
 	}
-	  
+	$textTab01_pr:10px;  
 	.textTab01 {
-		@include textTab($news_tab_w,$news_tab_h);
-		
+		@include textTab(($news_tab_w)-$textTab01_pr,$news_tab_h);
+		padding-right:$textTab01_pr;
 	    .s-general {
 		    height: 50%;
 		}
@@ -609,7 +627,7 @@ $news_line_th:$news_tab_h+$news_line_gutter+$news_h;
 		}
 	}
 	.newsTab01_pic{
-		@include newsTab_img($news_tab_h,($news_tab_w)+10px)
+		@include newsTab_img($news_tab_h,($news_tab_w)+20px)
 	}
 
 	
@@ -692,6 +710,7 @@ $application_gutter:90px;
 $news_tab_w03:645px;
 $text_tab_h03:97px;
 $news_tab_h03:265px;
+
 	.iot_content_row.row03{
 
 		@include slideTxtBox_li($news_tab_h03);
@@ -706,20 +725,24 @@ $news_tab_h03:265px;
 	}
 	.textTab02{
 		@include textTab($news_tab_w03,$text_tab_h03);
+		@extend %text-pr;
 		.stb-text {
 			    height: 30px;
 			    line-height: 30px;
 			    font-size: $bigSize;
 			    color: black;
 		}
-	}  
+	}   
 	.newsTab02_pic{
-			@include newsTab_img($text_tab_h03,($news_tab_w03)+15px);
+			@include newsTab_img($text_tab_h03,($news_tab_w03)+25px);
 			padding-bottom:$news_line_gutter;
 	}
+	.row03 .news-list01{
+		@extend %text-pr;
+	} 
 /* 专家团队 */
 	.team{}
-	.team{
+	.team{ 
 		padding-top:10px; 
 		.floor{
 			height:($news_tab_h03)/3;
@@ -747,7 +770,7 @@ $news_tab_h03:265px;
 	}
 	   
 	  /* 专家团队   */
-
+$maringli-ml:30px;
 .creatorZone{
 	height:580px;
 	@extend %relative;
@@ -757,13 +780,14 @@ $news_tab_h03:265px;
 		p{font-weight:700;font-size: $bigSize;}
 
 		@extend %align-center;
-		ul{display:inline-block;padding-top:30px;font-size:$mediumSize;}
+		ul{display:inline-block;padding-top:30px;font-size:$mediumSize;margin-left:-$maringli-ml;}
 		li{
 			&.on{background:white;color:$mainColor;}
 			@include line_of_li(false,3);
     		@include radius(6px);
     		&.on{-webkit-box-shadow:0 0 20px lighten($mainColor,30%);box-shadow:0 0 20px lighten($mainColor,30%);   }   
 			padding:10px;
+			margin-left: $maringli-ml;
 		} 
 	}
 	.creator_li{padding:80px 0 90px;}   
@@ -884,13 +908,14 @@ $coope_gutter:15px;
 $footinner_h:125px;
 $footer_p:50px;
 $qrZone_w:380px;
-.footer{background:#f9f9f9;
+.footer{
+	background:#f9f9f9;
 	.copyRight{@extend %align-center;background:#005fba;@extend %white;font-size:$smallSize;padding:2px 0;}
 	.foot{
 		
-		padding:{top:$footer_p ;bottom:($footer_p )-5;}
+		padding:{top:$footer_p ;bottom:($footer_p )-10px;}
 		color:white;
-		height:$footinner_h;
+		
 		@extend %relative;
 		background:$mainColor;
 		.qrZone{@include textTab($qrZone_w,$footinner_h,"right");
@@ -1285,9 +1310,9 @@ $linkBar_li_p:18px;
 		& + li{border-top:1px solid #ddd;}
 		
 		@at-root .brand_img{
-			@include brand_img($size:70px,$bg:#fff,$border:1px solid #ddd);
+			@include brand_img($size:80px,$bg:#fff,$border:1px solid #ddd);
 		}
-		.brand_img{@extend %mar-center;}
+		.brand_img{@extend %mar-center;overflow:hidden;img{width:90%;}}
 	}
 }
 
@@ -2054,7 +2079,7 @@ $imgthumb_w:130px;
 			line-height:30px;
 			background: #f6f6f6;
 			border-radius: 3px;
-			margin-top:$sf_mt/4;
+			margin-top:3px;
     		@include border(); 
     		@include cursor();
     		&:hover{background: #ece9e9;}

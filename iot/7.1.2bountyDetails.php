@@ -111,22 +111,32 @@
                                               痛点描述
                                         </div>
                                         <div class="article">
-                                          
                                           <p class="phase">
+                                            2新华网厦门12月5日电（刘默涵）记者今天获悉，2017“物联中国—寻找最具影响力、最具投资价值物联网项目”年度盛典活动将于12月8日在北京正式启动全国招募，并推动香港、北京、深圳、上海、西安、无锡、长沙、济南、重庆、福州等地的区域项目海选。
+                                          </p>
+                                        </div>
+                                        <div class="article">
+                                          
+                                          <p class="phase user">
                                             2新华网厦门12月5日电（刘默涵）记者今天获悉，2017“物联中国—寻找最具影响力、最具投资价值物联网项目”年度盛典活动将于12月8日在北京正式启动全国招募，并推动香港、北京、深圳、上海、西安、无锡、长沙、济南、重庆、福州等地的区域项目海选。
                                           </p>
                                           <script type="text/javascript">
                                             $(".article .phase").elli_text({
                                                 test_function:function(){
-                                                    
+
+                                                    return $(this).hasClass("user")
                                                 },
+                                                failCall:function(){
+                                                   alert('test')
+                                                }
+                                                /*,
                                                 ajax_a:{
                                                         url: "php/fileupload.php",
                                                         data:{action:"test"},
                                                         success:function(remote){
                                                             if(remote == 1){return true}
                                                         }
-                                                }
+                                                }*/
                                                 
                                             })
                                           </script>
