@@ -92,13 +92,17 @@
                                               痛点背景    
                                         </div>
                                         <div class="article">
-                                          <p id="phase1" class="phase" >
-                                            新华网厦门12月5日电（刘默涵）记者今天获悉，2017“物联中国—寻找最具影响力、最具投资价值物联网项目”年度盛典活动将于12月8日在北京正式启动全国招募，并推动香港、北京、深圳、上海、西安、无锡、长沙、济南、重庆、福州等地的区域项目海选。
-                                          
-                                            新华网厦门12月5日电（刘默涵）记者今天获悉，2017“物联中国—寻找最具影响力、最具投资价值物联网项目”年度盛典活动将于12月8日在北京正式启动全国招募，并推动香港、北京、深圳、上海、西安、无锡、长沙、济南、重庆、福州等地的区域项目海选。
-                                          
+                                          <p id="phase1" class="phase user" >
+                                            
                                           </p>
+                                          <div class="contentTemp">
+                                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;新华网厦门12月5日电（刘默涵）记者今天获悉，2017“物联中国—寻找最具影响力、最具投资价值物联网项目”年度盛典活动将于12月8日在北京正式启动全国招募，并推动香港、北京、深圳、上海、西安、无锡、长沙、济南、重庆、福州等地的区域项目海选。</p>
+                                            <p>
+                                              新华网厦门12月5日电（刘默涵）记者今天获悉，2017“物联中国—寻找最具影响力、最具投资价值物联网项目”年度盛典活动将于12月8日在北京正式启动全国招募，并推动香港、北京、深圳、上海、西安、无锡、长沙、济南、重庆、福州等地的区域项目海选。
+                                            </p>
                                           
+                                            
+                                          </div>
                                           
                                         </div>
 
@@ -121,24 +125,42 @@
                                             2新华网厦门12月5日电（刘默涵）记者今天获悉，2017“物联中国—寻找最具影响力、最具投资价值物联网项目”年度盛典活动将于12月8日在北京正式启动全国招募，并推动香港、北京、深圳、上海、西安、无锡、长沙、济南、重庆、福州等地的区域项目海选。
                                           </p>
                                           <script type="text/javascript">
-                                            $(".article .phase").elli_text({
-                                                test_function:function(){
-
-                                                    return $(this).hasClass("user")
-                                                },
-                                                failCall:function(){
-                                                   alert('test')
-                                                }
-                                                /*,
-                                                ajax_a:{
-                                                        url: "php/fileupload.php",
-                                                        data:{action:"test"},
-                                                        success:function(remote){
-                                                            if(remote == 1){return true}
+                                            $(function(){
+                                              var clone_a = $(".contentTemp").clone();
+                                                $(".contentTemp").hide();
+                                                clone_a.each(function(i,e){
+                                                    var text,phase;
+                                                    var textString = "";
+                                                    var ps = $(e).find("p");
+                                                        if(ps.lengh>0){
+                                                          ps.each(function(i,e){
+                                                            textString += $(e).html(); 
+                                                          })
+                                                        }else{
+                                                          textString += $(e).html();
                                                         }
-                                                }*/
-                                                
+                                                        phase = $(".article .phase").eq(i);
+                                                        $(e).remove(); 
+                                                        phase.html(textString);
+                                                });
+
+                                                var btnText = $(".article .phase").hasClass("user")?"展示更多":"登录展示更多";
+                                                $(".article .phase").elli_text({
+                                                    length:200,
+                                                    test_function:function(){
+                                                        return $(this).hasClass("user");
+                                                    },
+                                                    successCall:function(i){
+                                                        $(this).hide();
+                                                        $(".contentTemp").eq(i).show();
+                                                    },
+                                                    failCall:function(){
+                                                        location.href = "{dr_member_url('login/index')}";
+                                                    },
+                                                    _ellibtnText:btnText
+                                                })
                                             })
+                                              
                                           </script>
                                         </div>
 

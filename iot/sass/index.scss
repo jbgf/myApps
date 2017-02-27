@@ -56,9 +56,8 @@
 		padding:18px 0;
 		.input_group{ 
 			-webkit-box-sizing:border-box;
-		        box-sizing:border-box;
+		    box-sizing:border-box;
 		    padding-top:($logoRow-h - $input-set-l-h)/2;
-		    
 		    position: relative;
 		    display: table;
 		    table-layout: fixed;
@@ -114,7 +113,6 @@
 			}
 			.input-set-l {
 			    height: $input-set-l-h;
-			   
 			    display: table-cell;
 			}
 		}
@@ -126,15 +124,10 @@
 
 	    display: inline-block;
 	    float: left;
-	    
 	    font-weight: 500;
-	    
-
 	    position: relative;
-	   
 	    border: 2px solid $mainColor;
 	    border-left: none;
-
 	}
 	.input-set input{
 		height: 100%;
@@ -151,12 +144,11 @@
 	    outline: none;
 	    font-size: $mediumSize;
 	}
-	.input-set .button {
+	.input-set .button{
 	    width: 100px;
 	    text-align: center;
 	    font-size: $mediumSize;
 	    img{margin-right:5px;@extend %relative;top:2px;} 
-
 	}
 /* logoRow start */
 
@@ -969,10 +961,10 @@ $leftSide_gutter:10px;
 	@extend %relative;
 	.contentWrapper{
 	}
-	#leftSideBar_wrapper{padding-bottom:50px;@extend %relative;}
+	#leftSideBar_wrapper{padding-bottom:50px;@extend %relative;@extend %clear;}
 	.leftSide{
-		
-		@include textTab($width:$leftSide_w,$height:auto,$position:"left");
+		@include ftextTab($width:$leftSide_w,$height:auto,$position:"left");
+		/* @include textTab($width:$leftSide_w,$height:auto,$position:"left"); */
 		.LeftserviceBtn,.leftSide_ad{padding-top:$leftSide_gutter;}
 	} 
 	.rightContent{
@@ -981,6 +973,7 @@ $leftSide_gutter:10px;
 		.rightWrapper1{min-height:800px;}
 	}
 	.rightSide{
+
 		@include textTab($width:$leftSide_w,$height:auto,$position:"right");
 		.LeftserviceBtn,.leftSide_ad{padding-top:$leftSide_gutter;}
 	}
@@ -1017,7 +1010,7 @@ $leftSide_gutter:10px;
 				 .sideBar_li{
 					border:1px solid darken($light-gray, 3%);
 					border-top:none;
-					p{border-left:3px solid $leftBack;}
+					p{border-left:3px solid $leftBack;@extend %align-left;@extend %relative;}
 					&:hover,&.on{
 						@extend %bg-white;
 						p{
@@ -1030,7 +1023,9 @@ $leftSide_gutter:10px;
 					}
 					.caret{
 						@include caret($color:$baseFontColor,$position:left,$width:4px);
-						margin-left: 65px;
+						@extend %abs;
+						right: 20px;
+						top:($sideBarBtn_h - 4px )/2 ;
 					}
 				 }
 	}
@@ -1041,9 +1036,7 @@ $leftSide_gutter:10px;
 		border-top:none;
 		
 	}
-	.leftSide_ad{img{ @extend %full};}
-	
-	
+	.leftSide_ad{img{@extend %full};}
 }
 $content_head:60px;
 .content_head {
@@ -1056,6 +1049,7 @@ $content_head:60px;
 	padding-top:22px;
 	.imgBox{padding-bottom:22px;}	
 	.phase{padding-bottom:21px;}
+	.contentTemp{padding-bottom:21px;}
 }
 
 /* news-ul01 start */
@@ -1066,7 +1060,7 @@ $content_head:60px;
 	    border-bottom-color: rgb(194, 194, 194);
 	}
 	$nuheight:175px;
-	.news-ul01 .newsRow .cl-pic {
+	.news-ul01 .newsRow .cl-pic{
 	    width: $nuheight/3*4;
 	    height: $nuheight;
 	    
@@ -1089,7 +1083,7 @@ $content_head:60px;
 	}
 
 	.news-ul01 .newsRow .cl-newsBox .cl-text {
-	    padding: 24px 0;
+	    margin: 24px 0;
 	    height:65px;
 	    overflow:hidden;
 	}
@@ -1139,18 +1133,15 @@ $content_head:60px;
     background: $mainColor;
 }
 
-
-.news-ul01 .newsRow .cl-newsBox .cl-btn  {
+.news-ul01 .newsRow .cl-newsBox .cl-btn{
 	.clock,.view{
-		
 		margin-right: 15px;
 		img{
 			margin-right:5px;
 			position: relative;
     		top: 1px;
 		}	
-	}
-    
+	}    
 }
 
 .button.cl-details {
@@ -1312,7 +1303,7 @@ $linkBar_li_p:18px;
 		@at-root .brand_img{
 			@include brand_img($size:80px,$bg:#fff,$border:1px solid #ddd);
 		}
-		.brand_img{@extend %mar-center;overflow:hidden;img{width:90%;}}
+		.brand_img{@extend %mar-center;overflow:hidden;img{max-width:90%;}}
 	}
 }
 

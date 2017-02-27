@@ -17,18 +17,10 @@
 		}
 /*加载公共部分*/
 $(function(){
-	
-	
-
 	var c = function(){
 
-
-		
-
 		(function slider(){
-
 			      	$(".slideBox01").length > 0 && jQuery(".slideBox01").slide({mainCell:".bd ul",autoPlay:true,effect:"leftLoop",easing:"swing",interTime:"3500"});
-			      
 		})();
 
 		/* login row slide start */
@@ -43,8 +35,7 @@ $(function(){
 
 	/*高度统一的问题*/
 	var _config = [
-		{selector:".iot_content_row",children:".bd img",class0:".height_d",class1:".height_f"},		
-		{selector:"#leftSideBar_wrapper",children:"",class0:".leftSide",class1:".rightContent"},
+		{selector:".iot_content_row",children:".bd img",class0:".height_d",class1:".height_f"},
 		{selector:"#rightSideBar_wrapper",children:"",class0:".rightSide",class1:".leftContent"},	
 		{selector:".product_article",children:"",class0:".article_zone",class1:".product_column"}	
 	];
@@ -63,8 +54,6 @@ $(function(){
 				if(e.children !="")height_f.find(e.children).height(height_d_h);
 			})
 		})
-
-			
 
 	}
 	setTimeout(function(){equalHeight(_config)},200);
@@ -318,17 +307,19 @@ function showMessage(msg){
     function _onclick(){
         var trigger = '[data-id='+id+']';
         var failCall = that.options.failCall,
-            fail = $.proxy(failCall,that.$element[0])
+            fail = $.proxy(failCall,that.$element[0]),
+            successCall = that.options.successCall,
+            success = $.proxy(successCall,that.$element[0]);
 
         $(document).on("click",trigger,function(){
-                if(that.logined == 0 && that.options.failCall){
-                    fail();
+                if(that.logined == 0 ){
+                    failCall && fail();
                     return false;
                 }
-               /* console.log(that.$element)*/
-                if(that.flag ==1){
-                  that.$element.html(that.text);
-                  /*console.log(that.$element.data("id"))*/
+               
+                if(that.flag ==1 ){
+                    successCall && success(that.options.index);
+                    that.$element.html(that.text);
                 }
                      
         })

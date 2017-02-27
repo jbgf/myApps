@@ -231,6 +231,21 @@
             & + .serviceBtn{margin-#{$d}:$gutter;}    
         }
 }
+
+@mixin ftextTab($width:100px,$height:100px,$position:"right"){
+        
+        @if $position == "left"{
+            @extend %float-l;
+        }
+        @if $position == "right"{
+            @extend %float-r;
+        }
+        width:$width;
+        text-align: left;
+        height: $height;
+        
+}
+
 @mixin textTab($width:100px,$height:100px,$position:"right"){
         @extend %abs;
         @if $position == "left"{
