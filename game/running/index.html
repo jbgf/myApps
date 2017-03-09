@@ -1,0 +1,2226 @@
+<html xmlns="http://www.w3.org/1999/xhtml" style="font-size: 140.625%;"><head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- Mobile Devices Support @begin -->
+<meta name="referrer" content="always">
+<meta content="application/xhtml+xml;charset=UTF-8" http-equiv="Content-Type">
+<meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+<meta content="no-cache" http-equiv="pragma">
+<meta content="0" http-equiv="expires">
+<meta name="referrer" content="always">
+<meta content="telephone=no, address=no" name="format-detection">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes"> <!-- apple devices fullscreen -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>参与活动赢大奖</title>
+<link href="//hdg.faisys.com/css/base.min.css?v=201703070929" rel="stylesheet" type="text/css">
+<link href="//hdg.faisys.com/css/bpb.min.css?v=201610271901" rel="stylesheet" type="text/css">
+<!--<link href="//hdg.faisys.com/css/comm/weui.min.css?v=201703061746" rel="stylesheet" type="text/css" />-->
+
+<script type="text/javascript">
+
+    var g_rem = 20;
+    (function(win){
+        var orientationX = false; //是否横屏进来
+        if(win.orientation==90||win.orientation==-90){
+            orientationX = true;
+        }
+        var docEl = win.document.documentElement,tid;
+        function refreshRem1(){
+            g_rem = docEl.getBoundingClientRect().width/16;
+            !g_rem && (g_rem = 20);
+            docEl.style.fontSize = g_rem + 'px';
+        }
+        function refreshRem2(){
+            g_rem = docEl.getBoundingClientRect().width/16;
+            if(!g_rem){
+                return refreshRem1();
+            }
+            var width = docEl.getBoundingClientRect().width;
+            var d = win.document.createElement('div');
+            d.style.width = '1rem';
+            d.style.display = "none";
+            docEl.firstElementChild.appendChild(d);
+            var defaultFontSize = parseFloat(window.getComputedStyle(d, null).getPropertyValue('width'));
+            docEl.firstElementChild.removeChild(d);
+            docEl.style.fontSize = (g_rem/defaultFontSize)*100 + '%';
+        }
+        var refreshRem = refreshRem2;
+        try{
+            win.addEventListener("orientationchange", function() {//触发手机横屏竖屏事件
+                if(orientationX){
+                    location.reload();
+                }
+            }, false);
+        }catch(e){
+            
+        }
+        
+        /*win.addEventListener('resize', function() {
+            clearTimeout(tid);
+            tid = setTimeout(refreshRem, 100);
+        }, false);*/
+        win.addEventListener('pageshow', function(e) {
+            if (e.persisted) {
+                clearTimeout(tid);
+                tid = setTimeout(refreshRem, 100);
+            }
+        }, false);
+        refreshRem();
+    })(window);
+    
+    function loadGamePreAssets(){}
+</script>
+<!-- <script type="text/javascript" src="//res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+ -->
+
+</head>
+<body class="gameTpl_-1"><div class="unPublish" style="top: -2rem;">活动尚未发布，当前仅供预览</div>
+
+
+<!-- loading页面 -->
+    <div id="preloadPage" class="bg leftClose" style="display: none;">
+        
+        <div class="spinner">
+          <div class="spinner-container container1">
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+            <div class="circle4"></div>
+          </div>
+          <div class="spinner-container container2">
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+            <div class="circle4"></div>
+          </div>
+          <div class="spinner-container container3">
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+            <div class="circle4"></div>
+          </div>
+        </div>
+        
+        <div class="info"><span id="loadPercent">100</span>%</div>
+        <div id="userPreload" data-src="http://7020498.h40.faiusr.com/4/32NfgTbzQ6NwczY7YjelR7YhZjZ5Y2M.png"></div>
+    </div>
+
+    <div class="ajaxLoadBg">
+        <div class="ajaxLoadBar "></div>
+    </div>
+    <div class="body">      
+        <div class="home">
+            <div id="homeBgBox" style="height: 25.2rem;">
+                <img id="homeBg" src="http://8171176.h40.faiusr.com/4/ACgIABAEGAAgleS1tgUo16zJbDCABTjADA.png">  
+            </div>  
+            <div class="gameInfoBox">
+                <div class="titleImg imgContainer absCenter titleDown">
+                    <img id="titleImg" class="slaveImg abs" src="http://8171176.h40.faiusr.com/4/ACgIABAEGAAgoOS1tgUokNHVTzCmBDi2Ag.png" style="width:15.9rem;height:8.95rem;top:0.25rem;left:0rem;">
+                </div>
+            </div>  
+            
+
+    <div id="joinNumLine" class="joinNumLine absCenter" style="top:21.8rem;left:3.35rem;color:rgb(255, 255, 255);font-size:0.7rem; text-shadow:none;">
+    已有 <span id="joinNum" class="specil" style="color:rgb(255, 247, 153);font-size:0.8rem;text-shadow:none;">1</span> 人参加活动</div>
+
+
+<div id="playInfo" class="abs editTarget-playInfo hide" style="width: 9rem; text-align: center; top: 22rem; left: 3.5rem; font-size: 0.7rem; color: rgb(255, 255, 255);">
+    <div class="dayPlayHint">您今天还有 <span id="count" class="specil todayPlayCount" style="font-size: 0.7rem; color: rgb(255, 247, 153);">0</span> 次参与机会</div>
+    <div class="totalPlayHint" style="display: none;">您还有 <span class="totalPlayCount specil" style="font-size: 0.7rem; color: rgb(255, 247, 153);">100</span> 次参与机会</div>
+    <div class="dayPlayHint4Total" style="display: none;">今天有 <span class="count specil todayPlayCount" style="font-size: 0.7rem; color: rgb(255, 247, 153);">0</span> 次</div>
+</div>
+            <div id="startBtn" class="startBtn imgContainer absCenter" style="top:0rem;">
+                <img id="startBtnImg" class="slaveImg abs startTada" src="//hdg.faisys.com/image/bpb/startBtn.png?v=201509051300" style="width:8rem;height:2.5rem;top:19.2rem;left:4rem;">
+            </div>          
+        <div class="bottomSkill skillInfo">页面技术由 凡科互动 提供</div><div class="soundIconOff soundIcon soundIconPlay" style="z-index: 90; left: 0.75rem; top: 1rem; display: none;"></div></div>
+        <div class="gameBox hide gameBgBox overflow-y-hidden" style="height: 25.2rem;">
+            <div id="gameBgBox">
+                <img id="gameBg" src="http://8171176.h40.faiusr.com/4/ACgIABAEGAAg2_S1tgUo7OTmwAQwgAU4wAw.png" style="width:100%;height:auto;"> 
+            </div>
+            
+<div id="gameTopBar" class="gameTopBar" style="color:rgb(231, 138, 33);background-color:transparent">
+    <div class="userInfoBox">
+        <div class="userImgBox" style="border-color:rgba(255, 255, 255, 0.298)"><img src="http://wx.qlogo.cn/mmopen/ajNVdqHZLLDXebVxqmbF5CvwDrzYL7NJCRtIKKc3CtE4l3BWiblQkY9OjTIX4ia2dExGgAKMMzhglmvT4L7lHeiaQ/0" class="userImg"></div>
+                    
+            <div id="grade" class="grade">0</div>
+            
+    </div>
+    <div class="timeBox">
+        时间<br><span class="time">30.00</span>
+    </div>
+</div> 
+            <div id="gameLayerBox">
+                
+                <canvas id="canvas" width="720" height="1134" style="width: 360px; height: 567px;">你的浏览器不支持canvas，请换个牛逼点的浏览器，谢谢</canvas>
+                
+            </div>
+            <div id="tishi1" class="tishi"></div>
+            <div id="tishi2" class="tishi"></div>
+            <div class="timeUpImg hide" style="display: none;"></div>
+        <div class="soundIconOff soundIcon soundIconPlay" style="z-index: 100;"></div></div>
+        
+<div id="spxdPage"></div>
+<div id="pageMusic" style="position:absolute;top:0;height:0;"><audio preload="auto" src="//hdg.faisys.com/image/bpb/bgmusic03M.mp3" x5nativepanel="freewififorvideo_fromvideoelment"></audio></div>
+<!-- 活动规则，排行榜，我的奖品的弹出层 -->
+<div class="ruleImg imgContainer absCenter" _mousein="0" onclick="showRule();">
+    <img id="ruleImg" class="slaveImg abs ruleImgAnimate" src="//hdg.faisys.com/image/ruleImg_red.png?v=2016091816" style="width:3rem;height:3rem;top:0.15rem;left:12.85rem;">
+</div>
+
+<div id="poupInfoBox"> 
+    <div class="poupHead">
+        <div class="poupTitleBox">
+            <div id="actionExpBtn" class="poupTitleMune checked" _flag="2" style="width: 4.41667rem;">
+                <div class="item">活动说明</div>
+            </div>
+            
+                <div id="ranBtn" class="poupTitleMune" _flag="1" style="width: 4.41667rem;">
+                <div class="item">排行榜</div>
+            </div>
+            
+            <div id="prizeBtn" class="poupTitleMune" _flag="3" style="width: 4.41667rem;">
+                <div class="item">我的奖品<span id="Award_Round_Dot" class="redDot hide"></span></div>
+            </div>   
+            <div id="winnerBtn" class="poupTitleMune hide" _flag="4" style="width: 4.41667rem;">
+                <div class="item">获奖名单</div>
+            </div>
+            <div class="poupSlideBar">
+                <div class="slideBarTip transitionPanel" style="width: 4.41667rem;"></div>
+            </div>
+        </div>
+        <div class="poupClose"></div>
+        <div style="clear:both; height:0"></div>
+        <!--<div class="poupTitle">活动及奖品说明</div>-->
+    </div>
+    <div id="popTabBox" class="popTabBox transitionPanel" style="left: 0px; width: 1080px;">
+        <div id="ruleBox" class="poupMain" _flag="2" style="width: 33.3333%; height: 465.875px;">
+                    
+                
+            
+            
+            
+            
+            
+        <div id="awardLine" class="poupLine" data-sortkey="a">
+                <div class="mainTitle">活动奖品</div>
+                <div id="awardLineBox">
+                <div class="unComfortLine awardItem "><span class="awardStyle">一等奖</span> : <span class="award">价值100元礼品</span></div>
+<div class="unComfortLine awardItem "><span class="awardStyle">二等奖</span> : <span class="award">价值50元礼品</span></div>
+<div class="unComfortLine awardItem "><span class="awardStyle">三等奖</span> : <span class="award">价值10元礼品</span></div>
+<div class="unComfortLine awardItem hide"><span class="awardStyle">四等奖</span> : <span class="award">价值5元小礼品</span></div>
+<div class="unComfortLine awardItem hide"><span class="awardStyle">五等奖</span> : <span class="award">价值5元小礼品</span></div>
+<div class="unComfortLine awardItem hide"><span class="awardStyle">六等奖</span> : <span class="award">价值5元小礼品</span></div>
+<div class="unComfortLine awardItem hide"><span class="awardStyle">七等奖</span> : <span class="award">价值5元小礼品</span></div>
+<div class="unComfortLine awardItem hide"><span class="awardStyle">八等奖</span> : <span class="award">价值5元小礼品</span></div>
+<div class="awardItem anwei hide"><span class="awardStyle">安慰奖</span> : <span class="award">价值5元小礼品</span></div>
+
+                </div>  
+                <div id="selfAwardLine" class="hide" style="word-wrap: break-word; display: none;"></div>
+            </div><div id="gameDateTime" class="poupLine" data-sortkey="b">
+                <div class="mainTitle">活动时间</div>
+                <p><span id="startDate">2017年3月8日 08:54</span>&nbsp;-&nbsp;<span id="endDate">2017年3月15日 08:54</span></p>
+            </div><div class="hostLine poupLine" data-sortkey="c">
+                <div class="mainTitle">主办单位</div>
+                <p>本次活动主办单位为 <a class="hostName" href="#" style="text-decoration: none;">请输入企业名称</a></p>
+                <p>主办单位在法律允许的范围内拥有活动解释权</p>
+            </div><div id="skillLine" class="skillLine poupLine" data-sortkey="d">
+                <div class="skillCont">
+                    <div class="mainTitle">技术支持</div>
+                    <p>页面技术由 <a class="skillName" href="http://mp.weixin.qq.com/s?__biz=MjM5MTk5MjI3OA==&amp;mid=209854000&amp;idx=1&amp;sn=82241d924839270d3ea820ad2d56c01b#wechat_redirect">凡科互动</a> 提供，技术支持方仅提供页面技术，不承担由活动引起的相关法律责任</p>
+                </div>
+            </div><div id="explainBox" class="poupLine" data-sortkey="e">
+                <div class="mainTitle">活动及兑奖说明</div>
+                
+                    <p id="explaiDrawInfoBox">
+                        <span id="haveScore">达到 <span id="scoreLimit" class="scoreLimit">300</span><span class="gameScoreUnit">分</span><span id="exlainDrawFont">即可获得抽奖机会，</span></span>
+                        
+                        <span id="directDrawInfoBox" class="">
+                            每人<span class="dayFont">每日</span>有 <span id="drawTimesLimit">3</span> 次抽奖机会<span class="drawTotalFont">，每人最多可抽奖 <span id="totalDrawTimeLimit">6</span> 次</span>。<br>
+                        </span> 
+                        
+                    </p>
+                
+                <p id="explainPlayInfoBox" class="hide">
+                    <span id="rankPlayInfoBox">
+                        每人<span class="dayFont">每日</span>有 <span class="playTimesLimit">5</span> 次参与机会<span class="playTotalFont" style="display: none;">，每人最多可参与 <span class="playTotalLimit">10</span> 次</span>。<br>
+                    </span>
+                </p>                
+                <div id="exlainInfo">获奖后凭兑奖码联系活动主办单位即可兑奖。</div>
+            </div></div>
+        <div id="rankBox" class="poupMain" _flag="1" style="width: 33.3333%; height: 465.875px;">
+            <div id="noRank" class="">暂无排名</div>
+            <div id="rankMain" class="getRankHeight hide">
+                <div style="margin-top:0.7rem;margin-left: 0.25rem;">当前排名：<span id="rank"></span> （只显示前<span id="showRankNum">100</span>名）</div>
+                <div style="padding:0rem 0.5rem">                   
+                    <table class="rankTable" cellspacing="0" cellpadding="0">
+                        <thead>
+                            <tr style="line-height: 1rem;">
+                                <th>排行</th>
+                                <th>头像</th>
+                                <th>昵称</th>
+                                <th>成绩</th>
+                            </tr>
+                        </thead>        
+                    </table>
+                </div>
+            </div>      
+            <div id="rankHeight">
+                <table id="rankInfoBox" class="rankTable" cellspacing="0" cellpadding="0" style="margin-top: 0;"></table>
+            </div>              
+        </div>
+        <div id="awardBox" class="poupMain" _flag="3" style="height: 465.875px; width: 33.3333%;">
+            <div id="awardInfoBox">
+                <div id="awardInfo"><div style="line-height: 2.6rem">暂无中奖纪录</div></div> 
+                <div id="awardContactInfo" class="hide">
+                    <div class="titleLine"><span class="title">联系信息</span></div>
+                    <div class="contactItem contactName hide">姓名： <span>monica</span></div>
+                    <div class="contactItem contactPhone hide">电话： <span>13200000000</span></div>
+                    
+                    <div class="contactItem contactAddress hide">地址： <span>广东省广州市海...</span></div>
+                    
+                    <div class="updateBtn abs">修改</div>
+                </div>
+            </div>
+            <div class="attentionBox">
+                <div class="menuBtnBox">
+                    <a class="menuName">关注我们</a>
+                </div>
+                
+                <div class="skillInfo"><a href="http://mp.weixin.qq.com/s?__biz=MjM5MTk5MjI3OA==&amp;mid=209854000&amp;idx=1&amp;sn=82241d924839270d3ea820ad2d56c01b#rd">我也要创建活动</a><span class="gotoFlag"></span></div>
+                <div class="holdBox"></div>
+            </div>
+        </div>
+        <div id="regAwardBox" class="poupMain" _flag="4" style="width: 33.3333%; display: none; height: 465.875px;">
+            <div id="noRegAward" class="hide" style="margin-left:3px;">尚未公布获奖名单，详情请查看活动说明</div>
+
+            <div id="regAwardMain" style="display:none;">         
+                      
+                        <div class="regAwardList">
+                            <div class="mainTitle">一等奖</div>
+                            <div class="playerName" style="margin-bottom:12px;"></div>
+                        </div>  
+                      
+                        <div class="regAwardList">
+                            <div class="mainTitle">二等奖</div>
+                            <div class="playerName" style="margin-bottom:12px;"></div>
+                        </div>  
+                      
+                        <div class="regAwardList">
+                            <div class="mainTitle">三等奖</div>
+                            <div class="playerName" style="margin-bottom:12px;"></div>
+                        </div>  
+                
+            </div>  
+        </div>  
+    </div>
+</div>
+<!-- 兑奖联系方式弹出层 -->
+<div id="awardUserInfoBg" class="hide" style="position:fixed; top:0; left: 0; bottom: 0; right: 0;overflow: hidden;"></div>
+<!-- 验证二维码的弹出层 -->
+<div id="validteBoxerBg" class="hide" style="position:fixed; top:0; left: 0; bottom: 0; right: 0;overflow: hidden;"></div>
+<!--<div id="awardUserInfoBg" class="bg hide" style="position:fixed;overflow: scroll;">
+    <div id="awardUserInfoBox">
+        <div class="title">联系信息</div>
+        <div class="awardTips">为了方便兑奖，请先填写联系信息</div>
+        <div>
+            <input id="nameInput" class="contactInput" type="text" placeholder="请输入姓名" />
+            <input id="phoneInput" class="contactInput" type="text" placeholder="请输入联系电话" />
+            <textarea id="addressInput" class="contactInput" name="address" placeholder="请输入联系地址"></textarea>
+            <div id="userSubmitBtn" class="submit">提交</div>
+            
+        </div>
+        <div class="awardUserBot">若因未填写资料或资料填写错误导致兑奖失败<br>主办方不承担相关法律责任</div>
+    </div>
+</div>-->
+
+<!--奖品详情弹出层 -->
+<div id="awardDetailBox" class="poupMain bg hide">
+    <div id="awardDeailBg" class="bg hide"></div>
+    <div class="awardCloseIcon"></div>
+    <div class="awardDetail">
+        <div class="hostName" style="padding: 0.7rem 0.7rem 1rem; text-align: left; color: rgb(255, 255, 255); text-decoration: none;">请输入企业名称</div>
+        <div class="awardName ellipsis"></div>
+        <div class="awardSubTitle"></div>
+        <div class="awardCodeTime"><em>使用期限</em>：<span class="codeBgTime"></span> - <span class="codeEndTime"></span></div>
+        <div class="awardCodeFixedTerm hide">中奖后<span class="CodeFixedBgTerm"></span>天生效，有效天数<span class="useCodeFixedTerm"></span>天</div>
+        <div class="awardDetailWarp"></div>
+    </div>
+    <div class="codeImgBox">
+        <div id="codeStatusBox" class="hide" style="padding-top:1.25rem;color:#777">
+            <div id="codeStatusBtn"></div>
+            <div id="codeStatusInfo">商家已将该兑奖码设置为作废<br>详情请联系商家</div>
+            <div id="codeStatusTips" class="hide"><em style="font-style: normal;">请先收藏<span class="giftNameA">兑奖券</span>，<span class="targetDateMin">1</span>天后可用</em></div>
+        </div>
+        <div id="codeDetailInfoBox">
+            <img class="codeImg">
+            <div class="codeLine"><span id="codeName">优惠码</span>：<span class="code"></span></div>
+            <div class="codeOptInfo"></div>
+            <div class="wxCashOptInfo hide">发送兑奖码到公众号进行兑奖</div>
+        </div>  
+    </div>
+    <div class="hide bg codeDetailImgBox">
+        <div class="absCenter imgBox">
+            <img class="codeImg" style="width:9rem;height:9rem;">
+        </div>
+     </div>
+    <div class="awardBtnList">
+        <div style="height:0.4rem;"></div>
+        <div>
+            <div class="awardCusText awardDetailBtn"><span class="text">自定义文本<em>（未开启）</em></span><span class="awardDeailIcon"></span></div>
+            <div id="awardCusTextInfo" class="awardDetailText hide"></div>
+            <a id="awardCusBtnInfo" href="###" style="text-decoration:none;"><div class="awardCusBtn awardDetailBtn" style="border-top:none;"><span class="text">自定义按钮<em>（未开启）</em></span><span class="awardDeailIcon"></span></div></a>
+            <a id="attentionCashBtn" href="###" style="text-decoration:none; display:none;"><div class="attentionCashBtn awardDetailBtn" style="border-top:none;"><span class="text">关注兑奖</span><span class="awardDeailIcon"></span></div></a>
+            <a id="webCashBtn" href="###" style="text-decoration:none; display:none;"><div class="webCashBtn awardDetailBtn" style="border-top:none;"><span class="text">兑奖地址</span><span class="awardDeailIcon"></span></div></a>
+        </div>
+        <div style="height:2.75rem;"></div>
+        <div class="awardCollection">
+            <div id="awardCollectionBtn" ontouchend="HdGame.favorite();">收藏优惠券</div>
+        </div>
+    </div>  
+</div>
+<!--兑奖券详情弹出层 -->
+<div id="ticketDetailBox" class="poupMain bg hide">
+    <p class="ticketitle"><span class="closeBtn"></span><span class="text">兑奖券详情</span></p>
+    <div class="ticketInfo">
+        <div class="itemList">
+            <div class="title">有效日期</div>
+            <div class="box">
+                <span class="beginTime">2016.03.03</span>-<span class="endTime">2017.03.03</span>
+            </div>
+        </div>
+        <div class="itemList">
+            <div class="title">可用时段</div>
+            <div class="box">
+                <div class="timelimit">周一至周日</div>
+            </div>
+        </div>
+        <div class="itemList addressLine">
+            <div class="title titleAdress">兑奖地址</div>
+            <div class="box">
+                <div class="address">地址</div>
+            </div>
+        </div>
+        <div class="itemList">
+            <div class="title">客服电话</div>
+            <div class="box">
+                <div class="tel">1356969585</div>
+            </div>
+        </div>
+        <div class="itemList">
+            <div class="title titleNotice">兑奖须知</div>
+            <div class="box">
+                <div class="notice">XXXXXX</div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--投诉页面弹出层 -->
+<div id="informBox" class="bg hide">
+    <div id="inform-reason-page">
+        <p class="informTitle">请选择投诉原因</p>
+        <div id="inform-reason-box">
+            <div id="temptShare" class="reasonItem" _index="0">诱导分享<em></em></div>
+            <div id="shamActive" class="reasonItem" _index="1">虚假活动<em></em></div>
+            <div id="political" class="reasonItem" _index="2">政治敏感<em></em></div>
+            <div id="eroticism" class="reasonItem" _index="3">色情低俗<em></em></div>
+            <div id="rumor" class="reasonItem" _index="4">谣言<em></em></div>
+            <div id="otherReason" class="reasonItem" _index="5">其他（收集隐私信息等）<em></em></div>
+        </div>
+        <div id="cancel-inform-btn">取消</div>
+        <div id="next-inform-btn" class="hide">下一步</div>
+        <div id="inform-poup-tip" class="hide">投诉成功</div>
+    </div>
+    <div id="inform-desc-page" style="display: none;">
+        <p class="informTitle">投诉描述</p>
+        <div id="inform-desc-box">
+            <textarea name="informDesc" id="informDesc" cols="30" rows="6" placeholder="请填写投诉描述，最多输入50个字"></textarea>
+        </div>
+        <div id="submit-inform-btn">提交</div>
+    </div>
+</div>
+<!--投诉结果页面弹出层 -->
+<div id="informResultBox" class="bg hide">
+    <img src="//hdg.faisys.com/image/gx.png?v=201604151202">
+    <h3>投诉成功</h3>
+    <p>感谢你的参与，我们坚决反对色情、暴力、欺诈等违规信息，我们会认真处理你的投诉，维护绿色、健康的网络环境</p>
+    <div class="confirm-btn">确认</div>
+</div>
+<!-- 右侧按钮 -->
+<div class="homeBtnBox">
+    
+    <div id="myAwardBtn" ontouchend="HdGame.changePoup(3)" style="display:none;"><span class="redDot"></span></div>
+    <div id="informBtn" ontouchend="HdGame.changePoup(5)">
+        <span>投诉</span>
+    </div>
+</div>
+<!-- logo -->
+<div id="logoImgBox" class="logoImgBox imgContainer absCenter hide" style="z-index: 120;">
+    <img id="logoImg" class="slaveImg abs" src="//hdg.faisys.com/image/logo.jpg" style="width:2rem;height:2rem;top:3.5rem;left:0.75rem;">
+</div>
+<!-- 抽奖等待弹出层 -->
+<div id="lots-wait-Box" style="display:none">
+    <div id="lots-wait-img" style="width: 78.75px; height: 157.5px; background-image: url(&quot;//hdg.faisys.com/image/lots1.png&quot;);"></div>
+    <div id="lots-wait-hint">当前抽奖人数过多<br>请稍等 <span id="lots-wait-hint-num">0</span> 秒</div>
+</div>
+<!-- 助力引导层 -->
+<div id="helpGuideBox" style="display:none">
+    
+        
+            <p>你今天已经没有抽奖机会了<br>分享给好友或群聊</p>
+            <p style="margin-top:1.1rem;">今天将额外获得1次抽奖机会！<br>（仅限当天首次分享）</p>
+        
+    
+</div>
+<!--
+<div id="jv_dev_box" style="position:fixed;top:0;bottom:0;right:0;margin:auto;display:table;width:2rem;background-color:rgba(0,0,0,.3);color:#fff;">
+    <div id="jv_share_btn" style="text-align:center;line-height:2;border-bottom:1px solid #fff;">share</div>
+</div>
+-->
+<!-- 结果弹出层 -->
+<div class="resuleBox hide">
+    <div id="resule-status-box" style="display:none">
+        
+        <div id="resule-status-scrollWrap">
+            <div class="resule-bgLight"></div>
+            <div id="resule-status-bird"></div>
+            <div id="resule-status-head">
+                <div class="resule-status-userImg one" style="">
+                    <img src="http://wx.qlogo.cn/mmopen/ajNVdqHZLLDXebVxqmbF5CvwDrzYL7NJCRtIKKc3CtE4l3BWiblQkY9OjTIX4ia2dExGgAKMMzhglmvT4L7lHeiaQ/0">
+                </div>
+                <div class="resule-status-userImg PKner-A hide">
+                    <img>
+                </div>
+                <div class="PKner-B hide">
+                    <img src="//hdg.faisys.com/image/jtou.png">
+                </div>
+                <div class="resule-status-userImg PKner-C hide">
+                    <img src="http://wx.qlogo.cn/mmopen/ajNVdqHZLLDXebVxqmbF5CvwDrzYL7NJCRtIKKc3CtE4l3BWiblQkY9OjTIX4ia2dExGgAKMMzhglmvT4L7lHeiaQ/0">
+                </div>
+                <p class="userA-name hide">haha</p>
+                <p class="userB-name hide">王威</p>
+                <div id="resule-status-ribbon" class="resule-status-ribbon"></div>
+            </div>
+            <div id="resule-status-body">
+                
+                <p class="youraward" style="font-size:0.8rem; line-height:1.2rem">您的成绩为：<span class="resuleArg" style="font-size:0.8rem;"></span><span class="result-scoreUnit"><span class="gameScoreUnit">分</span></span></p>
+                <p class="beat-Percent hide">成功击败全国<span></span>%的玩家</p>
+                <p class="resule-status-minscore" style="display:none;">成绩必须达到 <span class="resuleArg resulescoreLimit"></span> <span class="gameScoreUnit">分</span>才能<span id="minscoreDrawFont">抽奖</span></p>
+                
+                <p id="bestArg" style="margin-top:0.5rem">最佳成绩为：<span class="resuleArg"></span><span class="result-scoreUnit"><span class="gameScoreUnit">分</span></span></p>
+                <p>最佳排名为：<span class="result-scoreUnit2">NO.</span><span class="resuleArg"></span></p>
+                
+                <div id="rank_showRule" style="text-decoration:underline;margin:0.7rem 0rem;" class="hide" onclick="showRule();">活动规则</div>
+                <div id="resule-status-count" style="margin-top:0.6rem">
+                    <p class="totalDraw" style="display: none;">您还有 <span id="totalDrawCount" class="resuleArg"></span> 次抽奖机会</p>
+                    <p class="dayDraw">今天还有 <span class="resuleArg dayDrawCount"></span> 次机会抽奖</p>
+                    <p class="dayDraw4Total hide">今天可抽 <span class="resuleArg dayDrawCount"></span> 次</p>
+                </div> 
+                <div id="resule-status-playinfo" style="margin-top:0.6rem">
+                    <p class="dayPlayHint">今天还有 <span class="resuleArg todayPlayCount">0</span> 次参与机会</p>
+                    <p class="totalPlayHint" style="display: none;">您还有 <span class="resuleArg totalPlayCount">100</span> 次参与机会</p>
+                    <p class="dayPlayHint4Total" style="display: none;">今天可参与 <span class="resuleArg todayPlayCount">0</span> 次</p>
+                </div>
+                <div class="little-PK hide">
+                    <p class="fighter-B"></p>
+                    <p class="othergrade">最佳成绩<span class="resuleArg"></span><span class="gameScoreUnit">分</span></p>
+                    <p id="rankB">全国排名NO.<span class="resuleArg"></span></p>
+                    <p class="WhetherAward"></p>
+                    <p class="winAWard" style="margin:1rem 0">
+                        <a href="javascript:void(0)">活动奖品</a>
+                    </p>
+                </div>
+            </div>
+            <div id="resule-status-other" class="hide">
+                <p style="font-size:0.8rem;font-weight:bold;">通关并且</p>
+                <p class="resule-status-minscore hide" style="margin: 10px 0px 50px;">成绩必须达到 <span class="resuleArg resuleArg-fail resulescoreLimit"></span> <span class="gameScoreUnit">分</span>才能抽奖</p>
+            </div>
+            <div id="resule-sucReg" class="hide" style="margin-top:0.6rem">您已经成功报名参与活动！</div>
+            <div class="resule-foot-box">              
+                <div class="resule-foot-one">
+                    <div class="resule-button resule-one-button resule-status-gift hide">赶紧去抽奖</div>
+                    <div class="resule-button resule-one-button resule-status-reg hide">我要报名</div>
+                    <div class="resule-button resule-one-button resule-status-again hide">再玩一次</div>
+                    <div class="resule-button resule-one-button resule-status-send hide">领取礼品</div>
+                    <div class="resule-button resule-one-button resule-status-rightNow hide">马上PK</div>
+                </div>
+                <div class="resule-foot-two">
+                
+                    <div class="resule-button resule-status-seeRank">排行榜</div><div class="resule-button resule-status-home">返回首页</div><div class="resule-button resule-status-again restart-again ">再玩一次</div><div class="hide resule-button resule-status-firstPage" style="display: none;">首页</div>
+                
+                </div>
+            </div>
+        </div>
+        
+        <div id="resule-status-lotsBox" style="display:none">
+            <img id="resule-status-lots" class="editTarget-lotsPot abs" src="//hdg.faisys.com/image/lots1.png" style="top: 3rem; left: 4.925rem; width: 6.15rem; height: 12.4rem;">
+            <div id="resule-status-lotsHand" class="editTarget-lotsShakeHand abs" style="top: 17.9rem; left: 4.5rem;">
+                <div class="shakeHand"></div>
+                <div class="shakeTxt"></div>
+                <div class="waitDrawBtn" style="display:none">点击抽奖</div>
+            </div>
+        </div>
+        <div class="attentionBox">
+            <div id="drawMenuBtnBox" class="menuBtnBox hide">
+                <a class="menuName">关注我们</a>
+            </div>
+            <div class="skillInfo"><a href="http://mp.weixin.qq.com/s?__biz=MjM5MTk5MjI3OA==&amp;mid=209854000&amp;idx=1&amp;sn=82241d924839270d3ea820ad2d56c01b#rd" style="color:#fff;text-decoration:underline;">我也要创建活动</a><span class="gotoFlag"></span></div>
+            <div class="holdBox"></div>
+        </div>
+    </div>
+
+    <div id="resule-gift-box" style="display:none">
+        <div id="resule-gift-scrollWrap" class="resule-gift-overflowScrolling" style="padding-top: 1.2rem;">
+            
+                <div class="resule-bgLight"></div>
+            
+            <!--<div id="resule-gift-jiantou" class="resule-fxts resule-fxts_s"></div>-->
+            <div style="position:absolute; width: 100%;z-index:250;">
+                <p id="resule-gift-luck" style="text-align:center;">恭喜你获得了</p>
+                <div class="imgContainer">
+                        <img id="resule-gift-sucImg" class="slaveImg" src="//hdg.faisys.com/image/gift.png?v=201601141500" style="width:6rem;height:6rem">
+
+                    
+                        <div class="clickHere" id="clickHere">
+                            <div class="ball-scale-multiple" id="lightPoint" style="width:2rem; height: 2rem; left: 7rem; top: 4.8rem">
+                               <div style="width:2rem; height: 2rem;"></div>
+                                <div style="width: 2rem; height: 2rem;"></div>
+                            </div>
+                            <img id="click-view" class="click-view" src="//hdg.faisys.com/image/clickView.png" style="height:3.3rem; display: block; left: 6.7rem; top: 5.5rem;  position:absolute;">
+                        </div>
+                    
+                </div>
+                <div id="resule-gift-foot">
+                    <p id="resule-gift-rank"> <span class="gifArg awardStyle"></span> </p>
+                    <p id="resule-gift-goods"> <span class="gifArg awardName"></span> </p>
+                    <!--<p id="resule-gift-code" >兑奖码：<span class="gifArg"></span></p>-->
+                    <!--<a id="resulte-gift-showMyAward" style="text-decoration: underline;color:#fff;">点击查看奖品详情</a>-->
+                    <!--<p id="resule-gift-explain" style="text-align:left;" >获奖后凭兑奖码联系活动主办单位即可兑奖。</p>-->
+                </div>
+            
+            </div>
+        </div>
+    
+        <!--<div id="faiImgBox" class="imgContainer absCenter hide" >
+            <img id="resule-faiImg" class="slaveImg abs" src="//hdg.faisys.com/image/bpb/faiImg.png" style="width:15rem;height:18rem;top:0.5rem;left:0.5rem;"/>
+        </div>-->
+        <div id="faiImgBox">
+            <div class="cannotGetThePriceBox">
+                
+            </div>
+            
+                
+                    <img class="abs editTarget-theGetPricePic" id="theGetPricePic" src="//hdg.faisys.com/image/faiImg.png" style="top: 1.5rem; left: 1.2rem; width: 13.5rem; height: 16.75rem;">
+                
+                
+            
+    
+    
+            <div class="resule-gift-draw repeatDraw">继续抽奖</div>
+            <div class="resule-gift-home menuBack menuBack2">返回首页</div>
+        
+    
+    </div>
+    
+        <div class="attentionBox">
+            <div class="menuBtnBox">
+              <a class="menuName">关注我们</a>
+            </div>
+            <div class="skillInfo"><a href="http://mp.weixin.qq.com/s?__biz=MjM5MTk5MjI3OA==&amp;mid=209854000&amp;idx=1&amp;sn=82241d924839270d3ea820ad2d56c01b#rd">我也要创建活动</a><span class="gotoFlag"></span></div>
+            <div class="holdBox"></div>
+        </div>
+    </div>
+</div>
+
+<!-- 一键关注弹出页 -->
+<div id="attentionMask" class="homePoupMask">
+    <div id="attentionPoup" class="homePoupInner attentionPoup">
+        <img src="//hdg.faisys.com/image/caewm.jpg?v=201506151818">
+        
+    </div>
+</div>
+
+<!--卡券一键关注弹出页-->
+<div id="newAttentionMask" class="homePoupMask hide">
+    <div id="newAttentionPoup" class="homePoupInner attentionPoup">
+        <img src="//hdg.faisys.com/image/caewm.jpg?v=201506151818">
+        <img id="QRImg_1" style="position:absolute;top:0.5rem;left:0;right:0;margin:auto;">
+    </div>
+</div>
+<!-- 运营账号弹出页 -->
+
+
+    <!-- 技术支持弹出页 -->
+    <div id="skillSupMask" class="homePoupMask">
+        <div id="skillSupPoup" class="homePoupInner attentionPoup">
+            <img src="//hdg.faisys.com/image/yxcaewm.jpg?v=201602221653" style="width:10.7rem;position: absolute;top: 0.2rem;left: 0;right: 0;margin:auto">
+            <img src="//hdg.faisys.com/image/hdQRcode/zhushou-7.gif?v=201701181656" style="position:relative;">
+        </div>
+    </div>
+
+
+
+<!-- 加载提示框 -->
+<div id="loadingToast" class="hide">
+    <div class="weui-mask_transparent"></div>
+    <div class="weui-toast">
+        <i class="weui-loading weui-icon_toast"></i>
+        <p class="weui-toast__content"></p>
+    </div>
+</div>
+
+    </div>
+<script type="text/javascript">
+    function loadGamePreAssets(){
+        hg.assets.add(["//hdg.faisys.com/image/bpb/tishi1.png","//hdg.faisys.com/image/bpb/tishi2.png"]);
+    }
+</script>
+
+<script type="text/javascript">
+    var _manage = false,
+        m_debug = false, 
+        _resRoot = '//hdg.faisys.com',
+        hg = {};
+    //错误监控
+   /* (function(){var _faiAjax=function(){var r=/\?/;var _o={type:"get",url:"",data:"",error:function(){},success:function(){}};var _sendRequest=function(o){var xmlhttp=null;o.type=o.type||_o.type;o.url=o.url||_o.url;o.data=o.data||_o.data;o.error=o.error||_o.error;o.success=o.success||_o.success;if(window.XMLHttpRequest){xmlhttp=new XMLHttpRequest()}else{xmlhttp=new ActiveXObject("Microsoft.XMLHTTP")}if(o.type!="post"){o.url+=(this.r.test(o.url)?"&":"?")+o.data;xmlhttp.open("GET",o.url,true);xmlhttp.onreadystatechange=function(){if(xmlhttp.readyState==4&&xmlhttp.status==200){o.success(xmlhttp.responseText)}else{if(o.error){o.error()}}};xmlhttp.send()}else{xmlhttp.open("POST",o.url,true);xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded; charset=UTF-8");xmlhttp.onreadystatechange=function(){if(xmlhttp.readyState==4&&xmlhttp.status==200){o.success(xmlhttp.responseText)}else{o.error()}};xmlhttp.send(o.data)}};return{ajax:function(option){try{_sendRequest(option)}catch(e){}}}}();hg._faiAjax=_faiAjax;var _jsErrCahche=[];window.onerror=function(sMsg,sUrl,sLine){if(sLine<1||typeof sMsg!="string"||sMsg.length<1){return}if(/WeixinJSBridge|_WXJS/.test(sMsg)){return}var log="Error:"+sMsg+";Line:"+sLine+";Url:"+sUrl;var alertLog="Error:"+sMsg+"\n"+"Line:"+sLine+"\n"+"Url:"+sUrl+"\n";var encodeUrl=function(url){return typeof url==="undefined"?"":encodeURIComponent(url)};var ajax=true;var obj={"m":sMsg,"u":sUrl,"l":sLine};for(var i=0;i<_jsErrCahche.length;i++){if(_jsErrCahche[i].m==obj.m&&_jsErrCahche[i].u==obj.u&&_jsErrCahche[i].l==obj.l){ajax=false;break}}if(ajax){_jsErrCahche.push(obj);_faiAjax.ajax({type:"post",url:"//hd.faisco.cn/ajax/logJsErr_h.jsp?cmd=jsErr",data:"msg="+encodeUrl(log)})}if(m_debug){if(HdGame&&HdGame.tlog){HdGame.tlog("err",alertLog)}else{}}}})();*/
+
+    (function(hg){
+        /*
+        hg.assets  : {
+          complete
+          loadComplete
+          onReady
+          onload
+          loadPage
+        }
+        */
+        var imgPaths = [],
+        readyCallBack = [],
+        loadCallBack = [];
+        hg.assets = {
+            complete: false,
+            loadComplete: false,
+            increment: 50 ,
+            loadingStyle: 1 ,
+            loadTimeout: 120000,
+            add: function(src) {
+                var self = this;
+                if (self.complete || _manage) {
+                    return
+                }
+                if (isArray(src)) {
+                    for (var i = src.length - 1; i >= 0; i--) {
+                        self.add(src[i])
+                    }
+                } else if (typeof src === 'string') {
+                    imgPaths.push(src)
+                }
+                return this
+            },
+            onReady: function(callBack) {
+                var self = this;
+                if (self.complete) {
+                    callBack()
+                } else {
+                    readyCallBack.push(callBack)
+                }
+                return self
+            },
+            onload: function(callBack) {
+                var self = this;
+                if (self.loadComplete) {
+                    callBack()
+                } else {
+                    loadCallBack.push(callBack)
+                }
+                return self
+            },
+            loadPage: function() {
+                if (_manage) return;
+                var self = this,
+                    percent = 1,
+                    numLoaded = 0,
+                    $loadPercent = document.getElementById("loadPercent"),
+                    loadPallet;
+                window.scrollTo(0, 0);
+                if (self.loadingStyle === 1) {
+                    loadimg(imgPaths)
+                } else if (self.loadingStyle === 3) {
+                    var logoImg = document.getElementById("preloadImg");
+                    if (logoImg.complete) {
+                        initLogoImg()
+                    } else {
+                        logoImg.onload = initLogoImg
+                    }
+                    function initLogoImg(img) {
+                        var img = logoImg;
+                        var h = img.height;
+                        var w = img.width;
+                        var bottomPageInfoDeg = -Math.atan(w / h) - Math.PI / 2;
+                        var canvas = document.getElementById("preloadCanvas");
+                        var ctx = canvas.getContext("2d");
+                        var ratio = (window.devicePixelRatio || 1) / (ctx.backingStorePixelRatio || ctx.webkitBackingStorePixelRatio || ctx.mozBackingStorePixelRatio || ctx.msBackingStorePixelRatio || ctx.oBackingStorePixelRatio || ctx.backingStorePixelRatio || 1);
+                        var drawImg = function() {
+                                ctx.fillStyle = "#fff";
+                                ctx.fillRect(0.2 * g_rem * ratio, 0.2 * g_rem * ratio, w * ratio, h * ratio);
+                                ctx.drawImage(img, 0.2 * g_rem * ratio, 0.2 * g_rem * ratio, w * ratio, h * ratio)
+                            };
+                        if (h === w) {
+                            if (h > 3.5 * g_rem) {
+                                h = w = 3.5 * g_rem
+                            }
+                            drawImg = function() {
+                                ctx.save();
+                                ctx.beginPath();
+                                ctx.arc(canvas.width / 2, canvas.height / 2, w / 2 * ratio, 0, 2 * Math.PI);
+                                ctx.clip();
+                                ctx.fillStyle = "#fff";
+                                ctx.fill();
+                                ctx.drawImage(img, 0.2 * g_rem * ratio, 0.2 * g_rem * ratio, w * ratio, h * ratio);
+                                ctx.restore()
+                            }
+                        } else {
+                            if (w > h && w > 8 * g_rem) {
+                                h = 8 * g_rem * h / w;
+                                w = 8 * g_rem
+                            } else {
+                                if (h > w && h > 8 * g_rem) {
+                                    w = 8 * g_rem * w / h;
+                                    h = 8 * g_rem
+                                }
+                            }
+                        }
+                        canvas.width = (w + 0.4 * g_rem) * ratio;
+                        canvas.height = (h + 0.4 * g_rem) * ratio;
+                        canvas.style.width = w + 0.4 * g_rem + "px";
+                        canvas.style.height = h + 0.4 * g_rem + "px";
+                        if (h === w) {
+                            ctx.beginPath();
+                            ctx.arc(canvas.width / 2, canvas.height / 2, canvas.width / 2, 0, 2 * Math.PI);
+                            ctx.clip()
+                        }
+                        ctx.strokeStyle = "#69c5ff";
+                        ctx.lineWidth = 8 * g_rem * ratio;
+                        loadPallet = function(tmp) {
+                            ctx.beginPath();
+                            ctx.arc(canvas.width / 2, canvas.height / 2, 4 * g_rem * ratio, bottomPageInfoDeg, bottomPageInfoDeg + tmp * (2 * Math.PI / 100));
+                            ctx.stroke();
+                            drawImg()
+                        };
+                        loadimg(imgPaths)
+                    }
+                }
+                function setPercent(percent) {
+                    $loadPercent.innerHTML = percent;
+                    if (percent === 100) {
+                        var index = 0;
+                        setTimeout(function() {
+                            index++;
+                            if (index < 10) {
+                                loadPallet && loadPallet(120);
+                                setTimeout(arguments.callee, 17)
+                            } else {
+                                loadPallet = null
+                            }
+                        }, 17)
+                    }
+                    loadPallet && loadPallet(percent)
+                }
+                function loading() {
+                    if (numLoaded < imgPaths.length) {
+                        if (percent < 100 - imgPaths.length + numLoaded) {
+                            percent++;
+                            setPercent(percent - 1)
+                        }
+                    } else {
+                        percent += 10;
+                        percent > 100 && (percent = 100);
+                        setPercent(percent - 1)
+                    }
+                    if (percent >= 100 && typeof $ != 'undefined') {
+                        setPercent(100);
+                        var flag = $(window).height() / $(window).width() < 1.575;
+                        var bgHeight = flag ? $(window).width() * 1.575 : $(window).height();
+                        setTimeout(function() {
+                            $("#preloadPage").addClass("leftClose");
+                            $("#homeBgBox,.gameBgBox").css("height", bgHeight / g_rem + "rem");
+                            var theObject = g_config.style == 55 ? $(".gameBox .bottomSkill,#bottomSkill") : $(".home .bottomSkill,#bottomSkill");
+                            flag && theObject.css("top", (bgHeight - $(".bottomSkill").outerHeight()) / g_rem + "rem");
+                            setTimeout(function() {
+                                $loadPercent = null;
+                                $("#preloadPage").hide()
+                            }, 500);
+                            complete();
+                            self.loadComplete = true;
+                            for (var n = loadCallBack.length, i = 0; i < n; i++) {
+                                loadCallBack[i]()
+                            }
+                            loadCallBack = null;
+                            logoImg = null;
+                            $loadPercent = null
+                        }, 300);
+                        return
+                    }
+                    setTimeout(arguments.callee, 10)
+                }
+                function loadimg(arr) {
+                    loading();
+                    for (var i = arr.length - 1; i >= 0; i--) {
+                        var img = new Image();
+                        img.onload = loadCheckComplete;
+                        img.onerror = loadCheckComplete;
+                        img.src = arr[i];
+                        self[arr[i]] = img
+                    }
+                    if (self.loadTimeout) {
+                        self._loadTimer = setTimeout(loadTimeout, self.loadTimeout)
+                    }
+                }
+                function loadTimeout() {}
+                function loadCheckComplete() {
+                    numLoaded++;
+                    this.assets_complete = true;
+                    if (numLoaded === imgPaths.length) {
+                        complete()
+                    }
+                }
+                function complete() {
+                    if (self.complete) return;
+                    clearTimeout(self._loadTimer);
+                    numLoaded = imgPaths.length;
+                    self.complete = true;
+                    for (var n = readyCallBack.length, i = 0; i < n; i++) {
+                        readyCallBack[i]()
+                    }
+                    readyCallBack = null
+                }
+            }
+        };
+    })(hg);
+    /*----------------------------可编辑元素包装------------------------------------*/
+    hg.edit = null;
+    
+    hg.edit = {};
+    //通过conf文件配置可编辑元素的属性
+    (function(hg){
+        var origin = [{"name":"cowboy","pos":{"left":"6rem","top":"5.8rem"},"size":{"width":"4rem","height":"5.75rem"},"path":[["http://8171176.h40.faiusr.com/4/ACgIABAEGAAgoeW1tgUoxr3SiwMw_gE46AI.png"],["http://8171176.h40.faiusr.com/4/ACgIABAEGAAgm_W1tgUotsfI5AMw_gE46AI.png"],["http://8171176.h40.faiusr.com/4/ACgIABAEGAAgleW1tgUoufbZ1wYw_gE46AI.png"]]},{"name":"beer","pos":{"left":"11.5rem","top":"20rem"},"size":{"width":"3rem","height":"3.5rem"},"path":["http://8171176.h40.faiusr.com/4/ACgIABAEGAAgjeW1tgUo-o_9jgEweDiMAQ.png"]},{"name":"gold","pos":{"left":"6.5rem","top":"20rem"},"size":{"width":"3rem","height":"3.5rem"},"path":["http://8171176.h40.faiusr.com/4/ACgIABAEGAAghuW1tgUoyv_OigYweDiMAQ.png"]},{"name":"stree","pos":{"left":"0.2rem","top":"13.5rem"},"size":{"width":"5rem","height":"10rem"},"path":["http://8171176.h40.faiusr.com/4/ACgIABAEGAAggOW1tgUogJvixQYwyAE4kAM.png"]},{"name":"htree","pos":{"left":"3rem","top":"13rem"},"size":{"width":"10rem","height":"4.5rem"},"path":["http://8171176.h40.faiusr.com/4/ACgIABAEGAAg-eS1tgUoq7jq5AYw2AQ4jgI.png"]},{"name":"xrz","pos":{"left":"2.5rem","top":"4.5rem"},"size":{"width":"3rem","height":"3.75rem"},"path":["http://8171176.h40.faiusr.com/4/ACgIABAEGAAg8_S1tgUoiLqLtAcweDiWAQ.png"]},{"name":"gt","pos":{"left":"2rem","top":"10rem"},"size":{"width":"1.5rem","height":"1rem"},"path":["http://8171176.h40.faiusr.com/4/ACgIABAEGAAg7uS1tgUox8X1pAcwPDgo.png"]},{"name":"theGetPricePic","pos":{"left":"1.2rem","top":"1.5rem"},"size":{"width":"13.5rem","height":"16.75rem"},"path":[["//hdg.faisys.com/image/faiImg.png"]]},{"name":"theGetPricePicTwo","pos":{"left":"1.2rem","top":"1.5rem"},"size":{"width":"13.5rem","height":"16.75rem"},"path":[["//hdg.faisys.com/image/faiImg2.png"]]},{"name":"theGetPricePicThree","pos":{"left":"NaNrem","top":"NaNrem"},"size":{"width":"4rem","height":"4rem"},"path":[["//hdg.faisys.com/image/faiImg3.png"]]}];
+        var originDef = [{"name":"cowboy","pos":{"left":"6rem","top":"5.8rem","disable":"disable"},"size":{"width":"4rem","height":"5.76rem"},"path":[["*_resRoot*/image/bpb/left.png","人物跑动01","5000k"],["*_resRoot*/image/bpb/right.png","人物跑动02","5000k"],["*_resRoot*/image/bpb/jump.png","人物跳跃01","5000k"]],"edit":"all"},{"name":"beer","pos":{"left":"11.5rem","top":"20rem","disable":"disable"},"size":{"width":"3rem","height":"3.5rem"},"path":["*_resRoot*/image/bpb/beer.png","加10分物品","5000k"],"edit":"all"},{"name":"gold","pos":{"left":"6.5rem","top":"20rem","disable":"disable"},"size":{"width":"3rem","height":"3.5rem"},"path":["*_resRoot*/image/bpb/gold.png","加50分物品","5000k"],"edit":"all"},{"name":"stree","pos":{"left":"0.2rem","top":"13.5rem","disable":"disable"},"size":{"width":"5rem","height":"10rem"},"path":["*_resRoot*/image/bpb/stree.png","闪避障碍01","5000k"],"edit":"all"},{"name":"htree","pos":{"left":"3rem","top":"13rem","disable":"disable"},"size":{"width":"10rem","height":"4.5rem"},"path":["*_resRoot*/image/bpb/htree.png","跳跃障碍02","5000k"],"edit":"all"},{"name":"xrz","pos":{"left":"2.5rem","top":"4.5rem","disable":"disable"},"size":{"width":"3rem","height":"3.75rem"},"path":["*_resRoot*/image/bpb/xrz.png","跑动参照01","5000k"],"edit":"all"},{"name":"gt","pos":{"left":"2rem","top":"10rem","disable":"disable"},"size":{"width":"1.5rem","height":"1rem"},"path":["*_resRoot*/image/bpb/gt.png","跑动参照02","5000k"],"edit":"all"},{"name":"playInfo","pos":{"left":"3.5rem","top":"22rem","forParent":"false"},"css":[{"title":"常规文字","opt":0,"from":"#playInfo","css":[{"type":"size","name":"font-size","val":14,"defVal":14,"opt":0},{"type":"color","name":"color","defVal":"#fff","val":"","tra":-1,"defTra":-1,"opt":0},{"type":"color","name":"text-shadow","val":"","defVal":"","tra":-1,"defTra":-1,"opt":0}]},{"title":"参与机会","opt":0,"from":"#playInfo .specil","css":[{"type":"size","name":"font-size","val":14,"defVal":14,"opt":0},{"type":"color","name":"color","val":"","defVal":"#fff799","tra":-1,"defTra":-1,"opt":0},{"type":"color","name":"text-shadow","val":"","defVal":"","tra":-1,"defTra":-1,"opt":0}]}],"edit":3},{"name":"theGetPricePic","pos":{"left":"1.2rem","top":"1.5rem"},"size":{"width":"13.5rem","height":"16.75rem"},"path":[["*_resRoot*/image/faiImg.png","图片01","5000k"]],"edit":"theGetPricePic","formDefaultStyle":true},{"name":"theGetPricePicTwo","pos":{"left":"1.2rem","top":"1.5rem"},"size":{"width":"13.5rem","height":"16.75rem"},"path":[["*_resRoot*/image/faiImg2.png","图片01","5000k"]],"edit":"theGetPricePicTwo","formDefaultStyle":true},{"name":"theGetPricePicThree","pos":{"left":"1.2rem","top":"1.5rem"},"size":{"width":"13.5rem","height":"16.75rem"},"path":[["*_resRoot*/image/faiImg3.png","图片01","5000k"]],"edit":"theGetPricePicThree","formDefaultStyle":true},{"name":"lotsPot","pos":{"left":"4.925rem","top":"3rem"},"size":{"width":"6.15rem","height":"12.4rem"},"path":[["*_resRoot*/image/lots1.png","图片01","5000k"]],"edit":"lotsPot","formDefaultStyle":true},{"name":"lotsShakeHand","pos":{"left":"4.5rem","top":"17.9rem","forParent":"false"},"edit":"_none","formDefaultStyle":true}];
+        var originMod = null;
+        
+        function correct(list1,list2){
+            return list2.map(function(val2){
+                return list1.filter(function(val1){return val1.name === val2.name;})[0] || val2;
+            });
+        }
+        originMod = originMod ? correct(originMod,originDef) : originMod;
+        origin = originMod ? correct(origin,originMod) : correct(origin,originDef);
+        //将图片放进缓存数组内
+        for(var i=0;i < originDef.length;i++){
+            var path = origin[i].path;
+            var pathDef = originMod ? originMod[i].path : originDef[i].path;
+            if(pathDef){
+                if(!path){
+                    origin[i].path = path = pathDef;
+                }else if(!isArray(path[0]) && isArray(pathDef[0])){
+                    origin[i].path = path = [].concat(pathDef).splice(0,1,path);
+                }
+                if(isArray(path[0])){
+                    for(var j=0;j < pathDef.length;j++){
+                        if(!path[j]) path[j] = pathDef[j];
+                        if(!path[j][0]) path[j][0] = pathDef[j][0];
+                        hg.assets.add(path[j][0].replace('*_resRoot*',_resRoot));
+                    }
+                }else{
+                    if(!path[0]) path[0] = pathDef[0];
+                    hg.assets.add(path[0].replace('*_resRoot*',_resRoot));
+                }
+            }
+        }
+        if(false){
+            hg.assets.add("");
+        }
+        if(false && origin[1].path[0] == _resRoot + "/image/tgcm/answer.png"){
+            origin[1].path[0] = [_resRoot + "/image/tgcm/drag.png"];
+        }
+        hg.edit.origin = origin;
+        hg.edit.originDef = originDef;
+        hg.edit.originMod = originMod;
+    })(hg);
+    
+    /*-----------------------资源loading-----------------------------*/
+    //存放所有loading好的image对象,src为key
+    hg.assets.add([
+        "http://8171176.h40.faiusr.com/4/ACgIABAEGAAgleS1tgUo16zJbDCABTjADA.png","//hdg.faisys.com/image/logo.jpg","//hdg.faisys.com/image/ruleImg.png","//hdg.faisys.com/image/success.png","//hdg.faisys.com/image/light.png","//hdg.faisys.com/image/bird.png","//hdg.faisys.com/image/musicOff.png","//hdg.faisys.com/image/musicOn.png","//hdg.faisys.com/image/auBg.jpg","http://wx.qlogo.cn/mmopen/ajNVdqHZLLDXebVxqmbF5CvwDrzYL7NJCRtIKKc3CtE4l3BWiblQkY9OjTIX4ia2dExGgAKMMzhglmvT4L7lHeiaQ/0",
+    
+        "http://8171176.h40.faiusr.com/4/ACgIABAEGAAgoOS1tgUokNHVTzCmBDi2Ag.png","//hdg.faisys.com/image/bpb/startBtn.png?v=201509051300","http://8171176.h40.faiusr.com/4/ACgIABAEGAAg2_S1tgUo7OTmwAQwgAU4wAw.png","//hdg.faisys.com/image/lots1.png","//hdg.faisys.com/image/lots2.png",
+    
+        '//hdg.faisys.com/image/faiImg.png?v=201509171041',
+    
+    ]);
+    loadGamePreAssets();
+    hg.assets.loadPage();//开始loading页面
+    //全局变量
+    var g_config = {"showSkillSup":true,"showSlide":false,"isOpenAreaLimit":false,"isCheckPlayTimes":false,"showMenu":true,"buy":false,"isNewGame":false,"isModel":false,"test":false,"isOem":false,"scoreType":false,"countsTimeType":0,"sortType":0,"drawLimitDef":300,"scoreSet":300,"style":16,"aid":11957983,"gameId":3,"openId":"o1ueSjorrC3xUjCq8E6tOqM6J1vM","playerId":3,"userName":"王威","headImg":"http://wx.qlogo.cn/mmopen/ajNVdqHZLLDXebVxqmbF5CvwDrzYL7NJCRtIKKc3CtE4l3BWiblQkY9OjTIX4ia2dExGgAKMMzhglmvT4L7lHeiaQ/0","authVer":0,"failSrcId":5045,"scoreUnit":"分","testCMD":"","ajaxUrl":"//hd.faisco.cn/ajax/","startTime":"2017-03-08 08:54","setGameTimeInterval":10,"isDoubleGame":false,"awardList":[{"amount":0,"awardtype":2,"cashtype":2,"attention":1,"cashsite":"请填写您的兑奖地址或者门店地址","pot":0,"style":"一等奖","t_type":"DATE_TYPE_FIX_TIME_RANGE","cbt":1488902400000,"cet":1489593599000,"cft":30,"cfbt":0,"tlmt":"[8]","ocimg":false,"opqrc":true,"optx":false,"oct":false,"oplink":false,"genewxcard":false,"iscuscode":false,"stl":"","opti":"凭券联系现场工作人员兑奖","btn":"了解更多","btl":"","servicepho":"","cashinfo":"","aimg":"//hdg.faisys.com/image/gift.png?v=201601141500","aimgw":"6rem","aimgh":"6rem","attentionimg":"","onlinect":1,"continfo":0,"usedAmount":0,"name":"价值100元礼品","level":1,"passwordrednum":100},{"amount":0,"awardtype":2,"cashtype":2,"attention":1,"cashsite":"请填写您的兑奖地址或者门店地址","pot":0,"style":"二等奖","t_type":"DATE_TYPE_FIX_TIME_RANGE","cbt":1488902400000,"cet":1489593599000,"cft":30,"cfbt":0,"tlmt":"[8]","ocimg":false,"opqrc":true,"optx":false,"oct":false,"oplink":false,"genewxcard":false,"iscuscode":false,"stl":"","opti":"凭券联系现场工作人员兑奖","txn":"兑奖须知","txc":"联系商家出示兑奖码","btn":"了解更多","btl":"","servicepho":"","cashinfo":"","aimg":"//hdg.faisys.com/image/gift.png?v=201601141500","aimgw":"6rem","aimgh":"6rem","attentionimg":"","onlinect":1,"continfo":0,"usedAmount":0,"name":"价值50元礼品","level":2,"passwordrednum":100},{"amount":0,"awardtype":2,"cashtype":2,"attention":1,"cashsite":"请填写您的兑奖地址或者门店地址","pot":0,"style":"三等奖","t_type":"DATE_TYPE_FIX_TIME_RANGE","cbt":1488902400000,"cet":1489593599000,"cft":30,"cfbt":0,"tlmt":"[8]","ocimg":false,"opqrc":true,"optx":false,"oct":false,"oplink":false,"genewxcard":false,"iscuscode":false,"stl":"","opti":"凭券联系现场工作人员兑奖","txn":"兑奖须知","txc":"联系商家出示兑奖码","btn":"了解更多","btl":"","servicepho":"","cashinfo":"","aimg":"//hdg.faisys.com/image/gift.png?v=201601141500","aimgw":"6rem","aimgh":"6rem","attentionimg":"","onlinect":1,"continfo":0,"usedAmount":0,"name":"价值10元礼品","level":3,"passwordrednum":100},{"amount":0,"awardtype":2,"cashtype":2,"attention":1,"cashsite":"请填写您的兑奖地址或者门店地址","pot":0,"style":"四等奖","t_type":"DATE_TYPE_FIX_TIME_RANGE","cbt":1488902400000,"cet":1489593599000,"cft":30,"cfbt":0,"tlmt":"[8]","ocimg":false,"opqrc":true,"optx":false,"oct":false,"oplink":false,"genewxcard":false,"iscuscode":false,"stl":"","opti":"凭券联系现场工作人员兑奖","txn":"兑奖须知","txc":"联系商家出示兑奖码","btn":"了解更多","btl":"","servicepho":"","cashinfo":"","aimg":"//hdg.faisys.com/image/gift.png?v=201601141500","aimgw":"6rem","aimgh":"6rem","attentionimg":"//hd.faisys.com/image/qrcodeImg.jpg","onlinect":1,"continfo":0,"usedAmount":0,"name":"价值5元小礼品","level":4,"passwordrednum":100,"wxcardid":""},{"amount":0,"awardtype":2,"cashtype":2,"attention":1,"cashsite":"请填写您的兑奖地址或者门店地址","pot":0,"style":"五等奖","t_type":"DATE_TYPE_FIX_TIME_RANGE","cbt":1488902400000,"cet":1489593599000,"cft":30,"cfbt":0,"tlmt":"[8]","ocimg":false,"opqrc":true,"optx":false,"oct":false,"oplink":false,"genewxcard":false,"iscuscode":false,"stl":"","opti":"凭券联系现场工作人员兑奖","txn":"兑奖须知","txc":"联系商家出示兑奖码","btn":"了解更多","btl":"","servicepho":"","cashinfo":"","aimg":"//hdg.faisys.com/image/gift.png?v=201601141500","aimgw":"6rem","aimgh":"6rem","attentionimg":"//hd.faisys.com/image/qrcodeImg.jpg","onlinect":1,"continfo":0,"usedAmount":0,"name":"价值5元小礼品","level":5,"passwordrednum":100,"wxcardid":""},{"amount":0,"awardtype":2,"cashtype":2,"attention":1,"cashsite":"请填写您的兑奖地址或者门店地址","pot":0,"style":"六等奖","t_type":"DATE_TYPE_FIX_TIME_RANGE","cbt":1488902400000,"cet":1489593599000,"cft":30,"cfbt":0,"tlmt":"[8]","ocimg":false,"opqrc":true,"optx":false,"oct":false,"oplink":false,"genewxcard":false,"iscuscode":false,"stl":"","opti":"凭券联系现场工作人员兑奖","txn":"兑奖须知","txc":"联系商家出示兑奖码","btn":"了解更多","btl":"","servicepho":"","cashinfo":"","aimg":"//hdg.faisys.com/image/gift.png?v=201601141500","aimgw":"6rem","aimgh":"6rem","attentionimg":"//hd.faisys.com/image/qrcodeImg.jpg","onlinect":1,"continfo":0,"usedAmount":0,"name":"价值5元小礼品","level":6,"passwordrednum":100,"wxcardid":""},{"amount":0,"awardtype":2,"cashtype":2,"attention":1,"cashsite":"请填写您的兑奖地址或者门店地址","pot":0,"style":"七等奖","t_type":"DATE_TYPE_FIX_TIME_RANGE","cbt":1488902400000,"cet":1489593599000,"cft":30,"cfbt":0,"tlmt":"[8]","ocimg":false,"opqrc":true,"optx":false,"oct":false,"oplink":false,"genewxcard":false,"iscuscode":false,"stl":"","opti":"凭券联系现场工作人员兑奖","txn":"兑奖须知","txc":"联系商家出示兑奖码","btn":"了解更多","btl":"","servicepho":"","cashinfo":"","aimg":"//hdg.faisys.com/image/gift.png?v=201601141500","aimgw":"6rem","aimgh":"6rem","attentionimg":"//hd.faisys.com/image/qrcodeImg.jpg","onlinect":1,"continfo":0,"usedAmount":0,"name":"价值5元小礼品","level":7,"passwordrednum":100,"wxcardid":""},{"amount":0,"awardtype":2,"cashtype":2,"attention":1,"cashsite":"请填写您的兑奖地址或者门店地址","pot":0,"style":"八等奖","t_type":"DATE_TYPE_FIX_TIME_RANGE","cbt":1488902400000,"cet":1489593599000,"cft":30,"cfbt":0,"tlmt":"[8]","ocimg":false,"opqrc":true,"optx":false,"oct":false,"oplink":false,"genewxcard":false,"iscuscode":false,"stl":"","opti":"凭券联系现场工作人员兑奖","txn":"兑奖须知","txc":"联系商家出示兑奖码","btn":"了解更多","btl":"","servicepho":"","cashinfo":"","aimg":"//hdg.faisys.com/image/gift.png?v=201601141500","aimgw":"6rem","aimgh":"6rem","attentionimg":"//hd.faisys.com/image/qrcodeImg.jpg","onlinect":1,"continfo":0,"usedAmount":0,"name":"价值5元小礼品","level":8,"passwordrednum":100,"wxcardid":""}],"comfort":{"comAwardtype":2,"comcashtype":2,"comattention":1,"comcashsite":"请填写您的兑奖地址或者门店地址","cas":"安慰奖","cttype":"DATE_TYPE_FIX_TIME_RANGE","comcbt":1488902400000,"comcet":1489593599000,"comft":30,"comfbt":0,"ctlmt":"[8]","comoci":false,"comOpqrc":true,"comoptx":false,"comoct":false,"comOplink":false,"comiscuscode":false,"comstl":"","comopti":"凭券联系现场工作人员兑奖","comtxn":"兑奖须知","comtxc":"联系商家出示兑奖码","combtn":"了解更多","combtl":"","comservicephone":"","comcashinfo":"","comimg":"//hdg.faisys.com/image/gift.png?v=201601141500","comimgw":"6rem","comimgh":"6rem","comattentionimg":"//hd.faisys.com/image/qrcodeImg.jpg","conlinect":1,"comcontinfo":0,"comusedamount":0,"ca":"价值5元小礼品","cc":"","ccc":""},"bestRankInfo":{"rank":1,"score":"480"},"awardInfoB":"","openAwardLinkNoDraw":false,"awardUsername":"","awardPhone":"","awardAddress":"","status":2,"afterWxCard":true,"haveAward":false,"showHelpGuide":false,"ipInfo":{},"contactNoDraw":"[-1]","isAOpenId":1,"linkInfoType":1,"afterLinkModify":true,"shareDeep":1,"isFromZhuliShare":false,"qrCodeUrl":""};
+    var isPublish = true;
+    var HdVerDef = {
+        FREE : 0,  //免费版
+        BY : 1,  //白银版
+        BJ : 2,  //铂金版
+    };
+    function isArray(arr){
+        return Object.prototype.toString.call(arr) === "[object Array]";
+    }
+</script>
+<script type="text/javascript" src="//hdg.faisys.com/js/comm/jquery/jquery-core.min.js?v=201610271901"></script>
+
+<script type="text/javascript" src="js/hdgame.min.js?v=201703081452"></script>
+
+<script type="text/javascript" src="js/lufylegend.min.js?v=201703071826"></script>
+<script type="text/javascript">
+function $$(selector){
+    if(!_manage){
+        return $('#__notfound__');
+    }
+    return parent.$(selector);
+}
+HdGame.gameDomain = 'hd.faisco.cn';
+HdGame.gameDomainIgnoreStyle = 'hd.faisco.cn';
+if(false){
+    HdGame.gameDomain = 'hd.webportal.cc';
+    HdGame.gameDomainIgnoreStyle = 'hd.webportal.cc';
+}
+HdGame.isReg = false;
+if(_manage){
+    $(function() {
+        parent.$$.fire("ready");
+    });
+    parent.$$.win = window;
+}
+/*---------------游戏函数回调--------------------*/
+HdGame.initCallBack(hg,['startGame','beforeStartGame','startGamehead','home','again','jsFootEnd','showResult','changeBottomBar','showPoup','hidePoup','timeChange','beforeDraw','updateRankList']); //hdgame
+hg.addCallBack(['setGameType','hpInit','hgLoadEnd','save','changeShow']); //hdportal
+hg.showGameBox = true; //是否在开始游戏时默认显示游戏页
+/*----------------------------可编辑元素包装------------------------------------*/
+//通过conf文件配置可编辑元素的属性
+if(hg.edit){
+    HdGame.initEdit(hg.edit);
+}
+function parseRemToPx(rem){
+    if(rem.indexOf('rem') === -1){
+        return parseFloat(rem);
+    }
+    return parseFloat(rem)*g_rem;
+}
+function parsePxToRem(px){
+    if(px.indexOf('px') === -1){
+        return px;
+    }
+    return parseFloat(px)/g_rem + 'rem';
+}
+/*----------------------------------计时------------------------------------*/
+hg.time = null;
+
+(function(hg){
+    var initTime = 30;
+    if(!g_config.countsTimeType && initTime === 0){
+        if(!_manage){
+            initTime = 99999;
+        }else{
+            if(false){
+                initTime = 30;
+            }else{
+                initTime = 30; 
+            }
+        }
+        $(function(){$('.timeBox').hide();});
+    }
+    hg.time = HdGame.initTime(initTime);
+})(hg);
+
+/*----------------------------------计分------------------------------------*/
+
+hg.grade = HdGame.initGrade();
+
+/*----------------------------------声音-----------------------------------*/
+hg.sound = HdGame.initSound([{"path":"music/bgmusic03M.mp3","fileName":"背景音乐.mp3","optFlag":0},{"path":"music/bonus.mp3","fileName":"得分音效.mp3","optFlag":2},{"path":"music/err.mp3","fileName":"扣分音效.mp3","optFlag":2}],[{"path":"*_resRoot*/image/bpb/bgmusic03M.mp3","fileName":"背景音乐.mp3","optFlag":0},{"path":"*_resRoot*/image/bpb/bonus.mp3","fileName":"得分音效.mp3","optFlag":2},{"path":"*_resRoot*/image/bpb/err.mp3","fileName":"扣分音效.mp3","optFlag":2}],null);
+
+/*----------------------------------获取ip信息-----------------------------------*/
+//HdGame.initAreaLimit(false);
+//
+HdGame.tlog('openId',HdGame.getCookie('oppenId_20160112wx25367438c8ce0799'));
+</script><input class="editTarget-cowboy" type="hidden" value="http://8171176.h40.faiusr.com/4/ACgIABAEGAAgoeW1tgUoxr3SiwMw_gE46AI.png"><input class="editTarget-cowboy-1" type="hidden" value="http://8171176.h40.faiusr.com/4/ACgIABAEGAAgm_W1tgUotsfI5AMw_gE46AI.png"><input class="editTarget-cowboy-2" type="hidden" value="http://8171176.h40.faiusr.com/4/ACgIABAEGAAgleW1tgUoufbZ1wYw_gE46AI.png"><input class="editTarget-theGetPricePicTwo" type="hidden" value="//hdg.faisys.com/image/faiImg2.png"><input class="editTarget-theGetPricePicThree" type="hidden" value="//hdg.faisys.com/image/faiImg3.png">
+
+<script type="text/javascript">
+HdGame.initWxConfig({"isHideShareBtn":false,"isHideMenuItems":false,"fullUrl":"https://hd.faisco.cn/11957983/3/load.html?style=16","plInfo":{"id":3,"aid":11957983,"code":0,"name":"王威","awardLevel":0,"achievement":"480","gameId":3,"codeStatus":0,"info":"{\"headImg\":\"http://wx.qlogo.cn/mmopen/ajNVdqHZLLDXebVxqmbF5CvwDrzYL7NJCRtIKKc3CtE4l3BWiblQkY9OjTIX4ia2dExGgAKMMzhglmvT4L7lHeiaQ/0\"}","award":"","openId":"o1ueSjorrC3xUjCq8E6tOqM6J1vM","zlid":0,"flag":0,"openIdB":"","drawTotal":0,"rank":1,"codeList":"","jointime":1488958286879,"prop":"","prop1":"","code1":"","playInfo":"{\"pttotal\":12,\"pttoday\":12,\"playdate\":\"20170308\"}"},"nameList":["一等奖","二等奖","三等奖","四等奖","五等奖","六等奖","七等奖","八等奖","安慰奖"],"jsSdkAppid":"wx25367438c8ce0799","timestamp":"1488958677","nonce_str":"a0eea11e-8d8a-4fda-9e96-cf773082521e","signature":"48a59bdd30615fcfa88a07f7cd4c4605c62b889e","cardTicket":"","dynamicShareUrlRootEmpty":false,"dynamicShareUrlRoot":"http://11957983-3.hdpyqd.com/","fsl":"b","shareDeep":1,"openStrongAttention":false,"shareImg":"http://8171176.h40.faiusr.com/4/ACgIABAEGAAgweW1tgUokPnvugQwyAE4yAE!160x160.png","activeName":"参与活动赢大奖","wxShareText_def":"轻轻松松就能抽到大奖，积攒多年的人品终于有用了，你也赶紧来抽奖吧！！","wxShareText_award":"<span class=\"tag\" contenteditable=\"false\">玩家名称<\/span>已经在活动里赢得<span class=\"tag\" contenteditable=\"false\">奖品名称<\/span>，你也快来玩游戏赢大奖吧！","wxShareText_rank":"<span class=\"tag\" contenteditable=\"false\">玩家名称<\/span>以<span class=\"tag\" contenteditable=\"false\">游戏成绩<\/span>的成绩傲视群雄，你敢来挑战Ta赢取丰厚奖品吗？","addDrawTime":1})
+
+</script>
+<script type="text/javascript">
+    var _gameOver = true;
+    var GameArg = {
+        createTime : 0.8,
+        touchLimit : 0.5*g_rem
+    };
+    
+    var requestAnimFrame = function() {
+        return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function(a) {
+            window.setTimeout(a, 1e3 / 60, (new Date).getTime())
+        };
+    } ();
+    var Elements = {};
+    (function(g){
+        g.canvas = document.getElementById("canvas"),
+        g.ctx = g.canvas.getContext("2d");
+        var backingStore = g.ctx.backingStorePixelRatio ||
+                        g.ctx.webkitBackingStorePixelRatio ||
+                        g.ctx.mozBackingStorePixelRatio ||
+                        g.ctx.msBackingStorePixelRatio ||
+                        g.ctx.oBackingStorePixelRatio ||
+                        g.ctx.backingStorePixelRatio || 1;
+        g.ratio = (window.devicePixelRatio || 1) / backingStore;
+        var width = document.documentElement.getBoundingClientRect().width;
+        var height = document.documentElement.getBoundingClientRect().height;
+        g.canvas.width = width*g.ratio;
+        g.canvas.height = height*g.ratio;
+        g.canvas.style.width = width + 'px';
+        g.canvas.style.height = height + 'px';
+        g.speed = g.canvas.width / 3000;
+        g.inte = 0.1*g_rem*g.ratio;
+        g.pointY = 2*g_rem*g.ratio;
+        g.faiY = 5.2*g_rem*g.ratio;
+        g.cowboyY = g.canvas.height/2;
+        g.crashY = 1.3*g_rem*g.ratio;
+        g.scoreCanvasW = 2*g_rem*g.ratio;
+        g.scoreCanvasH = 1*g_rem*g.ratio;
+    })(GameArg);
+
+    (function(e,g) {
+        function Goods(imgData,type,offsetY) {
+            this.imgData = imgData,
+            this.name = imgData.name,
+            this.initW = imgData.width*g.ratio;
+            this.initH = imgData.height*g.ratio;
+            this.initY = (imgData.top + imgData.height)*g.ratio;
+            this.type = type;
+            this.img = hg.assets[imgData.path];
+            this.offsetY = offsetY || g.canvas.height;
+            this.update();
+            if(type === 0 || type === 4){
+                this.CD = false;
+            }
+        }
+        Goods.prototype.update = function(type,offsetY,flag){
+            var offsetY = offsetY || this.offsetY,
+                k = (offsetY - g.pointY)/(this.initY - g.pointY),
+                inte = this.name === 'gt' ? k*12*g.inte : k*g.inte,
+                width = k*this.initW,
+                height = k*this.initH,
+                speed = (offsetY - g.pointY)/(g.cowboyY - g.pointY)*g.speed,
+                offsetX;
+            type && (this.type = type);
+            switch(this.type){
+                case 0:
+                    offsetX = 9.25*g_rem*g.ratio - 0.43*offsetY - width - inte;
+                    break;
+                case 1:
+                    offsetX = 9*g_rem*g.ratio - 0.283*offsetY - 0.5*width;
+                    break;
+                case 2:
+                    offsetX = 8.18*g_rem*g.ratio - 0.0067*offsetY - 0.5*width;
+                    break;
+                case 3:
+                    offsetX = 7.75*g_rem*g.ratio + 0.225*offsetY - 0.5*width;
+                    break;
+                case 4:
+                    offsetX = 7.3*g_rem*g.ratio + 0.42*offsetY + inte;
+                    break;
+            }
+            if(flag){
+                return {
+                    width : width,
+                    height : height,
+                    speed : speed,
+                    offsetX : offsetX
+                }
+            }
+            this.width = width;
+            this.height = height;
+            this.speed = speed;
+            this.offsetX = offsetX;
+        }
+        Goods.prototype.render = function(ctx,delta){
+            if(!this.img){
+                return;
+            }
+            if(typeof this.CD !== 'undefined' && this.CD){
+                this.CD = !this.CD;
+                return;
+            }
+            this.offsetY -= this.speed*delta;
+            this.update();
+            ctx.drawImage(this.img,this.offsetX,this.offsetY-this.height,this.width,this.height);
+        };
+        e.Goods = Goods;
+    })(Elements,GameArg);
+    (function(e,g) {
+        function setScoreCanvas(score){
+            var scoreCanvas = $('<canvas width='+g.scoreCanvasW+' height='+g.scoreCanvasH+' ></canvas>')[0],
+                scoreCtx = scoreCanvas.getContext("2d"),
+                scoreStr = score >= 0 ? '+'+score : '' + score;
+            scoreCtx.font = "bold " + g.ratio*g_rem + "px Arial";
+            scoreCtx.textAlign = "center";
+            scoreCtx.baseBaseLine = "middle";
+            if(score < 0){
+                scoreCtx.fillStyle = "#f52121";
+            }else{
+                scoreCtx.fillStyle = "#f9ea42";
+            }
+            scoreCtx.fillText(scoreStr,g.scoreCanvasW/2,g.scoreCanvasH);
+            g['scoreCanvas'+score] = scoreCanvas;
+            g['scoreCtx'+score] = scoreCtx;
+        }
+        function getScoreCanvas(score) {
+            if(!g['scoreCanvas'+score]){
+                setScoreCanvas(score);
+            }
+            return g['scoreCanvas'+score];
+        }
+        function Score(offsetX,offsetY,score) {
+            this.offsetY = offsetY || 0;
+            this.offsetX = offsetX || 0;
+            this.scoreCanvas = getScoreCanvas(score);
+            this.y = 0;
+        }
+        Score.prototype.speed = 1.2*g_rem/1000;
+        Score.prototype.width = g.scoreCanvasW;
+        Score.prototype.height = g.scoreCanvasH;
+        Score.prototype.render = function(ctx,delta){
+            this.offsetY -= this.speed*delta;
+            this.y += this.speed*delta;
+            ctx.drawImage(this.scoreCanvas,this.offsetX,this.offsetY-this.height,this.width,this.height);
+        };
+        e.Score = Score;
+    })(Elements,GameArg);
+    hg.assets.onReady(function(){
+        (function(e,g) {
+            var cowboy = new e.Goods(hg.edit.getImgInfo('cowboy'),2);
+            cowboy.offsetY = g.cowboyY;
+            cowboy.update();
+            cowboy.runFps = 3*cowboy.speed/cowboy.width;
+            cowboy.frameInc = 0;
+            cowboy.jumpEndTime = 800;
+            cowboy.dodgeEndTime = 400;
+            cowboy.jumpEndY = cowboy.height;
+            cowboy.run = function(){
+                this.status = 'run';
+                this.img = [hg.assets[this.imgData.path[0]],hg.assets[this.imgData.path[1]]];
+            };
+            cowboy.jump = function(jumpEndY,jumpEndTime){
+                if(this.status === 'jump'){
+                    return;
+                }
+                this.status = 'jump';
+                jumpEndTime && (this.jumpEndTime = jumpEndTime);
+                jumpEndY && (this.jumpEndY = jumpEndY);
+                this.jumpTime = 0;
+                this.jumpStartSpeed = 2*this.jumpEndY/this.jumpEndTime;
+                this.jumpSpeed = this.jumpStartSpeed;
+                this.img = hg.assets[this.imgData.path[2]];
+            };
+            cowboy.dodge = function(flag,dodgeEndTime){
+                var type , offsetX;
+                if(flag === 'left'){
+                    type = e.cowboy.type-1;
+                }else if(flag === 'right'){
+                    type = e.cowboy.type+1;
+                }
+                if(type < 1 || type > 3){
+                    return;
+                }
+                this.dodgeX = this.update(type,g.cowboyY,true).offsetX;
+                this.dodgeTime = 0;
+                dodgeEndTime && (this.dodgeEndTime = dodgeEndTime);
+                this.dodgeSpeed = (this.dodgeX - this.offsetX)/this.dodgeEndTime;
+                this.dodgeing = true;
+            };
+            cowboy.render = function(ctx,delta){
+                var img;
+                switch(this.status){
+                    case 'run':
+                        this.frameInc += this.runFps*delta;
+                        var frameInc = Math.floor(this.frameInc);
+                        img = this.img[frameInc % this.img.length];
+                        break;
+                    case 'jump':
+                        this.offsetY -= this.jumpSpeed*delta;
+                        this.jumpTime += delta;
+                        this.jumpSpeed = this.jumpStartSpeed - 2*this.jumpStartSpeed*this.jumpTime/this.jumpEndTime;
+                        img = this.img;
+                        if(this.jumpTime >= this.jumpEndTime){
+                            this.offsetY = g.cowboyY;
+                            this.run();
+                        }
+                        break;
+                }
+                if(!img){
+                    return;
+                }
+                if(this.dodgeing){
+                    this.offsetX += this.dodgeSpeed*delta;
+                    this.dodgeTime += delta;
+                    if(this.dodgeTime >= this.dodgeEndTime){
+                        this.offsetX = this.dodgeX;
+                        this.dodgeing = false;
+                    }
+                }
+                ctx.drawImage(img,this.offsetX,this.offsetY-this.height,this.width,this.height);
+            };
+            cowboy.run();
+            e.cowboy = cowboy;
+        })(Elements,GameArg);
+    });
+    $(function(){
+        function initTapEvent(el,jumpCallBack,dodgeCallBack){
+            el = el || GameArg.canvas; 
+            el.addEventListener("touchstart", function(event) {
+                event.preventDefault();
+                event.stopPropagation();
+                if(_gameOver){
+                    return;
+                }
+                GameArg.lastPageX = event.changedTouches[0].pageX;
+                GameArg.lastPageY = event.changedTouches[0].pageY;
+                GameArg.touchJumpFlag = false;
+                GameArg.touchDodgeFlag = false;
+                GameArg.touchCrrLimit = GameArg.touchLimit;
+            },false);
+            el.addEventListener("touchmove", function(event) {
+                event.preventDefault();
+                event.stopPropagation();
+                if(_gameOver){
+                    return;
+                }
+                var pageX = event.changedTouches[0].pageX;
+                var pageY = event.changedTouches[0].pageY;
+                if(!GameArg.touchDodgeFlag && pageX < GameArg.lastPageX - GameArg.touchCrrLimit){
+                    Elements.cowboy.dodge('left');
+                    dodgeCallBack && dodgeCallBack.call(el);
+                    GameArg.touchDodgeFlag = true;
+                    GameArg.touchCrrLimit = GameArg.touchLimit*6;
+                }else if(!GameArg.touchDodgeFlag && pageX > GameArg.lastPageX + GameArg.touchCrrLimit){
+                    Elements.cowboy.dodge('right');
+                    dodgeCallBack && dodgeCallBack.call(el);
+                    GameArg.touchDodgeFlag = true;
+                    GameArg.touchCrrLimit = GameArg.touchLimit*6;
+                }
+                if(!GameArg.touchJumpFlag && pageY <  GameArg.lastPageY - GameArg.touchCrrLimit){
+                    Elements.cowboy.jump();
+                    jumpCallBack && jumpCallBack.call(el);
+                    GameArg.touchJumpFlag = true;
+                    GameArg.touchCrrLimit = GameArg.touchLimit*6;
+                }
+            },false);
+        }
+        initTapEvent();
+        initTapEvent($('#tishi1')[0],function(){
+            $(this).hide();
+            hg.time.start();
+            $(this).data('tishi_timer',setTimeout(function(){
+                addGoods(2,'stree');
+                $(this).data('tishi_timer',setTimeout(function(){
+                    hg.time.pause();
+                    $('#tishi2').show();
+                },1000));
+            },1000));
+        });
+        initTapEvent($('#tishi2')[0],false,function(){
+            $(this).hide();
+            hg.time.start();
+            gamePlay();
+        });
+    });
+    function addGoods(type,name,offsetY){
+        GameArg.goodsList.push(new Elements.Goods(hg.edit.getImgInfo(name),type,offsetY));
+    }
+    function startGame(){
+        if(!startGame.hasInit){
+            LF.setTopBarNotLF(GameArg.canvas,GameArg.ratio);
+            startGame.hasInit = true;
+        }
+        _gameOver = false,  
+        clearTimeout(GameArg.updateTimer),
+        clearTimeout(GameArg.asideTimer),
+        clearTimeout(GameArg.playTimer),
+        GameArg.goodsList = [],
+        GameArg.scoreList = [],
+        GameArg.createTimeRatio = 1,
+        GameArg.speed = GameArg.canvas.width / 3000,
+        GameArg.ctx.clearRect(0,0,GameArg.canvas.width,GameArg.canvas.height);
+        GameArg.asideFlag = 0;
+        GameArg.goodsList.push(Elements.cowboy);
+        Elements.cowboy.update(2,GameArg.cowboyY);
+        GameArg.currentTime = 0;
+        window.scrollTo(0,0);
+        addGoods(0,'xrz',GameArg.canvas.height*3/8);
+        addGoods(4,'xrz',GameArg.canvas.height*3/8);
+        addGoods(0,'gt',GameArg.canvas.height*4/8);
+        addGoods(4,'gt',GameArg.canvas.height*4/8);
+        addGoods(0,'xrz',GameArg.canvas.height*5/8);
+        addGoods(4,'xrz',GameArg.canvas.height*5/8);
+        addGoods(0,'gt',GameArg.canvas.height*6/8);
+        addGoods(4,'gt',GameArg.canvas.height*6/8);
+        updateGame();
+        setAside();
+        hg.time.start();
+        if(!HdGame.isplaySucess){
+            setTimeout(function(){
+                addGoods(2,'htree');
+                setTimeout(function(){
+                    hg.time.pause();
+                    $('#tishi1').show();
+                },1000);
+            },2000);
+        }else{
+            gamePlay();
+        }
+    }
+    GameArg.nameList = [
+        ['beer',0.35],
+        ['gold',0.7],
+        ['stree',0.85],
+        ['htree',1]
+    ];
+    function geName(){
+        var random = Math.random(),name;
+        for(var i =0;i < GameArg.nameList.length;i++) {
+            var tem = GameArg.nameList[i];
+            if(random <= tem[1]){
+                name = tem[0];
+                break;
+            }
+        }
+        if((name === 'stree' || name === 'htree') &&  name === GameArg.lastGoods){
+            return arguments.callee();
+        }
+        GameArg.lastGoods = name;
+        return name;
+    }
+    function gamePlay(){
+        if(_gameOver){
+            return;
+        }
+        var name, type , create_time = GetRandomNum(500,800);
+        if(hg.time.isRunning()){
+            name = geName();
+            type = name === 'htree' ? 2 : GetRandomNum(1,3),
+            GameArg.goodsList.push(new Elements.Goods(hg.edit.getImgInfo(name),type));
+        }
+        GameArg.playTimer = setTimeout(arguments.callee,create_time*GameArg.createTimeRatio);   
+    }
+    function setAside(){
+        if(_gameOver){
+            return;
+        }
+        if(hg.time.isRunning()){
+            var create_time = GameArg.canvas.height/(GameArg.speed*8);
+            if(GameArg.asideFlag%2){
+                addGoods(0,'gt');
+                addGoods(4,'gt');
+                
+            }else{
+                addGoods(0,'xrz');
+                addGoods(4,'xrz');
+            }
+            GameArg.asideFlag++;
+        }
+        GameArg.asideTimer = setTimeout(arguments.callee,create_time); 
+    }
+    function setScore(score){
+        if(score < 0){
+            hg.sound.play(2);
+        }else{
+            hg.sound.play(1);
+        }
+        var cowboy = Elements.cowboy;
+        hg.grade(score);
+        GameArg.scoreList.push(new Elements.Score(cowboy.offsetX + cowboy.width/2 - GameArg.scoreCanvasW/2,cowboy.offsetY - cowboy.height,score));
+    }
+    function updateGame(){
+        if(_gameOver){
+            return;
+        }
+        var currentTime = (new Date).getTime();
+        var delta = currentTime - GameArg.currentTime;
+        GameArg.currentTime = currentTime;
+        delta > 500 && (delta = 0);
+        if(hg.time.isRunning()){
+            var flag = false,
+                cowboy = Elements.cowboy;
+            GameArg.ctx.clearRect(0,0,GameArg.canvas.width,GameArg.canvas.height);
+            GameArg.goodsList = quickSort(GameArg.goodsList);
+            for(var i = 0;i < GameArg.goodsList.length;i++){
+                var tem = GameArg.goodsList[i];
+                if(tem.name !== 'cowboy' && tem.offsetY < GameArg.faiY){
+                    GameArg.goodsList.splice(i,1);
+                    if(!GameArg.goodsList[i]){
+                        continue;
+                    }
+                }
+                if(tem.name === 'htree'){
+                    if(cowboy.status !== 'jump' && tem.offsetY > GameArg.cowboyY && tem.offsetY < GameArg.cowboyY + GameArg.crashY){
+                        setScore(-80);
+                        GameArg.goodsList.splice(i,1);
+                    }
+                }else if(tem.type === cowboy.type){
+                    if(tem.name === 'beer' && tem.offsetY > GameArg.cowboyY - GameArg.crashY && tem.offsetY < GameArg.cowboyY + GameArg.crashY){
+                        setScore(10);
+                        GameArg.goodsList.splice(i,1);
+                    }else if(tem.name === 'gold' && tem.offsetY > GameArg.cowboyY - GameArg.crashY && tem.offsetY < GameArg.cowboyY + GameArg.crashY){
+                        setScore(50);
+                        GameArg.goodsList.splice(i,1);
+                    }else if(tem.name === 'stree' && tem.offsetY > GameArg.cowboyY && tem.offsetY < GameArg.cowboyY + GameArg.crashY){
+                        setScore(-80);
+                        GameArg.goodsList.splice(i,1);
+                    }
+                }
+                if(!GameArg.goodsList[i]){
+                    continue;
+                }
+                if(tem.name === 'cowboy' && cowboy.status === 'jump' && cowboy.jumpSpeed < 0){
+                    flag = true;
+                    continue;
+                }
+                GameArg.goodsList[i].render(GameArg.ctx,delta);
+            }
+            flag && Elements.cowboy.render(GameArg.ctx,delta);
+            for(var i = 0;i < GameArg.scoreList.length;i++){
+                if(GameArg.scoreList[i].y > 1.2*g_rem*GameArg.ratio){
+                    GameArg.scoreList.splice(i,1);
+                    if(!GameArg.scoreList[i]){
+                        continue;
+                    }
+                }
+                GameArg.scoreList[i].render(GameArg.ctx,delta);
+            }
+            hg.time.updateInFrame(delta);
+            LF.showTopBar();
+        }
+        GameArg.updateTimer = requestAnimFrame(updateGame);
+    }
+    function quickSort(arr) {
+    　　if (arr.length <= 1) { return arr; }
+    　　var pivotIndex = Math.floor(arr.length / 2);
+    　　var pivot = arr.splice(pivotIndex, 1)[0];
+    　　var left = [];
+    　　var right = [];
+    　　for (var i = 0; i < arr.length; i++){
+    　　　　if (arr[i].offsetY < pivot.offsetY) {
+    　　　　　　left.push(arr[i]);
+    　　　　} else {
+    　　　　　　right.push(arr[i]);
+    　　　　}
+    　　}
+    　　return quickSort(left).concat([pivot], quickSort(right));
+    }
+    function isIPhone6(){
+        return window.navigator.userAgent.indexOf('iPhone') !== -1&&(window.screen.availWidth === 375 || window.screen.availWidth === 414);
+    }
+    function isIPhone4(){
+        return window.navigator.userAgent.indexOf('iPhone') !== -1&&(window.screen.availHeight === 460);
+    }
+    function isAndroid(){
+        return window.navigator.userAgent.indexOf('Android') !== -1;
+    }
+    function GetRandomNum(a,b){
+        return a+Math.round(Math.random()*(b-a));
+    }
+    
+
+    $(function(){          
+        gameInit();
+        if(_manage){        
+            $('#gameLayerBox [class*="editTarget"]')
+            .setResizableOption({handles:'n,e,w,ne,nw'})
+            .addResizableFn('start',function(event,ui){
+                $(this).data('middle',parseFloat($(ui.element).css('left')) + $(ui.element).width()/2);
+                if(ui.axis === 'ne' || ui.axis === 'nw'){
+                    $(this).data({
+                        'HWratio' : $(ui.element).height()/$(ui.element).width(),
+                        'bottom'  : parseFloat($(ui.element).css('top')) + $(ui.element).height()
+                    });
+                }
+            }).addResizableFn('resize',function(event,ui){
+                setResize(this,ui);
+            }).addResizableFn('stop',function(event,ui){
+                setResize(this,ui);
+                $(this).removeData('middle').removeData('HWratio').removeData('bottom');
+            });
+            function setResize(el,ui){
+                var orientation = ui.axis,
+                    middle = $(el).data('middle'),
+                    left = parseFloat($(ui.element).css('left')),
+                    width = $(ui.element).width(),
+                    widthCrr,
+                    maxWidth = $('body').width() -3,
+                    maxHeight = $('body').height() -3;
+                if(orientation.indexOf('w') !== -1){
+                    if(2*middle - left >= maxWidth){
+                        widthCrr = 2*(maxWidth - middle);
+                    }else{
+                        widthCrr = 2*(middle - left);
+                        $(ui.element).add(el).css('width',2*(middle - left));
+                    }
+                }else{
+                    if(2*middle - left - width <= 0){
+                        widthCrr = 2*middle;
+                        $(ui.element).add(el).css({
+                            'width' : 2*middle,
+                            'left'  : 0
+                        });
+                    }else{
+                        widthCrr = 2*(left + width - middle);
+                    }
+                }
+                if(widthCrr <= 10){
+                    widthCrr = 10;
+                }
+                if(orientation === 'ne' || orientation === 'nw'){
+                    var heightCrr = widthCrr * $(el).data('HWratio');
+                    var bottom = $(el).data('bottom');
+                    heightCrr <= 10 && (heightCrr = 10);
+                    if(heightCrr >= bottom){
+                        heightCrr = bottom;
+                        widthCrr = heightCrr / $(el).data('HWratio');
+                    }
+                    $(ui.element).add(el).css({
+                        'height' : heightCrr,
+                        'top'  : bottom - heightCrr
+                    });
+                }
+                $(ui.element).add(el).css({
+                    'width' : widthCrr,
+                    'left'  : middle - widthCrr/2
+                });
+            }
+        }else{
+            hg.on('startGame',startGame);
+            hg.time.setAcceList(4);
+            hg.time.updateFlag = false;
+            hg.time.on('acce',function(index){
+                GameArg.createTimeRatio = 1 - 0.1*index;
+                GameArg.speed = GameArg.canvas.width / (3000 - 300*index);
+            }).on('end',function(){
+                $('#tishi1,#tishi2').each(function(index, el) {
+                    clearTimeout($(this).data('tishi_timer'));
+                    $(this).off().hide();
+                    $(this).removeData('tishi_timer');
+                });
+                clearTimeout(GameArg.updateTimer);
+                clearTimeout(GameArg.asideTimer);
+                clearTimeout(GameArg.playTimer);
+                _gameOver = true;
+                setTimeout(function(){
+                    gameOver(hg.grade.val);
+                },1000);
+            });
+        }
+        $('.gameBox').on('touchmove',function(event){
+            event.preventDefault();
+            event.stopPropagation();
+        });
+    }); 
+    
+    function gameInit() {
+        hg.time.init();
+        hg.grade.set(0);
+        $('.timeUpImg').hide();
+    }
+    function home(){
+        $('#ruleImg').show();
+        $('.homeBtnBox').show();
+        $('.footerBox').show();
+        $('.gameBox').hide();
+        startBtnDelay();
+        $('.home').show();
+        $('#poupInfoBox').hide();
+        $('.resuleBox').hide();
+        gameInit();
+        hg.fire('home');
+    }
+    function gameRestart() {
+        $('.gameBox').show();
+        gameInit();
+        if(!_manage){
+            startGame();
+        }
+        hg.fire('again');
+    }
+    function showGamePage(){
+        $('#ruleImg').hide();
+        $('.homeBtnBox').hide();
+        $('.footerBox').hide(); 
+        $('.home').hide();
+        $('#poupInfoBox').hide();
+        $('.resuleBox').hide();
+        $('.gameBox').show();
+    }
+    function  computeMaxGrade(time){
+        var it = time/5;
+        var g = 0;
+        for(var i = 0;i < 5;i++){
+            g += 50*it/(0.5*(1-i*0.1))
+        }
+        return g;
+    }
+</script>
+
+<script type="text/javascript">
+    var count = 0;
+    var drawTimesLimit = 3;
+    var drawTotalLimit = 6;
+    var totalCount = 0;
+    var isLimitDraw = false;
+    var otherPlayerInfo = {};
+    var showAwardList = false;
+    var informNum = 0;
+    var playerAwardList = [];
+    var skillSupportType = 2;
+    var skillName = HdGame.decodeHtml('凡科互动');
+    var skillLink = HdGame.decodeUrl(HdGame.decodeHtml('http%3A%2F%2Fmp.weixin.qq.com%2Fs%3F__biz%3DMjM5MTk5MjI3OA%3D%3D%26mid%3D209854000%26idx%3D1%26sn%3D82241d924839270d3ea820ad2d56c01b%23wechat_redirect'));
+    var gameType = 0;
+    var rankShowNum = 100;
+    PlayInfo.initData(12,12,5,10,false);
+
+    //改版前的联系兑奖提示语
+    HdGame._awardLinkMsg = '获奖者需填写联系电话方可查看兑奖码兑奖';
+
+    //初始化弹出层参数
+    HdGame.initChangePoup({
+        rankUrl        : '//hd.faisco.cn/ajax/hdgame_h.jsp?cmd=getRankList&aid=11957983&gameId=3&style=16&openId=o1ueSjorrC3xUjCq8E6tOqM6J1vM',
+        awardUrl       : '//hd.faisco.cn/ajax/hdgame_h.jsp?cmd=getGiftList&aid=11957983&style=16',
+        getRegAwardUrl : '//hd.faisco.cn/ajax/hdgame_h.jsp?cmd=getRegAwardList&aid=11957983&gameId=3&style=16&openId=o1ueSjorrC3xUjCq8E6tOqM6J1vM',
+        openId         : 'o1ueSjorrC3xUjCq8E6tOqM6J1vM',
+        gameId         : 3,
+        mhaveScore     : (true && gameType != 3),
+        informUrl      : '//hd.faisco.cn/ajax/hdgame_h.jsp?cmd=setInformNum&aid=11957983&gameId=3&openId=o1ueSjorrC3xUjCq8E6tOqM6J1vM',
+        hasReport      : false,
+        afterWxCard    : true
+    });
+    HdGame.resulePoup.init({
+        drawType  : 1,
+        checkRegUrl:'//hd.faisco.cn/ajax/hdgame_h.jsp?cmd=checkRegNum&aid=11957983&gameId=3&openId=o1ueSjorrC3xUjCq8E6tOqM6J1vM',  
+        regUrl    : '//hd.faisco.cn/ajax/hdgame_h.jsp?cmd=setPlayerReg&aid=11957983&gameId=3&openId=o1ueSjorrC3xUjCq8E6tOqM6J1vM&flag1=true',
+        home      : typeof home !== 'undefined' ? home : null,
+        again     : typeof gameRestart !== 'undefined' ? gameRestart : null,
+        giftInit  : _manage? luckDraw : (false ? luckDrawZhuli : luckDraw),
+    });
+   HdGame.initJsFoot({"rulesortstr":"abcde","drawType":1,"hostName":"请输入企业名称","hostLink":"http://","menuLink":"","fromFav":"","openAwardExp":true,"isHideFxts":true,"supportUrl":"http://mp.weixin.qq.com/s?__biz=MjM5MTk5MjI3OA==&mid=209854000&idx=1&sn=82241d924839270d3ea820ad2d56c01b#rd","skillSupport":"凡科互动","showJoinNum":true,"showRedDot":false,"showMDRedDot":false,"showAwardBtn":false,"isSelAwardLine":false,"showSkillSup":true,"menuStyle":3,"soundIcon_l":"0.75rem","soundIcon_t":"1rem","awardImage":"//hdg.faisys.com/image/gift.png?v=201601141500","titleImg_path_def":"//hdg.faisys.com/image/bpb/title.png?v=201509051300","startImg_path_def":"//hdg.faisys.com/image/bpb/startBtn.png?v=201509051300","awardIconImgPath_def":"//hdg.faisys.com/image/ruleImg_red.png","titleImg_w_def":"15rem","titleImg_h_def":"6rem","startBtn_w_def":"8rem","startBtn_h_def":"2.5rem","logoImg_w_def":"2rem","logoImg_h_def":"2rem","awardImg_w_def":"6rem","awardImg_h_def":"6rem","homeBgPath_def":"//hdg.faisys.com/image/bpb/homeBg.jpg?v=201509051300","gameBg2Path_def":"","gameBgPath_def":"//hdg.faisys.com/image/bpb/gameBg.jpg?v=201509081300","headImg2":"","headImg3":"","headImg4":"","dangerType":1})
+
+    //标题与开始按钮动画
+    function startBtnDelay(){
+        $('.titleImg').removeClass('titleDown').addClass('titleDown');
+        $('#startBtnImg').removeClass('startTada');
+        
+        hg.sound.pauseAll();
+        
+        setTimeout(function(){
+            $('#startBtnImg').addClass('startTada');
+        },1000); 
+        
+    }
+    //抽奖结果页或收藏卡劵的显示兑奖详细页
+    function showAwardDetail4Draw(fromFav){
+        home('showAward',fromFav);
+        HdGame.changePoup(3);
+    }
+    function setAwardImgHeight(){
+        $('#resule-gift-foot').css("margin-top",($('#resule-gift-sucImg').height()+35)/g_rem + 'rem');
+    }
+    function showRank(){
+        HdGame.changePoup(1);
+        $('#awardDetailBox').hide();
+    }
+    function showRule(){
+        HdGame.changePoup(2);
+        $('#awardDetailBox').hide();
+    }
+    function activateSound(){ //兼容ios下 WebAudio类型的对象无法自动播放，必须在点击事件中播放过一次，才允许播放
+        try{
+            if(HdGame.isIPhone() && hg.sound.list && hg.sound.list.length > 0 && !hg.sound._activate){ 
+                $.each(hg.sound.list, function(i, val) {
+                    var data = hg.sound.cache[i];
+                    if(i > 0 && data && data.soundType == "LWebAudio"){
+                        data.play();
+                        data.stop();
+                    }
+                });
+                hg.sound._activate = true;
+            }
+        }catch(e){
+            HdGame.logStd("activateSoundErr",e);
+        }
+    }
+    function startBtnAjax(event,data,pass){
+        var that = this;
+        activateSound();
+        
+        
+        //是否在活动时间内
+        if(false){
+            HdGame.statusMsg(2);
+            hg.sound.allowPlay = false;
+            hg.sound.pauseAll();
+            return false;
+        }
+        if(!hg.fireWith('startGamehead',that,[event,data])){
+            return false;
+        }
+        //是否超过参与人数
+        if(false){
+            HdGame.statusMsg("该游戏已超过最大参与人数！");
+            return false;
+        }
+        //是否可参与地区
+        if(g_config.isOpenAreaLimit){
+            if(!pass){
+                HdGame.getAreaByWx(function(){
+                    startBtnAjax.call(that,event,data,true);
+                });
+                return false;
+            }
+            if( checkAreaLimit() != 'ok' ){ //不在限制的地区内，直接返回
+                return false;
+            }
+        }
+        //是否为黑名单
+        if(false){
+            HdGame.statusMsg('你有疑似作弊行为，已被列入黑名单','');
+            return false;
+        }
+        //是否强制关注,如果已经授权并且开启了强关注功能
+        if(false){
+            $('.body').off("touchend").on("touchend",function(event){
+                var targetId = $(event.target).attr("id");
+                if(targetId != "startBtnImg" && typeof targetId !== "undefined"){
+                    $("#strongAttion").hide();
+                }
+            });
+            $("#strongAttion").show().off("touchend").on("touchend",function(event){
+                event.preventDefault();
+                event.stopPropagation();
+            });
+            
+            return false;
+        }
+        //是否联系信息,参与前填写联系信息
+        
+        if(g_config.afterLinkModify && HdGame.shouldRegInfo(2,arguments,this)){
+            return false;
+        }
+        
+        //是否有参与机会
+        if( gameType == 3 && g_config.isCheckPlayTimes && PlayInfo.getTotalRemainTimes() <= 0 ){
+            HdGame.statusMsg(8);
+            return false;
+        }
+        if( gameType == 3 && g_config.isCheckPlayTimes && PlayInfo.getTodayRemainTimes() <= 0 ){
+            HdGame.statusMsg(7);
+            return false;
+        }
+        
+        if(!hg.fireWith('beforeStartGame',that,[false,event,data])){
+            return false;
+        }
+        if(hg.showGameBox){
+            $('.homeBtnBox,.bottomSkill').hide();
+            $('.footerBox').hide(); 
+            $('.home,#ruleImg').hide();
+            $('.gameBox').show();
+            if(typeof hg.sound.cache[0] !== 'undefined' && typeof hg.sound.cache[0].playing !== 'undefined' && !hg.sound.cache[0].playing && g_config.style != 48){
+                hg.sound.readyPlay(0,0,'loop');
+            }
+        }
+        HdGame.logDog(1000002, 5045);
+        HdGame.logObjDog(1000092, 1, 3);
+        
+           /* HdGame.addJoinGameBehavior();*/
+        
+        hg.fireWith('startGame',that,[false,event,data]);
+        
+        return true;
+    }
+
+        
+    function gameOver(_gameScore,callBack,option,showAjaxBar){
+        
+        if(_gameScore === 'fail'){          
+            setTimeout(function(){
+                HdGame.resulePoup.show({
+                    isSuc:false,
+                    gameScore:"fail",//闯关失败
+                    minScore:300,
+                    bestScore:'480',
+                    isReg:HdGame.isReg, //是否报名
+                    gameType:gameType,
+                    rank:1,
+                    count:drawTimesLimit-count<0 ? 0:(drawTimesLimit-count),
+                    isLimitDrawTotal:isLimitDraw,
+                    totalCount: drawTotalLimit - totalCount < 0 ? 0 : (drawTotalLimit - totalCount)
+                });
+            },900);
+            return;
+        }
+        if(isNaN(_gameScore) || _gameScore < 0){
+            _gameScore = 0;
+        }
+        //参与前填写
+        if(false){//奥运男篮游戏没有开始按钮，点击支持直接调gameOver;
+            if(g_config.afterLinkModify && HdGame.shouldRegInfo(2,arguments,this)){
+                return;
+            }       
+        }else{
+            //其他游戏报名型没有参与后填写设置项,这里判断不等于报名型防止旧数据在这里触发联系兑奖
+            var infoType = 1;
+            if(gameType == 3 || gameType == 1){
+                infoType = 3;
+            }
+            if(gameType != 1 && HdGame.shouldRegInfo(infoType,arguments,this)){
+                return;
+            }
+        }
+        $('.ajaxLoadBg').show();
+        $('.ajaxLoadBar').addClass('ajaxLoad');
+        var _gameScoreStr = _gameScore + '';
+        if(false){
+            _gameScoreStr = changeTwoDecimal_f(_gameScore);
+        }      
+        var info = {headImg : "http://wx.qlogo.cn/mmopen/ajNVdqHZLLDXebVxqmbF5CvwDrzYL7NJCRtIKKc3CtE4l3BWiblQkY9OjTIX4ia2dExGgAKMMzhglmvT4L7lHeiaQ/0"};
+        g_config.awardUsername && (info.ausername = g_config.awardUsername);    
+        g_config.awardPhone && (info.aphone = g_config.awardPhone); 
+        g_config.awardAddress && (info.aadress = g_config.awardAddress);
+        var params = {};
+        params.gameId = 3;
+        params.style = 16;
+        params.achieve = HdGame.encodeBase64('"'+_gameScoreStr+'"') + "32NfgTbzQ6NwczY7YjelR7YhZjZ5Y2M";
+        params.openId = "o1ueSjorrC3xUjCq8E6tOqM6J1vM";
+        params.name = g_config.userName;
+        
+        params.info = $.toJSON(info);
+        params.awardInfoB = g_config.awardInfoB;
+        $.extend(params,option);
+       /* $.ajax({
+            type : 'post',
+            url : '//hd.faisco.cn/ajax/hdgame_h.jsp?cmd=setAchieve&aid=11957983&playerId='+g_config.playerId,
+            data : params,
+            error : function(){               
+                HdGame.otherAjaxComplete();
+                $('#timeUpImg,.timeUpImg').removeClass('tada');
+                callBack && callBack({
+                    rt:-999,
+                    msg:"ajax返回错误"
+                });
+                HdGame.tlog('gameOverErr',$.toJSON(arguments)); 
+            },
+            success : function(data){
+                HdGame.tlog('gameOver',data);                 
+                var r = $.parseJSON(data);
+                var isShowPoup = true;
+                if(!showAjaxBar){
+                    HdGame.otherAjaxComplete(); 
+                }
+                
+                if(r.rt == 0){
+                    var arg={
+                        isSuc:r.isSuc,
+                        gameScore:_gameScoreStr,
+                        minScore:300,
+                        bestScore:r.score,
+                        isReg:HdGame.isReg, //是否报名
+                        gameType:gameType,
+                        rank:r.rank,
+                        beat:r.beat,
+                        count:drawTimesLimit-count<0 ? 0:(drawTimesLimit-count),
+                        isLimitDrawTotal:isLimitDraw,
+                        totalCount: drawTotalLimit-totalCount<0 ? 0:(drawTotalLimit-totalCount),
+                        isEqualDraw:false
+                    };
+                    setTimeout(function(){
+                        var callBackArg = {rt:r.rt,msg:r.msg,arg:arg,pId:r.playerId,firstScore : r.firstScore};
+                        g_config.playerId = r.playerId;
+                        if(false){
+                            callBackArg.infoList = r.infoList;
+                        }
+                        callBack && (isShowPoup = callBack(callBackArg));
+                        $('#timeUpImg,.timeUpImg').removeClass('tada');
+                        isShowPoup !== false && HdGame.resulePoup.show(arg);
+                    },300);
+                    PlayInfo.addPlayTimes(1);
+                }else if(r.rt == 11){
+                    alert("已被检测到有作弊行为，再次被检测将永久禁止参与本游戏！");
+                }else if(r.rt == 12){
+                    alert("由于作弊行为，该微信号已永久禁止参与本游戏！");
+                }else if(r.rt == 23){
+                    HdGame.statusMsg("游戏已结束。");
+                }else{
+                    callBack && (isShowPoup = callBack({rt:r.rt,msg:r.msg}));
+                    isShowPoup !== false && HdGame.resulePoup.show({
+                        isSuc:false,
+                        gameScore:'--',
+                        minScore:300,
+                        bestScore:'--',
+                        isReg:HdGame.isReg, //是否报名
+                        gameType:gameType,
+                        rank:'--',
+                        beat:'--',
+                        count:drawTimesLimit-count<0 ? 0:(drawTimesLimit-count),
+                        isLimitDrawTotal:isLimitDraw,
+                        totalCount: drawTotalLimit-totalCount<0 ? 0:(drawTotalLimit-totalCount),
+                        isEqualDraw:false
+                    });
+                    return;
+                }
+                if(r.rt !== 0){
+                    callBack && callBack({rt:r.rt,msg:r.msg});
+                }
+            }
+        });*/
+        params = info = option = null;
+        function changeTwoDecimal_f(x) {
+            var f_x = parseFloat(x);
+            if (isNaN(f_x)) {
+                alert('function:changeTwoDecimal arguments error');
+                return x;
+            }
+            var f_x = Math.round(x * 100) / 100;
+            var s_x = f_x.toString();
+            var pos_decimal = s_x.indexOf('.');
+            if (pos_decimal < 0) {
+                pos_decimal = s_x.length;
+                s_x += '.';
+            }
+            while (s_x.length <= pos_decimal + 2) {
+                s_x += '0';
+            }
+            return s_x;
+        }
+        
+    }
+
+function checkAreaLimit(){
+    function logIPInfo(limitProvince,limitCity){
+        $.ajax({
+            type : 'post',
+            data : {
+                'aid' : 11957983,
+                'gameId' : 3,
+                'userName' : g_config.userName,
+                'ipInfo': $.toJSON(g_config.ipInfo),
+                'lp': limitProvince,
+                'lc': limitCity
+            },
+            url : '//hd.faisco.cn/ajax/hdgame_h.jsp?cmd=logIPInfo',
+            success : function(data){  
+            }
+        });
+    }
+    var isShowMsg = true;
+    if(typeof arguments[0] === 'boolean'){
+        isShowMsg = arguments[0];
+    }
+    //限制参与地区
+    if(false){ //有开启参与地区限制
+        //HdGame.getAreaByWx();
+        var areaLimit_province = '-1'.split(':');
+        var areaLimit_city = '-1'.split(':');
+        var now_province = g_config.ipInfo.provice;
+        var now_city = g_config.ipInfo.city;
+        if(areaLimit_province[0] != "-1"){
+            if( now_province && now_city ){ //有当前ip信息
+                if( areaLimit_city[0] == "-1" ){ //限制省份
+                    if( areaLimit_province[0] != "-1" && now_province.indexOf(areaLimit_province[1]) == -1 ){
+                        isShowMsg && HdGame.statusMsg("该活动限制地区",'该活动仅限'+areaLimit_province[1]+'地区的用户参与');
+                        logIPInfo(areaLimit_province[1],areaLimit_city[1]);
+                        return 'limit';
+                    }
+                }else{ //限制城市
+                    if( areaLimit_city[0] != "-1" && now_city.indexOf(areaLimit_city[1]) == -1 ){ //用户不在限制的省份内
+                        isShowMsg && HdGame.statusMsg("该活动限制地区",'该活动仅限'+areaLimit_city[1]+'地区的用户参与');
+                        logIPInfo(areaLimit_province[1],areaLimit_city[1]);
+                        return 'limit';
+                    }
+                }
+            }else{ //没有查到当前ip信息，显示服务繁忙
+                isShowMsg && HdGame.statusMsg("服务繁忙，请稍候重试",'');
+                return 'busyness';
+            }
+        }
+        return 'ok';
+    }else{
+        return 'ok';
+    }  
+} 
+hg.on('beforeDraw',function(_arguments){
+    //抽奖前填写联系信息
+    var thisInfoType = 3;
+    if(false){
+        thisInfoType = 2;
+    }
+    if(g_config.afterLinkModify && HdGame.shouldRegInfo(thisInfoType,_arguments,this)){
+        return false;
+    }
+});
+var drawStatusLuckDraw = true;
+function luckDraw(fn,option,pass){
+
+    if(g_config.isOpenAreaLimit && !pass){
+        if(!pass){
+            HdGame.getAreaByWx(function(){
+                luckDraw(fn,option,true);
+            });
+            return false;
+        }
+        //限制参与地区
+        if( checkAreaLimit() != 'ok' ){ //不在限制的地区内，直接返回
+            return false;
+        }
+    }
+    
+    if(hg.fireWith('beforeDraw',this,[arguments]) === false){
+        return false;
+    }
+    
+    if(!drawStatusLuckDraw){
+        return;
+    }
+
+    drawStatusLuckDraw=false;
+    $('.ajaxLoadBg').show();
+    $('.ajaxLoadBar').addClass('ajaxLoad'); 
+
+    var params = {};
+    params.gameId = 3;
+    params.style = 16;
+    
+    params.userName = g_config.userName;
+    params.isPub = $.trim('');
+    params.headImg = g_config.headImg;
+    $.extend(params,option);
+    $.ajax({
+        type : 'post',
+        url : '//hd.faisco.cn/ajax/hdgame_h.jsp?cmd=getResult&aid=11957983&openId=o1ueSjorrC3xUjCq8E6tOqM6J1vM',
+        data : params,
+        error : function(){ 
+            alert( '服务繁忙，请稍候重试!' );
+            HdGame.otherAjaxComplete();
+            drawStatusLuckDraw=true;
+            if(gameType != 4){
+                count++;
+                totalCount++;
+            } 
+            clearTimeout(HdGame.lotTimer);           
+        },
+        success : function(data){
+            HdGame.tlog('luckDraw',data);
+            HdGame.otherAjaxComplete(); 
+            drawStatusLuckDraw=true;  
+            clearTimeout(HdGame.lotTimer);
+            var result = $.parseJSON(data);
+            if(result.success){
+                if(gameType != 4){
+                    count++;
+                    $(".dayDrawCount").text(drawTimesLimit-count<0 ? 0:(drawTimesLimit-count));
+                    totalCount++;
+                    $(".totalDrawCount").text(drawTotalLimit-totalCount<0 ? 0:(drawTotalLimit-totalCount));
+                }   
+                $('#resule-gift-box').attr('_level',result.awardIndex);
+                g_config.haveAward = true;
+                $('.resule-status-send').html("查看我的奖品");
+            }else{
+                if(result.rt === 27 && result.op === "getGameResult"){
+                    $('.resuleBox').hide();
+                    HdGame.showLotsWait(5,function(){
+                        $('.resuleBox').show();
+                        //HdGame.resulePoup.startStatus = true; //开启摇一摇抽奖
+                        luckDraw(fn,option);
+                    });
+                    return;
+                }else if (result.rt === 1) {
+                    count = drawTimesLimit;
+                    $(".dayDrawCount").text(0);
+                    HdGame.statusMsg(4);
+                    if(!g_config.showHelpGuide){
+                        $('#resule-gift-box').hide();
+                        home('luckDraw');
+                    }
+                    return;
+                }else if (result.rt === 13) {
+                    HdGame.statusMsg(6);
+                    count = drawTimesLimit;
+                    totalCount = drawTotalLimit;
+                    $(".dayDrawCount").text(0);
+                    $(".totalDrawCount").text(0);
+                    $('#resule-gift-box').hide();
+                    home('luckDraw');
+                    return;
+                }else if( result.rt ===  -3 ){
+                    HdGame.statusMsg("活动不存在。");
+                    return;
+                }else if( result.rt ===  23 ){
+                    alert("游戏已结束。");
+                    return;
+                }else{  
+                    if(result.rt === -2){
+                        HdGame.log("参数错误。");
+                    }else if(result.rt === -1){
+                        HdGame.log("系统错误，请刷新再试。");
+                    }
+                    count++;
+                    $(".dayDrawCount").text(drawTimesLimit-count<0 ? 0:(drawTimesLimit-count));
+                    totalCount++;
+                    $(".totalDrawCount").text(drawTotalLimit-totalCount<0 ? 0:(drawTotalLimit-totalCount));
+                    $('.resule-status-box').hide();
+                }
+            }
+            var arg={
+                isSuc:result.success,
+                giftStyle:result.awardStyle,
+                giftName:result.awardName,
+                giftCode:result.awardCode,
+                awardTypeNum:result.awardTypeNum,
+                giftImage:result.awardImage,
+                awardImageW:result.awardImageW,
+                awardImageH:result.awardImageH,
+                awardIndex:result.awardIndex,
+            };
+            if(HdGame.getType(fn) === 'function'){
+                fn(arg,result);
+            }else{
+                HdGame.resulePoup.showGift(arg);
+            }
+        }
+    });     
+
+}
+$(function(){
+    hg.fire('jsFootEnd');
+})
+</script>
+
+<script type="text/javascript">
+    
+    /*$.ajaxSettings.errorCall.push(function(callbackContext, status, error){
+        if(/logAjaxErr_h\.jsp/.test(callbackContext.url) && /cmd=hdajaxErr/.test(callbackContext.url)){
+            return;
+        }
+        var faiAjax = top._faiAjax || Fai.top._faiAjax || $;
+        if( faiAjax ){
+            faiAjax.ajax({
+                type    : "post",
+                url     : "//hd.faisco.cn/ajax/logAjaxErr_h.jsp?cmd=hdajaxErr&error="+error+"&status="+status+"&openId=o1ueSjorrC3xUjCq8E6tOqM6J1vM&aid=11957983&gameId=3",
+                data    : 'msg=' + HdGame.encodeHtml('ajaxUrl='+HdGame.encodeUrl(callbackContext.url)+';refer='+HdGame.encodeUrl(top.location.href))
+            });
+        }
+    });*/
+    
+</script>
+
+
+<div id="logBox" style="display: none;"><div id="log_head"><div id="log_close" class="log_icon">╳</div><div id="log_min" class="log_icon">━</div></div><div id="log_text_wrap"><div id="log_text"></div></div></div><div id="log_max" style="display: none;"><div id="log_max_inner">＋</div></div></body><iframe id="ping_iframe" src=" weixinping://iframe " style="display: none;"></iframe><iframe id="__WeixinJSBridgeIframe_SetResult" src="weixin://private/setresult/SCENE_HANDLEMSGFROMWX&amp;ZHVtbXk=" style="display: none;"></iframe><iframe id="__WeixinJSBridgeIframe" src="weixin://dispatch_message/" style="display: none;"></iframe></html>
