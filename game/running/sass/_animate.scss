@@ -1,0 +1,60 @@
+.titleDown {
+    animation: bounceInDown 1s ease 1;
+    -webkit-animation: bounceInDown 1s ease 1;
+    -moz-animation: bounceInDown 1s ease 1;
+    -o-animation: bounceInDown 1s ease 1;
+}
+.startTada{
+        animation:tada .6s ease 0s 1 forwards;
+        -webkit-animation:tada .6s ease 0s 1 forwards;
+        -moz-animation:tada .6s ease 0s 1 forwards;
+        -o-animation:tada .6s ease 0s 1 forwards
+}
+@-webkit-keyframes bounceInDown{
+        0%{
+            opacity:0;-webkit-transform:translateY(-2000px)
+            }
+        60%{
+            opacity:1;-webkit-transform:translateY(30px)
+        }
+        80%{
+            -webkit-transform:translateY(-10px)
+        }
+        100%{
+            -webkit-transform:translateY(0)
+        }
+}
+@keyframes bounceInDown{
+    0%{
+        opacity:0;-webkit-transform:translateY(-2000px)
+    }
+    60%{
+        opacity:1;-webkit-transform:translateY(30px)
+    }
+    80%{
+        -webkit-transform:translateY(-10px)
+    }
+    100%{
+        -webkit-transform:translateY(0)
+    }
+}
+
+@-webkit-keyframes tada{0%{-webkit-transform:scale3d(1,1,1)}10%,20%{-webkit-transform:scale3d(.9,.9,.9) rotate3d(0,0,1,-3deg)}30%,50%,70%,90%{-webkit-transform:scale3d(1.1,1.1,1.1) rotate3d(0,0,1,3deg)}40%,60%,80%{-webkit-transform:scale3d(1.1,1.1,1.1) rotate3d(0,0,1,-3deg)}100%{-webkit-transform:scale3d(1,1,1)}}
+    @keyframes tada{
+        0%{
+            -webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)
+        }
+        10%,20%{
+            -webkit-transform:scale3d(.9,.9,.9) rotate3d(0,0,1,-3deg);
+            transform:scale3d(.9,.9,.9) rotate3d(0,0,1,-3deg)
+        }
+        30%,50%,70%,90%{
+            -webkit-transform:scale3d(1.1,1.1,1.1) rotate3d(0,0,1,3deg);
+            transform:scale3d(1.1,1.1,1.1) rotate3d(0,0,1,3deg)
+        }
+        40%,60%,80%{
+            -webkit-transform:scale3d(1.1,1.1,1.1) rotate3d(0,0,1,-3deg);
+            transform:scale3d(1.1,1.1,1.1) rotate3d(0,0,1,-3deg)
+        }
+        100%{-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}
+    }

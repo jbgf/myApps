@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!-- Mobile Devices Support @begin -->
+    <meta name="referrer" content="always">
+    <meta content="application/xhtml+xml;charset=UTF-8" http-equiv="Content-Type">
+    <meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+    <meta content="no-cache" http-equiv="pragma">
+    <meta content="0" http-equiv="expires">
+    <meta name="referrer" content="always">
+    <meta content="telephone=no, address=no" name="format-detection">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes"> <!-- apple devices fullscreen -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>参与活动赢大奖</title>
+
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        var g_rem = 20;
+        (function(win){
+            var orientationX = false; //是否横屏进来
+            if(win.orientation == 90 || win.orientation == -90){
+                orientationX = true;
+            }
+            var docEl = win.document.documentElement,tid;
+            function refreshRem1(){
+                g_rem = docEl.getBoundingClientRect().width/16;
+                !g_rem && (g_rem = 20);
+                docEl.style.fontSize = g_rem + 'px';
+            }
+            function refreshRem2(){
+                g_rem = docEl.getBoundingClientRect().width/16;
+                if(!g_rem){
+                    return refreshRem1();
+                }
+                var width = docEl.getBoundingClientRect().width;
+                var d = win.document.createElement('div');
+                d.style.width = '1rem';
+                d.style.display = "none";
+                docEl.firstElementChild.appendChild(d);
+                var defaultFontSize = parseFloat(window.getComputedStyle(d, null).getPropertyValue('width'));
+
+                docEl.firstElementChild.removeChild(d);
+                docEl.style.fontSize = (g_rem/defaultFontSize)*100 + '%';
+            }
+
+            var refreshRem = refreshRem2;
+            try{
+                win.addEventListener("orientationchange", function() {//触发手机横屏竖屏事件
+                    if(orientationX){
+                        location.reload();
+                    }
+                }, false);
+            }catch(e){
+                
+            }
+            
+            win.addEventListener('pageshow', function(e) {
+                if (e.persisted) {
+                    clearTimeout(tid);
+                    tid = setTimeout(refreshRem, 100);
+                }
+            }, false);
+            refreshRem();
+        })(window);
+       
+    </script>
+</head>
+<body>
+
+
+<div class="gameBox gameBgBox overflow-y" style="height: 28.4272rem; display: block;">
+            <div id="gameBgBox">
+                <img id="gameBg" src="img/ACgIABAEGAAg2_S1tgUo7OTmwAQwgAU4wAw.png" style="width:100%;height:auto;"> 
+            </div>
+ 
+            <div id="gameLayerBox">
+                
+                <canvas id="canvas" width="1442" height="2562" style="width: 412px; height: 732px;">你的浏览器不支持canvas，请换个牛逼点的浏览器，谢谢</canvas>
+                
+            </div>
+            
+</body>
+</html>
