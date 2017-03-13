@@ -33,7 +33,12 @@
             @if($position == after){right: 0px;}
             width: auto;
             @if($color != none){color: $color;}
-            @if($bg != none){background:url(#{$baseImgUrl}#{$bg}) no-repeat;
+            @if($bg != none){
+                @if(str-index($bg,"rgb") == null){
+                    background:url(#{$baseImgUrl}#{$bg}) no-repeat;    
+                }@else{
+                    background:unquote($bg);
+                } 
                 content:" ";
             }@else{content: $content;}
             font-size: 15px;
