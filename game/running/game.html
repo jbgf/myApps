@@ -71,6 +71,7 @@
         })(window);
        
     </script>
+    <script type="text/javascript" src="js/game.js"></script>
 </head>
 <body>
 
@@ -324,7 +325,10 @@
                     cowboy.jumpEndY = cowboy.height;
                     cowboy.run = function(){
                         this.status = 'run';
-                        this.img = [hg.assets[this.imgData.path[0]],hg.assets[this.imgData.path[1]]];
+                        this.img = [
+                            hg.assets[this.imgData.path[0]],
+                            hg.assets[this.imgData.path[1]]
+                        ];
                     };
                     cowboy.jump = function(jumpEndY,jumpEndTime){
                         if(this.status === 'jump'){
