@@ -1,0 +1,21 @@
+@function sum($arr) {
+  $sum:0;
+  
+  @each $var in $arr {
+    $sum :$sum + $var;
+  }
+  @return $sum;
+}
+
+@function last($arr) {
+  $cur:"";
+  @each $var in $arr {
+        $cur:$var;
+  }
+  @return $cur;
+}
+
+@function getParent($parent) {  /* 比如& */
+  $par:last(last($parent));
+  @return $par;
+} 

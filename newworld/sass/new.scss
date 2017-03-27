@@ -1,4 +1,11 @@
 @charset "utf-8";
+
+@import "mySassWare/_variable";
+@import "mySassWare/_mixin";
+@import "mySassWare/_function";
+@import "mySassWare/_media";
+
+ 
 /* CSS Document */
 * {-webkit-box-sizing: content-box;box-sizing: content-box;}
 html{height:100%;}
@@ -97,7 +104,7 @@ article img,
 
 /*快速配色系统，每次使用前先行调试*/
 .color-first{color:#d70c19;}
-.bg-first{background-color:#d70c19;}
+.bg-first{/* background-color:#d70c19; */background-image:url("../images/csw_19.jpg");}
 .color-second{color:#666;}
 .bg-second{background-color:#909CBC;}
 .color-third{color:#006f98;}
@@ -222,7 +229,7 @@ article img,
 
 .news-item.first{padding:0;background:none;}
 .news-item blockquote{text-indent:2em; height:36px;font-size:12px;margin:0px 0px 0;overflow:hidden;}
-.news-item blockquote span.fr{position: absolute;right: 0;}
+.news-item blockquote span.fr{position: absolute;right: 0;bottom:0;}
 
 /*silde替代PPTBOX*/
 .slide_replace_PPTBOX{width:360px;height:270px;margin:10px 15px 15px 0px;-webkit-box-shadow:0 0 10px rgba(0,0,0,0.2);box-shadow:0 0 10px rgba(0,0,0,0.2);}
@@ -374,11 +381,29 @@ article img,
 .panel-style-thumb h4{line-height:1.5;font-size:14px;height:42px;overflow:hidden;}
   /*电商数据 & 电商政策*/
 .panel-style-media .news-list{}
-
 .panel-style-media .media{}
+
+
+$media_w:85px;
+$media_h:50px;  
+#eData.panel-style-media .media-left,#dData.panel-style-media .media-left{width:$media_w;height:$media_h;display:none;}
+#eData.panel-style-media .news-item,#dData.panel-style-media .news-item{
+    &.on{
+        .media-left{display:block;}
+        .news-node{margin-left:$media_w + 10px;/* width:170px; *//* @extend %float-r */;}  
+        h4{ height:45px;white-space: normal; }
+        &:before{display:none}
+    }
+    h4{@extend %ellipsis;height:auto;}
+    position: relative;padding:5px 0 5px 16px;
+    & + .news-item{border-top:1px dashed #e1e1e1;}
+}
+
+
 .panel-style-media .media-left{width:85px;height:50px;}
 .panel-style-media .media-right{width:170px;}
-.panel-style-media .news-item{position: relative;padding:5px 0 5px 16px;border-top:1px dashed #e1e1e1;}
+
+.panel-style-media .news-item{position: relative;padding:5px 0 5px 16px;}
 .panel-style-media .news-item .ellipsis{text-align: right;}
 .panel-style-media .news-item.first{padding:5px 0 15px; border-top:0px;}
 .panel-style-media .news-item.first h4{overflow:hidden;line-height:24px;height:48px;}
@@ -502,3 +527,20 @@ article img,
 #news_rolling li{width:200px;margin:10px;}
 
 /* 主要css样式*/
+
+
+
+ 
+
+
+
+ 
+
+
+
+    
+
+
+            
+
+   
