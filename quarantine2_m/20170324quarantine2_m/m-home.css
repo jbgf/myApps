@@ -1,0 +1,192 @@
+@charset "UTF-8";
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+.red {
+  color: #ec5369; }
+
+.searchFormWrap #search_submit, .resultTable .un-block-1 {
+  color: #fff; }
+
+/* color end */
+.searchFormWrap #search_submit {
+  display: block; }
+
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.searchFormWrap .form_row .inner .un-block-1, .searchFormWrap .form_row .inner .un-block-2 {
+  float: left; }
+
+.searchFormWrap .form_row .inner:before, .searchFormWrap .form_row .inner:after {
+  content: " ";
+  display: table; }
+
+.searchFormWrap .form_row .inner:after {
+  clear: both; }
+
+.resultTable .un-block-1 {
+  height: 100%; }
+
+.searchFormWrap #search_submit, .searchFormWrap .info {
+  margin: 0 auto; }
+
+.resultTable .tableRow .info {
+  text-align: left; }
+
+.resultTable {
+  text-align: center !important; }
+
+.searchFormWrap .form_row .text {
+  text-align: right; }
+
+.searchFormWrap .form_row .inner .un-block-1, .searchFormWrap .form_row .inner .un-block-2 {
+  float: left; }
+
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+.red {
+  color: #ec5369; }
+
+.searchFormWrap #search_submit, .resultTable .un-block-1 {
+  color: #fff; }
+
+/* color end */
+.searchFormWrap #search_submit {
+  display: block; }
+
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.searchFormWrap .form_row .inner .un-block-1, .searchFormWrap .form_row .inner .un-block-2 {
+  float: left; }
+
+.searchFormWrap .form_row .inner:before, .searchFormWrap .form_row .inner:after {
+  content: " ";
+  display: table; }
+
+.searchFormWrap .form_row .inner:after {
+  clear: both; }
+
+.resultTable .un-block-1 {
+  height: 100%; }
+
+.searchFormWrap #search_submit, .searchFormWrap .info {
+  margin: 0 auto; }
+
+.resultTable .tableRow .info {
+  text-align: left; }
+
+.resultTable {
+  text-align: center !important; }
+
+.searchFormWrap .form_row .text {
+  text-align: right; }
+
+.searchFormWrap .form_row .inner .un-block-1, .searchFormWrap .form_row .inner .un-block-2 {
+  float: left; }
+
+input:focus {
+  outline: 0; }
+
+.searchFormWrap {
+  background: #f0f0f0;
+  padding-top: 16px;
+  /*  padding-bottom: $searchForm_p; */ }
+  .searchFormWrap .form_row_wrapper {
+    border: 1px solid #ddd; }
+  .searchFormWrap .form_row {
+    background: #fff;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem; }
+    .searchFormWrap .form_row + .form_row {
+      border-top: 1px solid #ddd; }
+    .searchFormWrap .form_row .inner .un-block-1 {
+      width: 27.65957%;
+      min-height: 1px; }
+    .searchFormWrap .form_row .inner .un-block-2 {
+      width: 72.34043%;
+      min-height: 1px; }
+    .searchFormWrap .form_row ::-webkit-input-placeholder {
+      /* WebKit browsers */
+      color: #cdcdcd; }
+    .searchFormWrap .form_row :-moz-placeholder {
+      /* Mozilla Firefox 4 to 18 */
+      color: #cdcdcd; }
+    .searchFormWrap .form_row ::-moz-placeholder {
+      /* Mozilla Firefox 19+ */
+      color: #cdcdcd; }
+    .searchFormWrap .form_row :-ms-input-placeholder {
+      /* Internet Explorer 10+ */
+      color: #cdcdcd; }
+    .searchFormWrap .form_row .input {
+      height: 3rem; }
+    .searchFormWrap .form_row .text {
+      height: 3rem;
+      line-height: 3rem; }
+  .searchFormWrap .submitBox {
+    padding: 15px 0; }
+  .searchFormWrap #search_submit, .searchFormWrap .info {
+    width: 88%; }
+  .searchFormWrap #search_submit {
+    height: 2.2rem;
+    background: #005bac;
+    border-radius: 5px; }
+  .searchFormWrap .info {
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    padding: 0.5rem 0; }
+
+.resultWrap {
+  padding: 0.5rem; }
+
+.resultTable .tableRow {
+  font-size: 1.1rem; }
+  .resultTable .tableRow .un-block-1 {
+    width: 23.8653%;
+    padding: 1.5rem 0; }
+  .resultTable .tableRow .un-block-2 {
+    width: 76.1347%;
+    padding: 1.5rem 0; }
+  .resultTable .tableRow + .tableRow .un-block-1 {
+    border-top: 1px solid #fff; }
+  .resultTable .tableRow .info {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem; }
+
+.resultTable .un-block-1 {
+  background: #6eb92b; }
+
+.resultTable .un-block-2 {
+  border: 1px solid #ddd;
+  border-left: none; }
+
+.resultTable .state i, .resultTable .pdf-downLoad i {
+  font-size: 1.32rem;
+  vertical-align: top;
+  margin-right: 0.5rem; }
+
+.resultTable .state i {
+  color: #6eb92b; }
+
+.resultTable .pdf-downLoad {
+  color: #fff; }
+  .resultTable .pdf-downLoad.gray a {
+    cursor: not-allowed;
+    background: #999; }
+  .resultTable .pdf-downLoad a {
+    display: inline-block;
+    background: #005bac;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem; }

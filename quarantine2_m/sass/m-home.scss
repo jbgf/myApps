@@ -1,0 +1,115 @@
+@charset "utf-8";
+
+@import "mySassWare/_variable";
+@import "mySassWare/_mixin";
+@import "mySassWare/_function";
+@import "mySassWare/_media";
+
+$mainGray:#f0f0f0;
+$mainGreen:#6eb92b;
+$main_p:0.5rem;
+$blue:#005bac;
+.red{@extend %red;}
+
+input:focus{outline:0;}
+
+      
+$searchForm_p:32px;
+$searchForm_rh:3rem;
+$sa:195px,510px;
+$sf_submit_w:88%;
+$sf_placeholder_C:#cdcdcd;
+.searchFormWrap{
+    background: $mainGray;
+    padding-top: $searchForm_p/2;
+   /*  padding-bottom: $searchForm_p; */
+    .form_row_wrapper{
+        @include border($position:false,$width:1px,$color:#ddd)
+        
+    }
+    .form_row{
+        background:$white;
+        padding-left:$main_p;
+        padding-right:$main_p;
+        & + .form_row{@include border($position:top,$width:1px,$color:$baseBorderColor)}
+        .inner{@include un_row($rateArr:$sa,$padding:false,$string:"un-block");}
+
+        .text,.input{}
+        ::-webkit-input-placeholder { /* WebKit browsers */ 
+            color: $sf_placeholder_C; 
+            } 
+            :-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
+            color: $sf_placeholder_C; 
+            } 
+            ::-moz-placeholder { /* Mozilla Firefox 19+ */ 
+            color: $sf_placeholder_C; 
+            } 
+            :-ms-input-placeholder { /* Internet Explorer 10+ */ 
+            color: $sf_placeholder_C; 
+            } 
+        .input{
+            height:$searchForm_rh;
+        }
+        .text{@extend %align-right;@include lheightM($height:$searchForm_rh)}
+    }
+    .submitBox{padding:15px 0;}
+    #search_submit,.info{width:$sf_submit_w;@extend %mar-center;}
+    #search_submit{
+        
+        @extend %block;
+        @extend %white;
+          
+        height: 2.2rem;
+        background:$blue;
+        @include radius(5px);
+
+    }
+    .info{font-size:0.8rem;line-height:1.2rem;padding:0.5rem 0;}
+} 
+
+$rsa:163,520;
+$rw_p:1.5rem;
+$rw_font:1.1rem;
+.resultWrap{padding:$main_p;}
+.resultTable{ 
+    @extend %align-center;
+    .tableRow{
+        @include un_width($rateArr:$rsa,$string:"un-block"){
+            padding:$rw_p 0
+        };
+        & + .tableRow{.un-block-1{@include border($position:top,$width:1px,$color:#fff);}}
+        .info{@extend %align-left;padding-left:$rw_p/2;padding-right:$rw_p/2;}
+        font-size: $rw_font;
+    }
+    .un-block-1{
+        background:$mainGreen;@extend %white;@extend %full-height;
+    }
+    .un-block-2{
+        @include border($position:false,$width:1px,$color:$baseBorderColor);
+        @include border($position:left,$width:1px,$color:none);
+    }
+    .state,.pdf-downLoad{i{font-size:$rw_font*1.2;vertical-align:top;margin-right:0.5rem} }
+    .state i{color:$mainGreen;}
+    .pdf-downLoad{ 
+            color:$white; 
+            &.gray{ 
+                a{cursor:not-allowed;background:#999;}
+            }  
+            a{display:inline-block;background:$blue;padding:0.5rem 1rem;@include radius(0.5rem);}
+            
+    }
+} 
+ 
+
+
+
+ 
+
+
+
+    
+
+
+            
+
+   
