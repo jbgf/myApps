@@ -31,19 +31,20 @@
                     <li class="sideBar_li ">
                         <a class="sideBar_a">
                             <p>
-                            <i class="iconfont ">&#xe6ae;</i>企业信息       
+                            <span class="iconBg"><i class="iconfont ">&#xe6ae;</i></span>企业信息       
                             </p>
                         </a>
+                        <ul class="list outer hide" style="">
+                            <li class="list_li">
+                                <a class="item">
+                                <p class="t01">- 修改密码<span class="caret"></span></p></a>
+                            </li>
+                            <li class="list_li">
+                                <a class="item"><p class="t01">- 修改账户信息<span class="caret"></span></p></a>
+                            </li>
+                        </ul>
                     </li>
-                    <ul class="list outer hide" style="">
-                        <li class="list_li">
-                            <a class="item">
-                            <p class="t01">- 修改密码<span class="caret"></span></p></a>
-                        </li>
-                        <li class="list_li">
-                            <a class="item"><p class="t01">- 修改账户信息<span class="caret"></span></p></a>
-                        </li>
-                    </ul>
+                    
                     <li class="sideBar_li on">
                         <a class="sideBar_a"><p>
                             <span class="iconBg"><i class="iconfont ">&#xe601;</i></span>委托单信息</p>
