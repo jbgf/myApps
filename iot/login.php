@@ -21,7 +21,8 @@
                               </div>
                               
                               <div class="form-row auto-login-row">
-                                <div class=""><input type="checkbox" class="check float-l"></input><span class="smallSize float-l">自动登录</span></div>
+                                <div class="">
+                                <input type="checkbox" class="check float-l"></input><span class="smallSize float-l">自动登录</span></div>
                                  <a class="float-r blue">忘记密码</a>
                               </div>
                                   

@@ -4,16 +4,17 @@
         <div class="p_banner middleTable" style="background:url(img/member_banner02.jpg) center center">
             <div class="middleRow">
                 <div class="banner_inner">
-                        <div class="avatarWrapper white">
-                            <div class="avatar01 mar-center">
-                                <img class="full circle" src="img/icon27.png">
-                                <div class="member abs">
-                                    <img src="img/icon25.png">
-                                </div>
-                            </div>
-                            <p class="name align-center bigSize font-weight">丁文礼</p>
-                            <p class="intro mar-center align-left">普通会员，痛客平台在与痛客进行充分沟通后， 根据痛客平台专业操作，对痛点进行分解和定义的文档。</p>
-                        </div>
+                      <div class="avatarWrapper white">
+                          <div class="avatar01 mar-center">
+                              <img class="full circle" src="img/icon27.png">
+                              <div class="member abs">
+                                  <img src="img/icon25.png">
+                              </div>
+                          </div>
+                          <p class="name align-center bigSize font-weight">丁文礼</p>
+                          <p class="intro mar-center align-left">普通会员，痛客平台在与痛客进行充分沟通后， 根据痛客平台专业操作，对痛点进行分解和定义的文档。
+                          </p>
+                      </div>
                 </div>    
             </div>
         </div>

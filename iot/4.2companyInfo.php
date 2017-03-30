@@ -6,7 +6,7 @@
                 <div class="middleRow">
                     <div class="banner_inner">
                         <div class="brand_img">
-                            <img class="" src="img/icon_brand.png">
+                            <img class="" src="img/brand02.png">
                         </div>
                         <div class="text">华为科技有限公司</div>
                     </div>

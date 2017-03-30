@@ -19,7 +19,7 @@
 /*是否兼容ie6-7*/
 /*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
 /*是否开启打印样式*/
-.textTab02, .row03 .news-list01 {
+.textTab02 {
   padding-right: 10px; }
 
 /* color start */
@@ -44,17 +44,8 @@
 .creator_slide i, .footer .copyRight, .p_banner .banner_inner .serviceBtn, .banner .text, .leftSide .title, .rightSide .title, .products_catagory .catagory_wrapper .catagory-list .inner, .member_url .sbtn_row .sbtn.on, .member_url .sbtn_row .sbtn:hover, .zone_row .text .m-btn01.white {
   color: #fff; }
 
-.cooperate_link .row-block .inner img.grayfilter {
-  -webkit-filter: grayscale(100%);
-  -moz-filter: grayscale(100%);
-  -ms-filter: grayscale(100%);
-  -o-filter: grayscale(100%);
-  filter: grayscale(100%);
-  -webkit-filter: gray;
-  filter: gray; }
-
 /* color end */
-.linkBar_ul li, .brand_img, .product_innerbox .imgBox, .company_brand .brand_inner .cb_wrapper, .company_brand .brand_inner .company_brand, .company_brand .brand_inner .adr .l, .company_brand .brand_inner .adr .r, .wanted .wanted_gallary img.bg, .avatarWrapper .avatar, .avatarWrapper .avatar01, .avatarWrapper .avatar02, .avatarWrapper .avatar03, .cmpp .avatar, .solution_form .form-row .un-block-1, .solution_form .form-row .un-block-1 a.baseInput, .solution_form .form-row .un-block-1 button.baseInput, .solution_form .form-row .un-block-2, .solution_form .form-row .un-block-2 a.baseInput, .solution_form .form-row .un-block-2 button.baseInput, .solution_form .form-row .un-block-3, .solution_form .form-row .un-block-3 a.baseInput, .solution_form .form-row .un-block-3 button.baseInput, .solution_form .form-row.submit-row .un-block-1, .solution_form .form-row.submit-row .un-block-1 a.baseInput, .solution_form .form-row.submit-row .un-block-1 button.baseInput, .solution_form .form-row.submit-row .un-block-2, .solution_form .form-row.submit-row .un-block-2 a.baseInput, .solution_form .form-row.submit-row .un-block-2 button.baseInput, .solution_form .form-row.submit-row .un-block-3, .solution_form .form-row.submit-row .un-block-3 a.baseInput, .solution_form .form-row.submit-row .un-block-3 button.baseInput, .solution_form #btnUploadPcb, .member_url .row .inner .t, .solution_form .user, .solution_form .on .user, .solution_tab .row .row-block .inner, .auditRow .row .row-block .inner {
+.textTab02 .stb-text, .textTab02 .stb-text02, .footer .foot .qrZone .right .span1, .footer .foot .qrZone .right .span2, .linkBar_ul li, .brand_img, .product_innerbox .imgBox, .company_brand .brand_inner .cb_wrapper, .company_brand .brand_inner .company_brand, .company_brand .brand_inner .adr .l, .company_brand .brand_inner .adr .r, .wanted .wanted_gallary img.bg, .avatarWrapper .avatar, .avatarWrapper .avatar01, .avatarWrapper .avatar02, .avatarWrapper .avatar03, .cmpp .avatar, .solution_form .form-row .un-block-1, .solution_form .form-row .un-block-1 a.baseInput, .solution_form .form-row .un-block-1 button.baseInput, .solution_form .form-row .un-block-2, .solution_form .form-row .un-block-2 a.baseInput, .solution_form .form-row .un-block-2 button.baseInput, .solution_form .form-row .un-block-3, .solution_form .form-row .un-block-3 a.baseInput, .solution_form .form-row .un-block-3 button.baseInput, .solution_form .form-row.submit-row .un-block-1, .solution_form .form-row.submit-row .un-block-1 a.baseInput, .solution_form .form-row.submit-row .un-block-1 button.baseInput, .solution_form .form-row.submit-row .un-block-2, .solution_form .form-row.submit-row .un-block-2 a.baseInput, .solution_form .form-row.submit-row .un-block-2 button.baseInput, .solution_form .form-row.submit-row .un-block-3, .solution_form .form-row.submit-row .un-block-3 a.baseInput, .solution_form .form-row.submit-row .un-block-3 button.baseInput, .solution_form #btnUploadPcb, .member_url .row .inner .t, .solution_form .user, .solution_form .on .user, .solution_tab .row .row-block .inner, .auditRow .row .row-block .inner {
   display: block; }
 
 .leftSide .title, .rightSide .title {
@@ -65,9 +56,23 @@
     vertical-align: middle;
     height: auto; }
 
+.textTab02 .stb-text, .linkBar_ul li .brand_img + p, .product_innerbox .textBox .textLine .tips p {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  /*text-align:center;*/
+  max-width: 100%;
+  line-height: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
+
 /* clearfix*/
 /* 闭合子元素的浮动*/
-.loginZone .login-form .input-base, .loginZone .login-form .form-row .verifyRow .verifyImg, .loginZone .login-form .m-b, .row02 .switch-li .news-list01 li a, .row02 .switch-li .news-list01 li .date, .application_zone .hd li, .application_zone .cell-r .row .row-block, .creatorZone .creator_title li, .creator_slide .gallary .row .row-block, .cooperate_link .row .row-block, .footer .foot .linkZone .row .row-block, .p_banner .banner_inner .serviceBtn, .banner .brand_img, .banner .text, .middle_part .leftSide, .products_catagory .catagory_wrapper .catagory-list .row .row-block, .products_catagory .catagory_item .catagory_item_ul li, .product_box .row .row-block, .product_slide .product_info .product_gallary .gallary .row .row-block, .wanted .wanted_gallary .bottom_gallary .serviceBtn, .p_navbar .nav .pnav_li span, .p_navbar .nav .pnav_li, .p_navbar.navbar03 .pnav_li span, .p_navbar.navbar03 .pnav_li, .p_navbar.navbar04 .pnav_li span, .p_navbar.navbar04 .pnav_li, .bountyForm .un-block-1, .bountyForm .un-block-2, .bountyForm .un-block-3, .bountyForm .un-block-4, .bountyForm .un-block-5, .bountyForm.form02 .un-block-1, .bountyForm.form02 .un-block-2, .bountyForm.form02 .un-block-3, .bountyForm.form02 .un-block-4, .bountyForm.form02 .un-block-5, .bountyForm.form03 .un-block-1, .bountyForm.form03 .un-block-2, .bountyForm.form03 .un-block-3, .bountyForm.form03 .un-block-4, .bountyForm.form03 .un-block-5, .bountyForm.form03 .un-block-6, .ul02 .pnav_li span, .ul02 .pnav_li, .wanted_details .wd_table .wd_head .un-block-1, .wanted_details .wd_table .wd_head .un-block-2, .wanted_details .wd_table .wd_head .un-block-3, .wanted_details .wd_table .wd_head .details .inner .info_row .row .row-block, .solution_form .form-row .un-block-1, .solution_form .form-row .un-block-1 input[type="text"], .solution_form .form-row .un-block-1 select, .solution_form .form-row .un-block-1 textarea, .solution_form .form-row .un-block-2, .solution_form .form-row .un-block-2 input[type="text"], .solution_form .form-row .un-block-2 select, .solution_form .form-row .un-block-2 textarea, .solution_form .form-row .un-block-3, .solution_form .form-row .un-block-3 input[type="text"], .solution_form .form-row .un-block-3 select, .solution_form .form-row .un-block-3 textarea, .solution_form .form-row.submit-row .un-block-1, .solution_form .form-row.submit-row .un-block-1 input[type="text"], .solution_form .form-row.submit-row .un-block-1 select, .solution_form .form-row.submit-row .un-block-1 textarea, .solution_form .form-row.submit-row .un-block-2, .solution_form .form-row.submit-row .un-block-2 input[type="text"], .solution_form .form-row.submit-row .un-block-2 select, .solution_form .form-row.submit-row .un-block-2 textarea, .solution_form .form-row.submit-row .un-block-3, .solution_form .form-row.submit-row .un-block-3 input[type="text"], .solution_form .form-row.submit-row .un-block-3 select, .solution_form .form-row.submit-row .un-block-3 textarea, .solution_form .p_thumb, .solution_form .upload_zone .name, #a_box .btnrow .signBtn, .get_ic .row .row-block, .member_url .row .row-block, .member_url .sbtn_row .sbtn, .solution_tab .row .row-block, .solutionForm.form0 .un-block-1, .solutionForm.form0 .un-block-2, .solutionForm.form0 .un-block-3, .solutionForm.form1 .un-block-1, .solutionForm.form1 .un-block-2, .solutionForm.form1 .un-block-3, .solutionForm.form1 .un-block-4, .solutionForm.form1 .un-block-5, .m-btn01, .auditRow .row .row-block, .selectRow select, .project_wrapper .un-block-1, .project_wrapper .un-block-2, .project_wrapper .titleImg .two-inner-1, .project_wrapper .titleImg .two-inner-2, #project_field .un-block-1, #project_field .un-block-2 {
+.textTab02 .stb-text02, .company_brand .brand_inner .adr p, .form-content01 .m-form-line {
+  overflow: hidden; }
+
+.loginZone .login-form .input-base, .loginZone .login-form .form-row .verifyRow .verifyImg, .loginZone .login-form .m-b, .row02 .switch-li .news-list01 li a, .row02 .switch-li .news-list01 li .date, .application_zone .hd li, .application_zone .cell-r .row .row-block, .creatorZone .creator_title li, .creator_slide .gallary .row .row-block, .cooperate_link .row .row-block, .footer .foot .qrZone .right .span1, .footer .foot .linkZone .row .row-block, .p_banner .banner_inner .serviceBtn, .banner .brand_img, .banner .text, .middle_part .leftSide, .middle_part .leftContent, .products_catagory .catagory_wrapper .catagory-list .row .row-block, .products_catagory .catagory_item .catagory_item_ul li, .product_box .row .row-block, .product_slide .product_info .product_gallary .gallary .row .row-block, .wanted .wanted_gallary .bottom_gallary .serviceBtn, .p_navbar .nav .pnav_li span, .p_navbar .nav .pnav_li, .p_navbar.navbar03 .pnav_li span, .p_navbar.navbar03 .pnav_li, .p_navbar.navbar04 .pnav_li span, .p_navbar.navbar04 .pnav_li, .bountyForm .un-block-1, .bountyForm .un-block-2, .bountyForm .un-block-3, .bountyForm .un-block-4, .bountyForm .un-block-5, .bountyForm.form02 .un-block-1, .bountyForm.form02 .un-block-2, .bountyForm.form02 .un-block-3, .bountyForm.form02 .un-block-4, .bountyForm.form02 .un-block-5, .bountyForm.form03 .un-block-1, .bountyForm.form03 .un-block-2, .bountyForm.form03 .un-block-3, .bountyForm.form03 .un-block-4, .bountyForm.form03 .un-block-5, .bountyForm.form03 .un-block-6, .ul02 .pnav_li span, .ul02 .pnav_li, .wanted_details .wd_table .wd_head .un-block-1, .wanted_details .wd_table .wd_head .un-block-2, .wanted_details .wd_table .wd_head .un-block-3, .wanted_details .wd_table .wd_head .details .inner .info_row .row .row-block, .solution_form .form-row .un-block-1, .solution_form .form-row .un-block-1 input[type="text"], .solution_form .form-row .un-block-1 select, .solution_form .form-row .un-block-1 textarea, .solution_form .form-row .un-block-2, .solution_form .form-row .un-block-2 input[type="text"], .solution_form .form-row .un-block-2 select, .solution_form .form-row .un-block-2 textarea, .solution_form .form-row .un-block-3, .solution_form .form-row .un-block-3 input[type="text"], .solution_form .form-row .un-block-3 select, .solution_form .form-row .un-block-3 textarea, .solution_form .form-row.submit-row .un-block-1, .solution_form .form-row.submit-row .un-block-1 input[type="text"], .solution_form .form-row.submit-row .un-block-1 select, .solution_form .form-row.submit-row .un-block-1 textarea, .solution_form .form-row.submit-row .un-block-2, .solution_form .form-row.submit-row .un-block-2 input[type="text"], .solution_form .form-row.submit-row .un-block-2 select, .solution_form .form-row.submit-row .un-block-2 textarea, .solution_form .form-row.submit-row .un-block-3, .solution_form .form-row.submit-row .un-block-3 input[type="text"], .solution_form .form-row.submit-row .un-block-3 select, .solution_form .form-row.submit-row .un-block-3 textarea, .solution_form .p_thumb, .solution_form .upload_zone .name, #a_box .btnrow .signBtn, .get_ic .row .row-block, .member_url .row .row-block, .member_url .sbtn_row .sbtn, .solution_tab .row .row-block, .solutionForm.form0 .un-block-1, .solutionForm.form0 .un-block-2, .solutionForm.form0 .un-block-3, .solutionForm.form1 .un-block-1, .solutionForm.form1 .un-block-2, .solutionForm.form1 .un-block-3, .solutionForm.form1 .un-block-4, .solutionForm.form1 .un-block-5, .m-btn01, .auditRow .row .row-block, .selectRow select, .project_wrapper .un-block-1, .project_wrapper .un-block-2, .project_wrapper .titleImg .two-inner-1, .project_wrapper .titleImg .two-inner-2, #project_field .un-block-1, #project_field .un-block-2 {
   float: left; }
 
 .dropdown-backdrop {
@@ -77,20 +82,20 @@
   right: 0;
   position: absolute; }
 
-.loginZone .login-form .form-row:before, .application_zone .inner:before, .application_zone .cell-r .row:before, .creator_slide .gallary .row:before, .cooperate_link .row:before, .cooperate_link:before, .co_slide .hd ul:before, .footer .foot .linkZone .row:before, .middle_part #leftSideBar_wrapper:before, .products_catagory .catagory_wrapper .catagory-list .row:before, .products_catagory .catagory_item:before, .product_box .row:before, .product_innerbox .textBox:before, .product_innerbox .textBox .textLine:before, .product_slide .product_info .product_gallary .gallary .row:before, .bountyForm:before, .bountyForm.form02:before, .bountyForm.form03:before, .wanted_details .wd_table .wd_head:before, .wanted_details .wd_table .wd_head .details .inner .info_row .row:before, .solution_form .form-row:before, .solution_form .form-row.submit-row:before, .get_ic .row:before, .member_url .row:before, .solution_tab .row:before, .solutionForm.form0:before, .solutionForm.form1:before, .auditRow .row:before, .project_wrapper:before, .project_wrapper .titleImg:before, #project_field:before, .loginZone .login-form .form-row:after, .application_zone .inner:after, .application_zone .cell-r .row:after, .creator_slide .gallary .row:after, .cooperate_link .row:after, .cooperate_link:after, .co_slide .hd ul:after, .footer .foot .linkZone .row:after, .middle_part #leftSideBar_wrapper:after, .products_catagory .catagory_wrapper .catagory-list .row:after, .products_catagory .catagory_item:after, .product_box .row:after, .product_innerbox .textBox:after, .product_innerbox .textBox .textLine:after, .product_slide .product_info .product_gallary .gallary .row:after, .bountyForm:after, .bountyForm.form02:after, .bountyForm.form03:after, .wanted_details .wd_table .wd_head:after, .wanted_details .wd_table .wd_head .details .inner .info_row .row:after, .solution_form .form-row:after, .solution_form .form-row.submit-row:after, .get_ic .row:after, .member_url .row:after, .solution_tab .row:after, .solutionForm.form0:after, .solutionForm.form1:after, .auditRow .row:after, .project_wrapper:after, .project_wrapper .titleImg:after, #project_field:after {
+.loginZone .login-form .form-row:before, .application_zone .inner:before, .application_zone .cell-r .row:before, .creator_slide .gallary .row:before, .cooperate_link .row:before, .cooperate_link:before, .co_slide .hd ul:before, .footer .foot .linkZone .row:before, .middle_part #rightSideBar_wrapper:before, .middle_part #leftSideBar_wrapper:before, .products_catagory .catagory_wrapper .catagory-list .row:before, .products_catagory .catagory_item:before, .product_box .row:before, .product_innerbox .textBox:before, .product_innerbox .textBox .textLine:before, .product_slide .product_info .product_gallary .gallary .row:before, .bountyForm:before, .bountyForm.form02:before, .bountyForm.form03:before, .wanted_details .wd_table .wd_head:before, .wanted_details .wd_table .wd_head .details .inner .info_row .row:before, .solution_form .form-row:before, .solution_form .form-row.submit-row:before, .get_ic .row:before, .member_url .row:before, .solution_tab .row:before, .solutionForm.form0:before, .solutionForm.form1:before, .auditRow .row:before, .project_wrapper:before, .project_wrapper .titleImg:before, #project_field:before, .loginZone .login-form .form-row:after, .application_zone .inner:after, .application_zone .cell-r .row:after, .creator_slide .gallary .row:after, .cooperate_link .row:after, .cooperate_link:after, .co_slide .hd ul:after, .footer .foot .linkZone .row:after, .middle_part #rightSideBar_wrapper:after, .middle_part #leftSideBar_wrapper:after, .products_catagory .catagory_wrapper .catagory-list .row:after, .products_catagory .catagory_item:after, .product_box .row:after, .product_innerbox .textBox:after, .product_innerbox .textBox .textLine:after, .product_slide .product_info .product_gallary .gallary .row:after, .bountyForm:after, .bountyForm.form02:after, .bountyForm.form03:after, .wanted_details .wd_table .wd_head:after, .wanted_details .wd_table .wd_head .details .inner .info_row .row:after, .solution_form .form-row:after, .solution_form .form-row.submit-row:after, .get_ic .row:after, .member_url .row:after, .solution_tab .row:after, .solutionForm.form0:after, .solutionForm.form1:after, .auditRow .row:after, .project_wrapper:after, .project_wrapper .titleImg:after, #project_field:after {
   content: " ";
   display: table; }
 
-.loginZone .login-form .form-row:after, .application_zone .inner:after, .application_zone .cell-r .row:after, .creator_slide .gallary .row:after, .cooperate_link .row:after, .cooperate_link:after, .co_slide .hd ul:after, .footer .foot .linkZone .row:after, .middle_part #leftSideBar_wrapper:after, .products_catagory .catagory_wrapper .catagory-list .row:after, .products_catagory .catagory_item:after, .product_box .row:after, .product_innerbox .textBox:after, .product_innerbox .textBox .textLine:after, .product_slide .product_info .product_gallary .gallary .row:after, .bountyForm:after, .bountyForm.form02:after, .bountyForm.form03:after, .wanted_details .wd_table .wd_head:after, .wanted_details .wd_table .wd_head .details .inner .info_row .row:after, .solution_form .form-row:after, .solution_form .form-row.submit-row:after, .get_ic .row:after, .member_url .row:after, .solution_tab .row:after, .solutionForm.form0:after, .solutionForm.form1:after, .auditRow .row:after, .project_wrapper:after, .project_wrapper .titleImg:after, #project_field:after {
+.loginZone .login-form .form-row:after, .application_zone .inner:after, .application_zone .cell-r .row:after, .creator_slide .gallary .row:after, .cooperate_link .row:after, .cooperate_link:after, .co_slide .hd ul:after, .footer .foot .linkZone .row:after, .middle_part #rightSideBar_wrapper:after, .middle_part #leftSideBar_wrapper:after, .products_catagory .catagory_wrapper .catagory-list .row:after, .products_catagory .catagory_item:after, .product_box .row:after, .product_innerbox .textBox:after, .product_innerbox .textBox .textLine:after, .product_slide .product_info .product_gallary .gallary .row:after, .bountyForm:after, .bountyForm.form02:after, .bountyForm.form03:after, .wanted_details .wd_table .wd_head:after, .wanted_details .wd_table .wd_head .details .inner .info_row .row:after, .solution_form .form-row:after, .solution_form .form-row.submit-row:after, .get_ic .row:after, .member_url .row:after, .solution_tab .row:after, .solutionForm.form0:after, .solutionForm.form1:after, .auditRow .row:after, .project_wrapper:after, .project_wrapper .titleImg:after, #project_field:after {
   clear: both; }
 
-.input-set .button img, .navbar-line02 .navbar-block a.navLink, .sbcontent02 .a02-btn, .iot_content_row, .row02 .slideTxtBox li.switch-li, .row02 .switch-li .news-list01 li, .news-list01 a, .iot_content_row.row02 .iot_right .serviceBtn i, .banner_row, .application_zone .cell-r .row .row-block, .application_zone .cell-r .row-block .rb_box .imgbox, .iot_content_row.row03 .slideTxtBox li.switch-li, .creatorZone, .creator_slide, .creator_slide .creator_inner_slide, .creator_slide .gallary .row .row-block, .cooperate_link .row .row-block, .cooperate_link .row-block .inner, .fridend_link, .fridend_link .right a, .footer .foot, .footer .foot .linkZone .row .row-block, .middle_part, .middle_part #leftSideBar_wrapper, .leftSide .serviceBtn i, .rightSide .serviceBtn i, .sideBar .sideBar_li p, .a-title-header02 .articleInf span, .right_linkBar_wrapper .right_linkBar_up, .products_catagory .catagory_wrapper, .products_catagory .catagory_wrapper .catagory-list .row .row-block, .products_catagory .catagory_item .catagory_item_ul li, .brand_img, .product_box .row .row-block, .product_innerbox .textBox .textLine, .productSlide_wrapper .container1200, .product_slide .inner, .product_slide .product_info, .product_slide .product_info .product_gallary, .product_slide .product_info .product_gallary .gallary .row .row-block, .company_brand .brand_inner .cb_wrapper, .company_brand .brand_inner .company_brand, .company_brand .brand_inner .adr p, .sideBar02 .list.bottom .t01, .sideBar02 .list.bottom .list_li:hover .t01, .sideBar02 .list.bottom .list_li.on .t01, .cnews_list .pt_line, .cnews_list .text, .wanted .wanted_gallary, .wanted .wanted_gallary .bottom_gallary .serviceBtn, .wanted .wanted_gallary .bottom_gallary .serviceBtn .w_inner .pt_line, .wanted .wanted_gallary .bottom_gallary .serviceBtn .w_inner .text, .wanted .wanted_gallary .bottom_gallary .serviceBtn .w_inner .text .title, .p_navbar .nav .pnav_li span, .p_navbar.navbar03 .pnav_li span, .p_navbar.navbar04 .pnav_li span, .p_content .news_h .rangeTag a:hover, .p_content .news_h .rangeTag a.on, .p_content .news_h .text, .p_news .pt_line, .p_news .text, .p_news .text .leftContent, .avatarWrapper .avatar, .avatarWrapper .avatar01, .avatarWrapper .avatar02, .avatarWrapper .avatar03, .bountyForm.form03 .range, .ul02 .pnav_li span, .wanted_details .wd_table .wd_head .details .inner .info_row .row .row-block, .cmpp .pt_line, .cmpp .text, .cmpp .avatar, .get_ic .row .row-block, .member_url .row .row-block, .solution_form .user, .solution_form .on .user, .solution_tab .row .row-block, .solution_tab .inner.new, .news-list02 .divider, .news-list02 .left, .creator_row .pt_line, .creator_row .text, .zone_row .pt_line, .zone_row .text, .auditRow .row .row-block, .affix_p01 .msg.new, .sDetailsRow .pt_line, .sDetailsRow .text, .sDetailsRow.sr01 .pt_line, .sDetailsRow.sr01 .text, .sDetailsRow .text .sinfo, .sideBar03 .sideBar_li .srow, .project_wrapper .hasTitle {
+.input-set .button img, .navbar-line02 .navbar-block a.navLink, .sbcontent02 .a02-btn, .iot_content_row, .row02 .slideTxtBox li.switch-li, .row02 .switch-li .news-list01 li, .news-list01 a, .iot_content_row.row02 .iot_right .serviceBtn i, .banner_row, .application_zone .cell-r .row .row-block, .application_zone .cell-r .row-block .rb_box .imgbox, .iot_content_row.row03 .slideTxtBox li.switch-li, .creatorZone, .creator_slide, .creator_slide .creator_inner_slide, .creator_slide .gallary .row .row-block, .cooperate_link .row .row-block, .cooperate_link .row-block .inner, .fridend_link, .fridend_link .right a, .footer .foot, .footer .foot .linkZone .row .row-block, .p_banner .banner_inner .serviceBtn.bg-orange i, .p_banner .banner_inner .serviceBtn.bg-l-blue i, .p_banner .banner_inner .serviceBtn, .middle_part, .middle_part #leftSideBar_wrapper, .leftSide .serviceBtn i, .rightSide .serviceBtn i, .sideBar .sideBar_li p, .a-title-header02 .articleInf span, .right_linkBar_wrapper .right_linkBar_up, .products_catagory .catagory_wrapper, .products_catagory .catagory_wrapper .catagory-list .row .row-block, .products_catagory .catagory_item .catagory_item_ul li, .linkBar_ul li, .brand_img, .product_box .row .row-block, .product_innerbox .textBox .textLine, .productSlide_wrapper .container1200, .product_slide .inner, .product_slide .product_info, .product_slide .product_info .product_gallary, .product_slide .product_info .product_gallary .gallary .row .row-block, .company_brand .brand_inner .cb_wrapper, .company_brand .brand_inner .company_brand, .company_brand .brand_inner .adr p, .sideBar02 .list.bottom .t01, .sideBar02 .list.bottom .list_li:hover .t01, .sideBar02 .list.bottom .list_li.on .t01, .cnews_list .pt_line, .cnews_list .text, .wanted .wanted_gallary, .wanted .wanted_gallary .bottom_gallary .serviceBtn, .wanted .wanted_gallary .bottom_gallary .serviceBtn .w_inner .pt_line, .wanted .wanted_gallary .bottom_gallary .serviceBtn .w_inner .text, .wanted .wanted_gallary .bottom_gallary .serviceBtn .w_inner .text .title, .p_navbar .nav .pnav_li span, .p_navbar.navbar03 .pnav_li span, .p_navbar.navbar04 .pnav_li span, .p_content .news_h .rangeTag a:hover, .p_content .news_h .rangeTag a.on, .p_content .news_h .text, .p_news .pt_line, .p_news .text, .p_news .text .leftContent, .avatarWrapper .avatar, .avatarWrapper .avatar01, .avatarWrapper .avatar02, .avatarWrapper .avatar03, .bountyForm.form03 .range, .ul02 .pnav_li span, .wanted_details .wd_table .wd_head .details .inner .info_row .row .row-block, .cmpp .pt_line, .cmpp .text, .cmpp .avatar, .get_ic .row .row-block, .member_url .row .row-block, .solution_form .user, .solution_form .on .user, .solution_tab .row .row-block, .solution_tab .inner.new, .news-list02 .divider, .news-list02 .left, .creator_row .pt_line, .creator_row .text, .zone_row .pt_line, .zone_row .text, .auditRow .row .row-block, .affix_p01 .msg.new, .sDetailsRow .pt_line, .sDetailsRow .text, .sDetailsRow.sr01 .pt_line, .sDetailsRow.sr01 .text, .sDetailsRow .text .sinfo, .sideBar03 .sideBar_li .srow, .project_wrapper .hasTitle {
   position: relative; }
 
-.banner_row img, .application_zone .cell-r .row-block .rb_box .imgbox img, .brand_img img, .company_brand .brand_inner .cb_wrapper img, .company_brand .brand_inner .company_brand img, .company_brand .brand_inner .company_brand, .avatarWrapper .avatar img, .avatarWrapper .avatar01 img, .avatarWrapper .avatar02 img, .avatarWrapper .avatar03 img, .cmpp .avatar img, .solution_form .user img, .solution_form .on .user img, .p_news .tagLine, .iot_left, .textTab01, .textTab02, .creator_slide .direction .directionBtn, .fridend_link .left, .footer .foot .qrZone, .footer .foot .qrZone .left, .middle_part .rightSide, .sideBar .sideBar_li .caret, .right_linkBar_wrapper .right_linkBar, .products_catagory .catagory_wrapper .title, .product_innerbox .textBox .textLine .name, .product_slide .product_info, .product_slide .product_info .product_gallary, .product_slide .product_info .product_gallary .direction .directionBtn, .company_brand, .company_brand .brand_inner .adr .l, .product_article .product_column, .cnews_list .pic, .wanted .wanted_gallary .bottom_gallary, .wanted .wanted_gallary .bottom_gallary .serviceBtn .w_inner, .wanted .wanted_gallary .bottom_gallary .serviceBtn .w_inner .pic, .p_navbar .title01, .p_news .pic, .p_news .text .rightAvatar, .cmpp .pic, .cmpp .c_picBox, .creator_row .pic, .zone_row .pic, .sDetailsRow .pic, .sDetailsRow.sr01 .pic, .sideBar03 .sideBar_li:hover .caret, .sideBar03 .sideBar_li.on .caret {
+.banner_row img, .brand_img img, .company_brand .brand_inner .cb_wrapper img, .company_brand .brand_inner .company_brand img, .company_brand .brand_inner .company_brand, .avatarWrapper .avatar img, .avatarWrapper .avatar01 img, .avatarWrapper .avatar02 img, .avatarWrapper .avatar03 img, .cmpp .avatar img, .solution_form .user img, .solution_form .on .user img, .p_news .tagLine, .iot_left, .textTab01, .textTab02, .creator_slide .direction .directionBtn, .fridend_link .left, .footer .foot .qrZone, .footer .foot .qrZone .left, .sideBar .sideBar_li .caret, .right_linkBar_wrapper .right_linkBar, .products_catagory .catagory_wrapper .title, .product_innerbox .textBox .textLine .name, .product_slide .product_info, .product_slide .product_info .product_gallary, .product_slide .product_info .product_gallary .direction .directionBtn, .company_brand, .company_brand .brand_inner .adr .l, .product_article .product_column, .cnews_list .pic, .wanted .wanted_gallary .bottom_gallary, .wanted .wanted_gallary .bottom_gallary .serviceBtn .w_inner, .wanted .wanted_gallary .bottom_gallary .serviceBtn .w_inner .pic, .p_navbar .title01, .p_news .pic, .p_news .text .rightAvatar, .cmpp .pic, .cmpp .c_picBox, .creator_row .pic, .zone_row .pic, .sDetailsRow .pic, .sDetailsRow.sr01 .pic, .sideBar03 .sideBar_li:hover .caret, .sideBar03 .sideBar_li.on .caret {
   position: absolute; }
 
-.banner_row img, .application_zone .cell-r .row-block .rb_box .imgbox img {
+.banner_row img {
   width: 100%;
   height: 100%;
   top: 0;
@@ -110,24 +115,27 @@
   left: 0;
   right: 0; }
 
-.cooperate_link .row-block, .leftSide .leftSide_ad img, .rightSide .leftSide_ad img, .news-ul01 .newsRow .cl-pic img, .right_linkBar_wrapper .left_product .product_banner img, .product_box .inner .shadow, .product_innerbox .imgBox img, .product_slide .bigPic img, .product_slide .product_info .product_gallary .inner img, .cnews_list .pic img, .wanted .wanted_gallary .bottom_gallary .serviceBtn .w_inner .pic img, .p_news .pic img, .cmpp .pic img, .cmpp .c_picBox .border img, .creator_row .pic img, .zone_row .pic img, .sDetailsRow .pic img, .sDetailsRow.sr01 .pic img {
+.cooperate_link .row-block, .footer .foot .qrZone .left img, .leftSide .leftSide_ad img, .rightSide .leftSide_ad img, .news-ul01 .newsRow .cl-pic img, .right_linkBar_wrapper .left_product .product_banner img, .product_box .inner .shadow, .cnews_list .pic img, .wanted .wanted_gallary .bottom_gallary .serviceBtn .w_inner .pic img, .p_news .pic img, .cmpp .pic img, .cmpp .c_picBox .border img, .creator_row .pic img, .zone_row .pic img, .sDetailsRow .pic img, .sDetailsRow.sr01 .pic img {
   display: block;
   width: 100%;
   height: 100%; }
 
-.loginZone .login-form, .login-form .login, .application_zone .hd li a, .creatorZone .creator_title li a, .creator_slide .gallary, .products_catagory .catagory_item .catagory_item_ul li a, .linkBar_ul li .brand_img, .product_slide .product_info .product_gallary .gallary, .company_brand .brand_inner, .company_brand .brand_inner .crown, .company_brand .brand_inner .cb_wrapper {
+.application_zone .cell-r .row-block .rb_box .imgbox img, .product_slide .bigPic img, .product_slide .product_info .product_gallary .inner img {
+  height: 100%; }
+
+.loginZone .login-form, .login-form .login, .application_zone .hd li a, .creatorZone .creator_title li a, .creator_slide .gallary, .banner .brand_img, .products_catagory .catagory_item .catagory_item_ul li a, .linkBar_ul li .brand_img, .product_slide .product_info .product_gallary .gallary, .company_brand .brand_inner, .company_brand .brand_inner .crown, .company_brand .brand_inner .cb_wrapper {
   margin: 0 auto; }
 
 .sideBar .sideBar_li p, .sideBar03 .sideBar_li .srow p {
   text-align: left; }
 
-.application_zone .hd li, .application_zone .cell-r .row-block .rb_box .text, .creatorZone .creator_title, .creatorZone .creator_title li, .creator_slide .gallary .inner .textbox, .cooperateZone .header_center .center, .co_slide .hd, .fridend_link .right a + a, .footer .copyRight, .p_banner, .banner, .p_banner .banner_inner .serviceBtn, .sideBar .sideBar_li, .pagination02 ul li, .products_catagory .catagory_wrapper .title, .products_catagory .catagory_item .catagory_item_ul li, .linkBar_ul li, .company_brand .brand_inner .serviceBtn, .p_navbar .title01, .p_navbar .nav .pnav_li, .p_navbar.navbar03 .pnav_li, .p_navbar.navbar04 .pnav_li, .p_news .pagination02, .ul02 .pnav_li, .cmpp .pic, .favor_btn .iconLine, .solution_form .form-row .un-block-1 a.baseInput, .solution_form .form-row .un-block-1 button.baseInput, .solution_form .form-row .un-block-2 a.baseInput, .solution_form .form-row .un-block-2 button.baseInput, .solution_form .form-row .un-block-3 a.baseInput, .solution_form .form-row .un-block-3 button.baseInput, .solution_form .form-row.submit-row .un-block-1 a.baseInput, .solution_form .form-row.submit-row .un-block-1 button.baseInput, .solution_form .form-row.submit-row .un-block-2 a.baseInput, .solution_form .form-row.submit-row .un-block-2 button.baseInput, .solution_form .form-row.submit-row .un-block-3 a.baseInput, .solution_form .form-row.submit-row .un-block-3 button.baseInput, .solution_form .form-row.submit-row a, .solution_form .p_thumb, .solution_form #btnUploadPcb, #a_box .btnrow .signBtn, .member_url .sbtn_row .sbtn, .m-btn01, .selectRow select, .sideBar03 .sideBar_li {
+.application_zone .hd li, .application_zone .cell-r .row-block .rb_box .imgbox, .application_zone .cell-r .row-block .rb_box .text, .creatorZone .creator_title, .creatorZone .creator_title li, .creator_slide .gallary .inner .textbox, .header_center .center, .co_slide .hd, .fridend_link .right a + a, .footer .copyRight, .p_banner, .banner, .p_banner .banner_inner .serviceBtn, .sideBar .sideBar_li, .pagination02 ul li, .products_catagory .catagory_wrapper .title, .products_catagory .catagory_item .catagory_item_ul li, .linkBar_ul li, .linkBar_ul li .brand_img + p, .product_innerbox .imgBox, .product_slide .bigPic, .product_slide .product_info .product_gallary .inner, .company_brand .brand_inner .serviceBtn, .p_navbar .title01, .p_navbar .nav .pnav_li, .p_navbar.navbar03 .pnav_li, .p_navbar.navbar04 .pnav_li, .p_news .pagination02, .ul02 .pnav_li, .cmpp .pic, .favor_btn .iconLine, .solution_form .form-row .un-block-1 a.baseInput, .solution_form .form-row .un-block-1 button.baseInput, .solution_form .form-row .un-block-2 a.baseInput, .solution_form .form-row .un-block-2 button.baseInput, .solution_form .form-row .un-block-3 a.baseInput, .solution_form .form-row .un-block-3 button.baseInput, .solution_form .form-row.submit-row .un-block-1 a.baseInput, .solution_form .form-row.submit-row .un-block-1 button.baseInput, .solution_form .form-row.submit-row .un-block-2 a.baseInput, .solution_form .form-row.submit-row .un-block-2 button.baseInput, .solution_form .form-row.submit-row .un-block-3 a.baseInput, .solution_form .form-row.submit-row .un-block-3 button.baseInput, .solution_form .form-row.submit-row a, .solution_form .p_thumb, .solution_form #btnUploadPcb, #a_box .btnrow .signBtn, .member_url .sbtn_row .sbtn, .m-btn01, .selectRow select, .sideBar03 .sideBar_li {
   text-align: center !important; }
 
 .row02 .switch-li .news-list01 li .date {
   text-align: right; }
 
-.loginZone .login-form .input-base, .loginZone .login-form .form-row .verifyRow .verifyImg, .loginZone .login-form .m-b, .row02 .switch-li .news-list01 li a, .row02 .switch-li .news-list01 li .date, .application_zone .hd li, .application_zone .cell-r .row .row-block, .creatorZone .creator_title li, .creator_slide .gallary .row .row-block, .cooperate_link .row .row-block, .footer .foot .linkZone .row .row-block, .p_banner .banner_inner .serviceBtn, .banner .brand_img, .banner .text, .middle_part .leftSide, .products_catagory .catagory_wrapper .catagory-list .row .row-block, .products_catagory .catagory_item .catagory_item_ul li, .product_box .row .row-block, .product_slide .product_info .product_gallary .gallary .row .row-block, .wanted .wanted_gallary .bottom_gallary .serviceBtn, .p_navbar .nav .pnav_li span, .p_navbar .nav .pnav_li, .p_navbar.navbar03 .pnav_li span, .p_navbar.navbar03 .pnav_li, .p_navbar.navbar04 .pnav_li span, .p_navbar.navbar04 .pnav_li, .bountyForm .un-block-1, .bountyForm .un-block-2, .bountyForm .un-block-3, .bountyForm .un-block-4, .bountyForm .un-block-5, .bountyForm.form02 .un-block-1, .bountyForm.form02 .un-block-2, .bountyForm.form02 .un-block-3, .bountyForm.form02 .un-block-4, .bountyForm.form02 .un-block-5, .bountyForm.form03 .un-block-1, .bountyForm.form03 .un-block-2, .bountyForm.form03 .un-block-3, .bountyForm.form03 .un-block-4, .bountyForm.form03 .un-block-5, .bountyForm.form03 .un-block-6, .ul02 .pnav_li span, .ul02 .pnav_li, .wanted_details .wd_table .wd_head .un-block-1, .wanted_details .wd_table .wd_head .un-block-2, .wanted_details .wd_table .wd_head .un-block-3, .wanted_details .wd_table .wd_head .details .inner .info_row .row .row-block, .solution_form .form-row .un-block-1, .solution_form .form-row .un-block-1 input[type="text"], .solution_form .form-row .un-block-1 select, .solution_form .form-row .un-block-1 textarea, .solution_form .form-row .un-block-2, .solution_form .form-row .un-block-2 input[type="text"], .solution_form .form-row .un-block-2 select, .solution_form .form-row .un-block-2 textarea, .solution_form .form-row .un-block-3, .solution_form .form-row .un-block-3 input[type="text"], .solution_form .form-row .un-block-3 select, .solution_form .form-row .un-block-3 textarea, .solution_form .form-row.submit-row .un-block-1, .solution_form .form-row.submit-row .un-block-1 input[type="text"], .solution_form .form-row.submit-row .un-block-1 select, .solution_form .form-row.submit-row .un-block-1 textarea, .solution_form .form-row.submit-row .un-block-2, .solution_form .form-row.submit-row .un-block-2 input[type="text"], .solution_form .form-row.submit-row .un-block-2 select, .solution_form .form-row.submit-row .un-block-2 textarea, .solution_form .form-row.submit-row .un-block-3, .solution_form .form-row.submit-row .un-block-3 input[type="text"], .solution_form .form-row.submit-row .un-block-3 select, .solution_form .form-row.submit-row .un-block-3 textarea, .solution_form .p_thumb, .solution_form .upload_zone .name, #a_box .btnrow .signBtn, .get_ic .row .row-block, .member_url .row .row-block, .member_url .sbtn_row .sbtn, .solution_tab .row .row-block, .solutionForm.form0 .un-block-1, .solutionForm.form0 .un-block-2, .solutionForm.form0 .un-block-3, .solutionForm.form1 .un-block-1, .solutionForm.form1 .un-block-2, .solutionForm.form1 .un-block-3, .solutionForm.form1 .un-block-4, .solutionForm.form1 .un-block-5, .m-btn01, .auditRow .row .row-block, .selectRow select, .project_wrapper .un-block-1, .project_wrapper .un-block-2, .project_wrapper .titleImg .two-inner-1, .project_wrapper .titleImg .two-inner-2, #project_field .un-block-1, #project_field .un-block-2 {
+.loginZone .login-form .input-base, .loginZone .login-form .form-row .verifyRow .verifyImg, .loginZone .login-form .m-b, .row02 .switch-li .news-list01 li a, .row02 .switch-li .news-list01 li .date, .application_zone .hd li, .application_zone .cell-r .row .row-block, .creatorZone .creator_title li, .creator_slide .gallary .row .row-block, .cooperate_link .row .row-block, .footer .foot .qrZone .right .span1, .footer .foot .linkZone .row .row-block, .p_banner .banner_inner .serviceBtn, .banner .brand_img, .banner .text, .middle_part .leftSide, .middle_part .leftContent, .products_catagory .catagory_wrapper .catagory-list .row .row-block, .products_catagory .catagory_item .catagory_item_ul li, .product_box .row .row-block, .product_slide .product_info .product_gallary .gallary .row .row-block, .wanted .wanted_gallary .bottom_gallary .serviceBtn, .p_navbar .nav .pnav_li span, .p_navbar .nav .pnav_li, .p_navbar.navbar03 .pnav_li span, .p_navbar.navbar03 .pnav_li, .p_navbar.navbar04 .pnav_li span, .p_navbar.navbar04 .pnav_li, .bountyForm .un-block-1, .bountyForm .un-block-2, .bountyForm .un-block-3, .bountyForm .un-block-4, .bountyForm .un-block-5, .bountyForm.form02 .un-block-1, .bountyForm.form02 .un-block-2, .bountyForm.form02 .un-block-3, .bountyForm.form02 .un-block-4, .bountyForm.form02 .un-block-5, .bountyForm.form03 .un-block-1, .bountyForm.form03 .un-block-2, .bountyForm.form03 .un-block-3, .bountyForm.form03 .un-block-4, .bountyForm.form03 .un-block-5, .bountyForm.form03 .un-block-6, .ul02 .pnav_li span, .ul02 .pnav_li, .wanted_details .wd_table .wd_head .un-block-1, .wanted_details .wd_table .wd_head .un-block-2, .wanted_details .wd_table .wd_head .un-block-3, .wanted_details .wd_table .wd_head .details .inner .info_row .row .row-block, .solution_form .form-row .un-block-1, .solution_form .form-row .un-block-1 input[type="text"], .solution_form .form-row .un-block-1 select, .solution_form .form-row .un-block-1 textarea, .solution_form .form-row .un-block-2, .solution_form .form-row .un-block-2 input[type="text"], .solution_form .form-row .un-block-2 select, .solution_form .form-row .un-block-2 textarea, .solution_form .form-row .un-block-3, .solution_form .form-row .un-block-3 input[type="text"], .solution_form .form-row .un-block-3 select, .solution_form .form-row .un-block-3 textarea, .solution_form .form-row.submit-row .un-block-1, .solution_form .form-row.submit-row .un-block-1 input[type="text"], .solution_form .form-row.submit-row .un-block-1 select, .solution_form .form-row.submit-row .un-block-1 textarea, .solution_form .form-row.submit-row .un-block-2, .solution_form .form-row.submit-row .un-block-2 input[type="text"], .solution_form .form-row.submit-row .un-block-2 select, .solution_form .form-row.submit-row .un-block-2 textarea, .solution_form .form-row.submit-row .un-block-3, .solution_form .form-row.submit-row .un-block-3 input[type="text"], .solution_form .form-row.submit-row .un-block-3 select, .solution_form .form-row.submit-row .un-block-3 textarea, .solution_form .p_thumb, .solution_form .upload_zone .name, #a_box .btnrow .signBtn, .get_ic .row .row-block, .member_url .row .row-block, .member_url .sbtn_row .sbtn, .solution_tab .row .row-block, .solutionForm.form0 .un-block-1, .solutionForm.form0 .un-block-2, .solutionForm.form0 .un-block-3, .solutionForm.form1 .un-block-1, .solutionForm.form1 .un-block-2, .solutionForm.form1 .un-block-3, .solutionForm.form1 .un-block-4, .solutionForm.form1 .un-block-5, .m-btn01, .auditRow .row .row-block, .selectRow select, .project_wrapper .un-block-1, .project_wrapper .un-block-2, .project_wrapper .titleImg .two-inner-1, .project_wrapper .titleImg .two-inner-2, #project_field .un-block-1, #project_field .un-block-2 {
   float: left; }
 
 .loginZone .login-form .verify, .news-list01 li .date, .sideBar02 .list .list_li .t01 .caret, .news-list02 li .right {
@@ -153,7 +161,7 @@
 /*是否兼容ie6-7*/
 /*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
 /*是否开启打印样式*/
-.textTab02, .row03 .news-list01 {
+.textTab02 {
   padding-right: 10px; }
 
 /* color start */
@@ -178,17 +186,8 @@
 .creator_slide i, .footer .copyRight, .p_banner .banner_inner .serviceBtn, .banner .text, .leftSide .title, .rightSide .title, .products_catagory .catagory_wrapper .catagory-list .inner, .member_url .sbtn_row .sbtn.on, .member_url .sbtn_row .sbtn:hover, .zone_row .text .m-btn01.white {
   color: #fff; }
 
-.cooperate_link .row-block .inner img.grayfilter {
-  -webkit-filter: grayscale(100%);
-  -moz-filter: grayscale(100%);
-  -ms-filter: grayscale(100%);
-  -o-filter: grayscale(100%);
-  filter: grayscale(100%);
-  -webkit-filter: gray;
-  filter: gray; }
-
 /* color end */
-.linkBar_ul li, .brand_img, .product_innerbox .imgBox, .company_brand .brand_inner .cb_wrapper, .company_brand .brand_inner .company_brand, .company_brand .brand_inner .adr .l, .company_brand .brand_inner .adr .r, .wanted .wanted_gallary img.bg, .avatarWrapper .avatar, .avatarWrapper .avatar01, .avatarWrapper .avatar02, .avatarWrapper .avatar03, .cmpp .avatar, .solution_form .form-row .un-block-1, .solution_form .form-row .un-block-1 a.baseInput, .solution_form .form-row .un-block-1 button.baseInput, .solution_form .form-row .un-block-2, .solution_form .form-row .un-block-2 a.baseInput, .solution_form .form-row .un-block-2 button.baseInput, .solution_form .form-row .un-block-3, .solution_form .form-row .un-block-3 a.baseInput, .solution_form .form-row .un-block-3 button.baseInput, .solution_form .form-row.submit-row .un-block-1, .solution_form .form-row.submit-row .un-block-1 a.baseInput, .solution_form .form-row.submit-row .un-block-1 button.baseInput, .solution_form .form-row.submit-row .un-block-2, .solution_form .form-row.submit-row .un-block-2 a.baseInput, .solution_form .form-row.submit-row .un-block-2 button.baseInput, .solution_form .form-row.submit-row .un-block-3, .solution_form .form-row.submit-row .un-block-3 a.baseInput, .solution_form .form-row.submit-row .un-block-3 button.baseInput, .solution_form #btnUploadPcb, .member_url .row .inner .t, .solution_form .user, .solution_form .on .user, .solution_tab .row .row-block .inner, .auditRow .row .row-block .inner {
+.textTab02 .stb-text, .textTab02 .stb-text02, .footer .foot .qrZone .right .span1, .footer .foot .qrZone .right .span2, .linkBar_ul li, .brand_img, .product_innerbox .imgBox, .company_brand .brand_inner .cb_wrapper, .company_brand .brand_inner .company_brand, .company_brand .brand_inner .adr .l, .company_brand .brand_inner .adr .r, .wanted .wanted_gallary img.bg, .avatarWrapper .avatar, .avatarWrapper .avatar01, .avatarWrapper .avatar02, .avatarWrapper .avatar03, .cmpp .avatar, .solution_form .form-row .un-block-1, .solution_form .form-row .un-block-1 a.baseInput, .solution_form .form-row .un-block-1 button.baseInput, .solution_form .form-row .un-block-2, .solution_form .form-row .un-block-2 a.baseInput, .solution_form .form-row .un-block-2 button.baseInput, .solution_form .form-row .un-block-3, .solution_form .form-row .un-block-3 a.baseInput, .solution_form .form-row .un-block-3 button.baseInput, .solution_form .form-row.submit-row .un-block-1, .solution_form .form-row.submit-row .un-block-1 a.baseInput, .solution_form .form-row.submit-row .un-block-1 button.baseInput, .solution_form .form-row.submit-row .un-block-2, .solution_form .form-row.submit-row .un-block-2 a.baseInput, .solution_form .form-row.submit-row .un-block-2 button.baseInput, .solution_form .form-row.submit-row .un-block-3, .solution_form .form-row.submit-row .un-block-3 a.baseInput, .solution_form .form-row.submit-row .un-block-3 button.baseInput, .solution_form #btnUploadPcb, .member_url .row .inner .t, .solution_form .user, .solution_form .on .user, .solution_tab .row .row-block .inner, .auditRow .row .row-block .inner {
   display: block; }
 
 .leftSide .title, .rightSide .title {
@@ -199,9 +198,23 @@
     vertical-align: middle;
     height: auto; }
 
+.textTab02 .stb-text, .linkBar_ul li .brand_img + p, .product_innerbox .textBox .textLine .tips p {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  /*text-align:center;*/
+  max-width: 100%;
+  line-height: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
+
 /* clearfix*/
 /* 闭合子元素的浮动*/
-.loginZone .login-form .input-base, .loginZone .login-form .form-row .verifyRow .verifyImg, .loginZone .login-form .m-b, .row02 .switch-li .news-list01 li a, .row02 .switch-li .news-list01 li .date, .application_zone .hd li, .application_zone .cell-r .row .row-block, .creatorZone .creator_title li, .creator_slide .gallary .row .row-block, .cooperate_link .row .row-block, .footer .foot .linkZone .row .row-block, .p_banner .banner_inner .serviceBtn, .banner .brand_img, .banner .text, .middle_part .leftSide, .products_catagory .catagory_wrapper .catagory-list .row .row-block, .products_catagory .catagory_item .catagory_item_ul li, .product_box .row .row-block, .product_slide .product_info .product_gallary .gallary .row .row-block, .wanted .wanted_gallary .bottom_gallary .serviceBtn, .p_navbar .nav .pnav_li span, .p_navbar .nav .pnav_li, .p_navbar.navbar03 .pnav_li span, .p_navbar.navbar03 .pnav_li, .p_navbar.navbar04 .pnav_li span, .p_navbar.navbar04 .pnav_li, .bountyForm .un-block-1, .bountyForm .un-block-2, .bountyForm .un-block-3, .bountyForm .un-block-4, .bountyForm .un-block-5, .bountyForm.form02 .un-block-1, .bountyForm.form02 .un-block-2, .bountyForm.form02 .un-block-3, .bountyForm.form02 .un-block-4, .bountyForm.form02 .un-block-5, .bountyForm.form03 .un-block-1, .bountyForm.form03 .un-block-2, .bountyForm.form03 .un-block-3, .bountyForm.form03 .un-block-4, .bountyForm.form03 .un-block-5, .bountyForm.form03 .un-block-6, .ul02 .pnav_li span, .ul02 .pnav_li, .wanted_details .wd_table .wd_head .un-block-1, .wanted_details .wd_table .wd_head .un-block-2, .wanted_details .wd_table .wd_head .un-block-3, .wanted_details .wd_table .wd_head .details .inner .info_row .row .row-block, .solution_form .form-row .un-block-1, .solution_form .form-row .un-block-1 input[type="text"], .solution_form .form-row .un-block-1 select, .solution_form .form-row .un-block-1 textarea, .solution_form .form-row .un-block-2, .solution_form .form-row .un-block-2 input[type="text"], .solution_form .form-row .un-block-2 select, .solution_form .form-row .un-block-2 textarea, .solution_form .form-row .un-block-3, .solution_form .form-row .un-block-3 input[type="text"], .solution_form .form-row .un-block-3 select, .solution_form .form-row .un-block-3 textarea, .solution_form .form-row.submit-row .un-block-1, .solution_form .form-row.submit-row .un-block-1 input[type="text"], .solution_form .form-row.submit-row .un-block-1 select, .solution_form .form-row.submit-row .un-block-1 textarea, .solution_form .form-row.submit-row .un-block-2, .solution_form .form-row.submit-row .un-block-2 input[type="text"], .solution_form .form-row.submit-row .un-block-2 select, .solution_form .form-row.submit-row .un-block-2 textarea, .solution_form .form-row.submit-row .un-block-3, .solution_form .form-row.submit-row .un-block-3 input[type="text"], .solution_form .form-row.submit-row .un-block-3 select, .solution_form .form-row.submit-row .un-block-3 textarea, .solution_form .p_thumb, .solution_form .upload_zone .name, #a_box .btnrow .signBtn, .get_ic .row .row-block, .member_url .row .row-block, .member_url .sbtn_row .sbtn, .solution_tab .row .row-block, .solutionForm.form0 .un-block-1, .solutionForm.form0 .un-block-2, .solutionForm.form0 .un-block-3, .solutionForm.form1 .un-block-1, .solutionForm.form1 .un-block-2, .solutionForm.form1 .un-block-3, .solutionForm.form1 .un-block-4, .solutionForm.form1 .un-block-5, .m-btn01, .auditRow .row .row-block, .selectRow select, .project_wrapper .un-block-1, .project_wrapper .un-block-2, .project_wrapper .titleImg .two-inner-1, .project_wrapper .titleImg .two-inner-2, #project_field .un-block-1, #project_field .un-block-2 {
+.textTab02 .stb-text02, .company_brand .brand_inner .adr p, .form-content01 .m-form-line {
+  overflow: hidden; }
+
+.loginZone .login-form .input-base, .loginZone .login-form .form-row .verifyRow .verifyImg, .loginZone .login-form .m-b, .row02 .switch-li .news-list01 li a, .row02 .switch-li .news-list01 li .date, .application_zone .hd li, .application_zone .cell-r .row .row-block, .creatorZone .creator_title li, .creator_slide .gallary .row .row-block, .cooperate_link .row .row-block, .footer .foot .qrZone .right .span1, .footer .foot .linkZone .row .row-block, .p_banner .banner_inner .serviceBtn, .banner .brand_img, .banner .text, .middle_part .leftSide, .middle_part .leftContent, .products_catagory .catagory_wrapper .catagory-list .row .row-block, .products_catagory .catagory_item .catagory_item_ul li, .product_box .row .row-block, .product_slide .product_info .product_gallary .gallary .row .row-block, .wanted .wanted_gallary .bottom_gallary .serviceBtn, .p_navbar .nav .pnav_li span, .p_navbar .nav .pnav_li, .p_navbar.navbar03 .pnav_li span, .p_navbar.navbar03 .pnav_li, .p_navbar.navbar04 .pnav_li span, .p_navbar.navbar04 .pnav_li, .bountyForm .un-block-1, .bountyForm .un-block-2, .bountyForm .un-block-3, .bountyForm .un-block-4, .bountyForm .un-block-5, .bountyForm.form02 .un-block-1, .bountyForm.form02 .un-block-2, .bountyForm.form02 .un-block-3, .bountyForm.form02 .un-block-4, .bountyForm.form02 .un-block-5, .bountyForm.form03 .un-block-1, .bountyForm.form03 .un-block-2, .bountyForm.form03 .un-block-3, .bountyForm.form03 .un-block-4, .bountyForm.form03 .un-block-5, .bountyForm.form03 .un-block-6, .ul02 .pnav_li span, .ul02 .pnav_li, .wanted_details .wd_table .wd_head .un-block-1, .wanted_details .wd_table .wd_head .un-block-2, .wanted_details .wd_table .wd_head .un-block-3, .wanted_details .wd_table .wd_head .details .inner .info_row .row .row-block, .solution_form .form-row .un-block-1, .solution_form .form-row .un-block-1 input[type="text"], .solution_form .form-row .un-block-1 select, .solution_form .form-row .un-block-1 textarea, .solution_form .form-row .un-block-2, .solution_form .form-row .un-block-2 input[type="text"], .solution_form .form-row .un-block-2 select, .solution_form .form-row .un-block-2 textarea, .solution_form .form-row .un-block-3, .solution_form .form-row .un-block-3 input[type="text"], .solution_form .form-row .un-block-3 select, .solution_form .form-row .un-block-3 textarea, .solution_form .form-row.submit-row .un-block-1, .solution_form .form-row.submit-row .un-block-1 input[type="text"], .solution_form .form-row.submit-row .un-block-1 select, .solution_form .form-row.submit-row .un-block-1 textarea, .solution_form .form-row.submit-row .un-block-2, .solution_form .form-row.submit-row .un-block-2 input[type="text"], .solution_form .form-row.submit-row .un-block-2 select, .solution_form .form-row.submit-row .un-block-2 textarea, .solution_form .form-row.submit-row .un-block-3, .solution_form .form-row.submit-row .un-block-3 input[type="text"], .solution_form .form-row.submit-row .un-block-3 select, .solution_form .form-row.submit-row .un-block-3 textarea, .solution_form .p_thumb, .solution_form .upload_zone .name, #a_box .btnrow .signBtn, .get_ic .row .row-block, .member_url .row .row-block, .member_url .sbtn_row .sbtn, .solution_tab .row .row-block, .solutionForm.form0 .un-block-1, .solutionForm.form0 .un-block-2, .solutionForm.form0 .un-block-3, .solutionForm.form1 .un-block-1, .solutionForm.form1 .un-block-2, .solutionForm.form1 .un-block-3, .solutionForm.form1 .un-block-4, .solutionForm.form1 .un-block-5, .m-btn01, .auditRow .row .row-block, .selectRow select, .project_wrapper .un-block-1, .project_wrapper .un-block-2, .project_wrapper .titleImg .two-inner-1, .project_wrapper .titleImg .two-inner-2, #project_field .un-block-1, #project_field .un-block-2 {
   float: left; }
 
 .dropdown-backdrop {
@@ -211,20 +224,20 @@
   right: 0;
   position: absolute; }
 
-.loginZone .login-form .form-row:before, .application_zone .inner:before, .application_zone .cell-r .row:before, .creator_slide .gallary .row:before, .cooperate_link .row:before, .cooperate_link:before, .co_slide .hd ul:before, .footer .foot .linkZone .row:before, .middle_part #leftSideBar_wrapper:before, .products_catagory .catagory_wrapper .catagory-list .row:before, .products_catagory .catagory_item:before, .product_box .row:before, .product_innerbox .textBox:before, .product_innerbox .textBox .textLine:before, .product_slide .product_info .product_gallary .gallary .row:before, .bountyForm:before, .bountyForm.form02:before, .bountyForm.form03:before, .wanted_details .wd_table .wd_head:before, .wanted_details .wd_table .wd_head .details .inner .info_row .row:before, .solution_form .form-row:before, .solution_form .form-row.submit-row:before, .get_ic .row:before, .member_url .row:before, .solution_tab .row:before, .solutionForm.form0:before, .solutionForm.form1:before, .auditRow .row:before, .project_wrapper:before, .project_wrapper .titleImg:before, #project_field:before, .loginZone .login-form .form-row:after, .application_zone .inner:after, .application_zone .cell-r .row:after, .creator_slide .gallary .row:after, .cooperate_link .row:after, .cooperate_link:after, .co_slide .hd ul:after, .footer .foot .linkZone .row:after, .middle_part #leftSideBar_wrapper:after, .products_catagory .catagory_wrapper .catagory-list .row:after, .products_catagory .catagory_item:after, .product_box .row:after, .product_innerbox .textBox:after, .product_innerbox .textBox .textLine:after, .product_slide .product_info .product_gallary .gallary .row:after, .bountyForm:after, .bountyForm.form02:after, .bountyForm.form03:after, .wanted_details .wd_table .wd_head:after, .wanted_details .wd_table .wd_head .details .inner .info_row .row:after, .solution_form .form-row:after, .solution_form .form-row.submit-row:after, .get_ic .row:after, .member_url .row:after, .solution_tab .row:after, .solutionForm.form0:after, .solutionForm.form1:after, .auditRow .row:after, .project_wrapper:after, .project_wrapper .titleImg:after, #project_field:after {
+.loginZone .login-form .form-row:before, .application_zone .inner:before, .application_zone .cell-r .row:before, .creator_slide .gallary .row:before, .cooperate_link .row:before, .cooperate_link:before, .co_slide .hd ul:before, .footer .foot .linkZone .row:before, .middle_part #rightSideBar_wrapper:before, .middle_part #leftSideBar_wrapper:before, .products_catagory .catagory_wrapper .catagory-list .row:before, .products_catagory .catagory_item:before, .product_box .row:before, .product_innerbox .textBox:before, .product_innerbox .textBox .textLine:before, .product_slide .product_info .product_gallary .gallary .row:before, .bountyForm:before, .bountyForm.form02:before, .bountyForm.form03:before, .wanted_details .wd_table .wd_head:before, .wanted_details .wd_table .wd_head .details .inner .info_row .row:before, .solution_form .form-row:before, .solution_form .form-row.submit-row:before, .get_ic .row:before, .member_url .row:before, .solution_tab .row:before, .solutionForm.form0:before, .solutionForm.form1:before, .auditRow .row:before, .project_wrapper:before, .project_wrapper .titleImg:before, #project_field:before, .loginZone .login-form .form-row:after, .application_zone .inner:after, .application_zone .cell-r .row:after, .creator_slide .gallary .row:after, .cooperate_link .row:after, .cooperate_link:after, .co_slide .hd ul:after, .footer .foot .linkZone .row:after, .middle_part #rightSideBar_wrapper:after, .middle_part #leftSideBar_wrapper:after, .products_catagory .catagory_wrapper .catagory-list .row:after, .products_catagory .catagory_item:after, .product_box .row:after, .product_innerbox .textBox:after, .product_innerbox .textBox .textLine:after, .product_slide .product_info .product_gallary .gallary .row:after, .bountyForm:after, .bountyForm.form02:after, .bountyForm.form03:after, .wanted_details .wd_table .wd_head:after, .wanted_details .wd_table .wd_head .details .inner .info_row .row:after, .solution_form .form-row:after, .solution_form .form-row.submit-row:after, .get_ic .row:after, .member_url .row:after, .solution_tab .row:after, .solutionForm.form0:after, .solutionForm.form1:after, .auditRow .row:after, .project_wrapper:after, .project_wrapper .titleImg:after, #project_field:after {
   content: " ";
   display: table; }
 
-.loginZone .login-form .form-row:after, .application_zone .inner:after, .application_zone .cell-r .row:after, .creator_slide .gallary .row:after, .cooperate_link .row:after, .cooperate_link:after, .co_slide .hd ul:after, .footer .foot .linkZone .row:after, .middle_part #leftSideBar_wrapper:after, .products_catagory .catagory_wrapper .catagory-list .row:after, .products_catagory .catagory_item:after, .product_box .row:after, .product_innerbox .textBox:after, .product_innerbox .textBox .textLine:after, .product_slide .product_info .product_gallary .gallary .row:after, .bountyForm:after, .bountyForm.form02:after, .bountyForm.form03:after, .wanted_details .wd_table .wd_head:after, .wanted_details .wd_table .wd_head .details .inner .info_row .row:after, .solution_form .form-row:after, .solution_form .form-row.submit-row:after, .get_ic .row:after, .member_url .row:after, .solution_tab .row:after, .solutionForm.form0:after, .solutionForm.form1:after, .auditRow .row:after, .project_wrapper:after, .project_wrapper .titleImg:after, #project_field:after {
+.loginZone .login-form .form-row:after, .application_zone .inner:after, .application_zone .cell-r .row:after, .creator_slide .gallary .row:after, .cooperate_link .row:after, .cooperate_link:after, .co_slide .hd ul:after, .footer .foot .linkZone .row:after, .middle_part #rightSideBar_wrapper:after, .middle_part #leftSideBar_wrapper:after, .products_catagory .catagory_wrapper .catagory-list .row:after, .products_catagory .catagory_item:after, .product_box .row:after, .product_innerbox .textBox:after, .product_innerbox .textBox .textLine:after, .product_slide .product_info .product_gallary .gallary .row:after, .bountyForm:after, .bountyForm.form02:after, .bountyForm.form03:after, .wanted_details .wd_table .wd_head:after, .wanted_details .wd_table .wd_head .details .inner .info_row .row:after, .solution_form .form-row:after, .solution_form .form-row.submit-row:after, .get_ic .row:after, .member_url .row:after, .solution_tab .row:after, .solutionForm.form0:after, .solutionForm.form1:after, .auditRow .row:after, .project_wrapper:after, .project_wrapper .titleImg:after, #project_field:after {
   clear: both; }
 
-.input-set .button img, .navbar-line02 .navbar-block a.navLink, .sbcontent02 .a02-btn, .iot_content_row, .row02 .slideTxtBox li.switch-li, .row02 .switch-li .news-list01 li, .news-list01 a, .iot_content_row.row02 .iot_right .serviceBtn i, .banner_row, .application_zone .cell-r .row .row-block, .application_zone .cell-r .row-block .rb_box .imgbox, .iot_content_row.row03 .slideTxtBox li.switch-li, .creatorZone, .creator_slide, .creator_slide .creator_inner_slide, .creator_slide .gallary .row .row-block, .cooperate_link .row .row-block, .cooperate_link .row-block .inner, .fridend_link, .fridend_link .right a, .footer .foot, .footer .foot .linkZone .row .row-block, .middle_part, .middle_part #leftSideBar_wrapper, .leftSide .serviceBtn i, .rightSide .serviceBtn i, .sideBar .sideBar_li p, .a-title-header02 .articleInf span, .right_linkBar_wrapper .right_linkBar_up, .products_catagory .catagory_wrapper, .products_catagory .catagory_wrapper .catagory-list .row .row-block, .products_catagory .catagory_item .catagory_item_ul li, .brand_img, .product_box .row .row-block, .product_innerbox .textBox .textLine, .productSlide_wrapper .container1200, .product_slide .inner, .product_slide .product_info, .product_slide .product_info .product_gallary, .product_slide .product_info .product_gallary .gallary .row .row-block, .company_brand .brand_inner .cb_wrapper, .company_brand .brand_inner .company_brand, .company_brand .brand_inner .adr p, .sideBar02 .list.bottom .t01, .sideBar02 .list.bottom .list_li:hover .t01, .sideBar02 .list.bottom .list_li.on .t01, .cnews_list .pt_line, .cnews_list .text, .wanted .wanted_gallary, .wanted .wanted_gallary .bottom_gallary .serviceBtn, .wanted .wanted_gallary .bottom_gallary .serviceBtn .w_inner .pt_line, .wanted .wanted_gallary .bottom_gallary .serviceBtn .w_inner .text, .wanted .wanted_gallary .bottom_gallary .serviceBtn .w_inner .text .title, .p_navbar .nav .pnav_li span, .p_navbar.navbar03 .pnav_li span, .p_navbar.navbar04 .pnav_li span, .p_content .news_h .rangeTag a:hover, .p_content .news_h .rangeTag a.on, .p_content .news_h .text, .p_news .pt_line, .p_news .text, .p_news .text .leftContent, .avatarWrapper .avatar, .avatarWrapper .avatar01, .avatarWrapper .avatar02, .avatarWrapper .avatar03, .bountyForm.form03 .range, .ul02 .pnav_li span, .wanted_details .wd_table .wd_head .details .inner .info_row .row .row-block, .cmpp .pt_line, .cmpp .text, .cmpp .avatar, .get_ic .row .row-block, .member_url .row .row-block, .solution_form .user, .solution_form .on .user, .solution_tab .row .row-block, .solution_tab .inner.new, .news-list02 .divider, .news-list02 .left, .creator_row .pt_line, .creator_row .text, .zone_row .pt_line, .zone_row .text, .auditRow .row .row-block, .affix_p01 .msg.new, .sDetailsRow .pt_line, .sDetailsRow .text, .sDetailsRow.sr01 .pt_line, .sDetailsRow.sr01 .text, .sDetailsRow .text .sinfo, .sideBar03 .sideBar_li .srow, .project_wrapper .hasTitle {
+.input-set .button img, .navbar-line02 .navbar-block a.navLink, .sbcontent02 .a02-btn, .iot_content_row, .row02 .slideTxtBox li.switch-li, .row02 .switch-li .news-list01 li, .news-list01 a, .iot_content_row.row02 .iot_right .serviceBtn i, .banner_row, .application_zone .cell-r .row .row-block, .application_zone .cell-r .row-block .rb_box .imgbox, .iot_content_row.row03 .slideTxtBox li.switch-li, .creatorZone, .creator_slide, .creator_slide .creator_inner_slide, .creator_slide .gallary .row .row-block, .cooperate_link .row .row-block, .cooperate_link .row-block .inner, .fridend_link, .fridend_link .right a, .footer .foot, .footer .foot .linkZone .row .row-block, .p_banner .banner_inner .serviceBtn.bg-orange i, .p_banner .banner_inner .serviceBtn.bg-l-blue i, .p_banner .banner_inner .serviceBtn, .middle_part, .middle_part #leftSideBar_wrapper, .leftSide .serviceBtn i, .rightSide .serviceBtn i, .sideBar .sideBar_li p, .a-title-header02 .articleInf span, .right_linkBar_wrapper .right_linkBar_up, .products_catagory .catagory_wrapper, .products_catagory .catagory_wrapper .catagory-list .row .row-block, .products_catagory .catagory_item .catagory_item_ul li, .linkBar_ul li, .brand_img, .product_box .row .row-block, .product_innerbox .textBox .textLine, .productSlide_wrapper .container1200, .product_slide .inner, .product_slide .product_info, .product_slide .product_info .product_gallary, .product_slide .product_info .product_gallary .gallary .row .row-block, .company_brand .brand_inner .cb_wrapper, .company_brand .brand_inner .company_brand, .company_brand .brand_inner .adr p, .sideBar02 .list.bottom .t01, .sideBar02 .list.bottom .list_li:hover .t01, .sideBar02 .list.bottom .list_li.on .t01, .cnews_list .pt_line, .cnews_list .text, .wanted .wanted_gallary, .wanted .wanted_gallary .bottom_gallary .serviceBtn, .wanted .wanted_gallary .bottom_gallary .serviceBtn .w_inner .pt_line, .wanted .wanted_gallary .bottom_gallary .serviceBtn .w_inner .text, .wanted .wanted_gallary .bottom_gallary .serviceBtn .w_inner .text .title, .p_navbar .nav .pnav_li span, .p_navbar.navbar03 .pnav_li span, .p_navbar.navbar04 .pnav_li span, .p_content .news_h .rangeTag a:hover, .p_content .news_h .rangeTag a.on, .p_content .news_h .text, .p_news .pt_line, .p_news .text, .p_news .text .leftContent, .avatarWrapper .avatar, .avatarWrapper .avatar01, .avatarWrapper .avatar02, .avatarWrapper .avatar03, .bountyForm.form03 .range, .ul02 .pnav_li span, .wanted_details .wd_table .wd_head .details .inner .info_row .row .row-block, .cmpp .pt_line, .cmpp .text, .cmpp .avatar, .get_ic .row .row-block, .member_url .row .row-block, .solution_form .user, .solution_form .on .user, .solution_tab .row .row-block, .solution_tab .inner.new, .news-list02 .divider, .news-list02 .left, .creator_row .pt_line, .creator_row .text, .zone_row .pt_line, .zone_row .text, .auditRow .row .row-block, .affix_p01 .msg.new, .sDetailsRow .pt_line, .sDetailsRow .text, .sDetailsRow.sr01 .pt_line, .sDetailsRow.sr01 .text, .sDetailsRow .text .sinfo, .sideBar03 .sideBar_li .srow, .project_wrapper .hasTitle {
   position: relative; }
 
-.banner_row img, .application_zone .cell-r .row-block .rb_box .imgbox img, .brand_img img, .company_brand .brand_inner .cb_wrapper img, .company_brand .brand_inner .company_brand img, .company_brand .brand_inner .company_brand, .avatarWrapper .avatar img, .avatarWrapper .avatar01 img, .avatarWrapper .avatar02 img, .avatarWrapper .avatar03 img, .cmpp .avatar img, .solution_form .user img, .solution_form .on .user img, .p_news .tagLine, .iot_left, .textTab01, .textTab02, .creator_slide .direction .directionBtn, .fridend_link .left, .footer .foot .qrZone, .footer .foot .qrZone .left, .middle_part .rightSide, .sideBar .sideBar_li .caret, .right_linkBar_wrapper .right_linkBar, .products_catagory .catagory_wrapper .title, .product_innerbox .textBox .textLine .name, .product_slide .product_info, .product_slide .product_info .product_gallary, .product_slide .product_info .product_gallary .direction .directionBtn, .company_brand, .company_brand .brand_inner .adr .l, .product_article .product_column, .cnews_list .pic, .wanted .wanted_gallary .bottom_gallary, .wanted .wanted_gallary .bottom_gallary .serviceBtn .w_inner, .wanted .wanted_gallary .bottom_gallary .serviceBtn .w_inner .pic, .p_navbar .title01, .p_news .pic, .p_news .text .rightAvatar, .cmpp .pic, .cmpp .c_picBox, .creator_row .pic, .zone_row .pic, .sDetailsRow .pic, .sDetailsRow.sr01 .pic, .sideBar03 .sideBar_li:hover .caret, .sideBar03 .sideBar_li.on .caret {
+.banner_row img, .brand_img img, .company_brand .brand_inner .cb_wrapper img, .company_brand .brand_inner .company_brand img, .company_brand .brand_inner .company_brand, .avatarWrapper .avatar img, .avatarWrapper .avatar01 img, .avatarWrapper .avatar02 img, .avatarWrapper .avatar03 img, .cmpp .avatar img, .solution_form .user img, .solution_form .on .user img, .p_news .tagLine, .iot_left, .textTab01, .textTab02, .creator_slide .direction .directionBtn, .fridend_link .left, .footer .foot .qrZone, .footer .foot .qrZone .left, .sideBar .sideBar_li .caret, .right_linkBar_wrapper .right_linkBar, .products_catagory .catagory_wrapper .title, .product_innerbox .textBox .textLine .name, .product_slide .product_info, .product_slide .product_info .product_gallary, .product_slide .product_info .product_gallary .direction .directionBtn, .company_brand, .company_brand .brand_inner .adr .l, .product_article .product_column, .cnews_list .pic, .wanted .wanted_gallary .bottom_gallary, .wanted .wanted_gallary .bottom_gallary .serviceBtn .w_inner, .wanted .wanted_gallary .bottom_gallary .serviceBtn .w_inner .pic, .p_navbar .title01, .p_news .pic, .p_news .text .rightAvatar, .cmpp .pic, .cmpp .c_picBox, .creator_row .pic, .zone_row .pic, .sDetailsRow .pic, .sDetailsRow.sr01 .pic, .sideBar03 .sideBar_li:hover .caret, .sideBar03 .sideBar_li.on .caret {
   position: absolute; }
 
-.banner_row img, .application_zone .cell-r .row-block .rb_box .imgbox img {
+.banner_row img {
   width: 100%;
   height: 100%;
   top: 0;
@@ -244,24 +257,27 @@
   left: 0;
   right: 0; }
 
-.cooperate_link .row-block, .leftSide .leftSide_ad img, .rightSide .leftSide_ad img, .news-ul01 .newsRow .cl-pic img, .right_linkBar_wrapper .left_product .product_banner img, .product_box .inner .shadow, .product_innerbox .imgBox img, .product_slide .bigPic img, .product_slide .product_info .product_gallary .inner img, .cnews_list .pic img, .wanted .wanted_gallary .bottom_gallary .serviceBtn .w_inner .pic img, .p_news .pic img, .cmpp .pic img, .cmpp .c_picBox .border img, .creator_row .pic img, .zone_row .pic img, .sDetailsRow .pic img, .sDetailsRow.sr01 .pic img {
+.cooperate_link .row-block, .footer .foot .qrZone .left img, .leftSide .leftSide_ad img, .rightSide .leftSide_ad img, .news-ul01 .newsRow .cl-pic img, .right_linkBar_wrapper .left_product .product_banner img, .product_box .inner .shadow, .cnews_list .pic img, .wanted .wanted_gallary .bottom_gallary .serviceBtn .w_inner .pic img, .p_news .pic img, .cmpp .pic img, .cmpp .c_picBox .border img, .creator_row .pic img, .zone_row .pic img, .sDetailsRow .pic img, .sDetailsRow.sr01 .pic img {
   display: block;
   width: 100%;
   height: 100%; }
 
-.loginZone .login-form, .login-form .login, .application_zone .hd li a, .creatorZone .creator_title li a, .creator_slide .gallary, .products_catagory .catagory_item .catagory_item_ul li a, .linkBar_ul li .brand_img, .product_slide .product_info .product_gallary .gallary, .company_brand .brand_inner, .company_brand .brand_inner .crown, .company_brand .brand_inner .cb_wrapper {
+.application_zone .cell-r .row-block .rb_box .imgbox img, .product_slide .bigPic img, .product_slide .product_info .product_gallary .inner img {
+  height: 100%; }
+
+.loginZone .login-form, .login-form .login, .application_zone .hd li a, .creatorZone .creator_title li a, .creator_slide .gallary, .banner .brand_img, .products_catagory .catagory_item .catagory_item_ul li a, .linkBar_ul li .brand_img, .product_slide .product_info .product_gallary .gallary, .company_brand .brand_inner, .company_brand .brand_inner .crown, .company_brand .brand_inner .cb_wrapper {
   margin: 0 auto; }
 
 .sideBar .sideBar_li p, .sideBar03 .sideBar_li .srow p {
   text-align: left; }
 
-.application_zone .hd li, .application_zone .cell-r .row-block .rb_box .text, .creatorZone .creator_title, .creatorZone .creator_title li, .creator_slide .gallary .inner .textbox, .cooperateZone .header_center .center, .co_slide .hd, .fridend_link .right a + a, .footer .copyRight, .p_banner, .banner, .p_banner .banner_inner .serviceBtn, .sideBar .sideBar_li, .pagination02 ul li, .products_catagory .catagory_wrapper .title, .products_catagory .catagory_item .catagory_item_ul li, .linkBar_ul li, .company_brand .brand_inner .serviceBtn, .p_navbar .title01, .p_navbar .nav .pnav_li, .p_navbar.navbar03 .pnav_li, .p_navbar.navbar04 .pnav_li, .p_news .pagination02, .ul02 .pnav_li, .cmpp .pic, .favor_btn .iconLine, .solution_form .form-row .un-block-1 a.baseInput, .solution_form .form-row .un-block-1 button.baseInput, .solution_form .form-row .un-block-2 a.baseInput, .solution_form .form-row .un-block-2 button.baseInput, .solution_form .form-row .un-block-3 a.baseInput, .solution_form .form-row .un-block-3 button.baseInput, .solution_form .form-row.submit-row .un-block-1 a.baseInput, .solution_form .form-row.submit-row .un-block-1 button.baseInput, .solution_form .form-row.submit-row .un-block-2 a.baseInput, .solution_form .form-row.submit-row .un-block-2 button.baseInput, .solution_form .form-row.submit-row .un-block-3 a.baseInput, .solution_form .form-row.submit-row .un-block-3 button.baseInput, .solution_form .form-row.submit-row a, .solution_form .p_thumb, .solution_form #btnUploadPcb, #a_box .btnrow .signBtn, .member_url .sbtn_row .sbtn, .m-btn01, .selectRow select, .sideBar03 .sideBar_li {
+.application_zone .hd li, .application_zone .cell-r .row-block .rb_box .imgbox, .application_zone .cell-r .row-block .rb_box .text, .creatorZone .creator_title, .creatorZone .creator_title li, .creator_slide .gallary .inner .textbox, .header_center .center, .co_slide .hd, .fridend_link .right a + a, .footer .copyRight, .p_banner, .banner, .p_banner .banner_inner .serviceBtn, .sideBar .sideBar_li, .pagination02 ul li, .products_catagory .catagory_wrapper .title, .products_catagory .catagory_item .catagory_item_ul li, .linkBar_ul li, .linkBar_ul li .brand_img + p, .product_innerbox .imgBox, .product_slide .bigPic, .product_slide .product_info .product_gallary .inner, .company_brand .brand_inner .serviceBtn, .p_navbar .title01, .p_navbar .nav .pnav_li, .p_navbar.navbar03 .pnav_li, .p_navbar.navbar04 .pnav_li, .p_news .pagination02, .ul02 .pnav_li, .cmpp .pic, .favor_btn .iconLine, .solution_form .form-row .un-block-1 a.baseInput, .solution_form .form-row .un-block-1 button.baseInput, .solution_form .form-row .un-block-2 a.baseInput, .solution_form .form-row .un-block-2 button.baseInput, .solution_form .form-row .un-block-3 a.baseInput, .solution_form .form-row .un-block-3 button.baseInput, .solution_form .form-row.submit-row .un-block-1 a.baseInput, .solution_form .form-row.submit-row .un-block-1 button.baseInput, .solution_form .form-row.submit-row .un-block-2 a.baseInput, .solution_form .form-row.submit-row .un-block-2 button.baseInput, .solution_form .form-row.submit-row .un-block-3 a.baseInput, .solution_form .form-row.submit-row .un-block-3 button.baseInput, .solution_form .form-row.submit-row a, .solution_form .p_thumb, .solution_form #btnUploadPcb, #a_box .btnrow .signBtn, .member_url .sbtn_row .sbtn, .m-btn01, .selectRow select, .sideBar03 .sideBar_li {
   text-align: center !important; }
 
 .row02 .switch-li .news-list01 li .date {
   text-align: right; }
 
-.loginZone .login-form .input-base, .loginZone .login-form .form-row .verifyRow .verifyImg, .loginZone .login-form .m-b, .row02 .switch-li .news-list01 li a, .row02 .switch-li .news-list01 li .date, .application_zone .hd li, .application_zone .cell-r .row .row-block, .creatorZone .creator_title li, .creator_slide .gallary .row .row-block, .cooperate_link .row .row-block, .footer .foot .linkZone .row .row-block, .p_banner .banner_inner .serviceBtn, .banner .brand_img, .banner .text, .middle_part .leftSide, .products_catagory .catagory_wrapper .catagory-list .row .row-block, .products_catagory .catagory_item .catagory_item_ul li, .product_box .row .row-block, .product_slide .product_info .product_gallary .gallary .row .row-block, .wanted .wanted_gallary .bottom_gallary .serviceBtn, .p_navbar .nav .pnav_li span, .p_navbar .nav .pnav_li, .p_navbar.navbar03 .pnav_li span, .p_navbar.navbar03 .pnav_li, .p_navbar.navbar04 .pnav_li span, .p_navbar.navbar04 .pnav_li, .bountyForm .un-block-1, .bountyForm .un-block-2, .bountyForm .un-block-3, .bountyForm .un-block-4, .bountyForm .un-block-5, .bountyForm.form02 .un-block-1, .bountyForm.form02 .un-block-2, .bountyForm.form02 .un-block-3, .bountyForm.form02 .un-block-4, .bountyForm.form02 .un-block-5, .bountyForm.form03 .un-block-1, .bountyForm.form03 .un-block-2, .bountyForm.form03 .un-block-3, .bountyForm.form03 .un-block-4, .bountyForm.form03 .un-block-5, .bountyForm.form03 .un-block-6, .ul02 .pnav_li span, .ul02 .pnav_li, .wanted_details .wd_table .wd_head .un-block-1, .wanted_details .wd_table .wd_head .un-block-2, .wanted_details .wd_table .wd_head .un-block-3, .wanted_details .wd_table .wd_head .details .inner .info_row .row .row-block, .solution_form .form-row .un-block-1, .solution_form .form-row .un-block-1 input[type="text"], .solution_form .form-row .un-block-1 select, .solution_form .form-row .un-block-1 textarea, .solution_form .form-row .un-block-2, .solution_form .form-row .un-block-2 input[type="text"], .solution_form .form-row .un-block-2 select, .solution_form .form-row .un-block-2 textarea, .solution_form .form-row .un-block-3, .solution_form .form-row .un-block-3 input[type="text"], .solution_form .form-row .un-block-3 select, .solution_form .form-row .un-block-3 textarea, .solution_form .form-row.submit-row .un-block-1, .solution_form .form-row.submit-row .un-block-1 input[type="text"], .solution_form .form-row.submit-row .un-block-1 select, .solution_form .form-row.submit-row .un-block-1 textarea, .solution_form .form-row.submit-row .un-block-2, .solution_form .form-row.submit-row .un-block-2 input[type="text"], .solution_form .form-row.submit-row .un-block-2 select, .solution_form .form-row.submit-row .un-block-2 textarea, .solution_form .form-row.submit-row .un-block-3, .solution_form .form-row.submit-row .un-block-3 input[type="text"], .solution_form .form-row.submit-row .un-block-3 select, .solution_form .form-row.submit-row .un-block-3 textarea, .solution_form .p_thumb, .solution_form .upload_zone .name, #a_box .btnrow .signBtn, .get_ic .row .row-block, .member_url .row .row-block, .member_url .sbtn_row .sbtn, .solution_tab .row .row-block, .solutionForm.form0 .un-block-1, .solutionForm.form0 .un-block-2, .solutionForm.form0 .un-block-3, .solutionForm.form1 .un-block-1, .solutionForm.form1 .un-block-2, .solutionForm.form1 .un-block-3, .solutionForm.form1 .un-block-4, .solutionForm.form1 .un-block-5, .m-btn01, .auditRow .row .row-block, .selectRow select, .project_wrapper .un-block-1, .project_wrapper .un-block-2, .project_wrapper .titleImg .two-inner-1, .project_wrapper .titleImg .two-inner-2, #project_field .un-block-1, #project_field .un-block-2 {
+.loginZone .login-form .input-base, .loginZone .login-form .form-row .verifyRow .verifyImg, .loginZone .login-form .m-b, .row02 .switch-li .news-list01 li a, .row02 .switch-li .news-list01 li .date, .application_zone .hd li, .application_zone .cell-r .row .row-block, .creatorZone .creator_title li, .creator_slide .gallary .row .row-block, .cooperate_link .row .row-block, .footer .foot .qrZone .right .span1, .footer .foot .linkZone .row .row-block, .p_banner .banner_inner .serviceBtn, .banner .brand_img, .banner .text, .middle_part .leftSide, .middle_part .leftContent, .products_catagory .catagory_wrapper .catagory-list .row .row-block, .products_catagory .catagory_item .catagory_item_ul li, .product_box .row .row-block, .product_slide .product_info .product_gallary .gallary .row .row-block, .wanted .wanted_gallary .bottom_gallary .serviceBtn, .p_navbar .nav .pnav_li span, .p_navbar .nav .pnav_li, .p_navbar.navbar03 .pnav_li span, .p_navbar.navbar03 .pnav_li, .p_navbar.navbar04 .pnav_li span, .p_navbar.navbar04 .pnav_li, .bountyForm .un-block-1, .bountyForm .un-block-2, .bountyForm .un-block-3, .bountyForm .un-block-4, .bountyForm .un-block-5, .bountyForm.form02 .un-block-1, .bountyForm.form02 .un-block-2, .bountyForm.form02 .un-block-3, .bountyForm.form02 .un-block-4, .bountyForm.form02 .un-block-5, .bountyForm.form03 .un-block-1, .bountyForm.form03 .un-block-2, .bountyForm.form03 .un-block-3, .bountyForm.form03 .un-block-4, .bountyForm.form03 .un-block-5, .bountyForm.form03 .un-block-6, .ul02 .pnav_li span, .ul02 .pnav_li, .wanted_details .wd_table .wd_head .un-block-1, .wanted_details .wd_table .wd_head .un-block-2, .wanted_details .wd_table .wd_head .un-block-3, .wanted_details .wd_table .wd_head .details .inner .info_row .row .row-block, .solution_form .form-row .un-block-1, .solution_form .form-row .un-block-1 input[type="text"], .solution_form .form-row .un-block-1 select, .solution_form .form-row .un-block-1 textarea, .solution_form .form-row .un-block-2, .solution_form .form-row .un-block-2 input[type="text"], .solution_form .form-row .un-block-2 select, .solution_form .form-row .un-block-2 textarea, .solution_form .form-row .un-block-3, .solution_form .form-row .un-block-3 input[type="text"], .solution_form .form-row .un-block-3 select, .solution_form .form-row .un-block-3 textarea, .solution_form .form-row.submit-row .un-block-1, .solution_form .form-row.submit-row .un-block-1 input[type="text"], .solution_form .form-row.submit-row .un-block-1 select, .solution_form .form-row.submit-row .un-block-1 textarea, .solution_form .form-row.submit-row .un-block-2, .solution_form .form-row.submit-row .un-block-2 input[type="text"], .solution_form .form-row.submit-row .un-block-2 select, .solution_form .form-row.submit-row .un-block-2 textarea, .solution_form .form-row.submit-row .un-block-3, .solution_form .form-row.submit-row .un-block-3 input[type="text"], .solution_form .form-row.submit-row .un-block-3 select, .solution_form .form-row.submit-row .un-block-3 textarea, .solution_form .p_thumb, .solution_form .upload_zone .name, #a_box .btnrow .signBtn, .get_ic .row .row-block, .member_url .row .row-block, .member_url .sbtn_row .sbtn, .solution_tab .row .row-block, .solutionForm.form0 .un-block-1, .solutionForm.form0 .un-block-2, .solutionForm.form0 .un-block-3, .solutionForm.form1 .un-block-1, .solutionForm.form1 .un-block-2, .solutionForm.form1 .un-block-3, .solutionForm.form1 .un-block-4, .solutionForm.form1 .un-block-5, .m-btn01, .auditRow .row .row-block, .selectRow select, .project_wrapper .un-block-1, .project_wrapper .un-block-2, .project_wrapper .titleImg .two-inner-1, .project_wrapper .titleImg .two-inner-2, #project_field .un-block-1, #project_field .un-block-2 {
   float: left; }
 
 .loginZone .login-form .verify, .news-list01 li .date, .sideBar02 .list .list_li .t01 .caret, .news-list02 li .right {
@@ -773,6 +789,11 @@
       color: #006acf;
       font-size: 18.72px; }
 
+.iot_content_row.row02 .more {
+  color: #006acf;
+  height: 30px;
+  line-height: 30px; }
+
 .iot_content_row.row02 .h-relative {
   text-align: right;
   height: 30px; }
@@ -910,27 +931,29 @@
       margin-top: 10px; }
 
 .application_zone {
-  padding: 90px 0;
+  padding: 30px 0;
   /* min-height:($application_h)-$application_gutter; */
   background: #f0f4f6; }
   .application_zone .inner {
     display: block; }
+  .application_zone .cell-l, .application_zone .cell-r {
+    margin-top: 30px; }
   .application_zone .cell-l {
-    width: 28%; }
+    width: 20%; }
     .application_zone .cell-l .inner {
       border-right: 1px solid #ddd;
       padding: 0 30px 50px 60px; }
       .application_zone .cell-l .inner li {
-        font-size: 15.6px; }
+        font-size: 17.16px; }
   .application_zone .cell-r {
-    width: 72%; }
+    width: 80%; }
     .application_zone .cell-r .inner {
       padding: 0 0px 0px 60px; }
   .application_zone .title {
-    height: 90px;
+    height: 80px;
     line-height: 26.4px; }
   .application_zone .hd li {
-    width: 50%;
+    width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
     border-radius: 6px; }
@@ -983,10 +1006,16 @@
     width: 1px;
     color: #dbdbdb; }
 
+.iot_content_row.row03 .newsTab02_pic img {
+  height: 100%; }
+
+.iot_content_row.row03 .tt_wraper:nth-child(2) .innerBlock {
+  padding-left: 0; }
+
 .textTab02 {
   right: 0;
   top: 0;
-  width: 645px;
+  width: 255px;
   text-align: left;
   height: 97px; }
   .textTab02 .stb-text {
@@ -994,11 +1023,19 @@
     line-height: 30px;
     font-size: 18.72px;
     color: black; }
+  .textTab02 .stb-text02 {
+    height: 65px; }
 
 .newsTab02_pic {
-  margin-right: 670px;
+  margin-right: 280px;
   height: 97px;
   padding-bottom: 15px; }
+
+/* .row03 .news-list01{
+		@extend %text-pr;
+	} */
+#textTab03 .news-list01 a.divider {
+  width: 65%; }
 
 /* 专家团队 */
 .team {
@@ -1024,8 +1061,9 @@
 /* 专家团队   */
 .creatorZone {
   height: 580px; }
+  .creatorZone .header_center {
+    padding-top: 42px; }
   .creatorZone .creator_title {
-    padding-top: 42px;
     cursor: pointer; }
     .creatorZone .creator_title p {
       font-weight: 700;
@@ -1036,77 +1074,79 @@
       font-size: 15.6px;
       margin-left: -30px; }
     .creatorZone .creator_title li {
+      color: black;
       border-radius: 6px;
       padding: 10px;
       margin-left: 30px; }
-      .creatorZone .creator_title li.on {
-        background: white;
-        color: #006acf; }
       .creatorZone .creator_title li a {
         display: block; }
       .creatorZone .creator_title li.on {
+        background: white;
+        color: #006acf;
         -webkit-box-shadow: 0 0 20px #69b6ff;
         box-shadow: 0 0 20px #69b6ff; }
   .creatorZone .creator_li {
-    padding: 80px 0 90px; }
+    padding: 60px 0 20px; }
 
-.creator_slide {
-  height: 100%; }
-  .creator_slide .direction .directionBtn {
-    line-height: 230px;
-    width: 10%;
-    height: 100%;
-    top: 0;
-    bottom: 0;
-    cursor: pointer; }
-    .creator_slide .direction .directionBtn.sprev {
-      left: 0;
-      text-align: left; }
-    .creator_slide .direction .directionBtn.snext {
-      right: 0;
-      text-align: right; }
-  .creator_slide i {
-    font-size: 65.52px; }
-  .creator_slide .gallary {
-    width: 80%; }
-    .creator_slide .gallary .row {
-      margin-left: -15px;
-      margin-right: -15px; }
-      .creator_slide .gallary .row .row-block {
-        width: 25%;
-        min-height: 1px; }
-        .creator_slide .gallary .row .row-block .inner {
-          padding: 0 15px; }
-    .creator_slide .gallary .inner {
-      height: 230px; }
-      .creator_slide .gallary .inner .imgbox {
-        height: 67%; }
-      .creator_slide .gallary .inner .textbox {
-        height: 33%;
-        width: 100%; }
-        .creator_slide .gallary .inner .textbox p {
-          padding: 15px 15px;
-          height: 45.9px;
-          overflow: hidden; }
+.creator_slide .direction .directionBtn {
+  line-height: 230px;
+  width: 10%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  cursor: pointer; }
+  .creator_slide .direction .directionBtn.sprev {
+    left: 0;
+    text-align: left; }
+  .creator_slide .direction .directionBtn.snext {
+    right: 0;
+    text-align: right; }
+
+.creator_slide i {
+  font-size: 65.52px; }
+
+.creator_slide .gallary {
+  width: 80%; }
+  .creator_slide .gallary .row {
+    margin-left: -15px;
+    margin-right: -15px; }
+    .creator_slide .gallary .row .row-block {
+      width: 25%;
+      min-height: 1px; }
+      .creator_slide .gallary .row .row-block .inner {
+        padding: 0 15px; }
+  .creator_slide .gallary .inner {
+    height: 230px; }
+    .creator_slide .gallary .inner .imgbox {
+      height: 67%; }
+    .creator_slide .gallary .inner .textbox {
+      height: 33%;
+      width: 100%; }
+      .creator_slide .gallary .inner .textbox p {
+        padding: 15px 15px;
+        height: 45.9px;
+        overflow: hidden; }
 
 .cooperateZone {
   padding: 20px 0; }
 
-.cooperateZone .header_center {
-  height: 50px; }
-  .cooperateZone .header_center .center {
+.header_center {
+  height: 60px; }
+  .header_center .center {
     width: 10%; }
-  .cooperateZone .header_center .left, .cooperateZone .header_center .right, .cooperateZone .header_center .center .center_top {
-    height: 24px; }
-  .cooperateZone .header_center .center .center_top {
+  .header_center .left, .header_center .right, .header_center .center .center_top, .header_center .center .center_down {
+    height: 29px; }
+  .header_center .center .center_down {
+    line-height: 29px; }
+  .header_center .center .center_top {
     border-bottom: 2px solid #006acf; }
-  .cooperateZone .header_center .left, .cooperateZone .header_center .right {
+  .header_center .left, .header_center .right {
     border-bottom: 2px solid #ddd;
     width: 45%; }
-  .cooperateZone .header_center .center .inner {
+  .header_center .center .inner {
     padding: 0 10px;
     color: #006acf; }
-    .cooperateZone .header_center .center .inner .center_top {
+    .header_center .center .inner .center_top {
       font-size: 18.72px; }
 
 .cooperate_link .row {
@@ -1124,17 +1164,56 @@
   .cooperate_link .row + .row {
     border-top: 1px solid #ddd; }
 
-.cooperate_link .row-block .inner {
-  height: 130px;
-  display: block;
-  border-right: 1px solid #ddd;
-  border-bottom: 1px solid #ddd; }
-  .cooperate_link .row-block .inner.rowLast {
-    border-right: none; }
-  .cooperate_link .row-block .inner.rowTwo {
-    border-bottom: none; }
-  .cooperate_link .row-block .inner img.grayfilter {
-    /* @extend %boxflect; */ }
+.cooperate_link .row-block {
+  /* @include persudo($color:none,$content:" ",$position:before,$bg:none) */
+  overflow: hidden;
+  /* &:before{
+			width:100%;
+			height: 100%;
+		} */ }
+  .cooperate_link .row-block:hover {
+    /* &:before{
+			
+			  		background-image: -webkit-gradient(linear,left top, left bottom,color-stop(0, #33deb4),to(#19bbff));
+			  		background-image: -webkit-linear-gradient(top,#33deb4 0,#19bbff 100%);
+			  		background-image: linear-gradient(to bottom,#33deb4 0,#19bbff 100%);	
+			  	}
+			  	.inner{
+			  		-webkit-animation: $timehove linear alternate slideDown;
+			  	    animation: $timehove linear alternate slideDown;	
+			  	} */ }
+    .cooperate_link .row-block:hover .inner img {
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+      transform: scale(1); }
+  .cooperate_link .row-block .inner {
+    height: 130px;
+    display: block;
+    /* @keyframes slideDown{
+			  	from { 
+			  		-webkit-transform: translateY(-100%); 
+			  		        transform: translateY(-100%)
+			  	}
+			  	to{
+			  		-webkit-transform: translateY(0);
+			  		        transform: translateY(0)
+			  	}	
+			  } */
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd; }
+    .cooperate_link .row-block .inner img {
+      -webkit-transition: all 0.2s;
+      transition: all 0.2s;
+      -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+      transform: scale(0.9); }
+    .cooperate_link .row-block .inner.rowLast {
+      border-right: none; }
+    .cooperate_link .row-block .inner.rowTwo {
+      border-bottom: none; }
+    .cooperate_link .row-block .inner img.grayfilter {
+      /* @extend %boxflect; */
+      /* @extend %grayfilter; */ }
 
 .co_ul {
   height: 260px;
@@ -1207,13 +1286,17 @@
       .footer .foot .qrZone .left {
         left: 0;
         top: 0;
-        width: 110px;
+        width: 126px;
         text-align: left;
-        height: 110px; }
+        height: 126px; }
       .footer .foot .qrZone .right {
-        margin-left: 120px;
+        margin-left: 136px;
         height: 100%;
         font-size: 12px; }
+        .footer .foot .qrZone .right .span1 {
+          width: 40px; }
+        .footer .foot .qrZone .right .span2 {
+          margin-left: 40px; }
     .footer .foot .linkZone {
       margin-right: 460px;
       height: 100%; }
@@ -1232,6 +1315,25 @@
         padding-bottom: 2px;
         font-size: 12px; }
 
+.backToTop {
+  position: fixed;
+  right: 50px;
+  bottom: 100px;
+  z-index: 99998;
+  cursor: pointer;
+  width: 40px;
+  height: 37px !important;
+  text-align: center;
+  white-space: normal;
+  font-size: 14px;
+  line-height: 17px;
+  padding-top: 3px;
+  color: #fff;
+  background: #404040;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEkAAAAXCAYAAABH92JbAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2hpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDowMjgwMTE3NDA3MjA2ODExODA4M0UyNDA4ODdDRTZBQiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpBQjc5RkRFNkI5ODMxMUUzQkZGNDhENEJFQjM2OTcyRiIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpBQjc5RkRFNUI5ODMxMUUzQkZGNDhENEJFQjM2OTcyRiIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChNYWNpbnRvc2gpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MDI4MDExNzQwNzIwNjgxMTgwODNFMjQwODg3Q0U2QUIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MDI4MDExNzQwNzIwNjgxMTgwODNFMjQwODg3Q0U2QUIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5HPYM5AAACC0lEQVR42uyZTSgEYRjH90NoqaVcpDblvKW2XOSkNh8H5Yac9sBBDqQokiJKSMpNTi5OPo6Ktsgu67JcUHIXWfK1u3b8Xx6Zxuzu+64dM83uv34zNfu8b8/8Z+d5P8YqSZLFJNLsRmyWvIRMKgVD4AhEwA3YAV0pzGwEqyAEwmAddIICHe7FqhnsdQM14FxKLj+ooFiGE2ykiD8GVbJ4I1ELAnTmasMODnAhpVcIFIMicMgRH6Z4IxnUAh4pP3Zu5TVpUOLXDJgWiB8wkEF9IK7IL07X05oUFLjpZ4JXQQOYYwfzafJcoDjVPqw43KE4lWtUTF+AQ8eBqQSsgTaO2E0apJ7URrdCDZOM62hQJfBzGmShOD+1+2XSiYaJ7utkkBsEgEewnYfauZUmzWmU6DuY0sEgLzgArgzbu6i992cu/1WclqXsa1iHIt0DYlnKP0b9fRZu5pWdZs7dWXqa7B80+s//oF5aMSjflGqBPq5BQnFtVv4UmGHjIPEH96PAZ6C5kVMwf6daPzbFKnqCqvx9Bk/yFjSBFTMvcL+1DerAmUA/p9Rm1+y7AHJdgnqwx9EHm1s0gKtc2CpR6gE00/ZHMm3RKxbJlf0kNb2BDrCk8hsbDdvBay5tuiUTGxL7waTs2iLw0YTR9BLZQRwDUVqwjuTS9q3VRB8C1OQUnM6UqdXX/IcADn0IMADs2AqDOPSutQAAAABJRU5ErkJggg==) no-repeat -42px center #666;
+  _position: absolute;
+  _top: expression(eval(document.documentElement.scrollTop+(document.documentElement.clientHeight||document.body.clientHeight)-this.offsetHeight-2)); }
+
 .p_banner, .banner {
   width: 100%; }
   .p_banner .banner_inner, .banner .banner_inner {
@@ -1240,23 +1342,39 @@
 .p_banner {
   height: 250px; }
   .p_banner .banner_inner .serviceBtn {
+    background: none !important;
     display: block;
     height: 65px;
     line-height: 65px;
     text-align: left;
     font-size: 18.72px;
     width: 285px; }
+    .p_banner .banner_inner .serviceBtn.bg-orange {
+      color: #efa506; }
+      .p_banner .banner_inner .serviceBtn.bg-orange i {
+        top: 5px; }
+    .p_banner .banner_inner .serviceBtn.bg-l-blue {
+      color: #4aadff; }
+      .p_banner .banner_inner .serviceBtn.bg-l-blue i {
+        top: 2px; }
+    .p_banner .banner_inner .serviceBtn.bg-l-green {
+      color: #4bd8a3; }
     .p_banner .banner_inner .serviceBtn + .serviceBtn {
       margin-left: 45px; }
     .p_banner .banner_inner .serviceBtn i {
       font-size: 37.44px;
-      vertical-align: middle; }
+      vertical-align: top; }
     .p_banner .banner_inner .serviceBtn span {
       margin-left: 20px;
-      letter-spacing: 3px; }
+      letter-spacing: 3px;
+      font-size: 37.44px; }
 
 .banner {
   height: 180px; }
+  .banner .brand_img {
+    overflow: hidden; }
+    .banner .brand_img img {
+      max-width: 90%; }
   .banner .bigh {
     font-size: 33.696px;
     padding-bottom: 20px; }
@@ -1288,19 +1406,17 @@
   .middle_part .rightContent .rightWrapper1 {
     min-height: 800px; }
 
-.middle_part .rightSide {
-  right: 0;
-  top: 0;
-  width: 235px;
+.middle_part .leftContent {
+  width: 935px;
   text-align: left;
   height: auto; }
-  .middle_part .rightSide .LeftserviceBtn, .middle_part .rightSide .leftSide_ad {
+  .middle_part .leftContent .s_leftContent {
     padding-top: 10px; }
 
-.middle_part .leftContent {
-  margin-right: 262px;
+.middle_part .rightSide {
+  margin-left: 962px;
   height: auto; }
-  .middle_part .leftContent .s_leftContent {
+  .middle_part .rightSide .LeftserviceBtn, .middle_part .rightSide .leftSide_ad {
     padding-top: 10px; }
 
 .leftSide .serviceBtn, .rightSide .serviceBtn {
@@ -1561,7 +1677,6 @@
       margin-left: -15px;
       margin-right: -15px; }
       .products_catagory .catagory_wrapper .catagory-list .row .row-block {
-        width: 11.11111%;
         min-height: 1px; }
         .products_catagory .catagory_wrapper .catagory-list .row .row-block .inner {
           padding: 0 15px; }
@@ -1569,7 +1684,8 @@
       margin-left: 0;
       margin-right: 0; }
     .products_catagory .catagory_wrapper .catagory-list li:hover, .products_catagory .catagory_wrapper .catagory-list li.on {
-      background: url(../img/icon_tips.png) 0 75% no-repeat; }
+      background: url(../img/icon_tips.png) 0 75% no-repeat;
+      background-size: 100% 33px; }
       .products_catagory .catagory_wrapper .catagory-list li:hover .inner, .products_catagory .catagory_wrapper .catagory-list li.on .inner {
         color: #006acf; }
     .products_catagory .catagory_wrapper .catagory-list .inner {
@@ -1598,25 +1714,34 @@
       content: "·";
       font-size: 15px; }
 
-.linkBar_ul {
+.rightCard, .linkBar_ul {
   padding: 0 25px; }
-  .linkBar_ul li {
-    height: 114.66667px;
-    padding-top: 18px; }
-    .linkBar_ul li .wrapper {
-      display: inline-block; }
-    .linkBar_ul li + li {
-      border-top: 1px solid #ddd; }
-    .brand_img {
-      width: 80px;
-      height: 80px;
-      background: #fff;
-      border-radius: 80px;
-      border: 1px solid #ddd; }
-    .linkBar_ul li .brand_img {
-      overflow: hidden; }
-      .linkBar_ul li .brand_img img {
-        max-width: 90%; }
+
+.linkBar_ul li {
+  height: 114.66667px;
+  padding-top: 18px; }
+  .linkBar_ul li .wrapper {
+    display: inline-block; }
+  .linkBar_ul li .brand_img {
+    border: none; }
+  .linkBar_ul li + li {
+    border-top: 1px solid #ddd; }
+  .brand_img {
+    width: 80px;
+    height: 80px;
+    background: #fff;
+    border-radius: 80px;
+    border: 1px solid #ddd;
+    border-radius: 0; }
+  .linkBar_ul li .brand_img {
+    overflow: hidden; }
+    .linkBar_ul li .brand_img img {
+      max-width: 90%; }
+    .linkBar_ul li .brand_img + p {
+      position: absolute;
+      left: 0;
+      right: 0;
+      padding-top: 7px; }
 
 .right_linkBar_wrapper .product_box {
   background: #f0f4f6;
@@ -1644,7 +1769,10 @@
     box-shadow: 5px 5px 10px #ddd; }
 
 .product_innerbox .imgBox {
-  height: 75%; }
+  height: 75%;
+  background: #fff; }
+  .product_innerbox .imgBox img {
+    height: 100%; }
 
 .product_innerbox .textBox {
   height: 25%;
@@ -1654,7 +1782,8 @@
   .product_innerbox .textBox img {
     vertical-align: middle; }
   .product_innerbox .textBox .textLine .tips {
-    text-align: right; }
+    text-align: right;
+    width: 100%; }
   .product_innerbox .textBox .textLine .name {
     color: gray;
     left: 0px;
@@ -1679,12 +1808,9 @@
   height: auto;
   padding: 65px 0; }
   .product_slide .bigPic {
-    padding: 5px;
-    border: 1px solid #006acf;
+    /* padding:5px;border:1px solid $mainColor; */
     margin-right: 545px;
     height: 285px; }
-    .product_slide .bigPic img {
-      width: 100%; }
   .product_slide .product_info {
     right: 0;
     top: 0;
@@ -1739,23 +1865,29 @@
           padding: 10px 0 !important; }
       .product_slide .product_info .product_gallary .inner {
         height: 60px;
-        opacity: .8; }
-        .product_slide .product_info .product_gallary .inner:hover {
-          opacity: 1; }
-          .product_slide .product_info .product_gallary .inner:hover img {
-            -webkit-transform: scale(1.01, 1.1);
-            -ms-transform: scale(1.01, 1.1);
-            transform: scale(1.01, 1.1);
-            -webkit-transition: .3s transform;
-            transition: .3s transform; }
+        /* opacity:.8;
+				&:hover{ 
+					opacity:1;
+					img{
+						
+						        -webkit-transform: scale(1.01, 1.1);
+						
+						            -ms-transform: scale(1.01, 1.1);
+						
+						                transform: scale(1.01, 1.1);
+    					-webkit-transition: .3s transform;
+    					transition: .3s transform;
+					}
+				} */ }
 
 .company_brand {
   right: 0;
   top: 0;
   width: 235px;
   text-align: left;
-  height: 95%;
-  background: #78afe2; }
+  height: auto;
+  background: #78afe2;
+  padding-bottom: 10px; }
   .company_brand .brand_inner {
     width: 80%;
     height: 100%; }
@@ -1771,6 +1903,7 @@
       height: 60px;
       border-radius: 60px;
       border: 1px solid transparent;
+      border-radius: 0;
       margin-top: 6px;
       margin-bottom: 6px; }
       .company_brand .brand_inner .cb_wrapper img.circle {
@@ -1779,7 +1912,9 @@
       width: 60px;
       height: 60px;
       border-radius: 60px;
-      border: 1px solid #006acf; }
+      border: 1px solid #006acf;
+      border-radius: 0;
+      padding-bottom: 0px; }
       .company_brand .brand_inner .company_brand img.circle {
         border-radius: 60px; }
     .company_brand .brand_inner .adr {
@@ -1823,8 +1958,10 @@
     height: auto; }
     .product_article .product_column .product_innerbox {
       border: 1px solid #ddd;
-      height: 300px;
+      /* height: $right_img_h; */
       margin-top: 15px; }
+      .product_article .product_column .product_innerbox .imgBox {
+        height: 174px; }
 
 .sideBar02 {
   padding-top: 40px;
@@ -2191,7 +2328,8 @@
     padding: 5px; }
   .p_news .text .leftContent {
     margin-right: 25%;
-    height: 100%; }
+    height: 100%;
+    width: auto; }
   .p_news .text .rightAvatar {
     right: 0;
     top: 0;
@@ -2205,13 +2343,18 @@
       border: 1px solid transparent; }
       .avatarWrapper .avatar img.circle {
         border-radius: 100px; }
+      .avatarWrapper .avatar img.circle {
+        border-radius: 0; }
     .avatarWrapper .avatar01 {
       width: 100px;
       height: 100px;
       border-radius: 100px;
-      border: 5px solid rgba(153, 153, 153, 0.2); }
+      border: 5px solid rgba(153, 153, 153, 0.2);
+      border-radius: 0; }
       .avatarWrapper .avatar01 img.circle {
         border-radius: 100px; }
+      .avatarWrapper .avatar01 img.circle {
+        border-radius: 0; }
       .avatarWrapper .avatar01 .member {
         right: -3px;
         bottom: -8px;
@@ -2223,6 +2366,8 @@
       border-radius: 72px; }
       .avatarWrapper .avatar02 img.circle {
         border-radius: 72px; }
+      .avatarWrapper .avatar02 img.circle {
+        border-radius: 0; }
       .avatarWrapper .avatar02 .member {
         right: -3px;
         bottom: -8px;
@@ -2234,10 +2379,12 @@
       border-radius: 110px; }
       .avatarWrapper .avatar03 img.circle {
         border-radius: 110px; }
+      .avatarWrapper .avatar03 img.circle {
+        border-radius: 0; }
     .avatarWrapper .name {
       padding: 5px 0; }
     .avatarWrapper .intro {
-      width: 50%; }
+      width: 65%; }
   .p_news .text .text_introduce {
     padding: 23px 0; }
   .p_news .text .interact span {
@@ -2540,6 +2687,8 @@
   border: 1px solid transparent; }
   .cmpp .avatar img.circle {
     border-radius: 111px; }
+  .cmpp .avatar img.circle {
+    border-radius: 0; }
 
 .cmpp .c_picBox {
   left: 0;
@@ -3635,3 +3784,116 @@
   width: 0;
   height: 0;
   vertical-align: middle; }
+
+#online_qq_layer {
+  position: fixed;
+  right: -1px;
+  top: 120px;
+  z-index: 200; }
+
+.online_icon {
+  height: 170px;
+  overflow: hidden;
+  width: 36px; }
+
+.online_icon a {
+  height: 170px;
+  width: 36px;
+  background: url(../img/kefu-right.png) no-repeat;
+  display: block; }
+
+.online_windows {
+  width: 160px; }
+
+.online_w_top {
+  background: url(../img/online_bg.png) -36px 0 no-repeat;
+  height: 10px; }
+
+.online_w_c {
+  background: url(../img/online_bg.png) 0 -185px repeat-y;
+  padding: 0 5px; }
+
+.online_w_bottom {
+  background: url(../img/online_bg.png) -36px -35px repeat-y;
+  height: 29px; }
+
+.online_content {
+  background: url(../img/online_bg.png) -165px -185px no-repeat;
+  padding-top: 11px; }
+
+.online_content a.qq_icon {
+  background: url(../img/online_bg.png) -37px -130px no-repeat;
+  cursor: pointer;
+  display: block;
+  font-size: 12px;
+  height: 25px;
+  line-height: 23px;
+  margin: 0 auto;
+  text-indent: 30px;
+  width: 121px; }
+
+.online_content a.qq_icon:hover {
+  background-position: -159px -130px;
+  color: #fff; }
+
+.online_bar h2 {
+  background: url(../img/online_bg.png) 0 -156px repeat-x;
+  color: #666;
+  font-size: 12px;
+  height: 29px;
+  line-height: 27px;
+  text-align: left; }
+
+.online_bar h2 a {
+  cursor: pointer;
+  display: block;
+  margin-left: 6px;
+  padding-left: 14px; }
+
+.expand h2 a {
+  background: url(../img/online_bg.png) -36px -69px no-repeat; }
+
+.collapse h2 a {
+  background: url(../img/online_bg.png) -36px -96px no-repeat; }
+
+.collapse h2 a:hover, .expand h2 a:hover {
+  color: #c81d04; }
+
+.online_content {
+  border-bottom: 1px solid #d0d0d0;
+  margin-bottom: 1px;
+  text-align: center; }
+
+.online_content ul li {
+  font-size: 12px;
+  height: 24px;
+  line-height: 24px;
+  margin-bottom: 4px; }
+
+.online_content ul li a:hover {
+  color: #c81d04; }
+
+.right_shear {
+  padding: 10px 0 8px 10px; }
+
+#online_qq_layer {
+  position: fixed;
+  right: -1px;
+  top: 120px;
+  z-index: 200; }
+
+#online_qq_tab {
+  float: left;
+  margin-top: 3px; }
+
+#onlineService {
+  display: none;
+  float: left;
+  margin-left: -3px; }
+
+#onlineType1, #onlineType2, #onlineType3, #onlineType4, #onlineType5, #onlineType6 {
+  display: none; }
+
+#onlineType1 {
+  display: block;
+  padding-bottom: 8px; }

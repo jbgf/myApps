@@ -16,7 +16,7 @@
                                         <div class="title">应用类别</div>
                                         <div class="catagory-list">
                                             <ul class="row">
-                                                <li class="row-block "><div class="inner">智慧工业                                  </div></li>
+                                                <li class="row-block "><div class="inner">智慧工业品                                  </div></li>
                                                 <li class="row-block"><div class="inner">智慧农业</div></li>
                                                 <li class="row-block "><div class="inner">节能环保</div></li>
                                                 <li class="row-block"><div class="inner">商贸流通</div></li>
@@ -122,6 +122,11 @@
                                 </div>
                             </div>
                             <div class="right_linkBar">
+                                <a class="rightCard displayBlock">
+                                    <img class="displayBlock" src="img/r_ad.jpg">
+                                </a>
+                                    
+                                
                                 <ul class="linkBar_ul">
                                     <li>
                                         <a class="wrapper">

@@ -107,9 +107,9 @@
                         <div class="right">
                             <img src="img/foot-logo.png">
                             <div>
-                                <p>电话：0591-88888888</p>
-                                <p>传真：0591-88888888</p>
-                                <p>地址：福州市马尾区新高园区兴业西路16号 </p>
+                                <p><span class="span1">电话：</span><span class="span2">0591-88888888</span></p>
+                                <p><span class="span1">传真：</span><span class="span2">0591-88888888</span></p>
+                                <p style="width: 225px;"><span class="span1">地址：</span><span class="span2">福州市鼓楼区五一广场高桥路26号阳光假日大酒店14层 </span></p>
                             </div>
                         </div>
                    </div>          
@@ -124,5 +124,50 @@
     </div>                             
 <!-- footer end -->
 
+<!-- qq在线客服 start-->
+<div id="online_qq_layer">
+  <div id="online_qq_tab">
+    <div class="online_icon"> <a title="" id="floatShow" style="display:none" href="javascript:void(0);">&nbsp;</a> <a title="" id="floatHide" style="display:block" href="javascript:void(0);">&nbsp;</a> </div>
+  </div>
+  <div id="onlineService" style="display: none;">
+    <div class="online_windows overz">
+      <div class="online_w_top"> </div>
+      <div class="online_w_c overz">
+        <div class="online_bar collapse" id="onlineSort1">
+          <h2><a>在线客服</a></h2>
+          <div class="online_content overz" id="onlineType1">
+            <ul class="overz">
+              <li>0591-87279008</li>  
+              <li><a href="tencent://message/?uin=286421554&amp;Site=&amp;Menu=yes" target="_blank" class="qq_icon">客服1</a></li>
+              
+              <li><a href="tencent://message/?uin=286421554&amp;Site=&amp;Menu=yes" target="_blank" class="qq_icon">客服2</a></li>
+              
+              <li><a href="http://wpa.b.qq.com/cgi/wpa.php?ln=1&amp;key=XzkzODA3MDY3OV80MDI1ODFfNDAwMDg1ODMxOV8yXw" target="_blank" class="qq_icon">客服3</a></li>
+              
+            </ul>
+          </div>
+          <!-- <h2><a href="e/tool/gbook/?bid=1" target="_blank">在线留言</a></h2>-->
+          <!-- <div style="padding:0 6px"><img width="138" src="img/qr.jpg" alt="微信公众号"></div> --> 
+        </div>
+      </div>
+      <!-- <div class="online_w_bottom"> </div> -->
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+$(function(){
+        $("#onlineService").hide();
+        $("#online_qq_tab,#onlineService").mouseenter(function () {
+            $("#onlineService").show();
+        });
+
+        $("#online_qq_tab,#onlineService").mouseleave(function () {
+            $("#onlineService").hide();
+        });    
+})
+
+</script>
+<!-- qq在线客服 end-->
 </body>
 </html>

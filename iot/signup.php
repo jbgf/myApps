@@ -2,7 +2,7 @@
 
 <!-- validate start -->
         <script type="text/javascript" src="js/jquery.validate.js"></script>
-
+        <script type="text/javascript" src="layer/layer.js"></script>
     
 <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
         
@@ -69,20 +69,43 @@
                                  </div>
                                  
                              </div>
-                             <div class="form-row">
+                             <div class="form-row height-auto">
                                  <div class="un-block-1 align-right mediumSize">
                                      <span>短信验证码：</span>
                                  </div>
                                  <div class="un-block-2">
-                                 <input class="baseInput"  name="identify" type="text" required></input></div>
+                                 <input class="baseInput"  name="identify" type="text" required></input>
+                                     <div class="agreement">
+                                         <input id="agreementCheck" class=""  name="agreement" type="checkbox" required></input>
+                                         <a id="agreeBtn" href="">我已阅读协议</a>
+
+                                     </div>
+                                     <script type="text/javascript">
+                                         (function agreementBtn(){
+                                                var ww = $(window).width(),
+                                                    wh = $(window).height();
+                                                $("#agreeBtn").on("click",function(e){
+                                                    e.preventDefault();
+                                                    var content = "hello world!";
+                                                    
+                                                    var modal = layer.open({
+                                                                title:"协议",
+                                                                type: 1,
+                                                                area: [ww*.85+'px', wh*.8+'px'], //宽高
+                                                                content: '<div style="padding:20px;">'+content+'</div>'
+                                                    })
+                                                })
+                                         })()
+                                     </script>
+                                 </div>
                                  <div class="tips un-block-3 smallSize gray"></div>
+                                 
                              </div>
-                             
                              
                              <div class="form-row submit-row height-auto">
                                  <div class="un-block-1"></div>
                                  <div class="un-block-2 ">
-                                    <input class="baseInput bg-blue white font-weight cursor" type="submit" value="注&nbsp;&nbsp;册"></input>
+                                    <input id="signUpBtn" class="baseInput bg-blue white font-weight cursor" type="submit" value="注&nbsp;&nbsp;册"></input>
                                     <p class="align-center">已有帐号？去<a class="orange" style="margin-left: 5px">登录</a></p>
 
                                  </div>
@@ -92,18 +115,39 @@
                          </form>
                          <script type="text/javascript">
                              $(function(){
+
+                                
+                                $("#agreementCheck").click(function(){
+                                    var checked = $("#agreementCheck").is(":checked");
+
+                                    if(!checked){
+                                        $("#signUpBtn").addClass("disabledLink");    
+                                        $("#signUpBtn")[0].disabled = true;
+                                    }else{
+                                        $("#signUpBtn").removeClass("disabledLink");
+                                        $("#signUpBtn")[0].disabled = false;
+                                    }
+                                });
+                                /*$("#agreementCheck").click();  */ 
+                                $("#signUpBtn").addClass("disabledLink");
+                                $("#signUpBtn")[0].disabled = true; 
+
                                 $(".solution_form").validate({
                                       rules:{
                                            passAgain: { required: true,
-                                                        equalTo: "#password"}
+                                                        equalTo: "#password"},
                                       },
+                                      messages:{agreement:"请阅读协议"},
+                                      errorPlacement: function (error, element) {
+                                           if($(element).is("#agreementCheck")){
+                                                $("#agreeBtn").after($(error).css("float","right"));
+                                              
+                                           }else{
+                                                $(element).after(error)
+                                           }                                                  
+                                      }
                                 });
-                                jQuery.validator.addMethod("isTel", function(value,element) {   
-                                    var length = value.length;   
-                                    var mobile = /^1(3[0-9]|4[57]|5[0-35-9]|8[0-9]|70)\d{8}$/;   
-                                     
-                                    return this.optional(element) || (length==11 && mobile.test(value));   
-                                }, "请正确填写您的联系方式"); 
+                                
                              })
                          </script>
                      </div>  

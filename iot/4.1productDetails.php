@@ -33,7 +33,7 @@
                                                     <div class="bd row">
                                                     <ul>
                                                         <li class="row-block">
-                                                            <div class="inner"><img src="img/productBigPic.png"></div>
+                                                            <div class="inner"><img src="img/kefu-right.png"></div>
                                                         </li>
                                                         <li class="row-block">
                                                             <div class="inner"><img src="img/productBigPic.png"></div>
@@ -153,12 +153,10 @@
                                         <div class="textinner">
                                             <div class="textLine">
                                                
-                                                <span class="name"> 
-                                                    <img src="img/icon06.png">智慧农业
-                                                </span>
+                                                
                                                 <div class="tips float-r">
                                                     <p>中柏金属双系统</p>
-                                                    <p>笔记本平板</p>
+                                                    
                                                 </div>    
                                             </div>
                                             <div class="tagLine">

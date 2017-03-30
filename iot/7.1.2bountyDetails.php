@@ -92,7 +92,7 @@
                                               痛点背景    
                                         </div>
                                         <div class="article">
-                                          <p id="phase1" class="phase user" >
+                                          <p id="phase1" class="phase " >
                                             
                                           </p>
                                           <div class="contentTemp">
@@ -114,16 +114,21 @@
                                         <div class="b_title bg-blue white align-left">
                                               痛点描述
                                         </div>
-                                        <div class="article">
-                                          <p class="phase">
-                                            2新华网厦门12月5日电（刘默涵）记者今天获悉，2017“物联中国—寻找最具影响力、最具投资价值物联网项目”年度盛典活动将于12月8日在北京正式启动全国招募，并推动香港、北京、深圳、上海、西安、无锡、长沙、济南、重庆、福州等地的区域项目海选。
-                                          </p>
-                                        </div>
+                                        
                                         <div class="article">
                                           
                                           <p class="phase user">
-                                            2新华网厦门12月5日电（刘默涵）记者今天获悉，2017“物联中国—寻找最具影响力、最具投资价值物联网项目”年度盛典活动将于12月8日在北京正式启动全国招募，并推动香港、北京、深圳、上海、西安、无锡、长沙、济南、重庆、福州等地的区域项目海选。
+                                            
+                                            
                                           </p>
+                                          <div class="contentTemp">
+                                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;新华网厦门12月5日电（刘默涵）记者今天获悉，2017“物联中国—寻找最具影响力、最具投资价值物联网项目”年度盛典活动将于12月8日在北京正式启动全国招募，并推动香港、北京、深圳、上海、西安、无锡、长沙、济南、重庆、福州等地的区域项目海选。</p>
+                                            <p>
+                                              新华网厦门12月5日电（刘默涵）记者今天获悉，2017“物联中国—寻找最具影响力、最具投资价值物联网项目”年度盛典活动将于12月8日在北京正式启动全国招募，并推动香港、北京、深圳、上海、西安、无锡、长沙、济南、重庆、福州等地的区域项目海选。
+                                            </p>
+                                          
+                                            
+                                          </div>
                                           <script type="text/javascript">
                                             $(function(){
                                               var clone_a = $(".contentTemp").clone();
@@ -150,10 +155,14 @@
                                                     test_function:function(){
                                                         return $(this).hasClass("user");
                                                     },
-                                                    successCall:function(i){
+                                                    d_alwaysCall:function(i){
+                                                        $(this).hide();
+                                                        $(".contentTemp").eq(i).show();    
+                                                    },
+                                                    /*successCall:function(i){
                                                         $(this).hide();
                                                         $(".contentTemp").eq(i).show();
-                                                    },
+                                                    },*/
                                                     failCall:function(){
                                                         location.href = "{dr_member_url('login/index')}";
                                                     },

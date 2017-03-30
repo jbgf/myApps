@@ -7,7 +7,7 @@
 
           		    jQuery(".application_zone").slide({mainCell:".bd ul.app_ul",titCell:".hd li"}); 
            
-          		    jQuery("#textTab03").slide({mainCell:".bd ul",titCell:".hd li" }); 
+          		    /*jQuery("#textTab03").slide({mainCell:".bd ul",titCell:".hd li" }); */
                
 					jQuery(".creator_slide .creator_inner_slide").slide({mainCell:"ul",vis:4,prevCell:".sprev",nextCell:".snext",effect:"leftLoop"})
 					
@@ -57,7 +57,7 @@
 			              	<div class="bg">
 			              	<a class="a02-btn btn01">
 			              		<i class="iconfont">&#xe700;</i>
-			              		<p>中心概况</p>
+			              		<p>成员风采</p>
 			              	</a>
 			              	</div>
 			              	</div>
@@ -67,7 +67,7 @@
 			              	<div class="bg">
 			              	<a class="a02-btn btn01">
 			              		<i class="iconfont">&#xe716;</i>
-			              		<p>最新公告</p>
+			              		<p>视频集锦</p>
 			              	</a>
 			              	</div>
 			              	</div>
@@ -117,7 +117,7 @@
 			              	<div class="bg">
 			              	<a class="a02-btn btn01">
 			              		<i class="iconfont">&#xe6c4;</i>
-			              		<p>联系我们</p>
+			              		<p>资金申报</p>
 			              	</a>
 			              	</div>
 			              	</div>
@@ -232,11 +232,12 @@
 										<span class="icon"><img src="img/icon_05.png"></span>
 										<span class="text">新闻资讯 </span>
 									</div>
+                                    <a class="more float-r">MORE+</a>
 					    			<div class="hd h-relative float-r">
 										<ul>
-											<li class="relative_link divider"><a >最新动态</a></li>
-											<li class="relative_link divider"><a >行业快讯</a></li>
-											<li class="relative_link divider"><a >公告通知</a></li>
+											<li class="relative_link divider"><a >中心新闻</a></li>
+											<li class="relative_link divider"><a >最新公告</a></li>
+											<li class="relative_link divider"><a >行业资讯</a></li>
 										</ul>
 									</div>
 									
@@ -309,7 +310,7 @@
 			    				
 			    				<a class="serviceBtn bg-l-blue"><i class="iconfont">&#xe7d9;</i><span>入会邀请函</span></a>
 			    				<a class="serviceBtn bg-l-green"><i class="iconfont">&#xe666;</i><span>下载中心</span></a>
-			    				<a class="serviceBtn bg-orange"><i class="iconfont">&#xe66d;</i><span>中心服务</span></a>
+			    				<a class="serviceBtn bg-orange"><i class="iconfont">&#xe66d;</i><span>联系我们</span></a>
 			    		</div>
 <!-- 新增 顺序修改 end -->			    		
 			    	</div>
@@ -319,32 +320,34 @@
         	
         	<!-- banner ad line start -->
 
-		    <div class="banner_row middleTable" style="">	
+		    <!-- <div class="banner_row middleTable" style="">	
 		    	<img src="img/innerBanner06.jpg">
 		    	<a class="text middleRow align-center zindex relative white">
 		    			<p>第二届全球智慧城市(福州)高峰论坛</p>
 		    			<p>暨百城百企经济技术合作会议</p>
 		    	</a>
-		    </div>
+		    </div> -->
 		    <!-- banner ad line end -->
         </div>
 
         <div class="application_zone titleColor ">
         	<div class="container1200 clear">
-
+                <div class="news_h">
+                    <div class="h-title01 float-l">
+                        <span class="icon"><img src="img/icon_05.png"></span>
+                        <span class="text">物联网产品应用 </span>
+                    </div>
+                    <a class="float-r">MORE+</a>
+                    
+                </div>
         		<div class="hd cell-l float-l">
         			<div class="inner">	
-	        			<div class=" title bigSize blue">互联网产品应用</div>
+	        			<!-- <div class=" title bigSize blue">物联网产品应用</div> -->
 	        			<ul>
 	        				<li class="on"><a>智慧工业</a></li>
 	        				<li><a> 智慧农业</a></li>
 	        				<li><a> 节能环保</a></li>
-	        				<li><a> 商贸流通</a></li>
-	        				<li><a> 交通能源</a></li>
-	        				<li><a> 公共安全</a></li>
-	        				<li><a> 社会事业</a></li>
-	        				<li><a> 城市管理</a></li>
-	        				<li><a> 安全生产</a></li>
+	        				
 	        			</ul>
         			</div>
         		</div>
@@ -406,80 +409,152 @@
 		    		<div class="iot_content_inner">
 		    <!-- textTab03 轮播 start -->
 			    		<div id="textTab03" class="iot_left height_f clear">
-			    				<div class="news_h">
-			    					
-					    			<div class="hd h-relative float-l">
-										<ul>
-											<li class="relative_link"><a >申报项目</a></li>
-											<li class="relative_link"><a >申报项目</a></li>
-											<li class="relative_link"><a >企业动态</a></li>
-											
-										</ul>
-									</div>
-									
-					    		</div>
-					    		
-					    		                         
-			                       <div  class="slideTxtBox  " >
-			                            
-			                            <div class="bd">
-			                              <ul class="switch">
-			                                <li class="switch-li">
-			                                      <div class="">
-				                                      <div class="s-general">
-				                                      	  <div class="newsTab02_pic">
-										    					<img src="img/newsTab01_pic.png">
-										    			  </div>
-										    			  <div class="textTab02">
-										    			  		<p class="stb-text">第六届中国国际服务外包交易博览会...</p>
-					                                      <p class="stb-text02">8月29日下午，中国国际投资促进会与杭州市商务委员会在北京中关村软件园联合召开了第六促进会与杭州市商务委员会在北促进会与杭州市商务委员会在北...<a class="button blue">[详情]</a></p>
-										    			  
+			    			<div class="rows minusM">
+                            <div class="tt_wraper row-2-block">
+                                <div class="innerBlock">
+                                    <div class="news_h">
+                                        <div class="h-title01 float-l">
+                                            <span class="icon"><img src="img/icon_05.png"></span>
+                                            <span class="text">专家团队 </span>
+                                        </div>
+                                        <a class="float-r">MORE+</a>
+                                        
+                                    </div>
+    					    		
+    					    		                         
+    		                        <div  class="slideTxtBox  " >
+    		                            
+    		                            <div class="bd">
+    		                              <ul class="switch">
+    		                                <li class="switch-li">
+    		                                      <div class="">
+    			                                      <div class="s-general">
+    			                                      	  <div class="newsTab02_pic">
+    									    					<img src="img/newsTab01_pic.png">
+    									    			  </div>
+    									    			  <div class="textTab02">
+    									    			  		<a class="stb-text">第六届中国国际服务外包交易博览会...</a>
+    				                                      <p class="stb-text02">8月29日下午，中国国际投资促进会与杭州市商务委员会在北京中关村软件园联合召开了第六促进会与杭州市商务委员会在北促进会与杭州市商务委员会在北...<a class="button blue">[详情]</a></p>
+    									    			  
 
-										    			  </div>	
-					                                      
-				                                      </div>
-				                                      <div class="news-list01">
-				                                          <ul>
-				                                              <li>
-				                                              	<a class="t blue float-l">最新政策</a>
-				                                              	<a class="divider float-l"><span class="text">2014年度上海市服务贸易发展专项资金申 </span>  </a>
-				                                              	<span class="date">[6-16]</span>
-				                                              </li>
-				                                              <li>
-				                                              	<a class="t blue float-l">行业展会</a>
-				                                              	<a class="divider float-l"><span class="text">2014年度上海市服务贸易发展专项资金申 </span>  </a>
-				                                              	<span class="date">[6-16]</span>
-				                                              </li>
-				                                              <li>
-				                                              	<a class="t blue float-l">行业展会</a>
-				                                              	<a class="divider float-l"><span class="text">2014年度上海市服务贸易发展专项资金申 </span>  </a>
-				                                              	<span class="date">[6-16]</span>
-				                                              </li>
-				                                              <li>
-				                                              	<a class="t blue float-l">行业展会</a>
-				                                              	<a class="divider float-l"><span class="text">2014年度上海市服务贸易发展专项资金申 </span>  </a>
-				                                              	<span class="date">[6-16]</span>
-				                                              </li>
-				                                              <li>
-				                                              	<a class="t blue float-l">行业展会</a>
-				                                              	<a class="divider float-l"><span class="text">2014年度上海市服务贸易发展专项资金申 </span>  </a>
-				                                              	<span class="date">[6-16]</span>
-				                                              </li>
-				                                              
+    									    			  </div>	
+    				                                      
+    			                                      </div>
+    			                                      <div class="news-list01">
+    			                                          <ul>
+    			                                              <li>
+    			                                              	<a class="t blue float-l">最新政策</a>
+    			                                              	<a class="divider float-l"><span class="text">2014年度上海市服务贸易发展专项资金申 </span>  </a>
+    			                                              	<span class="date">[6-16]</span>
+    			                                              </li>
+    			                                              <li>
+    			                                              	<a class="t blue float-l">行业展会</a>
+    			                                              	<a class="divider float-l"><span class="text">2014年度上海市服务贸易发展专项资金申 </span>  </a>
+    			                                              	<span class="date">[6-16]</span>
+    			                                              </li>
+    			                                              <li>
+    			                                              	<a class="t blue float-l">行业展会</a>
+    			                                              	<a class="divider float-l"><span class="text">2014年度上海市服务贸易发展专项资金申 </span>  </a>
+    			                                              	<span class="date">[6-16]</span>
+    			                                              </li>
+    			                                              <li>
+    			                                              	<a class="t blue float-l">行业展会</a>
+    			                                              	<a class="divider float-l"><span class="text">2014年度上海市服务贸易发展专项资金申 </span>  </a>
+    			                                              	<span class="date">[6-16]</span>
+    			                                              </li>
+    			                                              <li>
+    			                                              	<a class="t blue float-l">行业展会</a>
+    			                                              	<a class="divider float-l"><span class="text">2014年度上海市服务贸易发展专项资金申 </span>  </a>
+    			                                              	<span class="date">[6-16]</span>
+    			                                              </li>
+    			                                              
 
-				                                          </ul>  
-				                                      </div>
-			                                      </div>
-			                                      
+    			                                          </ul>  
+    			                                      </div>
+    		                                      </div>
+    		                                      
 
-			                                </li>
-			                                <li class="switch-li">2 </li>
-			                                <li class="switch-li"> 3</li>
-			                              </ul>
-			                              
-			                            </div>
-			                        </div>
-			            		
+    		                                </li>
+    		                                
+    		                              </ul>
+    		                              
+    		                            </div>
+    		                        </div>
+                                </div>
+                            </div>
+                            <div class="tt_wraper row-2-block">
+                                <div class="innerBlock">
+                                    <div class="news_h">
+                                        <div class="h-title01 float-l">
+                                            <span class="icon"><img src="img/icon_05.png"></span>
+                                            <span class="text">专家团队 </span>
+                                        </div>
+                                        <a class="float-r">MORE+</a>
+                                        
+                                    </div>
+                                    
+                                                             
+                                    <div  class="slideTxtBox  " >
+                                        
+                                        <div class="bd">
+                                          <ul class="switch">
+                                            <li class="switch-li">
+                                                  <div class="">
+                                                      <div class="s-general">
+                                                          <div class="newsTab02_pic">
+                                                                <img src="img/newsTab01_pic.png">
+                                                          </div>
+                                                          <div class="textTab02">
+                                                                <p class="stb-text">第六届中国国际服务外包交易博览会...</p>
+                                                          <p class="stb-text02">8月29日下午，中国国际投资促进会与杭州市商务委员会在北京中关村软件园联合召开了第六促进会与杭州市商务委员会在北促进会与杭州市商务委员会在北...<a class="button blue">[详情]</a></p>
+                                                          
+
+                                                          </div>    
+                                                          
+                                                      </div>
+                                                      <div class="news-list01">
+                                                          <ul>
+                                                              <li>
+                                                                <a class="t blue float-l">最新政策</a>
+                                                                <a class="divider float-l"><span class="text">2014年度上海市服务贸易发展专项资金申 </span>  </a>
+                                                                <span class="date">[6-16]</span>
+                                                              </li>
+                                                              <li>
+                                                                <a class="t blue float-l">行业展会</a>
+                                                                <a class="divider float-l"><span class="text">2014年度上海市服务贸易发展专项资金申 </span>  </a>
+                                                                <span class="date">[6-16]</span>
+                                                              </li>
+                                                              <li>
+                                                                <a class="t blue float-l">行业展会</a>
+                                                                <a class="divider float-l"><span class="text">2014年度上海市服务贸易发展专项资金申 </span>  </a>
+                                                                <span class="date">[6-16]</span>
+                                                              </li>
+                                                              <li>
+                                                                <a class="t blue float-l">行业展会</a>
+                                                                <a class="divider float-l"><span class="text">2014年度上海市服务贸易发展专项资金申 </span>  </a>
+                                                                <span class="date">[6-16]</span>
+                                                              </li>
+                                                              <li>
+                                                                <a class="t blue float-l">行业展会</a>
+                                                                <a class="divider float-l"><span class="text">2014年度上海市服务贸易发展专项资金申 </span>  </a>
+                                                                <span class="date">[6-16]</span>
+                                                              </li>
+                                                              
+
+                                                          </ul>  
+                                                      </div>
+                                                  </div>
+                                                  
+
+                                            </li>
+                                            
+                                          </ul>
+                                          
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>  
+			            	</div>	
 							    		
 				              
 			    		</div>
@@ -544,9 +619,20 @@
  			<!-- 创客空间 start -->
 				<div class="creatorZone relative">
 					<div class="absfull">
+                        <div class="header_center clear">
+                            <div class="float-l left"></div>
+                            <div class="float-l center">
+                                <div class="inner">
+                                    <div class="center_top">创客空间</div>
+                                    <div class="center_down">SPACE</div>
+                                </div>
+                            </div>
+                            <div class="float-l right"></div>
+                        </div>
+
 						<div class="creator_slide container1200">
 							<div class="creator_title ">
-								<p class="blue">创客空间</p>
+								<!-- <p class="blue">创客空间</p> -->
 								<ul>
 									<li>热门痛点</li>
 									<li>创业精英         </li>
@@ -644,7 +730,7 @@
 			        						<ul>
 			        							<li class="row-block">
 			        								<a class="inner">
-			        									<img class="absCenter" src="img/co01.png">
+			        									<img class="absCenter" src="img/48fe3b6238.jpg">
 			        								</a>
 			        							</li>
 			        							<li class="row-block">
@@ -790,6 +876,24 @@
 		    	</div>
 		    <!-- 合作共赢 end -->
  		</div>
+
+
+<div class="backToTop hide"></div>
+<script type="text/javascript">
+    $(function(){
+        var wh = $(window).height(),
+            b_top = $(".backToTop");
+        b_top.click(function(){
+            $('html, body').animate({
+                scrollTop: '0px'
+            });
+        })
+        $(window).scroll(function(){
+            
+            $(this).scrollTop()>wh ? b_top.fadeIn():b_top.fadeOut();
+        })
+    })
+</script>
  		
 <?php include './common/foot.html' ?>		
  	

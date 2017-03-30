@@ -25,9 +25,7 @@ $(function(){
 
 		/* login row slide start */
 		(function(){
-	        
-	                $(".picScroll04").length > 0 && jQuery(".picScroll04").slide({mainCell:".bd ul",autoPlay:true,effect:"leftLoop",easing:"swing",interTime:"3500"});  
-	          
+	            $(".picScroll04").length > 0 && jQuery(".picScroll04").slide({mainCell:".bd ul",autoPlay:true,effect:"leftLoop",easing:"swing",interTime:"3500"});  
 		})();
 		/* login row slide end */
 	};
@@ -36,7 +34,7 @@ $(function(){
 	/*高度统一的问题*/
 	var _config = [
 		{selector:".iot_content_row",children:".bd img",class0:".height_d",class1:".height_f"},
-		{selector:"#rightSideBar_wrapper",children:"",class0:".rightSide",class1:".leftContent"},	
+		/*{selector:"#rightSideBar_wrapper",children:"",class0:".rightSide",class1:".leftContent"},	*/
 		{selector:".product_article",children:"",class0:".article_zone",class1:".product_column"}	
 	];
 	function equalHeight(options){
@@ -67,7 +65,6 @@ function showMessage(msg){
 
 +function ($) {
   'use strict';
-
   // hover_window CLASS DEFINITION
   // ==========================
 
@@ -75,10 +72,7 @@ function showMessage(msg){
     this.$body          = $(document.body)
     this.$element = $(element)
     this.options  = $.extend({}, hover_window.DEFAULTS, options)
-    
     this._window = "";
-    
-    
     this.create();  
     this.$element.on('mouseenter.bs.hover_window', $.proxy(this.show, this))
     this.$element.on('mouseleave.bs.hover_window', $.proxy(this.hide, this))
@@ -120,12 +114,11 @@ function showMessage(msg){
             background:"#fff",
             "box-shadow":"0 0 10px gray",
             border: "1px solid #ddd",
-            
+            "box-sizing":"border-box",
             "z-index":"99"
         });
 
     this.getPosition(this.$element);
-    
         
   }
 
@@ -140,12 +133,10 @@ function showMessage(msg){
       
       ele.hasClass("loaded")?"":call_f();
       function call_f(){
-         
           var pos = ele.position(),ma,posFix;
               ma = _self.$element.css("margin").split(" ").map(function(cv,index){
                       return parseInt(cv);
               });
-              
               if( ma.length > 1 ){
                     pos.top += ma[0];
                     pos.left += ma[3];
@@ -156,14 +147,11 @@ function showMessage(msg){
 
                 fixleft = -(_self._window.outerWidth()/2 - ele.outerWidth()/2);
                 fixtop = ele.outerHeight();
-              
             }
             if(_self.options.position == "left"){
                 pos.left -= _self.options.offset;
-
                 fixleft = -(_self._window.outerWidth());
                 fixtop = -(_self._window.outerHeight()/2 - ele.outerHeight()/2);  
-
                 /*pos.top  += _self.options.offset;
                 if(ma.length > 1){
                     pos.top += ma[0];
@@ -180,9 +168,7 @@ function showMessage(msg){
     
   }
   hover_window.prototype.reset = function(content){
-
     return content.css({"margin":"0px",width:"100%",height:"100%"})
-    
   }
 
   hover_window.prototype.show = function () {
@@ -195,7 +181,6 @@ function showMessage(msg){
   }
   hover_window.prototype.caret = function(){
     var caret = '<div class="caret" style="position:absolute"></div>';
-    
   }
 
   // hover_window PLUGIN DEFINITION
@@ -283,10 +268,10 @@ function showMessage(msg){
     
     if(!that.options.ajax_a && typeof(callback) == "function" && proxy()){
         this.logined = 1;
-        _onclick();
+        _textTrigger();
     }else{
         this.logined = 0;
-        _onclick();
+        _textTrigger();
     }
 
     if(that.options.ajax_a){
@@ -298,31 +283,39 @@ function showMessage(msg){
         request.done(function(data){
             if(typeof( aobj.success ) == "function" ){
                 if(aobj.success(data)){
-                    _onclick();
+                    _textTrigger();
                 };
             }
         })
     }
 
-    function _onclick(){
+    function _textTrigger(){
         var trigger = '[data-id='+id+']';
         var failCall = that.options.failCall,
             fail = $.proxy(failCall,that.$element[0]),
             successCall = that.options.successCall,
-            success = $.proxy(successCall,that.$element[0]);
-
-        $(document).on("click",trigger,function(){
-                if(that.logined == 0 ){
-                    failCall && fail();
-                    return false;
-                }
-               
-                if(that.flag ==1 ){
-                    successCall && success(that.options.index);
+            success = $.proxy(successCall,that.$element[0]),
+            d_alwaysCall = that.options.d_alwaysCall,
+            d_always = $.proxy(d_alwaysCall,that.$element[0]);
+        
+        if(that.logined ==1 ){
+            if(d_alwaysCall){ d_always(that.options.index);return;}
+            else if(successCall){
+                $(document).on("click",trigger,function(){
+                    success(that.options.index);
                     that.$element.html(that.text);
-                }
-                     
-        })
+                })
+            }
+        }else if(that.logined == 0){
+            $(document).on("click",trigger,function(){
+                    if(that.logined == 0 ){
+                        failCall && fail();
+                        return false;
+                    }   
+            })
+        }
+
+        
         
     }  
 
@@ -332,7 +325,6 @@ function showMessage(msg){
   elli_text.prototype._sub = function(text){
     var that = this;
     var str = that.text,elliBtn;
-
     elliBtn = that._ellibutton();
     if(str.length>this.options.length){
 
