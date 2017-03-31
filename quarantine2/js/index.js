@@ -1,4 +1,9 @@
 $(function(){
+          
+          jQuery.fn.isChildOf = function(b){
+              return (this.parents(b).length > 0);
+          };
+
           //导航栏
           showTime();
           var st = 180;
@@ -107,7 +112,12 @@ $(function(){
             minutes<10?minutes='0'+minutes:minutes; 
             second<10?second='0'+second:second; 
             var now_time=year+'年'+month+'月'+date+'日'+' '+show_day[day]+' '+hour+':'+minutes+':'+second; 
-            document.getElementById('showtime').innerHTML=now_time; 
-            setTimeout(showTime,1000); 
+            var showTime = document.getElementById('showtime');
+                if(showTime){
+                    showTime.innerHTML=now_time; 
+                    setTimeout(showTime,1000);  
+                }else{
+                  return
+                }
             
           };

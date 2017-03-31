@@ -27,22 +27,40 @@
     <div class="centerMiddle container1000">
         <div class="leftSide">
 
+            <div id="tag"></div>
+
             <div class="sideBar02">
                 <ul class="sideBar_ul">
                     <li class="sideBar_li ">
                         <a class="sideBar_a">
                             <p>
                             <span class="iconBg"><i class="iconfont ">&#xe6ae;</i></span>
-                            <span class="icontext">企业信息</span>
+                            <span class="icontext">level 1</span>
                             </p>
                         </a>
                         <ul class="sideBar_ul hide" style="">
                             <li class="sideBar_li">
                                 <a class="sideBar_a">
                                     <p>
-                                        <span class="icontext">- 修改密码</span>
+                                        <span class="icontext">- level 2</span>
                                     </p>
                                 </a>
+                                <ul class="sideBar_ul hide" style="">
+                                    <li class="sideBar_li ">
+                                        <a class="sideBar_a">
+                                            <p>
+                                                <span class="icontext">- level 3 A</span>
+                                            </p>
+                                        </a>
+                                    </li>
+                                    <li class="sideBar_li ">
+                                        <a class="sideBar_a">
+                                            <p>
+                                                <span class="icontext">- level 3 B</span>
+                                            </p>
+                                        </a>    
+                                    </li>
+                                </ul>
                             </li>
                             <li class="sideBar_li ">
                                 <a class="sideBar_a">
@@ -83,18 +101,21 @@
                 </ul>
                 <script type="text/javascript">
                     $(function(){
+                        var sb02 = $(".sideBar02");
 
-                        $(".sideBar02 .sideBar_li").each(function(i,e){
+                        sb02.find(".sideBar_li").each(function(i,e){
+                            var isLevelOne = $(e).isChildOf(sb02);
                             var childList = $(e).children("ul.sideBar_ul");
                                 childList.length>0 ? 
                                 $(e).children(".sideBar_a").addClass("childList")
                                     .on("click",function(){
                                                 childList.slideToggle();
-                                                $(this).toggleClass("on")
+                                                $(this).toggleClass("on expand")
                                     })
-                            : $(e).children(".sideBar_a").addClass("bottom");
+                            : isLevelOne ? "" : $(e).children(".sideBar_a").addClass("bottom");
+
                         })
-        
+
                     })
                     
                 </script>

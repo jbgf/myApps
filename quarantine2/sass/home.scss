@@ -22,7 +22,7 @@ button:focus{outline:0;}
 .bigSize{font-size: $bigSize!important;}
   
 /*color*/ 
-.baseFontColor{@extend %baseFontColor;}
+.baseFontColor{@extend %baseFontColor;} 
 .titleColor{color:$titleColor; } 
 .white{@extend %white;}
 .i_white{color:#fff!important;}
@@ -219,7 +219,8 @@ button:focus{outline:0;}
     position: relative;
     height: 99px;
     padding: 15px;
-    box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
 }
 .navbar-block .naver_01 .nav_erc01 .navBox01Pic a img{width:167px;height: 104px;}
 .navbar-line01 .navbar-block .naver_01 .nav_erc01:before{
@@ -341,7 +342,8 @@ $wr:180,180,370,180;
 .resultTable{
     @include un_row($wr);
     .col{
-            box-sizing:border-box;
+            -webkit-box-sizing:border-box;
+                    box-sizing:border-box;
         }
     .b_title{
         @include lheightM($height:35px);@extend %align-center;
@@ -406,6 +408,7 @@ $pos_arr:top,right,bottom,left;
         @include caret($color:#676767,$position:bottom,$width:4px);
         position: relative;
         top: $dd_h/4;
+        -webkit-transition: all 0.3s;
         transition: all 0.3s;
     }
     .avatar{
@@ -425,99 +428,7 @@ $pos_arr:top,right,bottom,left;
 }
 
 
-$sideBar02_p:20px;
-$sb02_p:40px;
-$sb02_p_l:50px;
-$sb_min_h:720px;
-$sb_btn_h:70px;
-$sb_btn_ph:30px;
-.sideBar02{
-       
-        min-height: $sb_min_h - $sb02_p;
-        .sideBar_ul{
-            @include border($position:top,$width:1px,$color:$baseBorderColor);
-            @include border($position:bottom,$width:1px,$color:$baseBorderColor);
-        }
-        .sideBar_li:hover,.sideBar_li.on{
-            .iconBg{background:$blue;}
-            color:$mainColor;
-         }  
-        .sideBar_li{
-            & + .sideBar_li{
-                @include border($position:top,$width:1px,$color:$baseBorderColor);
-            } 
-            .sideBar_a{
-              padding:$sb_btn_h/3 0;
-              @extend %block;
-              p{ 
-                padding-left:$sb02_p_l;
-                @include lheightM($height:$sb_btn_ph);
-                .iconfont{      
-                    color:$white;                    
-                }
-               } 
-            }
-            .iconBg{
-                    margin-right: 20px;
-                    @include circleImg($size:$sb_btn_ph,$color:#ddd,$borderWidth:0);
-                    @extend %float-l;
-                    @extend %align-center;
-                    background:#999;
-            }  
-            
-            background:#f7f7f7;
-            @extend %mediumSize;
-            @include cursor($cursor:pointer);
-            }
-            $list_p:5px;
-            .list{
-                    color: $baseFontColor;
-                    &.outer{padding-top:$list_p;}
-                    &.bottom{
-                        .caret{display:none!important;}
-                        .t01{
-                            @include persudo($color:$baseFontColor,$content:"·");   
-                        }
-                        .list_li{
-                            &:hover,&.on{
-
-                              background:#bce4fc;   
-                              .t01{@include persudo($color:$mainColor,$content:"·");}           
-                            }
-                        }
-                    }
-                    .list_li{
-                        padding:$list_p 0;
-                        &:hover,&.on{
-                            color:$mainColor;
-                            .t01 .caret{
-                                @include caret($color:$mainColor,$position:top,$width:4px);
-                                
-                            }
-                        }
-                        &.on{
-                            .t01 .caret{
-                            -webkit-transform:rotate(180deg);
-                                -ms-transform:rotate(180deg);
-                                transform:rotate(180deg);
-                                @include transition(0.1);
-                            }
-                        }
-                        .t01{
-                            margin-left:$sb02_p_l;
-                            margin-right:$sb02_p_l/2;
-                            .caret{
-                                @include caret($color:$baseFontColor,$position:top,$width:4px);
-                                @extend %float-r;
-                                margin-top:9px;
-                            }
-                        }
-                    }
-            } 
-}
- 
-
-$leftSide_w:235px;
+$leftSide_w:280px;
 $leftContent_w:935px;
 $sideBarBtn_h:60px;
 $leftBack:#f7f7f7;
@@ -529,5 +440,95 @@ $leftSide_gutter:10px;
     .leftSide{
         @include ftextTab($width:$leftSide_w,$height:auto,$position:"left");
     }
-} 
+}
+
+$sideBar02_p:20px;
+$sb02_p:40px;
+$sb02_p_l:50px;
+$sb_min_h:720px;
+$sb_btn_h:70px;
+$sb_btn_ph:30px;
+$sb_bg:#f7f7f7;
+.sideBar02{
+        min-height: $sb_min_h - $sb02_p;
+        .sideBar_ul{
+            @include border($position:top,$width:1px,$color:$baseBorderColor);
+            @include border($position:bottom,$width:1px,$color:$baseBorderColor);
+        }
+        .sideBar_a{
+            padding:$sb_btn_h/3 0;
+            @include border($position:left,$width:6px,$color:$sb_bg);
+            @extend %block;
+
+            $iconbg_l:$leftSide_w/6;
+            .iconBg{
+                @include circleImg($size:$sb_btn_ph,$color:#ddd,$borderWidth:0);
+                @extend %abs;
+                left:$iconbg_l;
+                top:0;
+                @extend %align-center;
+                background:$gray;
+            }  
+            .icontext{margin-left:$iconbg_l + $sb_btn_ph + 20px;}
+            &.childList{
+                    &:after{
+                            -webkit-transition: all 0.2s;
+                            transition:all 0.2s;
+                            @include caret($color:$gray,$position:bottom,$width:6px);
+                    }
+                    @include persudo($color:#dbdbdb,$content:" ",$position:after,$bg:none){
+                        top: 50%;
+                        right: 40px;
+                        @include caret($color:$gray,$position:bottom,$width:6px);
+                    }
+            }
+            &.expand{
+                    &:after{        
+                            -webkit-transform: rotate(180deg);
+                                -ms-transform: rotate(180deg);
+                                    transform: rotate(180deg);
+                    }
+            }
+            &:hover,&.on{
+                .iconBg{background:$blue;}
+                color:$blue; 
+                &.childList{
+                    @include border($position:left,$width:6px,$color:$blue); 
+                    background:$white;
+                    &:after{
+                            @include caret($color:$blue,$position:bottom,$width:6px);
+                    }
+                }
+            }
+
+            &.bottom{
+                @include border($position:left,$width:6px,$color:$sb_bg);  
+            }
+        }
+          
+        .sideBar_li{
+            & + .sideBar_li{
+                @include border($position:top,$width:1px,$color:$baseBorderColor);
+            }
+            .sideBar_a{
+                p{ 
+                      @extend %relative;
+                      @include lheightM($height:$sb_btn_ph);
+                      .iconfont{      
+                          color:$white;                    
+                      }
+                }
+                $iconText_m:20px; 
+            }
+            
+            background:$sb_bg;
+            @extend %mediumSize;
+            @include cursor($cursor:pointer);
+            
+        }
+           
+}
+ 
+
+ 
       
