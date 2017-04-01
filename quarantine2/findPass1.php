@@ -1,4 +1,4 @@
-<?php include './common/head.html' ?>
+<?php include './common/centerhead.html' ?>
 <link rel="stylesheet" type="text/css" href="css/home.css">
 <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 <script type="text/javascript" src="js/home.js"></script>
@@ -58,4 +58,4 @@
 <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->  
 
     
-<?php include './common/foot.html' ?>    
+<?php include './common/centerfoot.html' ?>    
