@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" >
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+        <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="css/frame.css">
+        <link rel="stylesheet" href="css/home.css">
+        <link rel="stylesheet" type="text/css" href="css/idangerous.swiper.css">
+
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+        <script type="text/javascript" src="js/idangerous.swiper.min.js"></script>
+
+    </head>
+    <body>
+
+    <!-- header start -->
+        <div class="header">
+                <!-- logoRow start -->
+                <div class="logoRow ">
+                    <div class="container1200">
+                            <div class="logo float-l"><img src="img/logo.png"></div>
+                            <div class=" float-r">
+                              <div class="tl_wrapper align-right">
+                                <a class="topbar_link">home</a>
+                                <a class="topbar_link">Book Mark</a>
+                                <a class="topbar_link">Chinese</a>
+                              </div>
+                              <form class=" clear">
+                                  
+                                  <div class="input-set02 float-r">
+                                      <input class="input " type="" name="" placeholder="Enter what you're looking for">
+                                      <input class="button white" type="submit" value="">
+                                  </div>
+                              </form>    
+                            </div>
+                                  
+                    </div>
+                </div>
+                <!-- logoRow end -->    
+                
+                <!-- navbar start -->
+                <div id="navBar_wrapper" class="navBar_wrapper">
+                    <div class="container1200">
+                        
+                        <div class="navbar-line02 clear "> 
+                            <div class="navbar-block on"><a class="navLink">HOME                   </a></div>
+                            <div class="navbar-block"><a class="navLink">                        About FQII</a>
+                                <ul class="naver_0" style="display: none;">
+                                    
+                                    <div class="nav_erc">
+                                      <li class="nav_center"><a href="#"><div class="link">Electics&Electronic</div></a></li>
+                                      <li class="nav_center"><a href="#"><div class="link">Construction</div></a></li>
+                                      <li class="nav_center"><a href="#"><div class="link">Food</div></a></li>
+                                      <li class="nav_center"><a href="#"><div class="link">Agrochemicals</div></a></li>
+                                      <li class="nav_center"><a href="#"><div class="link">Chemicals</div></a></li>
+                                      <li class="nav_center"><a href="#"><div class="link">Consumer Products</div></a></li>
+                                      <li class="nav_center"><a href="#"><div class="link">Machinery</div></a></li>
+                                      <li class="nav_center"><a href="#"><div class="link">Life safe &Security</div></a></li>
+                                      <li class="nav_center"><a href="index.html"><div class="link">Engineering Testing</div></a></li>
+                                      <!-- <li class="nav_center"><a href="index.html"><div class="link">Engineering TestingEngineering TestingEngineering TestingEngineering TestingEngineering Testing</div></a></li> -->
+                                      
+                                    </div>
+                                    
+                                </ul>
+                            </div>
+                            <div class="navbar-block"><a class="navLink">Indust</a></div>
+                            <div class="navbar-block"><a class="navLink">OUR SERVICE</a></div>
+                            <div class="navbar-block"><a class="navLink">OUR LABS</a></div>
+                            <div class="navbar-block"><a class="navLink">NEWS</a></div>
+                            
+                        </div>
+                       
+                    </div>
+                </div>
+                <!-- navbar end -->    
+        </div>
+    <!-- header end -->
+        <script type="text/javascript">
+           
+            $("#navBar_wrapper .link").prepend('<i class="fa fa-angle-right" aria-hidden="true"></i>').wrapInner('<div class="inner"></div>');
+            
+            (function dropDown(){
+                var $ul = $(".dropDownMenu ul");
+                var dropBtn = $(".dropDownButton");
+                
+                dropBtn.on("click",function(){
+                     $(this).addClass("on");
+                         
+                     $ul.show();
+                     $(document.createElement('div'))
+                      .addClass('dropdown-backdrop')
+                      .appendTo($("body"))
+                      .on('click', clearMenus);
+
+                });
+                $('[class*="dropDownMenu"] ul li').on("click",function(){
+                     var value = $(this).html();
+                     var $ul = $(this).parent("ul"); 
+                     var $menu =  $ul.parents('[class*="dropDownMenu"]');
+                     var dropDownText = $menu.find(".dropDownText");
+                     dropDownText.html(value).val(value);
+                     clearMenus();
+                }).first().click()
+/*模拟隐藏的按钮*/
+                $("#searchButton").click(function(){
+                    $("#hideSubmit").trigger("click");
+                })
+
+                function clearMenus(){
+                     $ul.hide();
+                     dropBtn.removeClass("on");
+                     $(".dropdown-backdrop").remove();
+                }
+            })();
+            (function navbar(){
+
+                          var st = 180;
+                          $('.navbar-line02 .navbar-block').mouseenter(function () {
+                              $(this).find('ul').stop(false, true).slideDown(st);
+                          }).mouseleave(function () {
+                              $(this).find('ul').stop(false, true).slideUp(st);
+                          });
+
+                          $('.navbar-line02 .navLink').addClass("divider").first().removeClass("divider");
+            })();
+        </script>
+        
