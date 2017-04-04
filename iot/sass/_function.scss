@@ -1,0 +1,8 @@
+@function sum($arr) {
+  $sum:0;
+  
+  @each $var in $arr {
+  	$sum :$sum + $var;
+  }
+  @return $sum;
+}
