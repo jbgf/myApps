@@ -230,9 +230,10 @@
                             paginationClickable: true,
                             slidesPerView: perview,
                             loop : true,
-                            onInit: function(swiper){
+                            
+                            onSwiperCreated: function(swiper){
                                   var spans = pagi.find("span");
-                                  activeIndex(0,spans,perview,num); 
+                                      activeIndex(0,spans,perview,num)
                             },
                             onSlideChangeStart: function(swiper){
                                   var spans = pagi.find("span"),
@@ -255,6 +256,7 @@
                                           curIndex = (index + i > num -1 )? Math.abs(num-(index + i)) :(index + i);
                                           
                                           spans.eq(curIndex).addClass("visible");
+                                          
                             } 
                         }
                         </script>

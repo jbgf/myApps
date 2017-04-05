@@ -5,7 +5,174 @@
 @import "mySassWare/_function";
 @import "mySassWare/_media";
 @import "mySassWare/_component";
+
+
+/* slide start */
+     
+    .slideBox01 {
+          width: 100%;
+          overflow: hidden;
+          position: relative; 
+         .hd {
+              @include slideNav($bg:#605751,$size:10px,$onColor:$blue){
+                  width: 12px;
+                  height: 12px;
+                  top: -1px;
+              };
+              bottom: 5px;
+         }
+          $direction_size:45px;  
+          .direction{
+              display: block;
+              width: $direction_size;
+              height: $direction_size;
+              position: absolute;
+              top: 45%;
+              z-index: 999;
+              cursor: pointer;
+              display: none;
+          }
+          @include min-screen(1445px){
+              .direction{display:block;}
+          };
+          .direction.prev{background:url(../img/left.png) no-repeat center center;left: -$direction_size;}
+          .direction.next{background:url(../img/right.png) no-repeat center center;right: -$direction_size;}
+    }
+    
+     
+    .slideBox01 .bd li{height: 410px;}
+ 
+/* slide end */
+
+
+/* navbar start */
+    $navbar_num:6;
+    $navbar_bg:#005daf;
+    $navbar_to:#0073c2;
+    
+    
+    .navBar_wrapper{
+        
+        background: -webkit-gradient(linear,left top, left bottom,from($navbar_to),color-stop($navbar_bg),to($navbar_to));
+        
+        background: -webkit-linear-gradient($navbar_to,$navbar_bg,$navbar_to);
+        
+        background: linear-gradient($navbar_to,$navbar_bg,$navbar_to);
+        background:#{$navbar_bg}\0;
+    }
+    .navbar-line02 .navbar-block{
+        float: left;
+        min-height: 1px;
+        cursor: pointer;
+        padding: 4px 0;
+        position: relative;
+        display: block; 
+        width:percentage(1/$navbar_num);
+        color:#fff;
+        font-weight: 700;
+        @extend %uppercase;
+    }
+
+    $centerYellow:#ff9500;
+    $centerActiveY:darken($centerYellow, 15%);
+    $activeYellow:darken($yellow, 5%); 
+    .navbar-line02 .navbar-block:hover {
+        background: -webkit-radial-gradient($centerYellow,$yellow);
+        background: radial-gradient($centerYellow,$yellow);
+        background:#{$yellow}\0;
+    }
+    .navbar-line02 .navbar-block.on{
+        background: -webkit-radial-gradient(#ff9500,$yellow);
+        background: radial-gradient(#ff9500,$yellow);
+        background:#{$yellow}\0;
+    }
+    .navbar-line02 .navbar-block.on,
+    .navbar-line02 .navbar-block:hover {
+        color:#fff;
+        z-index: 99;  
+        a.navLink {
+            &.divider{
+                @include persudo($color:none,$content:"",$position:before,$bg:none); 
+            }
+        }
+        & + .navbar-block{
+            .divider{
+                
+                @include persudo($color:none,$content:"",$position:before,$bg:none);
+            }
+        }     
+    }
+    .navbar-line02 .navbar-block a.navLink {
+        display: block;
+        text-align: center;
+        font-size: $mediumSize;
+        @extend %relative;
+        padding:10px 0;
+        &.divider{
+            @include persudo($color:#dbdbdb,$content:"|",$position:before,$bg:"ndivider.png");
+            &:before{width: 2px;height: 40px;top: -1px;}
+        }
+    }   
       
+    .navbar-line02 .navbar-block{ 
+    
+    }
+    
+/* navbar end */      
+
+.naver_0 {
+    display: none;
+    position: absolute;
+    z-index: 99;
+    top: 100%;
+    min-width: 100%;
+    max-width:200%;
+    .nav_erc{
+        @extend %bg-white;
+        @extend %align-left;
+        @include border();
+       
+        @include persudo($color:none,$content:"",$position:before,$bg:none); 
+        &:before{
+           @include caret($color:$yellow,$position:top,$width:6px);
+           top: 0;
+           left:100px;
+           -webkit-transform: translateX(-50%);
+               -ms-transform: translateX(-50%);
+                   transform: translateX(-50%);
+        };
+        padding:15px 0;
+        border-top:none;
+        li{
+            font-size: $smallSize*1.2;
+            font-weight: normal;
+            @extend %capitalize;
+            &:hover{ 
+                background:#f5f5f5;                        
+                .link{color: $mainColor;}
+            }
+            $link_h:22px;
+            
+            .link{
+                white-space: nowrap;
+                color:$baseFontColor;
+                padding: 5px 18px;
+                @extend %block;
+                .inner{@extend %ellipsis;}
+                &,.inner{@include lheightM($height:$link_h);}
+                i.fa{
+                    margin-right: 8px;
+                    top: -1px;
+                    position: relative;
+                }
+                span{@extend %ellipsis;line-height:1;}
+                
+            }    
+        }
+    }
+}
+
+
   
 .q_content{ 
     @include f_pictext_row($width:375px,$height:auto,$fpos:"right",$mar-gutter:15px);
@@ -39,6 +206,7 @@ $bd_h:65px;
     li.on{ 
         @include border($position:"top",$width:1px,$color:none);
         .news_intro,.slideBd_left{display:block;}
+        .news_intro{height:44px;@extend %overflow;}
         .ellipsis{font-size:$baseSize;width:100%;}
         .slideBd_right{ 
             margin-left:($bd_h + $rw_p);
@@ -48,7 +216,8 @@ $bd_h:65px;
                 @include persudo($color:none,$content:none,$position:before,$bg:none); 
                 @extend %font-weight;
                 padding-left:0px;
-            } 
+            }
+            .date{display:none} 
         }  
     }
     .slideBd_left{
@@ -118,6 +287,7 @@ $sb02_p:26px;
     }
     .slideBd2_right{  
         font-size:$smallSize*1.1;
+        @extend %relative;
         .title{
             @include lheightM($height:26px);
             line-height:inherit;
@@ -132,9 +302,12 @@ $sb02_p:26px;
             background:url(#{$baseImgUrl}grayArrow.png);
             width:30px;
             height:30px;
-            @extend %float-r;
-            margin-right:50px;
-            margin-top:-($bd_h2/2 - 30px/2)
+            @extend %abs;
+            right: 50px;
+            top:50%;
+            margin-top: -15px;
+           /*  margin-right:50px;
+            margin-top:-($bd_h2/2 - 30px/2) */
         }
     }  
 }   
@@ -221,6 +394,15 @@ $gallary_r:20px;
             }
     }                  
 }
+
+/*我们的能力标题 不换行 */
+.ability_wrapper{
+    #gallary .inner .info h3{
+        overflow: visible;
+        white-space: normal;
+        word-break: break-all;
+    }
+}
 #gallary{  
         /* height:$gallary_h; */
         @include rowBeta($num:3,$outer_gutter:6px,$plusM:true,$height:false);
@@ -228,6 +410,7 @@ $gallary_r:20px;
                 height:$gallary_h;
                 img{
                     @extend %full;@extend %block;
+                    -webkit-transition:all 0.2s;
                     transition:all 0.2s;
                     border-radius:0;
                 } 
@@ -254,13 +437,14 @@ $gallary_r:20px;
                     padding:0 15px;
                     border-radius:$gallary_r 0 $gallary_r 0;
                     
-                    h3{padding:$info_p 0 $info_p/2;@extend %ellipsis;transition:0.2s;}
+                    h3{padding:$info_p 0 $info_p/2;@extend %ellipsis;-webkit-transition:0.2s;transition:0.2s;}
                     .outer{
                             height: 0;
                             p{
                                 @extend %smallSize;
                                 height:0;
                                 line-height: $baseLineHeight/1.2;
+                                -webkit-transition:0.2s;
                                 transition:0.2s;
                                 margin-bottom: 15px;
                                 white-space: normal;
@@ -480,12 +664,15 @@ $cpp:10px;
         
     }
     .text,.ability_wrapper,.brand_link_wrapper,
-    .commonPic{padding-top:$content_p;}
+    .commonPic,.commonWrapper{padding-top:$content_p;}
     .news_wrapper{
         margin-left: -$cpp;
         margin-right: -$cpp;
-    }
+    } 
 }
+.commonWrapper{padding-top:$content_p;}
+
+
 .brand_link_wrapper{.brand_link + .brand_link{
         padding-top:$content_p*2/3;
     }
@@ -605,8 +792,135 @@ $t1p:26px;
     }
 }
 
+$warr:510,380;
+$lipt:4px;
+$lipt2:6px;
+.department {
+    padding-top:35px;
+    @include un_row($rateArr:$warr,$padding:false,$string:"un-block")
+    li{
+            padding:$lipt 40px $lipt 0;
+    }
+    span,p{
+        @extend %block;
+    }
+    span{
+        background:#ff9500;
+        color:$white;
+        padding:0 12px;
+        @include radius(5px);
+        @include ftextTab($width:auto,$height:auto,$position:"left");
+    }
+    p{
+       @include newsTab_img($height:auto,$margin:50px,$position:"left"); 
+    }
+    .d1{
+       @extend %ellipsis;
+    }
+    .d2{
+        li{   padding:$lipt2 40px $lipt2 0;    }
+    }
+}
  
+#addRow{
+    @include rowBeta($num:3,$outer_gutter:5px,$plusM:true,$height:false){
+        
+    };
+    @extend %overflow;
+    padding-bottom:12px;
+    &>div{
+        &>div{
+            &>div{
+                @include border();
+                height: 235px;
+                font-size: $mediumSize*0.9;
+                @include cursor();
+                $activeC:#e4f3fb;
+                &.active{
+                    background:$activeC;
+                    @include border($color:$activeC);
+                    @include persudo($color:none,$content:"",$position:before,$bg:none){
+                        $csize:10px;
+                        @include caret($color:$activeC,$position:top,$width:$csize){
+                            bottom:-$csize;
+                            left: 50%;
+                            margin-left: -$csize;
+                        };
+                    };
+                    i{color:$blue;&+p{color:$blue;}}
+                    .addInfo{color:darken($baseFontColor,40%) }
+                }
+                @extend %align-center;
+                i{
+                    padding-top:30px;
+                    font-size: $bigSize*2;
+                    & + p{
+                        font-size: $mediumSize;
+                        padding:10px 0 10px;
+                        @extend %font-weight;
+                    }
+                }
+                .addInfo{
+                    @extend %align-left;
+                    padding:0 20px;
+                    line-height:$baseLineHeight*1.2;
+                }
+            }
+        }
+    }
+}
 
+.map_wrapper{
+    
+}
+
+$drow_h:60px;
+
+$drow_pl:25px;
+.drow_wrapper{
+    @include persudo($color:none,$content:" ",$position:before,$bg:none){
+       width:1px ;
+       background: #ddd;
+       top: 30px;
+       bottom: 30px;
+       left: $drow_pl + 5px; 
+    }
+}
+.drow{
+    padding:0 $drow_pl;
+    & + .drow{
+        padding-top:30px;
+    }
+    @include f_pictext_row($width:110px,$height:auto,$fpos:"left",$mar-gutter:15px + $drow_pl);
+    .drow_left{
+        background:url(#{$baseImgUrl}icon07.png) 0 center no-repeat;
+        padding-left:$drow_pl;
+        @include lheightM($height:$drow_h);
+        @extend %font-weight;
+        font-size: $bigSize*1.15;
+        color:$baseTitleColor;
+    }
+    $dsize:10px;
+    $bgC:#f3f3f3;
+    .drow_right{
+        & + .drow_right{margin-top:10px;}
+        .p{
+            padding:19px $drow_pl;
+            background:$bgC;
+            @include radius(5px);  
+            @extend %iBlock;  
+        }
+        
+        @include persudo($color:none,$content:"",$position:before,$bg:none){
+            
+            @include caret($color:$bgC,$position:right,$width:$dsize){
+                left:-$dsize;
+                top: 50%;
+                margin-top: -$dsize;
+            }
+        }
+    }
+}
 
 
 

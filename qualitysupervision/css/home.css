@@ -4,7 +4,7 @@
 .news-list01 li, #slideBd .slideBd_right .title, #gallary .inner .info .outer p {
   font-size: 12px; }
 
-.news_h .h-title01 .text, #slideBd li.on .slideBd_right .title, .sideBar03 .level2 > .sideBar_li.on > .sideBar_a, .sideBar03 .level2 > .sideBar_li:hover > .sideBar_a, .brand_link .t .title {
+.news_h .h-title01 .text, #slideBd li.on .slideBd_right .title, .sideBar03 .level2 > .sideBar_li.on > .sideBar_a, .sideBar03 .level2 > .sideBar_li:hover > .sideBar_a, .brand_link .t .title, #addRow > div > div > div i + p, .drow .drow_left {
   font-weight: 700; }
 
 .naver_1 .nav_erc li, .naver_0 .nav_erc li {
@@ -33,13 +33,13 @@
   color: #fff; }
 
 /* color end */
-.login_banner .login-form .labelWrapper, .footer .fridend_link {
+.login_banner .login-form .labelWrapper, .footer .fridend_link, .drow .drow_right .p {
   display: inline-block; }
 
-.naver_0 .nav_erc li .link, .login_banner .login-form .verifyRow .verifyImg, .news-list01 li a, #slideBd .slideBd_right .title, #slideBd2 .slideBd2_right .title, #gallary .inner img, .sideBar03 .sideBar_a {
+.login_banner .login-form .verifyRow .verifyImg, .news-list01 li a, .naver_0 .nav_erc li .link, #slideBd .slideBd_right .title, #slideBd2 .slideBd2_right .title, #gallary .inner img, .sideBar03 .sideBar_a, .department span, .department p {
   display: block; }
 
-.naver_0 .nav_erc li .link .inner, .naver_0 .nav_erc li .link span, .news-list01 li a, #slideBd .slideBd_right .title, #slideBd2 .slideBd2_right .title, #gallary .inner .info h3, .sideBar03 .sideBar_li .sideBar_a .icontext {
+.news-list01 li a, .naver_0 .nav_erc li .link .inner, .naver_0 .nav_erc li .link span, #slideBd .slideBd_right .title, #slideBd2 .slideBd2_right .title, #gallary .inner .info h3, .sideBar03 .sideBar_li .sideBar_a .icontext, .department .d1 {
   display: block;
   *display: inline;
   /*zoom: 1;
@@ -52,25 +52,25 @@
 
 /* clearfix*/
 /* 闭合子元素的浮动*/
-#gallary .inner .innerWrapper, .news_h02, .contentPart, .qualification_row .titleLink .head {
+#slideBd li.on .news_intro, #gallary .inner .innerWrapper, .news_h02, .contentPart, .qualification_row .titleLink .head, #addRow {
   overflow: hidden; }
 
-.login_banner .login-form .codeRow .codeBWrapper, .login_banner .login-form .codeRow .codeInput, .login_banner .login-form .verifyRow .verifyImg, .login_banner .login-form .verifyRow .verifyInput, .login_banner .login-form .verifyRow .verifyImg img, .login_banner .login-form .verifyRow .verifyImg .verifyText, .login_banner .login-form .labelFor .radioText, .login_banner .login-form .labelFor + .radioBox, .slideBox01 .hd ul li, #slideBd .slideBd_left, #slideBd .slideBd_right .title .ellipsis, #slideBd2 .slideBd2_left, #slideBd2 .slideBd2_right .title .ellipsis, #gallary .row-block, .centerMiddle .leftSide, .news_h02 .tips, .brand_link .t, .brand_link .i, .qualification_row .img, .qualification_row .titleLink {
+.login_banner .login-form .codeRow .codeBWrapper, .login_banner .login-form .codeRow .codeInput, .login_banner .login-form .verifyRow .verifyImg, .login_banner .login-form .verifyRow .verifyInput, .login_banner .login-form .verifyRow .verifyImg img, .login_banner .login-form .verifyRow .verifyImg .verifyText, .login_banner .login-form .labelFor .radioText, .login_banner .login-form .labelFor + .radioBox, .slideBox01 .hd ul li, #slideBd .slideBd_left, #slideBd .slideBd_right .title .ellipsis, #slideBd2 .slideBd2_left, #slideBd2 .slideBd2_right .title .ellipsis, #gallary .row-block, .centerMiddle .leftSide, .news_h02 .tips, .brand_link .t, .brand_link .i, .qualification_row .img, .qualification_row .titleLink, .department .un-block-1, .department .un-block-2, .department span, #addRow .row-block, .drow .drow_left {
   float: left; }
 
-.login_banner .login-form .codeRow:before, .login_banner .login-form .verifyRow:before, .login_banner .login-form .labelWrapper:before, #gallary:before, #gallary .row-block:before, .centerMiddle:before, .centerMiddle .center_innerWrapper:before, .brand_link:before, .qualification_row:before, .login_banner .login-form .codeRow:after, .login_banner .login-form .verifyRow:after, .login_banner .login-form .labelWrapper:after, #gallary:after, #gallary .row-block:after, .centerMiddle:after, .centerMiddle .center_innerWrapper:after, .brand_link:after, .qualification_row:after {
+.login_banner .login-form .codeRow:before, .login_banner .login-form .verifyRow:before, .login_banner .login-form .labelWrapper:before, #gallary:before, #gallary .row-block:before, .centerMiddle:before, .centerMiddle .center_innerWrapper:before, .brand_link:before, .qualification_row:before, .department:before, #addRow:before, #addRow .row-block:before, .login_banner .login-form .codeRow:after, .login_banner .login-form .verifyRow:after, .login_banner .login-form .labelWrapper:after, #gallary:after, #gallary .row-block:after, .centerMiddle:after, .centerMiddle .center_innerWrapper:after, .brand_link:after, .qualification_row:after, .department:after, #addRow:after, #addRow .row-block:after {
   content: " ";
   display: table; }
 
-.login_banner .login-form .codeRow:after, .login_banner .login-form .verifyRow:after, .login_banner .login-form .labelWrapper:after, #gallary:after, #gallary .row-block:after, .centerMiddle:after, .centerMiddle .center_innerWrapper:after, .brand_link:after, .qualification_row:after {
+.login_banner .login-form .codeRow:after, .login_banner .login-form .verifyRow:after, .login_banner .login-form .labelWrapper:after, #gallary:after, #gallary .row-block:after, .centerMiddle:after, .centerMiddle .center_innerWrapper:after, .brand_link:after, .qualification_row:after, .department:after, #addRow:after, #addRow .row-block:after {
   clear: both; }
 
-.naver_1 .nav_erc, .naver_0 .nav_erc, .footer .fridend_link, .footer .fridend_link .right a, .news-list01 li, .news_h .more img, .navbar-line02 .navbar-block.on a.navLink.divider,
+.naver_1 .nav_erc, .footer .fridend_link, .footer .fridend_link .right a, .news-list01 li, .news_h .more img, .slideBox01 .hd ul li, .navbar-line02 .navbar-block.on a.navLink.divider,
 .navbar-line02 .navbar-block:hover a.navLink.divider, .navbar-line02 .navbar-block.on + .navbar-block .divider,
-.navbar-line02 .navbar-block:hover + .navbar-block .divider, .navbar-line02 .navbar-block a.navLink, .navbar-line02 .navbar-block a.navLink.divider, .slideBox01 .hd ul li, .q_content, #slideBd, #slideBd li.on .slideBd_right .title, #slideBd .slideBd_left, #slideBd .slideBd_right .title, #slideBd2, #slideBd2 .slideBd2_left, .gallaryWrapper, .gallaryWrapper .pagination .swiper-pagination-switch, #gallary .row-block, #gallary .inner .innerWrapper, .logoRow .topbar_link, .logoRow .topbar_link + .topbar_link, .centerMiddle, .sideBar03 .level2 > .sideBar_li > .sideBar_a .icontext, .sideBar03 .level2 > .sideBar_li.on > .sideBar_a .icontext, .sideBar03 .level2 > .sideBar_li:hover > .sideBar_a .icontext, .sideBar03 .sideBar_a p, .news_h02 .r-link .link, .news_h02 .r-link .link + .link, .brand_link .t, .brand_link .t .small, .commonPic, .qualification_row .img {
+.navbar-line02 .navbar-block:hover + .navbar-block .divider, .navbar-line02 .navbar-block a.navLink, .navbar-line02 .navbar-block a.navLink.divider, .naver_0 .nav_erc, .q_content, #slideBd, #slideBd li.on .slideBd_right .title, #slideBd .slideBd_left, #slideBd .slideBd_right .title, #slideBd2, #slideBd2 .slideBd2_left, #slideBd2 .slideBd2_right, .gallaryWrapper, .gallaryWrapper .pagination .swiper-pagination-switch, #gallary .row-block, #gallary .inner .innerWrapper, .logoRow .topbar_link, .logoRow .topbar_link + .topbar_link, .centerMiddle, .sideBar03 .level2 > .sideBar_li > .sideBar_a .icontext, .sideBar03 .level2 > .sideBar_li.on > .sideBar_a .icontext, .sideBar03 .level2 > .sideBar_li:hover > .sideBar_a .icontext, .sideBar03 .sideBar_a p, .news_h02 .r-link .link, .news_h02 .r-link .link + .link, .brand_link .t, .brand_link .t .small, .commonPic, .qualification_row .img, #addRow .row-block, #addRow > div > div > div.active, .drow_wrapper, .drow, .drow .drow_right {
   position: relative; }
 
-#slideBd .slideBd_left .date, #slideBd2 .slideBd2_left .date, .brand_link .t:after, .qualification_row .img img, #gallary .inner .info, .footer .fridend_link .left, .slideBox01 .hd, .gallaryWrapper .prev, .gallaryWrapper .next, .gallaryWrapper .pagination {
+#slideBd .slideBd_left .date, #slideBd2 .slideBd2_left .date, .brand_link .t:after, .qualification_row .img img, #gallary .inner .info, .footer .fridend_link .left, .slideBox01 .hd, #slideBd2 .slideBd2_right .arrow, .gallaryWrapper .prev, .gallaryWrapper .next, .gallaryWrapper .pagination {
   position: absolute; }
 
 #slideBd .slideBd_left .date, #slideBd2 .slideBd2_left .date, .brand_link .t:after {
@@ -104,19 +104,19 @@
 .login_banner .login-form, .login_banner .login-form .login, .brand_link {
   margin: 0 auto; }
 
-.naver_1 .nav_erc, .naver_0 .nav_erc, .login_banner .login-form, .footer .copyRight {
+.naver_1 .nav_erc, .login_banner .login-form, .footer .copyRight, .naver_0 .nav_erc, #addRow > div > div > div .addInfo {
   text-align: left; }
 
-.banner, .naver_1 .nav_erc li, .login_banner .login-form .codeRow .codeBtn, .footer, .footer .fridend_link .left, .footer .fridend_link .right a + a, .slideBox01 .hd, #slideBd .slideBd_left .date, #slideBd2 .slideBd2_left .date, .gallaryWrapper .prev, .gallaryWrapper .next, .gallaryWrapper .pagination, .commonPic, .pagination02 ul li, .news_title {
+.banner, .naver_1 .nav_erc li, .login_banner .login-form .codeRow .codeBtn, .footer, .footer .fridend_link .left, .footer .fridend_link .right a + a, .slideBox01 .hd, #slideBd .slideBd_left .date, #slideBd2 .slideBd2_left .date, .gallaryWrapper .prev, .gallaryWrapper .next, .gallaryWrapper .pagination, .commonPic, .pagination02 ul li, .news_title, #addRow > div > div > div {
   text-align: center !important; }
 
 .news-list01 li .date, #slideBd .slideBd_right .title .date {
   text-align: right; }
 
-.login_banner .login-form .codeRow .codeBWrapper, .login_banner .login-form .codeRow .codeInput, .login_banner .login-form .verifyRow .verifyImg, .login_banner .login-form .verifyRow .verifyInput, .login_banner .login-form .verifyRow .verifyImg img, .login_banner .login-form .verifyRow .verifyImg .verifyText, .login_banner .login-form .labelFor .radioText, .login_banner .login-form .labelFor + .radioBox, .slideBox01 .hd ul li, #slideBd .slideBd_left, #slideBd .slideBd_right .title .ellipsis, #slideBd2 .slideBd2_left, #slideBd2 .slideBd2_right .title .ellipsis, #gallary .row-block, .centerMiddle .leftSide, .news_h02 .tips, .brand_link .t, .brand_link .i, .qualification_row .img, .qualification_row .titleLink {
+.login_banner .login-form .codeRow .codeBWrapper, .login_banner .login-form .codeRow .codeInput, .login_banner .login-form .verifyRow .verifyImg, .login_banner .login-form .verifyRow .verifyInput, .login_banner .login-form .verifyRow .verifyImg img, .login_banner .login-form .verifyRow .verifyImg .verifyText, .login_banner .login-form .labelFor .radioText, .login_banner .login-form .labelFor + .radioBox, .slideBox01 .hd ul li, #slideBd .slideBd_left, #slideBd .slideBd_right .title .ellipsis, #slideBd2 .slideBd2_left, #slideBd2 .slideBd2_right .title .ellipsis, #gallary .row-block, .centerMiddle .leftSide, .news_h02 .tips, .brand_link .t, .brand_link .i, .qualification_row .img, .qualification_row .titleLink, .department .un-block-1, .department .un-block-2, .department span, #addRow .row-block, .drow .drow_left {
   float: left; }
 
-.news-list01 li .date, .q_content .q_content_right, #slideBd .slideBd_right .title .date, #slideBd2 .slideBd2_right .arrow {
+.news-list01 li .date, .q_content .q_content_right, #slideBd .slideBd_right .title .date {
   float: right; }
 
 /*----------------------------------------------------- */
@@ -124,7 +124,7 @@
 .news-list01 li, #slideBd .slideBd_right .title, #gallary .inner .info .outer p {
   font-size: 12px; }
 
-.news_h .h-title01 .text, #slideBd li.on .slideBd_right .title, .sideBar03 .level2 > .sideBar_li.on > .sideBar_a, .sideBar03 .level2 > .sideBar_li:hover > .sideBar_a, .brand_link .t .title {
+.news_h .h-title01 .text, #slideBd li.on .slideBd_right .title, .sideBar03 .level2 > .sideBar_li.on > .sideBar_a, .sideBar03 .level2 > .sideBar_li:hover > .sideBar_a, .brand_link .t .title, #addRow > div > div > div i + p, .drow .drow_left {
   font-weight: 700; }
 
 .naver_1 .nav_erc li, .naver_0 .nav_erc li {
@@ -153,13 +153,13 @@
   color: #fff; }
 
 /* color end */
-.login_banner .login-form .labelWrapper, .footer .fridend_link {
+.login_banner .login-form .labelWrapper, .footer .fridend_link, .drow .drow_right .p {
   display: inline-block; }
 
-.naver_0 .nav_erc li .link, .login_banner .login-form .verifyRow .verifyImg, .news-list01 li a, #slideBd .slideBd_right .title, #slideBd2 .slideBd2_right .title, #gallary .inner img, .sideBar03 .sideBar_a {
+.login_banner .login-form .verifyRow .verifyImg, .news-list01 li a, .naver_0 .nav_erc li .link, #slideBd .slideBd_right .title, #slideBd2 .slideBd2_right .title, #gallary .inner img, .sideBar03 .sideBar_a, .department span, .department p {
   display: block; }
 
-.naver_0 .nav_erc li .link .inner, .naver_0 .nav_erc li .link span, .news-list01 li a, #slideBd .slideBd_right .title, #slideBd2 .slideBd2_right .title, #gallary .inner .info h3, .sideBar03 .sideBar_li .sideBar_a .icontext {
+.news-list01 li a, .naver_0 .nav_erc li .link .inner, .naver_0 .nav_erc li .link span, #slideBd .slideBd_right .title, #slideBd2 .slideBd2_right .title, #gallary .inner .info h3, .sideBar03 .sideBar_li .sideBar_a .icontext, .department .d1 {
   display: block;
   *display: inline;
   /*zoom: 1;
@@ -172,25 +172,25 @@
 
 /* clearfix*/
 /* 闭合子元素的浮动*/
-#gallary .inner .innerWrapper, .news_h02, .contentPart, .qualification_row .titleLink .head {
+#slideBd li.on .news_intro, #gallary .inner .innerWrapper, .news_h02, .contentPart, .qualification_row .titleLink .head, #addRow {
   overflow: hidden; }
 
-.login_banner .login-form .codeRow .codeBWrapper, .login_banner .login-form .codeRow .codeInput, .login_banner .login-form .verifyRow .verifyImg, .login_banner .login-form .verifyRow .verifyInput, .login_banner .login-form .verifyRow .verifyImg img, .login_banner .login-form .verifyRow .verifyImg .verifyText, .login_banner .login-form .labelFor .radioText, .login_banner .login-form .labelFor + .radioBox, .slideBox01 .hd ul li, #slideBd .slideBd_left, #slideBd .slideBd_right .title .ellipsis, #slideBd2 .slideBd2_left, #slideBd2 .slideBd2_right .title .ellipsis, #gallary .row-block, .centerMiddle .leftSide, .news_h02 .tips, .brand_link .t, .brand_link .i, .qualification_row .img, .qualification_row .titleLink {
+.login_banner .login-form .codeRow .codeBWrapper, .login_banner .login-form .codeRow .codeInput, .login_banner .login-form .verifyRow .verifyImg, .login_banner .login-form .verifyRow .verifyInput, .login_banner .login-form .verifyRow .verifyImg img, .login_banner .login-form .verifyRow .verifyImg .verifyText, .login_banner .login-form .labelFor .radioText, .login_banner .login-form .labelFor + .radioBox, .slideBox01 .hd ul li, #slideBd .slideBd_left, #slideBd .slideBd_right .title .ellipsis, #slideBd2 .slideBd2_left, #slideBd2 .slideBd2_right .title .ellipsis, #gallary .row-block, .centerMiddle .leftSide, .news_h02 .tips, .brand_link .t, .brand_link .i, .qualification_row .img, .qualification_row .titleLink, .department .un-block-1, .department .un-block-2, .department span, #addRow .row-block, .drow .drow_left {
   float: left; }
 
-.login_banner .login-form .codeRow:before, .login_banner .login-form .verifyRow:before, .login_banner .login-form .labelWrapper:before, #gallary:before, #gallary .row-block:before, .centerMiddle:before, .centerMiddle .center_innerWrapper:before, .brand_link:before, .qualification_row:before, .login_banner .login-form .codeRow:after, .login_banner .login-form .verifyRow:after, .login_banner .login-form .labelWrapper:after, #gallary:after, #gallary .row-block:after, .centerMiddle:after, .centerMiddle .center_innerWrapper:after, .brand_link:after, .qualification_row:after {
+.login_banner .login-form .codeRow:before, .login_banner .login-form .verifyRow:before, .login_banner .login-form .labelWrapper:before, #gallary:before, #gallary .row-block:before, .centerMiddle:before, .centerMiddle .center_innerWrapper:before, .brand_link:before, .qualification_row:before, .department:before, #addRow:before, #addRow .row-block:before, .login_banner .login-form .codeRow:after, .login_banner .login-form .verifyRow:after, .login_banner .login-form .labelWrapper:after, #gallary:after, #gallary .row-block:after, .centerMiddle:after, .centerMiddle .center_innerWrapper:after, .brand_link:after, .qualification_row:after, .department:after, #addRow:after, #addRow .row-block:after {
   content: " ";
   display: table; }
 
-.login_banner .login-form .codeRow:after, .login_banner .login-form .verifyRow:after, .login_banner .login-form .labelWrapper:after, #gallary:after, #gallary .row-block:after, .centerMiddle:after, .centerMiddle .center_innerWrapper:after, .brand_link:after, .qualification_row:after {
+.login_banner .login-form .codeRow:after, .login_banner .login-form .verifyRow:after, .login_banner .login-form .labelWrapper:after, #gallary:after, #gallary .row-block:after, .centerMiddle:after, .centerMiddle .center_innerWrapper:after, .brand_link:after, .qualification_row:after, .department:after, #addRow:after, #addRow .row-block:after {
   clear: both; }
 
-.naver_1 .nav_erc, .naver_0 .nav_erc, .footer .fridend_link, .footer .fridend_link .right a, .news-list01 li, .news_h .more img, .navbar-line02 .navbar-block.on a.navLink.divider,
+.naver_1 .nav_erc, .footer .fridend_link, .footer .fridend_link .right a, .news-list01 li, .news_h .more img, .slideBox01 .hd ul li, .navbar-line02 .navbar-block.on a.navLink.divider,
 .navbar-line02 .navbar-block:hover a.navLink.divider, .navbar-line02 .navbar-block.on + .navbar-block .divider,
-.navbar-line02 .navbar-block:hover + .navbar-block .divider, .navbar-line02 .navbar-block a.navLink, .navbar-line02 .navbar-block a.navLink.divider, .slideBox01 .hd ul li, .q_content, #slideBd, #slideBd li.on .slideBd_right .title, #slideBd .slideBd_left, #slideBd .slideBd_right .title, #slideBd2, #slideBd2 .slideBd2_left, .gallaryWrapper, .gallaryWrapper .pagination .swiper-pagination-switch, #gallary .row-block, #gallary .inner .innerWrapper, .logoRow .topbar_link, .logoRow .topbar_link + .topbar_link, .centerMiddle, .sideBar03 .level2 > .sideBar_li > .sideBar_a .icontext, .sideBar03 .level2 > .sideBar_li.on > .sideBar_a .icontext, .sideBar03 .level2 > .sideBar_li:hover > .sideBar_a .icontext, .sideBar03 .sideBar_a p, .news_h02 .r-link .link, .news_h02 .r-link .link + .link, .brand_link .t, .brand_link .t .small, .commonPic, .qualification_row .img {
+.navbar-line02 .navbar-block:hover + .navbar-block .divider, .navbar-line02 .navbar-block a.navLink, .navbar-line02 .navbar-block a.navLink.divider, .naver_0 .nav_erc, .q_content, #slideBd, #slideBd li.on .slideBd_right .title, #slideBd .slideBd_left, #slideBd .slideBd_right .title, #slideBd2, #slideBd2 .slideBd2_left, #slideBd2 .slideBd2_right, .gallaryWrapper, .gallaryWrapper .pagination .swiper-pagination-switch, #gallary .row-block, #gallary .inner .innerWrapper, .logoRow .topbar_link, .logoRow .topbar_link + .topbar_link, .centerMiddle, .sideBar03 .level2 > .sideBar_li > .sideBar_a .icontext, .sideBar03 .level2 > .sideBar_li.on > .sideBar_a .icontext, .sideBar03 .level2 > .sideBar_li:hover > .sideBar_a .icontext, .sideBar03 .sideBar_a p, .news_h02 .r-link .link, .news_h02 .r-link .link + .link, .brand_link .t, .brand_link .t .small, .commonPic, .qualification_row .img, #addRow .row-block, #addRow > div > div > div.active, .drow_wrapper, .drow, .drow .drow_right {
   position: relative; }
 
-#slideBd .slideBd_left .date, #slideBd2 .slideBd2_left .date, .brand_link .t:after, .qualification_row .img img, #gallary .inner .info, .footer .fridend_link .left, .slideBox01 .hd, .gallaryWrapper .prev, .gallaryWrapper .next, .gallaryWrapper .pagination {
+#slideBd .slideBd_left .date, #slideBd2 .slideBd2_left .date, .brand_link .t:after, .qualification_row .img img, #gallary .inner .info, .footer .fridend_link .left, .slideBox01 .hd, #slideBd2 .slideBd2_right .arrow, .gallaryWrapper .prev, .gallaryWrapper .next, .gallaryWrapper .pagination {
   position: absolute; }
 
 #slideBd .slideBd_left .date, #slideBd2 .slideBd2_left .date, .brand_link .t:after {
@@ -224,19 +224,19 @@
 .login_banner .login-form, .login_banner .login-form .login, .brand_link {
   margin: 0 auto; }
 
-.naver_1 .nav_erc, .naver_0 .nav_erc, .login_banner .login-form, .footer .copyRight {
+.naver_1 .nav_erc, .login_banner .login-form, .footer .copyRight, .naver_0 .nav_erc, #addRow > div > div > div .addInfo {
   text-align: left; }
 
-.banner, .naver_1 .nav_erc li, .login_banner .login-form .codeRow .codeBtn, .footer, .footer .fridend_link .left, .footer .fridend_link .right a + a, .slideBox01 .hd, #slideBd .slideBd_left .date, #slideBd2 .slideBd2_left .date, .gallaryWrapper .prev, .gallaryWrapper .next, .gallaryWrapper .pagination, .commonPic, .pagination02 ul li, .news_title {
+.banner, .naver_1 .nav_erc li, .login_banner .login-form .codeRow .codeBtn, .footer, .footer .fridend_link .left, .footer .fridend_link .right a + a, .slideBox01 .hd, #slideBd .slideBd_left .date, #slideBd2 .slideBd2_left .date, .gallaryWrapper .prev, .gallaryWrapper .next, .gallaryWrapper .pagination, .commonPic, .pagination02 ul li, .news_title, #addRow > div > div > div {
   text-align: center !important; }
 
 .news-list01 li .date, #slideBd .slideBd_right .title .date {
   text-align: right; }
 
-.login_banner .login-form .codeRow .codeBWrapper, .login_banner .login-form .codeRow .codeInput, .login_banner .login-form .verifyRow .verifyImg, .login_banner .login-form .verifyRow .verifyInput, .login_banner .login-form .verifyRow .verifyImg img, .login_banner .login-form .verifyRow .verifyImg .verifyText, .login_banner .login-form .labelFor .radioText, .login_banner .login-form .labelFor + .radioBox, .slideBox01 .hd ul li, #slideBd .slideBd_left, #slideBd .slideBd_right .title .ellipsis, #slideBd2 .slideBd2_left, #slideBd2 .slideBd2_right .title .ellipsis, #gallary .row-block, .centerMiddle .leftSide, .news_h02 .tips, .brand_link .t, .brand_link .i, .qualification_row .img, .qualification_row .titleLink {
+.login_banner .login-form .codeRow .codeBWrapper, .login_banner .login-form .codeRow .codeInput, .login_banner .login-form .verifyRow .verifyImg, .login_banner .login-form .verifyRow .verifyInput, .login_banner .login-form .verifyRow .verifyImg img, .login_banner .login-form .verifyRow .verifyImg .verifyText, .login_banner .login-form .labelFor .radioText, .login_banner .login-form .labelFor + .radioBox, .slideBox01 .hd ul li, #slideBd .slideBd_left, #slideBd .slideBd_right .title .ellipsis, #slideBd2 .slideBd2_left, #slideBd2 .slideBd2_right .title .ellipsis, #gallary .row-block, .centerMiddle .leftSide, .news_h02 .tips, .brand_link .t, .brand_link .i, .qualification_row .img, .qualification_row .titleLink, .department .un-block-1, .department .un-block-2, .department span, #addRow .row-block, .drow .drow_left {
   float: left; }
 
-.news-list01 li .date, .q_content .q_content_right, #slideBd .slideBd_right .title .date, #slideBd2 .slideBd2_right .arrow {
+.news-list01 li .date, .q_content .q_content_right, #slideBd .slideBd_right .title .date {
   float: right; }
 
 /*----------------------------------------------------- */
@@ -244,7 +244,7 @@
 .news-list01 li, #slideBd .slideBd_right .title, #gallary .inner .info .outer p {
   font-size: 12px; }
 
-.news_h .h-title01 .text, #slideBd li.on .slideBd_right .title, .sideBar03 .level2 > .sideBar_li.on > .sideBar_a, .sideBar03 .level2 > .sideBar_li:hover > .sideBar_a, .brand_link .t .title {
+.news_h .h-title01 .text, #slideBd li.on .slideBd_right .title, .sideBar03 .level2 > .sideBar_li.on > .sideBar_a, .sideBar03 .level2 > .sideBar_li:hover > .sideBar_a, .brand_link .t .title, #addRow > div > div > div i + p, .drow .drow_left {
   font-weight: 700; }
 
 .naver_1 .nav_erc li, .naver_0 .nav_erc li {
@@ -273,13 +273,13 @@
   color: #fff; }
 
 /* color end */
-.login_banner .login-form .labelWrapper, .footer .fridend_link {
+.login_banner .login-form .labelWrapper, .footer .fridend_link, .drow .drow_right .p {
   display: inline-block; }
 
-.naver_0 .nav_erc li .link, .login_banner .login-form .verifyRow .verifyImg, .news-list01 li a, #slideBd .slideBd_right .title, #slideBd2 .slideBd2_right .title, #gallary .inner img, .sideBar03 .sideBar_a {
+.login_banner .login-form .verifyRow .verifyImg, .news-list01 li a, .naver_0 .nav_erc li .link, #slideBd .slideBd_right .title, #slideBd2 .slideBd2_right .title, #gallary .inner img, .sideBar03 .sideBar_a, .department span, .department p {
   display: block; }
 
-.naver_0 .nav_erc li .link .inner, .naver_0 .nav_erc li .link span, .news-list01 li a, #slideBd .slideBd_right .title, #slideBd2 .slideBd2_right .title, #gallary .inner .info h3, .sideBar03 .sideBar_li .sideBar_a .icontext {
+.news-list01 li a, .naver_0 .nav_erc li .link .inner, .naver_0 .nav_erc li .link span, #slideBd .slideBd_right .title, #slideBd2 .slideBd2_right .title, #gallary .inner .info h3, .sideBar03 .sideBar_li .sideBar_a .icontext, .department .d1 {
   display: block;
   *display: inline;
   /*zoom: 1;
@@ -292,25 +292,25 @@
 
 /* clearfix*/
 /* 闭合子元素的浮动*/
-#gallary .inner .innerWrapper, .news_h02, .contentPart, .qualification_row .titleLink .head {
+#slideBd li.on .news_intro, #gallary .inner .innerWrapper, .news_h02, .contentPart, .qualification_row .titleLink .head, #addRow {
   overflow: hidden; }
 
-.login_banner .login-form .codeRow .codeBWrapper, .login_banner .login-form .codeRow .codeInput, .login_banner .login-form .verifyRow .verifyImg, .login_banner .login-form .verifyRow .verifyInput, .login_banner .login-form .verifyRow .verifyImg img, .login_banner .login-form .verifyRow .verifyImg .verifyText, .login_banner .login-form .labelFor .radioText, .login_banner .login-form .labelFor + .radioBox, .slideBox01 .hd ul li, #slideBd .slideBd_left, #slideBd .slideBd_right .title .ellipsis, #slideBd2 .slideBd2_left, #slideBd2 .slideBd2_right .title .ellipsis, #gallary .row-block, .centerMiddle .leftSide, .news_h02 .tips, .brand_link .t, .brand_link .i, .qualification_row .img, .qualification_row .titleLink {
+.login_banner .login-form .codeRow .codeBWrapper, .login_banner .login-form .codeRow .codeInput, .login_banner .login-form .verifyRow .verifyImg, .login_banner .login-form .verifyRow .verifyInput, .login_banner .login-form .verifyRow .verifyImg img, .login_banner .login-form .verifyRow .verifyImg .verifyText, .login_banner .login-form .labelFor .radioText, .login_banner .login-form .labelFor + .radioBox, .slideBox01 .hd ul li, #slideBd .slideBd_left, #slideBd .slideBd_right .title .ellipsis, #slideBd2 .slideBd2_left, #slideBd2 .slideBd2_right .title .ellipsis, #gallary .row-block, .centerMiddle .leftSide, .news_h02 .tips, .brand_link .t, .brand_link .i, .qualification_row .img, .qualification_row .titleLink, .department .un-block-1, .department .un-block-2, .department span, #addRow .row-block, .drow .drow_left {
   float: left; }
 
-.login_banner .login-form .codeRow:before, .login_banner .login-form .verifyRow:before, .login_banner .login-form .labelWrapper:before, #gallary:before, #gallary .row-block:before, .centerMiddle:before, .centerMiddle .center_innerWrapper:before, .brand_link:before, .qualification_row:before, .login_banner .login-form .codeRow:after, .login_banner .login-form .verifyRow:after, .login_banner .login-form .labelWrapper:after, #gallary:after, #gallary .row-block:after, .centerMiddle:after, .centerMiddle .center_innerWrapper:after, .brand_link:after, .qualification_row:after {
+.login_banner .login-form .codeRow:before, .login_banner .login-form .verifyRow:before, .login_banner .login-form .labelWrapper:before, #gallary:before, #gallary .row-block:before, .centerMiddle:before, .centerMiddle .center_innerWrapper:before, .brand_link:before, .qualification_row:before, .department:before, #addRow:before, #addRow .row-block:before, .login_banner .login-form .codeRow:after, .login_banner .login-form .verifyRow:after, .login_banner .login-form .labelWrapper:after, #gallary:after, #gallary .row-block:after, .centerMiddle:after, .centerMiddle .center_innerWrapper:after, .brand_link:after, .qualification_row:after, .department:after, #addRow:after, #addRow .row-block:after {
   content: " ";
   display: table; }
 
-.login_banner .login-form .codeRow:after, .login_banner .login-form .verifyRow:after, .login_banner .login-form .labelWrapper:after, #gallary:after, #gallary .row-block:after, .centerMiddle:after, .centerMiddle .center_innerWrapper:after, .brand_link:after, .qualification_row:after {
+.login_banner .login-form .codeRow:after, .login_banner .login-form .verifyRow:after, .login_banner .login-form .labelWrapper:after, #gallary:after, #gallary .row-block:after, .centerMiddle:after, .centerMiddle .center_innerWrapper:after, .brand_link:after, .qualification_row:after, .department:after, #addRow:after, #addRow .row-block:after {
   clear: both; }
 
-.naver_1 .nav_erc, .naver_0 .nav_erc, .footer .fridend_link, .footer .fridend_link .right a, .news-list01 li, .news_h .more img, .navbar-line02 .navbar-block.on a.navLink.divider,
+.naver_1 .nav_erc, .footer .fridend_link, .footer .fridend_link .right a, .news-list01 li, .news_h .more img, .slideBox01 .hd ul li, .navbar-line02 .navbar-block.on a.navLink.divider,
 .navbar-line02 .navbar-block:hover a.navLink.divider, .navbar-line02 .navbar-block.on + .navbar-block .divider,
-.navbar-line02 .navbar-block:hover + .navbar-block .divider, .navbar-line02 .navbar-block a.navLink, .navbar-line02 .navbar-block a.navLink.divider, .slideBox01 .hd ul li, .q_content, #slideBd, #slideBd li.on .slideBd_right .title, #slideBd .slideBd_left, #slideBd .slideBd_right .title, #slideBd2, #slideBd2 .slideBd2_left, .gallaryWrapper, .gallaryWrapper .pagination .swiper-pagination-switch, #gallary .row-block, #gallary .inner .innerWrapper, .logoRow .topbar_link, .logoRow .topbar_link + .topbar_link, .centerMiddle, .sideBar03 .level2 > .sideBar_li > .sideBar_a .icontext, .sideBar03 .level2 > .sideBar_li.on > .sideBar_a .icontext, .sideBar03 .level2 > .sideBar_li:hover > .sideBar_a .icontext, .sideBar03 .sideBar_a p, .news_h02 .r-link .link, .news_h02 .r-link .link + .link, .brand_link .t, .brand_link .t .small, .commonPic, .qualification_row .img {
+.navbar-line02 .navbar-block:hover + .navbar-block .divider, .navbar-line02 .navbar-block a.navLink, .navbar-line02 .navbar-block a.navLink.divider, .naver_0 .nav_erc, .q_content, #slideBd, #slideBd li.on .slideBd_right .title, #slideBd .slideBd_left, #slideBd .slideBd_right .title, #slideBd2, #slideBd2 .slideBd2_left, #slideBd2 .slideBd2_right, .gallaryWrapper, .gallaryWrapper .pagination .swiper-pagination-switch, #gallary .row-block, #gallary .inner .innerWrapper, .logoRow .topbar_link, .logoRow .topbar_link + .topbar_link, .centerMiddle, .sideBar03 .level2 > .sideBar_li > .sideBar_a .icontext, .sideBar03 .level2 > .sideBar_li.on > .sideBar_a .icontext, .sideBar03 .level2 > .sideBar_li:hover > .sideBar_a .icontext, .sideBar03 .sideBar_a p, .news_h02 .r-link .link, .news_h02 .r-link .link + .link, .brand_link .t, .brand_link .t .small, .commonPic, .qualification_row .img, #addRow .row-block, #addRow > div > div > div.active, .drow_wrapper, .drow, .drow .drow_right {
   position: relative; }
 
-#slideBd .slideBd_left .date, #slideBd2 .slideBd2_left .date, .brand_link .t:after, .qualification_row .img img, #gallary .inner .info, .footer .fridend_link .left, .slideBox01 .hd, .gallaryWrapper .prev, .gallaryWrapper .next, .gallaryWrapper .pagination {
+#slideBd .slideBd_left .date, #slideBd2 .slideBd2_left .date, .brand_link .t:after, .qualification_row .img img, #gallary .inner .info, .footer .fridend_link .left, .slideBox01 .hd, #slideBd2 .slideBd2_right .arrow, .gallaryWrapper .prev, .gallaryWrapper .next, .gallaryWrapper .pagination {
   position: absolute; }
 
 #slideBd .slideBd_left .date, #slideBd2 .slideBd2_left .date, .brand_link .t:after {
@@ -344,19 +344,19 @@
 .login_banner .login-form, .login_banner .login-form .login, .brand_link {
   margin: 0 auto; }
 
-.naver_1 .nav_erc, .naver_0 .nav_erc, .login_banner .login-form, .footer .copyRight {
+.naver_1 .nav_erc, .login_banner .login-form, .footer .copyRight, .naver_0 .nav_erc, #addRow > div > div > div .addInfo {
   text-align: left; }
 
-.banner, .naver_1 .nav_erc li, .login_banner .login-form .codeRow .codeBtn, .footer, .footer .fridend_link .left, .footer .fridend_link .right a + a, .slideBox01 .hd, #slideBd .slideBd_left .date, #slideBd2 .slideBd2_left .date, .gallaryWrapper .prev, .gallaryWrapper .next, .gallaryWrapper .pagination, .commonPic, .pagination02 ul li, .news_title {
+.banner, .naver_1 .nav_erc li, .login_banner .login-form .codeRow .codeBtn, .footer, .footer .fridend_link .left, .footer .fridend_link .right a + a, .slideBox01 .hd, #slideBd .slideBd_left .date, #slideBd2 .slideBd2_left .date, .gallaryWrapper .prev, .gallaryWrapper .next, .gallaryWrapper .pagination, .commonPic, .pagination02 ul li, .news_title, #addRow > div > div > div {
   text-align: center !important; }
 
 .news-list01 li .date, #slideBd .slideBd_right .title .date {
   text-align: right; }
 
-.login_banner .login-form .codeRow .codeBWrapper, .login_banner .login-form .codeRow .codeInput, .login_banner .login-form .verifyRow .verifyImg, .login_banner .login-form .verifyRow .verifyInput, .login_banner .login-form .verifyRow .verifyImg img, .login_banner .login-form .verifyRow .verifyImg .verifyText, .login_banner .login-form .labelFor .radioText, .login_banner .login-form .labelFor + .radioBox, .slideBox01 .hd ul li, #slideBd .slideBd_left, #slideBd .slideBd_right .title .ellipsis, #slideBd2 .slideBd2_left, #slideBd2 .slideBd2_right .title .ellipsis, #gallary .row-block, .centerMiddle .leftSide, .news_h02 .tips, .brand_link .t, .brand_link .i, .qualification_row .img, .qualification_row .titleLink {
+.login_banner .login-form .codeRow .codeBWrapper, .login_banner .login-form .codeRow .codeInput, .login_banner .login-form .verifyRow .verifyImg, .login_banner .login-form .verifyRow .verifyInput, .login_banner .login-form .verifyRow .verifyImg img, .login_banner .login-form .verifyRow .verifyImg .verifyText, .login_banner .login-form .labelFor .radioText, .login_banner .login-form .labelFor + .radioBox, .slideBox01 .hd ul li, #slideBd .slideBd_left, #slideBd .slideBd_right .title .ellipsis, #slideBd2 .slideBd2_left, #slideBd2 .slideBd2_right .title .ellipsis, #gallary .row-block, .centerMiddle .leftSide, .news_h02 .tips, .brand_link .t, .brand_link .i, .qualification_row .img, .qualification_row .titleLink, .department .un-block-1, .department .un-block-2, .department span, #addRow .row-block, .drow .drow_left {
   float: left; }
 
-.news-list01 li .date, .q_content .q_content_right, #slideBd .slideBd_right .title .date, #slideBd2 .slideBd2_right .arrow {
+.news-list01 li .date, .q_content .q_content_right, #slideBd .slideBd_right .title .date {
   float: right; }
 
 /*----------------------------------------------------- */
@@ -364,7 +364,7 @@
 .news-list01 li, #slideBd .slideBd_right .title, #gallary .inner .info .outer p {
   font-size: 12px; }
 
-.news_h .h-title01 .text, #slideBd li.on .slideBd_right .title, .sideBar03 .level2 > .sideBar_li.on > .sideBar_a, .sideBar03 .level2 > .sideBar_li:hover > .sideBar_a, .brand_link .t .title {
+.news_h .h-title01 .text, #slideBd li.on .slideBd_right .title, .sideBar03 .level2 > .sideBar_li.on > .sideBar_a, .sideBar03 .level2 > .sideBar_li:hover > .sideBar_a, .brand_link .t .title, #addRow > div > div > div i + p, .drow .drow_left {
   font-weight: 700; }
 
 .naver_1 .nav_erc li, .naver_0 .nav_erc li {
@@ -393,13 +393,13 @@
   color: #fff; }
 
 /* color end */
-.login_banner .login-form .labelWrapper, .footer .fridend_link {
+.login_banner .login-form .labelWrapper, .footer .fridend_link, .drow .drow_right .p {
   display: inline-block; }
 
-.naver_0 .nav_erc li .link, .login_banner .login-form .verifyRow .verifyImg, .news-list01 li a, #slideBd .slideBd_right .title, #slideBd2 .slideBd2_right .title, #gallary .inner img, .sideBar03 .sideBar_a {
+.login_banner .login-form .verifyRow .verifyImg, .news-list01 li a, .naver_0 .nav_erc li .link, #slideBd .slideBd_right .title, #slideBd2 .slideBd2_right .title, #gallary .inner img, .sideBar03 .sideBar_a, .department span, .department p {
   display: block; }
 
-.naver_0 .nav_erc li .link .inner, .naver_0 .nav_erc li .link span, .news-list01 li a, #slideBd .slideBd_right .title, #slideBd2 .slideBd2_right .title, #gallary .inner .info h3, .sideBar03 .sideBar_li .sideBar_a .icontext {
+.news-list01 li a, .naver_0 .nav_erc li .link .inner, .naver_0 .nav_erc li .link span, #slideBd .slideBd_right .title, #slideBd2 .slideBd2_right .title, #gallary .inner .info h3, .sideBar03 .sideBar_li .sideBar_a .icontext, .department .d1 {
   display: block;
   *display: inline;
   /*zoom: 1;
@@ -412,25 +412,25 @@
 
 /* clearfix*/
 /* 闭合子元素的浮动*/
-#gallary .inner .innerWrapper, .news_h02, .contentPart, .qualification_row .titleLink .head {
+#slideBd li.on .news_intro, #gallary .inner .innerWrapper, .news_h02, .contentPart, .qualification_row .titleLink .head, #addRow {
   overflow: hidden; }
 
-.login_banner .login-form .codeRow .codeBWrapper, .login_banner .login-form .codeRow .codeInput, .login_banner .login-form .verifyRow .verifyImg, .login_banner .login-form .verifyRow .verifyInput, .login_banner .login-form .verifyRow .verifyImg img, .login_banner .login-form .verifyRow .verifyImg .verifyText, .login_banner .login-form .labelFor .radioText, .login_banner .login-form .labelFor + .radioBox, .slideBox01 .hd ul li, #slideBd .slideBd_left, #slideBd .slideBd_right .title .ellipsis, #slideBd2 .slideBd2_left, #slideBd2 .slideBd2_right .title .ellipsis, #gallary .row-block, .centerMiddle .leftSide, .news_h02 .tips, .brand_link .t, .brand_link .i, .qualification_row .img, .qualification_row .titleLink {
+.login_banner .login-form .codeRow .codeBWrapper, .login_banner .login-form .codeRow .codeInput, .login_banner .login-form .verifyRow .verifyImg, .login_banner .login-form .verifyRow .verifyInput, .login_banner .login-form .verifyRow .verifyImg img, .login_banner .login-form .verifyRow .verifyImg .verifyText, .login_banner .login-form .labelFor .radioText, .login_banner .login-form .labelFor + .radioBox, .slideBox01 .hd ul li, #slideBd .slideBd_left, #slideBd .slideBd_right .title .ellipsis, #slideBd2 .slideBd2_left, #slideBd2 .slideBd2_right .title .ellipsis, #gallary .row-block, .centerMiddle .leftSide, .news_h02 .tips, .brand_link .t, .brand_link .i, .qualification_row .img, .qualification_row .titleLink, .department .un-block-1, .department .un-block-2, .department span, #addRow .row-block, .drow .drow_left {
   float: left; }
 
-.login_banner .login-form .codeRow:before, .login_banner .login-form .verifyRow:before, .login_banner .login-form .labelWrapper:before, #gallary:before, #gallary .row-block:before, .centerMiddle:before, .centerMiddle .center_innerWrapper:before, .brand_link:before, .qualification_row:before, .login_banner .login-form .codeRow:after, .login_banner .login-form .verifyRow:after, .login_banner .login-form .labelWrapper:after, #gallary:after, #gallary .row-block:after, .centerMiddle:after, .centerMiddle .center_innerWrapper:after, .brand_link:after, .qualification_row:after {
+.login_banner .login-form .codeRow:before, .login_banner .login-form .verifyRow:before, .login_banner .login-form .labelWrapper:before, #gallary:before, #gallary .row-block:before, .centerMiddle:before, .centerMiddle .center_innerWrapper:before, .brand_link:before, .qualification_row:before, .department:before, #addRow:before, #addRow .row-block:before, .login_banner .login-form .codeRow:after, .login_banner .login-form .verifyRow:after, .login_banner .login-form .labelWrapper:after, #gallary:after, #gallary .row-block:after, .centerMiddle:after, .centerMiddle .center_innerWrapper:after, .brand_link:after, .qualification_row:after, .department:after, #addRow:after, #addRow .row-block:after {
   content: " ";
   display: table; }
 
-.login_banner .login-form .codeRow:after, .login_banner .login-form .verifyRow:after, .login_banner .login-form .labelWrapper:after, #gallary:after, #gallary .row-block:after, .centerMiddle:after, .centerMiddle .center_innerWrapper:after, .brand_link:after, .qualification_row:after {
+.login_banner .login-form .codeRow:after, .login_banner .login-form .verifyRow:after, .login_banner .login-form .labelWrapper:after, #gallary:after, #gallary .row-block:after, .centerMiddle:after, .centerMiddle .center_innerWrapper:after, .brand_link:after, .qualification_row:after, .department:after, #addRow:after, #addRow .row-block:after {
   clear: both; }
 
-.naver_1 .nav_erc, .naver_0 .nav_erc, .footer .fridend_link, .footer .fridend_link .right a, .news-list01 li, .news_h .more img, .navbar-line02 .navbar-block.on a.navLink.divider,
+.naver_1 .nav_erc, .footer .fridend_link, .footer .fridend_link .right a, .news-list01 li, .news_h .more img, .slideBox01 .hd ul li, .navbar-line02 .navbar-block.on a.navLink.divider,
 .navbar-line02 .navbar-block:hover a.navLink.divider, .navbar-line02 .navbar-block.on + .navbar-block .divider,
-.navbar-line02 .navbar-block:hover + .navbar-block .divider, .navbar-line02 .navbar-block a.navLink, .navbar-line02 .navbar-block a.navLink.divider, .slideBox01 .hd ul li, .q_content, #slideBd, #slideBd li.on .slideBd_right .title, #slideBd .slideBd_left, #slideBd .slideBd_right .title, #slideBd2, #slideBd2 .slideBd2_left, .gallaryWrapper, .gallaryWrapper .pagination .swiper-pagination-switch, #gallary .row-block, #gallary .inner .innerWrapper, .logoRow .topbar_link, .logoRow .topbar_link + .topbar_link, .centerMiddle, .sideBar03 .level2 > .sideBar_li > .sideBar_a .icontext, .sideBar03 .level2 > .sideBar_li.on > .sideBar_a .icontext, .sideBar03 .level2 > .sideBar_li:hover > .sideBar_a .icontext, .sideBar03 .sideBar_a p, .news_h02 .r-link .link, .news_h02 .r-link .link + .link, .brand_link .t, .brand_link .t .small, .commonPic, .qualification_row .img {
+.navbar-line02 .navbar-block:hover + .navbar-block .divider, .navbar-line02 .navbar-block a.navLink, .navbar-line02 .navbar-block a.navLink.divider, .naver_0 .nav_erc, .q_content, #slideBd, #slideBd li.on .slideBd_right .title, #slideBd .slideBd_left, #slideBd .slideBd_right .title, #slideBd2, #slideBd2 .slideBd2_left, #slideBd2 .slideBd2_right, .gallaryWrapper, .gallaryWrapper .pagination .swiper-pagination-switch, #gallary .row-block, #gallary .inner .innerWrapper, .logoRow .topbar_link, .logoRow .topbar_link + .topbar_link, .centerMiddle, .sideBar03 .level2 > .sideBar_li > .sideBar_a .icontext, .sideBar03 .level2 > .sideBar_li.on > .sideBar_a .icontext, .sideBar03 .level2 > .sideBar_li:hover > .sideBar_a .icontext, .sideBar03 .sideBar_a p, .news_h02 .r-link .link, .news_h02 .r-link .link + .link, .brand_link .t, .brand_link .t .small, .commonPic, .qualification_row .img, #addRow .row-block, #addRow > div > div > div.active, .drow_wrapper, .drow, .drow .drow_right {
   position: relative; }
 
-#slideBd .slideBd_left .date, #slideBd2 .slideBd2_left .date, .brand_link .t:after, .qualification_row .img img, #gallary .inner .info, .footer .fridend_link .left, .slideBox01 .hd, .gallaryWrapper .prev, .gallaryWrapper .next, .gallaryWrapper .pagination {
+#slideBd .slideBd_left .date, #slideBd2 .slideBd2_left .date, .brand_link .t:after, .qualification_row .img img, #gallary .inner .info, .footer .fridend_link .left, .slideBox01 .hd, #slideBd2 .slideBd2_right .arrow, .gallaryWrapper .prev, .gallaryWrapper .next, .gallaryWrapper .pagination {
   position: absolute; }
 
 #slideBd .slideBd_left .date, #slideBd2 .slideBd2_left .date, .brand_link .t:after {
@@ -464,19 +464,19 @@
 .login_banner .login-form, .login_banner .login-form .login, .brand_link {
   margin: 0 auto; }
 
-.naver_1 .nav_erc, .naver_0 .nav_erc, .login_banner .login-form, .footer .copyRight {
+.naver_1 .nav_erc, .login_banner .login-form, .footer .copyRight, .naver_0 .nav_erc, #addRow > div > div > div .addInfo {
   text-align: left; }
 
-.banner, .naver_1 .nav_erc li, .login_banner .login-form .codeRow .codeBtn, .footer, .footer .fridend_link .left, .footer .fridend_link .right a + a, .slideBox01 .hd, #slideBd .slideBd_left .date, #slideBd2 .slideBd2_left .date, .gallaryWrapper .prev, .gallaryWrapper .next, .gallaryWrapper .pagination, .commonPic, .pagination02 ul li, .news_title {
+.banner, .naver_1 .nav_erc li, .login_banner .login-form .codeRow .codeBtn, .footer, .footer .fridend_link .left, .footer .fridend_link .right a + a, .slideBox01 .hd, #slideBd .slideBd_left .date, #slideBd2 .slideBd2_left .date, .gallaryWrapper .prev, .gallaryWrapper .next, .gallaryWrapper .pagination, .commonPic, .pagination02 ul li, .news_title, #addRow > div > div > div {
   text-align: center !important; }
 
 .news-list01 li .date, #slideBd .slideBd_right .title .date {
   text-align: right; }
 
-.login_banner .login-form .codeRow .codeBWrapper, .login_banner .login-form .codeRow .codeInput, .login_banner .login-form .verifyRow .verifyImg, .login_banner .login-form .verifyRow .verifyInput, .login_banner .login-form .verifyRow .verifyImg img, .login_banner .login-form .verifyRow .verifyImg .verifyText, .login_banner .login-form .labelFor .radioText, .login_banner .login-form .labelFor + .radioBox, .slideBox01 .hd ul li, #slideBd .slideBd_left, #slideBd .slideBd_right .title .ellipsis, #slideBd2 .slideBd2_left, #slideBd2 .slideBd2_right .title .ellipsis, #gallary .row-block, .centerMiddle .leftSide, .news_h02 .tips, .brand_link .t, .brand_link .i, .qualification_row .img, .qualification_row .titleLink {
+.login_banner .login-form .codeRow .codeBWrapper, .login_banner .login-form .codeRow .codeInput, .login_banner .login-form .verifyRow .verifyImg, .login_banner .login-form .verifyRow .verifyInput, .login_banner .login-form .verifyRow .verifyImg img, .login_banner .login-form .verifyRow .verifyImg .verifyText, .login_banner .login-form .labelFor .radioText, .login_banner .login-form .labelFor + .radioBox, .slideBox01 .hd ul li, #slideBd .slideBd_left, #slideBd .slideBd_right .title .ellipsis, #slideBd2 .slideBd2_left, #slideBd2 .slideBd2_right .title .ellipsis, #gallary .row-block, .centerMiddle .leftSide, .news_h02 .tips, .brand_link .t, .brand_link .i, .qualification_row .img, .qualification_row .titleLink, .department .un-block-1, .department .un-block-2, .department span, #addRow .row-block, .drow .drow_left {
   float: left; }
 
-.news-list01 li .date, .q_content .q_content_right, #slideBd .slideBd_right .title .date, #slideBd2 .slideBd2_right .arrow {
+.news-list01 li .date, .q_content .q_content_right, #slideBd .slideBd_right .title .date {
   float: right; }
 
 .banner {
@@ -545,57 +545,6 @@
         display: block;
         padding: 10px 0; }
 
-.naver_0 {
-  display: none;
-  position: absolute;
-  z-index: 99;
-  top: 100%;
-  min-width: 100%;
-  max-width: 200%; }
-  .naver_0 .nav_erc {
-    border: 1px solid #ddd;
-    padding: 15px 0;
-    border-top: none; }
-    .naver_0 .nav_erc:before {
-      position: absolute;
-      left: 0px;
-      width: auto;
-      content: "";
-      font-size: 15px; }
-    .naver_0 .nav_erc:before {
-      border-top: 6px dashed #ffbf00;
-      border-right: 6px solid transparent;
-      border-left: 6px solid transparent;
-      display: inline-block;
-      width: 0;
-      height: 0;
-      vertical-align: middle;
-      top: 0;
-      left: 50%;
-      -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-      transform: translateX(-50%); }
-    .naver_0 .nav_erc li {
-      font-size: 14.4px;
-      font-weight: normal; }
-      .naver_0 .nav_erc li:hover {
-        background: #f5f5f5; }
-        .naver_0 .nav_erc li:hover .link {
-          color: #006acf; }
-      .naver_0 .nav_erc li .link {
-        white-space: nowrap;
-        color: #666;
-        padding: 5px 18px; }
-        .naver_0 .nav_erc li .link, .naver_0 .nav_erc li .link .inner {
-          height: 22px;
-          line-height: 22px; }
-        .naver_0 .nav_erc li .link i.fa {
-          margin-right: 8px;
-          top: -1px;
-          position: relative; }
-        .naver_0 .nav_erc li .link span {
-          line-height: 1; }
-
 .rh01 {
   height: 33px;
   line-height: 33px;
@@ -663,6 +612,7 @@
       padding: 12px 0 0; }
     .login_banner .login-form .input-base {
       border: 1px solid #ddd;
+      -webkit-box-sizing: border-box;
       box-sizing: border-box;
       outline: none;
       height: 44px;
@@ -894,6 +844,55 @@
         }
     } */
 /*logoRow end*/
+/* slide start */
+.slideBox01 {
+  width: 100%;
+  overflow: hidden;
+  position: relative; }
+  .slideBox01 .hd {
+    width: 100%;
+    overflow: hidden;
+    z-index: 1;
+    bottom: 5px; }
+    .slideBox01 .hd ul {
+      zoom: 1;
+      display: inline-block; }
+      .slideBox01 .hd ul li {
+        margin-right: 12px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        line-height: 14px;
+        background: #605751;
+        cursor: pointer; }
+        .slideBox01 .hd ul li.on {
+          background: #006acf;
+          width: 12px;
+          height: 12px;
+          top: -1px; }
+  .slideBox01 .direction {
+    display: block;
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 45%;
+    z-index: 999;
+    cursor: pointer;
+    display: none; }
+  @media screen and (min-width: 1445px) {
+    .slideBox01 .direction {
+      display: block; } }
+  .slideBox01 .direction.prev {
+    background: url(../img/left.png) no-repeat center center;
+    left: -45px; }
+  .slideBox01 .direction.next {
+    background: url(../img/right.png) no-repeat center center;
+    right: -45px; }
+
+.slideBox01 .bd li {
+  height: 410px; }
+
+/* slide end */
 /* navbar start */
 .navBar_wrapper {
   background: -webkit-gradient(linear, left top, left bottom, from(#0073c2), color-stop(#005daf), to(#0073c2));
@@ -912,11 +911,18 @@
   color: #fff;
   font-weight: 700; }
 
-.navbar-line02 .navbar-block.on,
 .navbar-line02 .navbar-block:hover {
   background: -webkit-radial-gradient(#ff9500, #ffbf00);
   background: radial-gradient(#ff9500, #ffbf00);
-  background: #ffbf00\0;
+  background: #ffbf00\0; }
+
+.navbar-line02 .navbar-block.on {
+  background: -webkit-radial-gradient(#ff9500, #ffbf00);
+  background: radial-gradient(#ff9500, #ffbf00);
+  background: #ffbf00\0; }
+
+.navbar-line02 .navbar-block.on,
+.navbar-line02 .navbar-block:hover {
   color: #fff;
   z-index: 99; }
   .navbar-line02 .navbar-block.on a.navLink.divider:before,
@@ -953,55 +959,57 @@
     top: -1px; }
 
 /* navbar end */
-/* slide start */
-.slideBox01 {
-  width: 100%;
-  overflow: hidden;
-  position: relative; }
-  .slideBox01 .hd {
-    width: 100%;
-    overflow: hidden;
-    z-index: 1;
-    bottom: 5px; }
-    .slideBox01 .hd ul {
-      zoom: 1;
-      display: inline-block; }
-      .slideBox01 .hd ul li {
-        margin-right: 12px;
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        line-height: 14px;
-        background: #605751;
-        cursor: pointer; }
-        .slideBox01 .hd ul li.on {
-          background: #fff;
-          width: 12px;
-          height: 12px;
-          top: -1px; }
-  .slideBox01 .direction {
-    display: block;
-    width: 45px;
-    height: 45px;
-    position: absolute;
-    top: 45%;
-    z-index: 999;
-    cursor: pointer;
-    display: none; }
-  @media screen and (min-width: 1445px) {
-    .slideBox01 .direction {
-      display: block; } }
-  .slideBox01 .direction.prev {
-    background: url(../img/left.png) no-repeat center center;
-    left: -45px; }
-  .slideBox01 .direction.next {
-    background: url(../img/right.png) no-repeat center center;
-    right: -45px; }
+.naver_0 {
+  display: none;
+  position: absolute;
+  z-index: 99;
+  top: 100%;
+  min-width: 100%;
+  max-width: 200%; }
+  .naver_0 .nav_erc {
+    border: 1px solid #ddd;
+    padding: 15px 0;
+    border-top: none; }
+    .naver_0 .nav_erc:before {
+      position: absolute;
+      left: 0px;
+      width: auto;
+      content: "";
+      font-size: 15px; }
+    .naver_0 .nav_erc:before {
+      border-top: 6px dashed #ffbf00;
+      border-right: 6px solid transparent;
+      border-left: 6px solid transparent;
+      display: inline-block;
+      width: 0;
+      height: 0;
+      vertical-align: middle;
+      top: 0;
+      left: 100px;
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      transform: translateX(-50%); }
+    .naver_0 .nav_erc li {
+      font-size: 14.4px;
+      font-weight: normal; }
+      .naver_0 .nav_erc li:hover {
+        background: #f5f5f5; }
+        .naver_0 .nav_erc li:hover .link {
+          color: #006acf; }
+      .naver_0 .nav_erc li .link {
+        white-space: nowrap;
+        color: #666;
+        padding: 5px 18px; }
+        .naver_0 .nav_erc li .link, .naver_0 .nav_erc li .link .inner {
+          height: 22px;
+          line-height: 22px; }
+        .naver_0 .nav_erc li .link i.fa {
+          margin-right: 8px;
+          top: -1px;
+          position: relative; }
+        .naver_0 .nav_erc li .link span {
+          line-height: 1; }
 
-.slideBox01 .bd li {
-  height: 410px; }
-
-/* slide end */
 .q_content {
   padding-top: 23px;
   padding-bottom: 40px;
@@ -1039,8 +1047,10 @@
   #slideBd .news_intro, #slideBd .slideBd_left {
     display: none; }
   #slideBd .ellipsis {
+    -webkit-transition: all 0.2s;
     transition: all 0.2s; }
   #slideBd .title {
+    -webkit-transition: all 0.2s;
     transition: all 0.2s; }
   #slideBd li {
     /* @include lheightM($height:30px); */ }
@@ -1050,6 +1060,8 @@
     border-top: none; }
     #slideBd li.on .news_intro, #slideBd li.on .slideBd_left {
       display: block; }
+    #slideBd li.on .news_intro {
+      height: 44px; }
     #slideBd li.on .ellipsis {
       font-size: 14px;
       width: 100%; }
@@ -1065,6 +1077,8 @@
           width: auto;
           content: none;
           font-size: 15px; }
+      #slideBd li.on .slideBd_right .date {
+        display: none; }
   #slideBd .slideBd_left .date {
     color: #fff;
     padding-top: 8px; }
@@ -1110,9 +1124,11 @@
   height: 75px; }
 
 #slideBd2 .ellipsis {
+  -webkit-transition: all 0.2s;
   transition: all 0.2s; }
 
 #slideBd2 .title {
+  -webkit-transition: all 0.2s;
   transition: all 0.2s; }
 
 #slideBd2 li {
@@ -1150,8 +1166,11 @@
     background: url(../img/grayArrow.png);
     width: 30px;
     height: 30px;
-    margin-right: 50px;
-    margin-top: -22.5px; }
+    right: 50px;
+    top: 50%;
+    margin-top: -15px;
+    /*  margin-right:50px;
+            margin-top:-($bd_h2/2 - 30px/2) */ }
 
 /* list start */
 .news-list01 li {
@@ -1224,6 +1243,12 @@
       .gallaryWrapper .pagination .swiper-pagination-switch.visible {
         background: #345fad; }
 
+/*我们的能力标题 不换行 */
+.ability_wrapper #gallary .inner .info h3 {
+  overflow: visible;
+  white-space: normal;
+  word-break: break-all; }
+
 #gallary {
   /* height:$gallary_h; */
   margin-left: -6px;
@@ -1232,10 +1257,12 @@
     width: 33.33333%;
     min-height: 1px; }
     #gallary .row-block .inner {
-      padding: 0 6px; }
+      padding: 0 6px;
+      /* @if($height){height:$height;line-height:$height;@extend %block;} */ }
   #gallary .inner {
     height: 157px; }
     #gallary .inner img {
+      -webkit-transition: all 0.2s;
       transition: all 0.2s;
       border-radius: 0; }
     #gallary .inner .innerWrapper {
@@ -1262,12 +1289,14 @@
       border-radius: 20px 0 20px 0; }
       #gallary .inner .info h3 {
         padding: 10px 0 5px;
+        -webkit-transition: 0.2s;
         transition: 0.2s; }
       #gallary .inner .info .outer {
         height: 0; }
         #gallary .inner .info .outer p {
           height: 0;
           line-height: 18.33333px;
+          -webkit-transition: 0.2s;
           transition: 0.2s;
           margin-bottom: 15px;
           white-space: normal;
@@ -1306,6 +1335,7 @@
     padding-left: 115px; }
 
 .centerMiddle {
+  -webkit-box-shadow: 0 0 3px #e8e2e2;
   box-shadow: 0 0 3px #e8e2e2;
   background: #fff;
   margin-top: -140px;
@@ -1436,11 +1466,14 @@
   .contentPart .text {
     padding: 0 0 20px 0; }
   .contentPart .text, .contentPart .ability_wrapper, .contentPart .brand_link_wrapper,
-  .contentPart .commonPic {
+  .contentPart .commonPic, .contentPart .commonWrapper {
     padding-top: 20px; }
   .contentPart .news_wrapper {
     margin-left: -10px;
     margin-right: -10px; }
+
+.commonWrapper {
+  padding-top: 20px; }
 
 .brand_link_wrapper .brand_link + .brand_link {
   padding-top: 13.33333px; }
@@ -1539,3 +1572,132 @@
   border-top: 1px dashed #ddd; }
   .news_title .t2 .info {
     margin-left: 15px; }
+
+.department {
+  padding-top: 35px; }
+  .department .un-block-1 {
+    width: 57.30337%;
+    min-height: 1px; }
+  .department .un-block-2 {
+    width: 42.69663%;
+    min-height: 1px; }
+  .department li {
+    padding: 4px 40px 4px 0; }
+  .department span {
+    background: #ff9500;
+    color: #fff;
+    padding: 0 12px;
+    border-radius: 5px;
+    width: auto;
+    text-align: left;
+    height: auto; }
+  .department p {
+    margin-left: 50px;
+    height: auto; }
+  .department .d2 li {
+    padding: 6px 40px 6px 0; }
+
+#addRow {
+  margin-left: -5px;
+  margin-right: -5px;
+  padding-bottom: 12px; }
+  #addRow .row-block {
+    width: 33.33333%;
+    min-height: 1px; }
+    #addRow .row-block .inner {
+      padding: 0 5px;
+      /* @if($height){height:$height;line-height:$height;@extend %block;} */ }
+  #addRow > div > div > div {
+    border: 1px solid #ddd;
+    height: 235px;
+    font-size: 14.04px;
+    cursor: pointer; }
+    #addRow > div > div > div.active {
+      background: #e4f3fb;
+      border: 1px solid #e4f3fb; }
+      #addRow > div > div > div.active:before {
+        position: absolute;
+        left: 0px;
+        width: auto;
+        content: "";
+        font-size: 15px;
+        border-top: 10px dashed #e4f3fb;
+        border-right: 10px solid transparent;
+        border-left: 10px solid transparent;
+        display: inline-block;
+        width: 0;
+        height: 0;
+        vertical-align: middle;
+        bottom: -10px;
+        left: 50%;
+        margin-left: -10px; }
+      #addRow > div > div > div.active i {
+        color: #006acf; }
+        #addRow > div > div > div.active i + p {
+          color: #006acf; }
+      #addRow > div > div > div.active .addInfo {
+        color: black; }
+    #addRow > div > div > div i {
+      padding-top: 30px;
+      font-size: 37.44px; }
+      #addRow > div > div > div i + p {
+        font-size: 15.6px;
+        padding: 10px 0 10px; }
+    #addRow > div > div > div .addInfo {
+      padding: 0 20px;
+      line-height: 26.4px; }
+
+.drow_wrapper:before {
+  position: absolute;
+  left: 0px;
+  width: auto;
+  content: " ";
+  font-size: 15px;
+  width: 1px;
+  background: #ddd;
+  top: 30px;
+  bottom: 30px;
+  left: 30px; }
+
+.drow {
+  padding: 0 25px; }
+  .drow + .drow {
+    padding-top: 30px; }
+  .drow .drow_left, .drow .drow_right {
+    min-height: 1px; }
+  .drow .drow_left {
+    width: 110px;
+    text-align: left;
+    height: auto; }
+  .drow .drow_right {
+    margin-left: 150px;
+    height: auto; }
+  .drow .drow_left {
+    background: url(../img/icon07.png) 0 center no-repeat;
+    padding-left: 25px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 21.528px;
+    color: #333; }
+  .drow .drow_right + .drow_right {
+    margin-top: 10px; }
+  .drow .drow_right .p {
+    padding: 19px 25px;
+    background: #f3f3f3;
+    border-radius: 5px; }
+  .drow .drow_right:before {
+    position: absolute;
+    left: 0px;
+    width: auto;
+    content: "";
+    font-size: 15px;
+    border-top: 10px solid transparent;
+    border-right: 10px dashed #f3f3f3;
+    border-bottom: 10px solid transparent;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    vertical-align: middle;
+    left: -10px;
+    top: 50%;
+    margin-top: -10px; }
