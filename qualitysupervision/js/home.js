@@ -7,7 +7,7 @@ $(function(){
                 .on("click",function(e){
                             e.stopPropagation();
                             childList.slideToggle();
-                            $(this).toggleClass("on")
+                            $(this).parent().toggleClass("on")
                 })
         : $(e).children(".sideBar_a").addClass("bottom");
     })

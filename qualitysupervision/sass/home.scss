@@ -53,10 +53,6 @@
     
     .navBar_wrapper{
         
-        background: -webkit-gradient(linear,left top, left bottom,from($navbar_to),color-stop($navbar_bg),to($navbar_to));
-        
-        background: -webkit-linear-gradient($navbar_to,$navbar_bg,$navbar_to);
-        
         background: linear-gradient($navbar_to,$navbar_bg,$navbar_to);
         background:#{$navbar_bg}\0;
     }
@@ -77,12 +73,10 @@
     $centerActiveY:darken($centerYellow, 15%);
     $activeYellow:darken($yellow, 5%); 
     .navbar-line02 .navbar-block:hover {
-        background: -webkit-radial-gradient($centerYellow,$yellow);
         background: radial-gradient($centerYellow,$yellow);
         background:#{$yellow}\0;
     }
     .navbar-line02 .navbar-block.on{
-        background: -webkit-radial-gradient(#ff9500,$yellow);
         background: radial-gradient(#ff9500,$yellow);
         background:#{$yellow}\0;
     }
@@ -410,7 +404,6 @@ $gallary_r:20px;
                 height:$gallary_h;
                 img{
                     @extend %full;@extend %block;
-                    -webkit-transition:all 0.2s;
                     transition:all 0.2s;
                     border-radius:0;
                 } 
@@ -437,14 +430,13 @@ $gallary_r:20px;
                     padding:0 15px;
                     border-radius:$gallary_r 0 $gallary_r 0;
                     
-                    h3{padding:$info_p 0 $info_p/2;@extend %ellipsis;-webkit-transition:0.2s;transition:0.2s;}
+                    h3{padding:$info_p 0 $info_p/2;@extend %ellipsis;transition:0.2s;}
                     .outer{
                             height: 0;
                             p{
                                 @extend %smallSize;
                                 height:0;
                                 line-height: $baseLineHeight/1.2;
-                                -webkit-transition:0.2s;
                                 transition:0.2s;
                                 margin-bottom: 15px;
                                 white-space: normal;
@@ -555,6 +547,11 @@ $sb_brand_h:65px;
                 }
             }
         }
+        .level2{.sideBar_a{
+            padding:($sb_btn_p - 5px) $sb_pl;
+            .icontext{padding-left:15px;}
+            }
+        }
         .level2{
             font-size: $mediumSize*0.8;
             @include border($position:false,$width:1px,$color:$baseBorderColor);
@@ -565,19 +562,21 @@ $sb_brand_h:65px;
                 @include border($position:top,$width:1px,$color:$baseBorderColor);
                 &>.sideBar_a{
                     background:url(#{$baseImgUrl}dgrayArrow.png) ($leftSide_w - 25px) center no-repeat;
-                    padding:($sb_btn_p - 5px) $sb_pl;
+                    
+                    @include border($position:right,$width:2px,$color:$white,$type:solid);
                     .icontext{
                         @include persudo($color:#d5d5d5,$content:"·",$position:before,$bg:none){
                             left:0px;
                             top:-2px;
                             font-size: 30px;
-                        };
-                        padding-left:15px;
+                        }; 
+                        
                     }
                 }
                 &.on>.sideBar_a,&:hover>.sideBar_a{
                     background:url(#{$baseImgUrl}dblueArrow.png) ($leftSide_w - 25px) center no-repeat;         
                     color:$blue;
+                    @include border($position:right,$width:2px,$color:$blue,$type:solid);
                     @extend %font-weight;
                     .icontext{
                         @include persudo($color:$blue,$content:"·",$position:before,$bg:none){
@@ -591,6 +590,32 @@ $sb_brand_h:65px;
                 &.on,&:hover{
                     background:$contentBgColor;
                 }   
+            }
+        }
+        .level3{
+            font-size: $mediumSize*0.9;
+            &>.sideBar_li{
+                background:$white;
+                @include border($position:top,$width:2px,$color:$white);
+                &>.sideBar_a{
+                   padding:($sb_btn_p - 10px) $sb_pl;
+                   .icontext{
+                        color:#848484;    
+                        @include persudo($color:inherit,$content:"-",$position:before,$bg:none){
+                            left:0px;
+                            top:-2px;
+                            font-size: 20px;
+                        }; 
+                    }
+                }
+                
+                &.on,&:hover{
+                    .icontext{
+                        color:$blue;
+                        text-decoration:underline;    
+                    }    
+                    
+                }
             }
         }
         .sideBar_li{
@@ -613,31 +638,10 @@ $sb_brand_h:65px;
          
 }
 
-@mixin header_hBeta($height:30px,$color:#a9a9a9){
-    @extend %overflow;
-    height:$height;
-    border-bottom:1px solid darken($light-gray, 2%);
-    line-height:$height;
-    .h-title01 {
-        height:$height - 1px;
-        border-bottom:2px solid $mainColor;
-        .icon { vertical-align: middle; margin-right: 7px; position: relative; top: -1px; }
-        .text{color:$mainColor;font-size:$bigSize;}
-        
-    }
-    .r-link{
-            .link{
-                padding-left:15px;
-                @extend %relative;
-                color:$color;
-                & + .link{
-                    @include persudo($color:$color,$content:">",$position:before,$bg:none);
-                }
-                &.on{color:$mainColor;}
-            }
-    }
-    
-}
+
+
+
+
 .news_h02{ 
     @include header_hBeta($height:$sb_brand_h);
     line-height: $sb_brand_h*1.5; 
@@ -647,8 +651,8 @@ $sb_brand_h:65px;
         font-size: $smallSize;
         @extend %float-l;
     }
-}
-
+} 
+ 
 
 $content_p:20px;
 $cpp:10px;
@@ -922,6 +926,9 @@ $drow_pl:25px;
     }
 }
 
+.productRow{
+    @include rowBeta($num:4,$outer_gutter:15px,$plusM:true,$height:false);
+}
 
 
 

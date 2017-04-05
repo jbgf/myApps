@@ -25,6 +25,24 @@
 
                                         </p>
                                     </a>
+                                    <ul class="sideBar_ul level3">
+                                        <li class="sideBar_li ">
+                                            <a class="sideBar_a ">
+                                                <p>
+                                                
+                                                <span class="icontext">level3</span>
+                                                </p>
+                                            </a>
+                                        </li>
+                                        <li class="sideBar_li ">
+                                            <a class="sideBar_a ">
+                                                <p>
+                                                
+                                                <span class="icontext">level3</span>
+                                                </p>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </li>
                                 <li class="sideBar_li ">
                                     <a class="sideBar_a ">
@@ -107,135 +125,23 @@
                       
                 </div>
                 
+                
+
                 <div class="contentPart">
-                    <div class="ability_wrapper">
-                         
-                            <div id="gallary" class="swiper-container">
-                            
-                                <div  class="swiper-wrapper">
-                                    <div class="swiper-slide row-block">
-                                        <div class="inner">
-                                        <a>
-                                          <div class="innerWrapper">
-                                              <img src="img/g01.png">
-                                              <div class="info">
-                                                  <h3>Electics&Electronic</h3>
-                                                  <div class="outer"><p>You could find the highlights of lastese chages.</p>
-                                                  </div>
-                                              </div>  
-                                          </div>
-                                        </a>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide row-block">
-                                        <div class="inner">
-                                        <a>
-                                          <div class="innerWrapper">
-                                              <img src="img/g02.png">
-                                              <div class="info">
-                                                  <h3>Electics&Electronic</h3>
-                                                  <div class="outer"><p>You could find the highlights of lastese chages.</p>
-                                                  </div>
-                                              </div>  
-                                          </div>
-                                        </a>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide row-block">
-                                        <div class="inner">
-                                        <a>
-                                          <div class="innerWrapper">
-                                              <img src="img/g03.png">
-                                              <div class="info" style="background: rgba(204,74,74,0.6)">
-                                                  <h3>Electics&Electronic</h3>
-                                                  <div class="outer"><p>You could find the highlights of lastese chages.</p></div>
-                                              </div>  
-                                          </div>
-                                        </a>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide row-block">
-                                        <div class="inner">
-                                        <a>
-                                          <div class="innerWrapper">
-                                              <img src="img/g04.png">
-                                              <div class="info" >
-                                                  <h3>Electics&Electronic</h3>
-                                                  <div class="outer"><p>You could find the highlights of lastese chages.</p></div>
-                                              </div>  
-                                          </div>
-                                        </a>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide row-block">
-                                        <div class="inner">
-                                        <a>
-                                          <div class="innerWrapper">
-                                              <img src="img/g05.png">
-                                              <div class="info" style="background: rgba(187,159,59,0.6)">
-                                                  <h3>Electics&Electronic</h3>
-                                                  <div class="outer"><p>You could find the highlights of lastese chages.</p></div>
-                                              </div>  
-                                          </div>
-                                        </a>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide row-block">
-                                        <div class="inner">
-                                        <a>
-                                          <div class="innerWrapper">
-                                              <img src="img/g06.png">
-                                              <div class="info">
-                                                  <h3>Electics&Electronic</h3>
-                                                  <div class="outer"><p>You could find the highlights of lastese chages.</p></div>
-                                              </div>  
-                                          </div>
-                                        </a>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide row-block">
-                                        <div class="inner">
-                                        <a>
-                                          <div class="innerWrapper">
-                                              <img src="img/g07.png">
-                                              <div class="info" style="background: rgba(236,231,231,0.6)">
-                                                  <h3>Electics&Electronic</h3>
-                                                  <div class="outer"><p>You could find the highlights of lastese chages.</p></div>
-                                              </div>  
-                                          </div>
-                                        </a>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide row-block">
-                                        <div class="inner">
-                                        <a>
-                                          <div class="innerWrapper">
-                                              <img src="img/g08.png">
-                                              <div class="info" style="background: rgba(148,170,193,0.6)">
-                                                  <h3>Electics&Electronic</h3>
-                                                  <div class="outer"><p>You could find the highlights of lastese chages.</p></div>
-                                              </div>  
-                                          </div>
-                                        </a>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide row-block">
-                                        <div class="inner">
-                                        <a>
-                                          <div class="innerWrapper">
-                                              <img src="img/g09.png">
-                                              <div class="info" style="background: rgba(148,170,193,0.6)">
-                                                  <h3>Electics&Electronic</h3>
-                                                  <div class="outer"><p>You could find the highlights of lastese chages.</p></div>
-                                              </div>  
-                                          </div>
-                                        </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                
+                    <div class="commonWrapper">
+                        <div class="news_h">
+                            <div class="h-title01 float-l">
+                                <span class="icon"><img src="img/icon1.png"></span>
+                                <span class="text text02">Motors</span>
                             </div>
-                            
+                        </div>
+                        <div class="productRow">
+                            <div class="row-block">
+                                <div class="inner">
+                                  <div class="p"><img src="img/"></div>
+                                </div>
+                            </div>
+                        </div>    
                         
                     </div> 
                 </div>
