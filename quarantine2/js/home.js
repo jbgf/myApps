@@ -192,5 +192,50 @@
 }(jQuery);
 
 
+jQuery.validator.addMethod("isTel", function(value,element) {   
+                      
+    var length = value.length;   
+    var mobile = /^1(3[0-9]|4[57]|5[0-35-9]|8[0-9]|70)\d{8}$/;   
+     
+    return this.optional(element) || (length==11 && mobile.test(value));   
+}, "请正确填写您的联系方式");
+
+function uploadBtn(btns){
+    btns.each(function(i,e){
+        var input = $(e).parents(".form-row").find(".baseInput").attr("readonly","readonly"),name;
+            name = input.attr("data-name") || false;
+            isrequired = input.attr("data-required") || false;
+        $(e).wrap("<label></label>");
+        var fileBtn = $("<input type='file' class='hide' name="+name+" required="+isrequired+">"),objUrl;
+            if(name){
+                fileBtn.insertAfter($(e)).change(function(){
+                  objUrl = getObjectURL(this.files[0]);
+                  if(input.is("input")){
+                      input.val(this.files[0].name)
+                  }else{
+                      input.html(this.files[0].name)  
+                  }
+                });
+            }
+            
+            
+     });
+}
+
+
+function getObjectURL(file){
+      var url = null ; 
+      if (window.createObjectURL!=undefined){ // basic
+          url = window.createObjectURL(file) ;
+      } else if (window.URL!=undefined) { // mozilla(firefox)
+          url = window.URL.createObjectURL(file) ;
+      } else if (window.webkitURL!=undefined) { // webkit or chrome
+          url = window.webkitURL.createObjectURL(file) ;
+      }
+      
+      return url ;
+}
+
+
 
 

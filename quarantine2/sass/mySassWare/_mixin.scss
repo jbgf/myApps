@@ -38,6 +38,7 @@
     @include radius($radius);
     @extend %align-center;
     background:$bg;
+    @content;
 }
 
 @mixin slideNav($bg:#605751,$size:10px,$onColor:#fff) {
@@ -144,18 +145,27 @@
         }
     } 
 }
-@mixin border($position:false,$width:1px,$color:$baseBorderColor){
+
+@mixin makeBorder($width:50px,$height:1px,$color:#fff) {
+    width:$width;
+    height:$height;
+    background:$color;
+    @content;
+}
+
+@mixin border($position:false,$width:1px,$color:$baseBorderColor,$type:solid){
     @if($position){
         @if($color != none){
-                border-#{$position}:$width solid $color;
+                border-#{$position}:$width $type $color;
             }@else{
                 border-#{$position}:none;
             }
         
     }@else{
-        border:$width solid $color;
+        border:$width $type $color;
     }
 }
+
 @mixin cursor($cursor:pointer){
     cursor: $cursor;
 }
@@ -245,7 +255,7 @@
     width:100%;
 }
 @mixin form_row($widthArr,$height,$heightAuto:true){
-    $index:0;
+        $index:0;
      
         @extend %clear;
         height:$height;line-height:$height;
@@ -255,15 +265,18 @@
             .un-block-#{$index}{
                 @extend %float-l;
                 @extend %block;
-                min-height:1px;width:$i;
+                min-height:1px;
+                width:$i;
                 height:100%;
                 line-height: $height;
-                input.baseInput{
-                    @include baseInput($height:100%);
-                    &[type="text"],&[type="password"]{padding:0px 10px;}
+                .baseInput{
+                    @include border();
+                    @extend %float-l;
+                    @include baseInput($height:$height);
+                    padding:0px 10px;
                 }
                 a.baseInput,button.baseInput{
-                    @include baseInput($height:100%);
+                    @include baseInput($height);
                     @extend %block;
                     @extend %align-center;
                     line-height: $height;
@@ -272,12 +285,13 @@
                     @include baseInput($height:100%);width:100%;height:130px;
                     &[type="text"]{padding:10px 10px};
                 }
-                input[type="text"],select,textarea{@include border();@extend %float-l;}
+                
                 
             }
         }
         @if($heightAuto){
-            &.height-auto{height:auto;line-height:inherit;
+            &.height-auto{
+                height:auto;line-height:inherit;
                 input.baseInput{
                         @include baseInput($height:$height)
                 }

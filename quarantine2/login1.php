@@ -1,9 +1,9 @@
 <?php include './common/head.html' ?>
 <link rel="stylesheet" type="text/css" href="css/home.css">
 <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
-
-<script type="text/javascript" src="js/home.js"></script>
 <script type="text/javascript" src="js/jquery.validate.js"></script>
+<script type="text/javascript" src="js/home.js"></script>
+
 <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
       
       <div class="login_banner middleTable" style="background:url(img/login_banner.jpg) center center;background-size:cover;">
@@ -68,15 +68,13 @@
                         </form>
                       
                   </div>
-              
+                  
+                  
               </div>
           </div>
       </div>
       <script type="text/javascript">
           
-          $("#phoneLabel").click(function(){
-              location.href = "login2.php"
-          })
       </script>
 <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->  
     

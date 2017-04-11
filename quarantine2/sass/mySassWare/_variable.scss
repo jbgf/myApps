@@ -49,8 +49,9 @@ $light-gray2:#f5f5f1;
 $gray:#999;
 $green:#6eb92b;
 $light-blue:#4aadff;
+$light-blue2:#54a4d5;
 $water-blue:#59a3d6;
-$blue:$mainColor;
+$blue:#005bac;
 $light-green:#4bd8a3;
 $yellow:#ffbf00;
 $orange:#efa506;
@@ -62,6 +63,8 @@ $baseBorderColor:#ddd;
 $titleColor:darken($baseFontColor, 30%);
 $cyan:#f0f4f6;
 
+
+%content-bg{background:$contentBgColor;}
 %bg-lightGray{background:$light-gray;}
 %bg-superGray{background:$super-gray;}
 %bg-lightGreen{background:$light-green;}
@@ -161,9 +164,6 @@ $cyan:#f0f4f6;
     right: 0;
     position: absolute;
 } 
- 
-
-
 
 %clear{
   &:before,&:after{content:" ";display:table;}

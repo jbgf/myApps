@@ -8,6 +8,7 @@
  * * * * * * * * * * * * * * * * * * ** * * * *@reset  * * * * * * * * * * * * * * * * * * * * 
   * * * * * * * * * * * * * * * * * * * * * * * * * ** * * * * * * * * * * * * * * * * * * * */
 /* reset */
+p{margin:0;}
 button { 
     border: none;
 }
@@ -19,7 +20,7 @@ button:focus{outline:0;}
     margin: 0 auto;
 }
 /* reset */
-
+  
 .font-weight{@extend %font-weight;}
 .smallSize{font-size:$smallSize;}
 .baseSize{@extend %baseSize;}
@@ -27,6 +28,7 @@ button:focus{outline:0;}
 .bigSize{font-size: $bigSize!important;}
   
 /*color*/ 
+.content-bg{@extend %content-bg;}
 .baseFontColor{@extend %baseFontColor;} 
 .titleColor{color:$titleColor; } 
 .white{@extend %white;}
@@ -95,7 +97,7 @@ button:focus{outline:0;}
 
 .disabledLink{
   background: gray!important;
-  cursor: not-allowed;
+  cursor: not-allowed!important;
 }
 .full-height{
     height:100%; 
@@ -313,13 +315,14 @@ $sf_p:10px;
         @include form_row($widthArr:$sf_arr,$height:$sf_h);
         &.submit-row{
             @include form_row($widthArr:$sf_arr,$height:$sf_h + 10px);
-            .search_submit{
+            .baseInput.search_submit{
                 width: 165px !important;
                 height: auto !important;
                 padding:13.5px 0;
                 line-height: 1!important;
                 font-size: 16px!important;
                 @include radius(3px);
+                float:none;
             }
             .info{line-height:$baseLineHeight;padding-top: 10px;}
             a{
@@ -335,7 +338,6 @@ $sf_p:10px;
             input + label{@extend %abs;left:0;top:$sf_h;line-height:$baseLineHeight;padding-left:10px;color:$red;}
         }
     }
-    
     input{@extend %mediumSize;}
     .un-block-2,.un-block-3{padding-left:$sf_p;}
 }
@@ -390,11 +392,18 @@ $pos_arr:top,right,bottom,left;
     $lr02m:5px;
     $ddpt:$lr02h/5.5;
     $dd_h:50px;
-    padding:30px 0; 
+    padding:20px 0; 
     height: $lr02h;
     -webkit-box-sizing: content-box;
             box-sizing: content-box;
     /* @include lheightM($lr02h); */
+    .title{
+        @extend %float-l;
+        @include lheightM($lr02h - 10px);padding-left:$ddpt;
+        font-size:$bigSize*1.3;
+        color:$baseTitleColor;
+
+    }
     .rh01_url{font-size:$mediumSize;@include lheightM($lr02h);}
     .rh01_url,.mainDropDown01,.infoWrapper,.avatar,.caretWrapper{
         @extend %float-l;
@@ -447,6 +456,9 @@ $leftSide_gutter:10px;
     .leftSide{
         @include ftextTab($width:$leftSide_w,$height:auto,$position:"left");
     }
+    .rightWrapper{
+        @include newsTab_img($height:auto,$margin:$leftSide_w + 20px,$position:"left");
+    }
 }
 
 $sideBar02_p:20px;
@@ -461,23 +473,36 @@ $sb_bg:#f7f7f7;
         .sideBar_ul{
             @include border($position:top,$width:1px,$color:$baseBorderColor);
             @include border($position:bottom,$width:1px,$color:$baseBorderColor);
+            .sideBar_ul{
+                border-bottom:none;
+            }
         }
-        .sideBar_a{
-            padding:$sb_btn_h/3 0;
-            @include border($position:left,$width:6px,$color:$sb_bg);
-            @extend %block;
-
-            $iconbg_l:$leftSide_w/6;
-            .iconBg{
-                @include circleImg($size:$sb_btn_ph,$color:#ddd,$borderWidth:0);
-                @extend %abs;
-                left:$iconbg_l;
-                top:0;
-                @extend %align-center;
-                background:$gray;
-            }  
-            .icontext{margin-left:$iconbg_l + $sb_btn_ph + 20px;}
+        .sideBar_li{
+            background:$sb_bg;
+            @extend %mediumSize;
+            @include cursor($cursor:pointer);
+            @include border($position:right,$width:1px,$color:$baseBorderColor);
+            &:hover,&.on{
+                &.childList{
+                    border-right:none;
+                    &>.sideBar_a{
+                        @include border($position:left,$width:6px,$color:$blue); 
+                        background:$white;
+                        &:after{
+                                @include caret($color:$blue,$position:bottom,$width:6px);
+                                -webkit-transform: rotate(180deg);
+                                    -ms-transform: rotate(180deg);
+                                        transform: rotate(180deg);
+                        }
+                    }
+                }  
+                &>.sideBar_a{
+                    .iconBg{background:$blue;}
+                    color:$blue; 
+                }
+            }
             &.childList{
+                &>.sideBar_a{
                     &:after{
                             -webkit-transition: all 0.2s;
                             transition:all 0.2s;
@@ -488,52 +513,46 @@ $sb_bg:#f7f7f7;
                         right: 40px;
                         @include caret($color:$gray,$position:bottom,$width:6px);
                     }
-            }
-            &.expand{
-                    &:after{        
-                            -webkit-transform: rotate(180deg);
-                                -ms-transform: rotate(180deg);
-                                    transform: rotate(180deg);
-                    }
-            }
-            &:hover,&.on{
-                .iconBg{background:$blue;}
-                color:$blue; 
-                &.childList{
-                    @include border($position:left,$width:6px,$color:$blue); 
-                    background:$white;
-                    &:after{
-                            @include caret($color:$blue,$position:bottom,$width:6px);
-                    }
                 }
             }
-
+            & + .sideBar_li{
+                @include border($position:top,$width:1px,$color:$baseBorderColor);
+            }
+            
+        }
+        .sideBar_a{
+            padding:$sb_btn_h/4 0;
+            @include border($position:left,$width:6px,$color:$sb_bg);
+            @extend %block;
+            p{ 
+                  @extend %relative;
+                  @include lheightM($height:$sb_btn_ph);
+                  .iconfont{      
+                      color:$white;                    
+                  }
+            }
+            $iconText_m:20px; 
+            $iconbg_l:$leftSide_w/6;
+            .iconBg{
+                @include circleImg($size:$sb_btn_ph,$color:#ddd,$borderWidth:0);
+                @extend %abs;
+                left:$iconbg_l;
+                top:0;
+                @extend %align-center;
+                background:$gray;
+            }  
+            .icontext{margin-left:$iconbg_l + $sb_btn_ph + 20px;}
+           
             &.bottom{
                 @include border($position:left,$width:6px,$color:$sb_bg);  
             }
         }
-          
-        .sideBar_li{
-            & + .sideBar_li{
-                @include border($position:top,$width:1px,$color:$baseBorderColor);
-            }
-            .sideBar_a{
-                p{ 
-                      @extend %relative;
-                      @include lheightM($height:$sb_btn_ph);
-                      .iconfont{      
-                          color:$white;                    
-                      }
-                }
-                $iconText_m:20px; 
-            }
-            
+
+        .ulAddon{
+            min-height: 450px;
             background:$sb_bg;
-            @extend %mediumSize;
-            @include cursor($cursor:pointer);
-            
+            @include border($position:right);
         }
-           
 }
  
 
@@ -676,5 +695,255 @@ $sb_bg:#f7f7f7;
     
 } 
 $ft02:10px;
-.footer02{padding:$ft02 0 $ft02*2;}
-      
+.footer02{
+    padding:$ft02 0 $ft02*2;
+    @include border($position:top);
+    &.content-bg{
+        border-top:none;
+    }
+}
+
+
+$sf_arr:33%,360px,auto;
+$sf_h:35px;
+$sf_w:100%; 
+$sf_p:6px;
+$sf_mt:15px;
+$imgthumb_w:130px;
+.solution_form{
+    width:$sf_w;
+    
+    padding-bottom: $sf_h*2;  
+    @extend %overflow;
+    font-size:$mediumSize*0.9;
+
+    .form-row{margin-top:25px; 
+        @include form_row($widthArr:$sf_arr,$height:$sf_h);
+        div.baseInput{
+            @extend %ellipsis;
+        }
+        p.tips_p{
+            float: left;
+            line-height: 1;
+            padding-top: 5px;
+            color:$gray;
+            font-size: $smallSize;
+            padding-bottom:0;
+        } 
+        &.submit-row{
+            @include form_row($widthArr:$sf_arr,$height:$sf_h + 10px);
+            a{
+                @extend %align-center;
+            }
+        } 
+    }
+    .submit-row{
+        #register_btn{
+            background:$light-blue2;
+            width:165px;
+            height: 40px;
+            font-size: $mediumSize;
+        }
+    }
+    $rowBlock:0.65;
+    $rowbm:0.05;
+    .codeRow{
+            @extend %clear;
+            .ciWrapper{width:percentage($rowBlock);}
+            .codeBWrapper,.ciWrapper{@extend %float-l;}
+            .codeBWrapper{
+                width:percentage(1-$rowBlock - $rowbm);
+                margin-left:percentage($rowbm);
+            }  
+            .codeBtn{
+                    @include lheightM($height:$sf_h)
+                    @include btn($width:100%,$height:$sf_h,$radius:5px,$bg:$green);
+                    @extend %white;
+                    font-size: $smallSize*1.2;    
+            }  
+    }
+    .upload_btn{
+        @include btn($width:80px,$height:$sf_h,$radius:10px,$bg:$green);
+        color:$white;
+        font-size: $mediumSize;
+        margin-left: 10px;
+        font-weight: normal;
+        @include cursor();
+    }
+    .un-block-1{.red{margin-right:3px}}
+    .un-block-2,.un-block-3{padding-left:$sf_p;}
+    .agreement{
+        @extend %float-l;
+        line-height: $baseLineHeight;
+        font-size: $smallSize;
+        padding-top:5px;
+        #agreeLabel{@extend %float-l;}
+        .labelWrapper{
+            @extend %clear;
+            @extend %iBlock;
+        }
+        .labelFor{
+            display:none;
+            
+            & + .checkBox{
+                @include border();
+                @include radius(2px);
+                width:13px;
+                height:13px;
+                margin-right: 5px;
+                margin-top: 4px;
+                @extend %float-l;
+            }
+            &:checked + .checkBox{background:url(#{$baseImgUrl}checkbg.png) no-repeat center center}
+        }
+    }
+    .error{color:red;}
+    
+}      
+       
+.commonWrapper{padding-top:30px;}
+
+.chead{
+    font-size: $bigSize*1.4;
+    color:$blue;
+    padding-bottom:15px;
+    @include border($position:bottom,$type:dashed,$color:#005baa);
+}
+
+.hcWrapper{padding-top:15px;}
+$mainpl:20px;
+.tsection{
+    font-size: $baseSize*1.1;
+    padding-top:15px;
+    .toggleBar{
+        background:#f7f7f7;
+        padding:12px $mainpl;
+        
+        @include cursor();
+        @extend %relative;
+        &:hover,&.on{
+            color:$blue;
+            @extend %font-weight;
+        }
+        &.on{
+            .fa{
+                -webkit-transform:rotate(180deg);
+                -ms-transform:rotate(180deg);
+                    transform:rotate(180deg);    
+            }
+            
+        }
+        .fa{
+            @extend %abs;right:$mainpl;top:50%;margin-top:-15px;
+            font-size: $bigSize*1.5;
+            font-weight: normal;
+        }      
+    }
+    .t{
+        padding-top:20px;
+        padding-left:$mainpl;
+        padding-right:$mainpl;
+        line-height: $baseLineHeight*1.2;
+        display: none;
+        .more{margin-left:10px;}
+    }
+} 
+
+$pagi_size:28px;
+.pagination03{margin-top:15px}
+.pagination03 {
+    padding: 30px 0px 0px;
+    ul {
+        display: inline-block;
+        li {
+            cursor: pointer;
+            display: block;
+            float: left;
+            margin: 0px 5px;
+            @extend %align-center;
+            color: $gray;
+            font-size: $smallSize;
+            a {
+                display: block;
+                width: $pagi_size;
+                @include lheightM($height:$pagi_size);
+                border: 1px solid rgb(221, 221, 221);
+                @extend %bg-white;
+                @include radius(3px);
+            }
+            &.left a,&.right a,&.last a{
+                width: 65px;
+                
+                @extend %uppercase;
+            }
+            &.on a{
+                color: white;
+                background: $light-blue2;
+            }
+        }
+    }
+}
+
+.notifications{
+    background:$blue;
+    color:$white;
+    padding:16px 0;
+    font-size: $mediumSize * 0.95;
+    .iconfont{margin-right:10px;font-size:$bigSize*1.2;@include rel_ajust($pos:"top",$value:3px);}
+}
+
+
+.centerWrapper{
+    background:$white;
+    -webkit-box-shadow:0 0 4px #9c9494;
+            box-shadow:0 0 4px #9c9494;
+    .c_contentPart{
+        width:900px;
+        padding-top:15px;
+        @extend %mar-center;
+    }
+}
+
+.chead02{
+    font-size: $bigSize;
+    @extend %baseTitleColor;
+    @extend %font-weight;
+    padding-bottom:10px;
+    @include border($position:bottom,$type:dashed);
+}
+
+$sf_arr:auto,375px,auto;
+$sf_h:40px;
+$sf_p:10px;
+ 
+
+
+$sf_arr2:auto,360px,auto;
+$sf_h:35px;
+$sf_w:100%; 
+$sf_p:6px;
+$sf_mt:15px;
+$imgthumb_w:130px;
+.searchform01{
+    width:$sf_w;
+    @extend %overflow;
+    font-size:$mediumSize*0.9;
+    padding-bottom:30px;
+    @include border($position:bottom);
+    .form-row{
+        margin-top:25px; 
+        @include form_row($widthArr:$sf_arr2,$height:$sf_h);
+        div.baseInput{
+            @extend %ellipsis;
+        }
+        .searchBtn{
+            @include btn($width:90px,$height:$sf_h,$radius:5px,$bg:$light-blue2){
+                color:$white;
+                margin-left: $sf_mt;
+            };
+        } 
+        
+    }
+    
+    
+} 

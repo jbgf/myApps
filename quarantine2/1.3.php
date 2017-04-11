@@ -1,11 +1,9 @@
 <?php include './common/centerhead.html' ?>
 <link rel="stylesheet" type="text/css" href="css/home.css">
 <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
-
 <link rel="stylesheet" type="text/css" href="iconfont/iconfont.css">
-
-<script type="text/javascript" src="js/home.js"></script>
 <script type="text/javascript" src="js/jquery.validate.js"></script>
+<script type="text/javascript" src="js/home.js"></script>
 
 
 <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
@@ -81,25 +79,62 @@
                         </a>
                     </li>
                 </ul>
+                <div class="ulAddon"></div>
                 <script type="text/javascript">
                     $(function(){
+                        var sideBar = {
+                            'data-string':"open",
+                            ini:function(){
+                                    $(".sideBar02 .sideBar_li").each(function(i,e){
+                                        var childList = $(e).children("ul.sideBar_ul");
+                                            childList.length>0 ? 
+                                            $(e).addClass("childList")
+                                                .on("click",function(){
+                                                            childList.slideToggle();
+                                                            $(this).toggleClass("on")
+                                                })
+                                        : $(e).children(".sideBar_a").addClass("bottom");
+                                    });
+                                    this.active();        
+                            },
+                            active:function(){
+                                var string = this["data-string"];
+                            }   
+                        };
+                        sideBar.ini();
 
-                        $(".sideBar02 .sideBar_li").each(function(i,e){
-                            var childList = $(e).children("ul.sideBar_ul");
-                                childList.length>0 ? 
-                                $(e).children(".sideBar_a").addClass("childList")
-                                    .on("click",function(){
-                                                childList.slideToggle();
-                                                $(this).toggleClass("on")
-                                    })
-                            : $(e).children(".sideBar_a").addClass("bottom");
-                        })
+                        
         
                     })
                     
                 </script>
             </div>
         </div> 
+        <div class="rightWrapper">
+            <div class="header02 clear">
+              <div class="more float-l">你的位置：<a href="/">网站首页</a> &gt; <a href="/index.php?s=news&amp;c=category&amp;id=1">产品检测范围</a>&gt;<a href="/index.php?s=news&amp;c=category&amp;id=36">食品理化检测</a>                              
+              </div>
+            </div>
+            <div class="commonWrapper">
+                
+                <div  class="searchform01 mar-center " >
+                         
+                       <div class="form-row height-auto">
+                           <div class="un-block-1 align-right  ">
+                               <span>企业正式名称：</span>
+                           </div>
+                           <div class="un-block-2">
+                              <input class="baseInput" data-name="company">
+                           </div>
+                           <div class="un-block-3">
+                              <a><div class="searchBtn">查询</div></a>
+                           </div>
+                           
+                       </div>
+                         
+                </div>
+            </div>
+        </div>  
     </div>
       
        
