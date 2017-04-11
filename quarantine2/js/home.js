@@ -222,6 +222,18 @@ function uploadBtn(btns){
      });
 }
 
+(function isGoBack(){
+  /*html*/
+  /*<input type="hidden" id="refreshed" value="no">*/
+  
+  window.onload = function(){  
+        var e = document.getElementById("refreshed");  
+        if(e.value=="no")e.value="yes";  
+        else{e.value="no";location.reload();}
+       
+  } 
+})()
+
 
 function getObjectURL(file){
       var url = null ; 

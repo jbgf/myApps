@@ -9,7 +9,7 @@
 
 
 <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-      
+<input type="hidden" id="refreshed" value="no">     
     <div class="notifications">
         <div class="container1000">
             <span><i class="iconfont">&#xe6ad;</i>欢迎注册IQTC会员，体验在线检测服务。</span>
@@ -20,7 +20,7 @@
         <div class="centerWrapper container1000 ">
             <div class="c_contentPart">
                 
-                <form id="solutionF" class="solution_form mar-center clear" enctype="multipart/form-data" method="POST">
+                <form id="solutionF" action="test.php" class="solution_form mar-center clear" enctype="multipart/form-data" method="POST">
                 <p class="chead02">登录信息</p>
                      <div class="form-row height-auto">
                          <div class="un-block-1 align-right mediumSize">
@@ -111,9 +111,6 @@
                          </div>
                          <div class="un-block-3">
                             <div class="upload_btn">上传</div>
-                         </div>
-                         <div class="un-block-3">
-                            <label><div class="upload_btn">上传</div><input type="file" class="hide" name="data[cor_licence]" required="true"></label>
                          </div>
                      </div>
                      
@@ -210,7 +207,7 @@
                             var label = $("#agreeLabel");
                             var rBtn = $("#register_btn");
                             (function lableF(){
-                                
+                                    
                                     label.on("click",function(e){
                                         if($(e.target).is('input')){
                                             return;
@@ -222,7 +219,7 @@
 
                                     rBtn.addClass("disabledLink");
                                     rBtn[0].disabled = true; 
-                                    label.trigger("click");
+                                    if(rBtn[0].disabled)label.trigger("click");
                             })()
 
                             $("#solutionF").submit(function(){
