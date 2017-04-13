@@ -27,6 +27,28 @@
     }
 }
 
+
+@mixin nth_un_width($rateArr:"1,2,3",$string:"td",$blockNum:false) {
+    $sum:0;
+    $index:0;
+    @each $i in $rateArr{
+        $sum : $sum + $i;
+    }
+    @each $var in $rateArr{
+        $index : $index + 1;
+        #{$string}{
+            @if $blockNum == false {
+                &:nth-child(#{$index}){
+                    width:percentage($var/$sum);
+                }    
+            } @else if {
+                width:percentage(1/$blockNum);                
+            } 
+            @content;    
+        }
+    }
+}
+
 @mixin rel_ajust($pos:"top",$value:-2px){
     @extend %relative;
     #{$pos}:#{$value};   
@@ -36,6 +58,7 @@
     width:$width;
     @include lheightM($height);
     @include radius($radius);
+    @include cursor();
     @extend %align-center;
     background:$bg;
     @content;

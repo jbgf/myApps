@@ -21,19 +21,13 @@
                               <div class="form-row waysRow">
                                     <div class="labelWrapper">
                                         <label id="commonLabel" for="commonway" class="radio">
-                                            <input type="radio" class="labelFor" id="commonway" name="ways" checked="true">
+                                            <input type="radio" class="labelFor" id="commonway" name="ways" >
                                             <div class="radioBox"></div>
                                             <span class="radioText">普通登录</span>
                                         </label>
                                     </div>
 
-                                    <div class="labelWrapper">
-                                        <label id="phoneLabel" for="phoneway" class="radio">
-                                            <input type="radio" class="labelFor" id="phoneway" name="ways" >
-                                            <div class="radioBox"></div>
-                                            <span class="radioText">手机登录</span>
-                                        </label>
-                                    </div>
+                                    
                               </div>
                               <div class="form-row ">
                                 

@@ -4,6 +4,7 @@
 
 <link rel="stylesheet" type="text/css" href="iconfont/iconfont.css">
 <script type="text/javascript" src="js/jquery.validate.js"></script>
+<script type="text/javascript" src="js/layer/layer.js"></script>
 <script type="text/javascript" src="js/home.js"></script>
 
 
@@ -216,10 +217,15 @@
                                         rBtn[0].disabled = !rBtn[0].disabled;
                                         
                                     });
-
-                                    rBtn.addClass("disabledLink");
-                                    rBtn[0].disabled = true; 
-                                    if(rBtn[0].disabled)label.trigger("click");
+                                    var ib = isGoBack();
+                                    if(ib){
+                                        
+                                    }else{
+                                        rBtn.addClass("disabledLink");
+                                        rBtn[0].disabled = true; 
+                                        label.trigger("click");
+                                    }
+                                    
                             })()
 
                             $("#solutionF").submit(function(){
@@ -244,18 +250,20 @@
                                       
                                     },
                                     ignore: "",    /*忽略，默认忽略:hidden,""表示清空*/
+                                    focusCleanup:true,
                                     errorPlacement:function(label,element){
-                                        $(element).data("validate",false);
                                         
-                                        if (element.is(':radio') || element.is(':checkbox')) { 
-                                            /*console.log(element)*/
-                                            /*  */
+                                        if ($(element).is(':input[type="file"]') ) { 
+                                            $('<p class="tips_p" style="color:red"></p>').append(label).insertAfter($(element).parents(".form-row").find(".baseInput"));
                                         }
                                     },
                                     success:function(label,element){
-                                        $(element).data("validate",true);
+                                           $(label).remove();
+
                                     }
                          });
+
+
                      </script>
                 </form>
             </div>

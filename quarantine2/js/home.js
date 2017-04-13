@@ -215,25 +215,45 @@ function uploadBtn(btns){
                   }else{
                       input.html(this.files[0].name)  
                   }
+                  input.next(".tips_p").remove();
                 });
             }
-            
-            
-     });
+    });
 }
 
-(function isGoBack(){
+function submitCheck($form){
+
+}
+
+function print(url){
+  if($("#printIframe").length>0){$("#printIframe").remove()};
+  var iframe = $('<iframe style="display:none" id="printIframe" src='+url+'></iframe>');
+  $("body").append(iframe);
+  
+  doPrint();
+  function doPrint(){
+      $("#printIframe")[0].contentWindow.print();
+  }
+}
+
+function isGoBack(){
   /*html*/
   /*<input type="hidden" id="refreshed" value="no">*/
   
-  window.onload = function(){  
-        var e = document.getElementById("refreshed");  
-        if(e.value=="no")e.value="yes";  
-        else{e.value="no";location.reload();}
-       
-  } 
-})()
-
+  
+      var e = document.getElementById("refreshed");  
+      if(e){
+          if(e.value=="no"){
+            e.value="yes";
+            return false;  
+          }
+          else{
+            e.value="no";
+            return true;  /*location.reload();*/
+          }  
+      }
+   
+}
 
 function getObjectURL(file){
       var url = null ; 

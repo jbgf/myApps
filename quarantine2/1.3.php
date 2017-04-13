@@ -133,6 +133,173 @@
                        </div>
                          
                 </div>
+
+                <div id="show_newsTW">
+                   
+                    <p class="epTable_t">报验结果</p>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>委托单编号</td>
+                                <td>报告编号</td>
+                                <td>委托时间</td>
+                                <td>样品名称</td>
+                                <td>联系人</td>
+                                <td>支付状态</td>
+                                <td>订单状态</td>
+                                <td>查询密码</td>
+                                <td>报告下载</td>
+                            </tr>
+                            <tr>
+                                  <td>
+                                      3113117183
+                                  </td>
+                                  <td>
+                                      123456
+                                  </td>
+                                  <td>
+                                     2017-02-21 
+                                  </td>
+                                  <td>
+                                      样品
+                                  </td>
+                                  <td>
+                                      张三
+                                  </td>
+                                  <td>
+                                     未支付 <br/><span class="link">立即支付 </span>
+                                  </td>
+                                  <td>
+                                      <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                      <br/>预报检
+                                  </td>
+                                  <td>
+                                      123
+                                  </td>
+                                  <td>
+                                     <p>
+                                        <span class="print link" data-url="common/test.pdf">打印</span> 
+                                        <span class="cancel link">取消</span>
+                                     </p>
+                                     <span class="link">报告下载 </span>
+                                  </td>
+
+                            </tr>
+                            <tr>
+                                  <td>
+                                      3113117183
+                                  </td>
+                                  <td>
+                                      123456
+                                  </td>
+                                  <td>
+                                     2017-02-21 
+                                  </td>
+                                  <td>
+                                      样品
+                                  </td>
+                                  <td>
+                                      张三
+                                  </td>
+                                  <td>
+                                     未支付 <br/><span class="link">立即支付 </span>
+                                  </td>
+                                  <td>
+                                      <i class="fa fa-thumb-tack" aria-hidden="true"></i>
+                                      <br/>预报检
+                                  </td>
+                                  <td>
+                                      123
+                                  </td>
+                                  <td>
+                                     <p>
+                                        <span class="print link">打印</span> 
+                                        <span class="cancel link">取消</span>
+                                     </p>
+                                     <span class="link">报告下载 </span>
+                                  </td>
+
+                            </tr>
+                            <tr>
+                                  <td>
+                                      3113117183
+                                  </td>
+                                  <td>
+                                      123456
+                                  </td>
+                                  <td>
+                                     2017-02-21 
+                                  </td>
+                                  <td>
+                                      样品
+                                  </td>
+                                  <td>
+                                      张三
+                                  </td>
+                                  <td>
+                                     未支付 <br/><span class="link">立即支付 </span>
+                                  </td>
+                                  <td>
+                                      <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                                      <br/>预报检
+                                  </td>
+                                  <td>
+                                      123
+                                  </td>
+                                  <td>
+                                     <p>
+                                        <span class="print link" data-url="common/test.pdf">打印</span> 
+                                        <span class="cancel link">取消</span>
+                                     </p>
+                                     <span class="link">报告下载 </span>
+                                  </td>
+
+                            </tr>
+                            <tr>
+                                  <td>
+                                      3113117183
+                                  </td>
+                                  <td>
+                                      123456
+                                  </td>
+                                  <td>
+                                     2017-02-21 
+                                  </td>
+                                  <td>
+                                      样品
+                                  </td>
+                                  <td>
+                                      张三
+                                  </td>
+                                  <td>
+                                     月结
+                                  </td>
+                                  <td>
+                                      <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                      <br/>预报检
+                                  </td>
+                                  <td>
+                                      123
+                                  </td>
+                                  <td>
+                                     <p>
+                                        <span class="print link" data-url="common/test.pdf">打印</span> 
+                                        <span class="cancel link">取消</span>
+                                     </p>
+                                     <span class="link">报告下载 </span>
+                                  </td>
+
+                            </tr>
+                        
+                        </tbody>
+                        <script type="text/javascript">
+                            $("#show_newsTW .print").on("click",function(){
+                                var url = $(this).attr("data-url");
+                                if(url)print(url);
+                            })
+                        </script>
+                    </table>
+                </div>
             </div>
         </div>  
     </div>

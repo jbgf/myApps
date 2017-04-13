@@ -185,3 +185,13 @@ $cyan:#f0f4f6;
 %float-l{float:left;}
 %float-r{float:right;}
 
+%resetTable{
+        width:100%;
+        border-spacing:0;
+        border-collapse:collapse;
+        @extend %align-center;
+        vertical-align: middle;
+        font-size: $bigSize*0.8;
+        color:$baseTitleColor;
+}
+
