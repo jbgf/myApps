@@ -8,7 +8,7 @@
           this.allData = this.options.allData;
           this.stack = [];
           this.curObj = this.allData;
-          this.curArr = this.curObj.sub;
+          this.arrToChoose = this.curObj.sub;
           this.mainClass = this.options.class;
           this.activeClass = this.options.activeClass;
           this.ini(this.allData);
@@ -57,8 +57,13 @@
                       
                       that.operate_stack(num,index_li);
                       if(!sameLevel){ul.nextAll("ul").remove()} 
-                      if(!that.isFinalLevel(index_li)){
-                          that.createlevel();  
+                      if(that.hasSub(index_li)){
+                         if(!that.isFinalLevel()){
+                            that.createlevel();  
+                         }else{
+                            that.multiChoose();    
+                         }
+                          
                       }
                       
                       $(this).addClass(that.activeClass)
@@ -71,11 +76,23 @@
             var that = this;
             var status ;
             
+            if("final" in that.curObj){
+                status = true;
+            }else{
+                status = false;
+            }
+            return status;
+        }
+
+        multiMenu.prototype.hasSub = function (index) {
+            var that = this;
+            var status ;
+            
             /*console.log(that.curObj)*/
             if("sub" in that.curObj){
-                status = false;
-            }else{
                 status = true;
+            }else{
+                status = false;
             }
             return status;
         }
@@ -88,8 +105,8 @@
 
                   popNum > 0 && that.stack.splice(-popNum,popNum);
                   that.curObj = that.stack[that.stack.length - 1][index];
-                  that.curArr = that.curObj.sub;
-                  that.stack.push(that.curArr);
+                  that.arrToChoose = that.curObj.sub;
+                  that.stack.push(that.arrToChoose);
 
               /*}*/
               
@@ -97,7 +114,7 @@
            }else{
 
               that.stack.splice(0,that.stack.length);
-              that.stack.push(that.curArr);
+              that.stack.push(that.arrToChoose);
               
            }
         }        
@@ -117,7 +134,7 @@
           var that = this;
           var string = "<ul class='multi-ul'>";
           
-              var arr = that.curArr;
+              var arr = that.arrToChoose;
             
               $.each(arr,function(i,e){
                   string +='<li class='+that.mainClass+'>'+e.name+'</li>'
@@ -127,10 +144,13 @@
           
               /*that.multiChoose();*/
           
-          that.multiTag();
+          /*that.multiTag();*/
         }
         
-        multiMenu.prototype.multiChoose = function (ele) {}
+        multiMenu.prototype.multiChoose = function (ele) {
+          var that = this;
+          console.log(that.arrToChoose)
+        }
         multiMenu.prototype.multiTag = function (ele) {}
 
         multiMenu.prototype.reset = function (ele) {

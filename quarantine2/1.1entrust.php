@@ -336,7 +336,8 @@ $(function(){
                                         },
                                         {
                                             name:"非发酵性豆制品",
-                                            final:[
+                                            final:1,
+                                            sub:[
                                                 {
                                                     name:"总砷"
                                                 },
