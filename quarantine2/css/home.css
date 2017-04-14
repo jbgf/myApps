@@ -78,7 +78,7 @@
   color: #fff; }
 
 /* color end */
-.footer .fridend_link, .iBlock, .login_banner .login-form .labelWrapper, .solution_form .agreement .labelWrapper, .news_h03 .process.on .circleNum, .news_h03 .r-ftext, .news_h03 .circleNum, .tableSection table td .addItemBtn, .labelWrapper03 {
+.footer .fridend_link, .iBlock, .login_banner .login-form .labelWrapper, .solution_form .agreement .labelWrapper, .news_h03 .process.on .circleNum, .news_h03 .r-ftext, .news_h03 .circleNum, .tableSection table td .addItemBtn, .labelWrapper03 > span, .labelWrapper03, .multiChooseZone li, .choosedZone li {
   display: inline-block; }
 
 .naver_0 .nav_erc li .link, .news-list01 li a, .displayBlock, .typeform01 .form-row .un-block-1, .typeform01 .form-row .un-block-1 a.baseInput, .typeform01 .form-row .un-block-1 button.baseInput, .typeform01 .form-row .un-block-2, .typeform01 .form-row .un-block-2 a.baseInput, .typeform01 .form-row .un-block-2 button.baseInput, .typeform01 .form-row .un-block-3, .typeform01 .form-row .un-block-3 a.baseInput, .typeform01 .form-row .un-block-3 button.baseInput, .typeform01 .form-row.submit-row .un-block-1, .typeform01 .form-row.submit-row .un-block-1 a.baseInput, .typeform01 .form-row.submit-row .un-block-1 button.baseInput, .typeform01 .form-row.submit-row .un-block-2, .typeform01 .form-row.submit-row .un-block-2 a.baseInput, .typeform01 .form-row.submit-row .un-block-2 button.baseInput, .typeform01 .form-row.submit-row .un-block-3, .typeform01 .form-row.submit-row .un-block-3 a.baseInput, .typeform01 .form-row.submit-row .un-block-3 button.baseInput, .logoRow02 .avatar, .sideBar02 .sideBar_a, .sideBar02 .sideBar_a .iconBg, .login_banner .login-form .verifyRow .verifyImg, .solution_form .form-row .un-block-1, .solution_form .form-row .un-block-1 a.baseInput, .solution_form .form-row .un-block-1 button.baseInput, .solution_form .form-row .un-block-2, .solution_form .form-row .un-block-2 a.baseInput, .solution_form .form-row .un-block-2 button.baseInput, .solution_form .form-row .un-block-3, .solution_form .form-row .un-block-3 a.baseInput, .solution_form .form-row .un-block-3 button.baseInput, .solution_form .form-row.submit-row .un-block-1, .solution_form .form-row.submit-row .un-block-1 a.baseInput, .solution_form .form-row.submit-row .un-block-1 button.baseInput, .solution_form .form-row.submit-row .un-block-2, .solution_form .form-row.submit-row .un-block-2 a.baseInput, .solution_form .form-row.submit-row .un-block-2 button.baseInput, .solution_form .form-row.submit-row .un-block-3, .solution_form .form-row.submit-row .un-block-3 a.baseInput, .solution_form .form-row.submit-row .un-block-3 button.baseInput, .searchform01 .form-row .un-block-1, .searchform01 .form-row .un-block-1 a.baseInput, .searchform01 .form-row .un-block-1 button.baseInput, .searchform01 .form-row .un-block-2, .searchform01 .form-row .un-block-2 a.baseInput, .searchform01 .form-row .un-block-2 button.baseInput, .searchform01 .form-row .un-block-3, .searchform01 .form-row .un-block-3 a.baseInput, .searchform01 .form-row .un-block-3 button.baseInput {
@@ -116,7 +116,7 @@
 
 .naver_1 .nav_erc, .naver_0 .nav_erc, .footer .fridend_link, .footer .fridend_link .right a, .news-list01 li, .news_h .more img, .navbar-line02 .navbar-block.on a.navLink.divider,
 .navbar-line02 .navbar-block:hover a.navLink.divider, .navbar-line02 .navbar-block.on + .navbar-block .divider,
-.navbar-line02 .navbar-block:hover + .navbar-block .divider, .navbar-line02 .navbar-block a.navLink, .navbar-line02 .navbar-block a.navLink.divider, .slideBox01 .hd ul li, .relative, .typeform01 .form-row .un-block-2, .logoRow02 .mainDropDown01, .logoRow02 .avatar, .centerMiddle, .sideBar02 .sideBar_li.childList > .sideBar_a, .sideBar02 .sideBar_a p, .sideBar02 .sideBar_a .iconBg, .tsection .toggleBar, .notifications .iconfont, .news_h03 .r-link .link, .news_h03 .r-link .link + .link, .news_h03 .process + .process, .news_h03 .circleNum, #addSample span, .modalBox .modalBox-dialog .modalBox-header .close, #modalBox01 p {
+.navbar-line02 .navbar-block:hover + .navbar-block .divider, .navbar-line02 .navbar-block a.navLink, .navbar-line02 .navbar-block a.navLink.divider, .slideBox01 .hd ul li, .relative, .typeform01 .form-row .un-block-2, .logoRow02 .mainDropDown01, .logoRow02 .avatar, .centerMiddle, .sideBar02 .sideBar_li.childList > .sideBar_a, .sideBar02 .sideBar_a p, .sideBar02 .sideBar_a .iconBg, .tsection .toggleBar, .notifications .iconfont, .news_h03 .r-link .link, .news_h03 .r-link .link + .link, .news_h03 .process + .process, .news_h03 .circleNum, #addSample span, .multiChooseZone li.choosed, .choosedZone li, .choosedZone li:hover, .modalBox .modalBox-dialog .modalBox-header .close, #modalBox01 p {
   position: relative; }
 
 .absfull, .absCenter, .logoRow02 .avatar img, .sideBar02 .sideBar_a .iconBg img, .footer .fridend_link .left, .slideBox01 .hd, .typeform01 .form-row .un-block-2 input + label, .sideBar02 .sideBar_a .iconBg, .tsection .toggleBar .fa {
@@ -254,7 +254,7 @@
   color: #fff; }
 
 /* color end */
-.footer .fridend_link, .iBlock, .login_banner .login-form .labelWrapper, .solution_form .agreement .labelWrapper, .news_h03 .process.on .circleNum, .news_h03 .r-ftext, .news_h03 .circleNum, .tableSection table td .addItemBtn, .labelWrapper03 {
+.footer .fridend_link, .iBlock, .login_banner .login-form .labelWrapper, .solution_form .agreement .labelWrapper, .news_h03 .process.on .circleNum, .news_h03 .r-ftext, .news_h03 .circleNum, .tableSection table td .addItemBtn, .labelWrapper03 > span, .labelWrapper03, .multiChooseZone li, .choosedZone li {
   display: inline-block; }
 
 .naver_0 .nav_erc li .link, .news-list01 li a, .displayBlock, .typeform01 .form-row .un-block-1, .typeform01 .form-row .un-block-1 a.baseInput, .typeform01 .form-row .un-block-1 button.baseInput, .typeform01 .form-row .un-block-2, .typeform01 .form-row .un-block-2 a.baseInput, .typeform01 .form-row .un-block-2 button.baseInput, .typeform01 .form-row .un-block-3, .typeform01 .form-row .un-block-3 a.baseInput, .typeform01 .form-row .un-block-3 button.baseInput, .typeform01 .form-row.submit-row .un-block-1, .typeform01 .form-row.submit-row .un-block-1 a.baseInput, .typeform01 .form-row.submit-row .un-block-1 button.baseInput, .typeform01 .form-row.submit-row .un-block-2, .typeform01 .form-row.submit-row .un-block-2 a.baseInput, .typeform01 .form-row.submit-row .un-block-2 button.baseInput, .typeform01 .form-row.submit-row .un-block-3, .typeform01 .form-row.submit-row .un-block-3 a.baseInput, .typeform01 .form-row.submit-row .un-block-3 button.baseInput, .logoRow02 .avatar, .sideBar02 .sideBar_a, .sideBar02 .sideBar_a .iconBg, .login_banner .login-form .verifyRow .verifyImg, .solution_form .form-row .un-block-1, .solution_form .form-row .un-block-1 a.baseInput, .solution_form .form-row .un-block-1 button.baseInput, .solution_form .form-row .un-block-2, .solution_form .form-row .un-block-2 a.baseInput, .solution_form .form-row .un-block-2 button.baseInput, .solution_form .form-row .un-block-3, .solution_form .form-row .un-block-3 a.baseInput, .solution_form .form-row .un-block-3 button.baseInput, .solution_form .form-row.submit-row .un-block-1, .solution_form .form-row.submit-row .un-block-1 a.baseInput, .solution_form .form-row.submit-row .un-block-1 button.baseInput, .solution_form .form-row.submit-row .un-block-2, .solution_form .form-row.submit-row .un-block-2 a.baseInput, .solution_form .form-row.submit-row .un-block-2 button.baseInput, .solution_form .form-row.submit-row .un-block-3, .solution_form .form-row.submit-row .un-block-3 a.baseInput, .solution_form .form-row.submit-row .un-block-3 button.baseInput, .searchform01 .form-row .un-block-1, .searchform01 .form-row .un-block-1 a.baseInput, .searchform01 .form-row .un-block-1 button.baseInput, .searchform01 .form-row .un-block-2, .searchform01 .form-row .un-block-2 a.baseInput, .searchform01 .form-row .un-block-2 button.baseInput, .searchform01 .form-row .un-block-3, .searchform01 .form-row .un-block-3 a.baseInput, .searchform01 .form-row .un-block-3 button.baseInput {
@@ -292,7 +292,7 @@
 
 .naver_1 .nav_erc, .naver_0 .nav_erc, .footer .fridend_link, .footer .fridend_link .right a, .news-list01 li, .news_h .more img, .navbar-line02 .navbar-block.on a.navLink.divider,
 .navbar-line02 .navbar-block:hover a.navLink.divider, .navbar-line02 .navbar-block.on + .navbar-block .divider,
-.navbar-line02 .navbar-block:hover + .navbar-block .divider, .navbar-line02 .navbar-block a.navLink, .navbar-line02 .navbar-block a.navLink.divider, .slideBox01 .hd ul li, .relative, .typeform01 .form-row .un-block-2, .logoRow02 .mainDropDown01, .logoRow02 .avatar, .centerMiddle, .sideBar02 .sideBar_li.childList > .sideBar_a, .sideBar02 .sideBar_a p, .sideBar02 .sideBar_a .iconBg, .tsection .toggleBar, .notifications .iconfont, .news_h03 .r-link .link, .news_h03 .r-link .link + .link, .news_h03 .process + .process, .news_h03 .circleNum, #addSample span, .modalBox .modalBox-dialog .modalBox-header .close, #modalBox01 p {
+.navbar-line02 .navbar-block:hover + .navbar-block .divider, .navbar-line02 .navbar-block a.navLink, .navbar-line02 .navbar-block a.navLink.divider, .slideBox01 .hd ul li, .relative, .typeform01 .form-row .un-block-2, .logoRow02 .mainDropDown01, .logoRow02 .avatar, .centerMiddle, .sideBar02 .sideBar_li.childList > .sideBar_a, .sideBar02 .sideBar_a p, .sideBar02 .sideBar_a .iconBg, .tsection .toggleBar, .notifications .iconfont, .news_h03 .r-link .link, .news_h03 .r-link .link + .link, .news_h03 .process + .process, .news_h03 .circleNum, #addSample span, .multiChooseZone li.choosed, .choosedZone li, .choosedZone li:hover, .modalBox .modalBox-dialog .modalBox-header .close, #modalBox01 p {
   position: relative; }
 
 .absfull, .absCenter, .logoRow02 .avatar img, .sideBar02 .sideBar_a .iconBg img, .footer .fridend_link .left, .slideBox01 .hd, .typeform01 .form-row .un-block-2 input + label, .sideBar02 .sideBar_a .iconBg, .tsection .toggleBar .fa {
@@ -430,7 +430,7 @@
   color: #fff; }
 
 /* color end */
-.footer .fridend_link, .iBlock, .login_banner .login-form .labelWrapper, .solution_form .agreement .labelWrapper, .news_h03 .process.on .circleNum, .news_h03 .r-ftext, .news_h03 .circleNum, .tableSection table td .addItemBtn, .labelWrapper03 {
+.footer .fridend_link, .iBlock, .login_banner .login-form .labelWrapper, .solution_form .agreement .labelWrapper, .news_h03 .process.on .circleNum, .news_h03 .r-ftext, .news_h03 .circleNum, .tableSection table td .addItemBtn, .labelWrapper03 > span, .labelWrapper03, .multiChooseZone li, .choosedZone li {
   display: inline-block; }
 
 .naver_0 .nav_erc li .link, .news-list01 li a, .displayBlock, .typeform01 .form-row .un-block-1, .typeform01 .form-row .un-block-1 a.baseInput, .typeform01 .form-row .un-block-1 button.baseInput, .typeform01 .form-row .un-block-2, .typeform01 .form-row .un-block-2 a.baseInput, .typeform01 .form-row .un-block-2 button.baseInput, .typeform01 .form-row .un-block-3, .typeform01 .form-row .un-block-3 a.baseInput, .typeform01 .form-row .un-block-3 button.baseInput, .typeform01 .form-row.submit-row .un-block-1, .typeform01 .form-row.submit-row .un-block-1 a.baseInput, .typeform01 .form-row.submit-row .un-block-1 button.baseInput, .typeform01 .form-row.submit-row .un-block-2, .typeform01 .form-row.submit-row .un-block-2 a.baseInput, .typeform01 .form-row.submit-row .un-block-2 button.baseInput, .typeform01 .form-row.submit-row .un-block-3, .typeform01 .form-row.submit-row .un-block-3 a.baseInput, .typeform01 .form-row.submit-row .un-block-3 button.baseInput, .logoRow02 .avatar, .sideBar02 .sideBar_a, .sideBar02 .sideBar_a .iconBg, .login_banner .login-form .verifyRow .verifyImg, .solution_form .form-row .un-block-1, .solution_form .form-row .un-block-1 a.baseInput, .solution_form .form-row .un-block-1 button.baseInput, .solution_form .form-row .un-block-2, .solution_form .form-row .un-block-2 a.baseInput, .solution_form .form-row .un-block-2 button.baseInput, .solution_form .form-row .un-block-3, .solution_form .form-row .un-block-3 a.baseInput, .solution_form .form-row .un-block-3 button.baseInput, .solution_form .form-row.submit-row .un-block-1, .solution_form .form-row.submit-row .un-block-1 a.baseInput, .solution_form .form-row.submit-row .un-block-1 button.baseInput, .solution_form .form-row.submit-row .un-block-2, .solution_form .form-row.submit-row .un-block-2 a.baseInput, .solution_form .form-row.submit-row .un-block-2 button.baseInput, .solution_form .form-row.submit-row .un-block-3, .solution_form .form-row.submit-row .un-block-3 a.baseInput, .solution_form .form-row.submit-row .un-block-3 button.baseInput, .searchform01 .form-row .un-block-1, .searchform01 .form-row .un-block-1 a.baseInput, .searchform01 .form-row .un-block-1 button.baseInput, .searchform01 .form-row .un-block-2, .searchform01 .form-row .un-block-2 a.baseInput, .searchform01 .form-row .un-block-2 button.baseInput, .searchform01 .form-row .un-block-3, .searchform01 .form-row .un-block-3 a.baseInput, .searchform01 .form-row .un-block-3 button.baseInput {
@@ -468,7 +468,7 @@
 
 .naver_1 .nav_erc, .naver_0 .nav_erc, .footer .fridend_link, .footer .fridend_link .right a, .news-list01 li, .news_h .more img, .navbar-line02 .navbar-block.on a.navLink.divider,
 .navbar-line02 .navbar-block:hover a.navLink.divider, .navbar-line02 .navbar-block.on + .navbar-block .divider,
-.navbar-line02 .navbar-block:hover + .navbar-block .divider, .navbar-line02 .navbar-block a.navLink, .navbar-line02 .navbar-block a.navLink.divider, .slideBox01 .hd ul li, .relative, .typeform01 .form-row .un-block-2, .logoRow02 .mainDropDown01, .logoRow02 .avatar, .centerMiddle, .sideBar02 .sideBar_li.childList > .sideBar_a, .sideBar02 .sideBar_a p, .sideBar02 .sideBar_a .iconBg, .tsection .toggleBar, .notifications .iconfont, .news_h03 .r-link .link, .news_h03 .r-link .link + .link, .news_h03 .process + .process, .news_h03 .circleNum, #addSample span, .modalBox .modalBox-dialog .modalBox-header .close, #modalBox01 p {
+.navbar-line02 .navbar-block:hover + .navbar-block .divider, .navbar-line02 .navbar-block a.navLink, .navbar-line02 .navbar-block a.navLink.divider, .slideBox01 .hd ul li, .relative, .typeform01 .form-row .un-block-2, .logoRow02 .mainDropDown01, .logoRow02 .avatar, .centerMiddle, .sideBar02 .sideBar_li.childList > .sideBar_a, .sideBar02 .sideBar_a p, .sideBar02 .sideBar_a .iconBg, .tsection .toggleBar, .notifications .iconfont, .news_h03 .r-link .link, .news_h03 .r-link .link + .link, .news_h03 .process + .process, .news_h03 .circleNum, #addSample span, .multiChooseZone li.choosed, .choosedZone li, .choosedZone li:hover, .modalBox .modalBox-dialog .modalBox-header .close, #modalBox01 p {
   position: relative; }
 
 .absfull, .absCenter, .logoRow02 .avatar img, .sideBar02 .sideBar_a .iconBg img, .footer .fridend_link .left, .slideBox01 .hd, .typeform01 .form-row .un-block-2 input + label, .sideBar02 .sideBar_a .iconBg, .tsection .toggleBar .fa {
@@ -606,7 +606,7 @@
   color: #fff; }
 
 /* color end */
-.footer .fridend_link, .iBlock, .login_banner .login-form .labelWrapper, .solution_form .agreement .labelWrapper, .news_h03 .process.on .circleNum, .news_h03 .r-ftext, .news_h03 .circleNum, .tableSection table td .addItemBtn, .labelWrapper03 {
+.footer .fridend_link, .iBlock, .login_banner .login-form .labelWrapper, .solution_form .agreement .labelWrapper, .news_h03 .process.on .circleNum, .news_h03 .r-ftext, .news_h03 .circleNum, .tableSection table td .addItemBtn, .labelWrapper03 > span, .labelWrapper03, .multiChooseZone li, .choosedZone li {
   display: inline-block; }
 
 .naver_0 .nav_erc li .link, .news-list01 li a, .displayBlock, .typeform01 .form-row .un-block-1, .typeform01 .form-row .un-block-1 a.baseInput, .typeform01 .form-row .un-block-1 button.baseInput, .typeform01 .form-row .un-block-2, .typeform01 .form-row .un-block-2 a.baseInput, .typeform01 .form-row .un-block-2 button.baseInput, .typeform01 .form-row .un-block-3, .typeform01 .form-row .un-block-3 a.baseInput, .typeform01 .form-row .un-block-3 button.baseInput, .typeform01 .form-row.submit-row .un-block-1, .typeform01 .form-row.submit-row .un-block-1 a.baseInput, .typeform01 .form-row.submit-row .un-block-1 button.baseInput, .typeform01 .form-row.submit-row .un-block-2, .typeform01 .form-row.submit-row .un-block-2 a.baseInput, .typeform01 .form-row.submit-row .un-block-2 button.baseInput, .typeform01 .form-row.submit-row .un-block-3, .typeform01 .form-row.submit-row .un-block-3 a.baseInput, .typeform01 .form-row.submit-row .un-block-3 button.baseInput, .logoRow02 .avatar, .sideBar02 .sideBar_a, .sideBar02 .sideBar_a .iconBg, .login_banner .login-form .verifyRow .verifyImg, .solution_form .form-row .un-block-1, .solution_form .form-row .un-block-1 a.baseInput, .solution_form .form-row .un-block-1 button.baseInput, .solution_form .form-row .un-block-2, .solution_form .form-row .un-block-2 a.baseInput, .solution_form .form-row .un-block-2 button.baseInput, .solution_form .form-row .un-block-3, .solution_form .form-row .un-block-3 a.baseInput, .solution_form .form-row .un-block-3 button.baseInput, .solution_form .form-row.submit-row .un-block-1, .solution_form .form-row.submit-row .un-block-1 a.baseInput, .solution_form .form-row.submit-row .un-block-1 button.baseInput, .solution_form .form-row.submit-row .un-block-2, .solution_form .form-row.submit-row .un-block-2 a.baseInput, .solution_form .form-row.submit-row .un-block-2 button.baseInput, .solution_form .form-row.submit-row .un-block-3, .solution_form .form-row.submit-row .un-block-3 a.baseInput, .solution_form .form-row.submit-row .un-block-3 button.baseInput, .searchform01 .form-row .un-block-1, .searchform01 .form-row .un-block-1 a.baseInput, .searchform01 .form-row .un-block-1 button.baseInput, .searchform01 .form-row .un-block-2, .searchform01 .form-row .un-block-2 a.baseInput, .searchform01 .form-row .un-block-2 button.baseInput, .searchform01 .form-row .un-block-3, .searchform01 .form-row .un-block-3 a.baseInput, .searchform01 .form-row .un-block-3 button.baseInput {
@@ -644,7 +644,7 @@
 
 .naver_1 .nav_erc, .naver_0 .nav_erc, .footer .fridend_link, .footer .fridend_link .right a, .news-list01 li, .news_h .more img, .navbar-line02 .navbar-block.on a.navLink.divider,
 .navbar-line02 .navbar-block:hover a.navLink.divider, .navbar-line02 .navbar-block.on + .navbar-block .divider,
-.navbar-line02 .navbar-block:hover + .navbar-block .divider, .navbar-line02 .navbar-block a.navLink, .navbar-line02 .navbar-block a.navLink.divider, .slideBox01 .hd ul li, .relative, .typeform01 .form-row .un-block-2, .logoRow02 .mainDropDown01, .logoRow02 .avatar, .centerMiddle, .sideBar02 .sideBar_li.childList > .sideBar_a, .sideBar02 .sideBar_a p, .sideBar02 .sideBar_a .iconBg, .tsection .toggleBar, .notifications .iconfont, .news_h03 .r-link .link, .news_h03 .r-link .link + .link, .news_h03 .process + .process, .news_h03 .circleNum, #addSample span, .modalBox .modalBox-dialog .modalBox-header .close, #modalBox01 p {
+.navbar-line02 .navbar-block:hover + .navbar-block .divider, .navbar-line02 .navbar-block a.navLink, .navbar-line02 .navbar-block a.navLink.divider, .slideBox01 .hd ul li, .relative, .typeform01 .form-row .un-block-2, .logoRow02 .mainDropDown01, .logoRow02 .avatar, .centerMiddle, .sideBar02 .sideBar_li.childList > .sideBar_a, .sideBar02 .sideBar_a p, .sideBar02 .sideBar_a .iconBg, .tsection .toggleBar, .notifications .iconfont, .news_h03 .r-link .link, .news_h03 .r-link .link + .link, .news_h03 .process + .process, .news_h03 .circleNum, #addSample span, .multiChooseZone li.choosed, .choosedZone li, .choosedZone li:hover, .modalBox .modalBox-dialog .modalBox-header .close, #modalBox01 p {
   position: relative; }
 
 .absfull, .absCenter, .logoRow02 .avatar img, .sideBar02 .sideBar_a .iconBg img, .footer .fridend_link .left, .slideBox01 .hd, .typeform01 .form-row .un-block-2 input + label, .sideBar02 .sideBar_a .iconBg, .tsection .toggleBar .fa {
@@ -1376,94 +1376,70 @@ button:focus {
   font-size: 13px;
   color: #fff; }
 
-.navbar-line01 .navbar-block {
-  float: left;
-  position: relative;
-  min-height: 1px;
-  cursor: pointer;
-  font-size: 14px;
-  position: relative;
-  display: block; }
-
-.navbar-line01 .navbar-block a.navLink {
-  display: block;
-  padding: 13px 37px; }
-
-.navbar-line01 .navbar-block.on, .navbar-block:hover {
-  background: #fff;
-  color: #094990; }
-
-.navbar-line01 .navbar-block .naver_01 {
-  display: none;
-  position: absolute;
-  z-index: 99;
-  padding-top: 10px; }
-
+/* .navbar-line01{}
+.navbar-line01 .navbar-block{
+    float: left;position: relative;
+    min-height: 1px;
+    cursor: pointer;
+    font-size:14px;
+    position: relative;
+    display: block;
+}
+.navbar-line01 .navbar-block a.navLink{
+    display: block;
+    padding:13px 37px;
+}
+.navbar-line01 .navbar-block.on,.navbar-block:hover{background: #fff;color:#094990;}
+.navbar-line01 .navbar-block .naver_01 {display: none; position: absolute; z-index: 99; padding-top: 10px; }
 .navbar-line01 .navbar-block .naver_01 .nav_erc01 {
-  color: #094990;
-  border: 1px solid #094990;
-  background-repeat: no-repeat;
-  background-color: #fff;
-  text-align: center;
-  position: relative;
-  height: 99px;
-  padding: 15px;
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box; }
-
-.navbar-block .naver_01 .nav_erc01 .navBox01Pic a img {
-  width: 167px;
-  height: 104px; }
-
-.navbar-line01 .navbar-block .naver_01 .nav_erc01:before {
-  position: absolute;
-  content: " ";
-  width: 10px;
-  height: 10px;
-  border: 1px solid #094990;
-  top: -6px;
-  left: 15%;
-  border-right-color: transparent;
-  border-bottom-color: transparent;
-  background-color: #fff;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg); }
-
-.navbar-line01 .navbar-block .naver_01 .nav_erc01 .navBox01, .navbar-line01 .navbar-block .naver_01 .nav_erc01 .navBox01Pic, .navbar-line01 .navbar-block .naver_01 .nav_erc01 .navBox01Pic a, .navbar-line01 .navbar-block .naver_01 .nav_erc01 .navBox01Link {
-  display: block;
-  height: 100%; }
-
-.navbar-line01 .navbar-block .naver_01 .nav_erc01 .navBox01Link .linkWrapper {
-  display: table-cell;
-  vertical-align: middle;
-  height: 104px;
-  text-align: left; }
-
-.nav_erc01 .linkWrapper .link-middle {
-  display: table-row; }
-
+    color: #094990;
+    border: 1px solid #094990;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    text-align: center;
+    position: relative;
+    height: 99px;
+    padding: 15px;
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+}
+.navbar-block .naver_01 .nav_erc01 .navBox01Pic a img{width:167px;height: 104px;}
+.navbar-line01 .navbar-block .naver_01 .nav_erc01:before{
+    position: absolute;
+    content: " ";
+    width: 10px;
+    height: 10px;
+    border: 1px solid #094990;
+    top: -6px;
+    left: 15%;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    background-color: #fff;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+}   
+.navbar-line01 .navbar-block .naver_01 .nav_erc01 .navBox01, .navbar-line01 .navbar-block .naver_01 .nav_erc01 .navBox01Pic, .navbar-line01 .navbar-block .naver_01 .nav_erc01 .navBox01Pic a, .navbar-line01 .navbar-block .naver_01 .nav_erc01 .navBox01Link { display: block; height: 100%; }
+.navbar-line01 .navbar-block .naver_01 .nav_erc01 .navBox01Link .linkWrapper { 
+    display: table-cell; vertical-align: middle; height: 104px; text-align: left; 
+}
+.nav_erc01 .linkWrapper .link-middle{display: table-row;}
 .nav_erc01 .linkWrapper .link-middle .leftBox,
-.nav_erc01 .linkWrapper .link-middle .rightBox {
-  display: table-cell;
-  padding: 0 10px; }
+.nav_erc01 .linkWrapper .link-middle .rightBox{display: table-cell;padding:0 10px;}
 
-.navbar-line01 .navbar-block .naver_01 .navBox01Link .navLi {
-  display: block;
-  font-size: 12px;
-  padding: 0px 0px 7px 0; }
+.navbar-line01 .navbar-block .naver_01 .navBox01Link .navLi { 
+    display: block; 
+     
+    font-size: 12px; 
+    padding: 0px 0px 7px 0;
+}
+.navbar-line01 .navbar-block .naver_01 .nav_erc01 .navLi a { 
+    padding: 0px 10px;  white-space: nowrap;
+    background: url("../img/nav-lb.png") 0px 48% no-repeat;
+}
 
-.navbar-line01 .navbar-block .naver_01 .nav_erc01 .navLi a {
-  padding: 0px 10px;
-  white-space: nowrap;
-  background: url("../img/nav-lb.png") 0px 48% no-repeat; }
-
-.navbar-line01 .navbar-block .naver_01 .nav_erc01 li:hover a {
-  background: #094990; }
-
-.navbar-line01 .navbar-block .naver_01 .nav_erc01 li:hover a {
-  color: #fff; }
-
+.navbar-line01 .navbar-block .naver_01 .nav_erc01 li:hover a{background: #094990;}
+.navbar-line01 .navbar-block .naver_01 .nav_erc01 li:hover a{color: #fff;} */
 /*footer*/
 .footer {
   background: #393939;
@@ -2538,7 +2514,8 @@ button:focus {
 .centerWrapper {
   background: #fff;
   -webkit-box-shadow: 0 0 4px #9c9494;
-  box-shadow: 0 0 4px #9c9494; }
+  box-shadow: 0 0 4px #9c9494;
+  margin-bottom: 30px; }
   .centerWrapper .c_contentPart {
     width: 900px;
     padding-top: 15px; }
@@ -2819,6 +2796,9 @@ button:focus {
 .tp01 {
   padding: 20px 0; }
 
+.tableSection .tableWrapper01 + .tableWrapper01 {
+  margin-top: 20px; }
+
 .tableSection table {
   width: 100%;
   border-spacing: 0;
@@ -2826,10 +2806,8 @@ button:focus {
   vertical-align: middle;
   font-size: 14.976px;
   color: #333; }
-  .tableSection table + table {
-    margin-top: 20px; }
   .tableSection table td {
-    height: 45px;
+    height: 38px;
     padding: 5px;
     border: 1px solid #ddd; }
     .tableSection table td .titleName {
@@ -2857,7 +2835,7 @@ button:focus {
       font-size: 1.5em;
       cursor: pointer; }
     .tableSection table tr:nth-child(1) td {
-      padding: 5px 22px; }
+      padding: 3px 22px; }
   .tableSection table tr:nth-child(3) td:nth-child(1) {
     width: 10.86957%; }
   .tableSection table tr:nth-child(3) td:nth-child(2) {
@@ -2911,26 +2889,91 @@ button:focus {
   .othertable table td:nth-child(even) {
     padding-left: 30px; }
 
-.labelWrapper03 + .labelWrapper03 {
-  margin-left: 20px; }
-
-.labelWrapper03 + .labelWrapper {
-  margin-left: 30px; }
-
-.labelWrapper03 .labelFor {
-  display: none; }
-  .labelWrapper03 .labelFor:checked + .radioBox {
-    background: url(../img/radioBox04.png) no-repeat; }
-  .labelWrapper03 .labelFor + .radioBox,
-  .labelWrapper03 .labelFor.nochecked + .radioBox {
-    background: url(../img/radioBox03.png) no-repeat;
-    width: 20px;
-    height: 21px;
-    margin-right: 5px;
-    margin-top: 2px; }
+.labelWrapper03 {
+  margin-top: 3px; }
+  .labelWrapper03 > label {
+    float: left;
+    display: inline-block; }
+  .labelWrapper03 + .labelWrapper03 {
+    margin-left: 20px; }
+  .labelWrapper03 + .labelWrapper {
+    margin-left: 30px; }
+  .labelWrapper03 .labelFor {
+    display: none; }
+    .labelWrapper03 .labelFor:checked + .radioBox {
+      background: url(../img/radioBox04.png) no-repeat; }
+    .labelWrapper03 .labelFor + .radioBox,
+    .labelWrapper03 .labelFor.nochecked + .radioBox {
+      background: url(../img/radioBox03.png) no-repeat;
+      width: 20px;
+      height: 21px;
+      margin-right: 5px;
+      margin-top: 2px; }
 
 /* multiMenu start */
+.multiChooseZone {
+  padding: 20px;
+  margin-left: 420px;
+  height: 370px; }
+  .multiChooseZone li {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 1px 17px;
+    margin-right: 20px;
+    margin-bottom: 15px; }
+    .multiChooseZone li.choosed {
+      background: #e6f1f9;
+      color: #005bac; }
+      .multiChooseZone li.choosed:after {
+        position: absolute;
+        right: 0px;
+        width: auto;
+        color: #dbdbdb;
+        background: url(../img/shutBlueBg.png) no-repeat;
+        content: " ";
+        font-size: 15px;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: 100% 100%; }
+
+.choosedZone {
+  min-height: 60px; }
+  .choosedZone li {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 1px 17px;
+    margin-right: 20px;
+    margin-bottom: 15px; }
+    .choosedZone li:after {
+      position: absolute;
+      right: 0px;
+      width: auto;
+      color: #dbdbdb;
+      background: url(../img/shutGrayBg.png) no-repeat;
+      content: " ";
+      font-size: 15px;
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: 100% 100%; }
+    .choosedZone li:hover:after {
+      position: absolute;
+      right: 0px;
+      width: auto;
+      color: #dbdbdb;
+      background: url(../img/shutBlueBg.png) no-repeat;
+      content: " ";
+      font-size: 15px;
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: 100% 100%; }
+
 ul.multi-ul {
+  width: 140px;
   color: #333;
   height: 410px; }
 
@@ -2947,9 +2990,6 @@ ul.multi-ul {
 .chooseZone, ul.multi-ul {
   height: 410px;
   overflow: auto; }
-
-.choosedZone {
-  min-height: 60px; }
 
 /* multiMenu end */
 /* modalBox start */

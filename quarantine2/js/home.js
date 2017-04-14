@@ -269,5 +269,23 @@ function getObjectURL(file){
 }
 
 
+function tableMake(){
+  var table = $("#template01").val();
+                            
+      $("#addSample").on("click",function(){
+          tableBuild(table);    
+              
+      }).click()
+
+      function tableBuild(tableEle){
+          var title = "样品" + ($(".tableSection table").length + 1);
+              $(tableEle).appendTo($(".tableSection"))
+                      .find(".titleName").text(title).end()
+                      .find(".fa-trash-o").on("click",function(){
+                          $(this).parents("table").remove()
+                      });
+      }
+}
+
 
 

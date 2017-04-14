@@ -31,6 +31,7 @@
                 </div>
     <!-- template01 start-->            
                 <textarea id="template01" style="display:none">
+                    <div class="tableWrapper01">
                     <table>
                         <tr>
                             <td colspan="6">
@@ -55,209 +56,203 @@
                                 检测项目
                                 <div class="addItemBtn tips">添加检测项目</div>
                             </td>
-                            <td colspan="3"></td>
+                            <td colspan="3"><input class="choosedItem" type="hidden" name="choosedItem"></td>
                             <td>
                                 检测依据
                                 <div class="tips">（本栏留空视为同意由
                                 <br/> 本中心选定依据）</div>
                             </td>
                             <td class="sGist inputTd">
-                                <textarea type="text" name="sGist"></textarea>
+                                <textarea type="text" name="sGist"/>
                             </td>
                         </tr>
                     </table>
+
+                    <div  class="modalBox fade modalBox01">
+                            <div class="modalBox-dialog" role="document">
+                                <div class="modalBox-content">
+                                  <div class="modalBox-header">
+                                        <button type="button" class="close" data-dismiss="modalBox" aria-label="Close">
+                                          <span aria-hidden="true">×</span>
+                                        </button>
+                                        <p class="modalBox-title">选择检测项目</p>
+                                  </div>
+                                  <div class="modalBox-body nopadding">
+                                        <div class="chooseZone"></div>
+                                      
+                                  </div>
+                                  <div class="modalBox-header">
+                                        
+                                        <p class="modalBox-title">已选择检测项目</p>
+                                  </div>
+                                  <div class="modalBox-body">
+                                        <div class="choosedZone"></div>
+                                        <div class="sampleBtn"><span>确定</span></div>
+                                  </div>
+                                </div>
+                          </div>
+                    </div>
+                    </div>
                 </textarea>
     <!-- template01 end -->
                 <div class="c_contentPart">
                     <p class="tp01 bigSize font-weight titleColor">样品信息</p>
-                    <div class="tableSection">
+    <!-- form start -->                
+                    <form>
+                        <div class="tableSection">
+                            
+                        </div>
+                        <div class="addRow">
+                            <div id="addSample" class="sampleBtn"><span>新增样品</span></div>
+                        </div>
+                       
+                            
+
                         
-                    </div>
-                    <div class="addRow">
-                        <div id="addSample" class="sampleBtn"><span>新增样品</span></div>
-                    </div>
-                    <script type="text/javascript">
-                        var table = $("#template01").val();
-                        $("#addSample").on("click",function(){
-                            tableBuild(table);    
-                                
-                        }).click()
 
-                        function tableBuild(tableEle){
-                            var title = "样品" + ($(".tableSection table").length + 1);
-                                $(tableEle).appendTo($(".tableSection"))
-                                        .find(".titleName").text(title).end()
-                                        .find(".fa-trash-o").on("click",function(){
-                                            $(this).parents("table").remove()
-                                        });
-                        }
-
-                    </script>
-
-                    <p class="tp01 bigSize font-weight titleColor">其他信息</p>
-                    <div class="othertable">
-                        <table>
-                            <tr>
-                                <td>检测报告要求 </td>
-                                <td>
-                                    <div class="labelWrapper03">
-                                        <label id=""  class="radio">
-                                            <input type="checkbox" class="labelFor"  name="result" >
-                                            <div class="radioBox"></div>
-                                            <span class="radioText">出具检测结果</span>
-                                        </label>
-                                    </div>
-                                </td>
-                                <td>检测报告语种 </td>
-                                <td>
-                                    <div class="labelWrapper03">
-                                        <label id="" class="radio">
-                                            <input type="radio" class="labelFor"  name="lang" value="ch">
-                                            <div class="radioBox"></div>
-                                            <span class="radioText">中文</span>
-                                        </label>
-                                    </div>
-                                    <div class="labelWrapper03">
-                                        <label id=""  class="radio">
-                                            <input type="radio" class="labelFor"  name="lang" value="en">
-                                            <div class="radioBox"></div>
-                                            <span class="radioText">英文</span>
-                                        </label>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>检测报告语种</td>
-                                <td>
-                                    <div class="labelWrapper03">
-                                        <label id="" class="radio">
-                                            <input type="radio" class="labelFor"  name="yesno" value="ch">
-                                            <div class="radioBox"></div>
-                                            <span class="radioText">是</span>
-                                        </label>
-                                    </div>
-                                    <div class="labelWrapper03">
-                                        <label id=""  class="radio">
-                                            <input type="radio" class="labelFor"  name="yesno" value="en">
-                                            <div class="radioBox"></div>
-                                            <span class="radioText">否</span>
-                                        </label>
-                                    </div>
-                                </td>
-                                <td>提供的资料</td>
-                                <td>
-                                    
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>报告递送方式 </td>
-                                <td>
-                                    <div class="row">
+                        <p class="tp01 bigSize font-weight titleColor">其他信息</p>
+                        <div class="othertable">
+                            <table>
+                                <tr>
+                                    <td>检测报告要求 </td>
+                                    <td>
                                         <div class="labelWrapper03">
-                                            <span class="float-l">电子报告：</span>
+                                            <label id=""  class="radio">
+                                                <input type="checkbox" class="labelFor"  name="result" checked="true">
+                                                <div class="radioBox"></div>
+                                                <span class="radioText">出具检测结果</span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>检测报告语种 </td>
+                                    <td>
+                                        <div class="labelWrapper03">
                                             <label id="" class="radio">
-                                                <input type="radio" class="labelFor"  name="ways" value="ch">
+                                                <input type="radio" class="labelFor"  name="lang" value="ch">
                                                 <div class="radioBox"></div>
-                                                <span class="radioText">电子报告</span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="labelWrapper03">
-                                            <span class="float-l">纸质报告：</span>
-                                            <label id=""  class="radio">
-                                                <input type="radio" class="labelFor"  name="ways" value="en">
-                                                <div class="radioBox"></div>
-                                                <span class="radioText">自取</span>
+                                                <span class="radioText">中文</span>
                                             </label>
                                         </div>
                                         <div class="labelWrapper03">
                                             <label id=""  class="radio">
-                                                <input type="radio" class="labelFor"  name="ways" value="en">
+                                                <input type="radio" class="labelFor"  name="lang" value="en">
                                                 <div class="radioBox"></div>
-                                                <span class="radioText">挂号信</span>
+                                                <span class="radioText">英文</span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>检测报告语种</td>
+                                    <td>
+                                        <div class="labelWrapper03">
+                                            <label id="" class="radio">
+                                                <input type="radio" class="labelFor"  name="yesno" value="ch">
+                                                <div class="radioBox"></div>
+                                                <span class="radioText">是</span>
                                             </label>
                                         </div>
                                         <div class="labelWrapper03">
                                             <label id=""  class="radio">
-                                                <input type="radio" class="labelFor"  name="ways" value="en">
+                                                <input type="radio" class="labelFor"  name="yesno" value="en">
                                                 <div class="radioBox"></div>
-                                                <span class="radioText">快递（到付）</span>
+                                                <span class="radioText">否</span>
                                             </label>
                                         </div>
-                                    </div>
-                                </td>
-                                <td>是否取回<br/>剩余样品 </td>
-                                <td>
-                                    <div class="labelWrapper03">
-                                        <label id="" class="radio">
-                                            <input type="radio" class="labelFor"  name="get" value="get">
-                                            <div class="radioBox"></div>
-                                            <span class="radioText">是</span>
-                                        </label>
-                                    </div>
-                                    <div class="labelWrapper03">
-                                        <label id=""  class="radio">
-                                            <input type="radio" class="labelFor"  name="get" value="en">
-                                            <div class="radioBox"></div>
-                                            <span class="radioText">否（未选择视同否）</span>
-                                        </label>
-                                    </div>
-                                </td>
-                            </tr>
-                            <script type="text/javascript">
-                                var allInputs = $(".othertable table").find("[type='radio']");
-                                var radio = allInputs.parents(".labelWrapper03");
-                                    radio.on("click",function(e){
-                                        if($(e.target).is('input')){
-                                              return;
-                                        }
-                                        var input = $(this).find("input");
-                                        var checked = input.data("check");
+                                    </td>
+                                    <td>提供的资料</td>
+                                    <td>
+                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>报告递送方式 </td>
+                                    <td>
+                                        <div class="row">
+                                            <div class="labelWrapper03">
+                                                <span class="float-l">电子报告：</span>
+                                                <label id="" class="radio">
+                                                    <input type="radio" class="labelFor"  name="ways" value="ch">
+                                                    <div class="radioBox"></div>
+                                                    <span class="radioText">电子报告</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="labelWrapper03">
+                                                <span class="float-l">纸质报告：</span>
+                                                <label id=""  class="radio">
+                                                    <input type="radio" class="labelFor"  name="ways" value="en">
+                                                    <div class="radioBox"></div>
+                                                    <span class="radioText">自取</span>
+                                                </label>
+                                            </div>
+                                            <div class="labelWrapper03">
+                                                <label id=""  class="radio">
+                                                    <input type="radio" class="labelFor"  name="ways" value="en">
+                                                    <div class="radioBox"></div>
+                                                    <span class="radioText">挂号信</span>
+                                                </label>
+                                            </div>
+                                            <div class="labelWrapper03">
+                                                <label id=""  class="radio">
+                                                    <input type="radio" class="labelFor"  name="ways" value="en">
+                                                    <div class="radioBox"></div>
+                                                    <span class="radioText">快递（到付）</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>是否取回<br/>剩余样品 </td>
+                                    <td>
+                                        <div class="labelWrapper03">
+                                            <label id="" class="radio">
+                                                <input type="radio" class="labelFor"  name="get" value="get">
+                                                <div class="radioBox"></div>
+                                                <span class="radioText">是</span>
+                                            </label>
+                                        </div>
+                                        <div class="labelWrapper03">
+                                            <label id=""  class="radio">
+                                                <input type="radio" class="labelFor"  name="get" value="en">
+                                                <div class="radioBox"></div>
+                                                <span class="radioText">否（未选择视同否）</span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <script type="text/javascript">
+                                    var allInputs = $(".othertable table").find("[type='radio']");
+                                    var radio = allInputs.parents(".labelWrapper03");
+                                        radio.on("click",function(e){
+                                            if($(e.target).is('input')){
+                                                  return;
+                                            }
+                                            var input = $(this).find("input");
+                                            var checked = input.data("check");
 
-                                        if(checked == 1){
-                                            
-                                            input.removeAttr('checked').data("check",0).addClass("nochecked");
-                                        }else{
-                                            input.parents("td").find("input[type='radio']").removeAttr('checked').data("check",0).addClass("nochecked");
-                                            input.attr('checked',true).data("check",1).removeClass("nochecked");
-                                        }
-                                    })
-                            </script>
-                        </table>   
-                    </div>
-                    <div class="addRow">
-                        <div id="next" class="sampleBtn"><span>下一步</span></div>
-                    </div>
+                                            if(checked == 1){
+                                                
+                                                input.removeAttr('checked').data("check",0).addClass("nochecked");
+                                            }else{
+                                                input.parents("td").find("input[type='radio']").removeAttr('checked').data("check",0).addClass("nochecked");
+                                                input.attr('checked',true).data("check",1).removeClass("nochecked");
+                                            }
+                                        })
+                                </script>
+                            </table>   
+                        </div>
+                        <div class="addRow">
+                            <button id="next" class="displayBlock sampleBtn mar-center" type="submit"><span>下一步</span></button>
+                        </div>
+                    </form>
+    <!-- form end -->                                    
                 </div>
             </div>
         </div>  
     </div>
 
-<div id="modalBox01" class="modalBox fade modalBox01">
-        <div class="modalBox-dialog" role="document">
-            <div class="modalBox-content">
-              <div class="modalBox-header">
-                    <button type="button" class="close" data-dismiss="modalBox" aria-label="Close">
-                      <span aria-hidden="true">×</span>
-                    </button>
-                    <p class="modalBox-title">选择检测项目</p>
-              </div>
-              <div class="modalBox-body nopadding">
-                    <div class="chooseZone"></div>
-                  
-              </div>
-              <div class="modalBox-header">
-                    
-                    <p class="modalBox-title">已选择检测项目</p>
-              </div>
-              <div class="modalBox-body">
-                    <div class="choosedZone"></div>
-                    <div class="sampleBtn"><span>确定</span></div>
-              </div>
-            </div>
-      </div>
-</div>
+
 
 <script type="text/javascript" src="js/jquery.multiMenu.js"></script>
 <script type="text/javascript" src="js/modalBox.js"></script>
@@ -265,180 +260,178 @@
 $(function(){
     var ww = $(window).width();
     var wh = $(window).height();
-    var modalBox = $("#modalBox01");
-    $(document).on("click",".addItemBtn",function(){
-        modalBox.modalBox();
-    });
-    modalBox.on('shown.bs.modalBox', function (e) {
-        var json ={sub:[ 
-                    {
-                        name:"食品",
-                        sub:[
-                                {
-                                    name:"动物源性滋补品"
-                                },
-                                {
-                                    name:"果蔬及其制品"
-                                },
-                                {
-                                    name:"粮食及其制品",
-                                    sub:[
-                                        {
-                                            name:"大米转基因"
-                                        },
-                                        {
-                                            name:"速冻面米食品"
-                                        },
-                                        {
-                                            name:"膨化食品"
-                                        },
-                                        {
-                                            name:"糕点"
-                                        },
-                                        {
-                                            name:"速冻面米食品"
-                                        },
-                                        {
-                                            name:"饼干"
-                                        },
-                                        {
-                                            name:"粮谷中农药残留"
-                                        },
-                                        {
-                                            name:"油炸小食品"
-                                        },
-                                        {
-                                            name:"粮食"
-                                        },
-                                        {
-                                            name:"发酵性豆制品"
-                                        },
-                                        {
-                                            name:"方便面"
-                                        },
-                                        {
-                                            name:"粮谷中农药残留"
-                                        },
-                                        {
-                                            name:"油炸小食品"
-                                        },
-                                        {
-                                            name:"粮食"
-                                        },
-                                        {
-                                            name:"发酵性豆制品"
-                                        },
-                                        {
-                                            name:"方便面"
-                                        },
-                                        {
-                                            name:"豆制品"
-                                        },
-                                        {
-                                            name:"非发酵性豆制品",
-                                            final:1,
-                                            sub:[
-                                                {
-                                                    name:"总砷"
-                                                },
-                                                {
-                                                    name:"志贺氏菌"
-                                                },
-                                                {
-                                                    name:"大肠菌群"
-                                                },
-                                                {
-                                                    name:"糖精钠"
-                                                },{
-                                                    name:"沙门氏菌"
-                                                },
-                                                {
-                                                    name:"山梨酸"
-                                                },{
-                                                    name:"方便面"
-                                                },
-                                                {
-                                                    name:"铅"
-                                                },{
-                                                    name:"金黄色葡萄球菌 菌落总数"
-                                                }
-                                                
-                                            ]
-                                        }
-                                    ]
-                                },
-                                {
-                                    name:"油脂及其制品"
-                                },
-                                {
-                                    name:"粮食及其制品"
-                                },
-                                {
-                                    name:"调味品"
-                                },
-                                {
-                                    name:"饮品"
-                                },
-                                {
-                                    name:"酒类"
-                                },
-                                {
-                                    name:"糖类"
-                                },
-                                {
-                                    name:"罐头食品"
-                                },
-                                {
-                                    name:"动物源性滋补品"
-                                },
-                                {
-                                    name:"果蔬及其制品"
-                                },
-                                {
-                                    name:"粮"
-                                }
+    
+        tableMake();
+    var modalBox;
+    var json ={sub:[ 
+                {
+                    name:"食品",
+                    sub:[
+                            {
+                                name:"动物源性滋补品"
+                            },
+                            {
+                                name:"果蔬及其制品"
+                            },
+                            {
+                                name:"粮食及其制品",
+                                sub:[
+                                    {
+                                        name:"大米转基因"
+                                    },
+                                    {
+                                        name:"速冻面米食品"
+                                    },
+                                    {
+                                        name:"膨化食品"
+                                    },
+                                    {
+                                        name:"糕点"
+                                    },
+                                    {
+                                        name:"速冻面米食品"
+                                    },
+                                    {
+                                        name:"饼干"
+                                    },
+                                    {
+                                        name:"粮谷中农药残留"
+                                    },
+                                    {
+                                        name:"油炸小食品"
+                                    },
+                                    {
+                                        name:"粮食"
+                                    },
+                                    {
+                                        name:"发酵性豆制品"
+                                    },
+                                    {
+                                        name:"方便面"
+                                    },
+                                    {
+                                        name:"粮谷中农药残留"
+                                    },
+                                    {
+                                        name:"油炸小食品"
+                                    },
+                                    {
+                                        name:"粮食"
+                                    },
+                                    {
+                                        name:"发酵性豆制品"
+                                    },
+                                    {
+                                        name:"方便面"
+                                    },
+                                    {
+                                        name:"豆制品"
+                                    },
+                                    {
+                                        name:"非发酵性豆制品",
+                                        final:1,
+                                        sub:[
+                                            {
+                                                name:"总砷"
+                                            },
+                                            {
+                                                name:"志贺氏菌"
+                                            },
+                                            {
+                                                name:"大肠菌群"
+                                            },
+                                            {
+                                                name:"糖精钠"
+                                            },{
+                                                name:"沙门氏菌"
+                                            },
+                                            {
+                                                name:"山梨酸"
+                                            },{
+                                                name:"方便面"
+                                            },
+                                            {
+                                                name:"铅"
+                                            },{
+                                                name:"金黄色葡萄球菌 菌落总数"
+                                            }
+                                            
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                name:"油脂及其制品"
+                            },
+                            {
+                                name:"粮食及其制品"
+                            },
+                            {
+                                name:"调味品"
+                            },
+                            {
+                                name:"饮品"
+                            },
+                            {
+                                name:"酒类"
+                            },
+                            {
+                                name:"糖类"
+                            },
+                            {
+                                name:"罐头食品"
+                            },
+                            {
+                                name:"动物源性滋补品"
+                            },
+                            {
+                                name:"果蔬及其制品"
+                            },
+                            {
+                                name:"粮"
+                            }
 
-                        ]
-                    },
-                    {
-                        name:" 食品接触材料",
-                        sub:[
-                                {
-                                    name:"23",
-                                    sub:[
-                                        {
-                                            name:"3"
-                                        },
-                                        {
-                                            name:"3"
-                                        }
-                                    ]
-                                }
-                        ]
-                    },
-                    {
-                        name:"水产"
-                    },
-                    {
-                        name:"动物及动物产品"
-                    },{
-                        name:"转基因农产品"
-                    },{
-                        name:"化妆品"
-                    },{
-                        name:"营养标签"
-                    },{
-                        name:"饲料及添加物"
-                    },{
-                        name:"石油化工品"
-                    },{
-                        name:"矿弄品/金属材料"
-                    },{
-                        name:"电子电器"
-                    }
-        ]};
-        $(".chooseZone").multiMenu({allData:json})
-    })
+                    ]
+                },
+                {
+                    name:" 食品接触材料",
+                    sub:[
+                            {
+                                name:"23",
+                                sub:[
+                                    {
+                                        name:"3"
+                                    },
+                                    {
+                                        name:"3"
+                                    }
+                                ]
+                            }
+                    ]
+                },
+                {
+                    name:"水产"
+                },
+                {
+                    name:"动物及动物产品"
+                },{
+                    name:"转基因农产品"
+                },{
+                    name:"化妆品"
+                },{
+                    name:"营养标签"
+                },{
+                    name:"饲料及添加物"
+                },{
+                    name:"石油化工品"
+                },{
+                    name:"矿弄品/金属材料"
+                },{
+                    name:"电子电器"
+                }
+    ]};
+    triggerMenu(".addItemBtn",json)
+    
 })
 
    

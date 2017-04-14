@@ -1,7 +1,7 @@
 @charset "utf-8"
 
 
-/*å¯¼èˆªæ  start*/
+/*Ã¥Â¯Â¼Ã¨Ë†ÂªÃ¦Â Â start*/
 /*
 .navbar-line{margin:0 -37px;}
 
@@ -79,8 +79,8 @@
 .navbar-block .naver_0 .nav_erc li a{
     white-space: nowrap;
 }*/
-/*å¯¼èˆªæ  end*/
-    /*å¯¼èˆªæ navbar-line01 start*/
+/*Ã¥Â¯Â¼Ã¨Ë†ÂªÃ¦Â Â end*/
+    /*Ã¥Â¯Â¼Ã¨Ë†ÂªÃ¦Â Ânavbar-line01 start*/
 .navbar-line01{}
 .navbar-line01 .navbar-block{
     float: left;position: relative;
@@ -92,7 +92,7 @@
 }
 .navbar-line01 .navbar-block a.navLink{
     display: block;
-    padding:13px 37px;
+    padding:13px 30px;
 }
 .navbar-line01 .navbar-block.on,.navbar-block:hover{background: #fff;color:#094990;}
 .navbar-line01 .navbar-block .naver_01 {display: none; position: absolute; z-index: 99; padding-top: 10px; }
@@ -146,7 +146,7 @@
 .navbar-line01 .navbar-block .naver_01 .nav_erc01 li:hover a{background: #094990;}
 .navbar-line01 .navbar-block .naver_01 .nav_erc01 li:hover a{color: #fff;}
 
-/*å¯¼èˆªæ navbar-line01 end*/
+/*Ã¥Â¯Â¼Ã¨Ë†ÂªÃ¦Â Ânavbar-line01 end*/
 
 
 
@@ -178,7 +178,7 @@
 
 .title-s{font-size: 13px;color: #fff;}
 
-/*bannerè½®æ’­slider*/
+/*bannerÃ¨Â½Â®Ã¦â€™Â­slider*/
 
     .slideBox{ width:100%; overflow:hidden; position:relative; border-top:1px solid #ddd;  }
     .slideBox .hd{text-align: center; width:100%; overflow:hidden; position:absolute; bottom:5px; z-index:1; }
@@ -196,7 +196,7 @@
     position: relative;
     z-index: 99;
 }
-/* å…¬å‘ŠtxtScroll-left */
+/* Ã¥â€¦Â¬Ã¥â€˜Å txtScroll-left */
     .txtScroll-left{ 
         
         width: 540px;  
@@ -290,7 +290,7 @@
 }
 /*floatWindow end*/
 
-/*news è½®æ’­*/
+/*news Ã¨Â½Â®Ã¦â€™Â­*/
 .newsBox{ width:100%; overflow:hidden; position:relative; border-top:1px solid #ddd;  }
 .newsBox .hd{text-align: center; width:100%; overflow:hidden; position:absolute; bottom:10px; z-index:1; }
 .newsBox .hd ul{ overflow:hidden; zoom:1; display: inline-block; }
@@ -314,7 +314,7 @@
 .l-content .news .n-pic .n-pic-text .n-pic-content{padding:5px 0;}
 
 
-/*news tabåˆ‡æ¢*/ /* æœ¬ä¾‹å­css */     
+/*news tabÃ¥Ë†â€¡Ã¦ÂÂ¢*/ /* Ã¦Å“Â¬Ã¤Â¾â€¹Ã¥Â­Âcss */     
 .slideTxtBox{ text-align:left;  /*height: 142px;*/ min-height: 348px;}
 .slideTxtBox .hd{ 
     height:35px; 
@@ -441,7 +441,7 @@ cursor:pointer;
     margin-left: -14px; 
 }
         
-/*ä¸­å¿ƒåŠ¨æ€*/
+/*Ã¤Â¸Â­Ã¥Â¿Æ’Ã¥Å Â¨Ã¦â‚¬Â*/
 .activity{} 
 .activity .test .tabNews-list ul {
     padding-top: 0px;

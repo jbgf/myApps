@@ -10,6 +10,7 @@
           this.curObj = this.allData;
           this.arrToChoose = this.curObj.sub;
           this.mainClass = this.options.class;
+          this.mcClass = this.options.mcClass;
           this.activeClass = this.options.activeClass;
           this.ini(this.allData);
 
@@ -24,6 +25,7 @@
 
         multiMenu.DEFAULTS = {
           class:"multi-li",
+          mcClass:"mc-li",
           activeClass:"active"
          /* type:1,            
           offset: 10,
@@ -39,6 +41,7 @@
               that.createlevel();
               that.operate_stack(0,"root");
               that.choose();
+              that.chooseItem();
         }  
 
         multiMenu.prototype.choose = function () {
@@ -56,14 +59,16 @@
                       sameLevel = num == 0;
                       
                       that.operate_stack(num,index_li);
-                      if(!sameLevel){ul.nextAll("ul").remove()} 
+                      if(!sameLevel){
+                        ul.nextAll().remove()
+                        /*$(".multiChooseZone").html("");*/
+                      } 
                       if(that.hasSub(index_li)){
                          if(!that.isFinalLevel()){
                             that.createlevel();  
                          }else{
                             that.multiChoose();    
                          }
-                          
                       }
                       
                       $(this).addClass(that.activeClass)
@@ -88,7 +93,6 @@
             var that = this;
             var status ;
             
-            /*console.log(that.curObj)*/
             if("sub" in that.curObj){
                 status = true;
             }else{
@@ -147,9 +151,57 @@
           /*that.multiTag();*/
         }
         
+        multiMenu.prototype.chooseItem = function (ele) {
+          var that = this;
+              that.choosed_arr = [];
+          $(document).on("click",'.'+that.mcClass+'',function(){
+              if(!that.isFinalLevel()){
+                return;
+              }
+              var index = $(this).parents("ul").find('.'+that.mcClass+'').index($(this));
+              
+              var item = that.curObj.sub[index];
+
+                  that.choosed_arr.push(item.name); 
+              var citem = item.name,
+                  ca_index = that.choosed_arr.length-1;
+
+              $(this).hasClass("choosed")
+              ?that.cancel(ca_index)
+              :$(this).addClass("choosed").data("ca_index",ca_index),that.choosed(citem,ca_index);
+          })          
+        }
+
+        multiMenu.prototype.choosed = function (citem,ca_index) {
+          var that = this,
+              cli = $("<li class='choosed_li' data-cindex="+ca_index+">"+citem+"</li>");
+              cli.appendTo(".choosedZone").on("click",function(){
+                  that.cancel(this,ca_index);
+              })
+                    
+        }
+
+        multiMenu.prototype.cancel = function (ele,ca_index){
+          $(".choosedZone li[data-cindex]").remove();
+          $(".multiChooseZone li[data-cindex]")
+                .removeClass("choosed")
+                .removeAttr("data-cindex");
+        }
+
         multiMenu.prototype.multiChoose = function (ele) {
           var that = this;
-          console.log(that.arrToChoose)
+          var string = "<ul class='multi-choose-ul'>";
+          
+              var arr = that.arrToChoose;
+            
+              $.each(arr,function(i,e){
+                  string +='<li class='+that.mcClass+'>'+e.name+'</li>'
+              })
+                  string +="</ul>";
+                  $("<div class='multiChooseZone'></div>")
+                          .append(string)
+                          .appendTo(that.$element);
+
         }
         multiMenu.prototype.multiTag = function (ele) {}
 
@@ -197,3 +249,15 @@
         })
 
 }(jQuery);
+
+function triggerMenu(trigger,json){
+    $(document).on("click",trigger,function(){
+            modalBox = $(this).parents("table").next(".modalBox01");
+            /*console.log(modalBox)*/
+            modalBox.modalBox();
+            modalBox.off('shown.bs.modalBox').on('shown.bs.modalBox', function (e) {
+                
+                modalBox.find(".chooseZone").multiMenu({allData:json})
+            })
+    });    
+}

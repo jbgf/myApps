@@ -202,7 +202,7 @@ button:focus{outline:0;}
 
 
 
-.navbar-line01{}
+/* .navbar-line01{}
 .navbar-line01 .navbar-block{
     float: left;position: relative;
     min-height: 1px;
@@ -265,7 +265,7 @@ button:focus{outline:0;}
 }
 
 .navbar-line01 .navbar-block .naver_01 .nav_erc01 li:hover a{background: #094990;}
-.navbar-line01 .navbar-block .naver_01 .nav_erc01 li:hover a{color: #fff;}
+.navbar-line01 .navbar-block .naver_01 .nav_erc01 li:hover a{color: #fff;} */
 
 
 /*footer*/
@@ -897,6 +897,7 @@ $pagi_size:28px;
     background:$white;
     -webkit-box-shadow:0 0 4px #9c9494;
             box-shadow:0 0 4px #9c9494;
+    margin-bottom: 30px;
     .c_contentPart{
         width:900px;
         padding-top:15px;
@@ -1097,10 +1098,10 @@ $sb_brand_h:55px;
 $twr:120,250,120,248,168,198;
 
 .tableSection{
+    .tableWrapper01 + .tableWrapper01{margin-top: 20px}
     table{
-        & + table{
-            margin-top: 20px
-        }
+       
+        
         width:100%;
         border-spacing:0;
         border-collapse:collapse;
@@ -1109,7 +1110,7 @@ $twr:120,250,120,248,168,198;
         font-size: $bigSize*0.8;
         color:$baseTitleColor;
         td{
-             height: 45px;
+             height: 38px;
              padding:5px;
              @include border();
              .titleName{font-size:$bigSize*1.1}
@@ -1135,7 +1136,7 @@ $twr:120,250,120,248,168,198;
                 i{@extend %float-r;font-size:1.5em;@include cursor();}
                 
                 color:$white;
-                td{padding:5px 22px}
+                td{padding:3px 22px}
             }
             &:nth-child(3){
                 @include nth_un_width($rateArr:$twr,$string:"td")
@@ -1199,8 +1200,15 @@ $twr:120,250,120,248,168,198;
 
 $labelm:30px;
 .labelWrapper03{
+        &>span{@extend %iBlock;}
+        &>label{
+            float: left;
+            display: inline-block;
+        }
         & + .labelWrapper03{margin-left:20px}    
-        @extend %clear;@extend %iBlock;
+        @extend %clear;
+        @extend %iBlock;
+        margin-top: 3px;
         & + .labelWrapper{margin-left:$labelm;}
         .labelFor{
             display:none;
@@ -1223,15 +1231,66 @@ $labelm:30px;
     $mainUlBg:#fafafa;
     $activeColor:#54a4d5;
     $choose_h1:410px;
+    $choose_w1:140px;
+    .multiChooseZone{
+        padding:20px;
+        @include newsTab_img($height:$choose_h1 - 20*2,$margin:$choose_w1*3,$position:"left");
+        li{
+            @extend %iBlock;
+            @include border();
+            @include radius(3px);
+            @include cursor();
+            padding:1px 17px;
+            margin-right:20px;
+            margin-bottom: 15px;
+            &.choosed{
+                background:#e6f1f9;
+                color:$blue;
+                @include persudo($color:#dbdbdb,$content:" ",$position:after,$bg:"shutBlueBg.png"){
+                    width:100%;height:100%;
+                    background-repeat:no-repeat;
+                    background-position: 100% 100%;
+                };
+                
+            }
+        } 
+    }
+    .choosedZone{
+        min-height:60px;
+        li{
+            @extend %iBlock;
+            @include border();
+            @include radius(3px);
+            @include cursor();
+            padding:1px 17px;
+            margin-right:20px;
+            margin-bottom: 15px;
+            @include persudo($color:#dbdbdb,$content:" ",$position:after,$bg:"shutGrayBg.png"){
+                    width:100%;height:100%;
+                    background-repeat:no-repeat;
+                    background-position: 100% 100%;
+            };
+            &:hover{
+                    
+                    @include persudo($color:#dbdbdb,$content:" ",$position:after,$bg:"shutBlueBg.png"){
+                            width:100%;height:100%;
+                            background-repeat:no-repeat;
+                            background-position: 100% 100%;
+                    };
+            }
+        }
+    }
     ul.multi-ul{
         @extend %float-l;
+        width:$choose_w1;
         color:$baseTitleColor;
         height:$choose_h1;
-    } 
+    }
+
     .multi-li{
         background:$mainUlBg;
         padding:5px 0;
-        width:120px;
+        width:$choose_w1 - 20px;
         padding-left:20px;
         @include cursor(pointer);
         &.active{background:$activeColor;color:$white;}
@@ -1240,7 +1299,7 @@ $labelm:30px;
         height: $choose_h1;
         overflow: auto;
     }
-    .choosedZone{min-height:60px}
+    
 /* multiMenu end */
 
  
