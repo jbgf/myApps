@@ -762,7 +762,7 @@
     .login_banner .loginZone .logOut {
       padding: 10px; }
       .login_banner .loginZone .logOut .blue {
-        color: #006acf; }
+        color: #005bac; }
     .login_banner .loginZone .bg {
       height: 270px; }
   .login_banner .login-form {
@@ -798,6 +798,7 @@
       height: 44px;
       line-height: 44px;
       border-radius: 5px;
+      cursor: pointer;
       background: #ff7602;
       font-size: 14.4px; }
     .login_banner .login-form .verifyRow .verifyInput {
@@ -884,7 +885,7 @@
   height: 26px;
   line-height: 26px; }
   .news-list01 li:hover .ellipsis, .news-list01 li:hover .date {
-    color: #006acf; }
+    color: #005bac; }
   .news-list01 li:before {
     position: absolute;
     left: 0px;
@@ -893,7 +894,7 @@
     content: "▪";
     font-size: 15px; }
   .news-list01 li.on:before {
-    color: #006acf; }
+    color: #005bac; }
   .news-list01 li a {
     width: 100%;
     line-height: inherit; }

@@ -349,8 +349,7 @@ $wr:180,180,370,180;
 .resultTable{
     @include un_row($wr);
     .col{
-            -webkit-box-sizing:border-box;
-                    box-sizing:border-box;
+            box-sizing:border-box;
         }
     .b_title{
         @include lheightM($height:35px);@extend %align-center;
@@ -394,8 +393,7 @@ $pos_arr:top,right,bottom,left;
     $dd_h:50px;
     padding:20px 0; 
     height: $lr02h;
-    -webkit-box-sizing: content-box;
-            box-sizing: content-box;
+    box-sizing: content-box;
     /* @include lheightM($lr02h); */
     .title{
         @extend %float-l;
@@ -424,7 +422,6 @@ $pos_arr:top,right,bottom,left;
         @include caret($color:#676767,$position:bottom,$width:4px);
         position: relative;
         top: $dd_h/4;
-        -webkit-transition: all 0.3s;
         transition: all 0.3s;
     }
     .avatar{
@@ -504,7 +501,6 @@ $sb_bg:#f7f7f7;
             &.childList{
                 &>.sideBar_a{
                     &:after{
-                            -webkit-transition: all 0.2s;
                             transition:all 0.2s;
                             @include caret($color:$gray,$position:bottom,$width:6px);
                     }
@@ -565,8 +561,7 @@ $sb_bg:#f7f7f7;
         margin-left:150px;
         height: 100%;
         position: relative;
-        -webkit-box-shadow: #ddd 0px 0px 10px;
-                box-shadow: #ddd 0px 0px 10px;
+        box-shadow: #ddd 0px 0px 10px;
         $title_h:50px;
         $radius_lz:6px;
         @include radius($radius_lz);
@@ -895,8 +890,7 @@ $pagi_size:28px;
 
 .centerWrapper{
     background:$white;
-    -webkit-box-shadow:0 0 4px #9c9494;
-            box-shadow:0 0 4px #9c9494;
+    box-shadow:0 0 4px #9c9494;
     margin-bottom: 30px;
     .c_contentPart{
         width:900px;
@@ -1121,12 +1115,12 @@ $twr:120,250,120,248,168,198;
                 margin-top: 10px;
                 @include cursor();
              }
+             .multi-ul{width:100%;@extend %align-left;}
              input,textarea{
                 @extend %full;
                 border:none;
                 &:focus,&:active{outline:none;}
-                -webkit-box-sizing:border-box;
-                        box-sizing:border-box;
+                box-sizing:border-box;
              }
         }
         tr{
@@ -1257,7 +1251,7 @@ $labelm:30px;
     }
     .choosedZone{
         min-height:60px;
-        li{
+    @at-root li.choosed_li{
             @extend %iBlock;
             @include border();
             @include radius(3px);
@@ -1319,7 +1313,6 @@ $labelm:30px;
             overflow: hidden;
             outline: 0px;
             &.fade .modalBox-dialog {
-                -webkit-transition: -webkit-transform 0.3s ease-out;
                 transition: -webkit-transform 0.3s ease-out;
                 transition: transform 0.3s ease-out;
                 transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
@@ -1335,8 +1328,6 @@ $labelm:30px;
                 $mhbg_to:#d3ecf9;
                 .modalBox-header {
                     padding: 8px;
-                    background: -webkit-gradient(linear,left top, left bottom,from($mhbg_from),to($mhbg_to));
-                    background: -webkit-linear-gradient($mhbg_from,$mhbg_to);
                     background: linear-gradient($mhbg_from,$mhbg_to);
                     background:#{$mhbg_to}\0;
                     @include border($color:$mhbg_to);
@@ -1378,8 +1369,7 @@ $labelm:30px;
                 
                 outline: 0px;
                 color:$baseTitleColor;
-                -webkit-box-shadow: rgba(0, 0, 0, 0.498039) 0px 3px 9px;
-                        box-shadow: rgba(0, 0, 0, 0.498039) 0px 3px 9px;
+                box-shadow: rgba(0, 0, 0, 0.498039) 0px 3px 9px;
             } 
             .modalBox-title {
                 margin: 0px;
@@ -1403,9 +1393,8 @@ $labelm:30px;
           overflow: hidden;
         }
         .modalBox.fade .modalBox-dialog {
-          -webkit-transition: -webkit-transform .3s ease-out;
-                  transition: -webkit-transform .3s ease-out;
-                  transition: transform .3s ease-out;
+          transition: -webkit-transform .3s ease-out;
+          transition: transform .3s ease-out;
                   transition:         transform .3s ease-out, -webkit-transform .3s ease-out;
           -webkit-transform: translate(0, -25%);
               -ms-transform: translate(0, -25%);
@@ -1474,8 +1463,7 @@ $labelm:30px;
             margin: 30px auto;
           }
           .modalBox-content {
-            -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
-                    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
           }
           .modalBox-sm {
             width: 300px;

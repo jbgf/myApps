@@ -7,6 +7,7 @@
           this.options  = $.extend({}, multiMenu.DEFAULTS, options)
           this.allData = this.options.allData;
           this.stack = [];
+          this.storaged_stack = [];
           this.curObj = this.allData;
           this.arrToChoose = this.curObj.sub;
           this.mainClass = this.options.class;
@@ -42,6 +43,7 @@
               that.operate_stack(0,"root");
               that.choose();
               that.chooseItem();
+              that.sure();
         }  
 
         multiMenu.prototype.choose = function () {
@@ -105,16 +107,14 @@
           var that = this;
           
            if(index != "root"){
-              /*if(!that.isFinalLevel()){*/
 
-                  popNum > 0 && that.stack.splice(-popNum,popNum);
-                  that.curObj = that.stack[that.stack.length - 1][index];
-                  that.arrToChoose = that.curObj.sub;
-                  that.stack.push(that.arrToChoose);
-
-              /*}*/
+              popNum > 0 && that.stack.splice(-popNum,popNum);
+              that.curObj = that.stack[that.stack.length - 1][index];
+              that.arrToChoose = that.curObj.sub;
               
               
+              that.stack.push(that.arrToChoose);
+
            }else{
 
               that.stack.splice(0,that.stack.length);
@@ -159,31 +159,58 @@
                 return;
               }
               var index = $(this).parents("ul").find('.'+that.mcClass+'').index($(this));
-              
               var item = that.curObj.sub[index];
-
-                  that.choosed_arr.push(item.name); 
-              var citem = item.name,
-                  ca_index = that.choosed_arr.length-1;
-
               $(this).hasClass("choosed")
-              ?that.cancel(ca_index)
-              :$(this).addClass("choosed").data("ca_index",ca_index),that.choosed(citem,ca_index);
+              ?that.cancel(item,$(this).attr("data-cindex"))
+              :(that.add(index,this))
           })          
         }
-
-        multiMenu.prototype.choosed = function (citem,ca_index) {
+        
+        multiMenu.prototype.add = function (index,ele) {
           var that = this,
-              cli = $("<li class='choosed_li' data-cindex="+ca_index+">"+citem+"</li>");
-              cli.appendTo(".choosedZone").on("click",function(){
-                  that.cancel(this,ca_index);
-              })
-                    
+              item = that.curObj.sub[index];
+              
+
+              that.choosed_arr.push(item);
+          var ca_index = that.choosed_arr.length-1,
+              cli = $("<li class='choosed_li' data-cindex="+ca_index+">"+item.name+"</li>");
+              item["choosed"] = true;
+              item["cindex"] = ca_index;
+
+              cli.appendTo(".choosedZone ul").on("click",function(){
+                  that.cancel(item,ca_index);
+              });
+              $(ele).addClass('choosed').attr('data-cindex',ca_index);
         }
 
-        multiMenu.prototype.cancel = function (ele,ca_index){
-          $(".choosedZone li[data-cindex]").remove();
-          $(".multiChooseZone li[data-cindex]")
+        multiMenu.prototype.sure = function (){
+            var that = this;
+            var success = that.options.success;
+            $(document).on("click",".sampleBtn",function(){
+              if(that.choosed_arr.length>0){
+                if(success && typeof(success) == "function" ){
+                    
+                    $.proxy(success,that.$element[0])(that.choosed_arr,that)
+                }else{
+                    /*var string="";
+                    for(var i = 0 ;i<that.choosed_arr.length;i++){
+                        if(that.choosed_arr[i])string+=that.choosed_arr[i]+',';
+                    }
+                    $(".choosedItem").data("ca",that.choosed_arr).val(string)
+*/
+                }
+                
+              }
+              $(this).parents(".modalBox").find(".close").trigger("click");
+            })
+        }
+
+        multiMenu.prototype.cancel = function (item,dindex){
+          var that = this;
+          that.choosed_arr[dindex] = null;
+          item["choosed"] = false;
+          $(".choosedZone li[data-cindex="+dindex+"]").remove();
+          $(".multiChooseZone li[data-cindex="+dindex+"]")
                 .removeClass("choosed")
                 .removeAttr("data-cindex");
         }
@@ -195,12 +222,23 @@
               var arr = that.arrToChoose;
             
               $.each(arr,function(i,e){
-                  string +='<li class='+that.mcClass+'>'+e.name+'</li>'
+                var cla = that.mcClass;
+                var ca_index;
+                if(e.choosed){
+                    ca_index = e["cindex"];
+                    cla+=" choosed";
+                  
+                }else{
+                    ca_index = false;
+                }
+                  string +='<li class="'+cla+'" data-cindex='+ca_index+'>'+e.name+'</li>'
               })
                   string +="</ul>";
                   $("<div class='multiChooseZone'></div>")
                           .append(string)
                           .appendTo(that.$element);
+                  if($(that.$element).parents(".modalBox").find(".choosedZone").find("ul").length==0)
+                  $(that.$element).parents(".modalBox").find(".choosedZone").append("<ul></ul>");                          
 
         }
         multiMenu.prototype.multiTag = function (ele) {}
@@ -257,7 +295,44 @@ function triggerMenu(trigger,json){
             modalBox.modalBox();
             modalBox.off('shown.bs.modalBox').on('shown.bs.modalBox', function (e) {
                 
-                modalBox.find(".chooseZone").multiMenu({allData:json})
+                modalBox.find(".chooseZone").multiMenu({
+                  allData:json,
+                  success:function(arr,menu){
+                    undateInput(arr);
+                    var ul = $("<ul class='multi-ul'/>");
+                    for(var i = 0 ;i<arr.length;i++){
+                        if(arr[i]){
+                          var li =$('<li class="choosed_li" data-i='+i+'>'+arr[i].name+'</li>');
+                          
+                          
+                          li.appendTo(ul).on("click",function(){
+                              var index = $(this).attr("data-i"),
+                                  item = arr[index];
+                              menu.cancel(item,index);
+                              undateInput(arr);
+                              $(this).remove();
+                          })
+                        }
+                    }
+                  
+                    $(".choosedItem").data("ca",arr)
+                                     
+                                     .prev("ul").remove().end()
+                                     .before(ul);
+
+                  }
+
+                  
+                })
+                function undateInput(arr){
+                  var string="";
+                  for(var i = 0 ;i<arr.length;i++){
+                    if(arr[i]){
+                      string+=arr[i].name+',';
+                    }
+                  }
+                  $(".choosedItem").val(string);
+                }
             })
     });    
 }

@@ -253,9 +253,9 @@
     </div>
 
 
-
-<script type="text/javascript" src="js/jquery.multiMenu.js"></script>
 <script type="text/javascript" src="js/modalBox.js"></script>
+<script type="text/javascript" src="js/jquery.multiMenu.js"></script>
+
 <script type="text/javascript">
 $(function(){
     var ww = $(window).width();
@@ -430,7 +430,7 @@ $(function(){
                     name:"电子电器"
                 }
     ]};
-    triggerMenu(".addItemBtn",json)
+    triggerMenu(".addItemBtn",json);
     
 })
 
