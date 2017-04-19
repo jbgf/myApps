@@ -192,6 +192,8 @@
 }(jQuery);
 
 
+
+
 jQuery.validator.addMethod("isTel", function(value,element) {   
                       
     var length = value.length;   
@@ -268,24 +270,146 @@ function getObjectURL(file){
       return url ;
 }
 
+function triggerMenu(trigger,json){
+    $(document).on("click",trigger,function(){
+            
+            var modalBox = $(this).parents("table").next(".modalBox01");
+            
+            modalBox.modalBox();
+            modalBox.off('shown.bs.modalBox').on('shown.bs.modalBox', function (e) {
+               
+                modalBox.find(".chooseZone").multiMenu({
+                  allData:json,
+                  success:function(arr,menu){
+                    
+                    var zone = $(this).parents(".tableWrapper01").find(".choosedItem");
+                    updateInput(zone,arr);
+                    var ul = $("<ul class='outermulti-ul'/>");
+                    for(var i = 0 ;i<arr.length;i++){
+                        if(arr[i]){
+                          var li =$('<li class="choosed_li" data-i='+i+'>'+arr[i].name+'</li>');
+                          li.appendTo(ul).on("click",function(){
+                              var index = $(this).attr("data-i"),
+                                  item = arr[index];
+                              menu.cancel(item,index);
+                              updateInput(zone,arr);
+                              $(this).remove();
+                          })
+                        }
+                    }
+                  
+                    zone.data("ca",arr)
+                                     
+                                     .prev("ul").remove().end()
+                                     .before(ul);
+
+                  }
+                })
+                function updateInput(zone,arr){
+
+                  var string="";
+                  for(var i = 0 ;i<arr.length;i++){
+                    if(arr[i]){
+                      string+=arr[i].id+',';
+                    }
+                    
+                  }
+
+                  zone.val(string);
+                }
+            })
+    });    
+}
 
 function tableMake(){
   var table = $("#template01").val();
-                            
+                           
       $("#addSample").on("click",function(){
+          var tNum;
           tableBuild(table);    
-              
       }).click()
 
       function tableBuild(tableEle){
-          var title = "样品" + ($(".tableSection table").length + 1);
+          var $allTable = $(".tableSection table"),indexToD,$tableToD;
+              tNum = $allTable.length + 1;
+          var title = "样品" + (tNum);     
               $(tableEle).appendTo($(".tableSection"))
                       .find(".titleName").text(title).end()
+                      .find(":input").each(function(i,e){
+                          var name = $(e).attr("name");
+                              $(e).attr("name",'sample['+tNum+']'+name)
+                      }).end()
                       .find(".fa-trash-o").on("click",function(){
-                          $(this).parents("table").remove()
-                      });
+                          console.log(tNum)                                 
+                          tNum > 1 
+                          ?(
+                            $tableToD = $(this).parents("table"),
+                            indexToD = $allTable.index($tableToD),
+                            updateTable($allTable,indexToD),
+                            $tableToD.remove()
+                            )
+                          :alert('请至少填写一个样品');
+                      })
       }
+
+      function updateTable($tables,index){
+          var $tableToChange = $tables.filter(':gt('+index+')');
+              $tables.each(function(i,e){
+                if(i>index){
+                    $(e).find(".titleName").text("样品" + i - 1)
+                }
+              })
+      }
+
 }
+
+function lableF(labelBtn,submitBtn){
+            
+        labelBtn.on("click",function(e){
+            if($(e.target).is('input')){
+                return;
+            }
+            submitBtn.toggleClass("disabledLink");    
+            submitBtn[0].disabled = !submitBtn[0].disabled;
+            
+        });
+        var ib = isGoBack();
+        if(ib){
+            
+        }else{
+            submitBtn.addClass("disabledLink");
+            submitBtn[0].disabled = true; 
+            labelBtn.trigger("click");
+        }
+        
+}
+
+$(function(){
+    var sideBar = {
+        ini:function(){
+                $(".sideBar02 .sideBar_li").each(function(i,e){
+                    var childList = $(e).children("ul.sideBar_ul");
+                        childList.length>0 ? 
+                        $(e).addClass("childList").children(".sideBar_a")
+                            .on("click",function(){
+                                        childList.slideToggle();
+                                        $(this).parent().toggleClass("on")
+                            })
+                    : $(e).children(".sideBar_a").addClass("bottom");
+                    if($(e).hasClass("on")){
+                        $(e).parents(".sideBar_li").children(".sideBar_a").trigger("click");
+                    }
+                });
+                
+        }   
+    };
+
+    $(".sideBar02 ").length>0 && sideBar.ini();  
+
+
+})
+
+
 
 
 

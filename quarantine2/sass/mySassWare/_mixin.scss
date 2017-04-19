@@ -16,6 +16,7 @@
 @mixin bg($color:$white) {
     background:$color;
 }
+
 @mixin divider($color:#dbdbdb){
     @content;
     &:before{

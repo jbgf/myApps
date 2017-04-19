@@ -16,11 +16,11 @@ $(function(){
           //banner 轮播
           //jQuery(".slideBox").slide({mainCell:".bd ul",autoPlay:true,effect:"leftLoop",easing:"swing",interTime:"3500"});
           //最新公告文字滚动
-           jQuery(".txtScroll-left").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"leftLoop",autoPlay:true,scroll:1,vis:1,trigger:"click"});
+            jQuery(".txtScroll-left").length>0 && jQuery(".txtScroll-left").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"leftLoop",autoPlay:true,scroll:1,vis:1,trigger:"click"});
           //news滚动
-          jQuery("#newsBox01").slide({mainCell:".bd ul",autoPlay:true,effect:"leftLoop",easing:"swing",interTime:"3500"});  
+          jQuery("#newsBox01").length>0 && jQuery("#newsBox01").slide({mainCell:".bd ul",autoPlay:true,effect:"leftLoop",easing:"swing",interTime:"3500"});  
           //news tab切换
-          jQuery(".slideTxtBox").slide();
+          jQuery(".slideTxtBox").length>0 && jQuery(".slideTxtBox").slide();
           if($(" .rangePic .bd li").length>4){
                   jQuery(".rangePic").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"leftLoop",autoPlay:true,scroll:1,vis:4,trigger:"click",interTime:6000});
           }
@@ -95,7 +95,7 @@ $(function(){
 
 
 })
-           function showTime(){ 
+function showTime(){ 
             var show_day=new Array('星期日','星期一','星期二','星期三','星期四','星期五','星期六'); 
             var time=new Date(); 
             var year=time.getFullYear(); 
@@ -112,12 +112,14 @@ $(function(){
             minutes<10?minutes='0'+minutes:minutes; 
             second<10?second='0'+second:second; 
             var now_time=year+'年'+month+'月'+date+'日'+' '+show_day[day]+' '+hour+':'+minutes+':'+second; 
-            var showTime = document.getElementById('showtime');
-                if(showTime){
-                    showTime.innerHTML=now_time; 
+            var showTimeDiv = document.getElementById('showtime');
+                
+                if(showTimeDiv){
+                    showTimeDiv.innerHTML = now_time; 
                     setTimeout(showTime,1000);  
                 }else{
-                  return
+                  
+                  return false;
                 }
             
-          };
+};

@@ -626,6 +626,8 @@ cursor:pointer;
     height: 26px;
     line-height: 26px;
     background-color: #f6f6f6;
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
 }
 .header02 .h-title01float-l{font-size: 15px;}
 .header02 .more{color:#333;padding-left: 20px;background:url(../img/iconHome.png) no-repeat 0 50%;}

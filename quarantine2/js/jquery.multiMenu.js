@@ -5,7 +5,8 @@
           this.$body          = $(document.body)
           this.$element = $(element)
           this.options  = $.extend({}, multiMenu.DEFAULTS, options)
-          this.allData = this.options.allData;
+          this.allData = this.deepCopy(this.options.allData);//使用深拷贝否则数据被修改，用于下一个实例
+         
           this.stack = [];
           this.storaged_stack = [];
           this.curObj = this.allData;
@@ -14,14 +15,14 @@
           this.mcClass = this.options.mcClass;
           this.activeClass = this.options.activeClass;
           this.ini(this.allData);
-
+                 
           /*this._window = "";
           this.create();  
           this.$element.on('mouseenter.bs.multiMenu', $.proxy(this.show, this))
           this.$element.on('mouseleave.bs.multiMenu', $.proxy(this.hide, this))*/
           
         }
-
+ 
         multiMenu.VERSION  = '1.0'
 
         multiMenu.DEFAULTS = {
@@ -46,11 +47,25 @@
               that.sure();
         }  
 
+        multiMenu.prototype.deepCopy= function(source) { 
+          var that = this;
+          var result={};
+          for (var key in source) {
+                result[key] = typeof source[key]==='object'? that.deepCopy(source[key]): source[key];
+             } 
+             return result; 
+        }
+
         multiMenu.prototype.choose = function () {
           var that = this;
           var index_li,index_ul;  
           var num;
-              $(document).on("click",'.'+that.mainClass+'',function(){
+          /*不可以使用
+          $(document).on("click.multiMenu",'.'+that.mainClass+'')
+          导致多个实例绑定事件的触发
+          */    
+              $(that.$element).on("click.multiMenu",'.'+that.mainClass+'',function(){
+                  
                   if($(this).hasClass(that.activeClass)){return}
                   var uls = that.$element.find("ul");
                   var ul = $(this).parent("ul"),sameLevel;
@@ -72,7 +87,6 @@
                             that.multiChoose();    
                          }
                       }
-                      
                       $(this).addClass(that.activeClass)
                              .siblings('.'+that.mainClass+'').removeClass(that.activeClass);   
               
@@ -105,21 +119,21 @@
 
         multiMenu.prototype.operate_stack = function(popNum,index){
           var that = this;
-          
-           if(index != "root"){
 
+           if(index != "root"){
+             
               popNum > 0 && that.stack.splice(-popNum,popNum);
+             
               that.curObj = that.stack[that.stack.length - 1][index];
               that.arrToChoose = that.curObj.sub;
-              
-              
               that.stack.push(that.arrToChoose);
 
            }else{
-
+             
+             
               that.stack.splice(0,that.stack.length);
               that.stack.push(that.arrToChoose);
-              
+                
            }
         }        
 
@@ -129,9 +143,9 @@
               if (!data) {
                 $(ul).data('bs.multiMenu', (data = index_ul));
               }
+              
               num = ( that.stack.length - 1 ) - index_ul;
               return num;
-
         }
 
         multiMenu.prototype.createlevel = function(){
@@ -154,7 +168,7 @@
         multiMenu.prototype.chooseItem = function (ele) {
           var that = this;
               that.choosed_arr = [];
-          $(document).on("click",'.'+that.mcClass+'',function(){
+          $(that.$element).on("click",'.'+that.mcClass+'',function(){
               if(!that.isFinalLevel()){
                 return;
               }
@@ -186,10 +200,10 @@
         multiMenu.prototype.sure = function (){
             var that = this;
             var success = that.options.success;
-            $(document).on("click",".sampleBtn",function(){
+            $(that.$element).parents(".modalBox01").on("click",".sampleBtn",function(){
               if(that.choosed_arr.length>0){
                 if(success && typeof(success) == "function" ){
-                    
+
                     $.proxy(success,that.$element[0])(that.choosed_arr,that)
                 }else{
                     /*var string="";
@@ -209,6 +223,7 @@
           var that = this;
           that.choosed_arr[dindex] = null;
           item["choosed"] = false;
+
           $(".choosedZone li[data-cindex="+dindex+"]").remove();
           $(".multiChooseZone li[data-cindex="+dindex+"]")
                 .removeClass("choosed")
@@ -220,7 +235,7 @@
           var string = "<ul class='multi-choose-ul'>";
           
               var arr = that.arrToChoose;
-            
+              
               $.each(arr,function(i,e){
                 var cla = that.mcClass;
                 var ca_index;
@@ -258,6 +273,7 @@
             var options = typeof option == 'object' && option
 
             if (!data) $this.data('bs.multiMenu', (data = new multiMenu(this, options)))
+            
             if (typeof option == 'string') data[option]()
           })
         }
@@ -288,51 +304,3 @@
 
 }(jQuery);
 
-function triggerMenu(trigger,json){
-    $(document).on("click",trigger,function(){
-            modalBox = $(this).parents("table").next(".modalBox01");
-            /*console.log(modalBox)*/
-            modalBox.modalBox();
-            modalBox.off('shown.bs.modalBox').on('shown.bs.modalBox', function (e) {
-                
-                modalBox.find(".chooseZone").multiMenu({
-                  allData:json,
-                  success:function(arr,menu){
-                    undateInput(arr);
-                    var ul = $("<ul class='multi-ul'/>");
-                    for(var i = 0 ;i<arr.length;i++){
-                        if(arr[i]){
-                          var li =$('<li class="choosed_li" data-i='+i+'>'+arr[i].name+'</li>');
-                          
-                          
-                          li.appendTo(ul).on("click",function(){
-                              var index = $(this).attr("data-i"),
-                                  item = arr[index];
-                              menu.cancel(item,index);
-                              undateInput(arr);
-                              $(this).remove();
-                          })
-                        }
-                    }
-                  
-                    $(".choosedItem").data("ca",arr)
-                                     
-                                     .prev("ul").remove().end()
-                                     .before(ul);
-
-                  }
-
-                  
-                })
-                function undateInput(arr){
-                  var string="";
-                  for(var i = 0 ;i<arr.length;i++){
-                    if(arr[i]){
-                      string+=arr[i].name+',';
-                    }
-                  }
-                  $(".choosedItem").val(string);
-                }
-            })
-    });    
-}

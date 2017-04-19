@@ -3,6 +3,8 @@
 <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 <link rel="stylesheet" type="text/css" href="css/home.css">
 <script type="text/javascript" src="js/jquery.validate.js"></script>
+<script type="text/javascript" src="js/modalBox.js"></script>
+<script type="text/javascript" src="js/jquery.multiMenu.js"></script>
 <script type="text/javascript" src="js/home.js"></script>
     
      <div class="centerMiddle content-bg ">
@@ -47,7 +49,7 @@
                             <td>样品标记  </td>
                             <td class="smark inputTd"><input type="text" name="smark"></td>
                             <td>样品份数 </td>
-                            <td class="sNum inputTd"><input type="number" name="sNum"></td>
+                            <td class="sNum inputTd"><input type="text" name="sNum"></td>
                             <td>数量、重量/每份 </td>
                             <td class="sPinfo inputTd"><input type="text" name="sPinfo"></td>
                         </tr>
@@ -161,8 +163,8 @@
                                         </div>
                                     </td>
                                     <td>提供的资料</td>
-                                    <td>
-                                        
+                                    <td class="inputTd"> 
+                                        <input type="" name="">
                                     </td>
                                 </tr>
                                 <tr>
@@ -253,8 +255,7 @@
     </div>
 
 
-<script type="text/javascript" src="js/modalBox.js"></script>
-<script type="text/javascript" src="js/jquery.multiMenu.js"></script>
+
 
 <script type="text/javascript">
 $(function(){
@@ -431,7 +432,6 @@ $(function(){
                 }
     ]};
     triggerMenu(".addItemBtn",json);
-    
 })
 
    

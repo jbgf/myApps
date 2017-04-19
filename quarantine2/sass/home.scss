@@ -8,26 +8,26 @@
  * * * * * * * * * * * * * * * * * * ** * * * *@reset  * * * * * * * * * * * * * * * * * * * * 
   * * * * * * * * * * * * * * * * * * * * * * * * * ** * * * * * * * * * * * * * * * * * * * */
 /* reset */
-p{margin:0;}
+p,ul{margin:0;}
 button { 
     border: none;
 }
 input[type="radio"]:focus,
 button:focus{outline:0;}
 .clear{@extend %clear;}
-.container1000 {
+.container1000{
     width: 1000px;
     margin: 0 auto;
 }
 /* reset */
-  
+a{color:inherit;}   
 .font-weight{@extend %font-weight;}
 .smallSize{font-size:$smallSize;}
 .baseSize{@extend %baseSize;}
 .mediumSize{font-size: $mediumSize!important;}
 .bigSize{font-size: $bigSize!important;}
   
-/*color*/ 
+/*color*/  
 .content-bg{@extend %content-bg;}
 .baseFontColor{@extend %baseFontColor;} 
 .titleColor{color:$titleColor; } 
@@ -35,7 +35,7 @@ button:focus{outline:0;}
 .i_white{color:#fff!important;}
 .blue{color:$mainColor;}
 .light-blue{color:$light-blue;} 
-.water-blue {@extend %water-blue;}
+.water-blue{@extend %water-blue;}
    
 .light-gray{@extend %light-gray;}
 .light-green{@extend %light-green;}
@@ -58,12 +58,15 @@ button:focus{outline:0;}
 
 .bg-l-green{@extend %bg-lightGreen;}
 .bg-cyan{@extend %bg-cyan;}
-.bg-blue{background:$mainColor;}
+.bg-blue{background:$blue2;}
+.bg-blue2{background:$light-blue2;}
 .bg-blue03{background-color: #1978cf;}
 .bg-black{background:#0f1014;}
 .bg-yellow{background: #ffae00;}
 .bg-pink{background:#ec5369;}
 /* .bg-green {background: #6eb92b;} */
+.bg-green2 {background: $green2;}
+.bg-orange3{background:$orange3;}
 .bg_red{background-color: #df0000;}
 .bg-white{@extend %bg-white;}
 
@@ -349,7 +352,8 @@ $wr:180,180,370,180;
 .resultTable{
     @include un_row($wr);
     .col{
-            box-sizing:border-box;
+            -webkit-box-sizing:border-box;
+                    box-sizing:border-box;
         }
     .b_title{
         @include lheightM($height:35px);@extend %align-center;
@@ -393,7 +397,8 @@ $pos_arr:top,right,bottom,left;
     $dd_h:50px;
     padding:20px 0; 
     height: $lr02h;
-    box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
     /* @include lheightM($lr02h); */
     .title{
         @extend %float-l;
@@ -420,8 +425,10 @@ $pos_arr:top,right,bottom,left;
     .caretWrapper{height: $dd_h;vertical-align:middle;}
     .caretWrapper .caret{
         @include caret($color:#676767,$position:bottom,$width:4px);
+        border-top:none;
         position: relative;
         top: $dd_h/4;
+        -webkit-transition:all 0.3s;
         transition: all 0.3s;
     }
     .avatar{
@@ -501,6 +508,7 @@ $sb_bg:#f7f7f7;
             &.childList{
                 &>.sideBar_a{
                     &:after{
+                            -webkit-transition:all 0.2s;
                             transition:all 0.2s;
                             @include caret($color:$gray,$position:bottom,$width:6px);
                     }
@@ -518,6 +526,7 @@ $sb_bg:#f7f7f7;
         }
         .sideBar_a{
             padding:$sb_btn_h/4 0;
+            &:hover{text-decoration:none;}
             @include border($position:left,$width:6px,$color:$sb_bg);
             @extend %block;
             p{ 
@@ -561,7 +570,8 @@ $sb_bg:#f7f7f7;
         margin-left:150px;
         height: 100%;
         position: relative;
-        box-shadow: #ddd 0px 0px 10px;
+        -webkit-box-shadow: #ddd 0px 0px 10px;
+                box-shadow: #ddd 0px 0px 10px;
         $title_h:50px;
         $radius_lz:6px;
         @include radius($radius_lz);
@@ -765,7 +775,10 @@ $imgthumb_w:130px;
         font-weight: normal;
         @include cursor();
     }
-    .un-block-1{.red{margin-right:3px}}
+    .un-block-1{
+        color:$baseTitleColor;        
+        .red{margin-right:3px}
+    }
     .un-block-2,.un-block-3{padding-left:$sf_p;}
     .agreement{
         @extend %float-l;
@@ -773,28 +786,32 @@ $imgthumb_w:130px;
         font-size: $smallSize;
         padding-top:5px;
         #agreeLabel{@extend %float-l;}
-        .labelWrapper{
-            @extend %clear;
-            @extend %iBlock;
-        }
-        .labelFor{
-            display:none;
-            
-            & + .checkBox{
-                @include border();
-                @include radius(2px);
-                width:13px;
-                height:13px;
-                margin-right: 5px;
-                margin-top: 4px;
-                @extend %float-l;
-            }
-            &:checked + .checkBox{background:url(#{$baseImgUrl}checkbg.png) no-repeat center center}
-        }
+        
     }
     .error{color:red;}
     
 }      
+
+.labelWrapper{
+    @extend %clear;
+    @extend %iBlock;
+    @extend %align-left;
+    #agreeBtn{@extend %float-l;}
+    .agreeBox{@include cursor();}
+    .labelFor{
+        display:none;
+        & + .checkBox{
+            @include border();
+            @include radius(2px);
+            width:13px;
+            height:13px;
+            margin-right: 5px;
+            margin-top: 4px;
+            @extend %float-l;
+        }
+        &:checked + .checkBox{background:url(#{$baseImgUrl}checkbg.png) no-repeat center center}
+    }
+}
        
 .commonWrapper{padding-top:30px;}
 
@@ -805,7 +822,10 @@ $imgthumb_w:130px;
     @include border($position:bottom,$type:dashed,$color:#005baa);
 }
 
-.hcWrapper{padding-top:15px;}
+.hcWrapper{
+    padding-top:15px;
+    .hcText{padding:25px 30px}
+}
 $mainpl:20px;
 .tsection{
     font-size: $baseSize*1.1;
@@ -890,7 +910,8 @@ $pagi_size:28px;
 
 .centerWrapper{
     background:$white;
-    box-shadow:0 0 4px #9c9494;
+    -webkit-box-shadow:0 0 4px #9c9494;
+            box-shadow:0 0 4px #9c9494;
     margin-bottom: 30px;
     .c_contentPart{
         width:900px;
@@ -1089,6 +1110,19 @@ $sb_brand_h:55px;
 
 
 .tp01{padding:20px 0}
+.tp02{
+    /* padding:20px 0 5px; */
+    height: 40px;
+    @extend %relative;
+    @include border($type:dashed,$position:bottom);
+    @extend %align-right;
+    .t{@extend %abs;left:0;bottom:10px;font-weight:normal;}
+    .sampleBtn{
+        font-weight:normal;
+        background:$green2;
+        @include lheightM(30px);
+    }
+}
 $twr:120,250,120,248,168,198;
 
 .tableSection{
@@ -1120,7 +1154,8 @@ $twr:120,250,120,248,168,198;
                 @extend %full;
                 border:none;
                 &:focus,&:active{outline:none;}
-                box-sizing:border-box;
+                -webkit-box-sizing:border-box;
+                        box-sizing:border-box;
              }
         }
         tr{
@@ -1149,19 +1184,19 @@ $twr:120,250,120,248,168,198;
 
 }
 
-.addRow{padding-top:30px;padding-bottom:50px;}
+.addRow{padding-top:30px;padding-bottom:50px;@extend %align-center;}
 
 .sampleBtn{
     @include btn($width:165px,$height:45px,$radius:0px,$bg:$light-blue2){
         color:$white;
         @extend %mar-center;
         font-size: $mediumSize;
-        
+        @extend %iBlock;
     }; 
 }
 #addSample{
-
     span{
+            @extend %iBlock;
             @include persudo($color:$white,$content:"+"){
                 left: -20px;
                 font-size: 25px;
@@ -1187,6 +1222,13 @@ $twr:120,250,120,248,168,198;
             &:nth-child(even){
                 @extend %align-left;
                 padding-left:30px
+            }
+           &.inputTd input{
+                @extend %full;
+                border:none;
+                &:focus,&:active{outline:none;}
+                -webkit-box-sizing:border-box;
+                        box-sizing:border-box;
             }
         }
     }
@@ -1220,6 +1262,59 @@ $labelm:30px;
         }
 }
 
+.labelWrapper04{
+        &>span{@extend %iBlock;}
+        &>label{
+            float: left;
+            display: inline-block;
+        }
+        & + .labelWrapper04{margin-left:20px}    
+        @extend %clear;
+        @extend %float-r;
+        
+        & + .labelWrapper{margin-left:$labelm;}
+        .labelFor{
+            display:none;
+            .radioText{@extend %float-l;}
+            &:checked + .radioBox{background:url(#{$baseImgUrl}checkbox02.png) no-repeat}
+            & + .radioBox,
+            &.nochecked + .radioBox{
+                background:url(#{$baseImgUrl}checkbox01.png) no-repeat;
+                width:15px;
+                height:15px;
+                margin-right: 15px;
+               
+                @extend %float-l;
+            }
+        }
+}
+
+.labelWrapper04{
+        &>span{@extend %iBlock;}
+        &>label{
+            float: left;
+            display: inline-block;
+        }
+        & + .labelWrapper04{margin-left:20px}    
+        @extend %clear;
+        @extend %float-l;
+        
+        & + .labelWrapper{margin-left:$labelm;}
+        .labelFor{
+            display:none;
+            .radioText{@extend %float-l;}
+            &:checked + .radioBox{background:url(#{$baseImgUrl}checkbox02.png) no-repeat}
+            & + .radioBox,
+            &.nochecked + .radioBox{
+                background:url(#{$baseImgUrl}checkbox01.png) no-repeat;
+                width:15px;
+                height:15px;
+                margin-right: 15px;
+               
+                @extend %float-l;
+            }
+        }
+}
 
 /* multiMenu start */
     $mainUlBg:#fafafa;
@@ -1251,6 +1346,10 @@ $labelm:30px;
     }
     .choosedZone{
         min-height:60px;
+        & + .sampleBtn{
+            @extend %mar-center;
+            @extend %block;
+        }
     @at-root li.choosed_li{
             @extend %iBlock;
             @include border();
@@ -1260,6 +1359,7 @@ $labelm:30px;
             margin-right:20px;
             margin-bottom: 15px;
             @include persudo($color:#dbdbdb,$content:" ",$position:after,$bg:"shutGrayBg.png"){
+                    @extend %absfull;
                     width:100%;height:100%;
                     background-repeat:no-repeat;
                     background-position: 100% 100%;
@@ -1271,14 +1371,21 @@ $labelm:30px;
                             background-repeat:no-repeat;
                             background-position: 100% 100%;
                     };
-            }
+            } 
         }
     }
-    ul.multi-ul{
+    ul.multi-ul,
+    ul.outermulti-ul{
         @extend %float-l;
-        width:$choose_w1;
         color:$baseTitleColor;
+    }
+    ul.outermulti-ul{
+        @extend %align-left;   
+    }
+    ul.multi-ul{
+        width:$choose_w1;
         height:$choose_h1;
+        overflow:auto;
     }
 
     .multi-li{
@@ -1289,7 +1396,7 @@ $labelm:30px;
         @include cursor(pointer);
         &.active{background:$activeColor;color:$white;}
     } 
-    .chooseZone,ul.multi-ul{
+    .chooseZone{
         height: $choose_h1;
         overflow: auto;
     }
@@ -1314,6 +1421,7 @@ $labelm:30px;
             outline: 0px;
             &.fade .modalBox-dialog {
                 transition: -webkit-transform 0.3s ease-out;
+                -webkit-transition:-webkit-transform 0.3s ease-out;
                 transition: transform 0.3s ease-out;
                 transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
                 -webkit-transform: translate(0px, -25%);
@@ -1328,6 +1436,8 @@ $labelm:30px;
                 $mhbg_to:#d3ecf9;
                 .modalBox-header {
                     padding: 8px;
+                    background: -webkit-gradient(linear,left top, left bottom,from($mhbg_from),to($mhbg_to));
+                    background: -webkit-linear-gradient($mhbg_from,$mhbg_to);
                     background: linear-gradient($mhbg_from,$mhbg_to);
                     background:#{$mhbg_to}\0;
                     @include border($color:$mhbg_to);
@@ -1369,7 +1479,8 @@ $labelm:30px;
                 
                 outline: 0px;
                 color:$baseTitleColor;
-                box-shadow: rgba(0, 0, 0, 0.498039) 0px 3px 9px;
+                -webkit-box-shadow: rgba(0, 0, 0, 0.498039) 0px 3px 9px;
+                        box-shadow: rgba(0, 0, 0, 0.498039) 0px 3px 9px;
             } 
             .modalBox-title {
                 margin: 0px;
@@ -1394,6 +1505,7 @@ $labelm:30px;
         }
         .modalBox.fade .modalBox-dialog {
           transition: -webkit-transform .3s ease-out;
+          -webkit-transition:-webkit-transform .3s ease-out;
           transition: transform .3s ease-out;
                   transition:         transform .3s ease-out, -webkit-transform .3s ease-out;
           -webkit-transform: translate(0, -25%);
@@ -1463,7 +1575,8 @@ $labelm:30px;
             margin: 30px auto;
           }
           .modalBox-content {
-            box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+            -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+                    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
           }
           .modalBox-sm {
             width: 300px;
@@ -1476,29 +1589,342 @@ $labelm:30px;
         }
 
 
-        /*modalBox01 start*/
+       
         @media (min-width: 768px) {
-            .modalBox01 .modalBox-dialog {
+            .modalBox .modalBox-dialog {
                 width: auto;
                 margin: 30px auto;
             }
         }
        
+/*modalBox end*/
+
+/* modalBox02 start */
+    .modalBox02{
+        @mixin modalBox($width:1000px) {
+            .modalBox-content{width:1000px}
+        }    
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        z-index: 1050;
+        display: none;
+        overflow: hidden;
+        outline: 0px;
+        &.fade .modalBox-dialog {
+            transition: -webkit-transform 0.3s ease-out;
+            -webkit-transition:-webkit-transform 0.3s ease-out;
+            transition: transform 0.3s ease-out;
+            transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+            -webkit-transform: translate(0px, -25%);
+                -ms-transform: translate(0px, -25%);
+                    transform: translate(0px, -25%);
+        }
+        &.in .modalBox-dialog {
+              -webkit-transform: translate(0, 0);
+                  -ms-transform: translate(0, 0);
+                      transform: translate(0, 0);
+        }
+        .modalBox-dialog {
+            position: relative;
+            width: auto;
+            margin: 10px;
+            $mhbg_from:$white;
+            $mhbg_to:#d3ecf9;
+            .modalBox-header {
+                padding: 8px;
+                background: -webkit-gradient(linear,left top, left bottom,from($mhbg_from),to($mhbg_to));
+                background: -webkit-linear-gradient($mhbg_from,$mhbg_to);
+                background: linear-gradient($mhbg_from,$mhbg_to);
+                background:#{$mhbg_to}\0;
+                @include border($color:$mhbg_to);
+                .close {
+                    float: right;
+                    font-size: 21px;
+                    font-weight: bold;
+                    line-height: 1;
+                    color: rgb(0, 0, 0);
+                    text-shadow: rgb(255, 255, 255) 0px 1px 0px;
+                    opacity: 0.2;
+                    margin-top: -2px;
+                    z-index: 9999;
+                    @extend %relative;
+                    -webkit-appearance: none;
+                    padding: 0px;
+                    cursor: pointer;
+                    background: transparent;
+                    border: 0px;
+                }
+                .close:hover,
+                .close:focus {
+                  color: #000;
+                  text-decoration: none;
+                  cursor: pointer;
+                  filter: alpha(opacity=50);
+                  opacity: .5;
+                }
+               
+            }
+        }
+        .modalBox-content {
+            position: relative;
+            background-color: rgb(255, 255, 255);
+            background-clip: padding-box;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            
+            outline: 0px;
+            color:$baseTitleColor;
+            -webkit-box-shadow: rgba(0, 0, 0, 0.498039) 0px 3px 9px;
+                    box-shadow: rgba(0, 0, 0, 0.498039) 0px 3px 9px;
+        } 
+        .modalBox-title {
+            margin: 0px;
+            line-height: 1.42857;
+            margin: 0px;
+            line-height: 1.42857;
+            font-size: $bigSize;
+            @extend %align-left;
+           
+        }
+        .modalBox-body {
+            position: relative;
+            padding: 15px;
+            &.nopadding{
+                padding:0;
+            }
+        }
+        .modalBox-footer {
+              padding: 15px;
+              text-align: right;
+              border-top: 1px solid #e5e5e5;
+              .btn + .btn {
+                  margin-bottom: 0;
+                  margin-left: 5px;
+              }
+              .btn-group .btn + .btn {
+                  margin-left: -1px;
+              }
+              .btn-block + .btn-block {
+                  margin-left: 0;
+              }
+        }
+    }
+
+    .modalBox-open {
+      overflow: hidden;
+      .modalBox {
+          overflow-x: hidden;
+          overflow-y: auto;
+      }    
+    }
+            
+    .modalBox-backdrop {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1040;
+      background-color: #000;
+      &.fade{
+        filter: alpha(opacity=0);
+        opacity: 0;
+      }
+      &.in{
+          filter: alpha(opacity=50);
+          opacity: .5;
+      }
+    }
+       
+    .modalBox-scrollbar-measure {
+      position: absolute;
+      top: -9999px;
+      width: 50px;
+      height: 50px;
+      overflow: scroll;
+    }
+    @media (min-width: 768px) {
+      .modalBox-dialog {
+        width: 600px;
+        margin: 30px auto;
+      }
+      .modalBox-content {
+        -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+      }
+      .modalBox-sm {
+        width: 300px;
+      }
+    }
+    @media (min-width: 992px) {
+      .modalBox-lg {
+        width: 900px;
+      }
+    }
+    @media (min-width: 768px) {
+        .modalBox .modalBox-dialog {
+            width: auto;
+            margin: 30px auto;
+        }
+    }
+       
 /*modalBox01 end*/
 
-#modalBox01{
-    p{@extend %relative;}
-    .iconW{
-        @include ftextTab($width:auto,$height:auto,$position:"left");
-        i{}
-    }
-    .t{
-        
-        @include newsTab_img($height:auto,$margin:25px,$position:"left")
-    }
-    .fa{color:$yellow;}
-    
+
+.companyInfo{
+    .un-block-2{background:#F8F8F8;padding-left:20px;}
+    padding-bottom:50px;
 }
 
+.smallBtn{
+    @extend %iBlock;
+    @include cursor();
+    color:$white;
+    padding:1px 15px;
+}
+
+$conarr:690,215;
+.contactTabel{
+    table{ 
+        width:100%;
+        @include nth_un_width($rateArr:$conarr,$string:"td",$blockNum:false);
+    }
+
+    td{
+        padding:35px 0;color:$baseTitleColor;font-size:$mediumSize;
+        @include border($position:bottom,$type:dashed);
+    }
+    .ispan{
+        & + .ispan{margin-left:20px;}
+    }
+    .buttonW{
+        @extend %align-right;
+        .smallBtn{margin-bottom:5px;}
+    }
+}
+
+.submitZone{
+    @extend %align-center;
+    #submitInfo{background:$orange2;}
+    padding:50px 0 80px;
+}
  
 
+#stateBox{
+    padding:150px 0 300px;
+    .text{
+        padding-left:20px;
+        .t{font-size:$bigSize*2;@extend %block;padding-bottom:10px}
+    }
+}
+
+$pwr:1,5,1;
+.priceTable {
+    table{@extend %resetTable;}
+    &>table{
+        margin:15px auto 15px;
+        width:80%;
+        & > tbody > tr{
+            &:nth-child(1){td{background:$green2;color:$white;height:30px;}}
+            &>td{@include border();}
+        }
+        @include nth_un_width($rateArr:$pwr,$string:"td",$blockNum:false){
+                vertical-align: middle;
+                height: 45px;
+                text-align: center;
+                color:$baseTitleColor;
+        };
+        table{
+            tr + tr{@include border($position:top);}
+        }
+    }
+}
+
+$pwr2:70,370,370;
+#paywayW{padding:100px 200px}
+.payWay{
+    
+    .zhi{color:#00a5e8;}
+    .we{color:#20d029}
+    .psubmitZone{
+        background:#efefef;
+        padding:20px 18px;
+        #confirmPay{
+            background:$green2;
+            width:100%;
+            color:$white;
+            height: 60px;
+            font-size:$bigSize;
+            @include radius(5px);
+        } 
+    }
+    table{
+        @extend %resetTable;
+        font-size: $bigSize;
+        tr{@include border();}
+        @include nth_un_width($rateArr:$pwr2,$string:"td",$blockNum:false){
+            @extend %align-left;
+            height: 80px;
+            &:nth-child(1){
+                @extend %align-right; 
+            } 
+            &:nth-child(3){
+                @extend %align-right; 
+                padding-right:15px;
+            } 
+            i{font-size:$bigSize*1.5;}
+            .t{
+                font-size: %bigSize;
+                padding-left:20px;
+            }    
+        };
+    }
+    form{
+        width:510px;
+        @extend %mar-center;
+    }
+}
+
+.thead{
+    padding-bottom:20px;
+    @extend %align-center;
+    @include border($position:bottom,$type:dashed);
+    font-size: $bigSize;
+    @extend %font-weight;
+}
+
+/* component.css reset */
+    .portlet>.portlet-title{
+        margin-bottom: 0;
+    }
+    .portlet.light>.portlet-title>.caption {
+        color:$baseTitleColor;
+        padding:0;
+        font-size: $bigSize;
+    }
+    .portlet.light>.portlet-title>.actions {
+        padding: 0;
+    }
+    .portlet.light>.portlet-title {
+        border-bottom: 1px dashed #eee;
+        min-height: 30px;
+    }
+    .list-datetime .btn{
+        padding:2px 5px;
+        display: inline-block;
+    }
+
+    .portlet.light {
+        padding:0;
+        
+    }
+    
+    .list-simple.mt-list-container ul>.mt-list-item>.list-item-content {
+        line-height: 1.2;
+    }
+    .bg-green, .bg-hover-green:hover {
+        background: $blue2!important;
+    }
+/* component.css reset */

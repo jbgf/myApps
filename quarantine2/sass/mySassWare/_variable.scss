@@ -48,14 +48,17 @@ $light-gray:#f8f8f8;
 $light-gray2:#f5f5f1;
 $gray:#999;
 $green:#6eb92b;
+$green2:#6bb033;
 $light-blue:#4aadff;
 $light-blue2:#54a4d5;
 $water-blue:#59a3d6;
 $blue:#005bac;
+$blue2:#094990;
 $light-green:#4bd8a3;
 $yellow:#ffbf00;
 $orange:#efa506;
 $orange2:#ff7602;
+$orange3:#ff9235;
 $red:#ec5369;
 $baseFontColor : #666;
 $baseTitleColor:#333;
@@ -193,5 +196,8 @@ $cyan:#f0f4f6;
         vertical-align: middle;
         font-size: $bigSize*0.8;
         color:$baseTitleColor;
+}
+%resetInput{
+  
 }
 
