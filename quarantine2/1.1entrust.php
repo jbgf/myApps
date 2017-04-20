@@ -5,6 +5,7 @@
 <script type="text/javascript" src="js/jquery.validate.js"></script>
 <script type="text/javascript" src="js/modalBox.js"></script>
 <script type="text/javascript" src="js/jquery.multiMenu.js"></script>
+<script type="text/javascript" src="js/jquery.inputHistory.js"></script>
 <script type="text/javascript" src="js/home.js"></script>
     
      <div class="centerMiddle content-bg ">

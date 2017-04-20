@@ -1126,7 +1126,7 @@ $sb_brand_h:55px;
 $twr:120,250,120,248,168,198;
 
 .tableSection{
-    .tableWrapper01 + .tableWrapper01{margin-top: 20px}
+    .tableWrapper01 + .tableWrapper01{padding-top: 20px}
     table{
        
         
@@ -1843,7 +1843,7 @@ $pwr:1,5,1;
 }
 
 $pwr2:70,370,370;
-#paywayW{padding:100px 200px}
+#paywayW{padding:75px 200px 100px}
 .payWay{
     
     .zhi{color:#00a5e8;}

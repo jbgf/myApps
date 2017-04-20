@@ -323,40 +323,58 @@ function triggerMenu(trigger,json){
 
 function tableMake(){
   var table = $("#template01").val();
-                           
+      var tNum;
+      var $allTable,
+          indexToD,$tableToD,historyData = {};                     
       $("#addSample").on("click",function(){
-          var tNum;
+          $allTable = $(".tableSection table");
           tableBuild(table);    
       }).click()
 
       function tableBuild(tableEle){
-          var $allTable = $(".tableSection table"),indexToD,$tableToD;
+          
               tNum = $allTable.length + 1;
           var title = "样品" + (tNum);     
-              $(tableEle).appendTo($(".tableSection"))
-                      .find(".titleName").text(title).end()
-                      .find(":input").each(function(i,e){
-                          var name = $(e).attr("name");
-                              $(e).attr("name",'sample['+tNum+']'+name)
-                      }).end()
-                      .find(".fa-trash-o").on("click",function(){
-                          console.log(tNum)                                 
-                          tNum > 1 
-                          ?(
-                            $tableToD = $(this).parents("table"),
-                            indexToD = $allTable.index($tableToD),
-                            updateTable($allTable,indexToD),
-                            $tableToD.remove()
-                            )
-                          :alert('请至少填写一个样品');
-                      })
+              $(tableEle).css("opacity",0).appendTo($(".tableSection"))
+                         .animate({"opacity":1},function(){
+                         $(this).inputHistory({data:historyData}); 
+              })
+                         .find(".titleName").text(title).end()
+                         .find(":input").each(function(i,e){
+                            var name = $(e).attr("name");
+                                $(e).attr("name",'sample['+tNum+']'+name)
+                         }).end()
+                         .find(".fa-trash-o").on("click",function(){
+                            tNum > 1 
+                            ?(
+                              $allTable = $(".tableSection table"),
+                              $tableToD = $(this).parents("table"),
+                              indexToD = $allTable.index($tableToD),
+                              updateTable($allTable,indexToD),
+                              $tableToD.parents(".tableWrapper01").animate({"opacity":0,"height":"toggle"},function(){
+                                    $(this).remove();
+                                })
+                              )
+                            :alert('请至少填写一个样品');
+                         })
       }
 
       function updateTable($tables,index){
-          var $tableToChange = $tables.filter(':gt('+index+')');
+          /*var $tableToChange = $tables.filter(':gt('+index+')');*/
+            var reg = /\[(\d+)\]/;
+              tNum -=1;
               $tables.each(function(i,e){
+                
                 if(i>index){
-                    $(e).find(".titleName").text("样品" + i - 1)
+
+                    $(e).find(".titleName").text("样品" + i ).end()
+                        .find(":input").each(function(input_index,input){
+                          
+                          var name = $(input).attr("name");
+                          var num = reg.exec(name)[1];
+                              name = (name.replace(reg,'['+(num-1)+']'));
+                              $(input).attr("name",name)
+                        })
                 }
               })
       }
@@ -380,8 +398,7 @@ function lableF(labelBtn,submitBtn){
             submitBtn.addClass("disabledLink");
             submitBtn[0].disabled = true; 
             labelBtn.trigger("click");
-        }
-        
+        }        
 }
 
 $(function(){
@@ -409,6 +426,22 @@ $(function(){
 
 })
 
+
+function radioCancelable(radioWrapper){
+    radioWrapper.on("click",function(e){
+        if($(e.target).is('input')){
+              return;
+        }
+        var input = $(this).find("input");
+        var checked = input.data("check");
+        if(checked == 1){
+            input.removeAttr('checked').data("check",0).addClass("nochecked");
+        }else{
+            input.parents("td").find("input[type='radio']").removeAttr('checked').data("check",0).addClass("nochecked");
+            input.attr('checked',true).data("check",1).removeClass("nochecked");
+        }
+    })
+}
 
 
 

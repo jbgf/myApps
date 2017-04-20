@@ -2850,7 +2850,7 @@ a {
     line-height: 30px; }
 
 .tableSection .tableWrapper01 + .tableWrapper01 {
-  margin-top: 20px; }
+  padding-top: 20px; }
 
 .tableSection table {
   width: 100%;
@@ -3472,7 +3472,7 @@ ul.multi-ul {
     border-top: 1px solid #ddd; }
 
 #paywayW {
-  padding: 100px 200px; }
+  padding: 75px 200px 100px; }
 
 .payWay .zhi {
   color: #00a5e8; }

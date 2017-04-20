@@ -4,6 +4,7 @@
         function multiMenu(element, options) {
           this.$body          = $(document.body)
           this.$element = $(element)
+          this.wrapper = this.$element.parents(".modalBox")
           this.options  = $.extend({}, multiMenu.DEFAULTS, options)
           this.allData = this.deepCopy(this.options.allData);//使用深拷贝否则数据被修改，用于下一个实例
          
@@ -64,7 +65,7 @@
           $(document).on("click.multiMenu",'.'+that.mainClass+'')
           导致多个实例绑定事件的触发
           */    
-              $(that.$element).on("click.multiMenu",'.'+that.mainClass+'',function(){
+              $(that.wrapper).on("click.multiMenu",'.'+that.mainClass+'',function(){
                   
                   if($(this).hasClass(that.activeClass)){return}
                   var uls = that.$element.find("ul");
@@ -168,7 +169,7 @@
         multiMenu.prototype.chooseItem = function (ele) {
           var that = this;
               that.choosed_arr = [];
-          $(that.$element).on("click",'.'+that.mcClass+'',function(){
+          $(that.wrapper).on("click",'.'+that.mcClass+'',function(){
               if(!that.isFinalLevel()){
                 return;
               }
@@ -183,15 +184,14 @@
         multiMenu.prototype.add = function (index,ele) {
           var that = this,
               item = that.curObj.sub[index];
-              
-
               that.choosed_arr.push(item);
           var ca_index = that.choosed_arr.length-1,
+
               cli = $("<li class='choosed_li' data-cindex="+ca_index+">"+item.name+"</li>");
               item["choosed"] = true;
               item["cindex"] = ca_index;
-
-              cli.appendTo(".choosedZone ul").on("click",function(){
+              
+              cli.appendTo(that.$choosedZoneUl).on("click",function(){
                   that.cancel(item,ca_index);
               });
               $(ele).addClass('choosed').attr('data-cindex',ca_index);
@@ -200,22 +200,17 @@
         multiMenu.prototype.sure = function (){
             var that = this;
             var success = that.options.success;
-            $(that.$element).parents(".modalBox01").on("click",".sampleBtn",function(){
+            $(that.wrapper).on("click",".sampleBtn",function(){
               if(that.choosed_arr.length>0){
                 if(success && typeof(success) == "function" ){
 
                     $.proxy(success,that.$element[0])(that.choosed_arr,that)
                 }else{
-                    /*var string="";
-                    for(var i = 0 ;i<that.choosed_arr.length;i++){
-                        if(that.choosed_arr[i])string+=that.choosed_arr[i]+',';
-                    }
-                    $(".choosedItem").data("ca",that.choosed_arr).val(string)
-*/
+                   
                 }
                 
               }
-              $(this).parents(".modalBox").find(".close").trigger("click");
+              $(that.wrapper).find(".close").trigger("click");
             })
         }
 
@@ -224,14 +219,15 @@
           that.choosed_arr[dindex] = null;
           item["choosed"] = false;
 
-          $(".choosedZone li[data-cindex="+dindex+"]").remove();
-          $(".multiChooseZone li[data-cindex="+dindex+"]")
+          $(".choosedZone li[data-cindex="+dindex+"]",that.wrapper).remove();
+          $(".multiChooseZone li[data-cindex="+dindex+"]",that.wrapper)
                 .removeClass("choosed")
                 .removeAttr("data-cindex");
         }
 
         multiMenu.prototype.multiChoose = function (ele) {
           var that = this;
+      /*多选待选区*/
           var string = "<ul class='multi-choose-ul'>";
           
               var arr = that.arrToChoose;
@@ -253,8 +249,10 @@
                           .append(string)
                           .appendTo(that.$element);
                   if($(that.$element).parents(".modalBox").find(".choosedZone").find("ul").length==0)
-                  $(that.$element).parents(".modalBox").find(".choosedZone").append("<ul></ul>");                          
-
+      /*多选结果区*/
+                  $(that.wrapper).find(".choosedZone").append("<ul></ul>");                          
+                  that.$choosedZoneUl = that.wrapper.find(".choosedZone ul");
+                  
         }
         multiMenu.prototype.multiTag = function (ele) {}
 
@@ -294,13 +292,15 @@
 
         // multiMenu DATA-API
         // ==================
-
-        $(window).on('load.bs.multiMenu.data-api', function () {
+        /*获取data-xx属性,作为option*/
+        /*$(window).on('load.bs.multiMenu.data-api', function () {
           $('[data-hover="_window"]').each(function () {
             var $w = $(this)
-            Plugin.call($w, $w.data())   /*获取data-xx属性,作为option*/
+            Plugin.call($w, $w.data())   
           })
-        })
+        })*/
 
 }(jQuery);
+
+
 
