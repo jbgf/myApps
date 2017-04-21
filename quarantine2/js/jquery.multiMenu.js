@@ -258,7 +258,6 @@
 
         multiMenu.prototype.reset = function (ele) {
           var that = this;
-          
         }
 
         // multiMenu PLUGIN DEFINITION

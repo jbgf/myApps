@@ -1139,7 +1139,7 @@ $twr:120,250,120,248,168,198;
         color:$baseTitleColor;
         td{
              height: 38px;
-             padding:5px;
+             /* &>div{padding:5px;} */
              @include border();
              .titleName{font-size:$bigSize*1.1}
              .tips{font-size:$smallSize;line-height:1.2;color:$gray;}
@@ -1233,6 +1233,32 @@ $twr:120,250,120,248,168,198;
         }
     }
 }
+
+.ih-ul{
+    background:$white;
+    display: none;
+    @extend %abs;
+    z-index: 999;
+    top:100%;
+    
+    left: -1px;
+    width: 100%;
+
+    right:0;
+    @include border();
+    border-top:none;
+    li{
+        $libg:#fafafa;
+        background:$libg;
+        @extend %align-left;
+        @extend %ellipsis;
+        padding:5px;
+        @include cursor();
+        &:hover{background:$blue;color:$white;}
+    }
+}
+
+
 
 $labelm:30px;
 .labelWrapper03{

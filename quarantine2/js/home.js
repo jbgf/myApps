@@ -325,7 +325,7 @@ function tableMake(){
   var table = $("#template01").val();
       var tNum;
       var $allTable,
-          indexToD,$tableToD,historyData = {};                     
+          indexToD,$tableToD,historyData = [];                     
       $("#addSample").on("click",function(){
           $allTable = $(".tableSection table");
           tableBuild(table);    
