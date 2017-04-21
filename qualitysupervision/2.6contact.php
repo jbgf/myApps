@@ -131,6 +131,7 @@
                         <div style="width:885px;height:550px;border:#ccc solid 1px;font-size:12px" id="map"></div> 
                         <style type="text/css">
                             .anchorBL{display:none;}
+                            .BMapLabel{display: none!important;}
                         </style> 
                         <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=bT5d3SyGp0VfmwROzCumXsl551zI7WcD"></script>
                           <script type="text/javascript">
@@ -147,7 +148,7 @@
                               
                             }
                             function centerMap(mapItem){ 
-                              map.centerAndZoom(new BMap.Point(mapItem.x,mapItem.y),17);
+                              map.centerAndZoom(new BMap.Point(mapItem.x,mapItem.y),5);
                             }
                             function setMapEvent(){
                               map.enableScrollWheelZoom();
@@ -161,10 +162,29 @@
                               });
                             }
                             function addMapOverlay(mapArr){
+                              var icon = {w:21,h:34};
                               for (var i = mapArr.length - 1; i >= 0; i--) {
-                                    addLabel(mapArr[i]);   
+                                    
+                                    var cod = mapArr[i];
+                                    var point = new BMap.Point(cod.x,cod.y);
+                                    var iconImg = createIcon(icon);
+                                    var marker = new BMap.Marker(point,{icon:iconImg});
+                                    map.addOverlay(marker);
+                                    
                               }
-                              function addLabel(mapItem){
+                            function createIcon(json){
+                                var icon = new BMap.Icon(
+                                    "img/marker.png", 
+                                    new BMap.Size(json.w,json.h),
+                                    {
+                                        /*anchor控制偏移坐标点相对图片左上角的偏移，offset不管用*/
+                                        anchor:new BMap.Size(json.w/2,json.h)
+                                    }
+                                )
+                                return icon;
+                            }
+
+                            function addLabel(mapItem){
                                       var point = new BMap.Point(mapItem.x,mapItem.y);
                                       var myLabel = new BMap.Label("<a style='color:red;text-decoration:none' ></a>",     
                                         {offset:new BMap.Size(-0,-0),                 

@@ -86,7 +86,26 @@
                 <div class="contentPart">
                     
                     <div class="commonPic">
-                        <img src="img/commonpic1.jpg">
+                        <div class="cv_img">
+                            <table id="cv_table">
+                                <tr>
+                                    <td><img src="img/cv01.png"></td>
+                                    <td>Fair Attitude, Fair Performance,Fair Report, Fair Institute</td>
+                                </tr>
+                                <tr>
+                                    <td><img src="img/cv02.png"></td>
+                                    <td>Scientific Method, Scientific Measure, ScientificManagement, Scientific Data</td>
+                                </tr>
+                                <tr>
+                                    <td><img src="img/cv03.png"></td>
+                                    <td>Optimal Procedure, Best Times, Fastest Speed,High-qulity Service</td>
+                                </tr>
+                                <tr>
+                                    <td><img src="img/cv04.png"></td>
+                                    <td>To create high value for employees, customers and society </td>
+                                </tr>
+                            </table>
+                        </div>
                     </div> 
                 </div>
             </div> 

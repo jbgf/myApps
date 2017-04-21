@@ -55,6 +55,16 @@
                             <img src="img/npic01.png">
                           </div>
                       </div> 
+                      <div class="prevNext">
+                        <p><span class="icon iconPrev">Previous:</span>
+                          <a href="{$prev_page['url']}" >FQII’s scope extension for CCC testing qualification authorized by CNAS</a> 
+                        </p>
+                        <p><span class="icon iconNext">Next:</span>
+                          <a href="{$next_page['url']}">
+                            Two technologists of FQII selected as members of TC 181 on toy’s technology expert-team
+                          </a> 
+                        </p>
+                      </div>
                 </div>
             </div> 
         </div>

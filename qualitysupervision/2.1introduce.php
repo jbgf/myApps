@@ -82,21 +82,25 @@
                     </span>
                     
                 </div>
-                <div class="contentPart">
-                    <div class="text">
-                        <p>Established in 1964, Fujian Inspection and Research Institute for Product Quality (hereafter referred to FQII) serve as an independent third-party to provide testing and inspection service for customers.</p>
-                        <p>Now,FQII has already obtained testingcapacity of more than 2000 items involving 60 product categories,referringto more than 5200 standards,such as electric product, food, chemicals, electronic product, plastics,etc.Occupied nearly 36000 square meter as its testing field, FQII owns 7900 sets testing equipment and 527 employees. </p>
-                    </div>
-                    <div class="brand_link">
-                        <a>
-                            <div class="t blueBg">
-                                <p class="title">About FQII</p>
-                                <p class="small">Introduction</p>
-                            </div>
-                            <img src="img/2.png" class="i">
-                        </a>
+                <div class="introductionw" >
+                    <div class="introduceInner">
+                        <div class="">
+                            <a>
+                                <div class="t blueBg">
+                                    <p class="title">About FQII</p>
+                                    <p class="small">Introduction</p>
+                                </div>
+                                
+                            </a>
+                        </div>
+                        <div class="text">
+                            <p>Established in 1964, Fujian Inspection and Research Institute for Product Quality (hereafter referred to FQII) serve as an independent third-party to provide testing and inspection service for customers.</p>
+                            <p>Now,FQII has already obtained testingcapacity of more than 2000 items involving 60 product categories,referringto more than 5200 standards,such as electric product, food, chemicals, electronic product, plastics,etc.Occupied nearly 36000 square meter as its testing field, FQII owns 7900 sets testing equipment and 527 employees. </p>
+                        </div>
+                        
                     </div>
                 </div>
+                
             </div> 
         </div>
     </div>

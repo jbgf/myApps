@@ -10,6 +10,9 @@ $(function(){
                             $(this).parent().toggleClass("on")
                 })
         : $(e).children(".sideBar_a").addClass("bottom");
-    })
+        if($(e).hasClass("on")){
+            $(e).parents(".sideBar_li").children(".sideBar_a").trigger("click");
+        }
+    });
 
 })

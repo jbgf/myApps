@@ -5,24 +5,8 @@
     </div>
     <div class="centerMiddle container1200">
         <div class="center_innerWrapper">
-            <div class="leftSide">
-
-                <div class="sideBar03">
-                    <div class="sb_brand">About FQII</div>
-                    <ul class="sideBar_ul level1">
-                        <li class="sideBar_li on">
-                            <a class="sideBar_a ">
-                                <p>
-                                <span class="icontext">Introduction</span>
-                                </p>
-                            </a>
-                        </li>
-                        
-                    </ul>
-                    
-                </div>
-            </div>
-            <div class="rightContent">
+            
+            <div class="search_wrapper">
                 <div class="news_h02">
                     <div class="h-title01 float-l">
                         <span class="text"> search results </span>
@@ -36,7 +20,7 @@
                     </span>
                       
                 </div>
-                 
+                  
                 <div class="contentPart">
                     <div class="news_wrapper">
                         
