@@ -55,11 +55,11 @@
                             <td class="sPinfo inputTd"><input type="text" name="sPinfo"></td>
                         </tr>
                         <tr>
-                            <td>
+                            <td >
                                 检测项目
                                 <div class="addItemBtn tips">添加检测项目</div>
                             </td>
-                            <td colspan="3"><input class="choosedItem" type="hidden" name="choosedItem"></td>
+                            <td colspan="3" data-history="true"><input class="choosedItem" type="hidden" name="choosedItem"></td>
                             <td>
                                 检测依据
                                 <div class="tips">（本栏留空视为同意由
@@ -262,9 +262,6 @@
 $(function(){
     var ww = $(window).width();
     var wh = $(window).height();
-    
-        tableMake();
-    var modalBox;
     var json ={sub:[ 
                 {
                     name:"食品",
@@ -432,7 +429,8 @@ $(function(){
                     name:"电子电器"
                 }
     ]};
-    triggerMenu(".addItemBtn",json);
+    triggerModalBox(".addItemBtn");
+    tableMake(json);
 })
 
    

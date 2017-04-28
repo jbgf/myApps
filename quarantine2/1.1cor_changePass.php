@@ -156,9 +156,9 @@
                         });
 
                      $(".solution_form").validate({
-                                 success:function(label,element){
-                                    $(element).data("validate",true);
-                                }
+                        success:function(label,element){
+                            $(element).data("validate",true);
+                        }
                      });
                  </script>
             </form>

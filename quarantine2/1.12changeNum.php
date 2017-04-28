@@ -1,4 +1,4 @@
-<?php include './common/centerhead.html' ?>
+<?php include './common/centerhead02.html' ?>
 <link rel="stylesheet" type="text/css" href="css/home.css">
 <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 <link rel="stylesheet" type="text/css" href="iconfont/iconfont.css">

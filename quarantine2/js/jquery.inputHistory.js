@@ -6,7 +6,7 @@
           this.$element = $(element)
           this.options  = $.extend({}, inputHistory.DEFAULTS, options)
           this.ulClass = this.options.ulClass
-          this.storaged_stack = this.options.data
+          this.storaged_stack = window['inputHistoryData'] ? window['inputHistoryData'] : window['inputHistoryData'] = [];
           this.target = this.options.target
           this.inputs = this.$element.find(this.target);
           
@@ -24,6 +24,7 @@
         inputHistory.prototype.ini = function(){
           var that = this;
               that.createUl();
+              that.background();
               /*that.operate_stack(0,"root");*/
               /*that.choose();
               that.chooseItem();
@@ -33,7 +34,7 @@
         inputHistory.prototype.createUl = function(){
           var that = this;
           var string = "<ul class="+that.ulClass+" style=''/>";
-              that.background();
+              
               that.inputs.each(function(i,e){
 
                 var obj = {addComplete:false,arr:new Array()};
@@ -80,7 +81,8 @@
                                 top:0,
                                 right:0,
                                 bottom:0,
-                                display:"none"
+                                display:"none",
+                                cursor: "cell"
                               })
                               .appendTo($("body"))
                               .on("click",function(e){
@@ -107,12 +109,21 @@
         inputHistory.prototype.showHistory = function(index,ele){
           var that = this;
           var arr = that.storaged_stack[index]["arr"];            
-              console.log(that.dataArr)
-              if(arr && arr.length > 0 /*&& ele.value ==""*/){
-                  that.curUl = that.uls.eq(index)
-                  if(arr.length > that.curUl.find("li").length){
-                    var li = "<li class='ihli' data-order="+(arr.length-1)+">"+arr[arr.length-1]+"</li>";
-                    that.curUl.append(li)  ;
+              
+              if(arr && arr.length > 0 ){
+                  that.curUl = that.uls.eq(index);
+                  var ul_length = that.curUl.find("li").length;
+                  if(arr.length > ul_length){
+
+                    var newarr = arr.slice(ul_length);
+                    var lis = "";
+                    for (var i = 0; i < newarr.length; i++) {
+                        
+                        var io = i + ul_length;
+                            lis += "<li class='ihli' data-order="+(io)+">"+newarr[i]+"</li>"; 
+                    }
+                    
+                    that.curUl.append(lis);
                   }
                   that.curUl.show();
                   that.$bg.show();
@@ -122,15 +133,10 @@
         inputHistory.prototype.add_stack = function(index,value){
           var that = this;
           var arr = that.storaged_stack[index]["arr"];              
-          /*var ul = that.uls.eq(index);*/
 
               if(arr.indexOf(value) == -1){
                   arr.push(value);
-                  
-                  /*var li = "<li class='ihli' data-order="+(arr.length-1)+">"+value+"</li>";
-                      ul.append(li);*/
               }
-              /*console.log(that.storaged_stack[index])*/
         }
 
         // inputHistory PLUGIN DEFINITION

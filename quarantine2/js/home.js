@@ -202,6 +202,8 @@ jQuery.validator.addMethod("isTel", function(value,element) {
     return this.optional(element) || (length==11 && mobile.test(value));   
 }, "请正确填写您的联系方式");
 
+
+ /*上传文件按钮 start*/
 function uploadBtn(btns){
     btns.each(function(i,e){
         var input = $(e).parents(".form-row").find(".baseInput").attr("readonly","readonly"),name;
@@ -222,11 +224,14 @@ function uploadBtn(btns){
             }
     });
 }
+/*上传文件按钮 end*/
+
 
 function submitCheck($form){
     
 }
 
+/*打印函数 start*/
 function print(url){
   if($("#printIframe").length>0){$("#printIframe").remove()};
   var iframe = $('<iframe style="display:none" id="printIframe" src='+url+'></iframe>');
@@ -237,12 +242,13 @@ function print(url){
       $("#printIframe")[0].contentWindow.print();
   }
 }
+/*打印函数 end*/
 
+
+/*是否是返回 start*/
 function isGoBack(){
   /*html*/
   /*<input type="hidden" id="refreshed" value="no">*/
-  
-  
       var e = document.getElementById("refreshed");  
       if(e){
           if(e.value=="no"){
@@ -254,8 +260,9 @@ function isGoBack(){
             return true;  /*location.reload();*/
           }  
       }
-   
 }
+/*是否是返回 end*/
+
 
 function getObjectURL(file){
       var url = null ; 
@@ -270,75 +277,64 @@ function getObjectURL(file){
       return url ;
 }
 
-function triggerMenu(trigger,json){
+function triggerModalBox(trigger){
     $(document).on("click",trigger,function(){
-            
             var modalBox = $(this).parents("table").next(".modalBox01");
-            
-            modalBox.modalBox();
-            modalBox.off('shown.bs.modalBox').on('shown.bs.modalBox', function (e) {
-               
-                modalBox.find(".chooseZone").multiMenu({
-                  allData:json,
-                  success:function(arr,menu){
-                    
-                    var zone = $(this).parents(".tableWrapper01").find(".choosedItem");
-                    updateInput(zone,arr);
-                    var ul = $("<ul class='outermulti-ul'/>");
-                    for(var i = 0 ;i<arr.length;i++){
-                        if(arr[i]){
-                          var li =$('<li class="choosed_li" data-i='+i+'>'+arr[i].name+'</li>');
-                          li.appendTo(ul).on("click",function(){
-                              var index = $(this).attr("data-i"),
-                                  item = arr[index];
-                              menu.cancel(item,index);
-                              updateInput(zone,arr);
-                              $(this).remove();
-                          })
-                        }
-                    }
-                  
-                    zone.data("ca",arr)
-                                     
-                                     .prev("ul").remove().end()
-                                     .before(ul);
-
-                  }
-                })
-                function updateInput(zone,arr){
-
-                  var string="";
-                  for(var i = 0 ;i<arr.length;i++){
-                    if(arr[i]){
-                      string+=arr[i].id+',';
-                    }
-                    
-                  }
-
-                  zone.val(string);
-                }
-            })
+                modalBox.modalBox();
     });    
 }
 
-function tableMake(){
-  var table = $("#template01").val();
++function ($) {
+    'use strict';
+    function createMenu(element,json){
+        this.$element = $(element)
+        this.$element.multiMenu({
+              allData:json,
+              outer:".tableWrapper01",
+              targetInput:".choosedItem",
+              success:function(arr,menu){
+                      var targetInput = $(this).parents(".tableWrapper01").find(".choosedItem");
+                          updateInput();
+                          menu.addToOuterResult(arr,targetInput,updateInput);
+                          
+                          
+              }
+        })
+    }
+    $.fn.createMenu    = function(json){
+          return this.each(function () {
+            var $this   = $(this)
+            var data    = $this.data('bs.createMenu')
+           
+            if (!data) $this.data('bs.createMenu', (data = new createMenu(this, json)))
+           
+          })
+    }
+}(jQuery);
+
+/*创建表格 start*/
+function tableMake(json){
+      var table = $("#template01").val();
       var tNum;
       var $allTable,
-          indexToD,$tableToD,historyData = [];                     
-      $("#addSample").on("click",function(){
-          $allTable = $(".tableSection table");
-          tableBuild(table);    
-      }).click()
+          indexToD,
+          $tableToD;                     
+          $("#addSample").on("click",function(){
+              $allTable = $(".tableSection table");
+              tableBuild(table,json);
+          }).click()
 
-      function tableBuild(tableEle){
+      function tableBuild(tableEle,json){
           
               tNum = $allTable.length + 1;
-          var title = "样品" + (tNum);     
+          var title = "样品" + (tNum);
+              
               $(tableEle).css("opacity",0).appendTo($(".tableSection"))
                          .animate({"opacity":1},function(){
-                         $(this).inputHistory({data:historyData}); 
-              })
+                              var box = $(this).find(".chooseZone"); 
+                                  $(this).inputHistory(); 
+                                  box.createMenu(json);
+                          })
                          .find(".titleName").text(title).end()
                          .find(":input").each(function(i,e){
                             var name = $(e).attr("name");
@@ -356,7 +352,8 @@ function tableMake(){
                                 })
                               )
                             :alert('请至少填写一个样品');
-                         })
+                         });
+
       }
 
       function updateTable($tables,index){
@@ -380,7 +377,9 @@ function tableMake(){
       }
 
 }
+/*创建表格 end*/
 
+ 
 function lableF(labelBtn,submitBtn){
             
         labelBtn.on("click",function(e){

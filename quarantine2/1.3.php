@@ -91,10 +91,25 @@
             <div class="commonWrapper">
                 
                 <div  class="searchform01 mar-center " >
-                         
+                    <div class="sf01_block ">   
                        <div class="form-row height-auto">
                            <div class="un-block-1 align-right  ">
-                               <span>企业正式名称：</span>
+                               <span>委托单类型：</span>
+                           </div>
+                           <div class="un-block-2">
+                              <select>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                              </select>
+                           </div>
+                           
+                       </div> 
+                    </div>
+                    <div class="sf01_block ">   
+                       <div class="form-row height-auto">
+                           <div class="un-block-1 align-right  ">
+                               <span>委托单编号：</span>
                            </div>
                            <div class="un-block-2">
                               <input class="baseInput" data-name="company">
@@ -104,7 +119,7 @@
                            </div>
                            
                        </div>
-                         
+                    </div>     
                 </div>
 
                 <div id="show_newsTW">
