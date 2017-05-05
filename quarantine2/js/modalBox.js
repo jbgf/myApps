@@ -141,16 +141,16 @@
 
       /*modalBox-dialog*/
       var m_dialog = that.$dialog;
-      m_dialog.css({
-           "position":"absolute",
-           "margin":"0px",
-           "top": function () {
-               return (that.$element.height() - m_dialog.height()) / 2 + "px";
-           },
-           "left": function () {
-               return (that.$element.width() - m_dialog.width()) / 2 + "px";
-           }
-      })
+          m_dialog.css({
+               "position":"absolute",
+               "margin":"0px",
+               "top": function () {
+                   return (that.$element.height() - m_dialog.height()) / 2 + "px";
+               },
+               "left": function () {
+                   return (that.$element.width() - m_dialog.width()) / 2 + "px";
+               }
+          })
 
       transition ?
         that.$dialog // wait for modalBox to slide in

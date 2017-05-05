@@ -10,6 +10,8 @@
           this.allData = this.deepCopy(this.options.allData);//使用深拷贝否则数据被修改，用于下一个实例
           this.targetInput = this.outer.find(this.options.targetInput);
 
+          this.enableAddToOuter = this.options.enableAddToOuter;
+
           this.historyIndexChain = window['historyIndexChain'] ? window['historyIndexChain'] : window['historyIndexChain'] = []; 
           this.historyStack = window['historyStack'] ? window['historyStack'] : window['historyStack'] = []; 
           this.history_allTemp_stack = [];
@@ -79,13 +81,11 @@
                       that.operate_stack(num,index_li);
                       if(!sameLevel){
                         ul.nextAll().remove()
-                        /*$(".multiChooseZone").html("");*/
                       } 
                       if(that.hasSub(index_li)){
                          if(!that.isFinalLevel()){
                             that.createlevel();  
                          }else{
-
                             that.multiChoose();    
                          }
                       }
@@ -95,6 +95,38 @@
               })
         }
 
+        multiMenu.prototype.multiChoose = function (ele) {
+          var that = this;
+      /*多选待选区*/
+          var string = "<ul class='multi-choose-ul'>";
+          
+              var arr = that.arrToChoose;
+              
+              $.each(arr,function(i,e){
+                var cla = that.mcClass;
+                var ca_index;
+                if(e.choosed){
+                    ca_index = e["cindex"];
+                    cla+=" choosed";
+                  
+                }else{
+                    ca_index = false;
+                }
+                  string +='<li class="'+cla+'" data-cindex='+ca_index+'>'+e.name+'</li>'
+              })
+              string +="</ul>";
+          that.$multiChooseZone = 
+                  $("<div class='multiChooseZone'></div>")
+                      .append(string)
+                      .appendTo(that.$element);
+      /*多选结果区*/            
+              if($(that.$element).parents(".modalBox").find(".choosedZone").find("ul").length==0){
+                  that.$wrapper.find(".choosedZone").append("<ul></ul>");                          
+                  that.$choosedZoneUl = that.$wrapper.find(".choosedZone ul");  
+              }
+          
+        }
+        
         multiMenu.prototype.isFinalLevel = function (index) {
             var that = this;
             var status ;
@@ -169,24 +201,7 @@
               })          
         }
         
-        multiMenu.prototype.add = function (item,index,ele) {
-          var that = this;
-              that.choosed_arr.push(item);
-          var ca_index = that.choosed_arr.length-1,
-
-              cli = $("<li class='choosed_li' data-cindex="+ca_index+">"+item.name+"</li>");
-              item["choosed"] = true;
-              item["cindex"] = ca_index;
-              item['ul-index'] = index;
-
-              that.history_allTemp_stack.push(that.historyTemp_stack.slice(0));
-             
-              cli.appendTo(that.$choosedZoneUl).on("click",function(){
-                  that.cancel(item,ca_index);
-              });
-              if(ele)$(ele).addClass('choosed').attr('data-cindex',ca_index);
-
-        }
+        
 
         multiMenu.prototype.sure = function (){
             var that = this;
@@ -197,13 +212,13 @@
                   if( that.choosed_arr.length>0 ){
                     if(success && typeof(success) == "function" ){
                         $.proxy(success,that.$element[0])(that.choosed_arr,that);
-                        that.updateTargetInput(that.choosed_arr);
+                        /*that.updateTargetInput(that.choosed_arr);*/
                     }else{}
                   }
                   
                   that.$wrapper.find(".close").trigger("click");
                 })
-
+                
         }
 
         multiMenu.prototype.recordHistory = function (){
@@ -218,9 +233,7 @@
                       that.historyStack.push(that.choosed_arr[i]); 
                       /*console.log(that.choosed_arr)*/
                   }
-
                 }
-                
             }
 
         }
@@ -230,6 +243,7 @@
                 that.$bg = $(document.createElement('div'))
                               .css({
                                 position:"fixed",
+                                background:"rgba(0,0,0,0.5)",
                                 left:0,
                                 top:0,
                                 right:0,
@@ -256,6 +270,40 @@
             that.chooseFromHistory();
         }
 
+        multiMenu.prototype.updateMultiChooseZoneWhenAdd = function (ul_index){
+            var that = this;
+                if(that.stack.length <2)return;
+                that.operate_stack(1,ul_index);
+            var item = that.curObj;
+
+            var ca_index = that.choosed_arr.length-1;
+
+                if(item['choosed']){
+                    console.log(that.$multiChooseZone.length)
+                    that.$multiChooseZone.find("li").eq(ul_index).addClass('choosed').attr('data-cindex',ca_index);
+                }
+        }
+        multiMenu.prototype.add = function (item,index,ele) {
+          var that = this;
+              that.choosed_arr.push(item);
+          var ca_index = that.choosed_arr.length-1,
+
+              cli = $("<li class='choosed_li' data-cindex="+ca_index+">"+item.name+"</li>");
+              item["choosed"] = true;
+              item["cindex"] = ca_index;
+              item['ul-index'] = index;
+
+              that.history_allTemp_stack.push(that.historyTemp_stack.slice(0));
+              cli.appendTo(that.$choosedZoneUl).on("click",function(){
+                  that.cancel(item,ca_index);
+              });
+              
+              if(ele){
+                  /*来自点击选取*/
+                  $(ele).addClass('choosed').attr('data-cindex',ca_index);
+              }
+
+        }
         multiMenu.prototype.chooseFromHistory = function (){
             var that = this;
                 that.historyUl = that.historyUl.on("click","li",function(){
@@ -267,17 +315,19 @@
                     var arr = that.stack[0];
                         
                         (function loop(){
-                            
+                    /*通过index chain获取当前的item*/                            
                             arr = arr[indexarr[index]]['sub'];
-                            
                             index ++;
                             if(index < indexarr.length - 1){
-                                
                                 loop();
-                            
                             }else{
-                                item =  arr[indexarr[index]];
+                                item = arr[indexarr[index]];
 
+                                if(that.choosed_arr.indexOf(item) == -1){
+                                    that.add(item,index-1);
+                                    that.updateMultiChooseZoneWhenAdd(indexarr[index]);
+                                    that.addToOuterResult(that.choosed_arr,item);  
+                                };
                             }
                         })(); 
 
@@ -286,9 +336,11 @@
         }        
 
         multiMenu.prototype.updateTargetInput = function (arr){
-            var that = this,;
+            var that = this,
                 input = that.targetInput;
-                updateInput(input,arr)
+
+                updateInput(input,arr);
+                
                 function updateInput(targetInput,arr){
                     var string="";
                     for(var i = 0 ;i<arr.length;i++){
@@ -301,8 +353,10 @@
         }
         
 
-        multiMenu.prototype.addToOuterResult = function (arr,targetInput){
+        multiMenu.prototype.addToOuterResult = function (arr,item){
             var that = this;
+           
+            if(that.enableAddToOuter != 1)return;
             var ul = $("<ul class='outermulti-ul'/>");
                 for(var i = 0 ;i<arr.length;i++){
                     if(arr[i]){
@@ -311,24 +365,25 @@
                           var index = $(this).attr("data-i"),
                               item = arr[index];
                           that.cancel(item,index);
-                          success();
+                          /*success();*/
                           $(this).remove();
-                      })
-                    }
+                      }) 
+                    }    
                 }
-                targetInput.data("ca",arr)
+                that.targetInput.data("ca",arr)
                     .prev("ul").remove().end()
                     .before(ul);
-        }
+        } 
 
         multiMenu.prototype.showHistory = function (){
             var that = this;
-                that.outer.on("click",that.historyTrigger,function(){
+                that.outer.on("click",that.historyTrigger,function(e){
 
                       var arr = that.historyStack,
                           ul = that.historyUl,
                           ul_length = ul.find("li").length;
                           if(arr && arr.length > 0 ){
+                            
                             that.$bg.show();
                             that.historyUl.show();
                           }
@@ -360,36 +415,7 @@
                 .removeAttr("data-cindex");
         }
 
-        multiMenu.prototype.multiChoose = function (ele) {
-          var that = this;
-      /*多选待选区*/
-          var string = "<ul class='multi-choose-ul'>";
-          
-              var arr = that.arrToChoose;
-              
-              $.each(arr,function(i,e){
-                var cla = that.mcClass;
-                var ca_index;
-                if(e.choosed){
-                    ca_index = e["cindex"];
-                    cla+=" choosed";
-                  
-                }else{
-                    ca_index = false;
-                }
-                  string +='<li class="'+cla+'" data-cindex='+ca_index+'>'+e.name+'</li>'
-              })
-                  string +="</ul>";
-                  $("<div class='multiChooseZone'></div>")
-                          .append(string)
-                          .appendTo(that.$element);
-                  if($(that.$element).parents(".modalBox").find(".choosedZone").find("ul").length==0)
-      /*多选结果区*/
-                  
-                  that.$wrapper.find(".choosedZone").append("<ul></ul>");                          
-                  that.$choosedZoneUl = that.$wrapper.find(".choosedZone ul");
-                  
-        }
+        
         multiMenu.prototype.multiTag = function (ele) {}
 
         multiMenu.prototype.reset = function (ele) {

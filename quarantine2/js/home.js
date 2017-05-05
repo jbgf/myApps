@@ -292,11 +292,20 @@ function triggerModalBox(trigger){
               allData:json,
               outer:".tableWrapper01",
               targetInput:".choosedItem",
+              enableAddToOuter:1,
               success:function(arr,menu){
-                      var targetInput = $(this).parents(".tableWrapper01").find(".choosedItem");
-                          updateInput();
+                      var targetInput = menu.targetInput;
+                          updateInput(targetInput,arr);
                           menu.addToOuterResult(arr,targetInput,updateInput);
-                          
+                          function updateInput(targetInput,arr){
+                              var string="";
+                              for(var i = 0 ;i<arr.length;i++){
+                                if(arr[i]){
+                                  string+=arr[i].id+',';
+                                }
+                              }
+                              targetInput.val(string);
+                          }
                           
               }
         })
@@ -421,7 +430,6 @@ $(function(){
     };
 
     $(".sideBar02 ").length>0 && sideBar.ini();  
-
 
 })
 
