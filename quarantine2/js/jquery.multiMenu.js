@@ -42,6 +42,15 @@
         multiMenu.prototype.ini = function () {
           var that = this;
               that.createlevel();
+
+              /*多选结果区*/
+              var length = that.$wrapper.find(".choosedZone ul").length;
+
+              if(length==0){
+                  that.$wrapper.find(".choosedZone").append("<ul></ul>");                          
+                  that.$choosedZoneUl = that.$wrapper.find(".choosedZone ul");  
+              }
+
               that.operate_stack(0,"root");
               that.choose();
               that.chooseItem();
@@ -63,6 +72,7 @@
           var that = this;
           var index_li,index_ul;  
           var num;
+
           /*不可以使用
           $(document).on("click.multiMenu",'.'+that.mainClass+'')
           导致多个实例绑定事件的触发
@@ -91,7 +101,7 @@
                       }
                       $(this).addClass(that.activeClass)
                              .siblings('.'+that.mainClass+'').removeClass(that.activeClass);   
-              
+                      
               })
         }
 
@@ -119,11 +129,7 @@
                   $("<div class='multiChooseZone'></div>")
                       .append(string)
                       .appendTo(that.$element);
-      /*多选结果区*/            
-              if($(that.$element).parents(".modalBox").find(".choosedZone").find("ul").length==0){
-                  that.$wrapper.find(".choosedZone").append("<ul></ul>");                          
-                  that.$choosedZoneUl = that.$wrapper.find(".choosedZone ul");  
-              }
+      
           
         }
         
@@ -156,12 +162,19 @@
            if(index != "root"){
         /*保存历史记录，通过每次点击的index来保存一条index chain用于定位*/     
               popNum > 0 && that.historyTemp_stack.splice(-popNum,popNum);
+              if(!that.hasSub()){
+                that.historyTemp_stack.splice(-1,1);
+              } 
               that.historyTemp_stack.push(index);
+              
         /*用栈来保存当前的位置*/      
               popNum > 0 && that.stack.splice(-popNum,popNum);
               that.curObj = that.stack[that.stack.length - 1][index];
-              that.arrToChoose = that.curObj.sub;
-              that.stack.push(that.arrToChoose);
+              if(that.hasSub()){
+                  that.arrToChoose = that.curObj.sub;
+                  that.stack.push(that.arrToChoose);  
+              }
+              
            }else{
               that.stack.push(that.arrToChoose);
            }
@@ -227,8 +240,11 @@
 
             for (var i = 0; i < that.choosed_arr.length; i++) {
                 if(that.choosed_arr[i]){  //可能是null
+                  
                   var string = that.history_allTemp_stack[i].join(",");
-                  if( that.historyIndexChain.indexOf(string) == -1){
+                  
+                  if(string.length>0 && that.historyIndexChain.indexOf(string) == -1){
+                      
                       that.historyIndexChain.push(string);
                       that.historyStack.push(that.choosed_arr[i]); 
                       /*console.log(that.choosed_arr)*/
@@ -272,14 +288,16 @@
 
         multiMenu.prototype.updateMultiChooseZoneWhenAdd = function (ul_index){
             var that = this;
+
                 if(that.stack.length <2)return;
-                that.operate_stack(1,ul_index);
+                console.log(that.stack)
+                that.operate_stack(0,ul_index);
             var item = that.curObj;
-
-            var ca_index = that.choosed_arr.length-1;
-
+                
+            var ca_index = that.choosed_arr.length;
+                
                 if(item['choosed']){
-                    console.log(that.$multiChooseZone.length)
+                   
                     that.$multiChooseZone.find("li").eq(ul_index).addClass('choosed').attr('data-cindex',ca_index);
                 }
         }
@@ -316,14 +334,21 @@
                         
                         (function loop(){
                     /*通过index chain获取当前的item*/                            
-                            arr = arr[indexarr[index]]['sub'];
-                            index ++;
-                            if(index < indexarr.length - 1){
+                            
+                            
+                            
+                            if(index < indexarr.length -1){
+                              
+                                arr = arr[indexarr[index]]['sub'];
+                                index += 1;
+                                
                                 loop();
                             }else{
+                                
                                 item = arr[indexarr[index]];
-
+                                
                                 if(that.choosed_arr.indexOf(item) == -1){
+
                                     that.add(item,index-1);
                                     that.updateMultiChooseZoneWhenAdd(indexarr[index]);
                                     that.addToOuterResult(that.choosed_arr,item);  
@@ -377,38 +402,40 @@
 
         multiMenu.prototype.showHistory = function (){
             var that = this;
+                         
                 that.outer.on("click",that.historyTrigger,function(e){
+                    var arr = that.historyStack,
+                        ul = that.historyUl,
+                        ul_length = ul.find("li").length;
 
-                      var arr = that.historyStack,
-                          ul = that.historyUl,
-                          ul_length = ul.find("li").length;
-                          if(arr && arr.length > 0 ){
+                    if(arr && arr.length > 0 ){
                             
-                            that.$bg.show();
-                            that.historyUl.show();
-                          }
+                      that.$bg.show();
+                      that.historyUl.show();
+                    }
 
-                          if(arr.length > ul_length){
-
-                            var newarr = arr.slice(ul_length);
-                            var lis = "";
-                            for (var i = 0; i < newarr.length; i++) {
-                                
-                                var io = i + ul_length;
-                                    lis += "<li style='' data-order="+(io)+">"+newarr[i]["name"]+"</li>"; 
-                            }
-                            
-                            ul.append(lis);
-                          }
+                    if(arr.length > ul_length){
+                      
+                      var newarr = arr.slice(ul_length);
+                      var lis = "";
+                      for (var i = 0; i < newarr.length; i++) {
+                          
+                          var io = i + ul_length;
+                              lis += "<li style='' data-order="+(io)+">"+newarr[i]["name"]+"</li>"; 
+                      }
+                      
+                      ul.append(lis);
+                    }
                 })
            
         }        
 
         multiMenu.prototype.cancel = function (item,dindex){
           var that = this;
+         
           that.choosed_arr[dindex] = null;
           item["choosed"] = false;
-
+          
           $(".choosedZone li[data-cindex="+dindex+"]",that.wrapper).remove();
           $(".multiChooseZone li[data-cindex="+dindex+"]",that.wrapper)
                 .removeClass("choosed")
