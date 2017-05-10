@@ -264,6 +264,20 @@
         var wh = $(window).height();
         var json ={sub:[ 
                     {
+                     name:"红宝石套餐",
+                     final:1,
+                     sub:[
+                            {
+                                id:"001",
+                                name:"套餐1",
+                                mod:"yes"
+                            }
+                            ,{
+                                id:"002",
+                                name:"套餐2"}
+                        ]   
+                    },
+                    {
                         name:"食品",
                         sub:[
                                 {

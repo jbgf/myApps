@@ -57,12 +57,7 @@
               that.chooseItem();
               that.sure();
               that.iniHistory();
-              Array.prototype.remove = function(val) {
-                  var index = this.indexOf(val);
-                    if (index > -1) {
-                    this.splice(index, 1);
-                  }
-              };
+
         }  
 
         multiMenu.prototype.deepCopy= function(source) { 
@@ -218,52 +213,60 @@
                   flag
                   ?that.cancel(item,$(this).attr("data-cindex"))
                   :that.add(item,index,this);
-                  that.tempResult(flag,item,ele,index);
+                /*  that.tempResult(flag,item);*/
               })          
         }
 
-     multiMenu.prototype.add = function (item,ele) {
+     multiMenu.prototype.add = function (item,index,ele) {
           var that = this;
-          var ca_index = that.choosed_arr.length-1,
-             $(ele).attr({"ca_index":ca_index});
+          //操作choosed_arr
               that.choosed_arr.push(item);
-         
+          var ca_index = that.choosed_arr.length-1,
+              cli = $("<li class='choosed_li' data-cindex="+ca_index+">"+item.name+"</li>");
+          //操作item
               item["choosed"] = true;
               item["cindex"] = ca_index;
-              
-    } 
-    multiMenu.prototype.cancel = function (item,dindex){
-          var that = this;
-          that.choosed_arr[dindex] = null;
-          item["choosed"] = false;
-          
-          $(".choosedZone li[data-cindex="+dindex+"]",that.wrapper).remove();
-          $(".multiChooseZone li[data-cindex="+dindex+"]",that.wrapper)
-                .removeClass("choosed")
-                .removeAttr("data-cindex");
-          that.updateTargetInput(that.choosed_arr);
+              item['ul-index'] = index;
+              that.history_allTemp_stack.push(that.historyTemp_stack.slice(0));
+              cli.appendTo(that.$choosedZoneUl).on("click",function(){
+                  that.cancel(item,ca_index);
+              });
+              if(ele){
+                  /*来自点击选取*/
+                  $(ele).addClass('choosed').attr('data-cindex',ca_index);
+              }
+    }
+
+    multiMenu.prototype.structureNode = function(flag,item,ele){
+        var that = this;
+        var ca_index = that.choosed_arr.length - 1,
+            cli = $("<li class='choosed_li' data-cindex="+ca_index+">"+item.name+"</li>");  
+            cli.appendTo(that.$choosedZoneUl).on("click",function(){
+                that.cancel(item,ca_index);
+            });
+        if(ele){
+              /*来自点击选取*/
+              $(ele).addClass('choosed').attr('data-cindex',ca_index);
+        }
     }
 
     multiMenu.prototype.tempResult = function (flag,item,ele,index) {
         var that = this;
-            flag?remove(item):add(item);
-                function remove(item,ta_index,ele){
-                    $(ele).removeClass('choosed').removeAttr("data-taindex");
-                    that.$choosedZoneUl.find("li[data-taindex="+ta_index+"]",that.wrapper)
-                        .remove();
+        flag?remove(item):add(item);
+            function remove(item){
 
-                }
-                function add(item){
-                    var ta_index = that.tempResultStorage.length,
-                        cli = $("<li class='choosed_li' data-taindex="+ta_index+">"+item.name+"</li>");
-                        cli.appendTo(that.$choosedZoneUl).on("click",function(){
-                            remove(item,ta_index,this);
-                        })
-                        that.history_allTemp_stack.push(that.historyTemp_stack.slice(0));
-
-                        that.tempResultStorage.push(item);
-                }
-           
+            }
+            function add(item){
+                var ca_index = that.choosed_arr.length - 1;
+                    that.choosed_arr.push(item);
+                    item["choosed"] = true;
+                    item["cindex"] = ca_index;
+                    item['ul-index'] = index;
+                    that.history_allTemp_stack.push(that.historyTemp_stack.slice(0));
+                    
+                    that.tempResultStorage.push(item);
+            }
+        that.structureNode(flag,item,ele);
     }
 
         multiMenu.prototype.sure = function (){
@@ -272,16 +275,12 @@
                 
                 that.$wrapper.on("click",".sampleBtn",function(){
                   that.recordHistory();
-
                   if( that.choosed_arr.length>0 ){
                     if(success && typeof(success) == "function" ){
                         $.proxy(success,that.$element[0])(that.choosed_arr,that);
                         /*that.updateTargetInput(that.choosed_arr);*/
                     }else{}
                   }
-                  $.each(that.tempResultStorage,function(i,e){
-                      that.add.call(that,e.item,e.element);  
-                  })
                   
                   that.$wrapper.find(".close").trigger("click");
                 })
@@ -363,7 +362,7 @@
                 //操作item
                 item["choosed"] = true;
                 item["cindex"] = ca_index;
-               
+                item['ul-index'] = index;
         }
 
         multiMenu.prototype.chooseFromHistory = function (){
@@ -468,7 +467,18 @@
            
         }        
 
-       
+        multiMenu.prototype.cancel = function (item,dindex){
+          var that = this;
+         
+          that.choosed_arr[dindex] = null;
+          item["choosed"] = false;
+          
+          $(".choosedZone li[data-cindex="+dindex+"]",that.wrapper).remove();
+          $(".multiChooseZone li[data-cindex="+dindex+"]",that.wrapper)
+                .removeClass("choosed")
+                .removeAttr("data-cindex");
+          that.updateTargetInput(that.choosed_arr);
+        }
 
         
         multiMenu.prototype.multiTag = function (ele) {}
@@ -506,7 +516,15 @@
           return this
         }
 
-        
+        // multiMenu DATA-API
+        // ==================
+        /*获取data-xx属性,作为option*/
+        /*$(window).on('load.bs.multiMenu.data-api', function () {
+          $('[data-hover="_window"]').each(function () {
+            var $w = $(this)
+            Plugin.call($w, $w.data())   
+          })
+        })*/
 
 }(jQuery);
 
