@@ -151,16 +151,13 @@
                    return (that.$element.width() - m_dialog.width()) / 2 + "px";
                }
           })
-
       transition ?
         that.$dialog // wait for modalBox to slide in
-          .one('bsTransitionEnd', function () {
-            that.$element.trigger('focus').trigger(e)
-           
+          .one('bsTransitionEnd', function (){
+               that.$element.trigger('focus').trigger(e)
           })
           .emulateTransitionEnd(modalBox.TRANSITION_DURATION) :
         that.$element.trigger('focus').trigger(e)
-        
     })
   }
 

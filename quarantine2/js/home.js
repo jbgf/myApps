@@ -295,6 +295,7 @@ function triggerModalBox(trigger){
               enableAddToOuter:1,
               success:function(arr,menu){
                       var targetInput = menu.targetInput;
+                          
                           menu.updateTargetInput(arr);
                           menu.addToOuterResult(arr);
                           

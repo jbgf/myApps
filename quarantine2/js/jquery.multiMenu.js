@@ -6,6 +6,7 @@
           this.$element = $(element)
           this.options  = $.extend({}, multiMenu.DEFAULTS, options)
           this.$wrapper = this.$element.parents(".modalBox")
+          this.$chooseZone = this.$wrapper.find(".chooseZone");
           this.outer = this.$element.parents(this.options.outer);
           this.allData = this.deepCopy(this.options.allData);//使用深拷贝否则数据被修改，用于下一个实例
           this.targetInput = this.outer.find(this.options.targetInput);
@@ -21,6 +22,7 @@
 
           this.stack = [];
           this.storaged_stack = [];
+          this.choosed_arr = [];
           this.curObj = this.allData;
           this.arrToChoose = this.curObj.sub;
           this.tempResultStorage = [];
@@ -54,15 +56,10 @@
 
               that.operate_stack(0,"root");
               that.choose();
-              that.chooseItem();
+             
               that.sure();
               that.iniHistory();
-              Array.prototype.remove = function(val) {
-                  var index = this.indexOf(val);
-                    if (index > -1) {
-                    this.splice(index, 1);
-                  }
-              };
+              
         }  
 
         multiMenu.prototype.deepCopy= function(source) { 
@@ -83,7 +80,7 @@
           $(document).on("click.multiMenu",'.'+that.mainClass+'')
           导致多个实例绑定事件的触发
           */    
-              that.$wrapper.on("click.multiMenu","li"/*'.'+that.mainClass+''*/,function(){
+              that.$chooseZone.on("click.multiMenu","li"/*'.'+that.mainClass+''*/,function(){
                   
                   if(that.hasSub() && $(this).hasClass(that.activeClass)){return}
                   var uls = that.$element.find("ul");
@@ -93,9 +90,7 @@
                       
                       num = that.getPopNum(ul,index_ul),
                       sameLevel = num == 0;
-                      
                       that.operate_stack(num,index_li);
-                     
                       if(!sameLevel){
                         ul.nextAll().remove()
                       } 
@@ -103,16 +98,109 @@
                          if(!that.isFinalLevel()){
                             that.createlevel();  
                          }else{
-                            that.multiChoose();    
+                            that.createMultiChoose(); 
                          }
                       }
+                      if($(this).hasClass(that.mcClass)){
+                          var index = $(this).parents("ul").find('.'+that.mcClass+'').index($(this));
+                          var item = that.curObj;
+                          var flag = $(this).hasClass("choosed");
+                              if(flag){
+                                var dindex = $(this).attr("data-cindex");
+                                    that.cancel(item,dindex);
+                              }
+                          that.tempResult(flag,item,this);
+
+                      } 
                       $(this).addClass(that.activeClass)
                              .siblings('.'+that.mainClass+'').removeClass(that.activeClass);   
                       
               })
         }
 
-        multiMenu.prototype.multiChoose = function (ele) {
+        multiMenu.prototype.cancel = function (item,dindex){
+              var that = this;
+                  item["choosed"] = false;
+                  $(".choosedZone li[data-cindex="+dindex+"]",that.wrapper).remove();
+                  $(".multiChooseZone li[data-cindex="+dindex+"]",that.wrapper)
+                        .removeClass("choosed")
+                        .removeAttr("data-cindex");
+                  $(".outermulti-ul li[data-cindex="+dindex+"]",that.outer).remove();
+                       
+                  that.updateAfterCancel(dindex);
+        }
+
+        multiMenu.prototype.tempResult = function (flag,item,ele) {
+            var that = this;
+                flag?getRidOf():add();
+                    function getRidOf(){
+                        var ta_index = $(ele).attr("data-taindex");
+                        var $ele1 = $(ele).removeClass("choosed").removeAttr("data-taindex");
+                        var $ele2 = that.$choosedZoneUl.find("li[data-taindex="+ta_index+"]").remove();
+                            that.tempResultStorage.splice(ta_index,1);
+                    }
+                    function add(){
+                        var ta_index = that.tempResultStorage.length,
+                            cli = $("<li class='choosed_li' data-taindex="+ta_index+">"+item.name+"</li>");
+                        var $ele1 = $(ele).addClass("choosed").attr({"data-taindex":ta_index});
+                        var $ele2 =
+                             cli.appendTo(that.$choosedZoneUl).on("click",function(){
+                                 var ta_index = $ele1.attr("data-taindex");
+                                 $ele1.removeClass('choosed').removeAttr("data-taindex");
+                                 $ele2.remove();
+                                 /*去除临时选择集合中的某项*/    
+                                 that.tempResultStorage.splice(ta_index,1);
+                            })
+
+                            that.tempResultStorage.push({item:item,element:{ele1:$ele1,ele2:$ele2},historyTemp:that.historyTemp_stack.slice(0)});
+                    }
+        }
+
+        multiMenu.prototype.add = function (item,ele,historyTemp) {
+              var that = this;
+              var ca_index = that.choosed_arr.length;
+              var $ele1 = ele.ele1;
+              var $ele2 = ele.ele2;
+                  $ele1.attr({"data-cindex":ca_index}).removeAttr("data-taindex");
+                  $ele2.attr({"data-cindex":ca_index}).removeAttr("data-taindex");
+                  item["choosed"] = true;
+                  item["cindex"] = ca_index;
+                  that.history_allTemp_stack.push(historyTemp);
+                  that.choosed_arr.push(item);
+                  
+        } 
+        
+        multiMenu.prototype.updateAfterCancel = function (dindex){
+              var that = this;
+                  
+                  $(".choosedZone li[data-cindex]",that.wrapper).each(function(i,e){
+                        var index = $(this).attr("data-cindex");
+                            if(index > dindex){
+                                $(this).attr("data-cindex",index-1);
+                            }
+                  });
+                  $(".multiChooseZone li[data-cindex]",that.wrapper).each(function(i,e){
+                        var index = $(this).attr("data-cindex");
+                            if(index > dindex){
+                                $(this).attr("data-cindex",index-1);
+                            }
+
+                  });
+                  $(".outermulti-ul li[data-cindex]",that.outer).each(function(i,e){
+                        var index = $(this).attr("data-cindex");
+                            if(index > dindex){
+                                $(this).attr("data-cindex",index-1);
+                            }
+                  });
+                  
+                  that.choosed_arr.splice(dindex,1);
+                  that.updateTargetInput(that.choosed_arr);
+
+
+        }
+        
+
+        multiMenu.prototype.createMultiChoose = function () {
           var that = this;
       /*多选待选区*/
           var string = "<ul class='multi-choose-ul'>";
@@ -132,12 +220,12 @@
                   string +='<li class="'+cla+'" data-cindex='+ca_index+'>'+e.name+'</li>'
               })
               string +="</ul>";
+          
           that.$multiChooseZone = 
                   $("<div class='multiChooseZone'></div>")
                       .append(string)
-                      .appendTo(that.$element);
-      
-          
+                      .appendTo(that.$element)
+
         }
         
         multiMenu.prototype.isFinalLevel = function (index) {
@@ -177,6 +265,7 @@
         /*用栈来保存当前的位置*/      
               popNum > 0 && that.stack.splice(-popNum,popNum);
               that.curObj = that.stack[that.stack.length - 1][index];
+
               if(that.hasSub()){
                   that.arrToChoose = that.curObj.sub;
                   that.stack.push(that.arrToChoose);  
@@ -197,116 +286,77 @@
           var that = this;
           var string = "<ul class='multi-ul'>";
           var arr = that.arrToChoose;
+
               $.each(arr,function(i,e){
                   string +='<li class='+that.mainClass+'>'+e.name+'</li>'
               })
                   string +="</ul>";
                   that.$element.append(string);
-              /*that.multiChoose();*/
-          /*that.multiTag();*/
         }
+
         
-        multiMenu.prototype.chooseItem = function (ele) {
-          var that = this;
-              that.choosed_arr = [];
 
-              that.$wrapper.on("click",'.'+that.mcClass+'',function(){
-
-                  var index = $(this).parents("ul").find('.'+that.mcClass+'').index($(this));
-                  var item = that.curObj;
-                  var flag = $(this).hasClass("choosed");
-                  flag
-                  ?that.cancel(item,$(this).attr("data-cindex"))
-                  :that.add(item,index,this);
-                  that.tempResult(flag,item,ele,index);
-              })          
-        }
-
-     multiMenu.prototype.add = function (item,ele) {
-          var that = this;
-          var ca_index = that.choosed_arr.length-1,
-             $(ele).attr({"ca_index":ca_index});
-              that.choosed_arr.push(item);
-         
-              item["choosed"] = true;
-              item["cindex"] = ca_index;
-              
-    } 
-    multiMenu.prototype.cancel = function (item,dindex){
-          var that = this;
-          that.choosed_arr[dindex] = null;
-          item["choosed"] = false;
-          
-          $(".choosedZone li[data-cindex="+dindex+"]",that.wrapper).remove();
-          $(".multiChooseZone li[data-cindex="+dindex+"]",that.wrapper)
-                .removeClass("choosed")
-                .removeAttr("data-cindex");
-          that.updateTargetInput(that.choosed_arr);
-    }
-
-    multiMenu.prototype.tempResult = function (flag,item,ele,index) {
-        var that = this;
-            flag?remove(item):add(item);
-                function remove(item,ta_index,ele){
-                    $(ele).removeClass('choosed').removeAttr("data-taindex");
-                    that.$choosedZoneUl.find("li[data-taindex="+ta_index+"]",that.wrapper)
-                        .remove();
-
-                }
-                function add(item){
-                    var ta_index = that.tempResultStorage.length,
-                        cli = $("<li class='choosed_li' data-taindex="+ta_index+">"+item.name+"</li>");
-                        cli.appendTo(that.$choosedZoneUl).on("click",function(){
-                            remove(item,ta_index,this);
-                        })
-                        that.history_allTemp_stack.push(that.historyTemp_stack.slice(0));
-
-                        that.tempResultStorage.push(item);
-                }
-           
-    }
+    
 
         multiMenu.prototype.sure = function (){
             var that = this;
             var success = that.options.success;
                 
                 that.$wrapper.on("click",".sampleBtn",function(){
-                  that.recordHistory();
-
-                  if( that.choosed_arr.length>0 ){
+                  
+                  $.each(that.tempResultStorage,function(i,e){
+                      that.add.call(that,e.item,e.element,e.historyTemp);  
+                  })
+                  if(that.choosed_arr.length>0 ){
                     if(success && typeof(success) == "function" ){
                         $.proxy(success,that.$element[0])(that.choosed_arr,that);
                         /*that.updateTargetInput(that.choosed_arr);*/
                     }else{}
                   }
-                  $.each(that.tempResultStorage,function(i,e){
-                      that.add.call(that,e.item,e.element);  
-                  })
-                  
+
+
+                  that.resetTempResult(0);
                   that.$wrapper.find(".close").trigger("click");
+                  that.recordHistory();
+
                 })
                 
         }
 
-        multiMenu.prototype.recordHistory = function (){
+         multiMenu.prototype.recordHistory = function (){
             var that = this;
-            /*var string =  that.historyTemp_stack.join(",");*/
 
             for (var i = 0; i < that.choosed_arr.length; i++) {
                 if(that.choosed_arr[i]){  //可能是null
-                 
                   var string = that.history_allTemp_stack[i].join(",");
-                  
                   if(string.length>0 && that.historyIndexChain.indexOf(string) == -1){
-                      
                       that.historyIndexChain.push(string);
                       that.historyStack.push(that.choosed_arr[i]); 
-                
                   }
                 }
             }
 
         }
+
+        multiMenu.prototype.resetTempResult = function (mode){
+            var that = this;
+            
+            $.each(that.tempResultStorage,function(i,e){
+                   var element = e.element;
+                   var $ele1 = element.ele1;
+                   var $ele2 = element.ele2;
+                       $ele1.removeAttr("data-taindex"); 
+                       if(mode==0){
+                         $ele2.removeAttr("data-taindex")
+                       };
+                       if(mode==1){
+                         $ele1.removeClass("choosed") 
+                         $ele2.remove();
+                       }
+            })
+            that.tempResultStorage.length = 0;
+        }
+       
 
         multiMenu.prototype.background = function(){
             var that = this;
@@ -348,22 +398,12 @@
                 that.operate_stack(0,ul_index);
             var item = that.curObj;
                 
-            var ca_index = that.choosed_arr.length;
+            var ca_index = that.choosed_arr.length-1;
                 
                 if(item['choosed']){
                    
                     that.$multiChooseZone.find("li").eq(ul_index).addClass('choosed').attr('data-cindex',ca_index);
                 }
-        }
-       
-
-        multiMenu.prototype.updateResult = function (item){
-           var that = this;
-               that.choosed_arr.push(item);
-                //操作item
-                item["choosed"] = true;
-                item["cindex"] = ca_index;
-               
         }
 
         multiMenu.prototype.chooseFromHistory = function (){
@@ -377,25 +417,47 @@
                         (function loop(){
                     /*通过index chain获取当前的item*/                            
                             if(index < indexarr.length -1){
-                              
                                 arr = arr[indexarr[index]]['sub'];
                                 index += 1;
                                 loop();
                             }else{
                                 item = arr[indexarr[index]];
                                 if(that.choosed_arr.indexOf(item) == -1){
-                                    that.add(item,index-1);
-
+                                    that.addToMenuFromHistory(item,ul_index);
                                     that.updateMultiChooseZoneWhenAdd(indexarr[index]);
                                     that.addToOuterResult(that.choosed_arr);  
                                     that.updateTargetInput(that.choosed_arr);  
                                 };
                             }
                         })(); 
-
-                                               
                 })
         }        
+
+        multiMenu.prototype.addToMenuFromHistory = function (item,ul_index){
+            var that = this;
+            var arr = [];
+            //操作choosed_arr
+                that.choosed_arr.push(item);
+
+                $.each(historyIndexChain[ul_index].split(","),function(i,e){
+                      arr.push(parseInt(e));                
+                })
+                that.history_allTemp_stack.push(arr);
+                
+            var ca_index = that.choosed_arr.length-1,
+                cli = $("<li class='choosed_li' data-cindex="+ca_index+">"+item.name+"</li>");
+
+                cli.appendTo(that.$choosedZoneUl).on("click",function(){
+                    var ca_index = $(this).attr("data-cindex");
+                        that.cancel(item,ca_index);
+                });
+            //操作item
+                item["choosed"] = true;
+                item["cindex"] = ca_index;
+               
+                that.resetTempResult(1);
+
+        }
 
         multiMenu.prototype.updateTargetInput = function (arr){
             var that = this,
@@ -416,20 +478,19 @@
                 }
         }
         
-        multiMenu.prototype.addToOuterResult = function (arr){
+        multiMenu.prototype.addToOuterResult = function (choosed_arr){
             var that = this;
-           
+            var arr = choosed_arr;
             if(that.enableAddToOuter != 1)return;
             var ul = $("<ul class='outermulti-ul'/>");
                 for(var i = 0 ;i<arr.length;i++){
                     if(arr[i]){
-                      var li =$('<li class="choosed_li" data-i='+i+'>'+arr[i].name+'</li>');
+                      var li =$('<li class="choosed_li" data-cindex='+i+'>'+arr[i].name+'</li>');
                       li.appendTo(ul).on("click",function(){
-                          var index = $(this).attr("data-i"),
+                          var index = $(this).attr("data-cindex"),
                               item = arr[index];
                           that.cancel(item,index);
-                          /*success();*/
-                          $(this).remove();
+                        
                       }) 
                     }    
                 }
@@ -446,6 +507,7 @@
                         ul = that.historyUl,
                         ul_length = ul.find("li").length;
 
+                    
                     if(arr && arr.length > 0 ){
                             
                       that.$bg.show();
@@ -467,15 +529,6 @@
                 })
            
         }        
-
-       
-
-        
-        multiMenu.prototype.multiTag = function (ele) {}
-
-        multiMenu.prototype.reset = function (ele) {
-          var that = this;
-        }
 
         // multiMenu PLUGIN DEFINITION
         // ===========================
