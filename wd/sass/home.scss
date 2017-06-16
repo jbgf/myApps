@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+@import "mySassWare/_variable";
+@import "mySassWare/_mixin";
+@import "mySassWare/_function";
+
+/****************************************************/
+/* @import "./head"; */
+/****************************************************/
+$titleSize:$bigSize*1.1;
+
+.banner01{height:317px}
+.banner02{height:546px}
+.banner03{
+    height:212px;color:#fff;
+    display: table;width:100%;
+    p{display:table-cell;vertical-align:middle;text-align:center;font-size:$titleSize;}
+    .servedNum{background:$blue;padding:3px 10px;@include radius(15px);}
+}
+ 
+.productType{
+      @include f_pictext_row($width:145px,$height:auto,$fpos:"left",$mar-gutter:205px);
+      padding-top:60px;
+      .productType_right{padding-right:100px;.switchUl{min-height:340px;padding-bottom:30px;}}
+} 
+  
+
+

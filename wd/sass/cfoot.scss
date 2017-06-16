@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+@import "mySassWare/_variable";
+@import "mySassWare/_mixin";
+@import "mySassWare/_function";
+
+
+/*footer start*/
+    $titleSize:$bigSize*1.4;
+    $ftoph:45px;
+ 
+    .footer{background:#373d41;padding: $ftoph 0 $ftoph - 5px;color:#ebebeb;}
+    
+    .footer-content{
+        
+        .gray{color:$gray;}
+        .counsel{
+            
+            .t01{font-size:$bigSize;}
+            .phoneNum{font-size: $titleSize;padding:8px 0}
+            img{vertical-align:middle;}
+        }
+        .service{text-align:center;padding:15px 0 30px;}
+        .justify{
+            display: inline-block;
+            p{
+                overflow: hidden;
+                text-align: justify;
+                line-height: 1;
+                height: 22px;
+            }
+            p:after{
+                content:"";
+                display: inline-block;
+                width:100%;
+                overflow:hidden;
+                height:0;
+            }
+        }
+        .linkZone{
+            @include row(4,10px);
+            text-align: center;
+            font-size: $bigSize;
+            padding-top: $ftoph;
+            .fl_header{padding-bottom:7px;display:block;font-weight:bold;}
+            .other_link{
+                color:$gray;
+                .relative_link{padding-bottom:2px;font-size:$baseSize;}
+            }
+        }
+        .qr{
+            p{height:$ftoph;text-align:center;font-size:$bigSize;}
+        }
+    }
+    .footer-content .f-content{float: left;padding:0 62px 0}
+    .footer-content .f-content:first-child{padding-left: 0;text-align: left;}
+    .footer-content .f-content:last-child{padding-right: 0;text-align: right;}
+
+    .footer-content .f-content.logo{border-right: 1px solid #4d4d4d;}
+    .footer-content .f-content.address{width:520px;border-right: 1px solid #4d4d4d;font-size: 13px;}
+    .footer-content .f-content.qr{width:122px;}
+
+    .copyRight{text-align:center;background:#2b3033;font-size:$smallSize;color:#999;padding:2px 0}
+/* footer end */
+
+ 

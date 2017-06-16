@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+@import "mySassWare/_variable";
+@import "mySassWare/_mixin";
+@import "mySassWare/_function";
+$size:23px;
+$pbg:#f2f2f3;
+.pagination02 {
+    padding: 65px 0px;
+    line-height: 1;
+    zoom: 1;
+    .numWrapper,ul {
+        display: inline-block;
+        @include lheightM($size);
+        font-size: $smallSize;
+    }
+    .numWrapper {.num,.total,.go{float:left}}
+    .num{
+        width:30px;padding:0 5px;
+        text-align:center;@include radius($size);@include lheightM($size);
+        @include border();
+      }
+    .go{
+      @include makeCircle($size:$size + 5px){
+        display: inline-block;
+        margin-left: 15px;
+        background:url(#{$baseImgUrl}prighta.png) center center no-repeat $pbg;
+      };
+    }
+
+     ul li {
+        cursor: pointer;
+        display: block;
+        float: left;
+        @extend %align-center;
+    }
+
+     ul li {
+        margin: 0px 5px;
+    } 
+    
+     ul li a {
+        display: block;
+        width:$size;
+        @include lheightM($size);
+        @include radius($size);
+        border: 1px solid rgb(221, 221, 221);
+        background:$pbg;
+        
+    }
+
+     ul li.left a,
+     ul li.right a,
+     ul li.last a {
+        width: auto;
+        padding: 0px 5px;
+    }
+
+     ul li.on a {
+        color: white;
+        background: $blue;
+    }
+}

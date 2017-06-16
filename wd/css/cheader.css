@@ -1,0 +1,78 @@
+@charset "UTF-8";
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.header03 {
+  font-size: 27.6px;
+  position: relative;
+  /* @include lheightM($sb02_p); */
+  padding: 40px 0;
+  text-align: center;
+  color: #218ad5; }
+  .header03 .h-title01 {
+    display: inline-block;
+    border-bottom: 3px solid #218ad5;
+    padding: 25px 10px; }
+    .header03 .h-title01 .text {
+      color: #218ad5;
+      font-size: 22.464px; }
+
+.header02 {
+  border-bottom: 2px solid #c5c5c5;
+  position: relative;
+  height: 48px;
+  line-height: 48px; }
+  .header02 .h-title01 {
+    height: 48px; }
+    .header02 .h-title01 .text {
+      color: #218ad5;
+      font-size: 22.464px; }
+
+.news_h02 {
+  border-bottom: 2px solid #c5c5c5;
+  position: relative;
+  height: 48px;
+  line-height: 48px; }
+  .news_h02 .h-title01 {
+    height: 48px;
+    border-bottom: 2px solid #218ad5; }
+    .news_h02 .h-title01 .text {
+      color: #218ad5;
+      font-size: 22.464px;
+      padding: 0 20px; }
+  .news_h02 .r-link {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 15.6px;
+    height: 32px;
+    line-height: 32px; }
+    .news_h02 .r-link a {
+      margin-left: 20px;
+      display: inline-block; }
+      .news_h02 .r-link a.on {
+        color: #218ad5;
+        border-bottom: 2px solid #218ad5; }
+
+/*# sourceMappingURL=maps/cheader.css.map */

@@ -1,0 +1,234 @@
+@charset "utf-8";
+
+@import "mySassWare/_variable";
+@import "mySassWare/_mixin";
+@import "mySassWare/_function";
+
+$colorArr03:#3fdc94 #218bd5 #f26262 #f6aa58 #cf78f3 #e882c5 #39be62 #9534bd #58cced #f6da58;
+$cal03:length($colorArr03);
+.pWrapper03{
+    padding:0 60px 0 60px;
+    .prow03{
+      @include str_width($strArr:".productDiamond",$padding:0,$block:5);
+      $index:1;
+      @each $var in $colorArr03 {
+        .productDiamond_#{$index}{
+            
+          .title{/* color:$var; */color:$blue;}
+          .text{
+            $borderColor:/* $var */$blue;
+            @include persudo($color:$borderColor,$content:"",$position:before,$bg:none){
+              top:0;
+              height:1px;
+              background:$borderColor;
+              width:100%;
+              -webkit-transform: scale(0);
+              -ms-transform: scale(0);
+              transform: scale(0);
+
+            }
+          }
+        }
+        $index: $index + 1;
+      }
+      .productDiamond{
+        padding:15px 0;
+
+        @extend %clear;
+        $time:0.5s;
+        $time2:0.2s;
+        .title{
+          overflow: hidden;
+          height: 0;
+
+          -webkit-transition:all $time ease-out;
+          -o-transition:all $time ease-out;
+          transition:all $time ease-out;
+        }
+        .pic{
+          position:relative;
+          width:80px;
+          height:80px;
+          margin:0 auto;
+          img{@extend %absCenter;}
+        }
+        .text{
+          padding:20px 0;font-size:$bigSize;color:$gray;
+          &:before{
+
+            -webkit-transition:all $time2 ease-in;
+            -o-transition:all $time2 ease-in;
+            transition:all $time2 ease-in;
+          }
+        }
+        .str-inner:hover{
+          .title{height:auto;padding:5px 0;}
+          .text{
+            padding:5px 0;
+            color:$blue;
+            &:before{
+              -webkit-transform: scale(1);
+              -ms-transform: scale(1);
+              transform: scale(1);
+            }
+          }
+        }
+        .str-inner{
+          text-align:center;
+          height: 155px;
+        }
+      }
+    }
+}
+
+$colorArr02:#3fdc94 #218bd5 #f26262 #f6aa58 #cf78f3 #e882c5 #39be62 #9534bd #58cced #f6da58;
+$cal02:length($colorArr02);
+.pWrapper02{
+    padding-top:30px;
+    .prow02{
+      @include str_width($strArr:".productDiamond",$padding:30px,$block:5);
+      
+      .productDiamond{
+        padding:15px 0;
+        @extend %clear;
+        $time:0.5s;
+        $time2:0.2s;
+        
+        .pic{
+          position:relative;
+          width:80px;
+          height: 80px;
+          margin:0 auto;
+          img{@extend %absCenter;}
+        }
+        .text{
+          padding:20px 0;font-size:$bigSize;color:$gray;
+          &:before{
+            -webkit-transition:all $time2 ease-in;
+            -o-transition:all $time2 ease-in;
+            transition:all $time2 ease-in;
+          }
+        }
+        
+        .str-inner{
+          text-align:center;
+          height: 155px;
+          &:hover{.text{color:$blue;}}
+        }
+      }
+
+    }
+}
+
+
+$colorArr01:#3fdc94 #218bd5 #f26262 #f6aa58 #cf78f3 #e882c5 #39be62 #9534bd #58cced #f6da58;
+$cal01:length($colorArr01);
+.pWrapper01{padding:0 60px 0 60px;}
+.prow01{
+  @include str_width($strArr:".productDiamond",$padding:0,$block:5);
+  $index:1;
+  @each $var in $colorArr01 {
+    .productDiamond_#{$index}{
+      .pic{background: $var;}
+      .str-inner{
+        &:hover{
+          .pic{-webkit-box-shadow:0 0 25px $var;box-shadow:0 0 25px $var}
+          .text{color:$var;}
+        }
+      }
+      .title{color:$var;}
+      .text{
+        $borderColor:$var;
+        @include persudo($color:$borderColor,$content:"",$position:before,$bg:none){
+          top:0;
+          height:1px;
+          background:$borderColor;
+          width:100%;
+          -webkit-transform: scale(0);
+          -ms-transform: scale(0);
+          transform: scale(0);
+
+        }
+      }
+    }
+    $index: $index + 1;
+  }
+  .productDiamond{
+    padding:15px 0;
+
+    @extend %clear;
+    $time:0.5s;
+    $time2:0.2s;
+    .title{
+      overflow: hidden;
+      height: 0;
+
+      -webkit-transition:all $time ease-out;
+      -o-transition:all $time ease-out;
+      transition:all $time ease-out;
+    }
+    .pic{
+      padding:12px 0;@include radius(10px);
+      width:80px;
+      margin:0 auto;
+    }
+    .text{
+      padding:20px 0;font-size:$bigSize;color:$gray;
+      &:before{
+
+        -webkit-transition:all $time2 ease-in;
+        -o-transition:all $time2 ease-in;
+        transition:all $time2 ease-in;
+      }
+    }
+    .str-inner:hover{
+      .title{height:auto;padding:5px 0;}
+      .text{
+        padding:5px 0;
+        &:before{
+          -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+          transform: scale(1);
+        }
+      }
+    }
+    .str-inner{
+      text-align:center;
+      height: 155px;
+    }
+  }
+
+}
+
+
+$colorArr:#3fdc94 #218bd5 #f26262 #f6aa58 #cf78f3 #e882c5 #39be62 #9534bd #58cced #f6da58;
+$cal:length($colorArr);
+.pWrapper{padding:0 0 0 20px;}
+.prow{
+    
+    @include str_width($strArr:".productDiamond",$padding:34px,$block:5);
+    $index:1;
+    @each $var in $colorArr {
+        .productDiamond_#{$index}{
+            .pic{background: $var;}
+            .str-inner{
+                &:hover{
+                    .pic{-webkit-box-shadow:0 0 25px $var;box-shadow:0 0 25px $var}
+                    .text{color:$var;}
+                }
+            }
+        }
+        $index: $index + 1;
+    }
+    .productDiamond{
+        padding:15px 0;
+        .str-inner{
+            text-align:center;
+            
+        }
+    }
+    .pic{padding:12px 0;@include radius(10px);}
+    .text{padding:20px 0;font-size:$bigSize;color:$gray;}
+}
+
+ 
