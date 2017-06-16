@@ -1,0 +1,737 @@
+@charset "utf-8";
+@import "_variable";
+
+@mixin transition($time){
+    -webkit-transition: all #{$time}s;
+    -o-transition: all #{$time}s;
+    transition: all #{$time}s;
+} 
+@mixin bgImg($url,$hoverUrl,$x,$y){
+    background:url($url) no-repeat $x $y;
+    &:hover{background:url($hoverUrl) no-repeat $x $y}
+}
+@mixin lheightM($height:30px){
+    height:$height;
+    line-height:$height;
+}
+@mixin bg($color:$white) {
+    background:$color;
+}
+
+@mixin inputset($height:25px,$width1:72%,$width2:28%){
+  
+  
+    height: $height;
+    input {
+      display: inline-block;
+      float: left;
+      height: 100%;
+      &.input {
+        width: $width1;
+        padding-left: 10px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+      &.button {
+        width: $width2;
+      }
+    }
+  
+  
+}
+
+@mixin divider($color:#dbdbdb){
+    @content;
+    &:before{
+        position: absolute;
+        content: "|";
+        left: 0px;
+        width: 1px;
+        color: $color;
+    }
+}
+
+@mixin un_row($rateArr:"1,2,3",$padding:false,$string:"un-block"){
+    $sum:0;
+    $index:0;
+    @extend %clear;  
+    @each $i in $rateArr{
+        $sum : $sum + $i;
+    }
+    @each $i in $rateArr{
+        $index : $index + 1;
+        .#{$string}-#{$index}{
+            width:percentage($i/$sum);@extend %float-l;
+            min-height:1px;
+        }
+    }
+    
+    @if($padding){
+        .un-line{margin:{left:-$padding;right:-$padding;}}
+        .un-inner{padding:{left:$padding;right:$padding;}}    
+    }
+     
+}
+
+@mixin str_width($strArr,$padding:5px,$block:false) {
+    $sum:length($strArr);
+    $index:0; 
+    @extend %clear;
+    margin-left: -$padding;
+    margin-right: -$padding;
+    @each $var in $strArr{
+        $index : $index + 1;
+        #{(nth($strArr,$index))}{
+            @if $block == false {
+                width:percentage(1/$sum);
+            } @else {
+                width:percentage(1/$block);
+            }
+            float:left;
+            min-height: 1px;
+            @content;
+        };
+        .str-inner{
+            padding-left: $padding;
+            padding-right: $padding;
+        }
+    }
+}
+
+
+
+@mixin un_width($rateArr:"1,2,3",$string:"un-block") {
+    $sum:0;
+    $index:0;
+    @each $i in $rateArr{
+        $sum : $sum + $i;
+    }
+    @each $var in $rateArr{
+        $index : $index + 1;
+        .#{$string}-#{$index}{
+            width:percentage($var/$sum);
+            @content;
+        }
+    }
+}
+@mixin str_un_widthNew($rateArr,$strArr,$padding:5px) {
+    $sum:0;
+    $index:0; 
+
+    margin-left: -$padding;
+    margin-right: -$padding;
+    @extend %clear;
+    @each $i in $rateArr{
+        $sum : $sum + $i;
+    }
+    @each $var in $rateArr{
+        $index : $index + 1;
+        #{(nth($strArr,$index))}{
+            width:percentage($var/$sum);
+            @content;
+        };
+    }
+    .str-inner{padding-left:$padding;padding-right:$padding;}
+}
+@mixin str_un_width($rateArr,$strArr) {
+    $sum:0;
+    $index:0; 
+    @extend %clear;
+    @each $i in $rateArr{
+        $sum : $sum + $i;
+    }
+    @each $var in $rateArr{
+        $index : $index + 1;
+        #{(nth($strArr,$index))}{
+            width:percentage($var/$sum);
+            @content;
+        };
+    }
+}
+
+@mixin nth_un_width($rateArr:"1,2,3",$string:"td",$blockNum:false) {
+    $sum:0;
+    $index:0;
+    @each $i in $rateArr{
+        $sum : $sum + $i;
+    }
+    @each $var in $rateArr{
+        $index : $index + 1;
+        #{$string}{
+            @if $blockNum == false {
+                &:nth-child(#{$index}){
+                    width:percentage($var/$sum);
+                }    
+            } @else if {
+                width:percentage(1/$blockNum);                
+            } 
+            @content;    
+        }
+    }
+}
+
+@mixin rowBeta($num:4,$outer_gutter:15px,$plusM:true,$height:false){
+    
+        @extend %clear;
+        @if($plusM){margin:{left:-$outer_gutter;right:-$outer_gutter;}}
+        .row-block{
+            @if($num != auto){width:percentage(1/$num);}
+            min-height: 1px;
+            @extend %float-l;
+            @extend %relative;
+            @extend %clear;
+            .inner{
+                padding:0 $outer_gutter;
+                @if($height){height:$height;line-height:$height;@extend %block;}}
+        }
+     
+}
+  
+@mixin row($num:4,$outer_gutter:15px,$plusM:true,$height:false){
+    .row{
+        @extend %clear;
+        @if($plusM){margin:{left:-$outer_gutter;right:-$outer_gutter;}}
+        .row-block{
+            @if($num != auto){width:percentage(1/$num);}
+            min-height: 1px;
+            @extend %float-l;
+            @extend %relative;
+            .inner{padding:0 $outer_gutter;
+                @if($height){height:$height;line-height:$height;@extend %block;}}
+        }
+    } 
+}
+
+
+@mixin rel_ajust($pos:"top",$value:-2px){
+    @extend %relative;
+    #{$pos}:#{$value};   
+}
+
+@mixin btn($width:50px,$height:30px,$radius:5px,$bg:$orange) {
+    width:$width;
+    @include lheightM($height);
+    @include radius($radius);
+    @include cursor();
+    @extend %align-center;
+    background:$bg;
+    @content;
+}
+
+@mixin slideNav($bg:#605751,$size:10px,$onColor:#fff) {
+    
+              @extend %align-center;
+              @extend %abs;
+              width: 100%;
+              overflow: hidden;
+              
+              z-index: 1; 
+              ul {
+                zoom: 1;
+                display: inline-block; 
+                li{
+                    @extend %float-l;
+                    @extend %relative;
+                    margin-right: 12px;
+                    width: $size;
+                    height: $size;
+                    -webkit-border-radius: 50%;
+                            border-radius: 50%;
+                    line-height: 14px;
+                    background: $bg;
+                    cursor: pointer;
+                    &.on{background:$onColor;
+                        @content;
+                    }
+                }
+              }  
+}
+
+@mixin persudo($color:#dbdbdb,$content:"|",$position:before,$bg:none){
+    
+        &{@extend %relative;}
+        &:#{$position}{
+            @if $position == none {
+                content:"";
+            } @else {
+                position: absolute;
+            
+                @if($position == before){left: 0px;}
+                @if($position == after){right: 0px;}
+                width: auto;
+                @if($color != none){color: $color;}
+                @if($bg != none){
+                    @if((str-index($bg,"rgb") == null)){
+                        @if(str-index($bg,"#") == null){
+                            background:url(#{$baseImgUrl}#{$bg}) no-repeat;
+                        }@else{
+                            background:unquote($bg);
+                        }    
+                    } 
+                    content:" ";
+                }@else{content: $content;}
+                font-size: 15px;
+                @content;
+            }
+            
+        }
+    
+}
+
+@mixin csstransition($parr,$property:all,$time:0.2s) {
+    @each $var in $parr {
+        #{$var}{
+            -webkit-transition: $property $time;
+            -o-transition: $property $time;
+            transition: $property $time;
+        }
+    }
+}
+
+@mixin radius($radius:20px){
+    @content;
+    -webkit-border-radius: $radius;
+            border-radius: $radius;
+}
+
+
+
+@mixin makeBorder($width:50px,$height:1px,$color:#fff) {
+    width:$width;
+    height:$height;
+    background:$color;
+    @content;
+}
+
+@mixin border($position:false,$width:1px,$color:$baseBorderColor,$type:solid){
+    @if($position){
+        @if($color != none){
+                border-#{$position}:$width $type $color;
+            }@else{
+                border-#{$position}:none;
+            }
+        
+    }@else{
+        border:$width $type $color;
+    }
+}
+
+@mixin cursor($cursor:pointer){
+    cursor: $cursor;
+}
+@mixin slide($height:100%,$num:4,$gutter:15px){
+    @extend %relative;
+    .direction .directionBtn{
+        line-height:$height;
+        @extend %abs;
+        width:10%;height:100%;
+        top:0;bottom:0;
+        cursor: pointer;
+        &.sprev{left:0;text-align:left;};
+        &.snext{right:0;text-align:right;}
+       
+    }
+    .gallary{
+        width:80%; 
+        @extend %mar-center;
+        @include row($num,$gutter);
+    }
+    
+}
+
+@mixin line_of_li($setWidth:true,$num:2){
+    @extend %float-l;
+    @extend %align-center;
+    a{
+        display: block;
+        @extend %mar-center;        
+     }
+    @if($setWidth){
+        width:percentage(1/$num);
+    }
+}
+
+
+
+
+@mixin _input($height,$padding){
+        height:($height)-($padding*2);
+        padding:{
+            top:$padding;
+            bottom:$padding;
+        }
+}
+@mixin baseInput($height:100%){
+    border:1px solid #ddd;
+    -webkit-box-sizing:border-box;
+            box-sizing:border-box;
+    outline:none;
+    height:$height;
+    line-height:inherit;
+    width:100%;
+}
+@mixin form_row($widthArr,$height,$heightAuto:true){
+        $index:0;
+     
+        @extend %clear;
+        height:$height;line-height:$height;
+       
+        @each $i in $widthArr{
+            $index : $index + 1;
+            .un-block-#{$index}{
+                @extend %float-l;
+                @extend %block;
+                min-height:1px;
+                width:$i;
+                height:100%;
+                line-height: $height;
+                .baseInput{
+                    @include border();
+                    @extend %float-l;
+                    @include baseInput($height:$height);
+                    padding:0px 10px;
+                }
+                a.baseInput,button.baseInput{
+                    @include baseInput($height);
+                    @extend %block;
+                    @extend %align-center;
+                    line-height: $height;
+                }
+                textarea.baseInput{
+                    @include baseInput($height:100%);width:100%;height:130px;
+                    &[type="text"]{padding:10px 10px};
+                }
+                
+                
+            }
+        }
+        @if($heightAuto){
+            &.height-auto{
+                height:auto;line-height:inherit;
+                input.baseInput{
+                        @include baseInput($height:$height)
+                }
+            }
+        }
+}
+
+@mixin sideBar($height:30px,$width:100px,$gutter:10px,$bgColor:$mainColor){
+        .sideBar_li{
+              @include button_groupBeta($height,$width,$gutter,$direction:v);  
+              
+              cursor: pointer;
+              background:$bgColor;
+        }
+}
+ 
+@mixin button_groupBeta($height:50px,$width:100px,$gutter:10px,$direction:v){
+        $d:bottom;
+        @if($direction == h){$d:right;@extend %float-l;}
+        display:block;
+        height:$height;
+        @if($height !=auto){line-height:$height;}
+        @if($width !=auto){width:$width!important;}
+        @extend %align-center;
+        @if($gutter != 0){
+            & {margin-#{$d}:$gutter;}    
+        }
+}
+
+@mixin button_column($height:50px,$ifGutter:1,$gutter:10px,$direction:v){
+        $d:top;
+        @if($direction == h){$d:left;@extend %float-l;}
+        display:block;
+        height:$height;
+        line-height:$height;
+        text-align: left;
+        @if($ifGutter == 1){
+            & + .serviceBtn{margin-#{$d}:$gutter;}    
+        }
+}
+
+@mixin f_pictext_row($width:100px,$height:100px,$fpos:"right",$mar-gutter:15px){
+    &{@extend %relative;}
+
+    $last:getParent(&);
+    
+    $string2:str-slice($last,2);
+    $string:str-insert($string2, ".", 1); 
+    
+    #{$string}_left,#{$string}_right{min-height:1px;}
+    $margin_pos:"left";
+    #{$string}_#{$fpos}{@include ftextTab($width,$height,$fpos);}
+    @if $fpos == "left" {
+        $margin_pos : "right";
+    }
+    #{$string}_#{$margin_pos}{@include newsTab_img($height,($width) + $mar-gutter,$fpos);}
+    
+}
+
+@mixin f_pictext_rowNew($width:100px,$height:100px,$fpos:"right",$mar-gutter:15px){
+    &{@extend %relative;}
+
+    $last:getParent(&);
+    
+    $string2:str-slice($last,2);
+    $string:str-insert($string2, ".", 1); 
+    
+    #{$string}-left,#{$string}-right{min-height:1px;}
+    $margin_pos:"left";
+    #{$string}-#{$fpos}{@include ftextTab($width,$height,$fpos);}
+    @if $fpos == "left" {
+        $margin_pos : "right";
+    }
+    #{$string}-#{$margin_pos}{@include newsTab_img($height,($width) + $mar-gutter,$fpos);}
+    
+}
+
+@mixin ftextTab($width:100px,$height:100px,$position:"right"){
+        @if $position == "left"{
+            @extend %float-l;
+        }
+        @if $position == "right"{
+            @extend %float-r;
+        }
+        width:$width;
+        text-align: left;
+        height: $height;
+        
+}
+
+@mixin picText_row($width:100px,$height:100px,$abs_pos:"right",$mar-gutter:15px){
+    .pt_line{@extend %relative;}
+    .pic,.text{min-height:1px;}
+    .pic{
+        @include textTab($width,$height,$abs_pos);
+        img{@extend %full;}
+        
+    }  
+    .text{
+            @extend %relative;
+            @include newsTab_img($height,($width) + $mar-gutter,$abs_pos);
+            
+    }
+}
+
+
+@mixin textTab($width:100px,$height:100px,$position:"right"){
+        @extend %abs;
+        @if $position == "left"{
+            left:0;
+        }
+        @if $position == "right"{
+            right:0;
+        }
+        top:0;
+        width:$width;
+        text-align: left;
+        height: $height;
+        
+} 
+
+@mixin newsTab_img($height:100%,$margin:20px,$position:"right"){
+    @if $position == "right"{
+        margin-right:$margin; 
+    }
+    @if $position == "left"{
+        margin-left:$margin; 
+    }
+    height:$height; 
+    
+}
+
+@mixin overhidden($height){
+    height: $height;
+    overflow: hidden;
+    @extend %relative;
+}
+
+
+@mixin _shadow($blur:10px,$color:$gray){
+    -webkit-box-shadow:0 0 $blur $color;
+            box-shadow:0 0 $blur $color;
+}
+
+@mixin news_listBeta($padding:30px,$li_outer:40px,$borderb:1px dashed $baseBorderColor){
+   
+    padding-top:$padding;
+    overflow: hidden;
+    li{
+        display: block;
+        height: $li_outer;
+        line-height: $li_outer;
+        @if($borderb){border-bottom:$borderb;}
+        .right{@extend %float-r;}
+        @content;    
+    } 
+}
+
+
+@mixin news_list($padding,$li_outer){
+   
+    border-top: 1px dashed rgb(221, 221, 221);
+    
+    padding-top:$padding;
+    overflow: hidden;
+    li{
+        display: block;
+        height: $li_outer;
+        line-height: $li_outer;
+        .date{@extend %float-r;}
+        @content;    
+    } 
+}
+
+@mixin header_h($height:30px){
+    
+    height:$height;border-bottom:2px solid darken($light-gray, 20%);
+    line-height:$height;
+    .h-title01 {
+        height:$height;
+        border-bottom:2px solid $mainColor;
+        .icon { vertical-align: middle; margin-right: 7px; position: relative; top: -1px; }
+        .text{color:$mainColor;font-size:$bigSize;}
+    }
+    
+}
+@mixin h_relative($height){
+    text-align:right;
+    height:$height;
+    .relative_link{
+        height:$height;
+        line-height:$height;
+        position:relative;padding:0 20px;float: left;
+        &.on{
+              color:$mainColor;
+              @content;
+            }
+    }
+    .relative_link + .relative_link.divider{
+        @include divider(); 
+    }
+}
+
+@mixin slideTxtBox_li($height){
+    .slideTxtBox li.switch-li{@extend %relative;height:$height;}
+}
+
+
+
+@mixin header_center($rate:0.1,$height:50px){
+    height:$height;
+
+    $border-width:2px;
+    .center{
+        width:percentage($rate);@extend %align-center;
+
+    }
+    .left,.right,.center .center_top,.center .center_down{
+        height:$height/2-$border-width/2;
+    }
+    .center .center_top{
+        
+        
+    }
+    .center .center_down{
+        
+        line-height:$height/2-$border-width/2;
+    }
+    .center .center_top{
+        border-bottom:$border-width solid $mainColor;
+    }
+
+    .left,.right{
+        border-bottom:$border-width solid #ddd;
+        width:percentage(1-($rate))/2;
+    }
+}
+
+
+@mixin transition($time){
+    -webkit-transition: all #{$time}s;
+    -o-transition: all #{$time}s;
+    transition: all #{$time}s;
+}
+
+
+
+@mixin caret($color:#000,$position:top,$width:4px){
+    $a:0;
+    $i:0;
+    $index:0;
+    @each $var in top, right, bottom,left {
+        $a: $a + 1;
+        @if $var == $position {
+            $index : $a;
+        }
+    }
+    @each $var in top, right, bottom,left {
+        $i: $i + 1;
+        @if $var == $position {
+            border-#{$var}: $width dashed $color;        
+            
+        }@else{
+            @if(abs($i - $index) != 2){
+                border-#{$var}:$width solid transparent;    
+            }
+        }
+    }
+    display: inline-block;
+    width: 0;
+    height: 0;
+    vertical-align: middle;
+   
+}
+@mixin borderImg($outerW:100px,$outerH:100px,$padding:50px,$color:#ddd){
+
+        width:$outerW - $padding*2;
+        height:$outerH - $padding*2;
+        padding:$padding;
+        border:1px solid $color;
+        img{@extend %full;}
+
+    
+}
+@mixin brand_img($size:70px,$bg:#fff,$border:1px solid #ddd){
+   
+            @extend %block;
+           
+            width: $size;
+            height: $size;
+            background: $bg;
+            @extend %relative;
+            
+            img{@extend %absCenter;}
+            @include radius($size);
+            border:$border; 
+}
+@mixin circleImg($size:50px,$color:#ddd,$borderWidth:1px){
+
+            @extend %block;
+            width: $size;
+            height: $size;
+            @extend %relative;
+            img{@extend %absCenter;&.circle{@include radius($size);}}
+            @include radius($size);
+            @if($borderWidth != 0){
+                border:$borderWidth solid $color;     
+            }
+            
+
+}
+
+@mixin pnav_li($height,$plr){
+            -webkit-border-radius: 10px;
+                    border-radius: 10px;
+            padding:0 $plr;
+            span {
+                @extend %relative;
+                @extend %float-l;
+                
+                & + span{@include divider(inherit);padding: 0 2px 0 6px;}
+            }
+            @include button_groupBeta($height,auto,$height/2,h)
+            
+
+}
+

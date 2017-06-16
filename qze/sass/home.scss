@@ -1,0 +1,986 @@
+@charset "utf-8";
+
+@import "mySassWare/_variable";
+@import "mySassWare/_mixin";
+@import "mySassWare/_function";
+$tth:40px;
+
+.row6{
+    .flink{
+        padding:30px;
+        background:#f3f3f3;
+        .title{color:$blue;font-weight:bold;float:left;margin-right:15px;}
+        select{float:left;width:155px;height:25px;&+select{margin-left:15px}}    
+        @include border();
+        @extend %clear;
+    }
+    
+
+}
+
+.row5{
+    .sWrapper{
+        $riarr:685,455;
+        $risarr:'.service_wrapper','.serviceCompany_wrapper';
+        
+        @extend %clear;
+        @include str_un_widthNew($rateArr:$riarr,$strArr:$risarr){
+            float:left;
+        };
+        .str-border{
+            @include border();
+            border-top:none;
+        }
+    }
+    .serviceRow{
+        $srriarr:250,250,150;
+        $srrisarr:'.serviceList01','.serviceList02','.serviceList_btn';
+        @include str_un_width($rateArr:$srriarr,$strArr:$srrisarr){
+            float:left;
+        };
+        position:relative;
+        .list03 ul {padding:0;}
+        .more{position:absolute;right:0;bottom:0;}
+    }   
+}
+.serviceList_btn{
+    
+    .btnGroup{
+        padding-top:50px;
+    }
+    
+   .button{ 
+       @include button_groupBeta($height:37px,$width:110px,$gutter:10px,$direction:v);
+       background:$orange;
+       color:#fff;
+    }
+}
+
+$wr:110,240,100;
+.table01{
+   /* @extend %resetTable; */ 
+   width:100%;
+   padding-bottom:15px;
+   @include nth_un_width($rateArr:$wr,$string:"td"){
+            vertical-align: middle;
+            
+            text-align: center;
+            /* &.name{@extend %align-left;} */
+            color:$baseTitleColor;
+   }; 
+   tr{
+        
+        &:nth-child(1){
+           td{
+                padding:5px 25px;
+                color:#000;
+            } 
+            background:#eee; 
+            
+        }
+        & + tr{
+                
+                td{
+                    @include border($position:bottom,$type:dotted);
+                    padding:5px 0;&:last-child{font-size:$smallSize;}
+                }        
+        }
+   }
+   
+   border-spacing: 2px;
+}
+
+
+/* textTab02 start */
+.textTab02 {
+    height: auto;
+    border-bottom: none;
+    text-align: left;
+    
+    .hd {
+        @include border($position:bottom);
+        height: $tth;
+        position: relative;
+        @extend %clear;
+        ul {
+           
+            li {
+                float: left;
+                height: $tth;
+                cursor: pointer;
+                width:20%;
+                font-size: $mediumSize;
+                .iconfont{color:$blue;margin-right:10px;font-size:$bigSize;}
+                .hdInner{
+                    padding: 8px 0; 
+                    text-align: center;
+                }
+                & + li{
+                    .hdInner{ 
+                        @include persudo($color:#dbdbdb,$content:"|",$position:before,$bg:none){
+                            left:-2px;  
+                        };
+                    }
+                }
+                &.on {
+                    background:url(#{$baseImgUrl}aslionbg.png) center 100% no-repeat;
+                    color: $blue;
+                }
+            }
+        }
+    }
+  
+    .bd {
+        .switch {
+            padding:13px;
+        }
+    }
+    .bd ul.switch {
+        padding: 15px 0px;
+        zoom: 1;
+    }
+    
+    .bd li .stb-text {
+        height: 30px;
+        line-height: 23px;
+        font-size: 15px;
+        font-weight: 600;
+    }
+}
+/* textTab02 end */
+ 
+  
+.row4{
+    .hrWrapper{
+        @include border();border-top:none;
+        @include str_width($strArr:".hr",$padding:0,$block:3){};
+        .hr + .hr{.hriw{@include border($position:left);}}
+        .hriw{padding:11px 16px}
+    }
+}
+
+
+/* list05 start */    
+    .list05{ 
+        ul {
+            text-align: left;
+        }
+    
+         li {
+            display: block;
+            padding:2px 0;
+            @extend %clear;
+            
+            .icon{float: left;img{display:block;vertical-align:middle;}}
+        }
+         li .date {
+            float: right;
+            font-size:$smallSize;
+            color: rgb(153, 153, 153);
+            @include rel_ajust($pos:"left",$value:6px);
+        }
+         li .text {
+            width: 210px;
+            
+            @include lheightM(25px);
+           float:left;
+            -o-text-overflow: ellipsis;
+               text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+
+        }
+    }
+/* list05 end */
+
+/* list04 start */    
+    .list04{ 
+        ul {
+            text-align: left;
+        }
+    
+         li {
+            display: block;
+            padding:8px 0;
+            @extend %clear;
+            @include border($position:bottom,$type:dotted);
+            .icon{float: left;img{display:block;vertical-align:middle;}}
+        }
+         li .date {
+            float: right;
+            font-size:$smallSize;
+            color: rgb(153, 153, 153);
+            @include rel_ajust($pos:"left",$value:6px);
+        }
+         li .text {
+            width: 210px;
+            padding-left:10px;
+            @include lheightM(25px);
+           float:left;
+            -o-text-overflow: ellipsis;
+               text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+
+        }
+    }
+/* list04 end */
+
+
+.row3{
+    .internetContent{
+        $ich:267px;
+        $riarr:618,520;
+        $risarr:'.project_wrapper','.bguide_wrapper';
+        height: $ich;
+        @include border();
+        border-top:none;
+        @extend %clear;
+        @include str_un_width($rateArr:$riarr,$strArr:$risarr){
+            float:left;
+        };
+        .bg_inner{padding:0 10px 0 20px;}
+    }
+}
+.guideTagWrapper{
+    @include str_width($strArr:".guideLink",$block:3){};
+    .link{
+        text-align:center;background:$light-blue;font-weight:bold;color:$blue;
+        padding:10px 20px;
+        .iconfont{margin-right:10px;font-size:$bigSize;@include rel_ajust($value:3px);}
+    }
+    .str-inner{padding-bottom:10px}
+        
+}
+
+.input_box01 {
+    $ib01h:28px;
+    $ib01m:15px;
+    @extend %clear;
+    background:$light-blue;
+    padding:5px 0;
+    .input_set_text {
+        float: left;
+        line-height: $ib01h;
+        text-align: center;
+        padding:0 $ib01h;
+    }
+    .input-set-l {
+        height:$ib01h;
+    }
+    .input-set input {
+        display: inline-block;
+        float: left;
+        height: 100%;
+      
+        font-weight: 500;
+        @include border();
+    }
+    .input-set input.input {
+        width: 280px;
+        padding-left: 10px;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+    }
+    .input-set input.button {
+        background:#2b96dc;
+        padding-left:$ib01m;
+        padding-right:$ib01m;
+        margin-left: $ib01m;
+    }
+}
+
+.guideStatus{
+    padding-top:20px;
+    p{ 
+        margin-bottom: 5px;
+        span{margin-right:30px;font-size:$baseSize*0.9}} 
+    }
+
+$sb03_activeColor:#c4dcf7;
+$sb03_activeColor01:#014280;
+$sb03_border:5px;
+$sb03iconfontm:10px;
+.sideBar03{
+         @include sideBar($height:65px,$width:auto,$gutter:0px,$bgColor:$light-blue);    
+         .sideBar_li{
+            .srow{
+                border-left:$sb03_border solid $light-blue;
+                padding-right:$sb03_border;
+                height: 100%;
+                @extend %relative;  
+                p{@extend %baseLineHeight;@extend %align-left;}
+                .iconfont{
+                    margin-left:$sb03iconfontm;margin-right:$sb03iconfontm;
+                    font-size: $bigSize*1.3;
+                    @include rel_ajust($value:3px);
+                }
+            } 
+            &:hover,&.on{
+                background:$sb03_activeColor;
+                .srow{ 
+                    border-left:$sb03_border solid $blue;
+                    color:$blue;
+                }
+                
+            }
+            &+.sideBar_li{border-top:1px solid $sb03_activeColor;}
+         }
+}  
+
+$project_p:10px; 
+
+
+$pw_arr:180,460;
+$pw_arr0:870,275;
+$project_h:490px;  
+   
+.project_wrapper{
+    
+    @include un_row($pw_arr,$padding:$project_p);
+    .list03 li .text{width:75%;}
+    .titleImg{/* @include un_row($pw_arr1,$padding:$project_p,$string:"two-inner"); */}
+    .hasTitle{
+        @extend %relative;
+        .t{left:0;bottom:0;right:0;background:rgba(black, 0.6);
+            .t_inner{padding:0 $project_p*2}
+            .t01{padding:$project_p 0 $project_p/2;}
+            .t02{padding:$project_p 0;}
+        }    
+    }   
+    .projectImg{
+        height: $project_h;
+    } 
+    .sp_img{
+        height: $project_h/2-$project_p;
+        &+.sp_img{margin-top:2*$project_p;}
+    }
+}
+
+
+.head02{
+    .brand{
+        display:inline-block;padding: 9px 24px 7px 0;font-size:$mediumSize;
+        .text{margin-right:10px;}
+    }
+}
+
+.head01{
+    background:$light-blue;
+    border-bottom:2px solid $blue;
+    .brand{background:$blue;display:inline-block;padding:10px 24px;font-size:$mediumSize;color:#fff;}
+}
+
+
+
+
+
+
+
+.row2{
+    .isWrapper{padding:5px 10px;@include border();border-top:none;}
+}
+$tabBaseBg:$light-blue;
+/* policyWrapper start */
+
+.tab05,.tab06{
+    .bottom{
+        .list03{padding-left:15px;ul{padding-bottom:0;}}
+    }
+}
+
+/* tab06 start */
+    
+  .tab06.case02{height:auto;border-bottom:none;}
+  .tab06.case02 .list01{border-top: 1px dashed #ddd;}
+  .tab06.case02 .bd ul.switch{ padding:0px 0;  zoom:1; }
+  .tab06{ text-align:left;border-bottom: 1px dashed #ddd;height: 142px;}
+  .tab06 .hd{
+    @include lheightM(35px);
+    
+    position:relative;
+  }
+  .tab06 .hd ul{
+    height:37px;
+    @include str_width($strArr:"li",$block:2){text-align:center;};
+    li{
+        cursor:pointer;
+        background:$tabBaseBg;
+        &.on{background:#fff;color:$blue;}
+    }
+  }
+  
+  .tab06 .bd{
+        ul.switch{ 
+            padding:15px 0;  zoom:1; 
+            li{
+                .s-general{padding:10px 0 15px;}
+                .stb-text{
+                    height: 30px;
+                    line-height: 23px;
+                    font-size: 15px;
+                    color: $blue;
+                }
+            }
+        }
+        /* .top{
+            padding:15px 0;
+            @include f_pictext_rowNew($width:185px,$height:120px,$fpos:"left",$mar-gutter:15px);
+            .top-left{
+                img{@extend %full;}
+            }
+            .stb-info{height:66px;overflow:hidden;}
+        } */
+           
+  }
+  /* list03 start */    
+        .list03 ul {
+            text-align: left;
+            padding:15px 0;
+        }
+        .list03 li {
+            $l03p:5px;
+            display: block;
+            padding: $l03p 0 $l03p $l03p*3;
+            @include persudo($content:"•",$color:#555);
+            
+            &:hover{
+                color:$blue;
+                .text{text-decoration:underline;}
+            }
+            .text {
+                width: 80%;
+                display: block;
+                -o-text-overflow: ellipsis;
+                   text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+        }
+        .list03 li .date{
+            float: right;
+            font-size:$smallSize;
+        }
+       
+  /* list03 end */
+/* tab06 end */   
+/* policyWrapper end */
+
+
+/* introduceWrapper start */
+
+/* tab05 start */
+    
+  .tab05.case02{height:auto;border-bottom:none;}
+  .tab05.case02 .list01{border-top: 1px dashed #ddd;}
+  .tab05.case02 .bd ul.switch{ padding:0px 0;  zoom:1; }
+  .tab05{ text-align:left;border-bottom: 1px dashed #ddd;height: 142px;}
+  .tab05 .hd{
+    @include lheightM(35px);
+    
+    position:relative;
+  }
+  .tab05 .hd ul{
+    height:37px;
+    @include str_width($strArr:"li",$block:2);
+    li{
+        cursor:pointer;
+        .btn{background:#0081cc;color: #fff;text-align:center;}
+        &.on{.btn{background:$light-blue;color:#000;}}
+    }
+  }
+  
+  .tab05 .bd{
+        .switch{ 
+            padding:15px 0 0 0;  zoom:1; 
+            
+            .s-general{padding:10px 0 15px;}
+            .stb-text{
+                height: 30px;
+                line-height: 23px;
+                font-size: 15px;
+                color: $blue;
+            }
+        }
+        
+        .bottom{
+            $arrtab05:32,512;
+            $sarrtab05:'.brandTitle','.listWrapper';
+            @extend %clear;
+            @include str_un_width($rateArr:$arrtab05,$strArr:$sarrtab05){
+                float:left;
+
+            };
+            .brandTitle{background:$blue;color:#fff;
+                .btinner{
+                    padding: 11px 4px;
+                    text-align: center;
+                    line-height: 1.2;
+                }
+            }
+            .list03{margin-top:-20px;}
+            
+        }   
+  }
+
+.imgText01{
+    padding:0 0 15px 0;
+    @include f_pictext_rowNew($width:125px,$height:80px,$fpos:"left",$mar-gutter:15px);
+    .imgText01-left{
+        img{@extend %full;}
+    }
+    .stb-info{height:66px;overflow:hidden;}
+} 
+
+.imgText{
+    padding:0 0 15px 0;
+    @include f_pictext_rowNew($width:185px,$height:120px,$fpos:"left",$mar-gutter:15px);
+    .imgText-left{
+        img{@extend %full;}
+    }
+    .stb-info{height:66px;overflow:hidden;}
+}    
+
+/* tab05 end */
+    
+
+/* introduceWrapper end  */
+
+
+.row1,.row2,.row3{
+    .more{color:$gray;float:right;}
+}
+.row1 .more{@include lheightM($tth);}
+/* activitiesWrapper start */
+    .textTab01 {
+        height: auto;
+        border-bottom: none;
+        text-align: left;
+        
+    }
+    
+    .textTab01 .hd {
+        
+        @include border($position:bottom);
+        height: $tth;
+        position: relative;
+        @extend %clear;
+        ul {
+            float: left;
+            
+            li {
+                float: left;
+                height: $tth;
+                cursor: pointer;
+                font-size: $mediumSize;
+                .iconfont{color:$blue;margin-right:10px;font-size:$bigSize;}
+                .hdInner{
+                    padding: 8px 20px; 
+                }
+                & + li{
+                    .hdInner{ 
+                        @include persudo($color:#dbdbdb,$content:"|",$position:before,$bg:none){
+                            left:-2px;  
+                        };
+                    }
+                }
+                &.on {
+                    background:url(#{$baseImgUrl}aslionbg.png) center 100% no-repeat;
+                    color: $blue;
+                }
+            }
+        }
+    }
+  
+    .textTab01 .bd {
+        .switch {
+            padding:13px;
+        }
+    }
+    .textTab01 .bd ul.switch {
+        padding: 15px 0px;
+        zoom: 1;
+    }
+    
+    .textTab01 .bd li .stb-text {
+        height: 30px;
+        line-height: 23px;
+        font-size: 15px;
+        font-weight: 600;
+    }
+    
+    /* list01 start */    
+        .list01 ul {
+            text-align: left;
+        }
+        .list01 li {
+            display: block;
+            padding:8px 0;
+            
+            @include border($position:bottom,$type:dotted);
+        }
+        .list01 li .date {
+            float: right;
+            font-size:$smallSize;
+            color: rgb(153, 153, 153);
+            @include rel_ajust($pos:"left",$value:6px);
+        }
+        .list01 li .text {
+            width: 290px;
+            display: block;
+            -o-text-overflow: ellipsis;
+               text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    /* list01 end */
+/* activitiesWrapper end */
+
+/* publicWrapper start */
+    .publicWrapper{
+        .pheader{
+            @include lheightM($tth);
+            padding-left: 20px;
+            @include border($position: bottom);
+        }
+    }
+    
+    .list02 ul {
+        text-align: left;
+    }
+    .list02 li {
+        display: block;
+        padding:3px 12px;
+        
+        .inner{
+            $innerPl:10px;
+            padding-left:$innerPl;
+            @include border($position: bottom,$type:dotted);
+            @include persudo($color:#000,$content:"▪",$position:before,$bg:none){
+                top:1px;
+                left:0;
+            };
+            &:hover{
+                .list-text,
+                &:before{color:$blue;}
+            }
+        }
+        .list-text{
+            width:245px;
+            padding: 1px 0;
+        }
+        .intro{
+            color:$gray;
+            font-size:$smallSize;
+            height: 35px;
+            line-height: 1.3;
+            overflow: hidden;
+            padding: 3px 0;
+        }
+    }
+
+/* publicWrapper end */
+
+/* topbar03 start */
+    $logoRow_h:15px;
+    $g-topbar02-h:15px;
+
+    .topbar03 {
+        height: 33px;
+        line-height: 30px;
+        font-size: 12px;
+        background-color: #f5f5f5;
+        text-align: left;
+       
+        .tl_wrapper{margin-left:20px}
+        td{vertical-align:middle;}
+        .topbar_link { 
+              position: relative;
+              padding: 0 10px;
+              color:$blue;
+              span{
+                height: $g-topbar02-h;
+                line-height: $g-topbar02-h;
+                img{
+                    vertical-align: middle;
+                    height: $g-topbar02-h;
+                    margin-left: 5px;
+                } 
+              } 
+              & + .topbar_link {
+                @include divider($color:inherit);
+                &:before{left:-4px}
+              }
+              &:last-child {padding-right: 0;}
+        }
+        span{
+            display: inline-block;
+            & + span{margin-left: 15px;}
+        }
+        .iconfont{@include rel_ajust($pos:"top",$value:2px);} 
+    }
+    .topbar03 span.title-g {
+        margin-left: 0px;
+    }
+   
+/* topbar03 end */ 
+
+/* input set05  start  */
+     
+    .input-set05 {
+        @include inputset($width1:180px,$width2:75px);
+        .input{@include border($color:$blue);border-right:none;}
+        .button{background:url(#{$baseImgUrl}isearch.png) no-repeat 12px 50% $blue;padding-left:15px;}
+    }
+/* input set  end  */
+
+
+/* navbar start */
+    $navbar_num:7;
+    $navbar_bg:#f4ca04;
+    $navbar_to:#eda803;
+    
+    .navBar_wrapper{
+        
+        background:$blue;
+        .navbar-line02{
+            padding-left:20px; position: relative;
+            /* nav_erc0 start*/ 
+                .naver_0 {
+                    display: none;  
+                    position: absolute;
+                    z-index: 99;
+                    top: 100%;
+                    min-width: 100%;
+                    max-width:200%;
+                    left:0;
+                    .nav_erc{
+                        @extend %bg-white;
+                        @extend %align-left;
+                        
+                        @extend %clear;
+                        
+                        border-top:none;
+                        
+                        li{
+                            font-size: $smallSize*1.2;
+                            font-weight: normal;
+                            text-align: center;
+                            float:left;
+                            display: block;
+                            @extend %capitalize;
+                            &:hover{ 
+                                /* .link{background:url(#{$baseImgUrl}irightArrow.png) 0px 50% no-repeat;} */
+                            }
+                            $link_h:22px;
+                            .link{
+                                white-space: nowrap;
+                                color:$baseFontColor;
+                                padding: 20px 25px;
+                                display: inline-block;
+                                @extend %block;
+                                .inner{@extend %ellipsis;}
+                                &,.inner{@include lheightM($height:$link_h);}
+                                &:hover{color:$blue;}
+                                i.fa{
+                                    margin-right: 8px;
+                                    top: -1px;
+                                    position: relative;
+                                }
+                                span{@extend %ellipsis;line-height:1;}
+                                
+                            }    
+                        }
+                    }
+                }
+            /*nav_erc0 end */
+        }
+    }
+    .navbar-line02 .navbar-block{
+        float: left;
+        min-height: 1px;
+        cursor: pointer;
+        
+        display: block; 
+        width:percentage(1/$navbar_num);
+        color:#fff;
+        
+        @extend %uppercase;
+        .bg{
+            width:153px;
+            height: 60px;
+            bottom:0;
+            right:0;
+            position:absolute;
+         
+        }
+        .text{z-index:999;position:relative;}
+    }
+    .navbar-line02 .navbar-block{
+        &.on{.naver_0{display:block;}}
+        &.on,
+        .navLink:hover{
+            .bg{
+                background:url(#{$baseImgUrl}navBg.png) no-repeat 50% 0
+            }
+
+        } 
+    }
+
+    .navbar-line02 .navbar-block a.navLink {
+        display: block;
+        text-align: center;
+        font-size: $mediumSize;
+        color:#fff;
+        @extend %relative;
+        padding:13px 0;
+        &.divider{
+            @include persudo($color:#dbdbdb,$content:"|",$position:before,$bg:"ndivider.png");
+            &:before{width: 3px;height: 40px;top: 6px;}
+        }
+    }   
+      
+    .navbar-line02 .navbar-block{ 
+    
+    }
+    
+/* navbar end */
+
+.slideWrapper{.inner{padding:10px;}}
+/* slideBox start  */
+    .slideBox03 {
+       
+        overflow: hidden;
+        position: relative;
+        text-align: right;
+        
+        .hd {
+            text-align: right;
+            right:0;
+            overflow: hidden;
+            position: absolute;
+            bottom: 5px;
+            z-index: 1;
+        }
+    }
+    .slideBox03 .hd ul {
+        overflow: hidden;
+        zoom: 1;
+        display: inline-block;
+    }
+    $size:22px;
+    $bgColor1:rgba(0, 0, 0,0.6);
+    $bgColor2:rgba(0, 0, 0,0.4);
+    .slideBox03 .hd ul li {
+        float: left;
+        margin-right: 12px;
+        width: $size;
+        color:#fff;
+        @include lheightM($size);
+        text-align: center;
+        background: $bgColor1;
+        cursor: pointer;
+        font-size: $smallSize;
+        position:relative;
+        
+        &.on {
+            background: $yellow;
+            color: white;
+        } 
+    } 
+    .slideBox03 .bd {
+        position: relative;
+        width: 100%;
+        z-index: 0;
+    
+        li {
+            width: 100%;
+            display: block;
+            vertical-align: middle;
+            position:relative;
+            .slideTitle{
+                position:absolute;left:0;right:0;bottom:0;
+                background:$bgColor2;
+                color:#fff;
+                text-align:left;
+                padding:10px 20px;
+                .link{width:70%;@extend %ellipsis;}
+                
+            }
+        }
+    }
+    .slideBox03 .bd li a {
+        width: 100%;
+        display: block;
+    }
+    .slideBox03 .bd li a img {
+        width: 100%;
+        display: block;
+    }
+ 
+
+/* slideBox end */
+
+.logoRow{
+    padding:50px 0 25px; 
+}
+body{background:url(#{$baseImgUrl}bg.png) no-repeat 50% 0}
+.middlePart{
+    background:#fff;
+    .row1{
+        width:100%;
+        $arr:438,418,285;
+        $sarr:'.slideWrapper','.activitiesWrapper','.publicWrapper';
+        @include str_un_width($rateArr:$arr,$strArr:$sarr);
+        @extend %resetTable;
+        td{@include border();vertical-align:top};
+    }
+    .row2{
+        $sarr2:'.introduceWrapper','.policyWrapper';
+        @include str_width($strArr:$sarr2);
+    }
+
+}
+
+$rmp:6px;
+.da_banner{padding:$rmp 0;img{display:block;}}
+.rmp{margin-bottom:$rmp;}  
+
+/*footer start*/
+    
+  $footinner_h:125px;
+  $footer_p:50px;
+  $qrZone_w:380px;
+  $foot-logo-size:120px;
+  .footer{
+      background:$blue;
+      padding:40px 0;
+      color:#fff;
+      @include border($position:top,$width:1px,$color:$baseBorderColor);
+      @extend %align-center;
+      .fridend_link{
+          @extend %iBlock;
+          .right{padding:10px 0 0}
+          @extend %relative;
+          
+          .right{
+              
+              a{
+                  font-weight: 700;
+                  @extend %uppercase;
+                  
+                  @extend %relative;
+                  padding:0 15px ;
+                  &:first-child{padding-left:0;}
+                  & + a{ @include divider(); @extend %align-center;
+                      &:before{left:-3px;}
+                  }
+              } 
+              
+          }  
+      }
+      .copyRight{text-align:center;font-size:$smallSize;padding:2px 0;}
+      
+  }
+/* footer end */
+
