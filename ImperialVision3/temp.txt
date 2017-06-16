@@ -1,0 +1,35 @@
+<div class="swiper-container index-full-swiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <?php include 'include/index-section1.php';?>
+    </div><!--section1首屏轮播三张+大量效果-->
+    <div class="swiper-slide">
+      <?php include 'include/index-section2.php';?>
+    </div><!--section2核心产品-->
+    <div class="swiper-slide">
+      <?php include 'include/index-section3.php';?>
+    </div><!--section3解决方案-->
+    <div class="swiper-slide">
+      <?php include 'include/index-section4.php';?>
+    </div><!--section4关于我们-->
+  </div>
+</div>
+<div class="swiper-slide index_section1_banner">
+      <?php include 'include/index-section1.php';?>
+    </div>
+    <div class="swiper-slide index_section2_product">
+      <?php include 'include/index-section2.php';?>
+    </div>
+
+
+background-image: radial-gradient(61% 113%, rgb(63, 66, 71) 0%, rgb(45, 47, 51) 41%, rgb(11, 13, 16) 100%);
+
+
+    <div class="showcase--5">
+      <div class="menu open">
+        <div class="bit-1"></div>
+        <div class="bit-2"></div>
+        <div class="bit-3"></div>
+      </div>
+    </div>
+

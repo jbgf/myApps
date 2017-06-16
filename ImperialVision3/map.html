@@ -1,0 +1,223 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Untitled</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="author" href="humans.txt">
+    </head>
+    <body>
+        
+        <script src="js/jquery.min.js"></script>
+        <div class="row">
+            <div id="mapApp" class="col-12">
+                <div id="map" style="height:465px" class="baidumap_box">
+
+                <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=bT5d3SyGp0VfmwROzCumXsl551zI7WcD"></script>
+                <script type="text/javascript">
+                  //创建和初始化地图函数：
+                  function initMap(){
+                    var ll_arr = [
+                                      {x:119.269110,y:26.08532}
+                                 ];  
+                    createMap();//创建地图
+                    centerMap(ll_arr[0]);
+                    addMapControl();//向地图添加控件
+                    addMapOverlay(ll_arr);//向地图添加覆盖物
+                    panorama();//全景地图
+                    setMapEvent();
+                  }
+
+                  function panorama(){
+                    // 覆盖区域图层测试
+                    //map.addTileLayer(new BMap.PanoramaCoverageLayer()); 
+                    //构造全景控件
+                    //var stCtrl = new BMap.PanoramaControl({anchor: BMAP_ANCHOR_BOTTOM_RIGHT}); 
+                    //stCtrl.setOffset(new BMap.Size(0, 0));
+                    //添加全景控件
+                    //map.addControl(stCtrl);
+
+                    var _container = $("#mapType"), 
+                        _wrapper = $("#mapType-wrapper"),a;
+
+                        _container.on("mouseenter",function() {
+                            
+                            clearTimeout(a);
+                             _wrapper.addClass("expand") ;
+                        }); 
+                        _container.on("mouseleave",function() { 
+                            a = setTimeout(function() { 
+                                _wrapper.removeClass("expand") 
+                            }, 400); 
+                        })
+                  }
+
+                  function createMap(){ 
+                     map = new BMap.Map("map"); 
+                  }
+                  function centerMap(mapItem){ 
+                    //定位
+                    map.centerAndZoom(new BMap.Point(mapItem.x,mapItem.y),16);
+
+                    //全景图展示
+                    //var panorama = new BMap.Panorama('panorama');
+                        
+                  }
+
+                  function setMapEvent(){
+                    map.enableScrollWheelZoom();
+                    map.enableKeyboard();
+                    map.enableDragging();
+                    map.enableDoubleClickZoom();
+
+                  }
+                  function addClickHandler(target,window){
+                    target.addEventListener("click",function(){
+                      target.openInfoWindow(window);
+                    });
+                  }
+                  function addMapOverlay(mapArr){
+                      var icon = {w:28,h:41};
+                          for (var i = mapArr.length - 1; i >= 0; i--) {
+                                  
+                               var cod = mapArr[i];
+                               var point = new BMap.Point(cod.x,cod.y);
+                               var iconImg = createIcon(icon);
+                               var marker = new BMap.Marker(point,{icon:iconImg});
+                               map.addOverlay(marker);
+                                  
+                          }
+
+                  }
+                  function createIcon(json){
+                      var icon = new BMap.Icon(
+                          "images/marker.png", 
+                          new BMap.Size(json.w,json.h),
+                          {
+                              /*anchor控制偏移坐标点相对图片左上角的偏移，offset不管用*/
+                              anchor:new BMap.Size(json.w/2,json.h)
+                          }
+                      )
+                      return icon;
+                  }
+                  //向地图添加控件
+                  function addMapControl(){
+                    var scaleControl = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+                    scaleControl.setUnit(BMAP_UNIT_IMPERIAL);
+                    map.addControl(scaleControl);
+                    var navControl = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+                    map.addControl(navControl);
+                    /*var overviewControl = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:true});
+                    map.addControl(overviewControl);*/
+                  }
+                  var map;
+                    initMap();
+                </script>
+
+                </div>
+                <div id="mapType-wrapper" class="">
+                  <div id="mapType">
+                  <div class="mapTypeCard normal active" data-name="normalMap"><div class="switch-box"><input type="checkbox" class="switch"><p>显示收藏点</p></div>    <span>地图</span></div><div class="mapTypeCard earth" data-name="earth"><div class="switch-box"><input type="checkbox" class="switch" checked="true"><p>开启路网</p></div>    <span>地球</span></div><div class="mapTypeCard panorama choosedType" data-name="panorama">    <span>全景</span></div></div>
+                </div>
+                <style type="text/css">
+                      #mapType-wrapper {
+                          position: absolute;
+                          bottom: 0;
+                          right: 0;
+                      }
+                      #mapType {
+                          height: 80px;
+                          cursor: pointer;
+                          -webkit-transition-property: width,background-color;
+                          transition-property: width,background-color;
+                          -webkit-transition-duration: .4s;
+                          transition-duration: .4s;
+                          width: 110px;
+                          background-color: rgba(255,255,255,0);
+                      }
+                      #mapType .normal {
+                          z-index: 1;
+                          background-position: 0 0;
+                          right: 20px;
+                      }
+
+                      #mapType .mapTypeCard {
+                          height: 60px;
+                          width: 86px;
+                          position: absolute;
+                          border-radius: 2px;
+                          top: 10px;
+                          box-sizing: border-box;
+                          border: 1px solid transparent;
+                          border: 1px solid rgba(153,153,153,.42);
+                          background: url(http://webmap1.map.bdstatic.com/wolfman/static/common/images/new/shadow_6bf0ecd.png) no-repeat 0 0;
+                          background-size: 86px 240px;
+                          -webkit-transition-property: right,background-image;
+                          transition-property: right,background-image;
+                          -webkit-transition-duration: .4s;
+                          transition-duration: .4s;
+                      }
+                      #mapType .switch-box {
+                          visibility: hidden;
+                          position: absolute;
+                          width: 100%;
+                          height: 20px;
+                          line-height: 22px;
+                          color: #fff;
+                          background: rgba(0,0,0,.5);
+                      }
+                      #mapType .normal .switch-box input.switch {
+                          left: 5px;
+                      }
+
+                      #mapType .switch-box input.switch {
+                          position: absolute;
+                          left: 8px;
+                          top: 4px;
+                          cursor: pointer;
+                      }
+                      #mapType .normal .switch-box p {
+                          margin-left: 20px;
+                      }
+
+                      #mapType .switch-box p {
+                          display: inline-block;
+                          margin-left: 25px;
+                      }
+                      #mapType .mapTypeCard.active span, #mapType .mapTypeCard:hover span {
+                          background-color: #3385FF;
+                      }
+
+                      #mapType .mapTypeCard span {
+                          position: absolute;
+                          bottom: 0;
+                          right: 0;
+                          display: inline-block;
+                          padding: 3px 3px 2px 4px;
+                          font-size: 12px;
+                          height: 12px;
+                          line-height: 12px;
+                          color: #FFF;
+                          border-top-left-radius: 2px;
+                      }
+
+                      #mapType .mapTypeCard:hover {
+                          border: 1px solid #3385FF;
+                      }
+
+                      .expand #mapType .mapTypeCard {
+                          border: 1px solid rgba(255,255,255,0);
+                          background-image: url(http://webmap0.map.bdstatic.com/wolfman/static/common/images/new/maptype_8a68f95.png);
+                      }
+
+                      
+
+                      
+
+                </style>
+            </div>
+        </div>
+    </body>
+</html>

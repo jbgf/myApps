@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+
+@-moz-keyframes rotate{
+0%{ -moz-transform:rotate(0deg);}
+  100%{-moz-transform:rotate(-360deg);}
+}
+@-webkit-keyframes rotate{
+0%{ -webkit-transform:rotate(0deg);}
+  100%{-webkit-transform:rotate(-360deg);}
+}
+.rotate{
+ -moz-animation:rotate 4s linear infinite;
+ -webkit-animation:rotate 4s linear infinite;
+ animation:rotate 4s linear infinite;
+}
+
+
+
+.menu {
+  width: 3em;height: 3em;
+  position: absolute;
+  right:10px;top:19px;z-index: 5;
+  margin:0;
+}
+
+.menu .bit-1:before,
+.menu .bit-1:after,
+.menu .bit-2,
+.menu .bit-3:before,
+.menu .bit-3:after{
+  position: absolute;
+  background: #fff;
+  -webkit-transition: all 0.3s linear 0.1s;
+  transition: all 0.3s linear 0.1s;
+}
+.menu .bit-1:before,
+.menu .bit-1:after,
+.menu .bit-3:before,
+.menu .bit-3:after{
+  content: ''; 
+}
+
+.menu.collapsed .bit-1:before,
+.menu.collapsed .bit-1:after,
+.menu.collapsed .bit-3:before,
+.menu.collapsed .bit-3:after{
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.menu .bit-1:before {
+  top: -0.3em;left: 0.5em;
+  width: 1.2em;height: 0.2em;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transform-origin: left bottom;
+  transform-origin: left bottom;
+}
+.menu.collapsed .bit-1::before {
+  top: 0.5em;left: 0.5em;
+  width: 1em;height: 0.2em;  
+}
+.menu .bit-1:after {
+  top: -0.3em;right: 0.5em;
+  width: 1.2em;height: 0.2em;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transform-origin: right bottom;
+  transform-origin: right bottom; 
+}
+.menu.collapsed .bit-1::after {
+  top: 0.5em;right: 0.5em;
+  width: 1em;height: 0.2em;
+}
+.menu .bit-2 {
+  top: 50%;left: 50%;
+  width: 0.3em;height: 0.2em;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg); 
+}
+.menu.collapsed .bit-2 {
+  top: 50%;left: 50%;
+  width: 1.6em;height: 0.2em;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.menu .bit-3:before {
+  bottom: -0.3em;left: 0.5em;
+  width: 1.2em;height: 0.2em;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transform-origin: left top;
+  transform-origin: left top; 
+}
+.menu.collapsed .bit-3::before {
+  bottom: 0.5em;left: 0.5em;
+  width: 1em;height: 0.2em;
+}
+.menu .bit-3:after {
+  bottom: -0.3em;right: 0.5em;
+  width: 1.2em;height: 0.2em;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transform-origin: right top;
+  transform-origin: right top;
+}
+.menu.collapsed .bit-3::after {
+  bottom: 0.5em;right: 0.5em;
+  width: 1em;height: 0.2em;
+}

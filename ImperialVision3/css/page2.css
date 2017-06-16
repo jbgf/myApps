@@ -1,0 +1,130 @@
+@charset "UTF-8";
+.breadcrumb{
+  font-size:12px;line-height:60px;list-style:none;
+  border-bottom: 1px solid #ebebeb;
+  background:transparent;
+}
+.breadcrumb li{}
+.breadcrumb li:before{font-family:FontAwesome;content: "\f105" !important;}
+.breadcrumb li a:hover{}
+.breadcrumb li:first-child:before{font-family:FontAwesome;content:"" !important;}
+
+
+.page-support_download{background-image:url(../images/support_download_xs.jpg);}
+
+@media (min-width: 768px) {
+  .page-support_download{background-image:url(../images/support_download_sm.jpg);}
+}
+@media (min-width: 992px) {
+  .page-support_download{background-image:url(../images/support_download_lg.jpg);}
+}
+@media (min-width: 1200px) {}
+.sd_table{
+  width:calc( 100% - 30px - 10px);
+  margin: 20px 5px;
+}
+.sd_table>tbody>tr>td{
+  padding:10px;
+  border:1px solid #c4c8c9;
+}
+.sd_table>tbody>tr>td.even{background:#e8ecf5;color:#2672ef;}
+
+@media (min-width: 768px) {
+  .sd_table{
+    width:calc( 100% - 30px - 40px);
+    margin:20px;
+  }
+  .sd_table>tbody>tr>td{
+    padding:25px;
+  }
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1200px) {
+}
+
+
+.IVImageSR{background:#0e99f9;color:#fff;}
+.IVVideoSR{background:#246cca;color:#fff;}
+.IVImageSR,
+.IVVideoSR{
+
+}
+.IVImageSR .inline-block,
+.IVVideoSR .inline-block{
+
+}
+.apple-color{color:#0e99f9;}
+.apple-bg{background:#0e99f9;color:#fff;}
+.android-color{color:#a6ca03;}
+.android-bg{background:#a6ca03;color:#fff;}
+i.apple-color,
+i.android-color{
+  font-size:200%;
+}
+.btn.apple-bg,
+.btn.android-bg{
+  margin:10px;
+  padding:8px 15px;
+  border-radius: 50px;
+}
+.to_developer_platform{
+
+  padding:8px 15px;
+  border:1px solid #c4c8c9;
+  border-radius: 50px; 
+}
+.support_download_contant{font-size:16px;line-height:24px;margin:35px;}
+
+
+.help_documentation:last-child{margin-bottom: 100px;}
+.help_documentation .media{
+  margin:10px;
+  padding:10px;
+  border:1px solid #ebecec;
+}
+.help_documentation .media:hover{
+  box-shadow: 0 0 10px rgba(38,114,239,0.2)
+}
+.help_documentation .media-heading{
+  font-weight:bold;font-size:125%;
+  color:#2672ef;
+
+}
+@media (min-width: 768px) {
+  .help_documentation .media{
+    padding:30px;
+  }
+  .help_documentation .media-left{
+    padding-right:30px;
+  }
+}
+
+
+@media (min-width: 768px) {
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1200px) {
+}
+
+
+.doc_list_title{
+  font-size:20px;line-height:50px;
+  margin-top:20px;
+  padding-left:16px;
+  background:#9f9c9c;color:#fff;
+}
+
+.doc_list{
+  padding-left:40px;
+  background:#f8f8f8;color:#9f9c9c;
+}
+.doc_list li{
+  list-style: none;
+  margin:0;padding:0;
+  font-size:16px;line-height:36px;
+}
+.doc_list li.on{
+  color:#2672ef;
+}

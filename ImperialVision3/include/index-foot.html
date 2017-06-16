@@ -1,0 +1,161 @@
+
+
+<footer class="public-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-lg-6">
+        <h6 class="footer-title">联系我们</h6>
+        <p class="footer-text">
+          <i class="fa fa-map-marker" aria-hidden="true"></i>
+          福建省福州市鼓楼区西洪路528号金牛山互联网产业园云座2号楼5层B区
+        </p>
+        <p class="footer-text">
+          <i class="fa fa-volume-control-phone" aria-hidden="true"></i>
+          <a href="#">+86-591-87862050</a>（周一至周五 9:00 - 18:00）
+        </p>
+      </div><!--col-xs-12 col-sm-6 col-lg-6 联系我们-->
+      <div class="col-xs-8 col-sm-4 col-lg-4">
+        <h6 class="footer-title">合作</h6>
+        <p class="footer-text footer_email">
+          <i class="fa fa-angle-right" aria-hidden="true"></i>
+          商务：<a href="#">bd@imperial-vision.com</a>
+        </p>
+        <p class="footer-text footer_email">
+          <i class="fa fa-angle-right" aria-hidden="true"></i>
+          媒体：<a href="#">pr@imperial-vision.com</a>
+        </p>
+        <p class="footer-text footer_email">
+          <i class="fa fa-angle-right" aria-hidden="true"></i>
+          招聘：<a href="#">hr@imperial-vision.com</a>
+        </p>
+      </div><!--col-xs-8 col-sm-4 col-lg-4 合作-->
+      <div class="col-xs-4 col-sm-2 col-lg-2">
+        <h6 class="footer-title">关注帝视</h6>
+        <div class="footer-qrcode">
+          <div class="hidden-xs hidden-sm visible-md-block visible-lg-block weixin_c align-cm">
+            <i class="fa fa-weixin"></i>
+          </div>
+          <div class="img-box">
+            <img class="img-responsive" src="images/qrcode.jpg" alt="关注帝视">
+            <i class="hidden-xs hidden-sm fa fa-caret-down"></i>
+          </div>
+        </div>
+        <div class="footer-qrcode">
+          <div class="hidden-xs hidden-sm visible-md-block visible-lg-block weibo_c align-cm">
+            <i class="fa fa-weibo"></i>
+          </div>
+          <div class="img-box">
+            <img class="img-responsive" src="images/qrcode.jpg" alt="关注帝视">
+            <i class="hidden-xs hidden-sm fa fa-caret-down"></i>
+          </div>
+        </div>
+      </div><!--col-xs-4 col-sm-2 col-lg-2 关注帝视-->
+      <div class="col-xs-12 col-sm-12 col-lg-12 align-cm copyright">
+        <div class="inline-block">版权所有</div>
+        <div class="inline-block">福建帝视信息科技有限公司</div>
+        <div class="inline-block">&copy;2016&ensp;工业设计&ensp;ICP</div>
+        <div class="inline-block">经营许可：闽B2-20000000 闽ICP备10000000号-6</div>
+      </div><!--col-xs-12 col-sm-12 col-lg-12 align-cm copyright-->
+    </div><!--row-->
+  </div><!--container-->
+</footer><!--public-footer-->
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript" src="js/swiper.animate.min.js"></script>
+
+<script type="text/javascript" src="js/index-swiper.js"></script>
+<script type="text/javascript" src="js/star.js"></script>
+<!--
+<script type="text/javascript" src="js/jquery.doubleviewer.js"></script>
+-->
+<script type="text/javascript" src="js/jquery.event.move.js"></script>
+<script type="text/javascript" src="js/jquery.twentytwenty.js"></script>
+<script type="text/javascript" src="js/jquery.parallax.js"></script>
+<script type="text/javascript">
+
+  $('.twentytwenty-container').css('height',document.body.clientHeight)
+  $('.twentytwenty-container').twentytwenty();
+  $('.twentytwenty-container1').css('height',650)
+  $('.twentytwenty-container1').twentytwenty();
+  $('#scene1').parallax();
+  $('#scene2').parallax();
+  $('#scene3').parallax();
+
+window.onload = function(){
+      $("#myScrollspy").length> 0 && (
+          $('body').scrollspy({ target: '#myScrollspy' }),
+          $('.dynamics-article-pagination').affix({
+            offset: {
+              top: function(){
+
+                return (this.top = $('.dynamics-article-pagination').offset().top - 100)
+              }/*,
+              bottom: function () {
+                console.log($('.public-footer').outerHeight(true))
+                return (this.bottom = $('.public-footer').outerHeight(true))
+              }*/
+            }
+          })
+      )
+
+      if($("#team1").length>0 ){
+            var mySwiper = new Swiper('.swiper-container1', {
+                autoplay: 5000,
+                slidesPerView : 4,
+                loop:true,
+                prevButton:'.swiper-button-prev',
+                nextButton:'.swiper-button-next',
+            })  
+      }
+      if($("#team2").length>0 ){
+
+            var mySwiper = new Swiper('.swiper-container2', {
+                autoplay: 5000,
+                slidesPerView : 4,
+                loop:true,
+                prevButton:'.swiper-button-prev',
+                nextButton:'.swiper-button-next',
+                observer:true,//修改swiper自己或子元素时，自动初始化swiper
+                observeParents:true//修改swiper的父元素时，自动初始化swiper
+            })  
+      }
+      
+      if($("#fileUpload").length > 0){
+            var percentage = 0,
+                seconds = 2,
+                ms = seconds * 1000 / 100;
+                $("#fileUpload").change(function(){
+                    upProgressRest();
+                    $(".progressWrapper").show(0,upProgress(seconds))
+                });
+                function upProgressRest(){
+                    $(".progressWrapper").hide();
+                    $("#progressBar").css('width',0);
+                    percentage = 0;
+                }
+                function upProgress(seconds){
+                    percentage += 1;
+                    if(percentage >= 100){
+                      return
+                    }else{
+                      $("#progressBar").css('width',percentage+'%');
+                      
+                    }
+                    setTimeout(upProgress,ms);
+                }
+      }
+      
+}
+document.onscroll = function(){
+  if(document.body.scrollTop>=100){
+    $(".navIVstyle").addClass('on');
+  }else{
+    $(".navIVstyle").removeClass('on');
+  }
+}
+  
+</script>
+</body>
+</html>
