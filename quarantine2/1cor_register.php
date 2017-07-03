@@ -28,7 +28,7 @@
                              <span class="red">*</span><span>用户名：</span>
                          </div>
                          <div class="un-block-2">
-                            <input class="baseInput" name="case" type="text" maxlength="12" required></input>
+                            <input id="userName" class="baseInput" name="case" type="text" maxlength="12" required></input>
                             <p class="tips_p">请填写您登陆的用户名，字母和数字组合，如john,long123</p>
                          </div>
                          
@@ -236,8 +236,7 @@
                             })
                             uploadBtn($(".upload_btn"));
                          })
-                         
-                                            
+                                         
                          
                          $(".solution_form").validate({
                                     rules: {
@@ -249,6 +248,7 @@
                                                    equalTo: "#pass"}
                                       
                                     },
+
                                     ignore: "",    /*忽略，默认忽略:hidden,""表示清空*/
                                     focusCleanup:true,
                                     errorPlacement:function(label,element){

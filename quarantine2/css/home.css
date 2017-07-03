@@ -96,7 +96,8 @@
   line-height: 100%; */
   overflow: hidden;
   white-space: nowrap;
-  text-overflow: ellipsis; }
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis; }
 
 /* clearfix*/
 /* 闭合子元素的浮动*/
@@ -276,7 +277,8 @@ ul.outermulti-ul {
   line-height: 100%; */
   overflow: hidden;
   white-space: nowrap;
-  text-overflow: ellipsis; }
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis; }
 
 /* clearfix*/
 /* 闭合子元素的浮动*/
@@ -456,7 +458,8 @@ ul.outermulti-ul {
   line-height: 100%; */
   overflow: hidden;
   white-space: nowrap;
-  text-overflow: ellipsis; }
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis; }
 
 /* clearfix*/
 /* 闭合子元素的浮动*/
@@ -636,7 +639,8 @@ ul.outermulti-ul {
   line-height: 100%; */
   overflow: hidden;
   white-space: nowrap;
-  text-overflow: ellipsis; }
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis; }
 
 /* clearfix*/
 /* 闭合子元素的浮动*/
@@ -956,7 +960,8 @@ ul.outermulti-ul {
       width: 238px;
       padding-left: 3%;
       -webkit-border-image: initial;
-      border-image: initial;
+      -o-border-image: initial;
+         border-image: initial;
       border-right: none; }
     .input-set02 input.button {
       width: 35px;
@@ -1019,6 +1024,7 @@ ul.outermulti-ul {
 .navBar_wrapper {
   background: -webkit-gradient(linear, left top, left bottom, from(#0073c2), color-stop(#005daf), to(#0073c2));
   background: -webkit-linear-gradient(#0073c2, #005daf, #0073c2);
+  background: -o-linear-gradient(#0073c2, #005daf, #0073c2);
   background: linear-gradient(#0073c2, #005daf, #0073c2);
   background: #005daf\0; }
 
@@ -1036,6 +1042,7 @@ ul.outermulti-ul {
 .navbar-line02 .navbar-block.on,
 .navbar-line02 .navbar-block:hover {
   background: -webkit-radial-gradient(#ff9500, #ffbf00);
+  background: -o-radial-gradient(#ff9500, #ffbf00);
   background: radial-gradient(#ff9500, #ffbf00);
   background: #ffbf00\0;
   color: #fff;
@@ -1091,7 +1098,8 @@ ul.outermulti-ul {
         margin-right: 12px;
         width: 10px;
         height: 10px;
-        border-radius: 50%;
+        -webkit-border-radius: 50%;
+                border-radius: 50%;
         line-height: 14px;
         background: #605751;
         cursor: pointer; }
@@ -1776,7 +1784,8 @@ a {
         padding: 13.5px 0;
         line-height: 1 !important;
         font-size: 16px !important;
-        border-radius: 3px;
+        -webkit-border-radius: 3px;
+                border-radius: 3px;
         float: none; }
       .typeform01 .form-row.submit-row .info {
         line-height: 22px;
@@ -1912,13 +1921,16 @@ a {
     position: relative;
     margin-left: 5px;
     -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
     transition: all 0.3s; }
   .logoRow03 .avatar {
     width: 50px;
     height: 50px;
-    border-radius: 50px; }
+    -webkit-border-radius: 50px;
+            border-radius: 50px; }
     .logoRow03 .avatar img.circle {
-      border-radius: 50px; }
+      -webkit-border-radius: 50px;
+              border-radius: 50px; }
 
 .logoRow02 {
   padding: 20px 0;
@@ -1959,13 +1971,16 @@ a {
     position: relative;
     top: 12.5px;
     -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
     transition: all 0.3s; }
   .logoRow02 .avatar {
     width: 50px;
     height: 50px;
-    border-radius: 50px; }
+    -webkit-border-radius: 50px;
+            border-radius: 50px; }
     .logoRow02 .avatar img.circle {
-      border-radius: 50px; }
+      -webkit-border-radius: 50px;
+              border-radius: 50px; }
 
 .mainDropDown01:hover .caret {
   -webkit-transform: rotate(180deg);
@@ -2015,6 +2030,7 @@ a {
         background: #005bac; }
     .sideBar02 .sideBar_li.childList > .sideBar_a:after {
       -webkit-transition: all 0.2s;
+      -o-transition: all 0.2s;
       transition: all 0.2s;
       border-right: 6px solid transparent;
       border-bottom: 6px dashed #999;
@@ -2054,12 +2070,14 @@ a {
     .sideBar02 .sideBar_a .iconBg {
       width: 30px;
       height: 30px;
-      border-radius: 30px;
+      -webkit-border-radius: 30px;
+              border-radius: 30px;
       left: 41.66667px;
       top: 0;
       background: #999; }
       .sideBar02 .sideBar_a .iconBg img.circle {
-        border-radius: 30px; }
+        -webkit-border-radius: 30px;
+                border-radius: 30px; }
     .sideBar02 .sideBar_a .icontext {
       margin-left: 91.66667px; }
     .sideBar02 .sideBar_a.bottom {
@@ -2080,9 +2098,11 @@ a {
     position: relative;
     -webkit-box-shadow: #ddd 0px 0px 10px;
     box-shadow: #ddd 0px 0px 10px;
-    border-radius: 6px; }
+    -webkit-border-radius: 6px;
+            border-radius: 6px; }
     .login_banner .loginZone .title {
-      border-radius: 6px 6px 0 0;
+      -webkit-border-radius: 6px 6px 0 0;
+              border-radius: 6px 6px 0 0;
       height: 50px;
       line-height: 50px;
       font-size: 15.6px;
@@ -2106,7 +2126,8 @@ a {
       width: 265px;
       height: 40px;
       line-height: 40px;
-      border-radius: 25px;
+      -webkit-border-radius: 25px;
+              border-radius: 25px;
       margin-top: 20px; }
     .login_banner .loginZone .logOut {
       padding: 10px; }
@@ -2116,7 +2137,8 @@ a {
       height: 270px; }
   .login_banner .login-form {
     width: 88%;
-    border-radius: 3px;
+    -webkit-border-radius: 3px;
+            border-radius: 3px;
     height: 100%;
     font-size: 15.6px;
     padding: 16px 0; }
@@ -2146,7 +2168,8 @@ a {
       width: 100%;
       height: 44px;
       line-height: 44px;
-      border-radius: 5px;
+      -webkit-border-radius: 5px;
+              border-radius: 5px;
       cursor: pointer;
       background: #ff7602;
       font-size: 14.4px; }
@@ -2184,7 +2207,8 @@ a {
       border-color: #1a7bb9;
       color: white;
       height: 44px;
-      border-radius: 25px;
+      -webkit-border-radius: 25px;
+              border-radius: 25px;
       font-size: 15.6px;
       font-weight: 700; }
     .login_banner .login-form .quick_sign_up {
@@ -2280,7 +2304,7 @@ a {
       min-height: 1px;
       width: auto;
       height: 100%;
-      line-height: 35px; }
+      line-height: 35px; position: relative;}
       .solution_form .form-row .un-block-3 .baseInput {
         border: 1px solid #ddd;
         border: 1px solid #ddd;
@@ -2468,7 +2492,8 @@ a {
     width: 100%;
     height: 35px;
     line-height: 35px;
-    border-radius: 5px;
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
     cursor: pointer;
     background: #6eb92b;
     font-size: 14.4px; }
@@ -2476,14 +2501,19 @@ a {
     width: 80px;
     height: 35px;
     line-height: 35px;
-    border-radius: 10px;
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
     cursor: pointer;
     background: #6eb92b;
     color: #fff;
     font-size: 15.6px;
     margin-left: 10px;
     font-weight: normal;
-    cursor: pointer; }
+    cursor: pointer; 
+    position: absolute;
+    top: 0;
+    left:0;
+  }
   .solution_form .un-block-1 {
     color: #333; }
     .solution_form .un-block-1 .red {
@@ -2504,7 +2534,8 @@ a {
   display: none; }
   .labelWrapper .labelFor + .checkBox {
     border: 1px solid #ddd;
-    border-radius: 2px;
+    -webkit-border-radius: 2px;
+            border-radius: 2px;
     width: 13px;
     height: 13px;
     margin-right: 5px;
@@ -2574,7 +2605,8 @@ a {
         height: 28px;
         line-height: 28px;
         border: 1px solid #dddddd;
-        border-radius: 3px; }
+        -webkit-border-radius: 3px;
+                border-radius: 3px; }
       .pagination03 ul li.left a, .pagination03 ul li.right a, .pagination03 ul li.last a {
         width: 65px; }
       .pagination03 ul li.on a {
@@ -2742,7 +2774,8 @@ a {
       width: 90px;
       height: 35px;
       line-height: 35px;
-      border-radius: 5px;
+      -webkit-border-radius: 5px;
+              border-radius: 5px;
       cursor: pointer;
       background: #54a4d5;
       color: #fff;
@@ -2850,7 +2883,8 @@ a {
     .news_h03 .process.on:before {
       color: inherit; }
     .news_h03 .process.on .circleNum {
-      border-radius: 50%;
+      -webkit-border-radius: 50%;
+              border-radius: 50%;
       border: 2px solid #006acf;
       width: 27px;
       height: 27px;
@@ -2861,7 +2895,8 @@ a {
     font-size: 15.6px; }
   .news_h03 .circleNum {
     margin-right: 10px;
-    border-radius: 50%;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
     border: 2px solid #dfdfdf;
     width: 27px;
     height: 27px;
@@ -2962,7 +2997,8 @@ a {
   width: 165px;
   height: 45px;
   line-height: 45px;
-  border-radius: 0px;
+  -webkit-border-radius: 0px;
+          border-radius: 0px;
   cursor: pointer;
   background: #54a4d5;
   color: #fff;
@@ -3084,7 +3120,8 @@ a {
   height: 370px; }
   .multiChooseZone li {
     border: 1px solid #ddd;
-    border-radius: 3px;
+    -webkit-border-radius: 3px;
+            border-radius: 3px;
     cursor: pointer;
     padding: 1px 17px;
     margin-right: 20px;
@@ -3109,7 +3146,8 @@ a {
   min-height: 60px; }
   li.choosed_li {
     border: 1px solid #ddd;
-    border-radius: 3px;
+    -webkit-border-radius: 3px;
+            border-radius: 3px;
     cursor: pointer;
     padding: 1px 17px;
     margin-right: 20px;
@@ -3195,6 +3233,7 @@ ul.multi-ul {
   .modalBox.fade .modalBox-dialog {
     transition: -webkit-transform 0.3s ease-out;
     -webkit-transition: -webkit-transform 0.3s ease-out;
+    -o-transition: transform 0.3s ease-out;
     transition: transform 0.3s ease-out;
     transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
     -webkit-transform: translate(0px, -25%);
@@ -3208,6 +3247,7 @@ ul.multi-ul {
       padding: 8px;
       background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#d3ecf9));
       background: -webkit-linear-gradient(#fff, #d3ecf9);
+      background: -o-linear-gradient(#fff, #d3ecf9);
       background: linear-gradient(#fff, #d3ecf9);
       background: #d3ecf9\0;
       border: 1px solid #d3ecf9; }
@@ -3238,7 +3278,8 @@ ul.multi-ul {
   .modalBox .modalBox-content {
     position: relative;
     background-color: white;
-    background-clip: padding-box;
+    -webkit-background-clip: padding-box;
+            background-clip: padding-box;
     border: 1px solid rgba(0, 0, 0, 0.2);
     outline: 0px;
     color: #333;
@@ -3262,6 +3303,7 @@ ul.multi-ul {
 .modalBox.fade .modalBox-dialog {
   transition: -webkit-transform .3s ease-out;
   -webkit-transition: -webkit-transform .3s ease-out;
+  -o-transition: transform .3s ease-out;
   transition: transform .3s ease-out;
   transition: transform .3s ease-out, -webkit-transform .3s ease-out;
   -webkit-transform: translate(0, -25%);
@@ -3355,6 +3397,7 @@ ul.multi-ul {
   .modalBox02.fade .modalBox-dialog {
     transition: -webkit-transform 0.3s ease-out;
     -webkit-transition: -webkit-transform 0.3s ease-out;
+    -o-transition: transform 0.3s ease-out;
     transition: transform 0.3s ease-out;
     transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
     -webkit-transform: translate(0px, -25%);
@@ -3372,6 +3415,7 @@ ul.multi-ul {
       padding: 8px;
       background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#d3ecf9));
       background: -webkit-linear-gradient(#fff, #d3ecf9);
+      background: -o-linear-gradient(#fff, #d3ecf9);
       background: linear-gradient(#fff, #d3ecf9);
       background: #d3ecf9\0;
       border: 1px solid #d3ecf9; }
@@ -3400,7 +3444,8 @@ ul.multi-ul {
   .modalBox02 .modalBox-content {
     position: relative;
     background-color: white;
-    background-clip: padding-box;
+    -webkit-background-clip: padding-box;
+            background-clip: padding-box;
     border: 1px solid rgba(0, 0, 0, 0.2);
     outline: 0px;
     color: #333;
@@ -3571,7 +3616,8 @@ ul.multi-ul {
     color: #fff;
     height: 60px;
     font-size: 18.72px;
-    border-radius: 5px; }
+    -webkit-border-radius: 5px;
+            border-radius: 5px; }
 
 .payWay table {
   font-size: 18.72px; }

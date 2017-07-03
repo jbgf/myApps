@@ -210,9 +210,9 @@ function uploadBtn(btns){
             name = input.attr("data-name") || false;
             isrequired = input.attr("data-required") || false;
         $(e).wrap("<label></label>");
-        var fileBtn = $("<input type='file' class='hide' name="+name+" required="+isrequired+">"),objUrl;
+        var fileBtn = $("<input type='file' style='width:1px;height:1px;position:relative;left:5px;top:5px;' class='' name="+name+" required="+isrequired+">"),objUrl;
             if(name){
-                fileBtn.insertAfter($(e)).change(function(){
+                fileBtn.insertBefore($(e)).change(function(){
                   objUrl = getObjectURL(this.files[0]);
                   if(input.is("input")){
                       input.val(this.files[0].name)
@@ -295,7 +295,6 @@ function triggerModalBox(trigger){
               enableAddToOuter:1,
               success:function(arr,menu){
                       var targetInput = menu.targetInput;
-                          
                           menu.updateTargetInput(arr);
                           menu.addToOuterResult(arr);
                           
@@ -334,7 +333,7 @@ function tableMake(json){
               $(tableEle).css("opacity",0).appendTo($(".tableSection"))
                          .animate({"opacity":1},function(){
                               var box = $(this).find(".chooseZone"); 
-                                  $(this).inputHistory(); 
+                                  $(this).find("table").inputHistory(); 
                                   box.createMenu(json);
                           })
                          .find(".titleName").text(title).end()

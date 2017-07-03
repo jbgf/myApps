@@ -94,23 +94,32 @@
                       if(!sameLevel){
                         ul.nextAll().remove()
                       } 
+                      
+                      /*如果不是最后一级*/
                       if(that.hasSub()){
+                        /*如果不是倒二级*/
                          if(!that.isFinalLevel()){
                             that.createlevel();  
                          }else{
+                        /*如果是倒二级，则创建多选待选区*/  
                             that.createMultiChoose(); 
                          }
                       }
+                      /*如果是最后一级*/
                       if($(this).hasClass(that.mcClass)){
                           var index = $(this).parents("ul").find('.'+that.mcClass+'').index($(this));
                           var item = that.curObj;
                           var flag = $(this).hasClass("choosed");
-                              if(flag){
-                                var dindex = $(this).attr("data-cindex");
-                                    that.cancel(item,dindex);
+                              
+                              if(item['choosed']){
+                                  if(flag){
+                                      var dindex = $(this).attr("data-cindex");
+                                        that.cancel(item,dindex);
+                                  }  
+                              }else{
+                              /*如果还不是选中的进入临时程序*/
+                                  that.tempResult(flag,item,this);        
                               }
-                          that.tempResult(flag,item,this);
-
                       } 
                       $(this).addClass(that.activeClass)
                              .siblings('.'+that.mainClass+'').removeClass(that.activeClass);   
@@ -126,18 +135,22 @@
                         .removeClass("choosed")
                         .removeAttr("data-cindex");
                   $(".outermulti-ul li[data-cindex="+dindex+"]",that.outer).remove();
-                       
+                  
                   that.updateAfterCancel(dindex);
         }
 
         multiMenu.prototype.tempResult = function (flag,item,ele) {
             var that = this;
                 flag?getRidOf():add();
+
+        /*抽象函数 更新tempResultStorage*/
                     function getRidOf(){
                         var ta_index = $(ele).attr("data-taindex");
                         var $ele1 = $(ele).removeClass("choosed").removeAttr("data-taindex");
                         var $ele2 = that.$choosedZoneUl.find("li[data-taindex="+ta_index+"]").remove();
                             that.tempResultStorage.splice(ta_index,1);
+                            item['tempChoosed'] = false;
+                            item['tindex'] = false;
                     }
                     function add(){
                         var ta_index = that.tempResultStorage.length,
@@ -150,10 +163,49 @@
                                  $ele2.remove();
                                  /*去除临时选择集合中的某项*/    
                                  that.tempResultStorage.splice(ta_index,1);
-                            })
-
-                            that.tempResultStorage.push({item:item,element:{ele1:$ele1,ele2:$ele2},historyTemp:that.historyTemp_stack.slice(0)});
+                            });
+                            item['tempChoosed'] = true;
+                            item['tindex'] = ta_index;
+                            /*临时选中的元素各项信息存储*/ 
+                            that.tempResultStorage.push({
+                                item:item,
+                                element:{ele1:$ele1,ele2:$ele2},
+                                historyTemp:that.historyTemp_stack.slice(0)
+                            });
                     }
+        }
+
+        multiMenu.prototype.createMultiChoose = function () {
+          var that = this;
+      
+          var string = "<ul class='multi-choose-ul'>";/*多选待选区*/
+       
+              var arr = that.arrToChoose;  /*当前待选的数组*/  
+             
+              $.each(arr,function(i,e){
+
+                var cla = that.mcClass;
+                var ca_index,ta_index;
+                
+                if(e.choosed){             /*如果item有记录是选中的*/
+                    ca_index = e["cindex"];
+                    cla+=" choosed";
+                }else if(e.tempChoosed){   /*如果item有记录是临时选中的*/
+                    ta_index = e['tindex'];
+                    cla+=" choosed";
+                }else{
+                    ca_index = false;
+                    ta_index = false;
+                }
+                  string +='<li class="'+cla+'" data-cindex='+ca_index+' data-taindex='+ta_index+' >'+e.name+'</li>'
+              })
+              string +="</ul>";
+          
+          that.$multiChooseZone = 
+                  $("<div class='multiChooseZone'></div>")
+                      .append(string)
+                      .appendTo(that.$element)
+
         }
 
         multiMenu.prototype.add = function (item,ele,historyTemp) {
@@ -162,9 +214,15 @@
               var $ele1 = ele.ele1;
               var $ele2 = ele.ele2;
                   $ele1.attr({"data-cindex":ca_index}).removeAttr("data-taindex");
-                  $ele2.attr({"data-cindex":ca_index}).removeAttr("data-taindex");
+                  $ele2.attr({"data-cindex":ca_index}).removeAttr("data-taindex").on("click",function(){
+                      that.cancel(item,ca_index);
+                  });
                   item["choosed"] = true;
                   item["cindex"] = ca_index;
+
+                  item["tempChoosed"] = false;
+                  item["tindex"] = false;
+                  
                   that.history_allTemp_stack.push(historyTemp);
                   that.choosed_arr.push(item);
                   
@@ -200,33 +258,7 @@
         }
         
 
-        multiMenu.prototype.createMultiChoose = function () {
-          var that = this;
-      /*多选待选区*/
-          var string = "<ul class='multi-choose-ul'>";
-          
-              var arr = that.arrToChoose;
-              
-              $.each(arr,function(i,e){
-                var cla = that.mcClass;
-                var ca_index;
-                if(e.choosed){
-                    ca_index = e["cindex"];
-                    cla+=" choosed";
-                  
-                }else{
-                    ca_index = false;
-                }
-                  string +='<li class="'+cla+'" data-cindex='+ca_index+'>'+e.name+'</li>'
-              })
-              string +="</ul>";
-          
-          that.$multiChooseZone = 
-                  $("<div class='multiChooseZone'></div>")
-                      .append(string)
-                      .appendTo(that.$element)
-
-        }
+        
         
         multiMenu.prototype.isFinalLevel = function (index) {
             var that = this;
@@ -288,15 +320,13 @@
           var arr = that.arrToChoose;
 
               $.each(arr,function(i,e){
+
                   string +='<li class='+that.mainClass+'>'+e.name+'</li>'
               })
                   string +="</ul>";
                   that.$element.append(string);
         }
 
-        
-
-    
 
         multiMenu.prototype.sure = function (){
             var that = this;
@@ -390,7 +420,7 @@
             that.chooseFromHistory();
         }
 
-        multiMenu.prototype.updateMultiChooseZoneWhenAdd = function (ul_index){
+        multiMenu.prototype.updateMultiChooseZoneWhenAddFromHistory = function (ul_index){
             var that = this;
 
                 if(that.stack.length <2)return;
@@ -400,7 +430,7 @@
                 
             var ca_index = that.choosed_arr.length-1;
                 
-                if(item['choosed']){
+                if(item["choosed"]){
                    
                     that.$multiChooseZone.find("li").eq(ul_index).addClass('choosed').attr('data-cindex',ca_index);
                 }
@@ -411,27 +441,36 @@
                 that.historyUl = that.historyUl.on("click","li",function(){
                     var ul_index = $(this).attr("data-order"),item,
                         /*item = that.historyStack[ul_index],*/
-                        indexarr = that.historyIndexChain[ul_index].split(","),
-                        index = 0;
+                        indexarr = that.historyIndexChain[ul_index].split(",");
                     var arr = that.stack[0];
-                        (function loop(){
-                    /*通过index chain获取当前的item*/                            
-                            if(index < indexarr.length -1){
-                                arr = arr[indexarr[index]]['sub'];
-                                index += 1;
-                                loop();
-                            }else{
-                                item = arr[indexarr[index]];
-                                if(that.choosed_arr.indexOf(item) == -1){
-                                    that.addToMenuFromHistory(item,ul_index);
-                                    that.updateMultiChooseZoneWhenAdd(indexarr[index]);
-                                    that.addToOuterResult(that.choosed_arr);  
-                                    that.updateTargetInput(that.choosed_arr);  
-                                };
-                            }
-                        })(); 
+                        that.locateByIndexChain(indexarr,arr,function(index){
+                            item = arr[indexarr[index]];
+                            if(that.choosed_arr.indexOf(item) == -1){
+                                that.addToMenuFromHistory(item,ul_index);
+                                that.updateMultiChooseZoneWhenAddFromHistory(indexarr[index]);
+                                that.addToOuterResult(that.choosed_arr);  
+                                that.updateTargetInput(that.choosed_arr);  
+                            };
+                        })
+                         
                 })
         }        
+
+        multiMenu.prototype.locateByIndexChain = function (indexarr,arr,callBack){
+            var index = 0;
+            (function loop(){
+              /*通过index chain获取当前的item*/                            
+                      if(index < indexarr.length -1){
+                          arr = arr[indexarr[index]]['sub'];
+                          index += 1;
+                          loop();
+                      }else{
+                          callBack(index);
+                          
+                      }
+           })(); 
+        }
+
 
         multiMenu.prototype.addToMenuFromHistory = function (item,ul_index){
             var that = this;
@@ -489,6 +528,7 @@
                       li.appendTo(ul).on("click",function(){
                           var index = $(this).attr("data-cindex"),
                               item = arr[index];
+                          
                           that.cancel(item,index);
                         
                       }) 
