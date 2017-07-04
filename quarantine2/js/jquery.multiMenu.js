@@ -37,7 +37,7 @@
           /*唯一性标示*/
           this.uniqueEnable = this.options.uniqueEnable;
           this.unique = this.options.uniqueTest;  
-          this.unique_Arr = [];
+          this.unique_Arr = {a:[],b:[]};
           
           this.ini(this.allData);
           
@@ -194,11 +194,11 @@
                     /*添加*/
                        var uniqueChar = item.id + "&" + item.mod;
                        that.choosed_arr.push(item);
-                       that.unique_Arr.push(uniqueChar)
+                       that.unique_Arr['a'].push(uniqueChar)
                  }else if(mode == 1){
                     /*删除*/
                        that.choosed_arr.splice(dindex,1);
-                       that.unique_Arr.splice(dindex,1);
+                       that.unique_Arr['a'].splice(dindex,1);
                  }
         }
 
@@ -216,10 +216,13 @@
 
                 var cla = that.mcClass;
                 var ca_index,ta_index;
-          /*若开启唯一性标识符且不是自身，可以用没有被选中!e.choosed来判断*/      
+          /*若开启唯一性标识符且不是自身，可以用:没有被选中!e.choosed来判断*/      
                 if(!e.choosed && that.uniqueEnable){
-                   that.uniqueValidate(e);
+                   that.uniqueValidate(e,0);
                 }
+                /*if(!e.tempChoosed && that.uniqueEnable){
+                   that.uniqueValidate(e,1);
+                }*/
 
                 if(e.choosed){             /*如果item有记录是选中的*/
                     ca_index = e["cindex"];
@@ -245,27 +248,34 @@
         
         multiMenu.prototype.uniqueValidate = function (item,mode) {
           var that = this;
-              if(that.unique_Arr.length>0){
+              if()
                    var uniqueString = item.id + "&" + item.mod;
-                   var indexOfunique = that.unique_Arr.indexOf(uniqueString);
+                   var indexOfunique,
+                       choosedItem;
 
-                       if(indexOfunique !=-1){/*若存在该标识符组合，则标识已经选中了*/
-                          if(mode == 0){
-                            var choosedItem = that.choosed_arr[indexOfunique]; 
-                          item["choosed"] = true;
-                          item['cindex'] = choosedItem["cindex"];
+                       
+                      if(mode == 0){
+                          indexOfunique = that.unique_Arr['b'].indexOf(uniqueString);
+                          if(indexOfunique !=-1 && that.unique_Arr['a'].length>0){/*若存在该标识符组合，则标识已经选中了*/
+                              choosedItem = that.choosed_arr[indexOfunique]; 
+                              
+                              item["choosed"] = true;
+                              item['cindex'] = choosedItem["cindex"];
+
+                              /*建立映射关系*/
+                              item['map'] = choosedItem;
+                              choosedItem['map'] = item;
                           }
-
                           
-                          /*建立映射关系*/
-                          item['map'] = choosedItem;
-                          choosedItem['map'] = item;
+                      }else if(mode == 1){
 
-                          /*choosed_arr unique_Arr 为顺序一一对应关系*/
-                       }else{/*不存在该标识符组合*/
+                      }
+                      
+                      
 
-                       }
-              }
+                      /*choosed_arr unique_Arr 为顺序一一对应关系*/
+                       
+              
         }
 
         multiMenu.prototype.tempResult = function (flag,item,ele) {
