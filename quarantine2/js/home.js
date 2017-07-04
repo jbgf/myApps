@@ -288,11 +288,15 @@ function triggerModalBox(trigger){
     'use strict';
     function createMenu(element,json){
         this.$element = $(element)
+
+    /*调用multimenu插件*/    
         this.$element.multiMenu({
               allData:json,
               outer:".tableWrapper01",
               targetInput:".choosedItem",
               enableAddToOuter:1,
+              uniqueEnable:true,
+              uniqueTest:["id","mod"],  /*唯一性验证方式为 id&&mod */
               success:function(arr,menu){
                       var targetInput = menu.targetInput;
                           menu.updateTargetInput(arr);
