@@ -128,7 +128,7 @@
                               }else if(item['tempChoosed']){
                                   that.tempResult(true,item,this);        
                               }else{
-                              /*如果还不是选中的进入临时程序*/
+                              
                                   that.tempResult(false,item,this);        
                               }
                       } 
@@ -166,20 +166,25 @@
                             $(ele).addClass("choosed").attr({"data-taindex":ta_index});
                             
                             cli.appendTo(that.$choosedZoneUl).on("click",function(){
-                                   var ta_index = $(this).attr("data-taindex");
-                                   
-                                   /*更新tempResultStorage $ele1,
-                                    由于采用的是每次删除再重新建立列表，
-                                    删除后会导致变量存储的$ele1失效*/
-                                   $ele1 = that.$multiChooseZone.find("li[data-taindex="+ta_index+"]"); 
-                                   $ele1.removeClass('choosed').removeAttr("data-taindex");
-                                   $ele2.remove();
-                                   
-                                   /*设置可识别状态为：临时取消*/
-                                   that.set_recognitionState(1,item);
-                                   /*去除临时选择集合中的某项*/ 
-                                   that.updateCoreData(3,false,ta_index,false);   
-                                   
+                                /*多选结果区点击事件：
+                                    已选中，
+                                    临时选中*/   
+                                       if(item['choosed']){
+                                           var dindex = $(this).attr("data-cindex");
+                                           that.cancel(item,dindex);
+                                       }else if(item['tempChoosed']){
+                                          /*更新tempResultStorage $ele1,
+                                            由于采用的是每次删除再重新建立列表，
+                                            删除后会导致变量存储的$ele1失效*/
+                                           $ele1 = that.$multiChooseZone.find("li[data-taindex="+ta_index+"]"); 
+                                           $ele1.removeClass('choosed').removeAttr("data-taindex");
+                                           $ele2.remove();
+                                           
+                                           /*设置可识别状态为：临时取消*/
+                                           that.set_recognitionState(1,item);
+                                           /*去除临时选择集合中的某项*/ 
+                                           that.updateCoreData(3,false,ta_index,false); 
+                                       }
                             });
                             
                             $ele1 = that.$multiChooseZone.find("li[data-taindex="+ta_index+"]");                                   
@@ -199,8 +204,8 @@
 
                             /*添加临时数组*/
                             that.updateCoreData(2,false,false,tempOptions);
-                            
-                    }
+                          
+                    }  
         }
 
         multiMenu.prototype.cancel = function (item,dindex){
@@ -246,31 +251,7 @@
                   });
         }
 
-        /* 设置数据data可识别状态*/
-        multiMenu.prototype.set_recognitionState = function (mode,item,index){
-           var that = this;
-               if(mode == 0){
-                  /*临时添加*/
-                  item['tempChoosed'] = true;
-                  item['tindex'] = index;  
-               }else if(mode == 1){
-                  /*临时取消*/
-                  item['tempChoosed'] = false;
-                  item['tindex'] = false;
-                  item['map'] && item['map']["tempChoosed"] && (item['map']["tempChoosed"] = false); 
-               }else if(mode == 2){
-                  /*添加*/
-                  item["choosed"] = true;
-                  item['cindex'] = index;
-               }else if(mode == 3){
-                  /*取消*/
-                  item["choosed"] = false;
-                  item['cindex'] = false;
-                  item['map'] && item['map']["choosed"] && (item['map']["choosed"] = false); 
-                  /*若存在映射则一起设为false*/
-
-               }
-        }
+       
 
         /*创建多选区*/
         multiMenu.prototype.createMultiChoose = function () {
@@ -345,7 +326,10 @@
               /*建立映射关系*/
               if(choosedItem){
                 item['map'] = choosedItem;
-                choosedItem['map'] = item;  
+                choosedItem['map'] = item;
+                return 'map';  
+              }else{
+                return false;
               }
         }
 
@@ -410,41 +394,9 @@
             return status;
         }
 
-        multiMenu.prototype.hasSub = function (index) {
-            var that = this;
-            var status ;
-          
-            if("sub" in that.curObj){
-                status = true;
-            }else{
-                status = false;
-            }
-            return status;
-        }
+        
 
-        multiMenu.prototype.operate_stack = function(popNum,index){
-          var that = this;
-           if(index != "root"){
-        /*保存历史记录，通过每次点击的index来保存一条index chain用于定位*/     
-              popNum > 0 && that.historyTemp_stack.splice(-popNum,popNum);
-              if(!that.hasSub()){
-                that.historyTemp_stack.splice(-1,1);
-              } 
-              that.historyTemp_stack.push(index);
-              
-        /*用栈来保存当前的位置*/      
-              popNum > 0 && that.stack.splice(-popNum,popNum);
-              that.curObj = that.stack[that.stack.length - 1][index];
-
-              if(that.hasSub()){
-                  that.arrToChoose = that.curObj.sub;
-                  that.stack.push(that.arrToChoose);  
-              }
-              
-           }else{
-              that.stack.push(that.arrToChoose);
-           }
-        }        
+                
 
         multiMenu.prototype.getPopNum = function(ul,index_ul){
           var that = this;
@@ -489,8 +441,9 @@
                   }
 
                   that.resetTempResult(0);
+                  that.updateCoreData(4);
                   that.$wrapper.find(".close").trigger("click");
-                  /*记录历史*/
+                  /*记录历史，修改：应再add里直接纪录历史*/
                   that.recordHistory();
 
                 })
@@ -553,41 +506,10 @@
                          $ele2.remove();
                        }
             })
-            that.updateCoreData(4);
+            
         }
 
-         /*更新核心数据 choosed_arr
-                        unique_Arr
-                        整个json：choosed等    
-          1、choosed_arr unique_Arr['a'] 为顺序一一对应关系；
-          2、tempResultStorage unique_Arr['b'] 为顺序一一对应关系
-                              */ 
-        multiMenu.prototype.updateCoreData = function (mode,item,indexToDelete,tempOptions) {
-              var that = this;
-                 if(mode == 0){
-                    /*添加*/
-                       var uniqueChar = that.getUniqueString(item);
-                       
-                       that.choosed_arr.push(item);
-
-                       that.unique_Arr['a'].push(uniqueChar)
-                 }else if(mode == 1){
-                    /*删除*/
-                       that.choosed_arr.splice(indexToDelete,1);
-                       that.unique_Arr['a'].splice(indexToDelete,1);
-                 }else if(mode == 2){
-                    /*临时增加*/
-                       that.tempResultStorage.push(tempOptions);
-                       that.unique_Arr['b'].push(tempOptions.uniqueString)
-                 }else if(mode == 3){
-                    /*临时删除*/
-                       that.tempResultStorage.splice(indexToDelete,1);
-                       that.unique_Arr['b'].splice(indexToDelete,1);
-                 }else if(mode == 4){
-                       that.tempResultStorage.length = 0;
-                       that.unique_Arr['b'].length = 0;
-                 }
-        }
+       
 
         multiMenu.prototype.background = function(){
             var that = this;
@@ -621,26 +543,49 @@
                 that.chooseFromHistory();
         }
 
-        multiMenu.prototype.updateMultiChooseZoneWhenAddFromHistory = function (ul_index){
+        multiMenu.prototype.hasSub = function (index) {
             var that = this;
-
-                if(that.stack.length <2)return;
-              
-                that.operate_stack(0,ul_index);
-            var item = that.curObj;
-                
-            var ca_index = that.choosed_arr.length-1;
-                
-                if(item["choosed"]){
-                   
-                    that.$multiChooseZone.find("li").eq(ul_index).addClass('choosed').attr('data-cindex',ca_index);
-                }
+            var status ;
+          
+            if("sub" in that.curObj){
+                status = true;
+            }else{
+                status = false;
+            }
+            return status;
         }
+
+        multiMenu.prototype.operate_stack = function(popNum,index){
+          var that = this;
+           if(index != "root"){
+        /*保存历史记录，通过每次点击的index来保存一条index chain用于定位*/     
+              popNum > 0 && that.historyTemp_stack.splice(-popNum,popNum);
+              if(!that.hasSub()){
+                that.historyTemp_stack.splice(-1,1);
+              } 
+              that.historyTemp_stack.push(index);
+              
+        /*用栈来保存当前的位置*/      
+              popNum > 0 && that.stack.splice(-popNum,popNum);
+              that.curObj = that.stack[that.stack.length - 1][index];
+
+              if(that.hasSub()){
+                  that.arrToChoose = that.curObj.sub;
+                  that.stack.push(that.arrToChoose);  
+              }
+              
+           }else{
+              that.stack.push(that.arrToChoose);
+           }
+        }
+
+        
 
         multiMenu.prototype.chooseFromHistory = function (){
             var that = this;
                 that.historyUl = that.historyUl.on("click","li",function(){
-                    var ul_index = $(this).attr("data-order"),item,
+                    var ul_index = $(this).attr("data-order"),/*第几条历史纪录*/
+                        item,
                         /*item = that.historyStack[ul_index],*/
                         indexarr = that.historyIndexChain[ul_index].split(",");
 
@@ -649,7 +594,7 @@
                             item = _arr[indexarr[_index]];
                             if(that.choosed_arr.indexOf(item) == -1){
                                 that.addToMenuFromHistory(item,ul_index);
-                                that.updateMultiChooseZoneWhenAddFromHistory(indexarr[_index]);
+                                
                                 that.addToOuterResult(that.choosed_arr);  
                                 that.updateTargetInput(that.choosed_arr);  
                             };
@@ -657,18 +602,50 @@
                          
                 })
         }        
-
+        /*更新核心数据 choosed_arr
+                        unique_Arr
+                        整个json：choosed等    
+          1、choosed_arr unique_Arr['a'] 为顺序一一对应关系；
+          2、tempResultStorage unique_Arr['b'] 为顺序一一对应关系
+                              */ 
+        multiMenu.prototype.updateCoreData = function (mode,item,indexToDelete,tempOptions) {
+              var that = this;
+                 if(mode == 0){
+                    /*添加*/
+                       var uniqueChar = that.getUniqueString(item);
+                           that.choosed_arr.push(item);
+                           that.unique_Arr['a'].push(uniqueChar)
+                 }else if(mode == 1){
+                    /*删除*/
+                       that.choosed_arr.splice(indexToDelete,1);
+                       that.unique_Arr['a'].splice(indexToDelete,1);
+                 }else if(mode == 2){
+                    /*临时增加*/
+                       that.tempResultStorage.push(tempOptions);
+                       that.unique_Arr['b'].push(tempOptions.uniqueString)
+                 }else if(mode == 3){
+                    /*临时删除*/
+                       that.tempResultStorage.splice(indexToDelete,1);
+                       that.unique_Arr['b'].splice(indexToDelete,1);
+                 }else if(mode == 4){
+                       that.tempResultStorage.length = 0;
+                       that.unique_Arr['b'].length = 0;
+                 }
+        }
         multiMenu.prototype.addToMenuFromHistory = function (item,ul_index){
             var that = this;
-            var arr = [];
+            var indexarr = [],lastIndex;
             //添加item
                 that.updateCoreData(0,item);
 
                 $.each(historyIndexChain[ul_index].split(","),function(i,e){
-                      arr.push(parseInt(e));                
+                      indexarr.push(parseInt(e));                
                 })
-                that.history_allTemp_stack.push(arr);
-                
+                lastIndex = indexarr[indexarr.length-1];
+            /*indexChain 的集合
+              加入该条indexChain  */  
+                that.history_allTemp_stack.push(indexarr);
+            //  添加到多选结果区    
             var ca_index = that.choosed_arr.length-1,
                 cli = $("<li class='choosed_li' data-cindex="+ca_index+">"+item.name+"</li>");
 
@@ -676,14 +653,62 @@
                     var ca_index = $(this).attr("data-cindex");
                         that.cancel(item,ca_index);
                 });
-            //操作item
-                item["choosed"] = true;
-                item["cindex"] = ca_index;
-               
-                that.resetTempResult(1);
+                
 
+                that.set_recognitionState(2,item,ca_index)
+            
+            //  更新到多选待选区，因为多选待选区只有createMultiMenu才能更新。    
+            /*若当前对象 等于 item
+              由于是indexChain定位的item所以，还要加上map,不能确定index，只好循环
+              当前对象，或者倒二级对象需要激活*/
+                
+                if (that.curObj['sub']) {
+                    
+                    $.each(that.curObj['sub'],function(i,e){
+                        if(that.uniqueValidate(e,0) == 'map'){
+                            that.$multiChooseZone.find("li").eq(i).addClass('choosed')
+                                              .attr('data-cindex',ca_index);
+                                              return false;
+                        }
+                    })
+                      
+                }else{
+                    that.uniqueValidate(that.curObj,0);
+                }
+                
+                if(that.curObj['map'] == item || that.curObj == item ||
+                  (that.curObj['sub'] && that.curObj['sub'][lastIndex] == item) ){
+                    that.$multiChooseZone.find("li").eq(lastIndex).addClass('choosed')
+                                          .attr('data-cindex',ca_index);
+                }
         }
 
+        
+         /* 设置数据data可识别状态*/
+        multiMenu.prototype.set_recognitionState = function (mode,item,index){
+           var that = this;
+               if(mode == 0){
+                  /*临时添加*/
+                  item['tempChoosed'] = true;
+                  item['tindex'] = index;  
+               }else if(mode == 1){
+                  /*临时取消*/
+                  item['tempChoosed'] = false;
+                  item['tindex'] = false;
+                  item['map'] && item['map']["tempChoosed"] && (item['map']["tempChoosed"] = false); 
+               }else if(mode == 2){
+                  /*添加*/
+                  item["choosed"] = true;
+                  item['cindex'] = index;
+               }else if(mode == 3){
+                  /*取消*/
+                  item["choosed"] = false;
+                  item['cindex'] = false;
+                  item['map'] && item['map']["choosed"] && (item['map']["choosed"] = false); 
+                  /*若存在映射则一起设为false*/
+
+               }
+        }
         multiMenu.prototype.updateTargetInput = function (arr){
             var that = this,
                 input = that.targetInput;
@@ -730,17 +755,17 @@
             var that = this;
                          
                 that.outer.on("click",that.historyTrigger,function(e){
-                    var arr = that.historyStack,
+                    var historyarr = that.historyStack,
                         ul = that.historyUl,
                         ul_length = ul.find("li").length;
 
                     
-                        if(arr && arr.length > 0 ){
+                        if(historyarr && historyarr.length > 0 ){
                           that.$bg.show();
                           that.historyUl.show();
                         }
-                        if(arr.length > ul_length){
-                          var newarr = arr.slice(ul_length);
+                        if(historyarr.length > ul_length){
+                          var newarr = historyarr.slice(ul_length);
                           var lis = "";
                           for (var i = 0; i < newarr.length; i++) {
                                var io = i + ul_length;
