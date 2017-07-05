@@ -119,22 +119,88 @@
                       if($(this).hasClass(that.mcClass)){
                           var index = $(this).parents("ul").find('.'+that.mcClass+'').index($(this));
                           var item = that.curObj;
-                          var flag = $(this).hasClass("choosed");
                               
                               if(item['choosed']){
-                                  if(flag){
-                                      var dindex = $(this).attr("data-cindex");
-                                        that.cancel(item,dindex);
-                                  }  
+                          
+                                 var dindex = $(this).attr("data-cindex");
+                                     that.cancel(item,dindex);
+                                      
+                              }else if(item['tempChoosed']){
+                                  that.tempResult(true,item,this);        
                               }else{
                               /*如果还不是选中的进入临时程序*/
-                                  that.tempResult(flag,item,this);        
+                                  that.tempResult(false,item,this);        
                               }
                       } 
                       $(this).addClass(that.activeClass)
                              .siblings('.'+that.mainClass+'').removeClass(that.activeClass);   
                       
               })
+        }
+
+        /*临时处理程序：
+          1、临时选中，临时取消；
+          2、点击多选区最后一级时触发*/
+        multiMenu.prototype.tempResult = function (flag,item,ele) {
+            var that = this,
+                $ele1,
+                $ele2,
+                ta_index,
+                cli;
+
+                flag?getRidOf():add();
+                    function getRidOf(){
+                            ta_index = $(ele).attr("data-taindex");
+                            $(ele).removeClass("choosed").removeAttr("data-taindex");
+                            $ele2 = that.$choosedZoneUl.find("li[data-taindex="+ta_index+"]").remove();
+
+                            /*去除临时选择集合中的某项*/ 
+                            that.updateCoreData(3,false,ta_index,false);
+                            /*设置可识别状态为：临时取消*/
+                            that.set_recognitionState(1,item);
+                    }
+                    function add(){
+                            ta_index = that.tempResultStorage.length;
+                            /*多选结果区的构建*/
+                            cli = $("<li class='choosed_li' data-taindex="+ta_index+">"+item.name+"</li>");
+                            $(ele).addClass("choosed").attr({"data-taindex":ta_index});
+                            
+                            cli.appendTo(that.$choosedZoneUl).on("click",function(){
+                                   var ta_index = $(this).attr("data-taindex");
+                                   
+                                   /*更新tempResultStorage $ele1,
+                                    由于采用的是每次删除再重新建立列表，
+                                    删除后会导致变量存储的$ele1失效*/
+                                   $ele1 = that.$multiChooseZone.find("li[data-taindex="+ta_index+"]"); 
+                                   $ele1.removeClass('choosed').removeAttr("data-taindex");
+                                   $ele2.remove();
+                                   
+                                   /*设置可识别状态为：临时取消*/
+                                   that.set_recognitionState(1,item);
+                                   /*去除临时选择集合中的某项*/ 
+                                   that.updateCoreData(3,false,ta_index,false);   
+                                   
+                            });
+                            
+                            $ele1 = that.$multiChooseZone.find("li[data-taindex="+ta_index+"]");                                   
+                            $ele2 = that.$choosedZoneUl.find("li[data-taindex="+ta_index+"]");                                   
+                            
+                            /*设置临时选中识别状态*/
+                            that.set_recognitionState(0,item,ta_index);
+                            
+                            /*临时选中的元素各项信息存储*/
+                            var uniqueString = that.getUniqueString(item); 
+                            var tempOptions = {
+                                item:item,
+                                element:{ele1:$ele1,ele2:$ele2},
+                                historyTemp:that.historyTemp_stack.slice(0),
+                                uniqueString:uniqueString
+                            }
+
+                            /*添加临时数组*/
+                            that.updateCoreData(2,false,false,tempOptions);
+                            
+                    }
         }
 
         multiMenu.prototype.cancel = function (item,dindex){
@@ -148,10 +214,13 @@
                                .removeAttr("data-cindex");
                   $(".outermulti-ul li[data-cindex="+dindex+"]",that.outer).remove();
                   
-                  that.updateAfterCancel(item,dindex);
+                  that.updateCindexAfterCancel(item,dindex);
+                  that.set_recognitionState(3,item);   //设置数据data可识别状态
+                  that.updateCoreData(1,false,dindex); //更新核心数组
+                  that.updateTargetInput(that.choosed_arr);
         }
 
-         multiMenu.prototype.updateAfterCancel = function (item,dindex){
+         multiMenu.prototype.updateCindexAfterCancel = function (item,dindex){
               var that = this;
                   /*选中区*/
                   $(".choosedZone li[data-cindex]",that.wrapper).each(function(i,e){
@@ -175,34 +244,33 @@
                                 $(this).attr("data-cindex",index-1);
                             }
                   });
-                  
-                  item["choosed"] = false,
-                  item['map'] && (item['map']["choosed"] = false); /*若存在映射则一起设为false*/
-
-                  that.updateCoreData(1,false,dindex); //更新核心数组
-                  that.updateTargetInput(that.choosed_arr);
-
-
         }
 
-         /*更新核心数据 choosed_arr
-                        unique_Arr
-                        整个json：choosed等    */ 
-        multiMenu.prototype.updateCoreData = function (mode,item,dindex) {
-              var that = this;
-                 if(mode == 0){
-                    /*添加*/
-                       var uniqueChar = item.id + "&" + item.mod;
-                       that.choosed_arr.push(item);
-                       that.unique_Arr['a'].push(uniqueChar)
-                 }else if(mode == 1){
-                    /*删除*/
-                       that.choosed_arr.splice(dindex,1);
-                       that.unique_Arr['a'].splice(dindex,1);
-                 }
-        }
+        /* 设置数据data可识别状态*/
+        multiMenu.prototype.set_recognitionState = function (mode,item,index){
+           var that = this;
+               if(mode == 0){
+                  /*临时添加*/
+                  item['tempChoosed'] = true;
+                  item['tindex'] = index;  
+               }else if(mode == 1){
+                  /*临时取消*/
+                  item['tempChoosed'] = false;
+                  item['tindex'] = false;
+                  item['map'] && item['map']["tempChoosed"] && (item['map']["tempChoosed"] = false); 
+               }else if(mode == 2){
+                  /*添加*/
+                  item["choosed"] = true;
+                  item['cindex'] = index;
+               }else if(mode == 3){
+                  /*取消*/
+                  item["choosed"] = false;
+                  item['cindex'] = false;
+                  item['map'] && item['map']["choosed"] && (item['map']["choosed"] = false); 
+                  /*若存在映射则一起设为false*/
 
-        
+               }
+        }
 
         /*创建多选区*/
         multiMenu.prototype.createMultiChoose = function () {
@@ -215,15 +283,15 @@
               $.each(arr,function(i,e){
 
                 var cla = that.mcClass;
-                var ca_index,ta_index;
-          /*若开启唯一性标识符且不是自身，可以用:没有被选中!e.choosed来判断*/      
-                if(!e.choosed && that.uniqueEnable){
-                   that.uniqueValidate(e,0);
-                }
-                /*if(!e.tempChoosed && that.uniqueEnable){
-                   that.uniqueValidate(e,1);
-                }*/
-
+                var ca_index,ta_index,continueValidate;
+          /*若开启唯一性标识符且不是自身
+          （可以用没有被选中判断，即!e.choosed 且!e.tempChoosed来）*/      
+              
+                if(that.uniqueEnable && !e.choosed && !e.tempChoosed ){
+                   continueValidate = that.uniqueValidate(e,0);
+                   continueValidate = that.uniqueValidate(e,1);
+                }  
+                
                 if(e.choosed){             /*如果item有记录是选中的*/
                     ca_index = e["cindex"];
                     cla+=" choosed";
@@ -245,92 +313,69 @@
                       .appendTo(that.$element);
 
         }
-        
-        multiMenu.prototype.uniqueValidate = function (item,mode) {
-          var that = this;
-              if()
-                   var uniqueString = item.id + "&" + item.mod;
-                   var indexOfunique,
-                       choosedItem;
 
-                       
-                      if(mode == 0){
-                          indexOfunique = that.unique_Arr['b'].indexOf(uniqueString);
-                          if(indexOfunique !=-1 && that.unique_Arr['a'].length>0){/*若存在该标识符组合，则标识已经选中了*/
-                              choosedItem = that.choosed_arr[indexOfunique]; 
-                              
-                              item["choosed"] = true;
-                              item['cindex'] = choosedItem["cindex"];
+        /*唯一标识验证，建立映射
+          1、choosed_arr unique_Arr['a'] 通过updateCoreData 建立顺序一一对应关系；
+          2、tempResultStorage unique_Arr['b'] 通过updateCoreData 为顺序一一对应关系
+          3、多选区构建时触发*/
+        multiMenu.prototype.uniqueValidate = function (item,mode){
+           var that = this;
+           var uniqueString = that.getUniqueString(item);
+           var indexOfunique,
+               choosedItem;
 
-                              /*建立映射关系*/
-                              item['map'] = choosedItem;
-                              choosedItem['map'] = item;
-                          }
-                          
-                      }else if(mode == 1){
+              if(!uniqueString){return false} 
+              if(mode == 0){
+                  indexOfunique = that.unique_Arr['a'].indexOf(uniqueString);
+                  if(indexOfunique !=-1){/*若存在该标识符组合*/
+                      choosedItem = that.choosed_arr[indexOfunique]; 
+                      /*设置可识别状态为：选中*/
+                      that.set_recognitionState(2,item,choosedItem['cindex'])
+                      
+                  }
+                  
+              }else if(mode == 1){
+                  indexOfunique = that.unique_Arr['b'].indexOf(uniqueString);
+                  if(indexOfunique !=-1){/*若存在该标识符组合*/
+                      choosedItem = that.tempResultStorage[indexOfunique]['item']; 
+                      
+                      that.set_recognitionState(0,item,choosedItem["tindex"])
+                  }
+              }
+              /*建立映射关系*/
+              if(choosedItem){
+                item['map'] = choosedItem;
+                choosedItem['map'] = item;  
+              }
+        }
 
+
+        multiMenu.prototype.getUniqueString = function (item) {
+          var stringArr = this.unique,
+              uniqueString = '',
+              length = stringArr.length;
+
+              $.each(stringArr,function(i,e){
+
+                 if(i == length-1){
+                      uniqueString += item[e];
+
+                      if(item[e] == undefined){
+                          uniqueString = false;
+                          return false;
                       }
-                      
-                      
-
-                      /*choosed_arr unique_Arr 为顺序一一对应关系*/
-                       
+                  }else{
+                      uniqueString += item[e] + "&";  
+                  }
+              })
               
+          return uniqueString;
         }
-
-        multiMenu.prototype.tempResult = function (flag,item,ele) {
-            var that = this,
-                $ele1,
-                $ele2,
-                ta_index,
-                cli;
-
-                flag?getRidOf():add();
-                    function getRidOf(){
-                            ta_index = $(ele).attr("data-taindex");
-                            $(ele).removeClass("choosed").removeAttr("data-taindex");
-                            $ele2 = that.$choosedZoneUl.find("li[data-taindex="+ta_index+"]").remove();
-                            that.tempResultStorage.splice(ta_index,1);
-                            item['tempChoosed'] = false;
-                            item['tindex'] = false;
-                    }
-                    function add(){
-                            ta_index = that.tempResultStorage.length;
-                            cli = $("<li class='choosed_li' data-taindex="+ta_index+">"+item.name+"</li>");
-                            $(ele).addClass("choosed").attr({"data-taindex":ta_index});
-                            
-                                   cli.appendTo(that.$choosedZoneUl).on("click",function(){
-                                       var ta_index = $(this).attr("data-taindex");
-                                       /*更新tempResultStorage $ele1,
-                                        由于采用的是每次删除再重新建立列表，
-                                        删除后会导致变量存储的$ele1失效*/
-                                       $ele1 = that.$multiChooseZone.find("li[data-taindex="+ta_index+"]"); 
-                                       $ele1.removeClass('choosed').removeAttr("data-taindex");
-                                       $ele2.remove();
-                                       /*去除临时选择集合中的某项*/    
-                                       that.tempResultStorage.splice(ta_index,1);
-                                   });
-                            
-                            $ele1 = that.$multiChooseZone.find("li[data-taindex="+ta_index+"]");                                   
-                            $ele2 = that.$choosedZoneUl.find("li[data-taindex="+ta_index+"]");                                   
-                            
-                            item['tempChoosed'] = true;
-                            item['tindex'] = ta_index;
-                            /*临时选中的元素各项信息存储*/ 
-                            that.tempResultStorage.push({
-                                item:item,
-                                element:{ele1:$ele1,ele2:$ele2},
-                                historyTemp:that.historyTemp_stack.slice(0)
-                            });
-
-                            
-                    }
-        }
-
-
-        
-        
        
+
+        
+        
+
         multiMenu.prototype.add = function (item,ele,historyTemp) {
               var that = this;
               var ca_index = that.choosed_arr.length;
@@ -340,11 +385,11 @@
                   $ele2.attr({"data-cindex":ca_index}).removeAttr("data-taindex").on("click",function(){
                       that.cancel(item,ca_index);
                   });
-                  item["choosed"] = true;
-                  item["cindex"] = ca_index;
 
-                  item["tempChoosed"] = false;
-                  item["tindex"] = false;
+                  /*设置可识别状态:选中*/
+                  that.set_recognitionState(2,item,ca_index)
+                  /*设置可识别状态:临时取消*/
+                  that.set_recognitionState(1,item)
                   
                   /*将临时结果添加到历史数组*/
                   that.history_allTemp_stack.push(historyTemp);
@@ -353,9 +398,6 @@
                   
         } 
 
-       
-        
-        
         multiMenu.prototype.isFinalLevel = function (index) {
             var that = this;
             var status ;
@@ -429,13 +471,18 @@
             var success = that.options.success;
                 
                 that.$wrapper.on("click",".sampleBtn",function(){
+                  /*将临时保存结果循环添加*/
                   
                   $.each(that.tempResultStorage,function(i,e){
-                      /*将临时保存结果循环添加*/
+                      
                       that.add.call(that,e.item,e.element,e.historyTemp);  
                   })
+                  
                   if(that.choosed_arr.length>0 ){
+                      
+                    /*执行回调函数*/
                     if(success && typeof(success) == "function" ){
+                        
                         $.proxy(success,that.$element[0])(that.choosed_arr,that);
                         /*that.updateTargetInput(that.choosed_arr);*/
                     }else{}
@@ -489,7 +536,7 @@
                       }
            })(); 
         }
-
+        /*重置临时存储结果*/
         multiMenu.prototype.resetTempResult = function (mode){
             var that = this;
             
@@ -506,9 +553,41 @@
                          $ele2.remove();
                        }
             })
-            that.tempResultStorage.length = 0;
+            that.updateCoreData(4);
         }
-       
+
+         /*更新核心数据 choosed_arr
+                        unique_Arr
+                        整个json：choosed等    
+          1、choosed_arr unique_Arr['a'] 为顺序一一对应关系；
+          2、tempResultStorage unique_Arr['b'] 为顺序一一对应关系
+                              */ 
+        multiMenu.prototype.updateCoreData = function (mode,item,indexToDelete,tempOptions) {
+              var that = this;
+                 if(mode == 0){
+                    /*添加*/
+                       var uniqueChar = that.getUniqueString(item);
+                       
+                       that.choosed_arr.push(item);
+
+                       that.unique_Arr['a'].push(uniqueChar)
+                 }else if(mode == 1){
+                    /*删除*/
+                       that.choosed_arr.splice(indexToDelete,1);
+                       that.unique_Arr['a'].splice(indexToDelete,1);
+                 }else if(mode == 2){
+                    /*临时增加*/
+                       that.tempResultStorage.push(tempOptions);
+                       that.unique_Arr['b'].push(tempOptions.uniqueString)
+                 }else if(mode == 3){
+                    /*临时删除*/
+                       that.tempResultStorage.splice(indexToDelete,1);
+                       that.unique_Arr['b'].splice(indexToDelete,1);
+                 }else if(mode == 4){
+                       that.tempResultStorage.length = 0;
+                       that.unique_Arr['b'].length = 0;
+                 }
+        }
 
         multiMenu.prototype.background = function(){
             var that = this;
@@ -537,9 +616,9 @@
                 
             var ul = "<ul class='multiMenu_history' style=''></ul>";
                 that.background();
-            that.historyUl = $(ul).appendTo(that.historyZone.css("position","relative"));
-            that.showHistory();
-            that.chooseFromHistory();
+                that.historyUl = $(ul).appendTo(that.historyZone.css("position","relative"));
+                that.showHistory();
+                that.chooseFromHistory();
         }
 
         multiMenu.prototype.updateMultiChooseZoneWhenAddFromHistory = function (ul_index){
@@ -578,9 +657,6 @@
                          
                 })
         }        
-
-        
-
 
         multiMenu.prototype.addToMenuFromHistory = function (item,ul_index){
             var that = this;
@@ -630,6 +706,7 @@
         multiMenu.prototype.addToOuterResult = function (choosed_arr){
             var that = this;
             var arr = choosed_arr;
+
             if(that.enableAddToOuter != 1)return;
             var ul = $("<ul class='outermulti-ul'/>");
                 for(var i = 0 ;i<arr.length;i++){

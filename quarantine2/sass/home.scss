@@ -429,6 +429,7 @@ $pos_arr:top,right,bottom,left;
         position: relative;
         margin-left: 5px;
         -webkit-transition:all 0.3s;
+        -o-transition: all 0.3s;
         transition: all 0.3s;
     }
     .avatar{
@@ -475,6 +476,7 @@ $pos_arr:top,right,bottom,left;
         position: relative;
         top: $dd_h/4;
         -webkit-transition:all 0.3s;
+        -o-transition: all 0.3s;
         transition: all 0.3s;
     }
     .avatar{
@@ -555,6 +557,7 @@ $sb_bg:#f7f7f7;
                 &>.sideBar_a{
                     &:after{
                             -webkit-transition:all 0.2s;
+                            -o-transition:all 0.2s;
                             transition:all 0.2s;
                             @include caret($color:$gray,$position:bottom,$width:6px);
                     }
@@ -622,7 +625,8 @@ $sb_bg:#f7f7f7;
         $radius_lz:6px;
         @include radius($radius_lz);
         .title{
-            border-radius:$radius_lz $radius_lz 0 0;
+            -webkit-border-radius:$radius_lz $radius_lz 0 0;
+                    border-radius:$radius_lz $radius_lz 0 0;
             height:$title_h;line-height:$title_h;
             font-size: $mediumSize;
             font-weight: 700;
@@ -736,7 +740,8 @@ $sb_bg:#f7f7f7;
                 border-color: rgb(26, 123, 185);
                 color: rgb(255, 255, 255);
                 height:($login-form-row-h);
-                border-radius: 25px;
+                -webkit-border-radius: 25px;
+                        border-radius: 25px;
                 font-size: $mediumSize;
                 font-weight: 700;
         }
@@ -1510,6 +1515,7 @@ $labelm:30px;
             &.fade .modalBox-dialog {
                 transition: -webkit-transform 0.3s ease-out;
                 -webkit-transition:-webkit-transform 0.3s ease-out;
+                -o-transition: transform 0.3s ease-out;
                 transition: transform 0.3s ease-out;
                 transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
                 -webkit-transform: translate(0px, -25%);
@@ -1526,6 +1532,7 @@ $labelm:30px;
                     padding: 8px;
                     background: -webkit-gradient(linear,left top, left bottom,from($mhbg_from),to($mhbg_to));
                     background: -webkit-linear-gradient($mhbg_from,$mhbg_to);
+                    background: -o-linear-gradient($mhbg_from,$mhbg_to);
                     background: linear-gradient($mhbg_from,$mhbg_to);
                     background:#{$mhbg_to}\0;
                     @include border($color:$mhbg_to);
@@ -1562,7 +1569,8 @@ $labelm:30px;
             .modalBox-content {
                 position: relative;
                 background-color: rgb(255, 255, 255);
-                background-clip: padding-box;
+                -webkit-background-clip: padding-box;
+                        background-clip: padding-box;
                 border: 1px solid rgba(0, 0, 0, 0.2);
                 
                 outline: 0px;
@@ -1594,6 +1602,7 @@ $labelm:30px;
         .modalBox.fade .modalBox-dialog {
           transition: -webkit-transform .3s ease-out;
           -webkit-transition:-webkit-transform .3s ease-out;
+          -o-transition: transform .3s ease-out;
           transition: transform .3s ease-out;
                   transition:         transform .3s ease-out, -webkit-transform .3s ease-out;
           -webkit-transform: translate(0, -25%);
@@ -1704,6 +1713,7 @@ $labelm:30px;
         &.fade .modalBox-dialog {
             transition: -webkit-transform 0.3s ease-out;
             -webkit-transition:-webkit-transform 0.3s ease-out;
+            -o-transition: transform 0.3s ease-out;
             transition: transform 0.3s ease-out;
             transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
             -webkit-transform: translate(0px, -25%);
@@ -1725,6 +1735,7 @@ $labelm:30px;
                 padding: 8px;
                 background: -webkit-gradient(linear,left top, left bottom,from($mhbg_from),to($mhbg_to));
                 background: -webkit-linear-gradient($mhbg_from,$mhbg_to);
+                background: -o-linear-gradient($mhbg_from,$mhbg_to);
                 background: linear-gradient($mhbg_from,$mhbg_to);
                 background:#{$mhbg_to}\0;
                 @include border($color:$mhbg_to);
@@ -1759,7 +1770,8 @@ $labelm:30px;
         .modalBox-content {
             position: relative;
             background-color: rgb(255, 255, 255);
-            background-clip: padding-box;
+            -webkit-background-clip: padding-box;
+                    background-clip: padding-box;
             border: 1px solid rgba(0, 0, 0, 0.2);
             
             outline: 0px;
