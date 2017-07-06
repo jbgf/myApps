@@ -1,0 +1,154 @@
+@charset "UTF-8";
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.footer-content .linkZone .row .row-block {
+  float: left; }
+
+.footer-content .linkZone .row:before, .footer-content .linkZone .row:after {
+  content: " ";
+  display: table; }
+
+.footer-content .linkZone .row:after {
+  clear: both; }
+
+.footer-content .linkZone .row .row-block {
+  position: relative; }
+
+.footer-content .linkZone .row .row-block {
+  float: left; }
+
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.footer-content .linkZone .row .row-block {
+  float: left; }
+
+.footer-content .linkZone .row:before, .footer-content .linkZone .row:after {
+  content: " ";
+  display: table; }
+
+.footer-content .linkZone .row:after {
+  clear: both; }
+
+.footer-content .linkZone .row .row-block {
+  position: relative; }
+
+.footer-content .linkZone .row .row-block {
+  float: left; }
+
+/*footer start*/
+.footer {
+  background: #373d41;
+  padding: 45px 0 40px;
+  color: #ebebeb; }
+
+.footer-content .gray {
+  color: #999; }
+
+.footer-content .counsel .t01 {
+  font-size: 18.72px; }
+
+.footer-content .counsel .phoneNum {
+  font-size: 26.208px;
+  padding: 8px 0; }
+
+.footer-content .counsel img {
+  vertical-align: middle; }
+
+.footer-content .service {
+  text-align: center;
+  padding: 15px 0 30px; }
+
+.footer-content .justify {
+  display: inline-block; }
+  .footer-content .justify p {
+    overflow: hidden;
+    text-align: justify;
+    line-height: 1;
+    height: 22px; }
+  .footer-content .justify p:after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+    height: 0; }
+
+.footer-content .linkZone {
+  text-align: center;
+  font-size: 18.72px;
+  padding-top: 45px; }
+  .footer-content .linkZone .row {
+    margin-left: -10px;
+    margin-right: -10px; }
+    .footer-content .linkZone .row .row-block {
+      width: 25%;
+      min-height: 1px; }
+      .footer-content .linkZone .row .row-block .inner {
+        padding: 0 10px; }
+  .footer-content .linkZone .fl_header {
+    padding-bottom: 7px;
+    display: block;
+    font-weight: bold; }
+  .footer-content .linkZone .other_link {
+    color: #999; }
+    .footer-content .linkZone .other_link .relative_link {
+      padding-bottom: 2px;
+      font-size: 14px; }
+
+.footer-content .qr p {
+  height: 45px;
+  text-align: center;
+  font-size: 18.72px; }
+
+.footer-content .f-content {
+  float: left;
+  padding: 0 62px 0; }
+
+.footer-content .f-content:first-child {
+  padding-left: 0;
+  text-align: left; }
+
+.footer-content .f-content:last-child {
+  padding-right: 0;
+  text-align: right; }
+
+.footer-content .f-content.logo {
+  border-right: 1px solid #4d4d4d; }
+
+.footer-content .f-content.address {
+  width: 520px;
+  border-right: 1px solid #4d4d4d;
+  font-size: 13px; }
+
+.footer-content .f-content.qr {
+  width: 122px; }
+
+.copyRight {
+  text-align: center;
+  background: #2b3033;
+  font-size: 12px;
+  color: #999;
+  padding: 2px 0; }
+
+/* footer end */
+
+/*# sourceMappingURL=maps/cfoot.css.map */

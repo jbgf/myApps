@@ -183,28 +183,72 @@
                 <div class="homeSPtRow">
                     <div class="hspt">
                         <div class="str-inner">
-                            <div class="hsptBlock on">
+                            <div class="hsptBlock ">
                                 <div class="img">
                                   <img src="img/hspt.jpg">
                                   <div class="info-hover">
                                       <h3 class="ih-title">微商城解决方案</h3>
                                       <div class="ih-text">
-                                          微分销（即微信分销），在大数据时代背景下企业数据营销方式，是基于微信公众平台定制研发，专门为品牌公司和商家提供微信连锁商城、微
+                                          微分销（即微信分销），在大数据时代背景下企业数据营销方式，是基于微信公众平台定制研发，专门为品牌公司和商家提供微信连锁商城、微分销渠道的三级分销微信商城体系，微分销助力商家高粘度、快速将自媒体转化为自有分销商。 
                                       </div>
                                   </div>
                                 </div>
                                 <div class="hspt-bottom">
+                                    <div class="bdvantageRow">
+                                        <div class="row-block">
+                                            <div class="inner">
+                                                <i class="iconfont">&#xe62c;</i>
+                                                <div class="title middleTable">
+                                                  <div class="middleRow">会员系统</div>
+                                                </div>
+                                                <div class="bdText">
+                                                    会员管理代理管理客服会员管理代理管理客服
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row-block">
+                                            <div class="inner">
+                                                <i class="iconfont">&#xe69c;</i>
+                                                <div class="title middleTable">
+                                                  <div class="middleRow">数据魔方</div>
+                                                </div>
+                                                <div class="bdText">
+                                                    会员管理代理管理客服会员管理代理管理客服
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row-block">
+                                            <div class="inner">
+                                                <i class="iconfont">&#xe6ae;</i>
+                                                <div class="title middleTable" >
+                                                    <div class="middleRow">ERP对接</div>
+                                                </div>
+                                                <div class="bdText">
+                                                    会员管理代理管理客服会员管理代理管理客服
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row-block">
+                                            <div class="inner">
+                                                <i class="iconfont">&#xe608;</i>
+                                                <div class="title middleTable">
+                                                    <div class="middleRow">可视化
+                                                    <br>模板装修
+                                                    </div>
+                                                </div>
+                                                <div class="bdText">
+                                                    会员管理代理管理客服会员管理代理管理客服
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="text">
                                         <div class="hspt_title">微营销解决方案</div>
                                         <div class="hspt_text">开启PC+手机+APP全网分销新时代传统企业可将线下渠道一键上线，实现线上线下互通,客户倍增。</div>
                                     </div>
                                     <p class="hspt-p">他们正在使用</p>
                                     <ul class="link">
-                                        <li class="linkBlock">
-                                            <div class="str-inner">
-                                                 <div class=""></div>
-                                            </div>
-                                        </li>
+                                        
                                         <li class="linkBlock">
                                             <div class="str-inner">
                                                 <div class="link-inner"><img src="img/homelink.png"></div>
@@ -220,28 +264,13 @@
                                                 <div class="link-inner"><img src="img/homelink.png"></div>
                                             </div>
                                         </li>
-                                    </ul>
-                                    <ul class="link">
+                                   
                                         <li class="linkBlock">
                                             <div class="str-inner">
                                                 <div class="link-inner"><img src="img/homelink.png"></div>
                                             </div>
                                         </li>
-                                        <li class="linkBlock">
-                                            <div class="str-inner">
-                                                <div class="link-inner"><img src="img/homelink.png"></div>
-                                            </div>
-                                        </li>
-                                        <li class="linkBlock">
-                                            <div class="str-inner">
-                                                <div class="link-inner"><img src="img/homelink.png"></div>
-                                            </div>
-                                        </li>
-                                        <li class="linkBlock">
-                                            <div class="str-inner">
-                                                <div class="link-inner"><img src="img/homelink.png"></div>
-                                            </div>
-                                        </li>
+                                       
                                     </ul>
                                     <p class="hspt-p align-right"><a>进入微分销专题页 ></a></p>
                                 </div>
@@ -250,16 +279,72 @@
                     </div>
                     <div class="hspt">
                         <div class="str-inner">
-                            <div class="hsptBlock">
+                            <div class="hsptBlock ">
                                 <div class="img">
                                   <img src="img/hspt.jpg">
+                                  <div class="info-hover">
+                                      <h3 class="ih-title">微商城解决方案</h3>
+                                      <div class="ih-text">
+                                          微分销（即微信分销），在大数据时代背景下企业数据营销方式，是基于微信公众平台定制研发，专门为品牌公司和商家提供微信连锁商城、微分销渠道的三级分销微信商城体系，微分销助力商家高粘度、快速将自媒体转化为自有分销商。 
+                                      </div>
+                                  </div>
                                 </div>
                                 <div class="hspt-bottom">
+                                    <div class="bdvantageRow">
+                                        <div class="row-block">
+                                            <div class="inner">
+                                                <i class="iconfont">&#xe62c;</i>
+                                                <div class="title middleTable">
+                                                  <div class="middleRow">会员系统</div>
+                                                </div>
+                                                <div class="bdText">
+                                                    会员管理代理管理客服会员管理代理管理客服
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row-block">
+                                            <div class="inner">
+                                                <i class="iconfont">&#xe69c;</i>
+                                                <div class="title middleTable">
+                                                  <div class="middleRow">数据魔方</div>
+                                                </div>
+                                                <div class="bdText">
+                                                    会员管理代理管理客服会员管理代理管理客服
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row-block">
+                                            <div class="inner">
+                                                <i class="iconfont">&#xe6ae;</i>
+                                                <div class="title middleTable" >
+                                                    <div class="middleRow">ERP对接</div>
+                                                </div>
+                                                <div class="bdText">
+                                                    会员管理代理管理客服会员管理代理管理客服
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row-block">
+                                            <div class="inner">
+                                                <i class="iconfont">&#xe608;</i>
+                                                <div class="title middleTable">
+                                                    <div class="middleRow">可视化
+                                                    <br>模板装修
+                                                    </div>
+                                                </div>
+                                                <div class="bdText">
+                                                    会员管理代理管理客服会员管理代理管理客服
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="text">
                                         <div class="hspt_title">微营销解决方案</div>
                                         <div class="hspt_text">开启PC+手机+APP全网分销新时代传统企业可将线下渠道一键上线，实现线上线下互通,客户倍增。</div>
                                     </div>
+                                    <p class="hspt-p">他们正在使用</p>
                                     <ul class="link">
+                                        
                                         <li class="linkBlock">
                                             <div class="str-inner">
                                                 <div class="link-inner"><img src="img/homelink.png"></div>
@@ -275,28 +360,87 @@
                                                 <div class="link-inner"><img src="img/homelink.png"></div>
                                             </div>
                                         </li>
+                                   
                                         <li class="linkBlock">
                                             <div class="str-inner">
                                                 <div class="link-inner"><img src="img/homelink.png"></div>
                                             </div>
                                         </li>
+                                       
                                     </ul>
+                                    <p class="hspt-p align-right"><a>进入微分销专题页 ></a></p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="hspt">
                         <div class="str-inner">
-                            <div class="hsptBlock">
+                            <div class="hsptBlock ">
                                 <div class="img">
                                   <img src="img/hspt.jpg">
+                                  <div class="info-hover">
+                                      <h3 class="ih-title">微商城解决方案</h3>
+                                      <div class="ih-text">
+                                          微分销（即微信分销），在大数据时代背景下企业数据营销方式，是基于微信公众平台定制研发，专门为品牌公司和商家提供微信连锁商城、微分销渠道的三级分销微信商城体系，微分销助力商家高粘度、快速将自媒体转化为自有分销商。 
+                                      </div>
+                                  </div>
                                 </div>
                                 <div class="hspt-bottom">
+                                    <div class="bdvantageRow">
+                                        <div class="row-block">
+                                            <div class="inner">
+                                                <i class="iconfont">&#xe62c;</i>
+                                                <div class="title middleTable">
+                                                  <div class="middleRow">会员系统</div>
+                                                </div>
+                                                <div class="bdText">
+                                                    会员管理代理管理客服会员管理代理管理客服
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row-block">
+                                            <div class="inner">
+                                                <i class="iconfont">&#xe69c;</i>
+                                                <div class="title middleTable">
+                                                  <div class="middleRow">数据魔方</div>
+                                                </div>
+                                                <div class="bdText">
+                                                    会员管理代理管理客服会员管理代理管理客服
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row-block">
+                                            <div class="inner">
+                                                <i class="iconfont">&#xe6ae;</i>
+                                                <div class="title middleTable" >
+                                                    <div class="middleRow">ERP对接</div>
+                                                </div>
+                                                <div class="bdText">
+                                                    会员管理代理管理客服会员管理代理管理客服
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row-block">
+                                            <div class="inner">
+                                                <i class="iconfont">&#xe608;</i>
+                                                <div class="title middleTable">
+                                                    <div class="middleRow">可视化
+                                                    <br>模板装修
+                                                    </div>
+                                                </div>
+                                                <div class="bdText">
+                                                    会员管理代理管理客服会员管理代理管理客服
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="text">
                                         <div class="hspt_title">微营销解决方案</div>
                                         <div class="hspt_text">开启PC+手机+APP全网分销新时代传统企业可将线下渠道一键上线，实现线上线下互通,客户倍增。</div>
                                     </div>
+                                    <p class="hspt-p">他们正在使用</p>
                                     <ul class="link">
+                                        
                                         <li class="linkBlock">
                                             <div class="str-inner">
                                                 <div class="link-inner"><img src="img/homelink.png"></div>
@@ -312,19 +456,271 @@
                                                 <div class="link-inner"><img src="img/homelink.png"></div>
                                             </div>
                                         </li>
+                                   
                                         <li class="linkBlock">
                                             <div class="str-inner">
                                                 <div class="link-inner"><img src="img/homelink.png"></div>
                                             </div>
                                         </li>
+                                       
                                     </ul>
+                                    <p class="hspt-p align-right"><a>进入微分销专题页 ></a></p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="grayBg">
+                <div class="container1150">
+                    <div class="header03">
+                        <div class="h-title01">管家动态</div>
+                    </div>
+                    <div class="butlerRow">
+                        <div class="row-block">
+                            <div class="inner">
+                                <div class="header04">
+                                    <div class="hdinner">
+                                        <div class="h-title01 float-l">
+
+                                            <span class="text">行业动态</span>
+                                        </div>
+                                        <a class="more float-r">MORE</a>
+                                    </div>
+                                </div>
+                                <div class="imgbox">    
+                                    <img src="img/b01.png">
+                                </div>
+                                <div class="list15 list">
+                                  <ul>
+                                      <li><a>
+                                          
+                                          <div class="text">
+                                              <span class="date">【09-04】</span>
+                                              2014年度上海市服务贸易发展专项资金申 
+                                          </div>
+                                          
+                                          </a></li>
+                                      <li><a>
+                                          
+                                          <div class="text">
+                                              <span class="date">【09-04】</span>
+                                              2014年度上海市服务贸易发展专项资金申 
+                                          </div>
+                                          
+                                          </a></li>
+                                      <li><a>
+                                          
+                                          <div class="text">
+                                              <span class="date">【09-04】</span>
+                                              2014年度上海市服务贸易发展专项资金申 
+                                          </div>
+                                          
+                                          </a></li>
+                                      <li><a>
+                                          
+                                          <div class="text">
+                                              <span class="date">【09-04】</span>
+                                              2014年度上海市服务贸易发展专项资金申 
+                                          </div>
+                                          
+                                          </a></li>
+                                      <li><a>
+                                          
+                                          <div class="text">
+                                              <span class="date">【09-04】</span>
+                                              2014年度上海市服务贸易发展专项资金申 
+                                          </div>
+                                          
+                                          </a></li>
+                                    
+                                  </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-block">
+                            <div class="inner">
+                                <div class="header04">
+                                    <div class="hdinner">
+                                        <div class="h-title01 float-l">
+
+                                            <span class="text">行业动态</span>
+                                        </div>
+                                        <a class="more float-r">MORE</a>
+                                    </div>
+                                </div>
+                                <div class="imgbox">    
+                                    <img src="img/b01.png">
+                                </div>
+                                <div class="list15 list">
+                                  <ul>
+                                      <li><a>
+                                          
+                                          <div class="text">
+                                              <span class="date">【09-04】</span>
+                                              2014年度上海市服务贸易发展专项资金申 
+                                          </div>
+                                          
+                                          </a></li>
+                                      <li><a>
+                                          
+                                          <div class="text">
+                                              <span class="date">【09-04】</span>
+                                              2014年度上海市服务贸易发展专项资金申 
+                                          </div>
+                                          
+                                          </a></li>
+                                      <li><a>
+                                          
+                                          <div class="text">
+                                              <span class="date">【09-04】</span>
+                                              2014年度上海市服务贸易发展专项资金申 
+                                          </div>
+                                          
+                                          </a></li>
+                                      <li><a>
+                                          
+                                          <div class="text">
+                                              <span class="date">【09-04】</span>
+                                              2014年度上海市服务贸易发展专项资金申 
+                                          </div>
+                                          
+                                          </a></li>
+                                      <li><a>
+                                          
+                                          <div class="text">
+                                              <span class="date">【09-04】</span>
+                                              2014年度上海市服务贸易发展专项资金申 
+                                          </div>
+                                          
+                                          </a></li>
+                                    
+                                  </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-block">
+                            <div class="inner">
+                                <div class="header04">
+                                    <div class="hdinner">
+                                        <div class="h-title01 float-l">
+
+                                            <span class="text">行业动态</span>
+                                        </div>
+                                        <a class="more float-r">MORE</a>
+                                    </div>
+                                </div>
+                                <div class="imgbox">    
+                                    <img src="img/b01.png">
+                                </div>
+                                <div class="list15 list">
+                                  <ul>
+                                      <li><a>
+                                          
+                                          <div class="text">
+                                              <span class="date">【09-04】</span>
+                                              2014年度上海市服务贸易发展专项资金申 
+                                          </div>
+                                          
+                                          </a></li>
+                                      <li><a>
+                                          
+                                          <div class="text">
+                                              <span class="date">【09-04】</span>
+                                              2014年度上海市服务贸易发展专项资金申 
+                                          </div>
+                                          
+                                          </a></li>
+                                      <li><a>
+                                          
+                                          <div class="text">
+                                              <span class="date">【09-04】</span>
+                                              2014年度上海市服务贸易发展专项资金申 
+                                          </div>
+                                          
+                                          </a></li>
+                                      <li><a>
+                                          
+                                          <div class="text">
+                                              <span class="date">【09-04】</span>
+                                              2014年度上海市服务贸易发展专项资金申 
+                                          </div>
+                                          
+                                          </a></li>
+                                      <li><a>
+                                          
+                                          <div class="text">
+                                              <span class="date">【09-04】</span>
+                                              2014年度上海市服务贸易发展专项资金申 
+                                          </div>
+                                          
+                                          </a></li>
+                                    
+                                  </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container1150 friendZone">
+                <div class="header03">
+                    <div class="h-title01 noborder">携手共赢，与众多合作伙伴开拓微店新生态</div>
+                    <div class="makeborder"></div>
+                    <div class="sub-title">
+                        优质企业入驻，你的最优选择
+                    </div>
+                </div>
+                <div class="friendsRow">
+                    <div class="row-block">
+                      <div class="inner">
+                         <div class="box"><img src="img/4.png"></div>
+                      </div>
+                    </div>
+                    <div class="row-block">
+                      <div class="inner">
+                         <div class="box"><img src="img/4.png"></div>
+                      </div>
+                    </div>
+                    <div class="row-block">
+                      <div class="inner">
+                         <div class="box"><img src="img/4.png"></div>
+                      </div>
+                    </div>
+                    <div class="row-block">
+                      <div class="inner">
+                         <div class="box"><img src="img/4.png"></div>
+                      </div>
+                    </div>
+                    <div class="row-block">
+                      <div class="inner">
+                         <div class="box"><img src="img/4.png"></div>
+                      </div>
+                    </div>
+                    <div class="row-block">
+                      <div class="inner">
+                         <div class="box"><img src="img/4.png"></div>
+                      </div>
+                    </div>
+                    <div class="row-block">
+                      <div class="inner">
+                         <div class="box"><img src="img/4.png"></div>
+                      </div>
+                    </div>
+                    <div class="row-block">
+                      <div class="inner">
+                         <div class="box"><img src="img/4.png"></div>
+                      </div>
+                    </div>
+                </div>
+                <div class="align-center">
+                    <a><div class="roundBtn01">
+                      点击查看更多
+                    </div></a>
+                </div>
+            </div>
         </div>
+
    </div>
     
 

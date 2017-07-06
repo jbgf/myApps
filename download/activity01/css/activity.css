@@ -115,7 +115,7 @@ code{ font-family:"Microsoft YaHei"; background:#f9f9f9;}
 .h_version_box p {background:#ebebeb;padding-bottom:20px;text-align:center;}
 .h_version_box p a,.solution_content td a{display:inline-block;*display:inline;zoom:1;height:34px;margin:0 auto; -webkit-box-shadow:0px 5px 0px #d7d7d7; box-shadow:0px 5px 0px #d7d7d7; border-radius:6px;background:#fff;padding:8px 35px; color:#fc5135;}
 
-.h_substation_bg{ background:#fff; margin-top:40px; padding-bottom:40px;}
+.h_substation_bg{ margin-top:40px; padding-bottom:40px;}
 .h_substation h3{ 
     font-size: 220%;
     color: #f56d33; 

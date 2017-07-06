@@ -1,0 +1,101 @@
+@charset "utf-8";
+
+@import "../mySassWare/_variable";
+@import "../mySassWare/_mixin";
+@import "../mySassWare/_function";
+ 
+/*tab04 start*/
+    $tth:38px;
+      .tab04 {
+        height: auto;
+        border-bottom: none;
+
+        text-align: left;
+        .more {@include lheightM($tth);color:#999;}
+      }
+      .tab04 .hd {
+
+       
+        position: relative;
+        height: $tth;
+        color:$gray;
+        text-align: center;
+        padding-bottom: 40px;
+        ul {
+          @extend %clear;
+          display: inline-block;
+          li {
+            float: left;
+            height: $tth;
+            cursor: pointer;
+            font-size: $mediumSize;
+            margin-left: 20px;
+            .hdInner{
+              padding: 8px 18px;
+              position:relative;
+              @include persudo($color:#dbdbdb,$content:"",$position:before,$bg:none){
+                width:100%;
+                height: 100%;
+                top:0;left:0;
+              };
+            }
+            &.on {
+              color: $blue;
+              .hdInner{
+                &:before{@include border($color:$blue);}
+              }
+            }
+          }
+        }
+      }
+      
+      .tab04 .bd{ 
+      $tab04p:20px;  
+        .switch {
+          height: 370px;
+          padding: 10px + $tab04p*2 0px 10px;
+          zoom: 1;
+          background:#f0f0f0;
+        } 
+      }
+      
+/*tab04 end*/
+
+
+$sb03_activeColor:#e5fdff;
+
+$sb03_border:5px;
+$sb03iconfontm:10px;
+
+.sidebarWrapper{padding-top:5px}
+.sideBar03{
+         @include sideBar($height:37px,$width:auto,$gutter:0px,$bgColor:#fff);    
+         .sideBar_li{
+
+            .srow{
+                border-left:$sb03_border solid #fff;
+                padding-right:$sb03_border;
+                height: 100%;
+                color:$gray;
+                @extend %relative;  
+                p{@extend %align-left;}
+                .iconfont{
+                    margin-left:$sb03iconfontm;
+                    margin-right:$sb03iconfontm * 1.5;
+                    font-size: $bigSize*1.1;
+                    @include rel_ajust($value:3px);
+                    color:$blue;
+                }
+            } 
+            &:hover,&.on{
+                background:$sb03_activeColor;
+                .srow{ 
+                    border-left:$sb03_border solid $blue;
+                   
+                }
+
+                
+            }
+           
+         }
+}   

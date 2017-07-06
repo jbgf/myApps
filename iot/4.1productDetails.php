@@ -117,27 +117,8 @@
 
 
                     </div>
-                    <div class="product_article">
+                    <div class="product_article clear">
                         <div class="container1200 relative">
-                            <div class="article_zone">
-                                <div class="news_h">
-                                    <div class="h-title01 float-l">
-                                        <span class="icon"><img src="img/icon_07.png"></span>
-                                        <span class="text">产品简介 </span>
-                                    </div>
-                                </div>
-                                <div class="article">
-                                
-                                    <p class="phase">
-                                        新华网厦门12月5日电（刘默涵）记者今天获悉，2017“物联中国—寻找最具影响力、最具投资价值物联网项目”年度盛典活动将于12月8日在北京正式启动全国招募，并推动香港、北京、深圳、上海、西安、无锡、长沙、济南、重庆、福州等地的区域项目海选。
-                                    </p>
-                                    <p class="phase">本届盛典活动，以“物联中国，共赢未来”为主题，面向大陆及台湾、香港等地区招募物联网项目。活动将以平台思维深入推进物联网产业的创新发展和行业升级，打造成一个融合物联网产业、资本、机构对接的标准系统生态平台，
-                                    </p>
-                                    <p class="phase">根据活动规划，活动正式启动后，主办方将经过海选、专家评审等阶段，选出“百佳十强”物联网项目进入“物联中国”年度盛典，再经专业评委现场检验和把关，接受投企投行项目征询、投资意向举牌。
-                                    </p>
-                                    
-                                </div>
-                            </div>
                             <div class="product_column">
                                 <div class="news_h">
                                     <div class="h-title01 float-l">
@@ -209,6 +190,26 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="article_zone">
+                                <div class="news_h">
+                                    <div class="h-title01 float-l">
+                                        <span class="icon"><img src="img/icon_07.png"></span>
+                                        <span class="text">产品简介 </span>
+                                    </div>
+                                </div>
+                                <div class="article">
+                                
+                                    <p class="phase">
+                                        新华网厦门12月5日电（刘默涵）记者今天获悉，2017“物联中国—寻找最具影响力、最具投资价值物联网项目”年度盛典活动将于12月8日在北京正式启动全国招募，并推动香港、北京、深圳、上海、西安、无锡、长沙、济南、重庆、福州等地的区域项目海选。
+                                    </p>
+                                    <p class="phase">本届盛典活动，以“物联中国，共赢未来”为主题，面向大陆及台湾、香港等地区招募物联网项目。活动将以平台思维深入推进物联网产业的创新发展和行业升级，打造成一个融合物联网产业、资本、机构对接的标准系统生态平台，
+                                    </p>
+                                    <p class="phase">根据活动规划，活动正式启动后，主办方将经过海选、专家评审等阶段，选出“百佳十强”物联网项目进入“物联中国”年度盛典，再经专业评委现场检验和把关，接受投企投行项目征询、投资意向举牌。
+                                    </p>
+                                    
+                                </div>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>

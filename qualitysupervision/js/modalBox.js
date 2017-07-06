@@ -139,18 +139,7 @@
 
       var e = $.Event('shown.bs.modalBox', { relatedTarget: _relatedTarget })
 
-      /*modalBox-dialog*/
-      var m_dialog = that.$dialog;
-      m_dialog.css({
-           "position":"absolute",
-           "margin":"0px",
-           "top": function () {
-               return (that.$element.height() - m_dialog.height()) / 2 + "px";
-           },
-           "left": function () {
-               return (that.$element.width() - m_dialog.width()) / 2 + "px";
-           }
-      })
+      that.centerDialog();
 
       transition ?
         that.$dialog // wait for modalBox to slide in
@@ -162,6 +151,23 @@
         that.$element.trigger('focus').trigger(e)
         
     })
+  }
+
+  modalBox.prototype.centerDialog = function (e) {
+    /*modalBox-dialog*/
+      var m_dialog = that.$dialog;
+      var offsetTop = this.options.offsetTop || 0;
+
+          m_dialog.css({
+               "position":"absolute",
+               "margin":"0px",
+               "top": function () {
+                   return (that.$element.height() - offsetTop - m_dialog.height()) / 2 + "px";
+               },
+               "left": function () {
+                   return (that.$element.width() - m_dialog.width()) / 2 + "px";
+               }
+          })  
   }
 
   modalBox.prototype.hide = function (e) {

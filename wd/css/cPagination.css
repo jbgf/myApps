@@ -11,9 +11,6 @@
 /* color end */
 /* clearfix*/
 /* 闭合子元素的浮动*/
-.pagination02 ul li {
-  text-align: center !important; }
-
 /*----------------------------------------------------- */
 /* setting scss*/
 /*----------------------------------------------------- */
@@ -26,59 +23,5 @@
 /* color end */
 /* clearfix*/
 /* 闭合子元素的浮动*/
-.pagination02 ul li {
-  text-align: center !important; }
 
-.pagination02 {
-  padding: 65px 0px;
-  line-height: 1;
-  zoom: 1; }
-  .pagination02 .numWrapper, .pagination02 ul {
-    display: inline-block;
-    height: 23px;
-    line-height: 23px;
-    font-size: 12px; }
-  .pagination02 .numWrapper .num, .pagination02 .numWrapper .total, .pagination02 .numWrapper .go {
-    float: left; }
-  .pagination02 .num {
-    width: 30px;
-    padding: 0 5px;
-    text-align: center;
-    -webkit-border-radius: 23px;
-    border-radius: 23px;
-    height: 23px;
-    line-height: 23px;
-    border: 1px solid #ddd; }
-  .pagination02 .go {
-    width: 28px;
-    height: 28px;
-    line-height: 28px;
-    -webkit-border-radius: 28px;
-    border-radius: 28px;
-    background: #fff;
-    display: inline-block;
-    margin-left: 15px;
-    background: url(../img/prighta.png) center center no-repeat #f2f2f3; }
-  .pagination02 ul li {
-    cursor: pointer;
-    display: block;
-    float: left; }
-  .pagination02 ul li {
-    margin: 0px 5px; }
-  .pagination02 ul li a {
-    display: block;
-    width: 23px;
-    height: 23px;
-    line-height: 23px;
-    -webkit-border-radius: 23px;
-    border-radius: 23px;
-    border: 1px solid #dddddd;
-    background: #f2f2f3; }
-  .pagination02 ul li.left a,
-  .pagination02 ul li.right a,
-  .pagination02 ul li.last a {
-    width: auto;
-    padding: 0px 5px; }
-  .pagination02 ul li.on a {
-    color: white;
-    background: #218ad5; }
+/*# sourceMappingURL=maps/cPagination.css.map */

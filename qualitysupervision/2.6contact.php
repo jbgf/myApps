@@ -92,6 +92,7 @@
                                     <div class="border">
                                         <i class="fa fa-map-marker" aria-hidden="true"></i>
                                         <p>Fuzhou Base</p>
+                                        <p class="addInfo"><span style="font-family: arial, helvetica, sans-serif; font-size: 16px;">E-mail:rz@fqii.cn</span></p>
                                         <p class="addInfo">
                                             ADD
                                             <br/> Hill Road,No. 121,Yang Qiao Road, Hongshan Town,Fuzhou City 
@@ -196,7 +197,7 @@
                                             width:"21px",                 //宽
                                             textAlign:"center",            //文字水平居中显示
                                             lineHeight:"1",            //行高，文字垂直居中显示
-                                            background:"url(img/marker.png) no-repeat",    //背景图片，这是房产标注的关键！
+                                            /*background:"url(img/marker.png) no-repeat", */   
                                             cursor:"pointer"
                                         });  
                                       map.addOverlay(myLabel);
@@ -230,6 +231,12 @@
                                     $(this).toggleClass("active");
                                 })
                                 
+                                /*三个地址box一样高*/
+                                var max = 0;
+                                $("#addRow .border").each(function(i,e){
+                                    var height = $(e).height();
+                                        height >max ? max = height : "";
+                                }).height(max);
                           </script>
 
                         </div>

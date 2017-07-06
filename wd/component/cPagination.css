@@ -1,0 +1,143 @@
+@charset "UTF-8";
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.pagination02 ul li, .pagination03 ul li {
+  text-align: center !important; }
+
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.pagination02 ul li, .pagination03 ul li {
+  text-align: center !important; }
+
+.pagination02 {
+  padding: 65px 0px;
+  line-height: 1;
+  zoom: 1; }
+  .pagination02 .numWrapper, .pagination02 ul {
+    display: inline-block;
+    height: 23px;
+    line-height: 23px;
+    font-size: 12px; }
+  .pagination02 .numWrapper .num, .pagination02 .numWrapper .total, .pagination02 .numWrapper .go {
+    float: left; }
+  .pagination02 .num {
+    width: 30px;
+    padding: 0 5px;
+    text-align: center;
+    -webkit-border-radius: 23px;
+    border-radius: 23px;
+    height: 23px;
+    line-height: 23px;
+    border: 1px solid #ddd; }
+  .pagination02 .go {
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    -webkit-border-radius: 28px;
+    border-radius: 28px;
+    background: #fff;
+    display: inline-block;
+    margin-left: 15px;
+    background: url(../img/prighta.png) center center no-repeat #f2f2f3; }
+  .pagination02 ul li {
+    cursor: pointer;
+    display: block;
+    float: left; }
+  .pagination02 ul li {
+    margin: 0px 5px; }
+  .pagination02 ul li a {
+    display: block;
+    width: 23px;
+    height: 23px;
+    line-height: 23px;
+    -webkit-border-radius: 23px;
+    border-radius: 23px;
+    border: 1px solid #dddddd;
+    background: #f2f2f3; }
+  .pagination02 ul li.left a,
+  .pagination02 ul li.right a,
+  .pagination02 ul li.last a {
+    width: auto;
+    padding: 0px 5px; }
+  .pagination02 ul li.on a {
+    color: white;
+    background: #218ad5; }
+
+.pagination03 {
+  line-height: 1;
+  zoom: 1;
+  background: #e1ebf6;
+  padding: 15px 17.5px; }
+  .pagination03 .numWrapper, .pagination03 ul {
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px; }
+  .pagination03 .numWrapper .num, .pagination03 .numWrapper .text, .pagination03 .numWrapper .go {
+    float: left; }
+  .pagination03 .num {
+    width: 30px;
+    padding: 0 8px;
+    text-align: center;
+    height: 20px;
+    line-height: 20px;
+    margin: 0 3px; }
+  .pagination03 .go {
+    display: inline-block;
+    margin-left: 15px;
+    background: #218ad5;
+    color: #fff;
+    /* padding: 0px $p03plr; */
+    width: 45px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px; }
+  .pagination03 .pinfo {
+    float: left;
+    height: 20px;
+    line-height: 20px; }
+    .pagination03 .pinfo span {
+      padding: 0 8px; }
+    .pagination03 .pinfo .r {
+      color: #ec5369; }
+    .pagination03 .pinfo .b {
+      color: #218ad5; }
+  .pagination03 ul li {
+    cursor: pointer;
+    display: block;
+    float: left;
+    margin: 0px 3px; }
+    .pagination03 ul li.pgray a {
+      background: #96aac1; }
+    .pagination03 ul li a {
+      display: block;
+      padding: 0px 8px;
+      height: 20px;
+      line-height: 20px;
+      color: #fff;
+      background: #218ad5; }
+    .pagination03 ul li.on a {
+      color: white;
+      background: #218ad5; }
+
+/*# sourceMappingURL=maps/cPagination.css.map */

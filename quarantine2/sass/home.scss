@@ -2041,4 +2041,17 @@ $pwr2:70,370,370;
 }
 
 
+#show_newsTW table .twoCol .disabled{
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+     
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+  }
 

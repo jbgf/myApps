@@ -87,8 +87,11 @@ input[type="checkbox"]{outline:none;}
 .heavy-red{color:#ff8d99;}
 .black{color:#333;}
 
+.grayBg{
+  background:$little-gray;
+}
 .bg-lightGray{@extend %bg-lightGray;}
-.bg-light-gray02{background-color: #f0f0f0;}
+.bg-light-gray02{background: $little-gray;}
 .bg-superGray{@extend %bg-superGray;}
 .bg-gray{background:#e1e9f6;}
 .bg-orange{background:$orange!important;}
@@ -106,7 +109,7 @@ input[type="checkbox"]{outline:none;}
 
 
 .middleTable {
-  display: table; }
+  display: table; width:100%;}
 
 .middleTable .middleRow {
   display: table-cell;

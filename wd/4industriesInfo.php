@@ -4,11 +4,10 @@
           <div style="padding-top:70px;">
                 <div class="news_h02">
                     <div class="h-title01 float-l">
-                        
-                        <span class="text">资讯中心 </span>
+                        <span class="text">资讯中心</span>
                     </div>
                     <span class="r-link ">
-                        <a class="on">行业动态        </a>
+                        <a class="on">行业动态</a>
                         <a>产品动态</a>
                         <a>最新活动</a>
                     </span>

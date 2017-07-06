@@ -1253,9 +1253,11 @@ $wr:180,180,370;
 
 #ptRow{
     $ptsize:6px;
-    @include rowBeta($num:6,$outer_gutter:3px,$plusM:true,$height:false){
-        
+    @extend %align-center;
+    @include inlineRow($num:6,$outer_gutter:3px,$plusM:true,$height:false){
+         
     };
+     
     @extend %overflow;
     padding-bottom:$ptsize;
     .border{
@@ -1290,15 +1292,29 @@ $wr:180,180,370;
     }
     p{@extend %word-break;}
     .t{     
-        @extend %align-center;padding-top:45px;color:$blue;font-size:$bigSize*1.3;
+        @extend %align-center;
+        padding-top:45px;
+        padding-bottom:25px;
+        margin-bottom: 30px;
+        color:$blue;font-size:$bigSize*1.3;
         @extend %uppercase;
+        @include persudo($color:none,$content:"",$position:before,$bg:none){
+            width:56px;
+            height: 2px;
+            background:#e1e1e1;
+            bottom:0; 
+            left:50%;
+            -webkit-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                    transform: translateX(-50%);
+        };
     }
-    .b{
+    /* .b{
         @include makeBorder($width:56px,$height:2px,$color:#e1e1e1){
             
             margin:15px auto 30px;
         };
-    }
+    } */
     .contentW{padding:0 23px}
     .ptText{padding-bottom:18px;}
     .ptImg{@extend %align-center;}
@@ -1325,13 +1341,13 @@ $wr:180,180,370;
 
 
 .cbWrapper{
-    width:80%;
+    width:810px;
     @extend %mar-center;
 }
 #cbRow{
     @extend %relative;
 
-    @include rowBeta($num:3,$outer_gutter:35px,$plusM:true,$height:false){
+    @include rowBeta($num:1,$outer_gutter:0,$plusM:false,$height:false){
         @extend %align-center;
     };
     .border{

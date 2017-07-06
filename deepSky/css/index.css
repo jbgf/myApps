@@ -227,6 +227,7 @@ img {
     left: -9999px
 }
 .page_1 .page_bg,
+.page_2 .page_bg,
 .page_3 .page_bg {
   position: absolute;
   /*top: 50%;
@@ -446,10 +447,13 @@ img {
    opacity: 0;
 }
 
+.page_2.show .page_bg{
+            -webkit-animation:p3bg_effect 30s both linear;
+                    animation:p3bg_effect 30s both linear;
+}
 .page_3.show .page_bg{
-   
-            -webkit-animation:opc_effect 2.5s both linear;
-                    animation:opc_effect 2.5s both linear;
+            -webkit-animation:opc_effect 2.5s both linear,p3bg_effect 30s both linear;
+                    animation:opc_effect 2.5s both linear,p3bg_effect 30s both linear;
 }
 .page_4.show .page_bg{
             -webkit-animation:opc_effect 2.5s both linear;

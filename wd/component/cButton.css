@@ -1,0 +1,58 @@
+@charset "UTF-8";
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.btnGroup .button {
+  text-align: center !important; }
+
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.btnGroup .button {
+  text-align: center !important; }
+
+.roundBtn01 {
+  display: inline-block;
+  color: #218ad5;
+  border: 2px solid #218ad5;
+  -webkit-border-radius: 35px;
+  border-radius: 35px;
+  padding: 8.75px 35px;
+  font-size: 15.6px; }
+
+.btnGroup {
+  text-align: center; }
+  .btnGroup .button {
+    display: block;
+    height: 37px;
+    line-height: 37px;
+    width: 110px !important;
+    background: #eb6326;
+    color: #fff;
+    display: inline-block;
+    border: 1px solid #eb6326; }
+    .btnGroup .button {
+      margin-bottom: 10px; }
+    .btnGroup .button.white-bg {
+      background: #fff;
+      color: #eb6326; }
+
+/*# sourceMappingURL=maps/cButton.css.map */

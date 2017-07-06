@@ -1,66 +1,64 @@
 /*加载公共部分*/
-		function commonHead(callback){
-		    $.ajax({
-		        url:"common/common.html",
-		        type:"GET",
-		        success:function(data){
+    function commonHead(callback){
+        $.ajax({
+            url:"common/common.html",
+            type:"GET",
+            success:function(data){
 
-		            var htag = $(data).find("#headTag").html(),
-		            	header = $(data).find("#header"),
-		            	footer = $(data).find("#footer");
-		            $("head").append(htag);
-		            $('.headerDiv').append(header);
-		            $('.footerDiv').append(footer);
-		            setTimeout(callback,0);
-		        }
-		    });
-		}
+                var htag = $(data).find("#headTag").html(),
+                  header = $(data).find("#header"),
+                  footer = $(data).find("#footer");
+                $("head").append(htag);
+                $('.headerDiv').append(header);
+                $('.footerDiv').append(footer);
+                setTimeout(callback,0);
+            }
+        });
+    }
 /*加载公共部分*/
 $(function(){
-	var c = function(){
+  var c = function(){
 
-		(function slider(){
-			      	$(".slideBox01").length > 0 && jQuery(".slideBox01").slide({mainCell:".bd ul",autoPlay:true,effect:"leftLoop",easing:"swing",interTime:"3500"});
-		})();
+    (function slider(){
+              $(".slideBox01").length > 0 && jQuery(".slideBox01").slide({mainCell:".bd ul",autoPlay:true,effect:"leftLoop",easing:"swing",interTime:"3500"});
+    })();
 
-		/* login row slide start */
-		(function(){
-	            $(".picScroll04").length > 0 && jQuery(".picScroll04").slide({mainCell:".bd ul",autoPlay:true,effect:"leftLoop",easing:"swing",interTime:"3500"});  
-		})();
-		/* login row slide end */
-	};
-	c();
+    /* login row slide start */
+    (function(){
+              $(".picScroll04").length > 0 && jQuery(".picScroll04").slide({mainCell:".bd ul",autoPlay:true,effect:"leftLoop",easing:"swing",interTime:"3500"});  
+    })();
+    /* login row slide end */
+  };
+  c();
 
-	/*高度统一的问题*/
-	var _config = [
-		{selector:".iot_content_row",children:".bd img",class0:".height_d",class1:".height_f"},
-		/*{selector:"#rightSideBar_wrapper",children:"",class0:".rightSide",class1:".leftContent"},	*/
-		{selector:".product_article",children:"",class0:".article_zone",class1:".product_column"}	
-	];
-	function equalHeight(options){
-		$(options).each(function(i,e){
-			if($(e.selector).length == 0){return };
-			$(e.selector).each(function(index,element){
-				var height_d = $(this).find(e.class0),
-					height_d_h = height_d.height();
-				var height_f = $(this).find(e.class1),
-					height_f_h = height_f.height();
-				var b = Math.max(height_d_h,height_f_h);
-					height_d.height(b);
-					height_f.height(b);
-				
-				if(e.children !="")height_f.find(e.children).height(height_d_h);
-			})
-		})
+  /*高度统一的问题*/
+  var _config = [
+    {selector:".iot_content_row",children:".bd img",class0:".height_d",class1:".height_f"}
+  ];
+  function equalHeight(options){
+    $(options).each(function(i,e){
+      if($(e.selector).length == 0){return };
+      $(e.selector).each(function(index,element){
+        var height_d = $(this).find(e.class0),
+          height_d_h = height_d.height();
+        var height_f = $(this).find(e.class1),
+          height_f_h = height_f.height();
+        var b = Math.max(height_d_h,height_f_h);
+          height_d.height(b);
+          height_f.height(b);
+        
+        if(e.children !="")height_f.find(e.children).height(height_d_h);
+      })
+    })
 
-	}
-	setTimeout(function(){equalHeight(_config)},200);
+  }
+  setTimeout(function(){equalHeight(_config)},200);
 
 })
 
 
 function showMessage(msg){
-	alert(msg)
+  alert(msg)
 }
 
 +function ($) {

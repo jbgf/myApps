@@ -65,7 +65,8 @@
   line-height: 100%;
   overflow: hidden;
   white-space: nowrap;
-  text-overflow: ellipsis; }
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis; }
 
 /* clearfix*/
 /* 闭合子元素的浮动*/
@@ -92,7 +93,7 @@
 .input-set .button img, .navbar-line02 .navbar-block a.navLink, .sbcontent02 .a02-btn, .iot_content_row, .row02 .slideTxtBox li.switch-li, .row02 .switch-li .news-list01 li, .news-list01 a, .iot_content_row.row02 .iot_right .serviceBtn i, .banner_row, .application_zone .cell-r .row .row-block, .application_zone .cell-r .row-block .rb_box .imgbox, .iot_content_row.row03 .slideTxtBox li.switch-li, .creatorZone, .creator_slide, .creator_slide .creator_inner_slide, .creator_slide .gallary .row .row-block, .cooperate_link .row .row-block, .cooperate_link .row-block .inner, .fridend_link, .fridend_link .right a, .footer .foot, .footer .foot .linkZone .row .row-block, .p_banner .banner_inner .serviceBtn.bg-orange i, .p_banner .banner_inner .serviceBtn.bg-l-blue i, .p_banner .banner_inner .serviceBtn, .middle_part, .middle_part #leftSideBar_wrapper, .leftSide .serviceBtn i, .rightSide .serviceBtn i, .sideBar .sideBar_li p, .a-title-header02 .articleInf span, .right_linkBar_wrapper .right_linkBar_up, .products_catagory .catagory_wrapper, .products_catagory .catagory_wrapper .catagory-list .row .row-block, .products_catagory .catagory_item .catagory_item_ul li, .linkBar_ul li, .brand_img, .product_box .row .row-block, .product_innerbox .textBox .textLine, .productSlide_wrapper .container1200, .product_slide .inner, .product_slide .product_info, .product_slide .product_info .product_gallary, .product_slide .product_info .product_gallary .gallary .row .row-block, .company_brand .brand_inner .cb_wrapper, .company_brand .brand_inner .company_brand, .company_brand .brand_inner .adr p, .sideBar02 .list.bottom .t01, .sideBar02 .list.bottom .list_li:hover .t01, .sideBar02 .list.bottom .list_li.on .t01, .cnews_list .pt_line, .cnews_list .text, .wanted .wanted_gallary, .wanted .wanted_gallary .bottom_gallary .serviceBtn, .wanted .wanted_gallary .bottom_gallary .serviceBtn .w_inner .pt_line, .wanted .wanted_gallary .bottom_gallary .serviceBtn .w_inner .text, .wanted .wanted_gallary .bottom_gallary .serviceBtn .w_inner .text .title, .p_navbar .nav .pnav_li span, .p_navbar.navbar03 .pnav_li span, .p_navbar.navbar04 .pnav_li span, .p_content .news_h .rangeTag a:hover, .p_content .news_h .rangeTag a.on, .p_content .news_h .text, .p_news .pt_line, .p_news .text, .p_news .text .leftContent, .avatarWrapper .avatar, .avatarWrapper .avatar01, .avatarWrapper .avatar02, .avatarWrapper .avatar03, .bountyForm.form03 .range, .ul02 .pnav_li span, .wanted_details .wd_table .wd_head .details .inner .info_row .row .row-block, .cmpp .pt_line, .cmpp .text, .cmpp .avatar, .get_ic .row .row-block, .member_url .row .row-block, .solution_form .user, .solution_form .on .user, .solution_tab .row .row-block, .solution_tab .inner.new, .news-list02 .divider, .news-list02 .left, .creator_row .pt_line, .creator_row .text, .zone_row .pt_line, .zone_row .text, .auditRow .row .row-block, .affix_p01 .msg.new, .sDetailsRow .pt_line, .sDetailsRow .text, .sDetailsRow.sr01 .pt_line, .sDetailsRow.sr01 .text, .sDetailsRow .text .sinfo, .sideBar03 .sideBar_li .srow, .project_wrapper .hasTitle {
   position: relative; }
 
-.banner_row img, .brand_img img, .company_brand .brand_inner .cb_wrapper img, .company_brand .brand_inner .company_brand img, .company_brand .brand_inner .company_brand, .avatarWrapper .avatar img, .avatarWrapper .avatar01 img, .avatarWrapper .avatar02 img, .avatarWrapper .avatar03 img, .cmpp .avatar img, .solution_form .user img, .solution_form .on .user img, .p_news .tagLine, .iot_left, .textTab01, .textTab02, .creator_slide .direction .directionBtn, .fridend_link .left, .footer .foot .qrZone, .footer .foot .qrZone .left, .sideBar .sideBar_li .caret, .right_linkBar_wrapper .right_linkBar, .products_catagory .catagory_wrapper .title, .product_innerbox .textBox .textLine .name, .product_slide .product_info, .product_slide .product_info .product_gallary, .product_slide .product_info .product_gallary .direction .directionBtn, .company_brand, .company_brand .brand_inner .adr .l, .product_article .product_column, .cnews_list .pic, .wanted .wanted_gallary .bottom_gallary, .wanted .wanted_gallary .bottom_gallary .serviceBtn .w_inner, .wanted .wanted_gallary .bottom_gallary .serviceBtn .w_inner .pic, .p_navbar .title01, .p_news .pic, .p_news .text .rightAvatar, .cmpp .pic, .cmpp .c_picBox, .creator_row .pic, .zone_row .pic, .sDetailsRow .pic, .sDetailsRow.sr01 .pic, .sideBar03 .sideBar_li:hover .caret, .sideBar03 .sideBar_li.on .caret {
+.banner_row img, .brand_img img, .company_brand .brand_inner .cb_wrapper img, .company_brand .brand_inner .company_brand img, .company_brand .brand_inner .company_brand, .avatarWrapper .avatar img, .avatarWrapper .avatar01 img, .avatarWrapper .avatar02 img, .avatarWrapper .avatar03 img, .cmpp .avatar img, .solution_form .user img, .solution_form .on .user img, .p_news .tagLine, .iot_left, .textTab01, .textTab02, .creator_slide .direction .directionBtn, .fridend_link .left, .footer .foot .qrZone, .footer .foot .qrZone .left, .sideBar .sideBar_li .caret, .right_linkBar_wrapper .right_linkBar, .products_catagory .catagory_wrapper .title, .product_innerbox .textBox .textLine .name, .product_slide .product_info, .product_slide .product_info .product_gallary, .product_slide .product_info .product_gallary .direction .directionBtn, .company_brand, .company_brand .brand_inner .adr .l, .cnews_list .pic, .wanted .wanted_gallary .bottom_gallary, .wanted .wanted_gallary .bottom_gallary .serviceBtn .w_inner, .wanted .wanted_gallary .bottom_gallary .serviceBtn .w_inner .pic, .p_navbar .title01, .p_news .pic, .p_news .text .rightAvatar, .cmpp .pic, .cmpp .c_picBox, .creator_row .pic, .zone_row .pic, .sDetailsRow .pic, .sDetailsRow.sr01 .pic, .sideBar03 .sideBar_li:hover .caret, .sideBar03 .sideBar_li.on .caret {
   position: absolute; }
 
 .banner_row img {
@@ -207,7 +208,8 @@
   line-height: 100%;
   overflow: hidden;
   white-space: nowrap;
-  text-overflow: ellipsis; }
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis; }
 
 /* clearfix*/
 /* 闭合子元素的浮动*/
@@ -234,7 +236,8 @@
 .input-set .button img, .navbar-line02 .navbar-block a.navLink, .sbcontent02 .a02-btn, .iot_content_row, .row02 .slideTxtBox li.switch-li, .row02 .switch-li .news-list01 li, .news-list01 a, .iot_content_row.row02 .iot_right .serviceBtn i, .banner_row, .application_zone .cell-r .row .row-block, .application_zone .cell-r .row-block .rb_box .imgbox, .iot_content_row.row03 .slideTxtBox li.switch-li, .creatorZone, .creator_slide, .creator_slide .creator_inner_slide, .creator_slide .gallary .row .row-block, .cooperate_link .row .row-block, .cooperate_link .row-block .inner, .fridend_link, .fridend_link .right a, .footer .foot, .footer .foot .linkZone .row .row-block, .p_banner .banner_inner .serviceBtn.bg-orange i, .p_banner .banner_inner .serviceBtn.bg-l-blue i, .p_banner .banner_inner .serviceBtn, .middle_part, .middle_part #leftSideBar_wrapper, .leftSide .serviceBtn i, .rightSide .serviceBtn i, .sideBar .sideBar_li p, .a-title-header02 .articleInf span, .right_linkBar_wrapper .right_linkBar_up, .products_catagory .catagory_wrapper, .products_catagory .catagory_wrapper .catagory-list .row .row-block, .products_catagory .catagory_item .catagory_item_ul li, .linkBar_ul li, .brand_img, .product_box .row .row-block, .product_innerbox .textBox .textLine, .productSlide_wrapper .container1200, .product_slide .inner, .product_slide .product_info, .product_slide .product_info .product_gallary, .product_slide .product_info .product_gallary .gallary .row .row-block, .company_brand .brand_inner .cb_wrapper, .company_brand .brand_inner .company_brand, .company_brand .brand_inner .adr p, .sideBar02 .list.bottom .t01, .sideBar02 .list.bottom .list_li:hover .t01, .sideBar02 .list.bottom .list_li.on .t01, .cnews_list .pt_line, .cnews_list .text, .wanted .wanted_gallary, .wanted .wanted_gallary .bottom_gallary .serviceBtn, .wanted .wanted_gallary .bottom_gallary .serviceBtn .w_inner .pt_line, .wanted .wanted_gallary .bottom_gallary .serviceBtn .w_inner .text, .wanted .wanted_gallary .bottom_gallary .serviceBtn .w_inner .text .title, .p_navbar .nav .pnav_li span, .p_navbar.navbar03 .pnav_li span, .p_navbar.navbar04 .pnav_li span, .p_content .news_h .rangeTag a:hover, .p_content .news_h .rangeTag a.on, .p_content .news_h .text, .p_news .pt_line, .p_news .text, .p_news .text .leftContent, .avatarWrapper .avatar, .avatarWrapper .avatar01, .avatarWrapper .avatar02, .avatarWrapper .avatar03, .bountyForm.form03 .range, .ul02 .pnav_li span, .wanted_details .wd_table .wd_head .details .inner .info_row .row .row-block, .cmpp .pt_line, .cmpp .text, .cmpp .avatar, .get_ic .row .row-block, .member_url .row .row-block, .solution_form .user, .solution_form .on .user, .solution_tab .row .row-block, .solution_tab .inner.new, .news-list02 .divider, .news-list02 .left, .creator_row .pt_line, .creator_row .text, .zone_row .pt_line, .zone_row .text, .auditRow .row .row-block, .affix_p01 .msg.new, .sDetailsRow .pt_line, .sDetailsRow .text, .sDetailsRow.sr01 .pt_line, .sDetailsRow.sr01 .text, .sDetailsRow .text .sinfo, .sideBar03 .sideBar_li .srow, .project_wrapper .hasTitle {
   position: relative; }
 
-.banner_row img, .brand_img img, .company_brand .brand_inner .cb_wrapper img, .company_brand .brand_inner .company_brand img, .company_brand .brand_inner .company_brand, .avatarWrapper .avatar img, .avatarWrapper .avatar01 img, .avatarWrapper .avatar02 img, .avatarWrapper .avatar03 img, .cmpp .avatar img, .solution_form .user img, .solution_form .on .user img, .p_news .tagLine, .iot_left, .textTab01, .textTab02, .creator_slide .direction .directionBtn, .fridend_link .left, .footer .foot .qrZone, .footer .foot .qrZone .left, .sideBar .sideBar_li .caret, .right_linkBar_wrapper .right_linkBar, .products_catagory .catagory_wrapper .title, .product_innerbox .textBox .textLine .name, .product_slide .product_info, .product_slide .product_info .product_gallary, .product_slide .product_info .product_gallary .direction .directionBtn, .company_brand, .company_brand .brand_inner .adr .l, .product_article .product_column, .cnews_list .pic, .wanted .wanted_gallary .bottom_gallary, .wanted .wanted_gallary .bottom_gallary .serviceBtn .w_inner, .wanted .wanted_gallary .bottom_gallary .serviceBtn .w_inner .pic, .p_navbar .title01, .p_news .pic, .p_news .text .rightAvatar, .cmpp .pic, .cmpp .c_picBox, .creator_row .pic, .zone_row .pic, .sDetailsRow .pic, .sDetailsRow.sr01 .pic, .sideBar03 .sideBar_li:hover .caret, .sideBar03 .sideBar_li.on .caret {
+.banner_row img, .brand_img img, .company_brand .brand_inner .cb_wrapper img, .company_brand .brand_inner .company_brand img, .company_brand .brand_inner .company_brand, .avatarWrapper .avatar img, .avatarWrapper .avatar01 img, .avatarWrapper .avatar02 img, .avatarWrapper .avatar03 img, .cmpp .avatar img, .solution_form .user img, .solution_form .on .user img, .p_news .tagLine, .iot_left, .textTab01, .textTab02, .creator_slide .direction .directionBtn, .fridend_link .left, .footer .foot .qrZone, .footer .foot .qrZone .left, .sideBar .sideBar_li .caret, .right_linkBar_wrapper .right_linkBar, .products_catagory .catagory_wrapper .title, .product_innerbox .textBox .textLine .name, .product_slide .product_info, .product_slide .product_info .product_gallary, .product_slide .product_info .product_gallary .direction .directionBtn, .company_brand, .company_brand .brand_inner .adr .l, 
+.cnews_list .pic, .wanted .wanted_gallary .bottom_gallary, .wanted .wanted_gallary .bottom_gallary .serviceBtn .w_inner, .wanted .wanted_gallary .bottom_gallary .serviceBtn .w_inner .pic, .p_navbar .title01, .p_news .pic, .p_news .text .rightAvatar, .cmpp .pic, .cmpp .c_picBox, .creator_row .pic, .zone_row .pic, .sDetailsRow .pic, .sDetailsRow.sr01 .pic, .sideBar03 .sideBar_li:hover .caret, .sideBar03 .sideBar_li.on .caret {
   position: absolute; }
 
 .banner_row img {
@@ -373,6 +376,7 @@
           height: 0;
           vertical-align: middle;
           -webkit-transition: all 0.1s;
+          -o-transition: all 0.1s;
           transition: all 0.1s;
           margin-left: 10px; }
       .logoRow .input_group .dropDownMenu ul {
@@ -521,7 +525,8 @@
   margin-right: 12px;
   width: 9px;
   height: 9px;
-  border-radius: 50%;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
   line-height: 14px;
   text-align: center;
   background: none;
@@ -627,12 +632,14 @@
   margin-right: 12px;
   width: 16px;
   height: 16px;
-  border-radius: 50%;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
   line-height: 14px;
   text-align: center;
   background: #1a60cb;
   cursor: pointer;
-  border-radius: 0;
+  -webkit-border-radius: 0;
+          border-radius: 0;
   color: #fff;
   font-size: 12px; }
   .slideBox03 .hd ul li.on {
@@ -657,7 +664,7 @@
   width: 100%;
   display: block; }
 
-/* slide end	*/
+/* slide end  */
 /* loginForm start */
 .loginZone {
   height: 100%;
@@ -680,7 +687,8 @@
     width: 265px;
     height: 40px;
     line-height: 40px;
-    border-radius: 25px;
+    -webkit-border-radius: 25px;
+            border-radius: 25px;
     margin-top: 20px; }
   .loginZone .logOut {
     padding: 10px; }
@@ -701,17 +709,19 @@
 
 .loginZone .login-form {
   text-align: left;
-  border-radius: 3px;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
   width: 292px;
   /* .uname,.pword {
-			   		width:($width)-$login-input-gutter*2;} */
+            width:($width)-$login-input-gutter*2;} */
   height: 100%; }
   .loginZone .login-form .input-base {
     display: block;
     width: 100%;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    border-radius: 5px; }
+    -webkit-border-radius: 5px;
+            border-radius: 5px; }
   .loginZone .login-form .form-row {
     margin-top: 15px; }
     .loginZone .login-form .form-row input.input-base {
@@ -753,7 +763,8 @@
   border-color: #1a7bb9;
   color: white;
   height: 40px;
-  border-radius: 25px;
+  -webkit-border-radius: 25px;
+          border-radius: 25px;
   font-size: 15.6px;
   font-weight: 700; }
 
@@ -769,7 +780,7 @@
     .login_banner .loginZone .login-form {
       width: 330px;
       /* .uname,.pword {
-			   		width:($width)-$login-input-gutter*2;} */ }
+            width:($width)-$login-input-gutter*2;} */ }
 
 /* login row slide end */
 /* news line start */
@@ -874,7 +885,8 @@
       width: 80%; }
     .news-list01 a .text {
       display: block;
-      text-overflow: ellipsis;
+      -o-text-overflow: ellipsis;
+         text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden;
       padding-left: 15px; }
@@ -956,7 +968,8 @@
     width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
-    border-radius: 6px; }
+    -webkit-border-radius: 6px;
+            border-radius: 6px; }
     .application_zone .hd li a {
       display: block; }
     .application_zone .hd li.on {
@@ -1032,8 +1045,8 @@
   padding-bottom: 15px; }
 
 /* .row03 .news-list01{
-		@extend %text-pr;
-	} */
+    @extend %text-pr;
+  } */
 #textTab03 .news-list01 a.divider {
   width: 65%; }
 
@@ -1075,7 +1088,8 @@
       margin-left: -30px; }
     .creatorZone .creator_title li {
       color: black;
-      border-radius: 6px;
+      -webkit-border-radius: 6px;
+              border-radius: 6px;
       padding: 10px;
       margin-left: 30px; }
       .creatorZone .creator_title li a {
@@ -1168,20 +1182,20 @@
   /* @include persudo($color:none,$content:" ",$position:before,$bg:none) */
   overflow: hidden;
   /* &:before{
-			width:100%;
-			height: 100%;
-		} */ }
+      width:100%;
+      height: 100%;
+    } */ }
   .cooperate_link .row-block:hover {
     /* &:before{
-			
-			  		background-image: -webkit-gradient(linear,left top, left bottom,color-stop(0, #33deb4),to(#19bbff));
-			  		background-image: -webkit-linear-gradient(top,#33deb4 0,#19bbff 100%);
-			  		background-image: linear-gradient(to bottom,#33deb4 0,#19bbff 100%);	
-			  	}
-			  	.inner{
-			  		-webkit-animation: $timehove linear alternate slideDown;
-			  	    animation: $timehove linear alternate slideDown;	
-			  	} */ }
+      
+            background-image: -webkit-gradient(linear,left top, left bottom,color-stop(0, #33deb4),to(#19bbff));
+            background-image: -webkit-linear-gradient(top,#33deb4 0,#19bbff 100%);
+            background-image: linear-gradient(to bottom,#33deb4 0,#19bbff 100%);  
+          }
+          .inner{
+            -webkit-animation: $timehove linear alternate slideDown;
+              animation: $timehove linear alternate slideDown;  
+          } */ }
     .cooperate_link .row-block:hover .inner img {
       -webkit-transform: scale(1);
       -ms-transform: scale(1);
@@ -1190,19 +1204,20 @@
     height: 130px;
     display: block;
     /* @keyframes slideDown{
-			  	from { 
-			  		-webkit-transform: translateY(-100%); 
-			  		        transform: translateY(-100%)
-			  	}
-			  	to{
-			  		-webkit-transform: translateY(0);
-			  		        transform: translateY(0)
-			  	}	
-			  } */
+          from { 
+            -webkit-transform: translateY(-100%); 
+                    transform: translateY(-100%)
+          }
+          to{
+            -webkit-transform: translateY(0);
+                    transform: translateY(0)
+          } 
+        } */
     border-right: 1px solid #ddd;
     border-bottom: 1px solid #ddd; }
     .cooperate_link .row-block .inner img {
       -webkit-transition: all 0.2s;
+      -o-transition: all 0.2s;
       transition: all 0.2s;
       -webkit-transform: scale(0.9);
       -ms-transform: scale(0.9);
@@ -1229,7 +1244,8 @@
       margin-right: 12px;
       width: 16px;
       height: 16px;
-      border-radius: 50%;
+      -webkit-border-radius: 50%;
+              border-radius: 50%;
       line-height: 14px;
       text-align: center;
       background: #e0e0e0;
@@ -1629,7 +1645,8 @@
   display: block;
   padding: 0px 10px;
   border: 1px solid #dddddd;
-  border-radius: 5px; }
+  -webkit-border-radius: 5px;
+          border-radius: 5px; }
 
 .r-article02 {
   padding: 23px 0px 23px 15px;
@@ -1685,7 +1702,8 @@
       margin-right: 0; }
     .products_catagory .catagory_wrapper .catagory-list li:hover, .products_catagory .catagory_wrapper .catagory-list li.on {
       background: url(../img/icon_tips.png) 0 75% no-repeat;
-      background-size: 100% 33px; }
+      -webkit-background-size: 100% 33px;
+              background-size: 100% 33px; }
       .products_catagory .catagory_wrapper .catagory-list li:hover .inner, .products_catagory .catagory_wrapper .catagory-list li.on .inner {
         color: #006acf; }
     .products_catagory .catagory_wrapper .catagory-list .inner {
@@ -1730,9 +1748,11 @@
     width: 80px;
     height: 80px;
     background: #fff;
-    border-radius: 80px;
+    -webkit-border-radius: 80px;
+            border-radius: 80px;
     border: 1px solid #ddd;
-    border-radius: 0; }
+    -webkit-border-radius: 0;
+            border-radius: 0; }
   .linkBar_ul li .brand_img {
     overflow: hidden; }
     .linkBar_ul li .brand_img img {
@@ -1866,19 +1886,19 @@
       .product_slide .product_info .product_gallary .inner {
         height: 60px;
         /* opacity:.8;
-				&:hover{ 
-					opacity:1;
-					img{
-						
-						        -webkit-transform: scale(1.01, 1.1);
-						
-						            -ms-transform: scale(1.01, 1.1);
-						
-						                transform: scale(1.01, 1.1);
-    					-webkit-transition: .3s transform;
-    					transition: .3s transform;
-					}
-				} */ }
+        &:hover{ 
+          opacity:1;
+          img{
+            
+                    -webkit-transform: scale(1.01, 1.1);
+            
+                        -ms-transform: scale(1.01, 1.1);
+            
+                            transform: scale(1.01, 1.1);
+              -webkit-transition: .3s transform;
+              transition: .3s transform;
+          }
+        } */ }
 
 .company_brand {
   right: 0;
@@ -1901,22 +1921,28 @@
       padding: 2px;
       width: 60px;
       height: 60px;
-      border-radius: 60px;
+      -webkit-border-radius: 60px;
+              border-radius: 60px;
       border: 1px solid transparent;
-      border-radius: 0;
+      -webkit-border-radius: 0;
+              border-radius: 0;
       margin-top: 6px;
       margin-bottom: 6px; }
       .company_brand .brand_inner .cb_wrapper img.circle {
-        border-radius: 60px; }
+        -webkit-border-radius: 60px;
+                border-radius: 60px; }
     .company_brand .brand_inner .company_brand {
       width: 60px;
       height: 60px;
-      border-radius: 60px;
+      -webkit-border-radius: 60px;
+              border-radius: 60px;
       border: 1px solid #006acf;
-      border-radius: 0;
+      -webkit-border-radius: 0;
+              border-radius: 0;
       padding-bottom: 0px; }
       .company_brand .brand_inner .company_brand img.circle {
-        border-radius: 60px; }
+        -webkit-border-radius: 60px;
+                border-radius: 60px; }
     .company_brand .brand_inner .adr {
       padding-top: 9px; }
       .company_brand .brand_inner .adr p {
@@ -1938,7 +1964,8 @@
       height: 42px;
       line-height: 42px;
       text-align: left;
-      border-radius: 5px;
+      -webkit-border-radius: 5px;
+              border-radius: 5px;
       color: #006acf; }
       .company_brand .brand_inner .serviceBtn + .serviceBtn {
         margin-top: 9px; }
@@ -1955,7 +1982,9 @@
     top: 0;
     width: 235px;
     text-align: left;
-    height: auto; }
+    height: auto; 
+    float: right;
+  }
     .product_article .product_column .product_innerbox {
       border: 1px solid #ddd;
       /* height: $right_img_h; */
@@ -2019,6 +2048,7 @@
         -ms-transform: rotate(180deg);
         transform: rotate(180deg);
         -webkit-transition: all 0.1s;
+        -o-transition: all 0.1s;
         transition: all 0.1s; }
       .sideBar02 .list .list_li .t01 {
         margin-left: 50px;
@@ -2112,6 +2142,7 @@
           border-top: 3px solid #efa506;
           height: 100%;
           -webkit-transition: all 0.1s;
+          -o-transition: all 0.1s;
           transition: all 0.1s;
           left: 0;
           right: 0;
@@ -2189,7 +2220,8 @@
   .p_navbar .nav ul.ul01 {
     padding: 12px 0; }
   .p_navbar .nav .pnav_li {
-    border-radius: 10px;
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
     padding: 0 12px;
     display: block;
     height: 26px;
@@ -2213,9 +2245,11 @@
   color: #efa506; }
 
 .p_navbar.navbar03 {
-  border-radius: 5px; }
+  -webkit-border-radius: 5px;
+          border-radius: 5px; }
   .p_navbar.navbar03 .pnav_li {
-    border-radius: 10px;
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
     padding: 0 12px;
     display: block;
     height: 20px;
@@ -2238,9 +2272,11 @@
 
 .p_navbar.navbar04 {
   padding: 0 25px;
-  border-radius: 5px; }
+  -webkit-border-radius: 5px;
+          border-radius: 5px; }
   .p_navbar.navbar04 .pnav_li {
-    border-radius: 10px;
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
     padding: 0 12px;
     display: block;
     height: 20px;
@@ -2316,7 +2352,8 @@
     border: 1px solid #efa506;
     font-size: 14px;
     padding: 0 10px;
-    border-radius: 5px; }
+    -webkit-border-radius: 5px;
+            border-radius: 5px; }
     .p_news .title .btn:hover {
       color: #fff;
       background: #efa506; }
@@ -2339,22 +2376,29 @@
     .avatarWrapper .avatar {
       width: 100px;
       height: 100px;
-      border-radius: 100px;
+      -webkit-border-radius: 100px;
+              border-radius: 100px;
       border: 1px solid transparent; }
       .avatarWrapper .avatar img.circle {
-        border-radius: 100px; }
+        -webkit-border-radius: 100px;
+                border-radius: 100px; }
       .avatarWrapper .avatar img.circle {
-        border-radius: 0; }
+        -webkit-border-radius: 0;
+                border-radius: 0; }
     .avatarWrapper .avatar01 {
       width: 100px;
       height: 100px;
-      border-radius: 100px;
+      -webkit-border-radius: 100px;
+              border-radius: 100px;
       border: 5px solid rgba(153, 153, 153, 0.2);
-      border-radius: 0; }
+      -webkit-border-radius: 0;
+              border-radius: 0; }
       .avatarWrapper .avatar01 img.circle {
-        border-radius: 100px; }
+        -webkit-border-radius: 100px;
+                border-radius: 100px; }
       .avatarWrapper .avatar01 img.circle {
-        border-radius: 0; }
+        -webkit-border-radius: 0;
+                border-radius: 0; }
       .avatarWrapper .avatar01 .member {
         right: -3px;
         bottom: -8px;
@@ -2363,11 +2407,14 @@
     .avatarWrapper .avatar02 {
       width: 72px;
       height: 72px;
-      border-radius: 72px; }
+      -webkit-border-radius: 72px;
+              border-radius: 72px; }
       .avatarWrapper .avatar02 img.circle {
-        border-radius: 72px; }
+        -webkit-border-radius: 72px;
+                border-radius: 72px; }
       .avatarWrapper .avatar02 img.circle {
-        border-radius: 0; }
+        -webkit-border-radius: 0;
+                border-radius: 0; }
       .avatarWrapper .avatar02 .member {
         right: -3px;
         bottom: -8px;
@@ -2376,11 +2423,14 @@
     .avatarWrapper .avatar03 {
       width: 110px;
       height: 110px;
-      border-radius: 110px; }
+      -webkit-border-radius: 110px;
+              border-radius: 110px; }
       .avatarWrapper .avatar03 img.circle {
-        border-radius: 110px; }
+        -webkit-border-radius: 110px;
+                border-radius: 110px; }
       .avatarWrapper .avatar03 img.circle {
-        border-radius: 0; }
+        -webkit-border-radius: 0;
+                border-radius: 0; }
     .avatarWrapper .name {
       padding: 5px 0; }
     .avatarWrapper .intro {
@@ -2512,7 +2562,8 @@
 .bountyForm .b_row .un-block-2 .inner {
   padding-left: 10%; }
   .ul02 .pnav_li {
-    border-radius: 10px;
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
     padding: 0 12px;
     display: block;
     height: 22px;
@@ -2520,7 +2571,8 @@
     background: #a1b1c8;
     margin-right: 10px;
     margin-bottom: 10px;
-    border-radius: 11px; }
+    -webkit-border-radius: 11px;
+            border-radius: 11px; }
     .ul02 .pnav_li span + span {
       padding: 0 2px 0 6px; }
       .ul02 .pnav_li span + span:before {
@@ -2604,7 +2656,8 @@
       width: 180px;
       height: 47px;
       line-height: 47px;
-      border-radius: 30px; }
+      -webkit-border-radius: 30px;
+              border-radius: 30px; }
       .create_btn i {
         margin-right: 5px; }
     .wanted_details .wd_table .wd_head .tagLine {
@@ -2677,18 +2730,22 @@
 .cmpp .pic {
   height: 210px; }
   .cmpp .pic .author {
-    border-radius: 10px;
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
     padding: 2px 10px; }
 
 .cmpp .avatar {
   width: 111px;
   height: 111px;
-  border-radius: 111px;
+  -webkit-border-radius: 111px;
+          border-radius: 111px;
   border: 1px solid transparent; }
   .cmpp .avatar img.circle {
-    border-radius: 111px; }
+    -webkit-border-radius: 111px;
+            border-radius: 111px; }
   .cmpp .avatar img.circle {
-    border-radius: 0; }
+    -webkit-border-radius: 0;
+            border-radius: 0; }
 
 .cmpp .c_picBox {
   left: 0;
@@ -2717,7 +2774,8 @@
 
 .favor_btn {
   border: 1px solid #ddd;
-  border-radius: 5px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
   width: 80px;
   height: 35px; }
   .favor_btn .iconLine {
@@ -3043,7 +3101,8 @@
     height: 30px;
     line-height: 30px;
     background: #f6f6f6;
-    border-radius: 3px;
+    -webkit-border-radius: 3px;
+            border-radius: 3px;
     margin-top: 3px;
     border: 1px solid #ddd;
     cursor: pointer; }
@@ -3056,7 +3115,8 @@
   .solution_form .upload_zone .name {
     width: 385px;
     overflow: hidden;
-    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
     display: block; }
   .solution_form .upload_zone .delete {
     margin-left: 50px;
@@ -3100,7 +3160,8 @@
 .get_ic .row-block.btn {
   width: 40%; }
   .get_ic .row-block.btn .ic_btn {
-    border-radius: 5px; }
+    -webkit-border-radius: 5px;
+            border-radius: 5px; }
 
 .member_url .row {
   margin-left: -30px;
@@ -3136,7 +3197,8 @@
     height: 32px;
     line-height: 32px;
     width: 86px !important;
-    border-radius: 18px;
+    -webkit-border-radius: 18px;
+            border-radius: 18px;
     cursor: pointer; }
     .member_url .sbtn_row .sbtn {
       margin-right: 10px; }
@@ -3156,7 +3218,8 @@
   width: 175px;
   height: 175px;
   background: #f7f7f8;
-  border-radius: 175px;
+  -webkit-border-radius: 175px;
+          border-radius: 175px;
   border: 2px solid #f7f7f8;
   cursor: pointer; }
   .solution_form .user .icon {
@@ -3167,7 +3230,8 @@
   width: 201.25px;
   height: 201.25px;
   background: #fff;
-  border-radius: 201.25px;
+  -webkit-border-radius: 201.25px;
+          border-radius: 201.25px;
   border: 2px solid #f7f7f8;
   -webkit-box-shadow: 0 0 10px #999;
   box-shadow: 0 0 10px #999; }
@@ -3296,7 +3360,8 @@
   .form-content01 .m-form-line.buttonRow {
     padding-left: 79px; }
   .m-btn {
-    border-radius: 6px;
+    -webkit-border-radius: 6px;
+            border-radius: 6px;
     width: 150px;
     font-weight: 700;
     color: white;
@@ -3310,7 +3375,8 @@
   height: 45px;
   line-height: 45px;
   width: 167px !important;
-  border-radius: 5px; }
+  -webkit-border-radius: 5px;
+          border-radius: 5px; }
   .m-btn01 {
     margin-right: 28px; }
 
@@ -3341,7 +3407,8 @@
     width: 80%; }
   .news-list02 .left .text {
     display: block;
-    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
     padding-left: 20px; }
@@ -3435,7 +3502,8 @@
   color: #666666;
   background: #f6f6f6;
   text-align: center;
-  border-radius: 3px;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
   overflow: hidden;
   width: 130px;
   height: 30px;
@@ -3623,7 +3691,8 @@
 
 .sDetailsRow .sborder {
   border: 1px solid #efa506;
-  border-radius: 2px;
+  -webkit-border-radius: 2px;
+          border-radius: 2px;
   padding: 0 3px; }
 
 .sDetailsRow + .s_article {

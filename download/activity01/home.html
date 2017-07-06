@@ -16,11 +16,7 @@
     <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/activity.css" rel="stylesheet">
-    <style type="text/css">
-      body{
-        background:#F9F9F9; font-family:Microsoft YaHei;position: relative;height:100%;
-      }
-    </style>
+    
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -293,7 +289,7 @@ if ((navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i))) {
 <!-- WPA Button End -->
 
 <!-- *************************************************************************************************************************************正文部分 start********************************************************************************************-->
-    
+<div class="activity">    
     <div class="swiper-container">
         <div class="swiper-wrapper" style="">
             
@@ -427,10 +423,10 @@ if ((navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i))) {
                     <p><img src="img/h_advantage_11.jpg"></p>
                     <p class="adv_text">全球精准买家数据</p>
                 </div>
-                <!-- <a class="col-xs-6 col-sm-2 advantage_margin" >
+                <a class="col-xs-6 col-sm-2 " >
                     <p><img src="img/h_advantage_12.jpg"></p>
                     <p class="adv_text">更多</p>
-                </a> -->
+                </a>
             </div>
         </div>
     </div>
@@ -438,7 +434,7 @@ if ((navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i))) {
     <div class="foreign_trade container">
         <h2 style="padding-bottom: 30px;">做外贸就用 全球贸易通</h2>
         <div class="row">
-            <div class="h_video  col-md-12">
+            <div class="h_video col-md-12">
                 
                 <div class="solution-history-video-box">
                     <video width="1100" height="650" controls="" preload="auto" poster="img/video_1.png">
@@ -481,6 +477,116 @@ if ((navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i))) {
             </div>
         </div>
     </div>
+<style type="text/css">
+    .collapse{display: block!important;}
+    .advantage_margin{position: relative;height: 153px;}
+    .advantage-wrapper{position: relative;height:100%;width:100%;}
+    .tile{
+        width: 100%;
+        height: 100%;
+        display: table;
+        left: 0;
+        right: 0;
+        position: absolute;
+        top: 100%;
+        transition: all 0.2s;
+        background: rgba(64,84,106,0.7);
+        color: #fff;
+        padding: 5px;
+    }
+    .tileInner{width:100%;display: table-cell;vertical-align: middle;}
+    .advantage_margin:hover .tile{top: 0;}
+    .advantage_margin:hover .advantage-wrapper{
+        
+        filter: blur(5px);
+        
+    }
+   
+
+    .activity{background:#f9f9f9;}
+    body{
+      font-family:Microsoft YaHei;position: relative;height:100%;
+    }
+
+    
+
+</style>
+<script type="text/javascript">
+    $(function(){
+        var adArr =[ 
+            {
+                id:1,    
+                text:"四位一体全网营销即WBSM，全球贸易通整合了企业独立网站营销、B2B贸易平台、小语种本地化营销、全站搜索引擎优化等技术，帮助企业开展多渠道营销，并取得更好的推广效果。 ",
+                title:"四位一体全网营销(WBSM)"
+            },
+            {
+                id:2,    
+                text:"全球贸易通的国际营销网站目前可支持全球20种 主流语言，覆盖全球90%以上国家和地区，全面 覆盖欧美发达国家市场及南美、俄罗斯等全球新 兴市场。",
+                title:"20大主流语种营销网站"
+            },
+            {
+                id:3,    
+                text:"全球贸易通拥有强大的搜索引擎优化功能，通过 操作全球贸易通后台可以轻松实现对英语及小语 种网站的搜索优化，买家通过搜索就能快速找到 企业产品及企业信息。",
+                title:"20大搜索引擎优化 (SEO)"
+            },
+            {
+                id:4,    
+                text:"全球贸易通可以帮助企业在非英语国家通过本地 化语言在搜索时能快速找到企业产品与信息，有 助于企业开拓正在崛起的全球新兴市场。",
+                title:"小语种本地化营销（M-SEO）"
+            },
+            {
+                id:5,    
+                text:"企业通过全球贸易通管理后台可发布信息至 Facebook、LinkedIn、Twitter等国际社交媒体 网站，帮助企业开展海外社交媒体营销。",
+                title:"电子邮件营销 (EDM)"
+            },
+            {
+                id:6,    
+                text:"企业通过全球贸易通管理后台可发布信息至 Facebook、LinkedIn、Twitter等国际社交媒体 网站，帮助企业开展海外社交媒体营销。",
+                title:"社会化媒体营销(SNS)"
+            },
+            {
+                id:7,    
+                text:"全球贸易通支持手机、iPad等移动设备适屏浏览， 根据海外买家搜索习惯自动优化移动端网站排名， 让企业随时、随地、随身掌控最新询盘信息。",
+                title:"手机移动端营销"
+            },
+            {
+                id:8,    
+                text:"全球贸易通拥有强大的数据分析平台“数据管 家”，可直接获取网站关键词排名、网站流量、 询盘、网站内容等分析报告。",
+                title:"全方位网站数据分析"
+            },
+            {
+                id:9,    
+                text:"全球贸易通会员的独立营销平台全部采用海外高 速云服务器，小语种营销网站根据语种分别放置 在北美、南美、欧洲、东南亚等当地服务器，方 便当地买家快速访问。",
+                title:"海外高速云服务器"
+            },
+            {
+                id:10,    
+                text:"全球贸易通的20种语言独立营销网站、会员商铺、 手机移动网站的所有信息均实现一个后台管理， 简单、快捷、方便。",
+                title:"一站式网站管理平台"
+            },
+            {
+                id:11,    
+                text:"全球贸易通拥有超过68万全球活跃买家，这些 买家包括平台注册买家、全球展会海外采购商、 海关数据等，并在稳定增长中。",
+                title:"全球精准买家数据"
+            }
+
+        ];
+        $(".advantage_margin").each(function(i,e){
+            $(e).wrapInner('<div class="advantage-wrapper"></div>').children().after('<div class="tile"><div class="tileInner">'+adArr[i].text+'</div></div>')
+        })    
+    })
+</script> 
+
+
+</div><!-- activity end -->
+
+<div class="promo-page__section">
+  <div class="invitation">
+    <div class="invitation__column">
+      <div class="invitation__text">如有意向，请点在线咨询，或拔打免费热线400-0858-319，由我们专业的客户经理为您服务，并帮助您开展广告宣传活动。</div>
+      <a id="dl3" href="tencent://message/?uin=286421551&amp;Site=&amp;Menu=yes" target="_blank" class="wydl">马上咨询</a> </div>
+  </div>
+</div>   
 <!-- ***********正文部分 end*********************************************************-->    
 
 

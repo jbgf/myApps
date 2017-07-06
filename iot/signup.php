@@ -84,17 +84,17 @@
                                          (function agreementBtn(){
                                                 var ww = $(window).width(),
                                                     wh = $(window).height();
-                                                $("#agreeBtn").on("click",function(e){
-                                                    e.preventDefault();
-                                                    var content = "hello world!";
-                                                    
-                                                    var modal = layer.open({
-                                                                title:"协议",
-                                                                type: 1,
-                                                                area: [ww*.85+'px', wh*.8+'px'], //宽高
-                                                                content: '<div style="padding:20px;">'+content+'</div>'
+                                                    $("#agreeBtn").on("click",function(e){
+                                                        e.preventDefault();
+                                                        var content = "hello world!";
+                                                        
+                                                        var modal = layer.open({
+                                                                    title:"协议",
+                                                                    type: 1,
+                                                                    area: [ww*.85+'px', wh*.8+'px'], //宽高
+                                                                    content: '<div style="padding:20px;">'+content+'</div>'
+                                                        })
                                                     })
-                                                })
                                          })()
                                      </script>
                                  </div>
@@ -141,7 +141,6 @@
                                       errorPlacement: function (error, element) {
                                            if($(element).is("#agreementCheck")){
                                                 $("#agreeBtn").after($(error).css("float","right"));
-                                              
                                            }else{
                                                 $(element).after(error)
                                            }                                                  

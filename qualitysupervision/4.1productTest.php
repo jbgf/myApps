@@ -90,7 +90,7 @@
                             <div class="inner">
                                 <div class="border on middleTable">
                                     <div class="middleRow">
-                                        <p class="mp">Product Inspection & Tests </p>
+                                        <p class="mp">Product Inspection & Tests<br/>Certification Business</p>
                                     </div>
                                 </div>
                             </div>
@@ -131,7 +131,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row-block">
+                        <!-- <div class="row-block">
                             <div class="inner">
                                 <div class="border middleTable">
                                     <div class="middleRow">
@@ -139,12 +139,12 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
 
                     <div  class="ptSection">
                         <h1 class="t">Product Inspection & Tests </h1>
-                        <div class="b"></div>
+                        <!-- <div class="b"></div> -->
                         <div class="contentW"> 
                             <div class="ptText">Due to decades of development, FQII has obtained testing capacity of more than 2000 items involving 60 product categories, such as such as electrical, electric products, food, chemicals, building materials, plastics, machinery, light industry, fire control and environmental protection, etc.Due to decades of development, FQII has obtained testing capacity of more than 2000 items involving 60 product categories, such as such as electrical, electric products, food, chemicals, building materials, plastics, machinery, light industry, fire control and environmental protection, etc.</div>
                             <div class="ptImg"><img src="img/dpic06.png"></div>
@@ -153,7 +153,7 @@
 
                     <div  class="ptSection">
                         <h1 class="t">Specialized tests</h1>
-                        <div class="b"></div>
+                        <!-- <div class="b"></div> -->
                         <div class="contentW align-center">
                             <div class="ptText">FQII possesses the capacity to provide different services of identification and assessment</div>
                         </div>
@@ -196,7 +196,7 @@
 
                     <div  class="ptSection">
                         <h1 class="t">Identification and Aassessment</h1>
-                        <div class="b"></div>
+                        <!-- <div class="b"></div> -->
                         <div class="contentW align-center">
                             <div class="ptText">FQII possesses the capacity to provide different services of id</div>
                         </div>
@@ -248,19 +248,19 @@
 
                     <div  class="ptSection">
                         <h1 class="t">Certification Business</h1>
-                        <div class="b"></div>
+                        <!-- <div class="b"></div> -->
                         <div class="contentW align-center">
                                 <div class="cbWrapper">
                                     <div id="cbRow" class="">
                                         <div class="row-block">
                                             <div class="inner">
                                                 <div class="border ">
-                                                     <img src="img/cerpic01.png"> 
+                                                     <img src="img/cerpic04.jpg"> 
                                                      <div class="linearBg">As an organization committed to provide on-stop service</div>          
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row-block">
+                                        <!-- <div class="row-block">
                                             <div class="inner">
                                                 <div class="border ">
                                                      
@@ -278,7 +278,7 @@
                                                         
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> -->
                                         
                                         
                                     </div>
@@ -290,7 +290,7 @@
 
                     <div  class="ptSection">
                         <h1 class="t">Certification Business</h1>
-                        <div class="b"></div>
+                        <!-- <div class="b"></div> -->
                         <div class="contentW align-center">
                                <div class="techWrapper">
                                FQII can provide technical consultancy service in different fields for customers, such as technical regulation and product standard, enactment and amendment of testing standards, product quality diagnosis, inspection equipment selection and laboratory setup, research on testing technology and method, etc. 
@@ -302,7 +302,7 @@
 
                     <div  class="ptSection">
                         <h1 class="t">Training </h1>
-                        <div class="b"></div>
+                        <!-- <div class="b"></div> -->
                         <div class="contentW align-center">
                                <div class="techWrapper">
                                With rich experimence in testing, <br/>FQII’s training is designed to help customers to improve personal competence and skills, which covering 
@@ -349,7 +349,14 @@
                                 var index = navs.index($(this));
                                 $(this).addClass("on");
                                 $("html,body").stop(true).animate({scrollTop:offsetArr[index]},500)
-                            })    
+                            });
+                            (function(){
+                                var max = 0;
+                                $("#ptRow .border").each(function(i,e){
+                                    var height = $(e).height();
+                                        height >max ? max = height : "";
+                                }).height(max);
+                            })()    
                     })
                     
                 </script>
