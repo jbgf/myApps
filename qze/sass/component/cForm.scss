@@ -1,0 +1,98 @@
+@charset "utf-8";
+
+@import "../mySassWare/_variable";
+@import "../mySassWare/_mixin";
+@import "../mySassWare/_function";
+
+
+$sf_arr:400px,340px,auto;
+$sf_h:35px;
+.form1{ 
+    
+    font-size: $mediumSize;
+    color:#000;
+    .form-row{
+      &+ .form-row{margin-top:20px; }
+      @include form_row($widthArr:$sf_arr,$height:$sf_h);
+      &.h-auto{
+        height: auto;  
+        .un-block-1,.un-block-2,.un-block-3{
+            line-height:1;
+            
+        }
+        
+      } 
+      .un-block-1{
+        text-align: right;
+        padding-right: 15px;
+      }      
+    }
+    input[type=submit]{
+      background:$blue;
+      color:#fff;
+      height: 40px;
+      width:100%;
+    }
+    #checkWrapper{
+      font-size: $mediumSize*0.9;
+      label{
+        margin-bottom: 10px;
+        display: inline-block;
+        width:125px;
+        input{
+          vertical-align: top;
+        }
+      }
+    }
+}
+
+.form2{ 
+    $sf_arr2:185px,730px,auto;
+    $sf_h2:30px;
+    font-size: $mediumSize;
+    color:#000;
+    padding-top:45px;
+    .form-row{
+      &+ .form-row{margin-top:20px; }
+      @include form_row($widthArr:$sf_arr2,$height:$sf_h2);
+      &.h-auto{
+        height: auto;  
+        .un-block-1,.un-block-2,.un-block-3{
+            line-height:1;
+            
+        }
+        
+      }
+      .un-block-1{
+        text-align: right;
+        padding-right: 15px;
+      }      
+    }
+    input[type=submit]{
+      background:$blue;
+      color:#fff;
+      height: 40px;
+      width:340px;
+      font-weight: bold;  
+      font-size: inherit;
+    }
+   
+}
+
+.ca_table{
+  $rateArr:135,940;
+  $strArr:".one" ".two";
+  @extend %resetTable;
+  @include str_un_widthNew($rateArr,$strArr,$padding:5px);
+  margin-bottom: 150px;
+  td{
+    @include border();
+    padding:18px 20px;
+  }
+  .one{
+    text-align: center;
+    background:#fcfcfc;
+    color:$blue;
+    vertical-align: middle;
+  }
+}

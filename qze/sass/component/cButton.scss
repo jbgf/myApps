@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+@import "../mySassWare/_variable";
+@import "../mySassWare/_mixin";
+@import "../mySassWare/_function";
+
+.btnGroup{
+    text-align: center;
+   .button{ 
+       @include button_groupBeta($height:37px,$width:110px,$gutter:10px,$direction:v);
+       background:$orange;
+       color:#fff;
+       display: inline-block;
+       @include border($color:$orange);
+       &.white-bg{
+        background:#fff;
+        color:$orange;
+   
+       }
+    } 
+}

@@ -70,6 +70,9 @@ input[type="checkbox"]{outline:none;}
 .bigSize{font-size: $bigSize!important;}
  
 /*color*/
+.whiteBg{
+  background:#fff;
+}
 .baseFontColor{@extend %baseFontColor;}
 .titleColor{color:$titleColor; }
 .white{@extend %white;}
@@ -107,7 +110,9 @@ input[type="checkbox"]{outline:none;}
 
 
 .middleTable {
-  display: table; }
+  display: table; 
+  width:100%;
+}
 
 .middleTable .middleRow {
   display: table-cell;

@@ -3,7 +3,53 @@
 @import "mySassWare/_variable";
 @import "mySassWare/_mixin";
 @import "mySassWare/_function";
+
+/*bootstarp reset*/
+    body{
+      background-color: #eff3f5;
+    }
+    .row.mc-left,
+    .row.mc-right,
+    .row.mc-title,
+    .row.mc-content,
+    .row.mc-title-s{
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .breadcrumb{margin-bottom: 0;background:none;}
+/*bootstarp end*/
+
+.sideListContent_left .in-news {
+    .list01{
+        .text{width:85%;}
+    }
+}
+
 $tth:40px;
+
+.hr-basicInfo{
+    padding:5px 0;
+    span{
+        position:relative;
+        $spanp:18px;
+        & + span{
+            @include divider($color:inherit);
+            &:before{left:($spanp - 2px)}
+            padding-left:$spanp*2;
+        }  
+    }   
+}
+.basicContent{
+    .p{
+        padding:15px 10px;
+    }
+}
+
+.resourceBtnGroup{
+    padding-bottom:50px;
+}
+
+
 
 .row6{
     .flink{
@@ -15,7 +61,6 @@ $tth:40px;
         @extend %clear;
     }
     
-
 }
 
 .row5{
@@ -33,26 +78,29 @@ $tth:40px;
         }
     }
     .serviceRow{
-        $srriarr:250,250,150;
-        $srrisarr:'.serviceList01','.serviceList02','.serviceList_btn';
+        $srriarr:535,145;/* ,130 */
+        $srrisarr:'.serviceList01'/* ,'.serviceList02' */,'.serviceList_btn';
         @include str_un_width($rateArr:$srriarr,$strArr:$srrisarr){
             float:left;
         };
         position:relative;
-        .list03 ul {padding:0;}
+        .list03 ul {
+            padding:0;.text{width:95%;}
+            li{
+                width: 45%;
+                float: left;
+                
+            }
+        }
         .more{position:absolute;right:0;bottom:0;}
+        height: 225px;
     }   
 }
+
+
 .serviceList_btn{
-    
     .btnGroup{
         padding-top:50px;
-    }
-    
-   .button{ 
-       @include button_groupBeta($height:37px,$width:110px,$gutter:10px,$direction:v);
-       background:$orange;
-       color:#fff;
     }
 }
 
@@ -151,8 +199,11 @@ $wr:110,240,100;
  
   
 .row4{
+    .border-row{
+        border-top:none;
+    }
     .hrWrapper{
-        @include border();border-top:none;
+        
         @include str_width($strArr:".hr",$padding:0,$block:3){};
         .hr + .hr{.hriw{@include border($position:left);}}
         .hriw{padding:11px 16px}
@@ -193,38 +244,6 @@ $wr:110,240,100;
     }
 /* list05 end */
 
-/* list04 start */    
-    .list04{ 
-        ul {
-            text-align: left;
-        }
-    
-         li {
-            display: block;
-            padding:8px 0;
-            @extend %clear;
-            @include border($position:bottom,$type:dotted);
-            .icon{float: left;img{display:block;vertical-align:middle;}}
-        }
-         li .date {
-            float: right;
-            font-size:$smallSize;
-            color: rgb(153, 153, 153);
-            @include rel_ajust($pos:"left",$value:6px);
-        }
-         li .text {
-            width: 210px;
-            padding-left:10px;
-            @include lheightM(25px);
-           float:left;
-            -o-text-overflow: ellipsis;
-               text-overflow: ellipsis;
-            white-space: nowrap;
-            overflow: hidden;
-
-        }
-    }
-/* list04 end */
 
 
 .row3{
@@ -290,6 +309,11 @@ $wr:110,240,100;
     }
 }
 
+.hr-search{
+    text-align: center;
+    padding:20px 0;
+}
+
 .guideStatus{
     padding-top:20px;
     p{ 
@@ -328,7 +352,7 @@ $sb03iconfontm:10px;
          }
 }  
 
-$project_p:10px; 
+$project_p:5px; 
 
 
 $pw_arr:180,460;
@@ -342,12 +366,17 @@ $project_h:490px;
     .titleImg{/* @include un_row($pw_arr1,$padding:$project_p,$string:"two-inner"); */}
     .hasTitle{
         @extend %relative;
-        .t{left:0;bottom:0;right:0;background:rgba(black, 0.6);
+        .t{
+            left:0;
+            bottom:0;
+            right:0;
+            background:rgba(black, 0.6);
             .t_inner{padding:0 $project_p*2}
             .t01{padding:$project_p 0 $project_p/2;}
             .t02{padding:$project_p 0;}
         }    
-    }   
+    }
+    .switch img{height:262px;width:100%;}   
     .projectImg{
         height: $project_h;
     } 
@@ -358,12 +387,7 @@ $project_h:490px;
 }
 
 
-.head02{
-    .brand{
-        display:inline-block;padding: 9px 24px 7px 0;font-size:$mediumSize;
-        .text{margin-right:10px;}
-    }
-}
+
 
 .head01{
     background:$light-blue;
@@ -385,7 +409,13 @@ $tabBaseBg:$light-blue;
 
 .tab05,.tab06{
     .bottom{
-        .list03{padding-left:15px;ul{padding-bottom:0;}}
+        .list03{
+            padding-left:15px;
+            ul{
+                
+                padding:15px 0 0 0;
+            }
+        }
     }
 }
 
@@ -433,36 +463,7 @@ $tabBaseBg:$light-blue;
         } */
            
   }
-  /* list03 start */    
-        .list03 ul {
-            text-align: left;
-            padding:15px 0;
-        }
-        .list03 li {
-            $l03p:5px;
-            display: block;
-            padding: $l03p 0 $l03p $l03p*3;
-            @include persudo($content:"•",$color:#555);
-            
-            &:hover{
-                color:$blue;
-                .text{text-decoration:underline;}
-            }
-            .text {
-                width: 80%;
-                display: block;
-                -o-text-overflow: ellipsis;
-                   text-overflow: ellipsis;
-                white-space: nowrap;
-                overflow: hidden;
-            }
-        }
-        .list03 li .date{
-            float: right;
-            font-size:$smallSize;
-        }
-       
-  /* list03 end */
+  
 /* tab06 end */   
 /* policyWrapper end */
 
@@ -485,8 +486,17 @@ $tabBaseBg:$light-blue;
     @include str_width($strArr:"li",$block:2);
     li{
         cursor:pointer;
-        .btn{background:#0081cc;color: #fff;text-align:center;}
-        &.on{.btn{background:$light-blue;color:#000;}}
+        .btn{
+            /* background:#0081cc; color: #fff;*/text-align:center;
+            background:$tabBaseBg;
+        }
+        &.on{
+            .btn{
+                /* background:$light-blue;color:#000; */
+                background:#fff;color:$blue;
+            }
+        }
+        
     }
   }
   
@@ -550,6 +560,7 @@ $tabBaseBg:$light-blue;
 .row1,.row2,.row3{
     .more{color:$gray;float:right;}
 }
+.more{&:hover{color:$blue;}}
 .row1 .more{@include lheightM($tth);}
 /* activitiesWrapper start */
     .textTab01 {
@@ -609,31 +620,7 @@ $tabBaseBg:$light-blue;
         font-weight: 600;
     }
     
-    /* list01 start */    
-        .list01 ul {
-            text-align: left;
-        }
-        .list01 li {
-            display: block;
-            padding:8px 0;
-            
-            @include border($position:bottom,$type:dotted);
-        }
-        .list01 li .date {
-            float: right;
-            font-size:$smallSize;
-            color: rgb(153, 153, 153);
-            @include rel_ajust($pos:"left",$value:6px);
-        }
-        .list01 li .text {
-            width: 290px;
-            display: block;
-            -o-text-overflow: ellipsis;
-               text-overflow: ellipsis;
-            white-space: nowrap;
-            overflow: hidden;
-        }
-    /* list01 end */
+    
 /* activitiesWrapper end */
 
 /* publicWrapper start */
@@ -673,7 +660,7 @@ $tabBaseBg:$light-blue;
             color:$gray;
             font-size:$smallSize;
             height: 35px;
-            line-height: 1.3;
+            line-height: 1.5;
             overflow: hidden;
             padding: 3px 0;
         }
@@ -754,6 +741,7 @@ $tabBaseBg:$light-blue;
                     min-width: 100%;
                     max-width:200%;
                     left:0;
+                    border-bottom: 1px solid #ddd;
                     .nav_erc{
                         @extend %bg-white;
                         @extend %align-left;
@@ -761,7 +749,7 @@ $tabBaseBg:$light-blue;
                         @extend %clear;
                         
                         border-top:none;
-                        
+                        /* display: inline-block; */
                         li{
                             font-size: $smallSize*1.2;
                             font-weight: normal;
@@ -778,6 +766,7 @@ $tabBaseBg:$light-blue;
                                 color:$baseFontColor;
                                 padding: 20px 25px;
                                 display: inline-block;
+                                -webkit-box-sizing:content-box;box-sizing:content-box;
                                 @extend %block;
                                 .inner{@extend %ellipsis;}
                                 &,.inner{@include lheightM($height:$link_h);}
@@ -915,6 +904,7 @@ $tabBaseBg:$light-blue;
     }
     .slideBox03 .bd li a img {
         width: 100%;
+        height: 317px;
         display: block;
     }
  
@@ -939,13 +929,16 @@ body{background:url(#{$baseImgUrl}bg.png) no-repeat 50% 0}
         $sarr2:'.introduceWrapper','.policyWrapper';
         @include str_width($strArr:$sarr2);
     }
-
+    .publicWrapper{
+        .list02{height:288px;overflow:hidden;}
+    }
 }
 
 $rmp:6px;
 .da_banner{padding:$rmp 0;img{display:block;}}
 .rmp{margin-bottom:$rmp;}  
 
+.selectRow{margin:$rmp 0;}
 /*footer start*/
     
   $footinner_h:125px;
@@ -956,6 +949,7 @@ $rmp:6px;
       background:$blue;
       padding:40px 0;
       color:#fff;
+      margin-top: 30px;
       @include border($position:top,$width:1px,$color:$baseBorderColor);
       @extend %align-center;
       .fridend_link{
@@ -967,6 +961,7 @@ $rmp:6px;
               
               a{
                   font-weight: 700;
+                  color:#fff;
                   @extend %uppercase;
                   
                   @extend %relative;
@@ -983,4 +978,21 @@ $rmp:6px;
       
   }
 /* footer end */
+
+
+ 
+.searchWrapper{
+    padding:0 50px 0 50px;
+    .searchTitle{
+        padding:35px 0;   
+        font-size: $mediumSize; 
+        @include border($position:bottom); 
+    }
+    .list13{
+        padding:25px 0 250px;
+    }   
+}
+  
+
+
 

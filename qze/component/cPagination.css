@@ -1,0 +1,89 @@
+@charset "UTF-8";
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.pagination03 ul li {
+  text-align: center !important; }
+
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.pagination03 ul li {
+  text-align: center !important; }
+
+.pagination03 {
+  line-height: 1;
+  zoom: 1;
+  background: #e1ebf6;
+  padding: 15px 17.5px; }
+  .pagination03 .numWrapper, .pagination03 ul {
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px; }
+  .pagination03 .numWrapper .num, .pagination03 .numWrapper .text, .pagination03 .numWrapper .go {
+    float: left; }
+  .pagination03 .num {
+    width: 30px;
+    padding: 0 8px;
+    text-align: center;
+    height: 20px;
+    line-height: 20px;
+    margin: 0 3px; }
+  .pagination03 .go {
+    display: inline-block;
+    margin-left: 15px;
+    background: #0080d8;
+    color: #fff;
+    /* padding: 0px $p03plr; */
+    width: 45px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px; }
+  .pagination03 .pinfo {
+    float: left;
+    height: 20px;
+    line-height: 20px; }
+    .pagination03 .pinfo span {
+      padding: 0 8px; }
+    .pagination03 .pinfo .r {
+      color: #ec5369; }
+    .pagination03 .pinfo .b {
+      color: #0080d8; }
+  .pagination03 ul li {
+    cursor: pointer;
+    display: block;
+    float: left;
+    margin: 0px 3px; }
+    .pagination03 ul li.pgray a {
+      background: #96aac1; }
+    .pagination03 ul li a {
+      display: block;
+      padding: 0px 8px;
+      height: 20px;
+      line-height: 20px;
+      color: #fff;
+      background: #0080d8; }
+    .pagination03 ul li.on a {
+      color: white;
+      background: #0080d8; }
+
+/*# sourceMappingURL=maps/cPagination.css.map */

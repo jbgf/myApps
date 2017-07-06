@@ -1,0 +1,80 @@
+@charset "UTF-8";
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.i-brand {
+  background: #fcfcfc;
+  padding: 17.5px;
+  border: 1px solid #ddd;
+  text-align: center; }
+  .i-brand .title {
+    color: #000;
+    font-weight: bold;
+    font-size: 15.6px; }
+  .i-brand .info {
+    padding-top: 10px; }
+    .i-brand .info span + span {
+      margin-left: 30px; }
+    .i-brand .info .font a + a {
+      margin-left: 15px; }
+      .i-brand .info .font a + a.on {
+        color: #0080d8; }
+
+.tagLine01 {
+  padding: 20px 0px;
+  border-bottom-width: 1px;
+  border-bottom-style: dashed;
+  border-bottom-color: #dddddd;
+  border-top-width: 1px;
+  border-top-style: dashed;
+  border-top-color: #dddddd; }
+  .tagLine01 .icon {
+    float: left; }
+  .tagLine01 .ul-line02 li {
+    float: left;
+    display: block;
+    margin-right: 10px; }
+  .tagLine01 .ul-line02 li a {
+    display: block;
+    padding: 0px 10px;
+    border: 1px solid #dddddd;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; }
+
+.r-article02 {
+  padding: 23px 0px 23px 15px;
+  border: 1px dashed #dddddd; }
+  .r-article02 .r-row .r-link,
+  .r-article02 .r-row {
+    text-align: left; }
+  .r-article02 .r-page {
+    margin-right: 12px;
+    text-align: left; }
+
+.mainShareBox {
+  padding-top: 20px; }
+  .mainShareBox .share {
+    padding: 20px 0; }
+
+/*# sourceMappingURL=maps/ccontent.css.map */

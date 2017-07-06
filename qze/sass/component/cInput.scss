@@ -1,0 +1,109 @@
+@charset "utf-8";
+
+@import "../mySassWare/_variable";
+@import "../mySassWare/_mixin";
+@import "../mySassWare/_function";
+
+
+
+  $input-set-l-h:36px;
+  .igForm{display:inline-block;vertical-align: top;}
+  .input_group{ 
+    -webkit-box-sizing:border-box;
+      box-sizing:border-box;
+    
+      position: relative;
+      display: table;
+      table-layout: fixed;
+      border-collapse: separate;
+      cursor: pointer;
+      border: 2px solid $mainColor; 
+      form{display:table;}
+      .dropDownMenu {
+        $padding-left:10px;
+        background-color: #fff;
+        float: left;
+        position: relative;
+        width: 96px;
+        height: $input-set-l-h;
+        /* border: 2px solid $mainColor; */
+        border-right: 1px solid #ddd;
+        text-align: left;
+        display:table-cell;
+        .dropDownButton{
+          padding-left:$padding-left;
+          height: $input-set-l-h;line-height:$input-set-l-h;
+          background:#f9f9f9;
+          &.on {
+            background:inherit;
+            .caret{
+            -webkit-transform:rotate(180deg);
+            -ms-transform:rotate(180deg);
+            transform:rotate(180deg)
+          } }
+          .caret{
+            @include caret($color:$baseFontColor,$position:top,$width:4px);
+            @include transition(0.1)
+            margin-left: 10px;
+          }
+          
+        }   
+        ul {
+          float: left;
+          display: block;
+          position: absolute;
+          top: 100%;
+          width: 100%;
+          list-style: none;
+          z-index: 9999;
+          background-color: #fff;
+          border: 1px solid #ddd;
+          margin-left: -1px;
+          border-top: none;
+          display: none;
+          left: 0;
+          li{
+            padding-left:$padding-left;padding-top:10px;padding-bottom:10px;&:hover{background:$light-gray;}
+          }
+      }
+
+    }
+    .input-set02 {
+        height: $input-set-l-h;
+        display: table-cell;
+    }
+  }
+  .dropdown-backdrop{@extend %dropdown-backdrop;}
+  .input-set02{
+      .input,.button{
+          display: inline-block;
+          float: left;
+          font-weight: 500;
+          position: relative;
+          
+          border-left: none;
+      }
+      .button{
+          height: $input-set-l-h;
+          line-height:$input-set-l-h;
+          width: 100px;
+          text-align: center;
+          font-size: $mediumSize;
+          img{margin-right:5px;@extend %relative;top:2px;}
+      }
+      .input{
+          padding:0 20px;
+          outline: none;
+          border-right: 2px solid $mainColor;
+          height: 100%;
+          line-height:$input-set-l-h;
+          -webkit-box-sizing:border-box;
+                  box-sizing:border-box;
+      }
+      .input1{
+          width: 235px;
+      }
+      .input2{
+          width: 165px;
+      }
+  }

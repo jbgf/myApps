@@ -383,7 +383,9 @@
                                           <div class="more "><a>【更多】</a></div>
                                             
                                       </li>
-                                      <li class="switch"></li> 
+                                      <li class="switch">
+                                          <img src="img/pic01.png">
+                                      </li> 
                                   </ul>
                                 </div>
                             </div>
@@ -462,7 +464,7 @@
                 <div class="head01">
                     <div class="brand">人才服务</div>
                 </div>
-                <div class="hrWrapper">
+                <div class="hrWrapper border-row">
                     <div class="hr">
                         <div class="str-inner">
                             <div class="hriw">
@@ -521,6 +523,8 @@
                                         
                                     </ul>  
                               </div>
+
+
                             </div>
                         </div>
                     </div>
@@ -593,7 +597,7 @@
                                         <span class="text">人才培训</span><img src="img/icon04.png">
                                     </div>
                                 </div>
-                                <div class="imgText01">
+                                <!-- <div class="imgText01">
                                         <div class="imgText01-left">
                                              <img src="img/pic02.png"> 
                                         </div>
@@ -646,14 +650,104 @@
                                           </li>
                                           
                                       </ul>  
+                                </div> -->
+                                <div id="slideBd" class="bd">
+                                  <ul>
+                                    <li class="">
+                                      <a href="#">
+                                      <div class="slideBd_left ">
+                                        <img class="dataImg full" src="img/pic02.png">
+                                        
+                                      </div>
+                                      <div class="slideBd_right">
+                                        <div class="title">
+                                          <span class="ellipsis">Delegation from STC visited FQII</span>
+                                          <span class="date ">2017-Feb-01</span>
+                                          
+                                        </div>
+                                        <div class="news_intro">January 10th, 2017, Mr.Li Jinquan, the General Manager of Hong.</div>
+                                      </div>
+                                      </a>
+                                    </li>
+                                    <li class="">
+                                      <div class="slideBd_left ">
+                                        <img class="dataImg full" src="img/pic02.png">
+                                        
+                                      </div>
+                                      <div class="slideBd_right">
+                                        <div class="title">
+                                          <span class="ellipsis">Delegation from STC visited FQII</span>
+                                          <span class="date ">2017-Feb-01</span>
+                                          
+                                        </div>
+                                        <div class="news_intro">January 10th, 2017, Mr.Li Jinquan, the General Manager of Hong.</div>
+                                      </div>
+                                    </li>
+                                    <li class="">
+                                      <div class="slideBd_left ">
+                                        <img class="dataImg full" src="img/pic02.png">
+                                        
+                                      </div>
+                                      <div class="slideBd_right">
+                                        <div class="title">
+                                          <span class="ellipsis">Delegation from STC visited FQII</span>
+                                          <span class="date ">2017-Feb-01</span>
+                                          
+                                        </div>
+                                        <div class="news_intro">January 10th, 2017, Mr.Li Jinquan, the General Manager of Hong.</div>
+                                      </div>
+                                    </li>
+                                    <li class="">
+                                      <div class="slideBd_left ">
+                                        <img class="dataImg full" src="img/pic02.png">
+                                       
+                                      </div>
+                                      <div class="slideBd_right">
+                                        <div class="title">
+                                          <span class="ellipsis">Delegation from STC visited FQII</span>
+                                          <span class="date ">2017-Feb-01</span>
+                                          
+                                        </div>
+                                        <div class="news_intro">January 10th, 2017, Mr.Li Jinquan, the General Manager of Hong.</div>
+                                      </div>
+                                    </li>
+                                    <li >
+                                      <div class="slideBd_left ">
+                                        <img class="dataImg full" src="img/pic02.png">
+                                        
+                                      </div>
+                                      <div class="slideBd_right">
+                                        <div class="title">
+                                          <span class="ellipsis">Delegation from STC visited FQII</span>
+                                          <span class="date ">2017-Feb-01</span>
+                                          
+                                        </div>
+                                        <div class="news_intro">January 10th, 2017, Mr.Li Jinquan, the General Manager of Hong.</div>
+                                      </div>
+                                    </li>
+                                    
+                                  </ul>
                                 </div>
+                                <script type="text/javascript">
+                                    +function(){
+                                          var lis = $("#slideBd li");
+                                              lis.first().addClass("on");
+                                              lis.hover(function(){
+                                                  if($(this).hasClass("on")){return};
+                                                  lis.removeClass("on");
+                                                  $(this).addClass("on");
+                                              }); 
+                                    }()
+                                        
+                                    
+                                </script>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="row5 rmp">
+            <div class="row5 ">
                 <div class="head01">
                     <div class="brand">资源对接</div>
                 </div>
@@ -701,12 +795,7 @@
                                                 <li><a><span class="text">2014年度上海市服务贸易发展专项资金申 </span>  </a></li>
                                                 <li><a><span class="text">2014年度上海市服务贸易发展专项资金申 </span>  </a></li>
                                               
-                                            </ul>
-                                          </div>
-                                        </div>  
-                                        <div class="serviceList02">
-                                          <div class="list03">
-                                            <ul>
+                                            
                                                 <li><a><span class="text">2014年度上海市服务贸易发展专项资金申 </span>  </a></li>
                                                 <li><a><span class="text">2014年度上海市服务贸易发展专项资金申 </span>  </a></li>
                                                 <li><a><span class="text">2014年度上海市服务贸易发展专项资金申 </span>  </a></li>
@@ -722,7 +811,7 @@
                                             
                                               <div class="btnGroup">  
                                                   <a href="http://www.baidu.com"><button class="button">服务商入驻</button></a>
-                                                  <button class="button">发布需求</button>
+                                                  <button class="button white-bg">发布需求</button>
                                               </div>
                                             
                                         </div>
@@ -835,24 +924,7 @@
                 </div>  
             </div>
 
-            <div class="row6 rmp">
-                <div class="flink">
-                  <div class="title">友情链接</div>
-                  <select><option selected="true">中央部门网站</option><option value="http://www.baidu.com">baidu</option></select>
-                  <select><option >各省市政府网站</option></select>
-                  <select><option >新闻媒体网站</option></select>
-                  <select><option >市政府网站</option></select>
-                  <select><option >各区县网站</option></select>
-                  <select><option >其他网站</option></select>
-
-                </div>
-                <script type="text/javascript">
-                    $(".flink select").change(function(event) {
-                         var href = $(this).find("option:selected").attr("value");
-                         href ?(location.href = href ):"";
-                    });
-                </script>
-            </div>
+            
         </div>
    </div>
     

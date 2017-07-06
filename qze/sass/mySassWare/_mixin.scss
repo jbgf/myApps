@@ -1,6 +1,82 @@
 @charset "utf-8";
 @import "_variable";
 
+@mixin hd02($ca,$position){
+    .hd{
+        @if $position == "center" {
+            text-align: center;
+        }
+        
+        @if $position == "left" {
+            text-align: left;
+        }
+        @if $position == "right" {
+            text-align: left;
+        }
+        width: 100%;
+        overflow: hidden;
+        position: absolute;
+        bottom: 5px;
+        z-index: 1;
+            ul{
+                overflow: hidden;
+                zoom: 1;
+                display: inline-block;
+                    li{
+                        float: left;
+                        margin-right: 12px;
+                        @content;
+                        
+                        line-height: 14px;
+                        text-align: center;
+                        background: nth($ca,1);
+                        cursor: pointer;
+                        &.on{
+                            background: nth($ca,2);
+                            color: nth($ca,3);
+                        }
+                    }
+                    
+
+            }
+    }
+}
+@mixin slideBox($num,$color_a02,$position,$width){
+    .slideBox0#{$num}{
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        @if($num == 2){
+            @include hd02($color_a02,$position){
+                @content;
+            };    
+        }
+       
+        @include bd($width);
+    }
+};
+
+@mixin bd($width){
+    .bd{
+        position: relative;
+        width: 100%;
+        z-index: 0;
+        li{
+            width: $width;
+            display: block;
+            vertical-align: middle;
+            a{
+            
+                display: block;
+                img{
+                    width: $width;
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
 @mixin transition($time){
     -webkit-transition: all #{$time}s;
     -o-transition: all #{$time}s;
@@ -182,7 +258,9 @@
             @extend %clear;
             .inner{
                 padding:0 $outer_gutter;
-                @if($height){height:$height;line-height:$height;@extend %block;}}
+                @if($height){height:$height;line-height:$height;@extend %block;}
+                @content;
+            }
         }
      
 }
@@ -294,7 +372,14 @@
             border-radius: $radius;
 }
 
-
+@mixin makeCircle($size:50px,$color:#ddd,$bg:#fff){
+    width:$size;
+    @include lheightM($size);
+    @include radius($size);
+    
+    background:$bg;
+    @content;
+}
 
 @mixin makeBorder($width:50px,$height:1px,$color:#fff) {
     width:$width;
@@ -372,7 +457,6 @@
 }
 @mixin form_row($widthArr,$height,$heightAuto:true){
         $index:0;
-     
         @extend %clear;
         height:$height;line-height:$height;
        
@@ -450,7 +534,7 @@
 }
 
 @mixin f_pictext_row($width:100px,$height:100px,$fpos:"right",$mar-gutter:15px){
-    &{@extend %relative;}
+    &{@extend %relative;@extend %clear;}
 
     $last:getParent(&);
     

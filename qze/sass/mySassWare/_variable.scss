@@ -6,6 +6,7 @@ $smallSize : 12px;
 $baseSize : 14px;
 $mediumSize:$smallSize*1.3;
 $bigSize:$mediumSize*1.2;
+$bigTitle:$smallSize*2.3;
 
 %smallSize{font-size:$smallSize}
 %baseSize{font-size:$baseSize;}
@@ -116,13 +117,15 @@ $cyan:#f0f4f6;
 %middleTable{
   width:100%;
   display: table;
-  
-  .middleRow {
+  .middleRow{
       display: table-cell;
       vertical-align: middle;
       height: auto;
   }
 }
+
+$content_main_p:35px;
+
 %ellipsis{
    display: block;
   *display: inline;

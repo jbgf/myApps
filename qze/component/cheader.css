@@ -1,0 +1,134 @@
+@charset "UTF-8";
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.header07 {
+  color: #0080d8;
+  font-size: 18.72px;
+  text-align: center;
+  padding: 35px 0;
+  font-weight: bold; }
+  .header07 .b {
+    color: #000; }
+
+.header06 {
+  border-bottom: 1px solid #ddd; }
+  .header06 .h06ul li {
+    text-align: center;
+    display: inline-block;
+    padding: 10px 13px;
+    font-size: 15.6px; }
+    .header06 .h06ul li.on {
+      color: #0080d8;
+      font-weight: bold;
+      border-bottom: 2px solid #0080d8; }
+
+.header05 {
+  color: #0080d8;
+  padding-bottom: 15px;
+  font-size: 15.6px; }
+
+.header04 {
+  position: relative;
+  height: 40px;
+  line-height: 40px;
+  text-align: left;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#efefef));
+  background: -webkit-linear-gradient(#fff, #efefef);
+  background: -o-linear-gradient(#fff, #efefef);
+  background: linear-gradient(#fff, #efefef); }
+  .header04 .h-title01 {
+    background: url(../img/ch04Bg.png) 0 center no-repeat;
+    font-size: 18.72px;
+    width: 225px;
+    color: #fff; }
+    .header04 .h-title01 .text {
+      padding: 0px 0px 0 35px;
+      font-size: 15.6px; }
+  .header04 .url {
+    float: right;
+    font-size: 12px;
+    padding-right: 35px; }
+
+.header03 {
+  font-size: 27.6px;
+  position: relative;
+  /* @include lheightM($sb02_p); */
+  padding: 40px 0;
+  text-align: center;
+  color: #0080d8; }
+  .header03 .h-title01 {
+    display: inline-block;
+    border-bottom: 3px solid #0080d8;
+    padding: 25px 10px; }
+    .header03 .h-title01 .text {
+      color: #0080d8;
+      font-size: 22.464px; }
+
+.head02 .brand {
+  padding: 9px 0px 7px 0;
+  font-size: 15.6px; }
+  .head02 .brand .text {
+    margin-right: 10px; }
+  .head02 .brand .more {
+    float: right; }
+
+.header02 {
+  border-bottom: 2px solid #c5c5c5;
+  position: relative;
+  height: 48px;
+  line-height: 48px; }
+  .header02 .h-title01 {
+    height: 48px; }
+    .header02 .h-title01 .text {
+      color: #0080d8;
+      font-size: 22.464px; }
+
+.news_h02 {
+  border-bottom: 2px solid #c5c5c5;
+  position: relative;
+  height: 48px;
+  line-height: 48px; }
+  .news_h02 .h-title01 {
+    height: 48px;
+    border-bottom: 2px solid #0080d8; }
+    .news_h02 .h-title01 .text {
+      color: #0080d8;
+      font-size: 22.464px;
+      padding: 0 20px; }
+  .news_h02 .r-link {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 15.6px;
+    height: 32px;
+    line-height: 32px; }
+    .news_h02 .r-link a {
+      margin-left: 20px;
+      display: inline-block; }
+      .news_h02 .r-link a.on {
+        color: #0080d8;
+        border-bottom: 2px solid #0080d8; }
+
+/*# sourceMappingURL=maps/cheader.css.map */

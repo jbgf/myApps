@@ -1,0 +1,73 @@
+@charset "utf-8";
+@import "../mySassWare/_variable";
+@import "../mySassWare/_mixin";
+@import "../mySassWare/_function";
+
+$size:20px;
+$pbg:$blue;
+$p03plr:8px;
+
+
+
+.pagination03 { 
+    
+    line-height: 1;
+    zoom: 1; 
+    background:#e1ebf6;
+    padding:15px $content_main_p/2;
+    .numWrapper,ul {
+        display: inline-block; 
+        @include lheightM($size);
+        font-size: $smallSize;
+    } 
+    .numWrapper {.num,.text,.go{float:left}}
+    .num{
+        width:30px;padding:0 $p03plr;
+        text-align:center;@include lheightM($size);
+        margin:0 3px;
+      }
+    .go{
+        
+        display: inline-block;
+        margin-left: 15px;
+        background:$pbg;
+
+        color:#fff;
+        /* padding: 0px $p03plr; */
+        width:45px;
+        @include lheightM($size);
+        font-size: $smallSize;
+      
+    }
+    .pinfo{
+      float:left;
+      span{padding:0 8px;}
+      .r{color:$red;}
+      .b{color:$blue;}
+      @include lheightM($size);
+    }
+    ul li {
+        cursor: pointer;
+        display: block;
+        float: left;
+        margin: 0px 3px;
+        @extend %align-center;
+        &.pgray{
+          a{background:#96aac1;}
+        }
+        a {
+            display: block;
+            padding: 0px $p03plr;
+            @include lheightM($size);
+            color:#fff;
+            
+            background:$pbg;
+            
+        }
+        &.on a {
+            color: white;
+            background: $blue;
+        }
+    }
+    
+}
