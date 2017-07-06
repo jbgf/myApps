@@ -1,0 +1,171 @@
+@charset "utf-8";
+@import "mySassWare/_variable";
+@import "mySassWare/_mixin";
+@import "mySassWare/_function";
+.newest-policy{
+    
+    .list08{
+        margin-top: -7px;
+        /* @include rel_ajust($value:-7px); */
+    }   
+}
+.in-news{
+    .list01{
+        li{padding:13px 0;}
+    }
+}
+.newest-online{
+    padding-bottom:30px;
+}
+/* list08 start */    
+        .list08 ul {
+            text-align: left;
+            
+        }
+        .list08 li {
+            $l08p:5px;
+            display: block;
+            padding: $l08p 0 $l08p $l08p*3;
+            @include persudo($content:"•",$color:#555);
+            
+            &:hover{
+                color:$blue;
+               
+            }
+            .text {
+               
+                display: block;
+                -o-text-overflow: ellipsis;
+                   text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+        }
+        .list08 li .date{
+            float: right;
+            font-size:$smallSize;
+        }
+       
+  /* list08 end */
+
+
+/* list07 start */    
+        .list07 ul {
+            text-align: left;
+            
+        }
+        .list07 li {
+            $l07p:11px;
+            display: block;
+            padding: $l07p 0 $l07p $l07p*2;
+            @include persudo($content:"•",$color:#555);
+            @include border($position:bottom,$type:dotted);
+            &:hover{
+                color:$blue;
+                .text{text-decoration:underline;}
+            }
+            .text {
+                width: 80%;
+                display: block;
+                -o-text-overflow: ellipsis;
+                   text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+        }
+        .list07 li .date{
+            float: right;
+            font-size:$smallSize;
+        }
+       
+  /* list07 end */
+
+/* list06 start */    
+        .list06 ul {
+            text-align: left;
+            
+        }
+        .list06 li {
+            $l06p:5px;
+            display: block;
+            padding: $l06p 0 $l06p 0;
+            @extend %clear;
+            &:hover,&.on{
+                color:$blue;
+                .iconfont{color:inherit;}
+            }
+            .iconfont{float:left;color:$gray;}
+            .text {
+                width: 80%;
+                display: block;
+                float:left;
+                -o-text-overflow: ellipsis;
+                   text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                padding-left: 13px;
+            }
+        }
+        
+       
+  /* list06 end */
+
+/* list03 start */    
+        .list03 ul {
+            text-align: left;
+            
+        }
+        .list03 li {
+            $l03p:5px;
+            display: block;
+            padding: $l03p 0 $l03p $l03p*3;
+            @include persudo($content:"•",$color:#555);
+            
+            &:hover{
+                color:$blue;
+                .text{text-decoration:underline;}
+            }
+            .text {
+                width: 80%;
+                display: block;
+                -o-text-overflow: ellipsis;
+                   text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+        }
+        .list03 li .date{
+            float: right;
+            font-size:$smallSize;
+        }
+       
+  /* list03 end */
+
+/* list01 start */    
+    .list01 ul {
+        text-align: left;
+    }
+    .list01 li{
+        display: block;
+        padding:8px 0;
+        @include border($position:bottom,$type:dotted);
+        &:hover{
+            &,.date,.iconfont{color:$blue;}
+        }
+        .date {
+            float: right;
+            font-size:$smallSize;
+            color: rgb(153, 153, 153);
+            @include rel_ajust($pos:"left",$value:6px);
+        }
+    }
+   
+    .list01 li .text {
+        width: 290px;
+        display: block;
+        -o-text-overflow: ellipsis;
+           text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+/* list01 end */

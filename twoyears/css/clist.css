@@ -1,0 +1,195 @@
+@charset "UTF-8";
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.list06 li:before, .list06 li:after {
+  content: " ";
+  display: table; }
+
+.list06 li:after {
+  clear: both; }
+
+.list08 li, .list07 li, .list03 li, .list01 li .date {
+  position: relative; }
+
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.list06 li:before, .list06 li:after {
+  content: " ";
+  display: table; }
+
+.list06 li:after {
+  clear: both; }
+
+.list08 li, .list07 li, .list03 li, .list01 li .date {
+  position: relative; }
+
+.newest-policy .list08 {
+  margin-top: -7px;
+  /* @include rel_ajust($value:-7px); */ }
+
+.in-news .list01 li {
+  padding: 13px 0; }
+
+.newest-online {
+  padding-bottom: 30px; }
+
+/* list08 start */
+.list08 ul {
+  text-align: left; }
+
+.list08 li {
+  display: block;
+  padding: 5px 0 5px 15px; }
+  .list08 li:before {
+    position: absolute;
+    width: auto;
+    color: #555;
+    content: "•";
+    font-size: 15px; }
+  .list08 li:hover {
+    color: #0080d8; }
+  .list08 li .text {
+    display: block;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; }
+
+.list08 li .date {
+  float: right;
+  font-size: 12px; }
+
+/* list08 end */
+/* list07 start */
+.list07 ul {
+  text-align: left; }
+
+.list07 li {
+  display: block;
+  padding: 11px 0 11px 22px;
+  border-bottom: 1px dotted #ddd; }
+  .list07 li:before {
+    position: absolute;
+    width: auto;
+    color: #555;
+    content: "•";
+    font-size: 15px; }
+  .list07 li:hover {
+    color: #0080d8; }
+    .list07 li:hover .text {
+      text-decoration: underline; }
+  .list07 li .text {
+    width: 80%;
+    display: block;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; }
+
+.list07 li .date {
+  float: right;
+  font-size: 12px; }
+
+/* list07 end */
+/* list06 start */
+.list06 ul {
+  text-align: left; }
+
+.list06 li {
+  display: block;
+  padding: 5px 0 5px 0; }
+  .list06 li:hover, .list06 li.on {
+    color: #0080d8; }
+    .list06 li:hover .iconfont, .list06 li.on .iconfont {
+      color: inherit; }
+  .list06 li .iconfont {
+    float: left;
+    color: #999; }
+  .list06 li .text {
+    width: 80%;
+    display: block;
+    float: left;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-left: 13px; }
+
+/* list06 end */
+/* list03 start */
+.list03 ul {
+  text-align: left; }
+
+.list03 li {
+  display: block;
+  padding: 5px 0 5px 15px; }
+  .list03 li:before {
+    position: absolute;
+    width: auto;
+    color: #555;
+    content: "•";
+    font-size: 15px; }
+  .list03 li:hover {
+    color: #0080d8; }
+    .list03 li:hover .text {
+      text-decoration: underline; }
+  .list03 li .text {
+    width: 80%;
+    display: block;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; }
+
+.list03 li .date {
+  float: right;
+  font-size: 12px; }
+
+/* list03 end */
+/* list01 start */
+.list01 ul {
+  text-align: left; }
+
+.list01 li {
+  display: block;
+  padding: 8px 0;
+  border-bottom: 1px dotted #ddd; }
+  .list01 li:hover, .list01 li:hover .date, .list01 li:hover .iconfont {
+    color: #0080d8; }
+  .list01 li .date {
+    float: right;
+    font-size: 12px;
+    color: #999999;
+    left: 6px; }
+
+.list01 li .text {
+  width: 290px;
+  display: block;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden; }
+
+/* list01 end */
+
+/*# sourceMappingURL=maps/clist.css.map */

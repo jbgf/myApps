@@ -1,0 +1,124 @@
+@charset "utf-8";
+@import "mySassWare/_variable";
+@import "mySassWare/_mixin";
+@import "mySassWare/_function";
+
+/* news-ul03 start */ 
+    $nuheight:120px;
+    .news-ul03 .newsRow {
+        padding: 15px 0px;
+        @include border($position:bottom,$type:dotted);
+        .cl-pic{
+            width: $nuheight/3*4;
+            height: $nuheight;
+            img{@extend %full;}
+        }
+        .cl-newsBox {
+            text-align: left;
+            margin-left: $nuheight/3*4 + 20px;
+            
+            .cl-title .cl-p01 {
+                font-weight: 700;
+                font-size: $mediumSize;
+                color:#000;
+                &:hover{
+                    color:$blue;
+                }
+            }
+            .cl-text {
+                height:47px;
+                overflow:hidden;
+            }
+        }
+    }  
+    .news-ul03 .newsRow .cl-pic img{
+        width: 100%;
+        display: block;
+    }
+
+/* news-ul03 end */
+
+/* news-ul02 start */
+    $nuheight02:50px;
+    .news-ul02 .newsRow {
+        padding: 5px 0px;
+        &:hover{
+            color:$blue;
+        }
+        .cl-pic{
+            width: $nuheight02/3*4;
+            height: $nuheight02;
+            img{@extend %full;}
+        }
+        
+        .cl-newsBox {
+            text-align: left;
+            margin-left: $nuheight02/3*4 + 10px;
+            .view{margin-left:20px}
+            .cl-title{ 
+                height: $nuheight02 - 5px;
+                overflow: hidden;
+                .cl-p02 {
+                    font-weight: 700;
+                    font-size: $mediumSize;
+                    color:#000;
+                    &:hover{
+                        color:$blue;
+                    }  
+                }
+            }
+            .cl-text {
+                height:47px;
+                overflow:hidden;
+            }
+        }
+    }  
+   
+    .news-ul02 .newsRow .cl-pic img{
+        width: 100%;
+        display: block;
+    }
+
+/* news-ul02 end */
+
+/* news-ul01 start */
+    $nuheight:120px;
+    .news-ul01 .newsRow {
+        padding: 15px 0px;
+        @include border($position:bottom,$type:dotted);
+        .cl-pic{
+            width: $nuheight/3*4;
+            height: $nuheight;
+            img{@extend %full;}
+        }
+        .adr{
+            color:$gray;
+            font-size: $smallSize;
+            padding:15px 0;
+        }
+        .cl-newsBox {
+            text-align: left;
+            margin-left: $nuheight/3*4 + 20px;
+            .view{margin-left:20px}
+            .cl-title .cl-p01 {
+                font-weight: 700;
+                font-size: $mediumSize;
+                color:#000;
+                &:hover{
+                    color:$blue;
+                }
+            }
+            .cl-text {
+       
+                height:47px;
+                overflow:hidden;
+            }
+        }
+    }  
+   
+    .news-ul01 .newsRow .cl-pic img{
+        width: 100%;
+        display: block;
+    }
+
+/* news-ul01 end */

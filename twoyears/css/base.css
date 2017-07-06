@@ -1,0 +1,390 @@
+@charset "UTF-8";
+/*----------------------------------------------------- */
+/* setting scss*/
+.baseSize {
+  font-size: 14px; }
+
+.font-weight {
+  font-weight: 700; }
+
+.capitalize {
+  text-transform: capitalize; }
+
+.uppercase {
+  text-transform: uppercase; }
+
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+.bg-lightGray {
+  background: #f8f8f8; }
+
+.bg-superGray {
+  background: #f7f7f8; }
+
+.bg-l-green {
+  background: #4bd8a3; }
+
+.bg-white {
+  background: #fff; }
+
+.bg-cyan {
+  background: #f0f4f6; }
+
+.baseFontColor {
+  color: #333; }
+
+.light-gray {
+  color: #f8f8f8; }
+
+.light-green {
+  color: #4bd8a3; }
+
+.gray {
+  color: #999; }
+
+.red {
+  color: #ec5369; }
+
+a[href].white, .white {
+  color: #fff; }
+
+/* color end */
+.iBlock {
+  display: inline-block; }
+
+.displayBlock {
+  display: block; }
+
+.vm {
+  vertical-align: middle; }
+
+.ellipsis {
+  display: block;
+  *display: inline;
+  /*zoom: 1;
+  text-align:center;
+  max-width: 100%;
+  line-height: 100%; */
+  overflow: hidden;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis; }
+
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.relative {
+  position: relative; }
+
+.absfull, .absCenter {
+  position: absolute; }
+
+.absfull {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+
+.absCenter {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto; }
+
+.full {
+  display: block;
+  width: 100%;
+  height: 100%; }
+
+.widthfull {
+  width: 100% !important; }
+
+.full-height {
+  height: 100%; }
+
+.align-left {
+  text-align: left; }
+
+.align-right {
+  text-align: right; }
+
+* {
+  /* box-sizing: border-box; */
+  margin: 0;
+  padding: 0; }
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video, svg, hr {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline; }
+
+body {
+  font-family: 'Microsoft YaHei',"Helvetica Neue", Helvetica, 'Hiragino Sans GB',  'WenQuanYi Micro Hei', Arial,sans-serif;
+  overflow-x: hidden;
+  font-size: 14px;
+  line-height: 22px;
+  color: #333;
+  background: #fff; }
+
+a {
+  text-decoration: none;
+  cursor: pointer; }
+
+a:visited {
+  color: inherit; }
+
+a:link {
+  color: inherit; }
+
+ul {
+  list-style: none; }
+
+button {
+  border: none; }
+
+button:focus {
+  outline: none; }
+
+.button, .link {
+  cursor: pointer; }
+
+img {
+  max-height: 100%;
+  max-width: 100%;
+  max-width: none\9;
+  max-height: none\9;
+  /*margin:auto;*/ }
+
+input {
+  border: none; }
+  input:focus {
+    outline: none; }
+
+input[type="checkbox"] {
+  outline: none; }
+
+.disabledLink {
+  background: gray !important;
+  cursor: not-allowed; }
+
+.abs {
+  position: absolute; }
+
+.cursor {
+  cursor: pointer; }
+
+.zindex {
+  z-index: 99; }
+
+.mar-center {
+  margin: 0 auto; }
+
+.align-center {
+  text-align: center; }
+
+.hide {
+  display: none; }
+
+.view-hide {
+  visibility: hidden; }
+
+.float-r {
+  float: right; }
+
+.float-l {
+  float: left; }
+
+.phase-indent {
+  text-indent: 2rem;
+  line-height: 1.7; }
+
+.smallSize {
+  font-size: 12px; }
+
+.mediumSize {
+  font-size: 15.6px !important; }
+
+.bigSize {
+  font-size: 18.72px !important; }
+
+/*color*/
+.titleColor {
+  color: black; }
+
+.i_white {
+  color: #fff !important; }
+
+.blue {
+  color: #006acf; }
+
+.light-blue {
+  color: #e6f2ff; }
+
+.green {
+  color: #6eb92b; }
+
+.orange {
+  color: #ff8003 !important; }
+
+.i_gray {
+  color: #999 !important; }
+
+.heavy-red {
+  color: #ff8d99; }
+
+.black {
+  color: #333; }
+
+.bg-light-gray02 {
+  background-color: #f0f0f0; }
+
+.bg-gray {
+  background: #e1e9f6; }
+
+.bg-orange {
+  background: #ff8003 !important; }
+
+.bg-l-blue {
+  background: #e6f2ff; }
+
+.bg-blue {
+  background: #006acf; }
+
+.bg-blue03 {
+  background-color: #1978cf; }
+
+.bg-black {
+  background: #0f1014; }
+
+.bg-yellow {
+  background: #ffae00; }
+
+.bg-pink {
+  background: #ec5369; }
+
+.bg-green {
+  background: #6eb92b; }
+
+.bg_red {
+  background-color: #df0000; }
+
+.middleTable {
+  display: table;
+  height: 100%; }
+
+.middleTable .middleRow {
+  display: table-cell;
+  vertical-align: middle;
+  height: auto; }
+
+.img-center {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  max-height: 100%;
+  max-width: 100%;
+  *height: 100%;
+  *width: 100%;
+  margin: auto; }
+
+.container-auto {
+  padding-right: 15px;
+  padding-left: 15px; }
+
+.padding-15 {
+  padding-left: 15px;
+  padding-right: 15px; }
+
+.padding-37 {
+  padding-left: 37px;
+  padding-right: 37px; }
+
+.padding-t-15 {
+  padding-top: 15px; }
+
+.padding-t-65 {
+  padding-top: 65px; }
+
+.padding-r-25 {
+  padding-right: 25px; }
+
+.padding-l-64 {
+  padding-left: 64px; }
+
+.padding-l-77 {
+  padding-left: 77px; }
+
+.marin-t-7 {
+  margin-top: 7px; }
+
+.margin-t-15 {
+  margin-top: 15px; }
+
+.margin-r-20 {
+  margin-right: 20px; }
+
+.margin-r-328 {
+  margin-right: 328px; }
+
+.margin-r-350 {
+  margin-right: 350px; }
+
+.margin-r-360 {
+  margin-right: 360px; }
+
+.margin-l-8 {
+  margin-left: 8px; }
+
+.margin-l-10 {
+  margin-left: 10px; }
+
+.margin-l-20 {
+  margin-left: 20px; }
+
+.margin-l-40 {
+  margin-left: 40px; }
+
+.margin-l-150 {
+  margin-left: 150px; }
+
+.margin-l-165 {
+  margin-left: 165px; }
+
+.margin-l-168 {
+  margin-left: 168px; }
+
+.margin-l-185 {
+  margin-left: 185px; }
+
+.margin-l-200 {
+  margin-left: 200px; }
+
+.margin-l-226 {
+  margin-left: 226px; }
+
+.margin-l-240 {
+  margin-left: 240px; }
+
+.margin-l-265 {
+  margin-left: 265px; }
+
+.margin-l-300 {
+  margin-left: 300px; }
+
+.margin-l-308 {
+  margin-left: 308px; }
+
+.margin-l-493 {
+  margin-left: 493px; }
+
+/*# sourceMappingURL=maps/base.css.map */
