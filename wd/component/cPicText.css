@@ -23,19 +23,31 @@
   width: 100%;
   height: 100%; }
 
+.news-ul09 .newsRow .cl-newsBox .cl-title .cl-p01 {
+  display: block;
+  *display: inline;
+  /*zoom: 1;
+  text-align:center;
+  max-width: 100%;
+  line-height: 100%; */
+  overflow: hidden;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis; }
+
 /* clearfix*/
 /* 闭合子元素的浮动*/
-.facilitatorRow .row-block, .hrh-ul .row-block, .resource-ul .row-block, .hsptBlock .bdvantageRow .row-block, .friendsRow .row-block, .butlerRow .row-block {
+.phonePicRow .row-block, .relativeAppRow .row-block, .hrh-ul .row-block, .resource-ul .row-block, .hsptBlock .bdvantageRow .row-block, .friendsRow .row-block, .butlerRow .row-block {
   float: left; }
 
-.facilitatorRow:before, .facilitatorRow .row-block:before, .hrh-ul:before, .hrh-ul .row-block:before, .resource-ul:before, .resource-ul .row-block:before, .homeSPtRow:before, .hsptBlock .link:before, .hsptBlock .bdvantageRow:before, .hsptBlock .bdvantageRow .row-block:before, .hsptBlock:hover:before, .hsptBlock.on:before, .friendsRow:before, .friendsRow .row-block:before, .butlerRow:before, .butlerRow .row-block:before, .facilitatorRow:after, .facilitatorRow .row-block:after, .hrh-ul:after, .hrh-ul .row-block:after, .resource-ul:after, .resource-ul .row-block:after, .homeSPtRow:after, .hsptBlock .link:after, .hsptBlock .bdvantageRow:after, .hsptBlock .bdvantageRow .row-block:after, .hsptBlock:hover:after, .hsptBlock.on:after, .friendsRow:after, .friendsRow .row-block:after, .butlerRow:after, .butlerRow .row-block:after {
+.phonePicRow:before, .phonePicRow .row-block:before, .relativeAppRow:before, .relativeAppRow .row-block:before, .hrh-ul:before, .hrh-ul .row-block:before, .resource-ul:before, .resource-ul .row-block:before, .homeSPtRow:before, .hsptBlock .link:before, .hsptBlock .bdvantageRow:before, .hsptBlock .bdvantageRow .row-block:before, .hsptBlock:hover:before, .hsptBlock.on:before, .friendsRow:before, .friendsRow .row-block:before, .butlerRow:before, .butlerRow .row-block:before, .phonePicRow:after, .phonePicRow .row-block:after, .relativeAppRow:after, .relativeAppRow .row-block:after, .hrh-ul:after, .hrh-ul .row-block:after, .resource-ul:after, .resource-ul .row-block:after, .homeSPtRow:after, .hsptBlock .link:after, .hsptBlock .bdvantageRow:after, .hsptBlock .bdvantageRow .row-block:after, .hsptBlock:hover:after, .hsptBlock.on:after, .friendsRow:after, .friendsRow .row-block:after, .butlerRow:after, .butlerRow .row-block:after {
   content: " ";
   display: table; }
 
-.facilitatorRow:after, .facilitatorRow .row-block:after, .hrh-ul:after, .hrh-ul .row-block:after, .resource-ul:after, .resource-ul .row-block:after, .homeSPtRow:after, .hsptBlock .link:after, .hsptBlock .bdvantageRow:after, .hsptBlock .bdvantageRow .row-block:after, .hsptBlock:hover:after, .hsptBlock.on:after, .friendsRow:after, .friendsRow .row-block:after, .butlerRow:after, .butlerRow .row-block:after {
+.phonePicRow:after, .phonePicRow .row-block:after, .relativeAppRow:after, .relativeAppRow .row-block:after, .hrh-ul:after, .hrh-ul .row-block:after, .resource-ul:after, .resource-ul .row-block:after, .homeSPtRow:after, .hsptBlock .link:after, .hsptBlock .bdvantageRow:after, .hsptBlock .bdvantageRow .row-block:after, .hsptBlock:hover:after, .hsptBlock.on:after, .friendsRow:after, .friendsRow .row-block:after, .butlerRow:after, .butlerRow .row-block:after {
   clear: both; }
 
-.facilitatorRow .row-block, .hrh-ul .row-block, .resource-ul .row-block, .hsptBlock .bdvantageRow .row-block, .hsptBlock .bdvantageRow .iconfont, .friendsRow .row-block, .butlerRow .row-block {
+.phonePicRow .row-block, .relativeAppRow .row-block, .hrh-ul .row-block, .resource-ul .row-block, .hsptBlock .bdvantageRow .row-block, .hsptBlock .bdvantageRow .iconfont, .friendsRow .row-block, .butlerRow .row-block, .news-ul08 .newsRow .cl-newsBox .rightPart .wrapper .top .stars, .news-ul08 .newsRow .cl-newsBox .rightPart .wrapper .top .iconfont {
   position: relative; }
 
 .hsptBlock .link .link-inner img {
@@ -48,12 +60,12 @@
   left: 0;
   margin: auto; }
 
-.news-ul01 .newsRow .cl-pic img, .news-ul07 .newsRow .cl-pic img, .news-ul06 .newsRow .cl-pic img, .news-ul05 .newsRow .cl-pic img, .news-ul04 .newsRow .cl-pic img, .news-ul03 .newsRow .cl-pic img, .news-ul02 .newsRow .cl-pic img {
+.news-ul09 .newsRow .cl-pic img, .news-ul08 .newsRow .cl-pic img, .news-ul07 .newsRow .cl-pic img, .news-ul06 .newsRow .cl-pic img, .news-ul05 .newsRow .cl-pic img, .news-ul04 .newsRow .cl-pic img, .news-ul03 .newsRow .cl-pic img, .news-ul02 .newsRow .cl-pic img, .news-ul01 .newsRow .cl-pic img {
   display: block;
   width: 100%;
   height: 100%; }
 
-.facilitatorRow .row-block, .hrh-ul .row-block, .resource-ul .row-block, .hsptBlock .bdvantageRow .row-block, .friendsRow .row-block, .butlerRow .row-block {
+.phonePicRow .row-block, .relativeAppRow .row-block, .hrh-ul .row-block, .resource-ul .row-block, .hsptBlock .bdvantageRow .row-block, .friendsRow .row-block, .butlerRow .row-block {
   float: left; }
 
 /*----------------------------------------------------- */
@@ -80,19 +92,31 @@
   width: 100%;
   height: 100%; }
 
+.news-ul09 .newsRow .cl-newsBox .cl-title .cl-p01 {
+  display: block;
+  *display: inline;
+  /*zoom: 1;
+  text-align:center;
+  max-width: 100%;
+  line-height: 100%; */
+  overflow: hidden;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis; }
+
 /* clearfix*/
 /* 闭合子元素的浮动*/
-.facilitatorRow .row-block, .hrh-ul .row-block, .resource-ul .row-block, .hsptBlock .bdvantageRow .row-block, .friendsRow .row-block, .butlerRow .row-block {
+.phonePicRow .row-block, .relativeAppRow .row-block, .hrh-ul .row-block, .resource-ul .row-block, .hsptBlock .bdvantageRow .row-block, .friendsRow .row-block, .butlerRow .row-block {
   float: left; }
 
-.facilitatorRow:before, .facilitatorRow .row-block:before, .hrh-ul:before, .hrh-ul .row-block:before, .resource-ul:before, .resource-ul .row-block:before, .homeSPtRow:before, .hsptBlock .link:before, .hsptBlock .bdvantageRow:before, .hsptBlock .bdvantageRow .row-block:before, .hsptBlock:hover:before, .hsptBlock.on:before, .friendsRow:before, .friendsRow .row-block:before, .butlerRow:before, .butlerRow .row-block:before, .facilitatorRow:after, .facilitatorRow .row-block:after, .hrh-ul:after, .hrh-ul .row-block:after, .resource-ul:after, .resource-ul .row-block:after, .homeSPtRow:after, .hsptBlock .link:after, .hsptBlock .bdvantageRow:after, .hsptBlock .bdvantageRow .row-block:after, .hsptBlock:hover:after, .hsptBlock.on:after, .friendsRow:after, .friendsRow .row-block:after, .butlerRow:after, .butlerRow .row-block:after {
+.phonePicRow:before, .phonePicRow .row-block:before, .relativeAppRow:before, .relativeAppRow .row-block:before, .hrh-ul:before, .hrh-ul .row-block:before, .resource-ul:before, .resource-ul .row-block:before, .homeSPtRow:before, .hsptBlock .link:before, .hsptBlock .bdvantageRow:before, .hsptBlock .bdvantageRow .row-block:before, .hsptBlock:hover:before, .hsptBlock.on:before, .friendsRow:before, .friendsRow .row-block:before, .butlerRow:before, .butlerRow .row-block:before, .phonePicRow:after, .phonePicRow .row-block:after, .relativeAppRow:after, .relativeAppRow .row-block:after, .hrh-ul:after, .hrh-ul .row-block:after, .resource-ul:after, .resource-ul .row-block:after, .homeSPtRow:after, .hsptBlock .link:after, .hsptBlock .bdvantageRow:after, .hsptBlock .bdvantageRow .row-block:after, .hsptBlock:hover:after, .hsptBlock.on:after, .friendsRow:after, .friendsRow .row-block:after, .butlerRow:after, .butlerRow .row-block:after {
   content: " ";
   display: table; }
 
-.facilitatorRow:after, .facilitatorRow .row-block:after, .hrh-ul:after, .hrh-ul .row-block:after, .resource-ul:after, .resource-ul .row-block:after, .homeSPtRow:after, .hsptBlock .link:after, .hsptBlock .bdvantageRow:after, .hsptBlock .bdvantageRow .row-block:after, .hsptBlock:hover:after, .hsptBlock.on:after, .friendsRow:after, .friendsRow .row-block:after, .butlerRow:after, .butlerRow .row-block:after {
+.phonePicRow:after, .phonePicRow .row-block:after, .relativeAppRow:after, .relativeAppRow .row-block:after, .hrh-ul:after, .hrh-ul .row-block:after, .resource-ul:after, .resource-ul .row-block:after, .homeSPtRow:after, .hsptBlock .link:after, .hsptBlock .bdvantageRow:after, .hsptBlock .bdvantageRow .row-block:after, .hsptBlock:hover:after, .hsptBlock.on:after, .friendsRow:after, .friendsRow .row-block:after, .butlerRow:after, .butlerRow .row-block:after {
   clear: both; }
 
-.facilitatorRow .row-block, .hrh-ul .row-block, .resource-ul .row-block, .hsptBlock .bdvantageRow .row-block, .hsptBlock .bdvantageRow .iconfont, .friendsRow .row-block, .butlerRow .row-block {
+.phonePicRow .row-block, .relativeAppRow .row-block, .hrh-ul .row-block, .resource-ul .row-block, .hsptBlock .bdvantageRow .row-block, .hsptBlock .bdvantageRow .iconfont, .friendsRow .row-block, .butlerRow .row-block, .news-ul08 .newsRow .cl-newsBox .rightPart .wrapper .top .stars, .news-ul08 .newsRow .cl-newsBox .rightPart .wrapper .top .iconfont {
   position: relative; }
 
 .hsptBlock .link .link-inner img {
@@ -105,44 +129,52 @@
   left: 0;
   margin: auto; }
 
-.news-ul01 .newsRow .cl-pic img, .news-ul07 .newsRow .cl-pic img, .news-ul06 .newsRow .cl-pic img, .news-ul05 .newsRow .cl-pic img, .news-ul04 .newsRow .cl-pic img, .news-ul03 .newsRow .cl-pic img, .news-ul02 .newsRow .cl-pic img {
+.news-ul09 .newsRow .cl-pic img, .news-ul08 .newsRow .cl-pic img, .news-ul07 .newsRow .cl-pic img, .news-ul06 .newsRow .cl-pic img, .news-ul05 .newsRow .cl-pic img, .news-ul04 .newsRow .cl-pic img, .news-ul03 .newsRow .cl-pic img, .news-ul02 .newsRow .cl-pic img, .news-ul01 .newsRow .cl-pic img {
   display: block;
   width: 100%;
   height: 100%; }
 
-.facilitatorRow .row-block, .hrh-ul .row-block, .resource-ul .row-block, .hsptBlock .bdvantageRow .row-block, .friendsRow .row-block, .butlerRow .row-block {
+.phonePicRow .row-block, .relativeAppRow .row-block, .hrh-ul .row-block, .resource-ul .row-block, .hsptBlock .bdvantageRow .row-block, .friendsRow .row-block, .butlerRow .row-block {
   float: left; }
 
-.hireRow,
-.facilitatorRow {
-  overflow: hidden; }
-  .hireRow .imgBox img,
-  .facilitatorRow .imgBox img {
-    display: block;
-    width: 100%;
-    height: 190px; }
-  .hireRow .teacher,
-  .facilitatorRow .teacher {
-    color: #999;
-    padding-bottom: 5px; }
-  .hireRow .title,
-  .facilitatorRow .title {
-    font-size: 15px;
-    padding-top: 3px;
-    color: #000; }
+.phonePicRow {
+  margin-left: -15px;
+  margin-right: -15px;
+  padding: 65px 16px 30px; }
+  .phonePicRow .row-block {
+    width: 33.33333%;
+    min-height: 1px; }
+    .phonePicRow .row-block .inner {
+      padding: 0 15px; }
+  .phonePicRow .inner {
+    text-align: center; }
+  .phonePicRow .imgBox {
+    position: relative;
+    display: inline-block; }
+    .phonePicRow .imgBox .bg {
+      z-index: 999;
+      position: relative; }
+    .phonePicRow .imgBox .imgZone {
+      position: absolute;
+      left: 17px;
+      top: 70px;
+      width: 247px;
+      height: 434px;
+      overflow: hidden; }
+      .phonePicRow .imgBox .imgZone .imgFloat img {
+        width: 100%; }
+    .phonePicRow .imgBox img {
+      display: block; }
 
-.facilitatorRow {
-  padding-top: 20px;
-  padding-bottom: 90px;
-  margin-left: -6px;
-  margin-right: -6px; }
-  .facilitatorRow .row-block {
+.relativeAppRow {
+  margin-left: -15px;
+  margin-right: -15px;
+  padding: 75px 0; }
+  .relativeAppRow .row-block {
     width: 25%;
     min-height: 1px; }
-    .facilitatorRow .row-block .inner {
-      padding: 0 6px; }
-  .facilitatorRow .title {
-    text-align: center; }
+    .relativeAppRow .row-block .inner {
+      padding: 0 15px; }
 
 .hrh-wrapper {
   border-top: 1px solid #ddd; }
@@ -168,12 +200,6 @@
 
 .hrjs-wrapper {
   padding-top: 10px; }
-
-.oi-outer-wrapper {
-  padding-left: 100px;
-  padding-right: 100px;
-  padding-top: 33.33333px;
-  padding-bottom: 100px; }
 
 .productIntroduceBox {
   border: 1px solid #999;
@@ -351,37 +377,107 @@
 .indInfo {
   padding-top: 16px; }
 
-/* news-ul01 start */
-.news-ul01 .newsRow {
-  padding: 30px 0px;
-  border-bottom: 1px solid #ddd; }
+/* news-ul09 start */
+.news-ul09 .newsRow {
+  padding: 5px 0px; }
+  .news-ul09 .newsRow:hover {
+    color: #218ad5; }
+  .news-ul09 .newsRow .cl-pic {
+    width: 75px;
+    height: 75px; }
+  .news-ul09 .newsRow .cl-newsBox {
+    text-align: left;
+    margin-left: 95px; }
+    .news-ul09 .newsRow .cl-newsBox .cl-title {
+      overflow: hidden; }
+      .news-ul09 .newsRow .cl-newsBox .cl-title .cl-p01 {
+        font-size: 22.464px;
+        margin-top: -6px; }
+        .news-ul09 .newsRow .cl-newsBox .cl-title .cl-p01:hover {
+          color: #218ad5; }
+    .news-ul09 .newsRow .cl-newsBox .cl-text {
+      height: 47px;
+      overflow: hidden; }
 
-.news-ul01 .newsRow .cl-pic {
-  width: 233.33333px;
-  height: 175px; }
-
-.news-ul01 .newsRow .cl-newsBox {
-  text-align: left;
-  margin-left: 253.33333px; }
-  .news-ul01 .newsRow .cl-newsBox .view {
-    margin-left: 20px; }
-
-.news-ul01 .newsRow .cl-pic img {
+.news-ul09 .newsRow .cl-pic img {
   width: 100%;
   display: block; }
 
-.news-ul01 .newsRow .cl-newsBox .cl-title .cl-p01 {
-  font-weight: 700;
-  font-size: 15.6px;
-  padding: 8px 0;
-  color: #eb6326; }
+/* news-ul09 end */
+/* news-ul08 start */
+.news-ul08 .newsRow + .newsRow {
+  border-bottom: 1px dotted #ddd; }
 
-.news-ul01 .newsRow .cl-newsBox .cl-text {
-  margin: 24px 0;
-  height: 65px;
-  overflow: hidden; }
+.news-ul08 .newsRow .cl-pic {
+  /* width: $nuheight08/3*4; */
+  width: 64px;
+  height: 64px;
+  padding: 18px;
+  background: #f0f0f0;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 20px;
+  border-radius: 20px; }
+  .news-ul08 .newsRow .cl-pic.type2 {
+    width: 133.33333px; }
 
-/* news-ul01 end */
+.news-ul08 .newsRow .adr {
+  color: #999;
+  font-size: 12px;
+  padding: 15px 0; }
+
+.news-ul08 .newsRow .cl-newsBox {
+  text-align: left;
+  margin-left: 135px; }
+  .news-ul08 .newsRow .cl-newsBox .view {
+    margin-left: 20px; }
+  .news-ul08 .newsRow .cl-newsBox .cl-title {
+    padding-top: 19px; }
+    .news-ul08 .newsRow .cl-newsBox .cl-title .cl-p01 {
+      font-size: 28.08px;
+      color: #218ad5; }
+      .news-ul08 .newsRow .cl-newsBox .cl-title .cl-p01:hover {
+        color: #218ad5; }
+  .news-ul08 .newsRow .cl-newsBox .cl-type {
+    margin-left: 40px; }
+    .news-ul08 .newsRow .cl-newsBox .cl-type span {
+      padding: 0px 10px;
+      border: 1px solid #218ad5;
+      color: #218ad5; }
+  .news-ul08 .newsRow .cl-newsBox .rightPart {
+    float: right;
+    padding-top: 10px; }
+    .news-ul08 .newsRow .cl-newsBox .rightPart .wrapper {
+      display: inline-block; }
+      .news-ul08 .newsRow .cl-newsBox .rightPart .wrapper + .wrapper .top {
+        border-left: 1px solid black; }
+      .news-ul08 .newsRow .cl-newsBox .rightPart .wrapper .top {
+        height: 35px;
+        text-align: center;
+        padding: 0 30px; }
+        .news-ul08 .newsRow .cl-newsBox .rightPart .wrapper .top .stars {
+          top: 7px; }
+        .news-ul08 .newsRow .cl-newsBox .rightPart .wrapper .top .iconfont {
+          font-size: 37.44px;
+          top: 7px; }
+      .news-ul08 .newsRow .cl-newsBox .rightPart .wrapper .p {
+        text-align: center;
+        padding-top: 5px; }
+  .news-ul08 .newsRow .cl-newsBox .cl-text {
+    padding-top: 15px;
+    height: 40px;
+    overflow: hidden;
+    line-height: 1.6; }
+    .news-ul08 .newsRow .cl-newsBox .cl-text .share {
+      overflow: hidden;
+      padding-top: 25px; }
+    .news-ul08 .newsRow .cl-newsBox .cl-text .p {
+      margin-bottom: 10px; }
+
+.news-ul08 .newsRow .cl-pic img {
+  width: 100%;
+  display: block; }
+
+/* news-ul08 end */
 /* news-ul07 start */
 .news-ul07 .newsRow .nu07-inner {
   padding: 15px 0px; }
@@ -591,5 +687,36 @@
   display: block; }
 
 /* news-ul02 end */
+/* news-ul01 start */
+.news-ul01 .newsRow {
+  padding: 30px 0px;
+  border-bottom: 1px solid #ddd; }
+
+.news-ul01 .newsRow .cl-pic {
+  width: 233.33333px;
+  height: 175px; }
+
+.news-ul01 .newsRow .cl-newsBox {
+  text-align: left;
+  margin-left: 253.33333px; }
+  .news-ul01 .newsRow .cl-newsBox .view {
+    margin-left: 20px; }
+
+.news-ul01 .newsRow .cl-pic img {
+  width: 100%;
+  display: block; }
+
+.news-ul01 .newsRow .cl-newsBox .cl-title .cl-p01 {
+  font-weight: 700;
+  font-size: 15.6px;
+  padding: 8px 0;
+  color: #eb6326; }
+
+.news-ul01 .newsRow .cl-newsBox .cl-text {
+  margin: 24px 0;
+  height: 65px;
+  overflow: hidden; }
+
+/* news-ul01 end */
 
 /*# sourceMappingURL=maps/cPicText.css.map */

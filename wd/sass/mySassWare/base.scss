@@ -7,9 +7,9 @@ body{
     overflow-x: hidden;
     font-size: $baseSize;
     line-height: $baseLineHeight;
-    color: $baseFontColor;
+    color: $baseFontColor; 
     background:$mainBgColor;
-} 
+}  
 a{text-decoration: none;cursor: pointer;}
 a[href].white{@extend %white;}
 a:visited{color:inherit;}
@@ -21,7 +21,7 @@ button:focus{outline: none;}
 img{max-height:100%;max-width:100%;max-width:none\9;max-height:none\9;margin:auto;}
 input{border:none;&:focus{outline:none;}}
 input[type="checkbox"]{outline:none;}
-    
+     
 .disabledLink{
   background: gray!important;
   cursor: not-allowed;

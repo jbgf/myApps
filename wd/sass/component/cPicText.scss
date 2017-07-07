@@ -3,35 +3,33 @@
 @import "../mySassWare/_mixin";
 @import "../mySassWare/_function";
 
-
-    
-.hireRow,
-.facilitatorRow{
+.phonePicRow{
+    @include rowBeta($num:3,$outer_gutter:15px,$plusM:true,$height:false);
+    padding:65px 16px 30px;
+    .inner{text-align:center;}
     .imgBox{
-        img{
-            display:block;
-            width:100%;height:190px;
+        position:relative;
+        display: inline-block;
+        .bg{z-index: 999;position:relative;}
+        .imgZone{
+            position:absolute;
+            left: 17px;
+            top: 70px;
+            width:247px;
+            height: 434px;
+            overflow: hidden;
+            .imgFloat{
+                img{width:100%;}
+            }
         }
-    }
-    overflow: hidden;
-    .teacher{
-        color:$gray;
-        padding-bottom:5px;
-    }
-    .title{
-        font-size:15px;
-        padding-top:3px;
-        color:#000;
-        
+        img{display:block;}
+    }   
 
-    }
-}  
-
-.facilitatorRow{
-    padding-top:20px;
-    padding-bottom:90px;
-    @include rowBeta($num:4,$outer_gutter:6px,$plusM:true,$height:false);
-    .title{text-align: center;}
+}
+    
+.relativeAppRow{
+    @include rowBeta($num:4,$outer_gutter:15px,$plusM:true,$height:false);
+    padding:75px 0;
 }
 
 .hrh-wrapper{
@@ -51,14 +49,6 @@
 }
 .hrjs-wrapper{
     padding-top: 10px;
-}
-
-.oi-outer-wrapper{
-    $oip:100px;
-    padding-left: $oip;
-    padding-right: $oip;
-    padding-top:$oip/3;
-    padding-bottom:$oip;
 }
 
 .productIntroduceBox{
@@ -225,42 +215,147 @@
         }
 }
 
-.indInfo{padding-top:16px;}    
-/* news-ul01 start */
-    .news-ul01 .newsRow {
-        padding: 30px 0px;
-        @include border($position:bottom);
-    }
-    $nuheight:175px;
-    .news-ul01 .newsRow .cl-pic{
-        width: $nuheight/3*4;
-        height: $nuheight;
+.indInfo{padding-top:16px;}  
+
+/* news-ul09 start */
+    $nuheight09:75px;
+    .news-ul09 .newsRow {
+        padding: 5px 0px;
+        &:hover{
+            color:$blue;
+        }
+        .cl-pic{
+            width: $nuheight09;
+            height: $nuheight09;
+            img{@extend %full;}
+        }
         
-        img{@extend %full;}
-    }
-    .news-ul01 .newsRow .cl-newsBox {
-        text-align: left;
-        margin-left: $nuheight/3*4 + 20px;
-        .view{margin-left:20px}
-    }
-    .news-ul01 .newsRow .cl-pic img{
+        .cl-newsBox {
+            text-align: left;
+            margin-left: $nuheight09 + 20px;
+           
+            .cl-title{ 
+               
+                overflow: hidden;
+                .cl-p01 {
+                    @extend %ellipsis;
+                    font-size: $titleSize;
+                    margin-top: -6px;
+                    &:hover{
+                        color:$blue;
+                    }  
+                }
+            }
+            .cl-text {
+                height:47px;
+                overflow:hidden;
+            }
+        }
+    }  
+   
+    .news-ul09 .newsRow .cl-pic img{
         width: 100%;
         display: block;
     }
 
-    .news-ul01 .newsRow .cl-newsBox .cl-title .cl-p01 {
-        font-weight: 700;
-        font-size: $mediumSize;
-        padding:8px 0;
-        color:$orange;
+/* news-ul09 end */
+
+/* news-ul08 start */
+    
+    .news-ul08 .newsRow {
+        $nuheight08:100px;
+        $nuheightp08:18px;
+       
+        & +.newsRow{
+            @include border($position:bottom,$type:dotted);    
+        }
+        
+        .cl-pic{
+            /* width: $nuheight08/3*4; */
+            width: $nuheight08 - $nuheightp08*2;
+            height: $nuheight08 - $nuheightp08*2;
+            padding:18px;
+            background: $little-gray;
+            @include border();
+            @include radius(20px);
+            img{@extend %full;}
+            &.type2{
+               width: $nuheight08/3*4; 
+            }
+        }
+        .adr{
+            color:$gray;
+            font-size: $smallSize;
+            padding:15px 0;
+        }
+        .cl-newsBox {
+            text-align: left;
+            margin-left: $nuheight08 + 35px;
+            .view{margin-left:20px}
+            .cl-title{ 
+                padding-top:19px;
+
+                .cl-p01 {
+                    font-size: $bigSize*1.5;
+                    color:$blue;
+                    &:hover{
+                        color:$blue;
+                    }
+                }
+            }
+            .cl-type{ 
+                margin-left: 40px;
+                span{
+                    padding:0px 10px ;
+                    @include border($color:$blue);
+                    color:$blue;
+                }
+            }
+            .rightPart{
+                float: right;
+                padding-top:10px;
+                .wrapper{
+                    display:inline-block;
+                    &+.wrapper{
+                            .top{border-left:1px solid black;}
+                    }
+                    .top{
+                        height:35px;text-align:center;
+                        padding:0 30px;
+                        .stars{
+                            @include rel_ajust($value:7px);
+                        }
+                        .iconfont{
+                            font-size:$bigSize*2;
+                            @include rel_ajust($value:7px);
+                        }
+                    }
+                    
+                    .p{text-align:center;padding-top:5px;}
+                }
+            }
+            .cl-text {
+                padding-top: 15px;
+                height: 40px;
+                overflow:hidden;
+                
+                line-height: 1.6;
+                .share{
+                    overflow: hidden;padding-top: 25px;
+                }
+                .p{margin-bottom:10px;}   
+               
+            }
+        }
+    }  
+   
+    .news-ul08 .newsRow .cl-pic img{
+        width: 100%;
+        display: block;
     }
 
-    .news-ul01 .newsRow .cl-newsBox .cl-text {
-        margin: 24px 0;
-        height:65px;
-        overflow:hidden;
-    }
-/* news-ul01 end */
+/* news-ul08 end */
+
 
 /* news-ul07 start */ 
     $nuheight07:105px;
@@ -531,3 +626,39 @@
 
 /* news-ul02 end */
 
+
+/* news-ul01 start */
+    .news-ul01 .newsRow {
+        padding: 30px 0px;
+        @include border($position:bottom);
+    }
+    $nuheight:175px;
+    .news-ul01 .newsRow .cl-pic{
+        width: $nuheight/3*4;
+        height: $nuheight;
+        
+        img{@extend %full;}
+    }
+    .news-ul01 .newsRow .cl-newsBox {
+        text-align: left;
+        margin-left: $nuheight/3*4 + 20px;
+        .view{margin-left:20px}
+    }
+    .news-ul01 .newsRow .cl-pic img{
+        width: 100%;
+        display: block;
+    }
+
+    .news-ul01 .newsRow .cl-newsBox .cl-title .cl-p01 {
+        font-weight: 700;
+        font-size: $mediumSize;
+        padding:8px 0;
+        color:$orange;
+    }
+
+    .news-ul01 .newsRow .cl-newsBox .cl-text {
+        margin: 24px 0;
+        height:65px;
+        overflow:hidden;
+    }
+/* news-ul01 end */

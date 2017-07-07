@@ -1,0 +1,61 @@
+@charset "UTF-8";
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.stars {
+  width: 110px;
+  height: 17px;
+  background: url(../img/starBg.png);
+  position: relative; }
+  .stars:before {
+    position: absolute;
+    left: 0px;
+    top: 0;
+    bottom: 0;
+    color: #dbdbdb;
+    background: url(../img/starFront.png);
+    content: " ";
+    font-size: 15px; }
+  .stars.star-1:before {
+    width: 9%; }
+  .stars.star-2:before {
+    width: 20%; }
+  .stars.star-3:before {
+    width: 29%; }
+  .stars.star-4:before {
+    width: 40%; }
+  .stars.star-5:before {
+    width: 49%; }
+  .stars.star-6:before {
+    width: 60%; }
+  .stars.star-7:before {
+    width: 69%; }
+  .stars.star-8:before {
+    width: 80%; }
+  .stars.star-9:before {
+    width: 89%; }
+  .stars.star-10:before {
+    width: 100%; }
+
+/*# sourceMappingURL=maps/cspecial.css.map */

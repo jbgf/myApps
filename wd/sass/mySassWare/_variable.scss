@@ -1,11 +1,12 @@
 @charset "UTF-8";
 /*----------------------------------------------------- */
 /* setting scss*/
-$baseLineHeight : 22px;
+$baseLineHeight : 1.6;
 $smallSize : 12px; 
-$baseSize : 14px;
+$baseSize : 15px;
 $mediumSize:$smallSize*1.3;
 $bigSize:$mediumSize*1.2;
+$titleSize:$bigSize*1.2;
 $bigTitle:$smallSize*2.3;
 $content_main_p:35px;
 %smallSize{font-size:$smallSize}
@@ -57,7 +58,7 @@ $green:#64963c;
 $green2:#6bb033;
 $light-blue:#63ade2;
 $light-blue2:#54a4d5;
-$water-blue:#59a3d6;
+$water-blue:#1296db;
 $blue:#218ad5;
 $blue2:#094990;
 $light-green:#4bd8a3;
@@ -66,7 +67,7 @@ $orange:#eb6326;
 $orange2:#ff7602;
 $orange3:#ff9235;
 $red:#ec5369;
-$baseFontColor : #666;
+$baseFontColor : $gray3;
 $baseTitleColor:#333;
 $baseBorderColor:#ddd;
 $titleColor:darken($baseFontColor, 30%);

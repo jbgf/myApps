@@ -5,6 +5,69 @@
 @import "../mySassWare/_function";
 
 
+.login_banner{
+    width:100%;height:534px;
+    margin-bottom:60px;
+    .loginZone{
+          .loginInner{padding:40px 15px;}      
+          width:365px;left: 50%;margin-left:150px;
+          height: 100%;
+          position: relative;
+          -webkit-box-shadow: #ddd 0px 0px 10px;
+                box-shadow: #ddd 0px 0px 10px;
+          -webkit-border-radius:20px;
+                  border-radius:20px;
+          @include border();
+          $title_h:50px;
+          $login-form-row-m:15px;
+          $login-form-row-h:35px;
+          
+          .logoZone{
+            text-align: center;
+          }
+         
+          .login-form {
+              .form-row{
+                  &+.form-row{margin-top: $login-form-row-m;}
+                  @extend %clear;
+                  input.input-base{
+                     @include baseInput($height:$login-form-row-h);
+                     @include radius(5px); 
+                  }
+                  &.auto-login-row{line-height:15px;}
+                  
+                  .check{margin-right:3px;}
+                  
+              }
+              .err-row{
+                padding:3px 12px;
+                font-size: $smallSize;
+                padding-top:50px;
+              }
+              .quick_sign_up{
+                  color:$water-blue;
+                  padding:5px 0;
+                  font-size: $smallSize;
+              }
+              .login.button {
+                  display: block;
+                  width: 100%; 
+                  @extend %mar-center;
+                  margin-top: $login-form-row-m;
+                  background: $water-blue;
+                  border-color: rgb(26, 123, 185);
+                  color: rgb(255, 255, 255);
+                  height:($login-form-row-h)+5;
+                  -webkit-border-radius: 25px;
+                          border-radius: 25px;
+                  font-size: $mediumSize;
+                  font-weight: 700;
+              }
+          } 
+    }
+} 
+
+
 $sf_arr:400px,340px,auto;
 $sf_h:35px;
 .form1{ 
