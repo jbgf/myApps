@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+@import "../mySassWare/_variable";
+@import "../mySassWare/_mixin";
+@import "../mySassWare/_function";
+
+.stars{
+  width:108px;
+  height: 17px;
+  background:url(../img/starBg.png)
+}
