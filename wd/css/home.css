@@ -58,6 +58,9 @@
 /****************************************************/
 /* @import "./head"; */
 /****************************************************/
+.border-top {
+  border-top: 1px solid #ddd; }
+
 .banner01 {
   height: 317px; }
 
@@ -79,6 +82,9 @@
     padding: 3px 10px;
     -webkit-border-radius: 15px;
     border-radius: 15px; }
+
+.banner04 {
+  height: 368px; }
 
 .productType {
   padding-top: 60px; }

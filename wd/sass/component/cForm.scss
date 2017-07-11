@@ -4,6 +4,156 @@
 @import "../mySassWare/_mixin";
 @import "../mySassWare/_function";
 
+.formBanner .form3 .formInner{
+  display: none;
+  &.active{
+    display: inline-block;
+  }
+}
+.formBanner .news_h03{
+  padding-top:75px;
+  margin-bottom: 75px;
+}
+.formBanner .btnRow{
+  padding:60px 0;
+}
+
+.form4{margin:50px 0}
+.form4{
+        $sf_w:auto;
+        $sf_h:35px;
+        $sf_arr:90px,320px,775px;
+        $sf_p:6px;
+        $get_input_w:0.5;
+        background:#fff;
+        width:$sf_w;
+        
+        text-align: center;
+        .zprow-block-2{
+          width:50%;
+          float: left;
+          .halfWrapper{display:inline-block;}
+        }
+        .zprow-block-3{
+          float: left;
+          width:percentage(1/3);
+          select{
+            width:228px;
+            height: 33px;
+          }
+          .text{
+            width:46px;
+            display: inline-block;
+            text-align: center;
+          }
+        }
+        .formInner{ 
+          display: inline-block;
+          padding: $sf_h*2 0; 
+        }
+        .err-row{
+              height: 35px;
+              margin-left: nth($sf_arr, 1) + $sf_p;
+              text-align: left;
+              color:$red;
+        }
+        .roundBtn02{
+              margin-top:30px;
+        }
+        .form-row{
+          & + .form-row{margin-top:30px;} 
+          @include form_row($widthArr:$sf_arr,$height:$sf_h);
+          
+          &.submit-row{
+            @include form_row($widthArr:$sf_arr,$height:$sf_h + 10px);
+            .baseInput{
+              background:$water-blue;
+              border:none!important;
+              width: nth($sf_arr, 1) + nth($sf_arr, 2)!important;
+            }   
+            a{
+              @extend %align-center;
+            }
+          } 
+        } 
+        input{@extend %mediumSize;}
+        .un-block-1{
+         
+          text-align: right;
+        }
+        .un-block-2,
+        .un-block-3{padding-left:$sf_p;}
+        
+      
+  }
+
+.form3{
+        $sf_w:auto;
+        $sf_h:35px;
+        $sf_arr:90px,225px,auto;
+        $sf_p:6px;
+        $get_input_w:0.5;
+        width:$sf_w;
+        
+        text-align: center;
+        .formInner{ 
+          display: inline-block;
+          padding-bottom: $sf_h*2; 
+        }
+        .err-row{
+              height: 35px;
+              margin-left: nth($sf_arr, 1) + $sf_p;
+              text-align: left;
+              color:$red;
+        }
+        .form-row{
+          & + .form-row{margin-top:30px;} 
+          @include form_row($widthArr:$sf_arr,$height:$sf_h);
+          
+          &.submit-row{
+            @include form_row($widthArr:$sf_arr,$height:$sf_h + 10px);
+            .baseInput{
+              background:$water-blue;
+              border:none!important;
+              width: nth($sf_arr, 1) + nth($sf_arr, 2)!important;
+            }   
+            a{
+              @extend %align-center;
+            }
+          } 
+        } 
+        input{@extend %mediumSize;}
+        .un-block-1{
+         
+          text-align: right;
+        }
+        .un-block-2,
+        .un-block-3{padding-left:$sf_p;}
+        .un-block-3{color:$water-blue;.red{color:$water-blue}}
+        .get_ic{
+          @include row($num:auto,$outer_gutter:5px,$plusM:true);
+          .row,.row-block,.inner{height:100%;}
+          .row-block.input{width:percentage($get_input_w)}
+          .row-block.btn{width:percentage(1-$get_input_w);
+            .ic_btn{
+              @include radius(5px)
+              background:#86c6e7;
+          
+            }
+          }
+        }
+        .successInfo{
+          color:$water-blue;
+          .title{
+            font-size: $bigSize;
+            .iconfont{
+              margin-right: 10px;
+              font-size: $titleSize;
+            }
+          }
+          .o{color:$orange;}
+        }
+  }
 
 .login_banner{
     width:100%;height:534px;
@@ -37,12 +187,14 @@
                   &.auto-login-row{line-height:15px;}
                   
                   .check{margin-right:3px;}
-                  
+                    
               }
               .err-row{
                 padding:3px 12px;
                 font-size: $smallSize;
-                padding-top:50px;
+                padding-top:40px;
+                height: 20px;
+                color:$red; 
               }
               .quick_sign_up{
                   color:$water-blue;
@@ -57,9 +209,8 @@
                   background: $water-blue;
                   border-color: rgb(26, 123, 185);
                   color: rgb(255, 255, 255);
-                  height:($login-form-row-h)+5;
-                  -webkit-border-radius: 25px;
-                          border-radius: 25px;
+                  height:($login-form-row-h)+10;
+                  @include radius(5px);
                   font-size: $mediumSize;
                   font-weight: 700;
               }
@@ -67,6 +218,38 @@
     }
 } 
 
+.form2{ 
+    $sf_arr2:185px,730px,auto;
+    $sf_h2:30px;
+    font-size: $mediumSize;
+    color:#000;
+    padding-top:45px;
+    .form-row{
+      &+ .form-row{margin-top:20px; }
+      @include form_row($widthArr:$sf_arr2,$height:$sf_h2);
+      &.h-auto{
+        height: auto;  
+        .un-block-1,.un-block-2,.un-block-3{
+            line-height:1;
+            
+        }
+        
+      }
+      .un-block-1{
+        text-align: right;
+        padding-right: 15px;
+      }      
+    }
+    input[type=submit]{
+      background:$blue;
+      color:#fff;
+      height: 40px;
+      width:340px;
+      font-weight: bold;  
+      font-size: inherit;
+    }
+   
+}
 
 $sf_arr:400px,340px,auto;
 $sf_h:35px;
@@ -109,38 +292,7 @@ $sf_h:35px;
     }
 }
 
-.form2{ 
-    $sf_arr2:185px,730px,auto;
-    $sf_h2:30px;
-    font-size: $mediumSize;
-    color:#000;
-    padding-top:45px;
-    .form-row{
-      &+ .form-row{margin-top:20px; }
-      @include form_row($widthArr:$sf_arr2,$height:$sf_h2);
-      &.h-auto{
-        height: auto;  
-        .un-block-1,.un-block-2,.un-block-3{
-            line-height:1;
-            
-        }
-        
-      }
-      .un-block-1{
-        text-align: right;
-        padding-right: 15px;
-      }      
-    }
-    input[type=submit]{
-      background:$blue;
-      color:#fff;
-      height: 40px;
-      width:340px;
-      font-weight: bold;  
-      font-size: inherit;
-    }
-   
-}
+
 
 .ca_table{
   $rateArr:135,940;

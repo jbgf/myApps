@@ -3,6 +3,33 @@
 @import "../mySassWare/_mixin";
 @import "../mySassWare/_function";
 
+.prUl{
+    @include rowBeta($num:4,$outer_gutter:15px,$plusM:true,$height:false);
+    padding-bottom:20px;
+    .inner{text-align:center;}
+    .plBlock{
+        display: inline-block;
+        width:263px;
+        height: 399px;
+        overflow: hidden;
+        padding-bottom:15px;
+        .top{
+            text-align: center;
+            color:#fff;
+            padding-top: 20px;
+            font-size: $titleSize;
+        }
+        .bottom{
+            text-align: left;
+            margin-top:75%;
+            padding:0 10px;
+            height: 175px;
+            overflow: hidden;
+            text-align: justify;
+        }
+    }
+}
+
 .phonePicRow{
     @include rowBeta($num:3,$outer_gutter:15px,$plusM:true,$height:false);
     padding:65px 16px 30px;
@@ -24,6 +51,11 @@
         }
         img{display:block;}
     }   
+
+}
+
+.productSupportRow{
+    @include rowBeta($num:3,$outer_gutter:15px,$plusM:true,$height:false);
 
 }
     
@@ -87,7 +119,7 @@
                 font-size: $bigSize;
             }
             .ih-text{
-                height: 90px;
+                height: 75px;
                 overflow: hidden;
             }
         }
@@ -169,6 +201,44 @@
     
 }
 
+.caseRow{
+    $fg:4px;
+    padding-bottom:60px;
+        @include rowBeta($num:4,$outer_gutter:$fg,$plusM:true,$height:false);
+        .box{
+            height: 160px;
+            margin-bottom:$fg*2;
+            position:relative;
+            .text{
+                @extend %absfull;
+                display: none;
+                background:#d3e8f7;
+                font-size: $smallSize;
+                .tinner{padding:34px 28px;position:relative;}
+                .t{
+                    font-size: $bigSize;
+                }
+                .small{
+                    height: 72px;
+                    overflow: hidden;
+                }
+                .link{
+                    
+                    color:$water-blue;
+                }
+            }
+            img{
+                @extend %blockImg;
+               
+                position:relative;
+                
+            }
+            &:hover{
+                   .text{display:block;}        
+            }
+        }
+}
+
 .friendsRow{
     $fg:4px;
     padding-bottom:60px;
@@ -217,6 +287,67 @@
 
 .indInfo{padding-top:16px;}  
 
+.tab2ul{padding:25px 0; }
+/* news-ul10 start */
+    
+    .news-ul10 .newsRow {
+        $nuheight10:154px;
+        padding:25px 0;
+        
+        
+        .cl-pic{
+            /* width: $nuheight10/3*4; */
+            width: $nuheight10;
+            height: $nuheight10;
+            padding:5px;
+            @include radius($nuheight10);
+            @include border($color:$blue,$width:2px);
+            img{
+                @extend %full;
+                @include radius($nuheight10);
+                display: block;
+            }
+            
+        }
+        .adr{
+            color:$gray;
+            font-size: $smallSize;
+            padding:15px 0;
+        }
+        .cl-newsBox {
+            text-align: left;
+            margin-left: $nuheight10 + 40px;
+            .view{margin-left:20px}
+            .cl-title .cl-p01 {
+                font-weight: 700;
+                font-size: $mediumSize;
+                color:$water-blue;
+                padding:30px 0;
+            }
+            .cl-text {
+               
+                height: 70px;
+                overflow:hidden;
+                font-size:$mediumSize;
+                line-height: 1.6;
+                .share{
+                    overflow: hidden;padding-top: 25px;
+                }
+                .p{margin-bottom:10px;}   
+                .g{color:$gray;}
+            }
+        }
+    }  
+   
+    .news-ul10 .newsRow .cl-pic img{
+        width: 100%;
+        display: block;
+    }
+
+/* news-ul10 end */
+.productSupportRow .inner{
+    margin-bottom: 30px;
+}
 /* news-ul09 start */
     $nuheight09:75px;
     .news-ul09 .newsRow {
@@ -314,25 +445,7 @@
             .rightPart{
                 float: right;
                 padding-top:10px;
-                .wrapper{
-                    display:inline-block;
-                    &+.wrapper{
-                            .top{border-left:1px solid black;}
-                    }
-                    .top{
-                        height:35px;text-align:center;
-                        padding:0 30px;
-                        .stars{
-                            @include rel_ajust($value:7px);
-                        }
-                        .iconfont{
-                            font-size:$bigSize*2;
-                            @include rel_ajust($value:7px);
-                        }
-                    }
-                    
-                    .p{text-align:center;padding-top:5px;}
-                }
+                
             }
             .cl-text {
                 padding-top: 15px;

@@ -11,6 +11,22 @@
 /* color end */
 /* clearfix*/
 /* 闭合子元素的浮动*/
+.valueRow1 .row-block, .valueRow1 .valueBlock .valueBlock-left {
+  float: left; }
+
+.valueRow1:before, .valueRow1 .row-block:before, .valueRow1:after, .valueRow1 .row-block:after {
+  content: " ";
+  display: table; }
+
+.valueRow1:after, .valueRow1 .row-block:after {
+  clear: both; }
+
+.valueRow1 .row-block, .valueRow1 .valueBlock {
+  position: relative; }
+
+.valueRow1 .row-block, .valueRow1 .valueBlock .valueBlock-left {
+  float: left; }
+
 /*----------------------------------------------------- */
 /* setting scss*/
 /*----------------------------------------------------- */
@@ -23,6 +39,60 @@
 /* color end */
 /* clearfix*/
 /* 闭合子元素的浮动*/
+.valueRow1 .row-block, .valueRow1 .valueBlock .valueBlock-left {
+  float: left; }
+
+.valueRow1:before, .valueRow1 .row-block:before, .valueRow1:after, .valueRow1 .row-block:after {
+  content: " ";
+  display: table; }
+
+.valueRow1:after, .valueRow1 .row-block:after {
+  clear: both; }
+
+.valueRow1 .row-block, .valueRow1 .valueBlock {
+  position: relative; }
+
+.valueRow1 .row-block, .valueRow1 .valueBlock .valueBlock-left {
+  float: left; }
+
+.valueBlock {
+  line-height: 1.5;
+  background: #f0f0f0;
+  margin-bottom: 15px;
+  padding: 40px 60px; }
+  .valueBlock .valueBlock-left {
+    font-size: 15.6px; }
+  .valueBlock .valueBlock-right {
+    font-size: 14px; }
+  .valueBlock .title {
+    color: #218ad5;
+    font-size: 15.6px;
+    font-weight: 700; }
+  .valueBlock .valueBlock-bottom {
+    padding-top: 15px; }
+
+.valueRow1 {
+  margin-left: -15px;
+  margin-right: -15px; }
+  .valueRow1 .row-block {
+    width: 50%;
+    min-height: 1px; }
+    .valueRow1 .row-block .inner {
+      padding: 0 15px; }
+  .valueRow1 .valueBlock .valueBlock-left, .valueRow1 .valueBlock .valueBlock-right {
+    min-height: 1px; }
+  .valueRow1 .valueBlock .valueBlock-left {
+    width: 20px;
+    text-align: left;
+    height: 40px; }
+  .valueRow1 .valueBlock .valueBlock-right {
+    margin-left: 55px;
+    height: 40px; }
+
+.valueRow2 {
+  text-align: center;
+  padding-bottom: 30px; }
+
 .i-brand {
   background: #fcfcfc;
   padding: 17.5px;

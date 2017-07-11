@@ -1,4 +1,4 @@
-<?php include 'head.html' ?>
+<?php include 'simpleHead.html' ?>
     <div class="middlePart">
         <div class="banner01" style="background:url(img/banner01.jpg) center center no-repeat;">
         

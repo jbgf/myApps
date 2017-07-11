@@ -4,6 +4,96 @@
         
         </div>
         
+        <!-- scollspy start -->
+        <div  id="myScrollspy1">
+            <div class="row">
+                    <div class="container1150" style="position: relative;"> 
+                        <div class="nav " >
+                            <div class="top">
+                                <img src="img/staffixTop.png">
+                                <div class="topbody">
+                                    <div class="text">
+                                        <p>全国咨询电话</p>
+                                        <p>400-0858-319</p>
+                                    </div>
+                                    <a href="http://wpa.b.qq.com/cgi/wpa.php?ln=1&key=XzkzODA3MDY3OV80MDI1ODFfNDAwMDg1ODMxOV8yXw" class="qqbtn">
+                                      <img src="img/qqbtn.png">
+                                    </a>
+                                </div>
+                            </div>
+                            <div  class="scrollTop">
+                                <div class="stWrapper">
+                                    <img src="img/scrollTop.png">
+                                </div>
+                            </div>
+                        </div>
+                   </div> 
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(function(){
+                +function scrollAffix(){
+                    var ww = $(window).width();
+                    var nav = $("#myScrollspy1 .nav");
+                    var ot = $("#myScrollspy1").offset().top - 200;
+                    var msh = nav.height();
+                    var minWidth = 10000; 
+                    var timer0 = null;
+                    var timer = null;
+                    var seconds = 10;
+                    var _ms = 10000; /*1000ms 不滚动则滚动条消失*/    
+                        $("#myScrollspy1").affix({
+                            offset:{
+                                top:ot,
+                                bottom: function () {
+
+                                return (this.bottom = 
+                                    $('.footer').outerHeight(true) + msh) 
+                                }
+                            }
+                        })
+
+                        nav.show();
+                        
+                        /*返回顶部*/
+                        $(".scrollTop").on("click",function(){
+                            
+                                
+                                if(requestAnimationFrame){
+                                    cancelAnimationFrame(timer);
+                                    timer = requestAnimationFrame(function fn(){
+                                        var oTop = document.body.scrollTop || document.documentElement.scrollTop;
+                                        if(oTop > 0){
+                                            document.body.scrollTop = document.documentElement.scrollTop = oTop - 50;
+                                            timer = requestAnimationFrame(fn);
+                                        }else{
+                                            cancelAnimationFrame(timer);
+
+                                        }
+                                    });
+                                }else{
+                                    clearTimeout(timer);
+                                    timer = setTimeout(function fn(){
+                                        var oTop = document.body.scrollTop || document.documentElement.scrollTop;
+                                        if(oTop > 0){
+                                            document.body.scrollTop = document.documentElement.scrollTop = oTop - 50;
+                                            timer = setTimeout(fn,seconds);
+                                        }else{
+                                            clearTimeout(timer);
+                                        }
+                                    },seconds)
+                                }
+                                
+                            
+                        })
+                        
+                       
+                    
+                }()  
+            })
+            
+        </script>
+
         <div class="homeProductCenterTab">
             <div class="header03">
                 <div class="h-title01">产品中心</div>
@@ -146,6 +236,7 @@
                 </div>
             </div>
             <script type="text/javascript">
+                
                 +function tab04(){ //news tab切换
                     jQuery("#tab04").slide(); }()
 

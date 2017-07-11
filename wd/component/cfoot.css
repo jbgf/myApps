@@ -21,8 +21,11 @@
 .footer-content .linkZone .row:after {
   clear: both; }
 
-.footer-content .linkZone .row .row-block {
+.footer01 .fridend_link, .footer01 .fridend_link .right a, .footer-content .linkZone .row .row-block {
   position: relative; }
+
+.footer01, .footer01 .fridend_link .right a + a {
+  text-align: center !important; }
 
 .footer-content .linkZone .row .row-block {
   float: left; }
@@ -49,13 +52,47 @@
 .footer-content .linkZone .row:after {
   clear: both; }
 
-.footer-content .linkZone .row .row-block {
+.footer01 .fridend_link, .footer01 .fridend_link .right a, .footer-content .linkZone .row .row-block {
   position: relative; }
+
+.footer01, .footer01 .fridend_link .right a + a {
+  text-align: center !important; }
 
 .footer-content .linkZone .row .row-block {
   float: left; }
 
+/*footer01 start*/
+.footer01 {
+  color: #ddd;
+  border-top: 1px solid #ddd; }
+  .footer01 .fridend_link .right {
+    padding: 10px 0; }
+  .footer01 .fridend_link .right a {
+    padding: 0 15px; }
+    .footer01 .fridend_link .right a:first-child {
+      padding-left: 0; }
+    .footer01 .fridend_link .right a + a:before {
+      position: absolute;
+      content: "|";
+      left: 0px;
+      width: 1px;
+      color: #dbdbdb; }
+    .footer01 .fridend_link .right a + a:before {
+      left: -3px; }
+  .footer01 .copyRight {
+    text-align: center;
+    font-size: 12px;
+    padding: 2px 0; }
+
+/* footer01 end */
 /*footer start*/
+.footerWrapper .copyRight {
+  text-align: center;
+  background: #2b3033;
+  font-size: 12px;
+  color: #999;
+  padding: 2px 0; }
+
 .footer {
   background: #373d41;
   padding: 45px 0 40px;
@@ -112,7 +149,7 @@
     color: #999; }
     .footer-content .linkZone .other_link .relative_link {
       padding-bottom: 2px;
-      font-size: 14px; }
+      font-size: 15px; }
 
 .footer-content .qr p {
   height: 45px;
@@ -141,13 +178,6 @@
 
 .footer-content .f-content.qr {
   width: 122px; }
-
-.copyRight {
-  text-align: center;
-  background: #2b3033;
-  font-size: 12px;
-  color: #999;
-  padding: 2px 0; }
 
 /* footer end */
 

@@ -3,6 +3,41 @@
 @import "../mySassWare/_variable";
 @import "../mySassWare/_mixin";
 @import "../mySassWare/_function";
+
+.valueBlock{
+     line-height: 1.5;
+     background:$little-gray;
+     margin-bottom: 15px;
+     padding:40px 60px;
+     .valueBlock-left{
+        font-size: $mediumSize;
+     }
+     .valueBlock-right{
+        font-size: 14px;
+     }
+     .title{
+        color:$blue;
+        font-size: $mediumSize;
+        font-weight: 700;
+     }
+     .valueBlock-top{
+        
+     }
+     .valueBlock-bottom{
+        padding-top:15px;
+     }
+}
+.valueRow1{
+  @include rowBeta($num:2,$outer_gutter:15px,$plusM:true,$height:false);
+  .valueBlock{
+     @include f_pictext_rowNew($width:20px,$height:40px,$fpos:"left",$mar-gutter:35px)
+  }  
+}
+.valueRow2{
+  text-align: center;
+  padding-bottom: 30px;
+}
+
 $sb02_p:48px;
 $side_pl:$content_main_p;
 

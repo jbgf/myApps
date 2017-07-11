@@ -5,6 +5,28 @@
 @import "../mySassWare/_function";
  
 .topWrapper{}
+.logoRow03{
+    $lr03h:65px;
+    $lr03m:5px;
+    $ddpt:$lr03h/5.5;
+    $dd_h:50px;
+   
+    background: $water-blue;
+    border-bottom:1px solid #d0d0d0;
+    color:#fff;
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+    &,.logo{@include lheightM($lr03h);}
+    .logo {margin-right:25px;img{vertical-align:middle;}}
+    .title{
+        @extend %float-l;
+        @include lheightM($lr03h - 10px);padding-left:$ddpt;
+        font-size:$bigSize*1.3;
+        color:$baseTitleColor;
+    }
+    .mainDropDown01 .caretWrapper .caret{
+        @include caret($color:#fff,$position:bottom,$width:4px);}
+}
 .logoRow02{
     $lr02h:73px;
     $lr02m:5px;

@@ -11,13 +11,13 @@
 /* color end */
 /* clearfix*/
 /* 闭合子元素的浮动*/
-.logoRow02 .title {
+.logoRow03 .title, .logoRow02 .title {
   float: left; }
 
 .mainDropDown01, .mainDropDown01 .caretWrapper .caret {
   position: relative; }
 
-.logoRow02 .title {
+.logoRow03 .title, .logoRow02 .title {
   float: left; }
 
 /*----------------------------------------------------- */
@@ -32,14 +32,42 @@
 /* color end */
 /* clearfix*/
 /* 闭合子元素的浮动*/
-.logoRow02 .title {
+.logoRow03 .title, .logoRow02 .title {
   float: left; }
 
 .mainDropDown01, .mainDropDown01 .caretWrapper .caret {
   position: relative; }
 
-.logoRow02 .title {
+.logoRow03 .title, .logoRow02 .title {
   float: left; }
+
+.logoRow03 {
+  background: #1296db;
+  border-bottom: 1px solid #d0d0d0;
+  color: #fff;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+  .logoRow03, .logoRow03 .logo {
+    height: 65px;
+    line-height: 65px; }
+  .logoRow03 .logo {
+    margin-right: 25px; }
+    .logoRow03 .logo img {
+      vertical-align: middle; }
+  .logoRow03 .title {
+    height: 55px;
+    line-height: 55px;
+    padding-left: 11.81818px;
+    font-size: 24.336px;
+    color: #333; }
+  .logoRow03 .mainDropDown01 .caretWrapper .caret {
+    border-right: 4px solid transparent;
+    border-bottom: 4px dashed #fff;
+    border-left: 4px solid transparent;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    vertical-align: middle; }
 
 .logoRow02 {
   border-bottom: 1px solid #d0d0d0;
@@ -147,7 +175,7 @@
       padding: 10px 0px;
       text-align: center;
       line-height: 1;
-      color: #666; }
+      color: #999; }
       .naver_0 .nav_erc li:hover {
         background: rgba(102, 180, 218, 0.9);
         color: #fff; }

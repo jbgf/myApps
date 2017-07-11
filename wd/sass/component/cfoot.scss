@@ -4,12 +4,51 @@
 @import "../mySassWare/_mixin";
 @import "../mySassWare/_function";
 
+/*footer01 start*/
+    
+  
+  .footer01{
+      $footinner_h:125px;
+      $footer01_p:50px;
+      $qrZone_w:380px;
+      $foot-logo-size:120px;  
+      
+      color:$baseBorderColor;
+      @include border($position:top,$width:1px,$color:$baseBorderColor);
+      @extend %align-center;
+      .fridend_link{
+          .right{padding:10px 0}
+          @extend %relative;
+          
+          .right{
+              
+              a{
+                 
+                  @extend %relative;
+                  padding:0 15px ;
+                  &:first-child{padding-left:0;}
+                  & + a{ @include divider(); @extend %align-center;
+                      &:before{left:-3px;}
+                  }
+              } 
+              
+          }  
+      }
+      .copyRight{text-align:center;font-size:$smallSize;padding:2px 0;}
+      
+  }
+/* footer01 end */
 
 /*footer start*/
     $titleSize:$bigSize*1.4;
     $ftoph:45px;
- 
-    .footer{background:#373d41;padding: $ftoph 0 $ftoph - 5px;color:#ebebeb;}
+    .footerWrapper{
+      .copyRight{text-align:center;background:#2b3033;font-size:$smallSize;color:#999;padding:2px 0}
+    }
+    .footer{
+        background:#373d41;padding: $ftoph 0 $ftoph - 5px;color:#ebebeb;
+        
+    }
     
     .footer-content{
         
@@ -60,7 +99,7 @@
     .footer-content .f-content.address{width:520px;border-right: 1px solid #4d4d4d;font-size: 13px;}
     .footer-content .f-content.qr{width:122px;}
 
-    .copyRight{text-align:center;background:#2b3033;font-size:$smallSize;color:#999;padding:2px 0}
+    
 /* footer end */
 
  

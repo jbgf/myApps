@@ -8,7 +8,9 @@
 /* @import "./head"; */
 /****************************************************/
 $titleSize:$bigSize*1.1;
-
+.border-top{
+	@include border($position:top);
+}
 .banner01{height:317px}
 .banner02{height:546px}
 .banner03{
@@ -16,6 +18,9 @@ $titleSize:$bigSize*1.1;
     display: table;width:100%;
     p{display:table-cell;vertical-align:middle;text-align:center;font-size:$titleSize;}
     .servedNum{background:$blue;padding:3px 10px;@include radius(15px);}
+}
+.banner04{
+    height: 368px;
 }
  
 .productType{

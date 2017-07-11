@@ -11,17 +11,17 @@
 /* color end */
 /* clearfix*/
 /* 闭合子元素的浮动*/
-.hr-link .row-block {
+#addRow .row-block, .hr-link .row-block {
   float: left; }
 
-.pWrapper03 .prow03:before, .pWrapper03 .prow03 .productDiamond:before, .pWrapper02 .prow02:before, .pWrapper02 .prow02 .productDiamond:before, .prow01:before, .prow01 .productDiamond:before, .prow:before, .hr-link:before, .hr-link .row-block:before, .pWrapper03 .prow03:after, .pWrapper03 .prow03 .productDiamond:after, .pWrapper02 .prow02:after, .pWrapper02 .prow02 .productDiamond:after, .prow01:after, .prow01 .productDiamond:after, .prow:after, .hr-link:after, .hr-link .row-block:after {
+#addRow:before, #addRow .row-block:before, .pWrapper03 .prow03:before, .pWrapper03 .prow03 .productDiamond:before, .pWrapper02 .prow02:before, .pWrapper02 .prow02 .productDiamond:before, .prow01:before, .prow01 .productDiamond:before, .prow:before, .hr-link:before, .hr-link .row-block:before, #addRow:after, #addRow .row-block:after, .pWrapper03 .prow03:after, .pWrapper03 .prow03 .productDiamond:after, .pWrapper02 .prow02:after, .pWrapper02 .prow02 .productDiamond:after, .prow01:after, .prow01 .productDiamond:after, .prow:after, .hr-link:after, .hr-link .row-block:after {
   content: " ";
   display: table; }
 
-.pWrapper03 .prow03:after, .pWrapper03 .prow03 .productDiamond:after, .pWrapper02 .prow02:after, .pWrapper02 .prow02 .productDiamond:after, .prow01:after, .prow01 .productDiamond:after, .prow:after, .hr-link:after, .hr-link .row-block:after {
+#addRow:after, #addRow .row-block:after, .pWrapper03 .prow03:after, .pWrapper03 .prow03 .productDiamond:after, .pWrapper02 .prow02:after, .pWrapper02 .prow02 .productDiamond:after, .prow01:after, .prow01 .productDiamond:after, .prow:after, .hr-link:after, .hr-link .row-block:after {
   clear: both; }
 
-.pWrapper03 .prow03 .productDiamond_1 .text, .pWrapper03 .prow03 .productDiamond_2 .text, .pWrapper03 .prow03 .productDiamond_3 .text, .pWrapper03 .prow03 .productDiamond_4 .text, .pWrapper03 .prow03 .productDiamond_5 .text, .pWrapper03 .prow03 .productDiamond_6 .text, .pWrapper03 .prow03 .productDiamond_7 .text, .pWrapper03 .prow03 .productDiamond_8 .text, .pWrapper03 .prow03 .productDiamond_9 .text, .pWrapper03 .prow03 .productDiamond_10 .text, .prow01 .productDiamond_1 .text, .prow01 .productDiamond_2 .text, .prow01 .productDiamond_3 .text, .prow01 .productDiamond_4 .text, .prow01 .productDiamond_5 .text, .prow01 .productDiamond_6 .text, .prow01 .productDiamond_7 .text, .prow01 .productDiamond_8 .text, .prow01 .productDiamond_9 .text, .prow01 .productDiamond_10 .text, .hr-link .row-block, .hr-link .hrl-inner {
+#addRow .row-block, .iconGroup02 .wrapper .top .stars, .iconGroup02 .wrapper .top .iconfont, .iconGroup01 .wrapper .top .stars, .iconGroup01 .wrapper .top .iconfont, .pWrapper03 .prow03 .productDiamond_1 .text, .pWrapper03 .prow03 .productDiamond_2 .text, .pWrapper03 .prow03 .productDiamond_3 .text, .pWrapper03 .prow03 .productDiamond_4 .text, .pWrapper03 .prow03 .productDiamond_5 .text, .pWrapper03 .prow03 .productDiamond_6 .text, .pWrapper03 .prow03 .productDiamond_7 .text, .pWrapper03 .prow03 .productDiamond_8 .text, .pWrapper03 .prow03 .productDiamond_9 .text, .pWrapper03 .prow03 .productDiamond_10 .text, .prow01 .productDiamond_1 .text, .prow01 .productDiamond_2 .text, .prow01 .productDiamond_3 .text, .prow01 .productDiamond_4 .text, .prow01 .productDiamond_5 .text, .prow01 .productDiamond_6 .text, .prow01 .productDiamond_7 .text, .prow01 .productDiamond_8 .text, .prow01 .productDiamond_9 .text, .prow01 .productDiamond_10 .text, .hr-link .row-block, .hr-link .hrl-inner {
   position: relative; }
 
 .pWrapper03 .prow03 .productDiamond .pic img, .pWrapper02 .prow02 .productDiamond .pic img {
@@ -34,7 +34,12 @@
   left: 0;
   margin: auto; }
 
-.hr-link .row-block {
+#addRow .border .borderinner {
+  display: block;
+  width: 100%;
+  height: 100%; }
+
+#addRow .row-block, .hr-link .row-block {
   float: left; }
 
 /*----------------------------------------------------- */
@@ -49,17 +54,17 @@
 /* color end */
 /* clearfix*/
 /* 闭合子元素的浮动*/
-.hr-link .row-block {
+#addRow .row-block, .hr-link .row-block {
   float: left; }
 
-.pWrapper03 .prow03:before, .pWrapper03 .prow03 .productDiamond:before, .pWrapper02 .prow02:before, .pWrapper02 .prow02 .productDiamond:before, .prow01:before, .prow01 .productDiamond:before, .prow:before, .hr-link:before, .hr-link .row-block:before, .pWrapper03 .prow03:after, .pWrapper03 .prow03 .productDiamond:after, .pWrapper02 .prow02:after, .pWrapper02 .prow02 .productDiamond:after, .prow01:after, .prow01 .productDiamond:after, .prow:after, .hr-link:after, .hr-link .row-block:after {
+#addRow:before, #addRow .row-block:before, .pWrapper03 .prow03:before, .pWrapper03 .prow03 .productDiamond:before, .pWrapper02 .prow02:before, .pWrapper02 .prow02 .productDiamond:before, .prow01:before, .prow01 .productDiamond:before, .prow:before, .hr-link:before, .hr-link .row-block:before, #addRow:after, #addRow .row-block:after, .pWrapper03 .prow03:after, .pWrapper03 .prow03 .productDiamond:after, .pWrapper02 .prow02:after, .pWrapper02 .prow02 .productDiamond:after, .prow01:after, .prow01 .productDiamond:after, .prow:after, .hr-link:after, .hr-link .row-block:after {
   content: " ";
   display: table; }
 
-.pWrapper03 .prow03:after, .pWrapper03 .prow03 .productDiamond:after, .pWrapper02 .prow02:after, .pWrapper02 .prow02 .productDiamond:after, .prow01:after, .prow01 .productDiamond:after, .prow:after, .hr-link:after, .hr-link .row-block:after {
+#addRow:after, #addRow .row-block:after, .pWrapper03 .prow03:after, .pWrapper03 .prow03 .productDiamond:after, .pWrapper02 .prow02:after, .pWrapper02 .prow02 .productDiamond:after, .prow01:after, .prow01 .productDiamond:after, .prow:after, .hr-link:after, .hr-link .row-block:after {
   clear: both; }
 
-.pWrapper03 .prow03 .productDiamond_1 .text, .pWrapper03 .prow03 .productDiamond_2 .text, .pWrapper03 .prow03 .productDiamond_3 .text, .pWrapper03 .prow03 .productDiamond_4 .text, .pWrapper03 .prow03 .productDiamond_5 .text, .pWrapper03 .prow03 .productDiamond_6 .text, .pWrapper03 .prow03 .productDiamond_7 .text, .pWrapper03 .prow03 .productDiamond_8 .text, .pWrapper03 .prow03 .productDiamond_9 .text, .pWrapper03 .prow03 .productDiamond_10 .text, .prow01 .productDiamond_1 .text, .prow01 .productDiamond_2 .text, .prow01 .productDiamond_3 .text, .prow01 .productDiamond_4 .text, .prow01 .productDiamond_5 .text, .prow01 .productDiamond_6 .text, .prow01 .productDiamond_7 .text, .prow01 .productDiamond_8 .text, .prow01 .productDiamond_9 .text, .prow01 .productDiamond_10 .text, .hr-link .row-block, .hr-link .hrl-inner {
+#addRow .row-block, .iconGroup02 .wrapper .top .stars, .iconGroup02 .wrapper .top .iconfont, .iconGroup01 .wrapper .top .stars, .iconGroup01 .wrapper .top .iconfont, .pWrapper03 .prow03 .productDiamond_1 .text, .pWrapper03 .prow03 .productDiamond_2 .text, .pWrapper03 .prow03 .productDiamond_3 .text, .pWrapper03 .prow03 .productDiamond_4 .text, .pWrapper03 .prow03 .productDiamond_5 .text, .pWrapper03 .prow03 .productDiamond_6 .text, .pWrapper03 .prow03 .productDiamond_7 .text, .pWrapper03 .prow03 .productDiamond_8 .text, .pWrapper03 .prow03 .productDiamond_9 .text, .pWrapper03 .prow03 .productDiamond_10 .text, .prow01 .productDiamond_1 .text, .prow01 .productDiamond_2 .text, .prow01 .productDiamond_3 .text, .prow01 .productDiamond_4 .text, .prow01 .productDiamond_5 .text, .prow01 .productDiamond_6 .text, .prow01 .productDiamond_7 .text, .prow01 .productDiamond_8 .text, .prow01 .productDiamond_9 .text, .prow01 .productDiamond_10 .text, .hr-link .row-block, .hr-link .hrl-inner {
   position: relative; }
 
 .pWrapper03 .prow03 .productDiamond .pic img, .pWrapper02 .prow02 .productDiamond .pic img {
@@ -72,8 +77,116 @@
   left: 0;
   margin: auto; }
 
-.hr-link .row-block {
+#addRow .border .borderinner {
+  display: block;
+  width: 100%;
+  height: 100%; }
+
+#addRow .row-block, .hr-link .row-block {
   float: left; }
+
+#addRow {
+  margin-left: -5px;
+  margin-right: -5px;
+  padding-bottom: 12px; }
+  #addRow .row-block {
+    width: 33.33333%;
+    min-height: 1px; }
+    #addRow .row-block .inner {
+      padding: 0 5px; }
+  #addRow .border {
+    color: #fff;
+    padding: 27px 20px;
+    height: 180px;
+    position: relative;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; }
+    #addRow .border .caret {
+      font-size: 30px;
+      margin-left: -15px;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-top: 19px; }
+    #addRow .border .borderinner {
+      position: relative; }
+    #addRow .border.border1 {
+      background: #60c0e8; }
+      #addRow .border.border1 .caret {
+        color: #60c0e8; }
+    #addRow .border.border2 {
+      background: #218be7; }
+      #addRow .border.border2 .caret {
+        color: #218be7; }
+    #addRow .border.border3 {
+      background: #1fd177; }
+      #addRow .border.border3 .caret {
+        color: #1fd177; }
+    #addRow .border .rb {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      text-align: center; }
+      #addRow .border .rb .iconfont {
+        font-size: 44.928px;
+        position: relative;
+        top: 40px; }
+      #addRow .border .rb .makeBorder {
+        width: 30px;
+        height: 1px;
+        background: #fff;
+        margin: 0 auto; }
+  #addRow .text {
+    padding: 35px 0;
+    text-align: center; }
+
+.iconGroup02 {
+  padding: 40px 0; }
+
+.iconGroup02 .wrapper {
+  display: inline-block; }
+  .iconGroup02 .wrapper + .wrapper .top {
+    border-left: 1px solid #999; }
+  .iconGroup02 .wrapper .top {
+    height: 75px;
+    text-align: center;
+    padding: 0 30px; }
+    .iconGroup02 .wrapper .top .stars {
+      top: 7px; }
+    .iconGroup02 .wrapper .top .iconfont {
+      font-size: 37.44px;
+      top: 7px; }
+  .iconGroup02 .wrapper .p {
+    text-align: center;
+    padding-top: 5px; }
+
+.cooperationul {
+  padding-bottom: 60px; }
+  .cooperationul .cooli {
+    display: inline-block;
+    padding-right: 80px; }
+    .cooperationul .cooli + .cooli {
+      padding-left: 80px;
+      border-left: 1px dashed #ddd; }
+  .cooperationul .name {
+    font-size: 22.464px; }
+
+.iconGroup01 .wrapper {
+  display: inline-block; }
+  .iconGroup01 .wrapper + .wrapper .top {
+    border-left: 1px solid black; }
+  .iconGroup01 .wrapper .top {
+    height: 35px;
+    text-align: center;
+    padding: 0 30px; }
+    .iconGroup01 .wrapper .top .stars {
+      top: 7px; }
+    .iconGroup01 .wrapper .top .iconfont {
+      font-size: 37.44px;
+      top: 7px; }
+  .iconGroup01 .wrapper .p {
+    text-align: center;
+    padding-top: 5px; }
 
 .pWrapper03 {
   padding: 0 60px 0 60px; }

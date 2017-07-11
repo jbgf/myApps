@@ -3,7 +3,72 @@
 @import "../mySassWare/_variable";
 @import "../mySassWare/_mixin";
 @import "../mySassWare/_function";
- 
+
+.aboutUsWrapper{
+  width:1000px;
+  margin:0 auto;
+}
+/*tab05 tab切换 start*/
+  .tab05.case02{height: auto;border-bottom: none;}
+  .tab05.case02 .news-list01{border-top: 1px dashed #ddd;}
+  .tab05.case02 .bd ul.switch{ padding:0px 0;  zoom:1; }
+  .tab05{ text-align:left;border-bottom: 1px dashed #ddd;height: 142px;}
+  .tab05 .hd{
+        background:$little-gray;
+        position:relative;
+        margin-top:45px;
+        ul {
+              overflow: hidden;
+              li{
+                  float:left; 
+                  cursor:pointer;
+                  text-align: center;
+                  width:percentage(1/4);
+                  color:$water-blue;
+                  .inner{
+                    padding:23px 0px;  
+                    height: 27px;
+                    font-size: $bigSize;
+                    .iconfont{
+                      font-size: $titleSize;
+                      margin-right: 10px;
+                    }
+                  }
+                  &.on{
+                    background:$water-blue;
+                    color: #fff;
+                  }
+              }
+        }
+  }
+  .tab05 .bd{
+    .aboutBanner1{
+      height: 370px;
+    }
+    .tab1-introduce{
+      padding-top:20px;
+      .blueTitle{
+        color:$water-blue;
+        font-size: $titleSize;
+        margin-right: 10px;
+      }
+      td{vertical-align: middle;}
+      .p + .p{
+        padding-top:30px;
+      }
+    }
+    ul.switch{ padding:15px 0;  zoom:1; }
+  } 
+  
+  .tab05 .bd ul li .s-general{padding:15px 0;}
+  .tab05 .bd li .stb-text{
+    height: 30px;
+    line-height: 23px;
+    font-size: 15px;
+    font-weight: 600;
+  }
+/*tab05 tab切换 end*/
+  
 /*tab04 start*/
     $tth:38px;
       .tab04 {
@@ -62,12 +127,69 @@
 /*tab04 end*/
 
 
+.solutionCase{
+
+  @include f_pictext_rowNew($width:325px,$height:auto,$fpos:"left",$mar-gutter:15px);
+  padding-bottom:50px;
+  .solutionCase-right{
+    height: 370px;
+    img{
+      display: block;
+      width:100%;
+      height: 370px;
+    }
+  }
+} 
+.sideBar04{
+         $sb04_activeColor:#218ad5;
+
+          $sb04_border:2px;
+          $sb04iconfontm:10px; 
+         @include sideBar($height:85px,$width:auto,$gutter:0px,$bgColor:$little-gray);    
+         .sideBar_li{
+            line-height: 1.5;
+            &+.sideBar_li{margin-top:10px}
+            .srow{
+                @include border();
+                border-left:$sb04_border solid $water-blue;
+                padding:0 25px;
+                height: 100%;
+                color:$gray;
+                @extend %relative;  
+                p{@extend %align-left;}
+                
+            } 
+            &:hover,&.on{
+                .srow{ 
+                    @include border($color:$blue);
+                    border-left:$sb04_border solid $blue;
+                    color:#fff;
+                    background:$sb04_activeColor;
+                    @include persudo($color:#dbdbdb,$content:"",$position:before,$bg:none){
+                      @include caret($position:left,$width:10px,$color:$blue){
+                        position:absolute;
+                        left:100%;
+                        top:50%;
+                        margin-top: -8px;
+                        margin-left: 1px;
+                      };
+                    };
+                }
+
+                
+            }
+           
+         }
+}
+
 $sb03_activeColor:#e5fdff;
 
 $sb03_border:5px;
 $sb03iconfontm:10px;
 
 .sidebarWrapper{padding-top:5px}
+
+
 .sideBar03{
          @include sideBar($height:37px,$width:auto,$gutter:0px,$bgColor:#fff);    
          .sideBar_li{
@@ -98,4 +220,6 @@ $sb03iconfontm:10px;
             }
            
          }
-}   
+}
+
+  

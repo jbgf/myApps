@@ -122,11 +122,13 @@ $tth:40px;
     }
     .st-tag{
         background:#fff;
-        border-radius:50px;
+        -webkit-border-radius:50px;
+                border-radius:50px;
         padding:30px;
         margin-top:35px;
         margin-bottom:35px;
-        box-shadow: 0 0 15px #ddd;
+        -webkit-box-shadow: 0 0 15px #ddd;
+                box-shadow: 0 0 15px #ddd;
 
         position: relative;
         $stleft:40px;
@@ -298,7 +300,8 @@ $mediaMainPadding:50px;
         display: inline-block;
         width: 8px;
         height: 8px;
-        border-radius: 8px;
+        -webkit-border-radius: 8px;
+                border-radius: 8px;
         background: #bfbfbf;
         margin: 0 5px;
         opacity: 0.8;
@@ -350,3 +353,63 @@ $mediaMainPadding:50px;
 }
 
 /* list08 end */
+
+/* myScrollspy1 */
+.affix {
+  position: fixed; 
+}
+#myScrollspy1 {
+      position: relative;
+      z-index: 99999;
+      width: 100%;
+      &.affix {
+        top: 200px;
+        position: fixed; }
+      .scrollTop {
+        background: url(../images/scrollTop.png) center center no-repeat #999;
+        border: none;
+        margin-top: 15px;
+        height: 10px; 
+      } 
+      ul {
+        position: absolute;
+        top: 0;
+        color: #fff; 
+        &.nav-tabs {
+            width: 140px;
+            margin-top: 20px;
+            -webkit-border-radius: 4px;
+                    border-radius: 4px;
+            border: 1px solid #ddd;
+            -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+                    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+        }
+        li {
+          background: #cc3333;
+          padding: 13px 18px;
+          text-align: center;
+          border-bottom: 1px solid #ad2b2b;
+          border-top: 1px solid #ec3636; 
+            &.active {
+                color: #fff100;
+                font-weight: bold; 
+            }
+        }
+      }
+}
+    @media screen and (max-width: 1300px) {
+      #myScrollspy1 ul {
+        right: 0;
+        display: none; } }
+    @media screen and (min-width: 1300px) {
+      #myScrollspy1 ul {
+        right: -130px; } }
+    @media screen and (min-width: 1400px) {
+      #myScrollspy1 ul {
+        right: -200px; } }
+    @media screen and (min-width: 1500px) {
+      #myScrollspy1 ul {
+        right: -300px; } }
+   
+/* myScrollspy1 */
+

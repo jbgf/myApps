@@ -3,15 +3,175 @@
 @import "../mySassWare/_variable";
 @import "../mySassWare/_mixin";
 @import "../mySassWare/_function";
+
+.header09{
+  @include f_pictext_rowNew($width:40px,$height:auto,$fpos:"left",$mar-gutter:5px);
+  margin:30px 0 15px;
+  .iconfont{
+    font-size: $titleSize*1.5;
+    color:$water-blue;
+    @include rel_ajust($value:8px);
+  }
+  .big{
+    font-size: $titleSize;
+    color:#000;
+  }
+  .border{
+    @include makeBorder($width:170px,$height:2px,$color:$water-blue);
+  }
+  .info{
+    padding-bottom: 15px;
+  }
+}
+
+.header08{
+  $h08h:25px;
+  @include lheightM($h08h);
+  @include persudo($color:inherit,$content:"",$position:after,$bg:none){
+      width:100%;
+      height: 2px;
+      background:$baseBorderColor;
+      top:$h08h/2;
+  };
+  margin:45px 0;
+  .title{
+    @include lheightM($h08h);
+    font-size: $titleSize;
+    overflow: hidden;
+    background:#fff;
+    &.little-gray{
+      background:$little-gray;
+    }
+    display: inline-block;
+    z-index: 999;
+    position: relative;
+    padding-right:20px;
+    img{vertical-align:middle}
+    .iconfont{
+      font-size: $titleSize;
+    }
+  }
+}
+
+.page3 {
+  $iniColor:#3cc6c2;
+  $steps:20;
+  $amount:2deg;
+  padding:0px 0 50px;
+  .colorWrapper{
+    @for $i from 1 through $steps {
+        .color{
+          &:nth-child(#{$i}){
+              color:$iniColor;  
+          }
+          $iniColor:adjust-hue($iniColor,$amount)
+        }
+    }
+  }
+  .text{
+    
+    color:$baseFontColor;
+  }
+  .content-p{
+    padding:20px 0;
+    .p{font-weight:700;font-size:$mediumSize*1.1;}
+  }
+}
+
+/* __________________________________________________ */
+
+.header07{
+  width:706px;
+  height: 92px;
+  margin:50px auto;
+  background:url(../img/header07.png) no-repeat;
+  text-align: center;
+  .htitle{
+    display: inline-block;
+    font-size: $bigSize;
+    padding-top:30px;
+    & + .htitle{
+      margin-left: 50px;
+    }
+    .b{
+      color:$water-blue;
+    }
+  }
+}
+
+.header06{
+  $h06:70px;
+  font-size: $bigTitle;
+  position:relative;
+  /* @include lheightM($sb02_p); */
+  padding:40px 0;
+  text-align: center;
+  
+  .hborder{
+    @include border($position:bottom);
+    height: $h06 + 3px;
+  }
+  .h-title01 {
+    height: $h06;
+    display: inline-block;
+    border-bottom: 3px solid $blue;
+    padding:0 20px;
+    color:#000;
+    .text {
+      color: $blue;
+      font-size:$bigSize*1.2; 
+    } 
+  }
+  .makeborder{
+      @include makeBorder(100px,3px,$blue){margin:0 auto};
+  }
+  .sub-title{
+      font-size: $bigSize;
+      padding:10px 0;
+  }
+}
  
 $sb02_p:48px;
 
-/* header04 start */
-.butlerRow .inner:hover{
-    .header04 .more{
-      background:url(../img/rightArrow2.png) 100% center no-repeat;
+.header05{
+  
+  font-size: $bigTitle;
+  position:relative;
+  /* @include lheightM($sb02_p); */
+  padding:40px 0;
+  text-align: center;
+  
+  .h-title01 {
+    
+    display: inline-block;
+    border-bottom: 1px solid $water-blue;
+    &.noborder{
+      border:none;
     }
-}   
+
+    padding:20px 100px;
+    .text {
+      color: $blue;
+      font-size:$titleSize; 
+    } 
+  }
+  .makeborder{
+      @include makeBorder(100px,3px,$blue){margin:0 auto};
+  }
+  .sub-title{
+      font-size: $bigSize;
+      padding:10px 0;
+  }
+}
+
+
+
+/* header04 start */
+    .butlerRow .inner:hover{
+        .header04 .more{
+          background:url(../img/rightArrow2.png) 100% center no-repeat;
+        }
+    }   
     .header04{
         $news_h:30px; 
         $news_hp:10px;
@@ -92,6 +252,36 @@ $sb02_p:48px;
   }
 }
 
+.news_h03 {
+  border-bottom: 2px solid #c5c5c5;
+  position:relative;
+  @include lheightM($sb02_p);
+  .h-title01 {
+    height: $sb02_p;
+    
+    .text {
+      color: $blue;
+      font-size:$bigSize*1.2; 
+      height: $sb02_p;
+      display: inline-block;
+      padding:0 20px;
+      border-bottom: 2px solid $blue; 
+    } 
+  }
+  .r-link{
+    position: absolute;
+    bottom:0;
+    right:0;
+    font-size: $mediumSize;
+     @include lheightM($sb02_p*2/3);
+    a{
+        margin-left:20px;
+        display: inline-block;
+    
+        &.on{color:$blue;border-bottom:2px solid $blue}
+    }
+  }
+}
 
 .news_h02 {
   border-bottom: 2px solid #c5c5c5;

@@ -268,21 +268,33 @@ $bd_h:75px;
         }
        
   /* list11 end */
-
+.page4 .padding-left{
+    padding-left:45px;
+}
+.page4 .list10{
+    font-size: $smallSize;
+}
 /* list10 start */    
         .list10 ul {
             text-align: left;
             
         }
         .list10 {
+            $l10h:24px;
             @include f_pictext_row($width:20px,$height:auto,$fpos:"left",$mar-gutter:0px);
             li {
                 $l10p:5px;
                 display: block;
-                padding: $l10p 0 $l10p 0;
+                
+                @include lheightM($l10h);
                 @extend %clear;
                 
-                .icon{@include rel_ajust($value:2px);}
+                .icon{
+                    color:$water-blue;
+                    height: $l10h;
+                    overflow: hidden;
+                    @include rel_ajust($value:2px);
+                }
                 .text {
                     padding-left: 10px;
                 }

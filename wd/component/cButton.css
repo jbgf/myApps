@@ -29,6 +29,32 @@
 .btnGroup .button {
   text-align: center !important; }
 
+.roundBtn03 {
+  display: inline-block;
+  background: inherit;
+  border: 1px solid #54e2b4;
+  -webkit-border-radius: 30px;
+  border-radius: 30px;
+  padding: 10px 50px;
+  margin-bottom: 70px;
+  text-align: center;
+  font-size: 15.6px; }
+  .roundBtn03 img {
+    vertical-align: middle;
+    margin-right: 15px; }
+
+.roundBtn02 {
+  display: inline-block;
+  background: inherit;
+  color: #218ad5;
+  border: 2px solid #218ad5;
+  -webkit-border-radius: 35px;
+  border-radius: 35px;
+  padding: 4.375px 0;
+  width: 120px;
+  text-align: center;
+  font-size: 15.6px; }
+
 .roundBtn01 {
   display: inline-block;
   color: #218ad5;

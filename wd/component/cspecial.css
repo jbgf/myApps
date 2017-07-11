@@ -11,6 +11,16 @@
 /* color end */
 /* clearfix*/
 /* 闭合子元素的浮动*/
+.bg01 .box {
+  position: absolute; }
+
+.bg01 .box {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto; }
+
 /*----------------------------------------------------- */
 /* setting scss*/
 /*----------------------------------------------------- */
@@ -23,6 +33,78 @@
 /* color end */
 /* clearfix*/
 /* 闭合子元素的浮动*/
+.bg01 .box {
+  position: absolute; }
+
+.bg01 .box {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto; }
+
+#solution1 {
+  padding-bottom: 30px; }
+
+.banner1 {
+  height: 548px; }
+
+.bg01 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background: rgba(0, 0, 0, 0.5);
+  display: none; }
+  .bg01 .box {
+    width: 599px;
+    height: 328px;
+    z-index: 9999;
+    color: #fff; }
+    .bg01 .box .title {
+      font-size: 22.464px; }
+      .bg01 .box .title .iconfont {
+        margin-right: 15px; }
+    .bg01 .box .y {
+      color: #ff9200; }
+  .bg01 .slogo {
+    padding: 25px 0; }
+  .bg01 .bgSure {
+    padding-top: 45px; }
+    .bg01 .bgSure .roundBtn02 {
+      color: #fff;
+      border: 2px solid #fff; }
+
+.process_show {
+  padding: 0 0 40px 0;
+  text-align: center; }
+  .process_show .rows {
+    display: inline-block; }
+    .process_show .rows li {
+      float: left;
+      text-align: center; }
+      .process_show .rows li + li {
+        padding-left: 145px;
+        background: url(../img/rightArrow.png) 30% 35% no-repeat; }
+  .process_show .iBlock.i1 .imgBox {
+    background: url(../img/pb1.png) no-repeat center center; }
+  .process_show .iBlock.i2 .imgBox {
+    background: url(../img/pb2.png) no-repeat center center; }
+  .process_show .iBlock.i3 .imgBox {
+    background: url(../img/pb3.png) no-repeat center center; }
+  .process_show .iBlock.i1.on .imgBox {
+    background: url(../img/pb1on.png) no-repeat center center; }
+  .process_show .iBlock.i2.on .imgBox {
+    background: url(../img/pb2on.png) no-repeat center center; }
+  .process_show .iBlock.i3.on .imgBox {
+    background: url(../img/pb3on.png) no-repeat center center; }
+  .process_show .imgBox {
+    margin: 0 auto;
+    height: 70px;
+    width: 70px; }
+
 .stars {
   width: 110px;
   height: 17px;
@@ -57,5 +139,50 @@
     width: 89%; }
   .stars.star-10:before {
     width: 100%; }
+
+/* myScrollspy1 */
+.affix {
+  position: fixed; }
+
+#myScrollspy1 {
+  position: relative;
+  z-index: 99999;
+  width: 100%; }
+  #myScrollspy1.affix {
+    top: 200px;
+    position: fixed; }
+  #myScrollspy1 .top {
+    position: relative; }
+    #myScrollspy1 .top img {
+      display: block;
+      margin: 0 auto; }
+    #myScrollspy1 .top .topbody {
+      text-align: center;
+      position: absolute;
+      top: 60%;
+      left: 0;
+      right: 0; }
+      #myScrollspy1 .top .topbody .qqbtn {
+        margin-top: 5px; }
+  #myScrollspy1 .scrollTop {
+    cursor: pointer;
+    border: none;
+    text-align: center;
+    height: 89px;
+    padding: 0;
+    background: none; }
+    #myScrollspy1 .scrollTop .stWrapper {
+      display: inline-block; }
+  #myScrollspy1 .nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    display: none; }
+    @media screen and (min-width: 1366px) {
+      #myScrollspy1 .nav {
+        right: -120px; } }
+
+/* myScrollspy1 */
 
 /*# sourceMappingURL=maps/cspecial.css.map */

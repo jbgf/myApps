@@ -4,6 +4,34 @@
 @import "../mySassWare/_mixin";
 @import "../mySassWare/_function";
 
+
+.roundBtn03{
+  display: inline-block;
+  background: inherit;
+  $rb02p:30px;
+  
+  @include border($color:#54e2b4,$width:1px);
+  @include radius($rb02p);
+  padding:10px 50px;
+  margin-bottom: 70px;
+  text-align: center;
+  font-size: $mediumSize;
+
+  img{vertical-align:middle;margin-right:15px}
+}
+.roundBtn02{
+  display: inline-block;
+  background: inherit;
+  $rb02p:35px;
+  color:$blue;
+  @include border($color:$blue,$width:2px);
+  @include radius($rb02p);
+  padding:$rb02p/8 0;
+  width:120px;
+  text-align: center;
+  font-size: $mediumSize;
+}
+
 .roundBtn01{
   display: inline-block;
   $rb01p:35px;

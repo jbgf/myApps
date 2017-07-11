@@ -457,22 +457,27 @@
         @each $i in $widthArr{
             $index : $index + 1;
             .un-block-#{$index}{
-                @extend %float-l;
-                @extend %block;
+                float:left;
+                display: block;
                 min-height:1px;
                 width:$i;
                 height:100%;
                 line-height: $height;
                 .baseInput{
                     @include border();
-                    @extend %float-l;
+                    float:left;
                     @include baseInput($height:$height);
                     padding:0px 10px;
                 }
                 a.baseInput,button.baseInput{
-                    @include baseInput($height);
-                    @extend %block;
-                    @extend %align-center;
+                     -webkit-box-sizing:border-box;
+                            box-sizing:border-box;
+                    outline:none;
+                    height:$height;
+                    line-height:inherit;
+                    width:100%; 
+                    display: block;
+                    text-align:center;
                     line-height: $height;
                 }
                 textarea.baseInput{
@@ -758,7 +763,7 @@
     width: 0;
     height: 0;
     vertical-align: middle;
-   
+    @content;
 }
 @mixin borderImg($outerW:100px,$outerH:100px,$padding:50px,$color:#ddd){
 

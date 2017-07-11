@@ -17,20 +17,24 @@
                                       <a class="cl-type">
                                           分类：<span>分销</span>
                                       </a>
-                                      <div class="rightPart">
+                                      <div class="rightPart ">
                                           <!-- 星级从1-10：star-1至star-10 -->
-                                          <div class="starsWrapper wrapper">
-                                              <div class="top">
-                                                <div class="stars  star-1"></div> 
+                                          <div class="iconGroup01">
+                                              <div class="starsWrapper wrapper">
+                                                  <div class="top">
+                                                    <div class="stars  star-1"></div> 
+                                                  </div>
+                                                  <p class="p">产品热度 </p>
                                               </div>
-                                              <p class="p">产品热度 </p>
+                                              <div class="iconWrapper wrapper">
+                                                  <a href="http://www.baidu.com">
+                                                  <div class="top">
+                                                    <i class="iconfont">&#xe6c4;</i>
+                                                  </div>
+                                                  <p class="p">查看专题</p>
+                                                  </a>
+                                              </div>
                                           </div>
-                                          <a href="http://www.baidu.com"><div class="iconWrapper wrapper">
-                                              <div class="top">
-                                                <i class="iconfont">&#xe6c4;</i>
-                                              </div>
-                                              <p class="p">查看专题</p>
-                                          </div></a>
                                       </div>
                                       
                                     </div>
