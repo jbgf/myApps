@@ -1,8 +1,89 @@
 <?php include 'head.html' ?>
    <div class="middlePart">
-        <div class="banner02" style="background:url(img/banner02.jpg) center center no-repeat;">
-        
+        <style type="text/css">
+            /*slideBox01 start*/
+              .slideBox01 {
+                width: 100%;
+                overflow: hidden;
+                position: relative;
+                border-top: 1px solid #ddd; }
+              
+              .slideBox01 .hd {
+                text-align: center;
+                width: 100%;
+                overflow: hidden;
+                position: absolute;
+                bottom: 5px;
+                z-index: 1; }
+              
+              .slideBox01 .hd ul {
+                overflow: hidden;
+                zoom: 1;
+                display: inline-block; }
+              
+              .slideBox01 .hd ul li {
+                float: left;
+                margin-right: 12px;
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                line-height: 14px;
+                text-align: center;
+                background: #fff;
+                cursor: pointer; }
+              
+              .slideBox01 .hd ul li.on {
+                background: #6eb92b;
+                color: #fff; }
+              
+              .slideBox01 .bd {
+                position: relative;
+                width: 100%;
+                z-index: 0; }
+              
+              .slideBox01 .bd li {
+                width: 100%;
+                display: block;
+                vertical-align: middle; }
+              
+              .slideBox01 .bd li a {
+                width: 100%;
+                display: block; }
+              
+              .slideBox01 .bd img {
+                width: 100%;
+                display: block; }
+
+            /*slideBox01 end*/
+        </style>
+        <div  class="slideBox slideBox01" >
+            <div class="hd">
+              <ul>
+                <li><a></a></li>
+                <li><a></a></li>
+                <li><a></a></li>
+               
+              </ul>
+            </div>
+            <div class="bd">
+              <ul>
+                <li><a href="#" target="_blank"><img src="img/banner02.jpg" /></a></li>
+                <li><a href="#" target="_blank"><img src="img/banner02.jpg" /></a></li>
+                <li><a href="#" target="_blank"><img src="img/banner02.jpg" /></a></li>
+                
+              </ul>
+            </div>
         </div>
+        <!-- slider end -->
+        <script type="text/javascript">
+            +function picScroll01 (){
+              
+                jQuery(".slideBox01").slide({mainCell:".bd ul",autoPlay:true,effect:"leftLoop",easing:"swing",interTime:"3500"});
+              
+            }()
+            
+          
+        </script>
         
         <!-- scollspy start -->
         <div  id="myScrollspy1">

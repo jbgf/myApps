@@ -150,9 +150,12 @@
 
                 flag?getRidOf():add();
                     function getRidOf(){
+
                             ta_index = $(ele).attr("data-taindex");
                             $(ele).removeClass("choosed").removeAttr("data-taindex");
                             $ele2 = that.$choosedZoneUl.find("li[data-taindex="+ta_index+"]").remove();
+                        /*多选待选区事件*/  
+                            that.update_indexAfterCancel(1,ta_index); //cancel之后更新taindex
 
                             /*去除临时选择集合中的某项*/ 
                             that.updateCoreData(3,false,ta_index,false);
@@ -166,20 +169,20 @@
                             $(ele).addClass("choosed").attr({"data-taindex":ta_index});
                             
                             cli.appendTo(that.$choosedZoneUl).on("click",function(){
-                                /*多选结果区点击事件：
-                                    已选中，
-                                    临时选中*/   
-                                       if(item['choosed']){
-                                           var dindex = $(this).attr("data-cindex");
-                                           that.cancel(item,dindex);
-                                       }else if(item['tempChoosed']){
+                                /*多选结果区点击事件：临时选中*/   
+                                       
+                                       if(item['tempChoosed']){
+                                           ta_index = $(this).attr("data-taindex");
                                           /*更新tempResultStorage $ele1,
                                             由于采用的是每次删除再重新建立列表，
-                                            删除后会导致变量存储的$ele1失效*/
+                                            删除后会导致tempResultStorage存储的$ele1失效*/
+                                          
                                            $ele1 = that.$multiChooseZone.find("li[data-taindex="+ta_index+"]"); 
                                            $ele1.removeClass('choosed').removeAttr("data-taindex");
                                            $ele2.remove();
                                            
+                                           that.update_indexAfterCancel(1,ta_index); //cancel之后更新taindex
+
                                            /*设置可识别状态为：临时取消*/
                                            that.set_recognitionState(1,item);
                                            /*去除临时选择集合中的某项*/ 
@@ -210,48 +213,62 @@
 
         multiMenu.prototype.cancel = function (item,dindex){
               var that = this;
-                  
+              /*必须加上下文以区别多实例*/    
               var multiToCancel = $(".multiChooseZone li[data-cindex="+dindex+"]",that.wrapper);                  
                   
                   $(".choosedZone li[data-cindex="+dindex+"]",that.wrapper).remove();
                     
                   multiToCancel.removeClass("choosed")
                                .removeAttr("data-cindex");
+                  
                   $(".outermulti-ul li[data-cindex="+dindex+"]",that.outer).remove();
                   
-                  that.updateCindexAfterCancel(item,dindex);
+                  that.update_indexAfterCancel(0,dindex); //cancel之后更新cindex
+                  
                   that.set_recognitionState(3,item);   //设置数据data可识别状态
                   that.updateCoreData(1,false,dindex); //更新核心数组
+
                   that.updateTargetInput(that.choosed_arr);
         }
 
-         multiMenu.prototype.updateCindexAfterCancel = function (item,dindex){
+         multiMenu.prototype.update_indexAfterCancel = function (mode,indexToUpdate){
               var that = this;
-                  /*选中区*/
-                  $(".choosedZone li[data-cindex]",that.wrapper).each(function(i,e){
-                        var index = $(this).attr("data-cindex");
-                            if(index > dindex){
-                                $(this).attr("data-cindex",index-1);
+              var attr_str;
+                  if(mode == 0){
+                      attr_str = "data-cindex";
+                  }else if(mode == 1){
+                      attr_str = "data-taindex";
+                  }
+                  
+                  /*多选结果区*/
+                  $(".choosedZone li["+attr_str+"]",that.wrapper).each(function(i,e){
+                        var index = $(this).attr(attr_str);
+                            if(index > indexToUpdate){
+                                $(this).attr(attr_str,index-1);
                             }
                   });
                   /*多选区*/
-                  $(".multiChooseZone li[data-cindex]",that.wrapper).each(function(i,e){
-                        var index = $(this).attr("data-cindex");
-                            if(index > dindex){
-                                $(this).attr("data-cindex",index-1);
+
+                  $(".multiChooseZone li["+attr_str+"]",that.wrapper).each(function(i,e){
+                        var index = $(this).attr(attr_str);
+                        
+                            if(index > indexToUpdate){
+                               
+                                $(this).attr(attr_str,index-1);
                             }
 
                   });
 
-                  $(".outermulti-ul li[data-cindex]",that.outer).each(function(i,e){
-                        var index = $(this).attr("data-cindex");
-                            if(index > dindex){
-                                $(this).attr("data-cindex",index-1);
+                  mode == 0 && $(".outermulti-ul li["+attr_str+"]",that.outer).each(function(i,e){
+                        var index = $(this).attr(attr_str);
+                            if(index > indexToUpdate){
+                                $(this).attr(attr_str,index-1);
                             }
                   });
+                  
+                  
         }
 
-       
 
         /*创建多选区*/
         multiMenu.prototype.createMultiChoose = function () {
@@ -357,30 +374,6 @@
         }
        
 
-        
-        
-
-        multiMenu.prototype.add = function (item,ele,historyTemp) {
-              var that = this;
-              var ca_index = that.choosed_arr.length;
-              var $ele1 = ele.ele1;
-              var $ele2 = ele.ele2;
-                  $ele1.attr({"data-cindex":ca_index}).removeAttr("data-taindex");
-                  $ele2.attr({"data-cindex":ca_index}).removeAttr("data-taindex").on("click",function(){
-                      that.cancel(item,ca_index);
-                  });
-
-                  /*设置可识别状态:选中*/
-                  that.set_recognitionState(2,item,ca_index)
-                  /*设置可识别状态:临时取消*/
-                  that.set_recognitionState(1,item)
-                  
-                  /*将临时结果添加到历史数组*/
-                  that.history_allTemp_stack.push(historyTemp);
-
-                  that.updateCoreData(0,item);
-                  
-        } 
 
         multiMenu.prototype.isFinalLevel = function (index) {
             var that = this;
@@ -595,13 +588,51 @@
                             if(that.choosed_arr.indexOf(item) == -1){
                                 that.addToMenuFromHistory(item,ul_index);
                                 
-                                that.addToOuterResult(that.choosed_arr);  
+                               
                                 that.updateTargetInput(that.choosed_arr);  
                             };
                         })
                          
                 })
         }        
+        
+
+        multiMenu.prototype.add = function (item,ele,historyTemp) {
+              var that = this;
+              var ca_index = that.choosed_arr.length,maptaIndex;
+              var $ele1 = ele.ele1;
+              var $ele2 = ele.ele2;
+                  if(item['map']){ /*有map对象且当前显示了，若未显示则构建时会有data-cindex*/
+                    maptaIndex = item['map']['tindex'];
+                    /*map 元素设置cindex，设置识别态为：选中*/
+                    var $ele3 = that.$multiChooseZone.find("li[data-taindex="+maptaIndex+"]");
+                        $ele3.length>0 && $ele3.attr({"data-cindex":ca_index})
+                                               .removeAttr("data-taindex");
+                    
+                    that.set_recognitionState(2,item['map'],ca_index)
+                    
+                  }
+                  $ele1.attr({"data-cindex":ca_index}).removeAttr("data-taindex");
+                  $ele2.attr({"data-cindex":ca_index}).removeAttr("data-taindex").on("click",function(){
+                      /*添加取消事件,
+                        ca_index重新获取，否则可能由于之前的cancel导致cindex更新*/
+                      ca_index = $(this).attr("data-cindex")
+                      that.cancel(item,ca_index);
+
+                  });
+
+                  /*设置可识别状态:选中*/
+                  that.set_recognitionState(2,item,ca_index)
+                  /*设置可识别状态:临时取消*/
+                  that.set_recognitionState(1,item)
+                  
+                  /*将临时结果添加到历史数组*/
+                  that.history_allTemp_stack.push(historyTemp);
+
+                  that.updateCoreData(0,item);
+                  
+        } 
+
         /*更新核心数据 choosed_arr
                         unique_Arr
                         整个json：choosed等    
@@ -632,12 +663,34 @@
                        that.unique_Arr['b'].length = 0;
                  }
         }
+
+         multiMenu.prototype.addToOuterResult = function (){
+            var that = this;
+            var arr = that.choosed_arr;
+            
+            if(that.enableAddToOuter != 1)return;
+            var ul = $("<ul class='outermulti-ul'/>");
+                for(var i = 0 ;i<arr.length;i++){
+                    if(arr[i]){
+                      var li =$('<li class="choosed_li" data-cindex='+i+'>'+arr[i].name+'</li>');
+                      li.appendTo(ul).on("click",function(){
+                          var index = $(this).attr("data-cindex"),
+                              item = arr[index];
+                          
+                          that.cancel(item,index);
+                        
+                      }) 
+                    }    
+                }
+                that.targetInput.data("ca",arr)
+                    .prev("ul").remove().end()
+                    .before(ul);
+        } 
+
         multiMenu.prototype.addToMenuFromHistory = function (item,ul_index){
             var that = this;
             var indexarr = [],lastIndex;
-            //添加item
-                that.updateCoreData(0,item);
-
+            
                 $.each(historyIndexChain[ul_index].split(","),function(i,e){
                       indexarr.push(parseInt(e));                
                 })
@@ -646,41 +699,63 @@
               加入该条indexChain  */  
                 that.history_allTemp_stack.push(indexarr);
             //  添加到多选结果区    
-            var ca_index = that.choosed_arr.length-1,
-                cli = $("<li class='choosed_li' data-cindex="+ca_index+">"+item.name+"</li>");
-
-                cli.appendTo(that.$choosedZoneUl).on("click",function(){
-                    var ca_index = $(this).attr("data-cindex");
-                        that.cancel(item,ca_index);
-                });
-                
-
-                that.set_recognitionState(2,item,ca_index)
             
-            //  更新到多选待选区，因为多选待选区只有createMultiMenu才能更新。    
-            /*若当前对象 等于 item
-              由于是indexChain定位的item所以，还要加上map,不能确定index，只好循环
-              当前对象，或者倒二级对象需要激活*/
-                
-                if (that.curObj['sub']) {
+                /*若已经临时选中*/
+                if(item['tempChoosed']){
                     
-                    $.each(that.curObj['sub'],function(i,e){
-                        if(that.uniqueValidate(e,0) == 'map'){
-                            that.$multiChooseZone.find("li").eq(i).addClass('choosed')
-                                              .attr('data-cindex',ca_index);
-                                              return false;
+                    $.each(that.tempResultStorage,function(i,e){
+                        if(e['item'] == item){
+
+                            that.add.call(that,item,e.element,e.historyTemp);
+                            /*去除临时选择集合中的某项*/
+                            that.updateCoreData(3,false,i,false);
                         }
                     })
-                      
+                    
                 }else{
-                    that.uniqueValidate(that.curObj,0);
+                    /*若未临时选中*/
+                    //添加item
+                    that.updateCoreData(0,item);
+
+                    var ca_index = that.choosed_arr.length-1,
+                    cli = $("<li class='choosed_li' data-cindex="+ca_index+">"+item.name+"</li>");
+                    cli.appendTo(that.$choosedZoneUl).on("click",function(){
+                            ca_index = $(this).attr("data-cindex");
+                            that.cancel(item,ca_index);
+                    });
+
+                    that.set_recognitionState(2,item,ca_index)
+            
+                    /*  更新到多选待选区，
+                        因为多选待选区只有createMultiMenu才能更新。    */
+                    /*若当前对象 等于 item
+                      由于是indexChain定位的item所以，还要加上map 的对象,
+                      又因为不能确定index，只好循环
+                      当前对象，或者倒二级对象需要激活*/
+                        
+                    if (that.curObj['sub']) {
+                        
+                        $.each(that.curObj['sub'],function(i,e){
+                            if(that.uniqueValidate(e,0) == 'map'){
+                                that.$multiChooseZone.find("li").eq(i).addClass('choosed')
+                                                  .attr('data-cindex',ca_index);
+                                                  return false;
+                            }
+                        })
+                          
+                    }else{
+                        that.uniqueValidate(that.curObj,0);
+                    }
+                    
+                    if(that.curObj['map'] == item || that.curObj == item ||
+                      (that.curObj['sub'] && that.curObj['sub'][lastIndex] == item) ){
+                        that.$multiChooseZone.find("li").eq(lastIndex).addClass('choosed')
+                                              .attr('data-cindex',ca_index);
+                    }
+
                 }
                 
-                if(that.curObj['map'] == item || that.curObj == item ||
-                  (that.curObj['sub'] && that.curObj['sub'][lastIndex] == item) ){
-                    that.$multiChooseZone.find("li").eq(lastIndex).addClass('choosed')
-                                          .attr('data-cindex',ca_index);
-                }
+                that.addToOuterResult()
         }
 
         
@@ -688,7 +763,7 @@
         multiMenu.prototype.set_recognitionState = function (mode,item,index){
            var that = this;
                if(mode == 0){
-                  /*临时添加*/
+                  /*临时选中*/
                   item['tempChoosed'] = true;
                   item['tindex'] = index;  
                }else if(mode == 1){
@@ -697,7 +772,7 @@
                   item['tindex'] = false;
                   item['map'] && item['map']["tempChoosed"] && (item['map']["tempChoosed"] = false); 
                }else if(mode == 2){
-                  /*添加*/
+                  /*选中*/
                   item["choosed"] = true;
                   item['cindex'] = index;
                }else if(mode == 3){
@@ -728,28 +803,7 @@
                 }
         }
         
-        multiMenu.prototype.addToOuterResult = function (choosed_arr){
-            var that = this;
-            var arr = choosed_arr;
 
-            if(that.enableAddToOuter != 1)return;
-            var ul = $("<ul class='outermulti-ul'/>");
-                for(var i = 0 ;i<arr.length;i++){
-                    if(arr[i]){
-                      var li =$('<li class="choosed_li" data-cindex='+i+'>'+arr[i].name+'</li>');
-                      li.appendTo(ul).on("click",function(){
-                          var index = $(this).attr("data-cindex"),
-                              item = arr[index];
-                          
-                          that.cancel(item,index);
-                        
-                      }) 
-                    }    
-                }
-                that.targetInput.data("ca",arr)
-                    .prev("ul").remove().end()
-                    .before(ul);
-        } 
 
         multiMenu.prototype.showHistory = function (){
             var that = this;

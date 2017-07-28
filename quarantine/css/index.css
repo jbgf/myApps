@@ -526,34 +526,34 @@
    }  
 
 .about{padding-top: 20px;}
-/*l-sider01 start*/
-.l-sider01{width: 231px;}
+    /*l-sider01 start*/
+    .l-sider01{width: 231px;}
 
-.l-sider01 .floor{padding:18px 0;display: block;}
-.l-sider01 .floor.f00{padding:24px 0;}
-.l-sider01 .floor.f00 .link{text-align: center;display: block;}
-.l-sider01 .floor.f00 .link .p-wrapper{display: inline-block;}
-.l-sider01 .floor.f00 .t01{font-size: 26px;height: 30px;line-height: 30px;font-weight: 700}
-.l-sider01 .floor.f00 .t02{text-align: left;color:#b7d99f;}
+    .l-sider01 .floor{padding:18px 0;display: block;}
+    .l-sider01 .floor.f00{padding:24px 0;}
+    .l-sider01 .floor.f00 .link{text-align: center;display: block;}
+    .l-sider01 .floor.f00 .link .p-wrapper{display: inline-block;}
+    .l-sider01 .floor.f00 .t01{font-size: 26px;height: 30px;line-height: 30px;font-weight: 700}
+    .l-sider01 .floor.f00 .t02{text-align: left;color:#b7d99f;}
 
 
-.l-sider01 .floor{text-align: center;}
-.l-sider01 .floor .t01{font-size: 13px;}
+    .l-sider01 .floor{text-align: center;}
+    .l-sider01 .floor .t01{font-size: 13px;}
 
-.l-sider01 .floor.on{background-color: #54a4d5}
-.l-sider01 .floor.on .t01{color:#fff;}
-.l-sider01 .floor.on.current .t01{color:#fff;}
-.l-sider01 .floor:not(.f00).on .t01{background:url(../img/r-arrow.png) no-repeat 95% 50%;}
+    .l-sider01 .floor.on{background-color: #54a4d5}
+    .l-sider01 .floor.on .t01{color:#fff;}
+    .l-sider01 .floor.on.current .t01{color:#fff;}
+    .l-sider01 .floor:not(.f00).on .t01{background:url(../img/r-arrow.png) no-repeat 95% 50%;}
 
-.l-sider01 .floor.current .t01{color:#54a4d5;}
+    .l-sider01 .floor.current .t01{color:#54a4d5;}
 
-.l-sider01 ul li:not(:first-child){border-bottom: 1px solid #dcdcdc}
-.l-sider01 .border{height: 4px;width: 100%}
-.l-sider01 img{
-    width: 100%;
-    display: block;
-}
-/*l-sider01 end*/
+    .l-sider01 ul li:not(:first-child){border-bottom: 1px solid #dcdcdc}
+    .l-sider01 .border{height: 4px;width: 100%}
+    .l-sider01 img{
+        width: 100%;
+        display: block;
+    }
+    /*l-sider01 end*/
 .header02{
     padding: 4px 18px;
     display: block;

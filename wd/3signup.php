@@ -178,6 +178,6 @@
     </div>
     <script type="text/javascript">
       /*ajax*/
-      $(".bg01").show();
+      /*$(".bg01").show();*/
     </script>
 <?php include 'simpleFoot.html' ?>    

@@ -30,16 +30,16 @@
                  </li>
              </ul>
         </div>
-        <form class="form3 mar-center clear" >
+        <form class="form3 mar-center clear float-l" >
             <!-- 第一步 -->
-            <div class="formInner ">                 
+            <div class="formInner active">                 
               
                <div class="form-row">
                    <div class="un-block-1 align-right mediumSize">
                        <span>会员名：</span>
                    </div>
                    <div class="un-block-2">
-                   <input class="baseInput" name="identify" type="text" required="" aria-required="true"></div>
+                   <input class="baseInput" name="username" type="text" required="" ></div>
                    
                </div>
                <div class="form-row">
@@ -47,7 +47,7 @@
                        <span>手机号：</span>
                    </div>
                    <div class="un-block-2">
-                   <input class="baseInput" name="identify" type="text" required="" aria-required="true"></div>
+                   <input class="baseInput" name="cellphone" type="text" required="" aria-required="true"></div>
                    
                </div>
                <div class="form-row">
@@ -58,12 +58,12 @@
                        <div class="row">
                            <div class="row-block input">
                                <div class="inner">
-                                   <input class="baseInput" name="phone" type="text" maxlength="11" istel="true" required="" aria-required="true">
+                                   <input class="baseInput" id="testvalidator" name="testvalidator" type="text" maxlength="11">
                                </div>
                            </div>
                            <div class="row-block btn">
                                <div class="inner">
-                                   <a class="ic_btn white displayBlock align-center">发送验证码</a>
+                                   <a id="sendCode" class="ic_btn white displayBlock align-center">发送验证码</a>
                                </div>
                            </div>
                        </div>   
@@ -120,7 +120,7 @@
 
             </div> 
             <!-- 第三步 -->
-            <div class="formInner active">                 
+            <div class="formInner ">                 
                
                 <div class="successInfo">
                     <p class="title"><i class="iconfont">&#xe633;</i>恭喜你，修改成功</p>
@@ -128,44 +128,122 @@
                 </div>
             </div> 
        </form>
+       <div class="clear"></div>
     </div>
     <script type="text/javascript">
-      $.validator.setDefaults({
-          /*仅显示第一个错误*/
-          invalidHandler: function(form, validator) {
-              $.each(validator.invalid,function(key,value){
-                  tmpkey = key;
-                  tmpval = value;
-                  validator.invalid = {};
-                  validator.invalid[tmpkey] = value;
-                  $(".err-row").html(value)
-                  return false;
+    $(function(){
+        /*发送验证码按钮*/
+        $("#sendCode").on("click",function(){
+            var self = this;
+              $.ajax({
+                url: "check.php",    
+                method: "POST",
+                data: { },
+                dataType: "json",
+                success:function(data){
+                    if(data){    /*发送成功，开始倒计时*/
+                        var text = $(self).text();
+                        countDown(self,text);
+                    }
+                }
               });
-          },
-          errorPlacement:function(error, element) {
-            
-          },
-          onkeyup: false,
-          /*onfocusout:true,*/
-          focusInvalid: true
-      });
-      var validator = $(".form3").validate({
-                            rules:{
-                                 passAgain: {equalTo: "#password"}
-                            },
-                            messages:{
-                                passAgain:{
-                                  equalTo:"两次输入的密码不相同"
-                                }
-                            },
-                           success:function(label,element){
-                            /*若全对则清空错误提示区*/
-                                if(!validator.numberOfInvalids()){
-                                    $(".err-row").html("")
+        });
 
-                                 }
-                           }     
-                           
-                      });
+        function countDown(countDownContainer,text){
+             
+            var timeCount = 60,    /*倒计时秒数s*/
+                i = 0,
+                $countDown = $(countDownContainer);
+                $countDown.text(timeCount+"秒后再发送");   /*倒计时文字*/
+
+             var timer = setInterval(function(){
+                i += 1;
+
+                $countDown.text(timeCount-i+"秒后再发送");
+                if(timeCount <= i){
+                    clearInterval(timer);
+                    $countDown.text(text)
+                    return;
+                }
+            
+            },1000);
+             
+            return timer; 
+                        
+        }
+
+        $(".form3").css({
+          
+          'margin-left':($(window).width()-$(".form3").width())/2+'px'
+        })
+        $(".form3 .un-block-2").after("<div class='un-block-3'><div class='tips'></div></div>")
+
+        jQuery.validator.addMethod("isTel", function(value,element) {   
+                var length = value.length;   
+                var mobile = /^(((13[0-9]{1})|(15[0-9]{1})|(17[0-9]{1})|(18[0-9]{1}))+\d{8})$/;   
+                
+                return this.optional(element) || (length==11 && mobile.test(value));   
+            }, "请正确填写您的联系方式"); 
+
+        var validator = $(".form3").validate({
+                              rules:{
+                                   password:{
+                                      required:true
+                                   },
+                                   passAgain: {equalTo: "#password"},
+                                   username:{
+                                      required:true
+                                   },
+                                   cellphone:{
+                                      required:true,
+                                      isTel:true
+                                   },
+                                   testvalidator:{
+                                      required:true,
+                                      remote: {
+                                          /*后台  echo json_encode(true)验证通过，否则不通过*/
+                                          url: "check.php", 
+                                          type: "post",
+                                          data: {
+                                            username: function() {
+                                              /*向后台发送输入的验证码*/
+                                              return $( "#testvalidator" ).val();
+                                            }
+                                          }
+                                      }
+                                  }
+
+                              },
+                              messages:{
+                                  username:{
+                                    required:"请输入您的用户名"
+                                  },
+                                  password:{
+                                    required:"请输入您的密码"
+                                  },
+                                  cellphone:{
+                                    required:"请输入您的手机号码",
+                                    isTel:"请输入正确手机号码"
+                                  },
+                                  passAgain:{
+                                     required:"请再次输入您的密码",
+                                    equalTo:"两次输入的密码不相同"
+                                  },
+                                  testvalidator:{
+                                    required:"请输入验证码",
+                                    remote:"输入验证码错误"}
+                              },
+                              errorPlacement: function (label, element) {
+                                    $(element).parents(".form-row").find(".tips").html("*"+label.text()).css({color:"#1296db"})
+                              },
+                              success:function(label,element){
+                                    
+                                    /*还原回原来的提示信息*/
+                                    $(element).parents(".form-row").find(".tips").html("");
+                              }   
+                             
+                        });
+    })
+      
     </script>
 <?php include 'simpleFoot.html' ?>    

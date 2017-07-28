@@ -130,3 +130,60 @@
             })();
         </script>
         
+        <!-- 前端测试使用，可删除 -->
+        <div id="hiddenLinks" >
+        <?php
+            $handler = opendir('.');
+            $str="";
+            while( ($filename = readdir($handler)) !== false ) 
+            {
+             //略过linux目录的名字为'.'和‘..'的文件
+             if($filename != "." && $filename != ".." && substr(strrchr($filename, '.'), 1) == "php")
+             {  
+              //输出文件名
+                $str .= "<a href=$filename>$filename</a>";
+              }
+
+            }
+            echo $str;
+            closedir($handler);
+        ?>
+
+        </div>
+        <script type="text/javascript">
+          function testLinks(options){
+            var $hiddenLinks = $("#hiddenLinks");
+              $hiddenLinks.css({
+                position:'fixed',
+                left:0,
+                bottom:0,
+                padding:'0 10px 20px',
+                'z-index':'99999'
+              })
+              $hiddenLinks.find("a").css({
+                  background:'#fa812f',
+                  color:'#fff',
+                  display:'inline-block',
+                  'margin':'0 10px 5px 0',
+                  'border-radius':'5px',
+                  'padding':'2px 5px',
+
+              })
+              if(options.code == 0){
+                $hiddenLinks.hide();
+              }else if(options.code == 1){
+
+              }
+              
+
+              $(document).keydown(function(e){ 
+                    /*alt + s*/ 
+                    if(event.altKey && event.keyCode == 83){
+                     $("#hiddenLinks").toggle()
+                    } 
+              })
+          }
+           
+          testLinks({code:1}) 
+        </script>        
+<!-- 前端测试使用，可删除 -->

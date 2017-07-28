@@ -79,34 +79,7 @@
                     </li>
                 </ul>
                 <div class="ulAddon"></div>
-                <script type="text/javascript">
-                    $(function(){
-                        var sideBar = {
-                            'data-string':"open",
-                            ini:function(){
-                                    $(".sideBar02 .sideBar_li").each(function(i,e){
-                                        var childList = $(e).children("ul.sideBar_ul");
-                                            childList.length>0 ? 
-                                            $(e).addClass("childList")
-                                                .on("click",function(){
-                                                            childList.slideToggle();
-                                                            $(this).toggleClass("on")
-                                                })
-                                        : $(e).children(".sideBar_a").addClass("bottom");
-                                    });
-                                    this.active();        
-                            },
-                            active:function(){
-                                var string = this["data-string"];
-                            }   
-                        };
-                        sideBar.ini();
-
-                        
-        
-                    })
-                    
-                </script>
+                
             </div>
         </div> 
         <div class="rightWrapper">
