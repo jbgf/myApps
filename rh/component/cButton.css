@@ -1,0 +1,211 @@
+@charset "UTF-8";
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.button2, .button1 {
+  position: relative; }
+
+.btnGroup .button {
+  text-align: center !important; }
+
+.uploadBtn input {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0; }
+
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.button2, .button1 {
+  position: relative; }
+
+.btnGroup .button {
+  text-align: center !important; }
+
+.uploadBtn input {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0; }
+
+.uploadBtn {
+  border: 1px solid #ddd;
+  position: relative;
+  background: url(../img/addIcon.png) center center no-repeat;
+  -webkit-background-size: 23.5px 23.5px;
+  background-size: 23.5px 23.5px; }
+  .uploadBtn:after {
+    content: '';
+    display: block;
+    margin-top: 75%; }
+
+.tagButton {
+  display: inline-block;
+  color: #fff;
+  -webkit-border-radius: 0.8rem;
+  border-radius: 0.8rem;
+  padding: 0 0.6rem; }
+
+.button4 {
+  display: block;
+  width: 100%;
+  padding: 0.3rem 0;
+  text-align: center;
+  border-color: #1a7bb9;
+  color: white;
+  -webkit-border-radius: 0.8rem;
+  border-radius: 0.8rem;
+  font-size: 15.6px;
+  font-weight: 700; }
+
+.button3 {
+  display: block;
+  width: 100%;
+  padding: 0.8rem 0;
+  text-align: center;
+  border-color: #1a7bb9;
+  color: white;
+  font-size: 15.6px;
+  font-weight: 700; }
+
+.button2 {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0;
+  text-align: center;
+  border-color: #1a7bb9;
+  color: white;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+  font-size: 15.6px;
+  font-weight: 700; }
+  .button2:before {
+    position: absolute;
+    left: 0px;
+    width: auto;
+    color: inherit;
+    content: "·";
+    font-size: 15px;
+    left: 1rem; }
+  .button2:after {
+    position: absolute;
+    right: 0px;
+    width: auto;
+    color: inherit;
+    content: "·";
+    font-size: 15px;
+    right: 1rem; }
+
+.buttonGroup1 {
+  margin: 1.5rem 0 2rem;
+  padding: 0 0.5rem; }
+  .buttonGroup1 .buttonWrapper + .buttonWrapper {
+    margin-top: 0.5rem; }
+
+.button1 {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0;
+  text-align: center;
+  border-color: #1a7bb9;
+  color: white;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+  font-size: 15.6px;
+  font-weight: 700;
+  letter-spacing: 0.3rem; }
+  .button1:before {
+    position: absolute;
+    left: 0px;
+    width: auto;
+    color: inherit;
+    content: "·";
+    font-size: 15px;
+    left: 1rem;
+    /* font-size: $pointSize; */ }
+  .button1:after {
+    position: absolute;
+    right: 0px;
+    width: auto;
+    color: inherit;
+    content: "·";
+    font-size: 15px;
+    right: 1rem;
+    /* font-size: $pointSize; */ }
+
+.roundBtn03 {
+  display: inline-block;
+  background: inherit;
+  border: 1px solid #54e2b4;
+  -webkit-border-radius: 30px;
+  border-radius: 30px;
+  padding: 10px 50px;
+  margin-bottom: 70px;
+  text-align: center;
+  font-size: 15.6px; }
+  .roundBtn03 img {
+    vertical-align: middle;
+    margin-right: 15px; }
+
+.roundBtn02 {
+  display: inline-block;
+  background: inherit;
+  color: #218ad5;
+  border: 2px solid #218ad5;
+  -webkit-border-radius: 35px;
+  border-radius: 35px;
+  padding: 4.375px 0;
+  width: 120px;
+  text-align: center;
+  font-size: 15.6px; }
+
+.roundBtn01 {
+  display: inline-block;
+  color: #218ad5;
+  border: 2px solid #218ad5;
+  -webkit-border-radius: 35px;
+  border-radius: 35px;
+  padding: 8.75px 35px;
+  font-size: 15.6px; }
+
+.btnGroup {
+  text-align: center; }
+  .btnGroup .button {
+    display: block;
+    height: 37px;
+    line-height: 37px;
+    width: 110px !important;
+    background: #eb6326;
+    color: #fff;
+    display: inline-block;
+    border: 1px solid #eb6326; }
+    .btnGroup .button {
+      margin-bottom: 10px; }
+    .btnGroup .button.white-bg {
+      background: #fff;
+      color: #eb6326; }
+
+/*# sourceMappingURL=maps/cButton.css.map */

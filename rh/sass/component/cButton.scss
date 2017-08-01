@@ -1,0 +1,167 @@
+@charset "utf-8";
+
+@import "../mySassWare/_variable";
+@import "../mySassWare/_mixin";
+@import "../mySassWare/_function";
+
+.uploadBtn{
+  @include border();
+  &:after { 
+    content: ''; display: block; margin-top:percentage(3/4); 
+  }
+  position:relative;
+  background:url(../img/addIcon.png) center center no-repeat;
+  -webkit-background-size:23.5px 23.5px;
+          background-size:23.5px 23.5px;
+  input{
+    @extend %resetInputFile-m;
+  }
+}
+
+.tagButton{
+  display: inline-block;
+  color:#fff;
+  @include radius(0.8rem);
+  padding:0 0.6rem;
+}
+
+.button4{
+    $btnRadius4:0.8rem;
+    display: block;
+    width: 100%;
+    padding:0.3rem 0;
+    text-align: center;   
+   
+    border-color: #1a7bb9;
+    color: white;
+   
+    -webkit-border-radius: $btnRadius4;
+    border-radius: $btnRadius4;
+    font-size: 15.6px;
+    font-weight: 700;
+   
+}
+
+.button3{
+    display: block;
+    width: 100%;
+    padding:0.8rem 0;
+    text-align: center;   
+    border-color: #1a7bb9;
+    color: white;
+    font-size: 15.6px;
+    font-weight: 700;
+    
+}
+
+.button2{
+    display: block;
+    width: 100%;
+    padding:0.5rem 0;
+    text-align: center;   
+   
+    border-color: #1a7bb9;
+    color: white;
+   
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+    font-size: 15.6px;
+    font-weight: 700;
+    
+    @include persudo($color:inherit,$content:"·",$position:before,$bg:none){
+      left:1rem;
+      
+    };
+    @include persudo($color:inherit,$content:"·",$position:after,$bg:none){
+      right:1rem;
+      
+    };
+}
+
+
+.buttonGroup1{
+  margin:1.5rem 0 2rem;
+  padding:0 0.5rem;
+  .buttonWrapper{
+    &+.buttonWrapper{
+      margin-top: 0.5rem;
+    }
+  }  
+}
+.button1{
+    display: block;
+    width: 100%;
+    padding:0.5rem 0;
+    text-align: center;   
+   
+    border-color: #1a7bb9;
+    color: white;
+   
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+    font-size: 15.6px;
+    font-weight: 700;
+    letter-spacing: 0.3rem;
+    $pointSize:1.5rem;
+    @include persudo($color:inherit,$content:"·",$position:before,$bg:none){
+      left:1rem;
+      /* font-size: $pointSize; */
+    };
+    @include persudo($color:inherit,$content:"·",$position:after,$bg:none){
+      right:1rem;
+      /* font-size: $pointSize; */
+    };
+}
+
+.roundBtn03{
+  display: inline-block;
+  background: inherit;
+  $rb02p:30px;
+  
+  @include border($color:#54e2b4,$width:1px);
+  @include radius($rb02p);
+  padding:10px 50px;
+  margin-bottom: 70px;
+  text-align: center;
+  font-size: $mediumSize;
+
+  img{vertical-align:middle;margin-right:15px}
+}
+.roundBtn02{
+  display: inline-block;
+  background: inherit;
+  $rb02p:35px;
+  color:$blue;
+  @include border($color:$blue,$width:2px);
+  @include radius($rb02p);
+  padding:$rb02p/8 0;
+  width:120px;
+  text-align: center;
+  font-size: $mediumSize;
+}
+
+.roundBtn01{
+  display: inline-block;
+  $rb01p:35px;
+  color:$blue;
+  @include border($color:$blue,$width:2px);
+  @include radius($rb01p);
+  padding:$rb01p/4 $rb01p;
+  font-size: $mediumSize;
+}
+
+.btnGroup{
+    text-align: center;
+   .button{ 
+       @include button_groupBeta($height:37px,$width:110px,$gutter:10px,$direction:v);
+       background:$orange;
+       color:#fff;
+       display: inline-block;
+       @include border($color:$orange);
+       &.white-bg{
+        background:#fff;
+        color:$orange;
+   
+       }
+    } 
+}

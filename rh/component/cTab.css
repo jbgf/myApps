@@ -1,0 +1,279 @@
+@charset "UTF-8";
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.solutionCase .solutionCase-left {
+  float: left; }
+
+.tab04 .hd ul:before, .tab04 .hd ul:after {
+  content: " ";
+  display: table; }
+
+.tab04 .hd ul:after {
+  clear: both; }
+
+.tab04 .hd ul li .hdInner, .solutionCase, .sideBar04 .sideBar_li .srow, .sideBar04 .sideBar_li:hover .srow, .sideBar04 .sideBar_li.on .srow, .sideBar03 .sideBar_li .srow, .sideBar03 .sideBar_li .srow .iconfont {
+  position: relative; }
+
+.sideBar04 .sideBar_li .srow p, .sideBar03 .sideBar_li .srow p {
+  text-align: left; }
+
+.sideBar04 .sideBar_li, .sideBar03 .sideBar_li {
+  text-align: center !important; }
+
+.solutionCase .solutionCase-left {
+  float: left; }
+
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.solutionCase .solutionCase-left {
+  float: left; }
+
+.tab04 .hd ul:before, .tab04 .hd ul:after {
+  content: " ";
+  display: table; }
+
+.tab04 .hd ul:after {
+  clear: both; }
+
+.tab04 .hd ul li .hdInner, .solutionCase, .sideBar04 .sideBar_li .srow, .sideBar04 .sideBar_li:hover .srow, .sideBar04 .sideBar_li.on .srow, .sideBar03 .sideBar_li .srow, .sideBar03 .sideBar_li .srow .iconfont {
+  position: relative; }
+
+.sideBar04 .sideBar_li .srow p, .sideBar03 .sideBar_li .srow p {
+  text-align: left; }
+
+.sideBar04 .sideBar_li, .sideBar03 .sideBar_li {
+  text-align: center !important; }
+
+.solutionCase .solutionCase-left {
+  float: left; }
+
+.aboutUsWrapper {
+  width: 1000px;
+  margin: 0 auto; }
+
+/*tab05 tab切换 start*/
+.tab05.case02 {
+  height: auto;
+  border-bottom: none; }
+
+.tab05.case02 .news-list01 {
+  border-top: 1px dashed #ddd; }
+
+.tab05.case02 .bd ul.switch {
+  padding: 0px 0;
+  zoom: 1; }
+
+.tab05 {
+  text-align: left;
+  border-bottom: 1px dashed #ddd;
+  height: 142px; }
+
+.tab05 .hd {
+  background: #f0f0f0;
+  position: relative;
+  margin-top: 45px; }
+  .tab05 .hd ul {
+    overflow: hidden; }
+    .tab05 .hd ul li {
+      float: left;
+      cursor: pointer;
+      text-align: center;
+      width: 25%;
+      color: #1296db; }
+      .tab05 .hd ul li .inner {
+        padding: 23px 0px;
+        height: 27px;
+        font-size: 18.72px; }
+        .tab05 .hd ul li .inner .iconfont {
+          font-size: 22.464px;
+          margin-right: 10px; }
+      .tab05 .hd ul li.on {
+        background: #1296db;
+        color: #fff; }
+
+.tab05 .bd .aboutBanner1 {
+  height: 370px; }
+
+.tab05 .bd .tab1-introduce {
+  padding-top: 20px; }
+  .tab05 .bd .tab1-introduce .blueTitle {
+    color: #1296db;
+    font-size: 22.464px;
+    margin-right: 10px; }
+  .tab05 .bd .tab1-introduce td {
+    vertical-align: middle; }
+  .tab05 .bd .tab1-introduce .p + .p {
+    padding-top: 30px; }
+
+.tab05 .bd ul.switch {
+  padding: 15px 0;
+  zoom: 1; }
+
+.tab05 .bd ul li .s-general {
+  padding: 15px 0; }
+
+.tab05 .bd li .stb-text {
+  height: 30px;
+  line-height: 23px;
+  font-size: 15px;
+  font-weight: 600; }
+
+/*tab05 tab切换 end*/
+/*tab04 start*/
+.tab04 {
+  height: auto;
+  border-bottom: none;
+  text-align: left; }
+  .tab04 .more {
+    height: 38px;
+    line-height: 38px;
+    color: #999; }
+
+.tab04 .hd {
+  position: relative;
+  height: 38px;
+  color: #999;
+  text-align: center;
+  padding-bottom: 40px; }
+  .tab04 .hd ul {
+    display: inline-block; }
+    .tab04 .hd ul li {
+      float: left;
+      height: 38px;
+      cursor: pointer;
+      font-size: 15.6px;
+      margin-left: 20px; }
+      .tab04 .hd ul li .hdInner {
+        padding: 8px 18px;
+        position: relative; }
+        .tab04 .hd ul li .hdInner:before {
+          position: absolute;
+          left: 0px;
+          width: auto;
+          color: #dbdbdb;
+          content: "";
+          font-size: 15px;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0; }
+      .tab04 .hd ul li.on {
+        color: #218ad5; }
+        .tab04 .hd ul li.on .hdInner:before {
+          border: 1px solid #218ad5; }
+
+.tab04 .bd .switch {
+  height: 370px;
+  padding: 50px 0px 10px;
+  zoom: 1;
+  background: #f0f0f0; }
+
+/*tab04 end*/
+.solutionCase {
+  padding-bottom: 50px; }
+  .solutionCase .solutionCase-left, .solutionCase .solutionCase-right {
+    min-height: 1px; }
+  .solutionCase .solutionCase-left {
+    width: 325px;
+    text-align: left;
+    height: auto; }
+  .solutionCase .solutionCase-right {
+    margin-left: 340px;
+    height: auto; }
+  .solutionCase .solutionCase-right {
+    height: 370px; }
+    .solutionCase .solutionCase-right img {
+      display: block;
+      width: 100%;
+      height: 370px; }
+
+.sideBar04 .sideBar_li {
+  display: block;
+  height: 85px;
+  line-height: 85px;
+  cursor: pointer;
+  background: #f0f0f0; }
+
+.sideBar04 .sideBar_li {
+  line-height: 1.5; }
+  .sideBar04 .sideBar_li + .sideBar_li {
+    margin-top: 10px; }
+  .sideBar04 .sideBar_li .srow {
+    border: 1px solid #ddd;
+    border-left: 2px solid #1296db;
+    padding: 0 25px;
+    height: 100%;
+    color: #999; }
+  .sideBar04 .sideBar_li:hover .srow, .sideBar04 .sideBar_li.on .srow {
+    border: 1px solid #218ad5;
+    border-left: 2px solid #218ad5;
+    color: #fff;
+    background: #218ad5; }
+    .sideBar04 .sideBar_li:hover .srow:before, .sideBar04 .sideBar_li.on .srow:before {
+      position: absolute;
+      left: 0px;
+      width: auto;
+      color: #dbdbdb;
+      content: "";
+      font-size: 15px;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-left: 10px dashed #218ad5;
+      display: inline-block;
+      width: 0;
+      height: 0;
+      vertical-align: middle;
+      position: absolute;
+      left: 100%;
+      top: 50%;
+      margin-top: -8px;
+      margin-left: 1px; }
+
+.sidebarWrapper {
+  padding-top: 5px; }
+
+.sideBar03 .sideBar_li {
+  display: block;
+  height: 37px;
+  line-height: 37px;
+  cursor: pointer;
+  background: #fff; }
+
+.sideBar03 .sideBar_li .srow {
+  border-left: 5px solid #fff;
+  padding-right: 5px;
+  height: 100%;
+  color: #999; }
+  .sideBar03 .sideBar_li .srow .iconfont {
+    margin-left: 10px;
+    margin-right: 15px;
+    font-size: 20.592px;
+    top: 3px;
+    color: #218ad5; }
+
+.sideBar03 .sideBar_li:hover, .sideBar03 .sideBar_li.on {
+  background: #e5fdff; }
+  .sideBar03 .sideBar_li:hover .srow, .sideBar03 .sideBar_li.on .srow {
+    border-left: 5px solid #218ad5; }
+
+/*# sourceMappingURL=maps/cTab.css.map */

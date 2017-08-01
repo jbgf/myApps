@@ -1,0 +1,572 @@
+@charset "utf-8";
+@import "../mySassWare/_variable";
+@import "../mySassWare/_mixin";
+@import "../mySassWare/_function";
+.newest-policy{
+    
+    .list08{
+        margin-top: -7px;
+        /* @include rel_ajust($value:-7px); */
+    }   
+}
+
+
+
+.in-news{
+    .list01{
+        li{padding:13px 0;}
+    }
+}
+.newest-online{ 
+    padding-bottom:30px;
+}
+
+.facilitator-hottest{
+    .list11{
+        margin-top: -7px;
+    }
+}
+ 
+.sp-right-block{
+    & + .sp-right-block{
+        @include border($position:top,$type:dotted);
+        padding-top:15px;
+    }
+}
+
+
+$rw_p:15px;
+$bd_w:100px; 
+$bd_h:75px; 
+#slideBd{
+    @include f_pictext_row($width:$bd_w,$height:$bd_h,$fpos:"left",$mar-gutter:$rw_p);
+    padding-bottom:$rw_p;
+    .slideBd_right{margin-left:0;height:auto;}
+    .news_intro,.slideBd_left{display:none;}
+    $arr:".ellipsis",".title";
+    @include csstransition($parr:$arr,$property:all,$time:0.2s);
+    li{
+        /* @include lheightM($height:30px); */
+        & + li{@include border($position:"top",$width:1px,$color:#eee);}
+    }
+    
+    li.on{ 
+        @include border($position:"top",$width:1px,$color:none);
+        padding:$rw_p/2 0 $rw_p;
+        .news_intro,.slideBd_left{display:block;}
+        .news_intro{height:44px;@extend %overflow;}
+        .ellipsis{font-size:$baseSize;width:100%;}
+        .slideBd_right{ 
+            margin-left:($bd_w + $rw_p);
+            height:$bd_h;
+            
+            .ellipsis{width: 100%;}
+            .title{
+                
+                @extend %font-weight;
+                padding-left:0px;
+            }
+            .date{display:none} 
+        }  
+    }
+    .slideBd_left{
+        @extend %relative;
+    }
+    .slideBd_right{ 
+       
+        .title{
+            @extend %smallSize;
+            @include lheightM($height:28px);
+            
+            @extend %block;
+            @extend %ellipsis;
+
+            .ellipsis{width: 75%;@extend %float-l;line-height:inherit;@extend %baseTitleColor;}
+            .date{width:25%;display:block;@extend %float-r;@extend %align-right;color:$gray;}
+            
+           
+           
+        }
+        p{color:$gray} 
+    }  
+}  
+
+.list16{
+    padding:0 2rem;
+}
+
+.list15{
+    
+    padding-bottom:15px;
+    color:$gray3;
+}
+/* list15 start */    
+        .list15 ul {
+            text-align: left;
+            
+        }
+        .list15 li {
+            $l15p:5px;
+            display: block;
+            padding: $l15p 0 $l15p $l15p*2;
+            @include persudo($content:"▪",$color:inherit){
+            };
+            
+            .date{display:inline-block;padding-right:15px;}
+            .text {
+                
+                -o-text-overflow: ellipsis;
+                   text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+        }
+       
+       
+  /* list15 end */
+
+/* list14 start */    
+        .list14 ul {
+            text-align: left;
+            
+        }
+        .list14 li {
+            $l14p:11px;
+            display: block;
+            
+            &:hover{
+                .info{color:$blue;}
+                
+            }
+            .li_inner{ 
+                 
+                @extend %clear;
+                overflow: hidden;
+                @include border($position:bottom,$type:dotted);
+                .details{
+                    padding: 0 0 $l14p 20px;
+                    font-size: $smallSize;
+                }
+                .info{
+                    padding: $l14p 0 $l14p 0;
+                    
+                    
+                }
+            }
+            .text {
+                width: 80%;
+                display: block;
+                -o-text-overflow: ellipsis;
+                   text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+            .date{
+                float: right;
+                font-size:$smallSize;
+            }
+        }
+        
+        
+  /* list14 end */
+
+/* list13 start */    
+        .list13 ul {
+            text-align: left;
+            
+        }
+        .list13 li {
+            $l13p:11px;
+            display: block;
+            
+            
+            
+            &:hover{
+                color:$blue;
+                .text{text-decoration:underline;}
+            }
+            .inner{ 
+                @include f_pictext_rowNew($width:160px,$height:auto,$fpos:"left",$mar-gutter:0);
+                @extend %clear;
+                overflow: hidden;
+                .title,.info{
+                    padding: $l13p 0 $l13p 0;
+                }
+                .info{
+                    padding: $l13p 0 $l13p $l13p*2;
+                    @include persudo($content:"•",$color:#555);
+                    @include border($position:bottom,$type:dotted);
+                }
+            }
+            .text {
+                width: 80%;
+                display: block;
+                -o-text-overflow: ellipsis;
+                   text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+            .date{
+                float: right;
+                font-size:$smallSize;
+            }
+        }
+        
+        
+  /* list13 end */
+
+/* list12 start */    
+        .list12 {
+            @include f_pictext_row($width:70px,$height:auto,$fpos:"left",$mar-gutter:0px);
+            ul {
+                text-align: left;
+                
+            }
+        }
+        .list12 li {
+            $l12p:5px;
+            display: block;
+            padding: $l12p 0 $l12p 0;
+            &:hover{
+                color:$blue;
+               
+            }
+            .text {
+                display: block;
+            }
+            .g{
+                color:$gray;
+            }
+        }
+
+       
+  /* list12 end */
+
+/* list11 start */    
+        .list11 ul {
+            text-align: left;
+            
+        }
+        .list11 li {
+            $l11p:5px;
+            display: block;
+            padding: $l11p 0 $l11p 0;
+            @include border($position:bottom,$type:dotted);
+            
+            &:hover{
+                color:$blue;
+               
+            }
+            .text {
+               
+                display: block;
+                -o-text-overflow: ellipsis;
+                   text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+        }
+        .list11 li .date{
+            float: right;
+            font-size:$smallSize;
+        }
+       
+  /* list11 end */
+.page4 .padding-left{
+    padding-left:45px;
+}
+.page4 .list10{
+    font-size: $smallSize;
+}
+/* list10 start */    
+        .list10 ul {
+            text-align: left;
+            
+        }
+        .list10 {
+            $l10h:24px;
+            @include f_pictext_row($width:20px,$height:auto,$fpos:"left",$mar-gutter:0px);
+            li {
+                $l10p:5px;
+                display: block;
+                
+                @include lheightM($l10h);
+                @extend %clear;
+                
+                .icon{
+                    color:$water-blue;
+                    height: $l10h;
+                    overflow: hidden;
+                    @include rel_ajust($value:2px);
+                }
+                .text {
+                    padding-left: 10px;
+                }
+            }
+        }
+       
+  /* list10 end */
+
+/* list09 start */    
+    .list09{ 
+        ul {
+            text-align: left;
+        }
+    
+         li {
+            display: block;
+            padding:0px 15px 0px 10px;
+            @extend %clear;
+            overflow: hidden;
+            @include border($position:bottom,$type:dotted);
+
+            &.active{background: #f6f6f6;}
+            .jobBaseInfo{
+                @extend %clear;
+                padding:15px 0;
+            }
+            .jobInfo{
+                color:#000;
+                padding:0 40px;
+                display: none;
+                .b{
+                    color:$blue;
+                }
+                .p{
+                    &+.p{
+                        padding-top:25px;    
+                    }
+                    
+                }
+                .bookBtn{
+                    color:#fff;
+                    background:$blue;
+                    display: inline-block;  
+                    padding:5px 15px;
+                    margin: 20px 0;                  
+                }
+            }
+            .icon{
+                float: left;img{display:block;vertical-align:middle;}
+
+            }
+            .right{
+                float: right;
+                color:$blue;
+                .iconfont{
+                    font-size:8px;
+                    margin-left: 5px;
+                }
+            }
+            .button{
+                margin-left: 35px;
+            }
+            .date {
+                
+                
+                color: rgb(153, 153, 153);
+                @include rel_ajust($pos:"left",$value:6px);
+            }
+            .text {
+                width: 70%;;
+                padding-left:10px;
+                @include lheightM(25px);
+                float:left;
+                -o-text-overflow: ellipsis;
+                   text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+
+            }
+        }
+      
+    }
+/* list09 end */
+
+/* list08 start */    
+        .list08 ul {
+            text-align: left;
+            
+        }
+        .list08 li {
+            $l08p:5px;
+            display: block;
+            padding: $l08p 0 $l08p $l08p*3;
+            @include persudo($content:"•",$color:#555);
+            
+            &:hover{
+                color:$blue;
+               
+            }
+            .text {
+               
+                display: block;
+                -o-text-overflow: ellipsis;
+                   text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+        }
+        .list08 li .date{
+            float: right;
+            font-size:$smallSize;
+        }
+       
+  /* list08 end */
+
+/* list07 start */    
+        .list07 ul {
+            text-align: left;
+            
+        }
+        .list07 li {
+            $l07p:11px;
+            display: block;
+            padding: $l07p 0 $l07p $l07p*2;
+            @include persudo($content:"•",$color:#555);
+            @include border($position:bottom,$type:dotted);
+            &:hover{
+                color:$blue;
+                .text{text-decoration:underline;}
+            }
+            .text {
+                width: 80%;
+                display: block;
+                -o-text-overflow: ellipsis;
+                   text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+        }
+        .list07 li .date{
+            float: right;
+            font-size:$smallSize;
+        }
+       
+  /* list07 end */
+
+/* list06 start */    
+        .list06 ul {
+            text-align: left;
+            
+        }
+        .list06 li {
+            $l06p:5px;
+            display: block;
+            padding: $l06p 0 $l06p 0;
+            @extend %clear;
+            &:hover,&.on{
+                color:$blue;
+                .iconfont{color:inherit;}
+            }
+            .iconfont{float:left;color:$gray;}
+            .text {
+                width: 80%;
+                display: block;
+                float:left;
+                -o-text-overflow: ellipsis;
+                   text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                padding-left: 20px;
+            }
+        }
+        
+       
+  /* list06 end */
+
+
+/* list04 start */    
+    .list04{ 
+        ul {
+            text-align: left;
+        }
+    
+         li {
+            display: block;
+            padding:8px 0;
+            @extend %clear;
+            overflow: hidden;
+            @include border($position:bottom,$type:dotted);
+            .icon{float: left;img{display:block;vertical-align:middle;}}
+            .date {
+                float: right;
+                font-size:$smallSize;
+                color: rgb(153, 153, 153);
+                @include rel_ajust($pos:"left",$value:6px);
+            }
+            .text {
+                width: 210px;
+                padding-left:10px;
+                @include lheightM(25px);
+                float:left;
+                -o-text-overflow: ellipsis;
+                   text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+
+            }
+        }
+      
+    }
+/* list04 end */
+
+/* list03 start */    
+        .list03 ul {
+            text-align: left;
+            
+        }
+        .list03 li {
+            $l03p:5px;
+            display: block;
+            padding: $l03p 0 $l03p $l03p*3;
+            @include persudo($content:"•",$color:#555);
+            
+            &:hover{
+                color:$blue;
+                .text{text-decoration:underline;}
+            }
+            .text {
+                width: 80%;
+                display: block;
+                -o-text-overflow: ellipsis;
+                   text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+        }
+        .list03 li .date{
+            float: right;
+            font-size:$smallSize;
+        }
+       
+  /* list03 end */
+
+/* list01 start */    
+    .list01 ul {
+        text-align: left;
+    }
+    .list01 li{
+        display: block;
+        padding:8px 0;
+        @include border($position:bottom,$type:dotted);
+        &:hover{
+            &,.date,.iconfont{color:$blue;}
+        }
+        .date {
+            float: right;
+            font-size:$smallSize;
+            color: rgb(153, 153, 153);
+            @include rel_ajust($pos:"left",$value:6px);
+        }
+    }
+   
+    .list01 li .text {
+        width: 290px;
+        display: block;
+        -o-text-overflow: ellipsis;
+           text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+/* list01 end */

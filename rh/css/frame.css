@@ -1,0 +1,444 @@
+@charset "UTF-8";
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.row-block-1, .row-1-block, .row-block-2, .row-2-block, .row-block-3, .row-3-block, .row-block-4, .row-4-block, .row-block-5, .row-5-block, .row-block-6, .row-6-block, .row-block-7, .row-7-block, .row-block-8, .row-8-block, .row-block-9, .row-9-block, .row-block-10, .row-10-block, .row-block-11, .row-11-block, .row-block-12, .row-12-block {
+  float: left; }
+
+.container1150:before, .container1200:before, .rows:before, .row-block-1:before, .row-1-block:before, .row-block-2:before, .row-2-block:before, .row-block-3:before, .row-3-block:before, .row-block-4:before, .row-4-block:before, .row-block-5:before, .row-5-block:before, .row-block-6:before, .row-6-block:before, .row-block-7:before, .row-7-block:before, .row-block-8:before, .row-8-block:before, .row-block-9:before, .row-9-block:before, .row-block-10:before, .row-10-block:before, .row-block-11:before, .row-11-block:before, .row-block-12:before, .row-12-block:before, .container1150:after, .container1200:after, .rows:after, .row-block-1:after, .row-1-block:after, .row-block-2:after, .row-2-block:after, .row-block-3:after, .row-3-block:after, .row-block-4:after, .row-4-block:after, .row-block-5:after, .row-5-block:after, .row-block-6:after, .row-6-block:after, .row-block-7:after, .row-7-block:after, .row-block-8:after, .row-8-block:after, .row-block-9:after, .row-9-block:after, .row-block-10:after, .row-10-block:after, .row-block-11:after, .row-11-block:after, .row-block-12:after, .row-12-block:after {
+  content: " ";
+  display: table; }
+
+.container1150:after, .container1200:after, .rows:after, .row-block-1:after, .row-1-block:after, .row-block-2:after, .row-2-block:after, .row-block-3:after, .row-3-block:after, .row-block-4:after, .row-4-block:after, .row-block-5:after, .row-5-block:after, .row-block-6:after, .row-6-block:after, .row-block-7:after, .row-7-block:after, .row-block-8:after, .row-8-block:after, .row-block-9:after, .row-9-block:after, .row-block-10:after, .row-10-block:after, .row-block-11:after, .row-11-block:after, .row-block-12:after, .row-12-block:after {
+  clear: both; }
+
+.row-block-1, .row-1-block, .row-block-2, .row-2-block, .row-block-3, .row-3-block, .row-block-4, .row-4-block, .row-block-5, .row-5-block, .row-block-6, .row-6-block, .row-block-7, .row-7-block, .row-block-8, .row-8-block, .row-block-9, .row-9-block, .row-block-10, .row-10-block, .row-block-11, .row-11-block, .row-block-12, .row-12-block {
+  position: relative; }
+
+.row-block-1, .row-1-block, .row-block-2, .row-2-block, .row-block-3, .row-3-block, .row-block-4, .row-4-block, .row-block-5, .row-5-block, .row-block-6, .row-6-block, .row-block-7, .row-7-block, .row-block-8, .row-8-block, .row-block-9, .row-9-block, .row-block-10, .row-10-block, .row-block-11, .row-11-block, .row-block-12, .row-12-block {
+  float: left; }
+
+.wnWrapper {
+  /* 4workerNeed.php 工人需求*/ }
+  .wnWrapper .button3 {
+    margin: 0.5rem 0 4rem; }
+  .wnWrapper .formrow1 {
+    margin: 1.5rem 0 1rem; }
+
+.dnWrapper {
+  margin-top: 1rem; }
+  .dnWrapper .button3 {
+    margin: 0.5rem 0 4rem; }
+  .dnWrapper .buttonWrapper {
+    margin: 3rem auto 6rem; }
+
+.srWrapper {
+  /* 5sourceRegister.php 货源登记*/
+  margin-top: 1rem; }
+  .srWrapper .buttonWrapper {
+    width: 65%;
+    margin: 3rem auto 6rem; }
+
+.idWrapper {
+  /* 5sourceRegister.php 货源登记*/ }
+  .idWrapper .buttonWrapper {
+    width: 65%;
+    margin: 3rem auto 6rem; }
+
+.lWrapper {
+  margin-top: 1rem; }
+
+.mainWidth1 {
+  width: 75%;
+  margin: 0 auto; }
+
+.mainWidth2 {
+  width: 90%;
+  margin: 0 auto; }
+
+.mainContent {
+  width: 90%;
+  margin: 0 auto;
+  font-size: 0.8rem; }
+
+.friendZone {
+  padding-bottom: 80px; }
+
+.img-center {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  max-height: 100%;
+  max-width: 100%;
+  *height: 100%;
+  *width: 100%;
+  margin: auto; }
+
+.container-auto {
+  padding-right: 15px;
+  padding-left: 15px; }
+
+.info_fail {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1; }
+
+.info_success {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6; }
+
+.info_box > div.info {
+  padding: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  -webkit-border-radius: 4px;
+  border-radius: 4px; }
+
+.mainWrapper {
+  padding-top: 90px; }
+
+.content-section .news_h02 {
+  padding-top: 30px; }
+
+.content-section .cs-body {
+  padding-top: 30px; }
+
+.container-p-15 {
+  padding: 15px; }
+
+.container1000 {
+  width: 1000px;
+  margin: 0 auto; }
+
+.container1100 {
+  width: 1100px;
+  margin: 0 auto; }
+
+.container1150 {
+  width: 1150px;
+  margin: 0 auto; }
+
+.container1200 {
+  width: 1200px;
+  margin: 0 auto; }
+
+.line {
+  margin: 0 -15px; }
+
+.column {
+  float: left; }
+
+.width66 {
+  width: 66%; }
+
+.block {
+  padding-left: 15px;
+  padding-right: 15px;
+  float: left;
+  position: relative;
+  min-height: 1px; }
+
+.block-1 {
+  width: 100%; }
+
+.block-2 {
+  width: 50%; }
+
+.block-3 {
+  width: 33.3333333333%; }
+
+.block-4 {
+  width: 25%; }
+
+.container-auto:before, .container-auto:after,
+.container1200:before, .container1200:after,
+.column:before, .column:after,
+.line:before, .line:after,
+.block:before, .block:after {
+  content: " ";
+  display: table; }
+
+.container-auto:after,
+.column:after,
+.line:after,
+.block:after {
+  clear: both; }
+
+.centerBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(../img/background.jpg);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  overflow: hidden; }
+
+.input-base {
+  background-color: #FFF;
+  background-image: none;
+  border: 1px solid #e5e6e7;
+  -webkit-border-radius: 1px;
+  border-radius: 1px;
+  color: inherit;
+  display: block;
+  padding: 6px 12px;
+  -webkit-transition: border-color .15s ease-in-out 0s,-webkit-box-shadow .15s ease-in-out 0s;
+  transition: border-color .15s ease-in-out 0s,-webkit-box-shadow .15s ease-in-out 0s;
+  -o-transition: border-color .15s ease-in-out 0s,box-shadow .15s ease-in-out 0s;
+  transition: border-color .15s ease-in-out 0s,box-shadow .15s ease-in-out 0s;
+  transition: border-color .15s ease-in-out 0s,box-shadow .15s ease-in-out 0s,-webkit-box-shadow .15s ease-in-out 0s;
+  width: 150px;
+  font-size: 14px; }
+
+.full-width {
+  width: 100%; }
+
+.extend-width {
+  margin: 0 -9999px;
+  padding: 0 9999px; }
+
+.mar-center {
+  margin: 0 auto; }
+
+.hide {
+  display: none; }
+
+.over-flow {
+  overflow: auto;
+  zoom: 1; }
+
+.clear:before, .clear:after {
+  content: " ";
+  display: table; }
+
+.clear:after {
+  clear: both; }
+
+.rows.minusM {
+  margin-left: -15px;
+  margin-right: -15px; }
+
+.rows .innerBlock {
+  padding-left: 15px;
+  padding-right: 15px; }
+
+.row-block-1, .row-1-block {
+  min-height: 1px; }
+
+.row-block-1 {
+  width: 8.33333%;
+  /* eg:1除以12 */ }
+
+.block-pull-l-1 {
+  margin-left: 8.33333%; }
+
+.block-pull-r-1 {
+  margin-right: 8.33333%; }
+
+.row-1-block {
+  width: 100%;
+  /* eg:十分之一 */ }
+
+.row-block-2, .row-2-block {
+  min-height: 1px; }
+
+.row-block-2 {
+  width: 16.66667%;
+  /* eg:1除以12 */ }
+
+.block-pull-l-2 {
+  margin-left: 16.66667%; }
+
+.block-pull-r-2 {
+  margin-right: 16.66667%; }
+
+.row-2-block {
+  width: 50%;
+  /* eg:十分之一 */ }
+
+.row-block-3, .row-3-block {
+  min-height: 1px; }
+
+.row-block-3 {
+  width: 25%;
+  /* eg:1除以12 */ }
+
+.block-pull-l-3 {
+  margin-left: 25%; }
+
+.block-pull-r-3 {
+  margin-right: 25%; }
+
+.row-3-block {
+  width: 33.33333%;
+  /* eg:十分之一 */ }
+
+.row-block-4, .row-4-block {
+  min-height: 1px; }
+
+.row-block-4 {
+  width: 33.33333%;
+  /* eg:1除以12 */ }
+
+.block-pull-l-4 {
+  margin-left: 33.33333%; }
+
+.block-pull-r-4 {
+  margin-right: 33.33333%; }
+
+.row-4-block {
+  width: 25%;
+  /* eg:十分之一 */ }
+
+.row-block-5, .row-5-block {
+  min-height: 1px; }
+
+.row-block-5 {
+  width: 41.66667%;
+  /* eg:1除以12 */ }
+
+.block-pull-l-5 {
+  margin-left: 41.66667%; }
+
+.block-pull-r-5 {
+  margin-right: 41.66667%; }
+
+.row-5-block {
+  width: 20%;
+  /* eg:十分之一 */ }
+
+.row-block-6, .row-6-block {
+  min-height: 1px; }
+
+.row-block-6 {
+  width: 50%;
+  /* eg:1除以12 */ }
+
+.block-pull-l-6 {
+  margin-left: 50%; }
+
+.block-pull-r-6 {
+  margin-right: 50%; }
+
+.row-6-block {
+  width: 16.66667%;
+  /* eg:十分之一 */ }
+
+.row-block-7, .row-7-block {
+  min-height: 1px; }
+
+.row-block-7 {
+  width: 58.33333%;
+  /* eg:1除以12 */ }
+
+.block-pull-l-7 {
+  margin-left: 58.33333%; }
+
+.block-pull-r-7 {
+  margin-right: 58.33333%; }
+
+.row-7-block {
+  width: 14.28571%;
+  /* eg:十分之一 */ }
+
+.row-block-8, .row-8-block {
+  min-height: 1px; }
+
+.row-block-8 {
+  width: 66.66667%;
+  /* eg:1除以12 */ }
+
+.block-pull-l-8 {
+  margin-left: 66.66667%; }
+
+.block-pull-r-8 {
+  margin-right: 66.66667%; }
+
+.row-8-block {
+  width: 12.5%;
+  /* eg:十分之一 */ }
+
+.row-block-9, .row-9-block {
+  min-height: 1px; }
+
+.row-block-9 {
+  width: 75%;
+  /* eg:1除以12 */ }
+
+.block-pull-l-9 {
+  margin-left: 75%; }
+
+.block-pull-r-9 {
+  margin-right: 75%; }
+
+.row-9-block {
+  width: 11.11111%;
+  /* eg:十分之一 */ }
+
+.row-block-10, .row-10-block {
+  min-height: 1px; }
+
+.row-block-10 {
+  width: 83.33333%;
+  /* eg:1除以12 */ }
+
+.block-pull-l-10 {
+  margin-left: 83.33333%; }
+
+.block-pull-r-10 {
+  margin-right: 83.33333%; }
+
+.row-10-block {
+  width: 10%;
+  /* eg:十分之一 */ }
+
+.row-block-11, .row-11-block {
+  min-height: 1px; }
+
+.row-block-11 {
+  width: 91.66667%;
+  /* eg:1除以12 */ }
+
+.block-pull-l-11 {
+  margin-left: 91.66667%; }
+
+.block-pull-r-11 {
+  margin-right: 91.66667%; }
+
+.row-11-block {
+  width: 9.09091%;
+  /* eg:十分之一 */ }
+
+.row-block-12, .row-12-block {
+  min-height: 1px; }
+
+.row-block-12 {
+  width: 100%;
+  /* eg:1除以12 */ }
+
+.block-pull-l-12 {
+  margin-left: 100%; }
+
+.block-pull-r-12 {
+  margin-right: 100%; }
+
+.row-12-block {
+  width: 8.33333%;
+  /* eg:十分之一 */ }
+
+/*# sourceMappingURL=maps/frame.css.map */

@@ -1,0 +1,249 @@
+@charset "UTF-8";
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+.content4 .content4-left {
+  text-align: justify;
+  -moz-text-align-last: justify;
+  text-align-last: justify;
+  height: 24px; }
+  .content4 .content4-left:after {
+    /*  display:inline-block;  */
+    content: '';
+    overflow: hidden;
+    width: 100%;
+    height: 0; }
+
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.content2 .content2-left, .content1 .content1-left, .valueRow1 .row-block, .valueRow1 .valueBlock .valueBlock-left {
+  float: left; }
+
+.valueRow1:before, .valueRow1 .row-block:before, .valueRow1:after, .valueRow1 .row-block:after {
+  content: " ";
+  display: table; }
+
+.valueRow1:after, .valueRow1 .row-block:after {
+  clear: both; }
+
+.content2, .content1, .valueRow1 .row-block, .valueRow1 .valueBlock {
+  position: relative; }
+
+.content2 .content2-left, .content1 .content1-left, .valueRow1 .row-block, .valueRow1 .valueBlock .valueBlock-left {
+  float: left; }
+
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+.content4 .content4-left {
+  text-align: justify;
+  -moz-text-align-last: justify;
+  text-align-last: justify;
+  height: 24px; }
+  .content4 .content4-left:after {
+    /*  display:inline-block;  */
+    content: '';
+    overflow: hidden;
+    width: 100%;
+    height: 0; }
+
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.content2 .content2-left, .content1 .content1-left, .valueRow1 .row-block, .valueRow1 .valueBlock .valueBlock-left {
+  float: left; }
+
+.valueRow1:before, .valueRow1 .row-block:before, .valueRow1:after, .valueRow1 .row-block:after {
+  content: " ";
+  display: table; }
+
+.valueRow1:after, .valueRow1 .row-block:after {
+  clear: both; }
+
+.content2, .content1, .valueRow1 .row-block, .valueRow1 .valueBlock {
+  position: relative; }
+
+.content2 .content2-left, .content1 .content1-left, .valueRow1 .row-block, .valueRow1 .valueBlock .valueBlock-left {
+  float: left; }
+
+.content4 {
+  font-size: 0.7rem; }
+
+.content4 li {
+  overflow: hidden; }
+
+.content4 .content4-left {
+  white-space: nowrap; }
+  .content4 .content4-left img {
+    vertical-align: middle;
+    margin-right: 0.3rem;
+    width: 12px; }
+
+.content4 .content4-right {
+  color: #000;
+  text-align: left;
+  padding-left: 0.5rem; }
+
+.content3 li {
+  overflow: hidden; }
+
+.content3 .content3-left, .content3 .content3-right {
+  display: block;
+  width: 50%;
+  float: left; }
+
+.content3 .content3-left {
+  text-align: right; }
+  .content3 .content3-left img {
+    vertical-align: middle;
+    margin-right: 0.5rem;
+    width: 12px; }
+
+.content3 .content3-right {
+  color: #000;
+  text-align: left; }
+
+.content2 {
+  overflow: hidden; }
+
+.content2 .content2-left, .content2 .content2-right {
+  min-height: 1px; }
+
+.content2 .content2-left {
+  width: 85px;
+  text-align: left;
+  height: auto; }
+
+.content2 .content2-right {
+  margin-left: 90px;
+  height: auto; }
+
+.content2 .content2-left {
+  text-align: right; }
+
+.content1 {
+  overflow: hidden; }
+
+.content1 .content1-left, .content1 .content1-right {
+  min-height: 1px; }
+
+.content1 .content1-left {
+  width: 100px;
+  text-align: left;
+  height: auto; }
+
+.content1 .content1-right {
+  margin-left: 105px;
+  height: auto; }
+
+.content1 .content1-left {
+  text-align: right; }
+
+.valueBlock {
+  line-height: 1.5;
+  background: #f0f0f0;
+  margin-bottom: 15px;
+  padding: 40px 60px; }
+  .valueBlock .valueBlock-left {
+    font-size: 15.6px; }
+  .valueBlock .valueBlock-right {
+    font-size: 14px; }
+  .valueBlock .title {
+    color: #218ad5;
+    font-size: 15.6px;
+    font-weight: 700; }
+  .valueBlock .valueBlock-bottom {
+    padding-top: 15px; }
+
+.valueRow1 {
+  margin-left: -15px;
+  margin-right: -15px; }
+  .valueRow1 .row-block {
+    width: 50%;
+    min-height: 1px; }
+    .valueRow1 .row-block .inner {
+      padding: 0 15px; }
+  .valueRow1 .valueBlock {
+    overflow: hidden; }
+  .valueRow1 .valueBlock .valueBlock-left, .valueRow1 .valueBlock .valueBlock-right {
+    min-height: 1px; }
+  .valueRow1 .valueBlock .valueBlock-left {
+    width: 20px;
+    text-align: left;
+    height: 40px; }
+  .valueRow1 .valueBlock .valueBlock-right {
+    margin-left: 55px;
+    height: 40px; }
+
+.valueRow2 {
+  text-align: center;
+  padding-bottom: 30px; }
+
+.i-brand {
+  background: #fcfcfc;
+  padding: 17.5px;
+  border: 1px solid #ddd;
+  text-align: center; }
+  .i-brand .title {
+    color: #000;
+    font-weight: bold;
+    font-size: 15.6px; }
+  .i-brand .info {
+    padding-top: 10px; }
+    .i-brand .info span + span {
+      margin-left: 30px; }
+    .i-brand .info .font a + a {
+      margin-left: 15px; }
+      .i-brand .info .font a + a.on {
+        color: #218ad5; }
+
+.tagLine01 {
+  padding: 20px 0px;
+  border-bottom-width: 1px;
+  border-bottom-style: dashed;
+  border-bottom-color: #dddddd;
+  border-top-width: 1px;
+  border-top-style: dashed;
+  border-top-color: #dddddd; }
+  .tagLine01 .icon {
+    float: left; }
+  .tagLine01 .ul-line02 li {
+    float: left;
+    display: block;
+    margin-right: 10px; }
+  .tagLine01 .ul-line02 li a {
+    display: block;
+    padding: 0px 10px;
+    border: 1px solid #dddddd;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; }
+
+.r-article02 {
+  padding: 23px 0px 23px 15px;
+  border: 1px dashed #dddddd; }
+  .r-article02 .r-row .r-link,
+  .r-article02 .r-row {
+    text-align: left; }
+  .r-article02 .r-page {
+    margin-right: 12px;
+    text-align: left; }
+
+.mainShareBox {
+  padding-top: 20px; }
+  .mainShareBox .share {
+    padding: 20px 0; }
+
+/*# sourceMappingURL=maps/ccontent.css.map */

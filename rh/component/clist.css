@@ -1,0 +1,619 @@
+@charset "UTF-8";
+/*----------------------------------------------------- */
+/* setting scss*/
+#slideBd .slideBd_right .title {
+  font-size: 12px; }
+
+#slideBd li.on .slideBd_right .title {
+  font-weight: 700; }
+
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+#slideBd .slideBd_right .title .ellipsis {
+  color: #333; }
+
+/* color end */
+#slideBd .slideBd_right .title {
+  display: block; }
+
+#slideBd .slideBd_right .title {
+  display: block;
+  *display: inline;
+  /*zoom: 1;
+  text-align:center;
+  max-width: 100%;
+  line-height: 100%; */
+  overflow: hidden;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis; }
+
+/* clearfix*/
+/* 闭合子元素的浮动*/
+#slideBd li.on .news_intro {
+  overflow: hidden; }
+
+#slideBd .slideBd_left, #slideBd .slideBd_right .title .ellipsis, .list13 li .inner .inner-left, .list12 .list12_left, .list10 .list10_left {
+  float: left; }
+
+#slideBd:before, .list14 li .li_inner:before, .list13 li .inner:before, .list12:before, .list10:before, .list10 li:before, .list09 li:before, .list09 li .jobBaseInfo:before, .list06 li:before, .list04 li:before, #slideBd:after, .list14 li .li_inner:after, .list13 li .inner:after, .list12:after, .list10:after, .list10 li:after, .list09 li:after, .list09 li .jobBaseInfo:after, .list06 li:after, .list04 li:after {
+  content: " ";
+  display: table; }
+
+#slideBd:after, .list14 li .li_inner:after, .list13 li .inner:after, .list12:after, .list10:after, .list10 li:after, .list09 li:after, .list09 li .jobBaseInfo:after, .list06 li:after, .list04 li:after {
+  clear: both; }
+
+#slideBd, #slideBd .slideBd_left, .list15 li, .list13 li .inner, .list13 li .inner .info, .list12, .list10, .list10 li .icon, .list09 li .date, .list08 li, .list07 li, .list04 li .date, .list03 li, .list01 li .date {
+  position: relative; }
+
+#slideBd .slideBd_right .title .date {
+  text-align: right; }
+
+#slideBd .slideBd_left, #slideBd .slideBd_right .title .ellipsis, .list13 li .inner .inner-left, .list12 .list12_left, .list10 .list10_left {
+  float: left; }
+
+#slideBd .slideBd_right .title .date {
+  float: right; }
+
+/*----------------------------------------------------- */
+/* setting scss*/
+#slideBd .slideBd_right .title {
+  font-size: 12px; }
+
+#slideBd li.on .slideBd_right .title {
+  font-weight: 700; }
+
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+#slideBd .slideBd_right .title .ellipsis {
+  color: #333; }
+
+/* color end */
+#slideBd .slideBd_right .title {
+  display: block; }
+
+#slideBd .slideBd_right .title {
+  display: block;
+  *display: inline;
+  /*zoom: 1;
+  text-align:center;
+  max-width: 100%;
+  line-height: 100%; */
+  overflow: hidden;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis; }
+
+/* clearfix*/
+/* 闭合子元素的浮动*/
+#slideBd li.on .news_intro {
+  overflow: hidden; }
+
+#slideBd .slideBd_left, #slideBd .slideBd_right .title .ellipsis, .list13 li .inner .inner-left, .list12 .list12_left, .list10 .list10_left {
+  float: left; }
+
+#slideBd:before, .list14 li .li_inner:before, .list13 li .inner:before, .list12:before, .list10:before, .list10 li:before, .list09 li:before, .list09 li .jobBaseInfo:before, .list06 li:before, .list04 li:before, #slideBd:after, .list14 li .li_inner:after, .list13 li .inner:after, .list12:after, .list10:after, .list10 li:after, .list09 li:after, .list09 li .jobBaseInfo:after, .list06 li:after, .list04 li:after {
+  content: " ";
+  display: table; }
+
+#slideBd:after, .list14 li .li_inner:after, .list13 li .inner:after, .list12:after, .list10:after, .list10 li:after, .list09 li:after, .list09 li .jobBaseInfo:after, .list06 li:after, .list04 li:after {
+  clear: both; }
+
+#slideBd, #slideBd .slideBd_left, .list15 li, .list13 li .inner, .list13 li .inner .info, .list12, .list10, .list10 li .icon, .list09 li .date, .list08 li, .list07 li, .list04 li .date, .list03 li, .list01 li .date {
+  position: relative; }
+
+#slideBd .slideBd_right .title .date {
+  text-align: right; }
+
+#slideBd .slideBd_left, #slideBd .slideBd_right .title .ellipsis, .list13 li .inner .inner-left, .list12 .list12_left, .list10 .list10_left {
+  float: left; }
+
+#slideBd .slideBd_right .title .date {
+  float: right; }
+
+.newest-policy .list08 {
+  margin-top: -7px;
+  /* @include rel_ajust($value:-7px); */ }
+
+.in-news .list01 li {
+  padding: 13px 0; }
+
+.newest-online {
+  padding-bottom: 30px; }
+
+.facilitator-hottest .list11 {
+  margin-top: -7px; }
+
+.sp-right-block + .sp-right-block {
+  border-top: 1px dotted #ddd;
+  padding-top: 15px; }
+
+#slideBd {
+  padding-bottom: 15px; }
+  #slideBd .slideBd_left, #slideBd .slideBd_right {
+    min-height: 1px; }
+  #slideBd .slideBd_left {
+    width: 100px;
+    text-align: left;
+    height: 75px; }
+  #slideBd .slideBd_right {
+    margin-left: 115px;
+    height: 75px; }
+  #slideBd .slideBd_right {
+    margin-left: 0;
+    height: auto; }
+  #slideBd .news_intro, #slideBd .slideBd_left {
+    display: none; }
+  #slideBd .ellipsis {
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s; }
+  #slideBd .title {
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s; }
+  #slideBd li {
+    /* @include lheightM($height:30px); */ }
+    #slideBd li + li {
+      border-top: 1px solid #eee; }
+  #slideBd li.on {
+    border-top: none;
+    padding: 7.5px 0 15px; }
+    #slideBd li.on .news_intro, #slideBd li.on .slideBd_left {
+      display: block; }
+    #slideBd li.on .news_intro {
+      height: 44px; }
+    #slideBd li.on .ellipsis {
+      font-size: 15px;
+      width: 100%; }
+    #slideBd li.on .slideBd_right {
+      margin-left: 115px;
+      height: 75px; }
+      #slideBd li.on .slideBd_right .ellipsis {
+        width: 100%; }
+      #slideBd li.on .slideBd_right .title {
+        padding-left: 0px; }
+      #slideBd li.on .slideBd_right .date {
+        display: none; }
+  #slideBd .slideBd_right .title {
+    height: 28px;
+    line-height: 28px; }
+    #slideBd .slideBd_right .title .ellipsis {
+      width: 75%;
+      line-height: inherit; }
+    #slideBd .slideBd_right .title .date {
+      width: 25%;
+      display: block;
+      color: #999; }
+  #slideBd .slideBd_right p {
+    color: #999; }
+
+.list16 {
+  padding: 0 2rem; }
+
+.list15 {
+  padding-bottom: 15px;
+  color: #999; }
+
+/* list15 start */
+.list15 ul {
+  text-align: left; }
+
+.list15 li {
+  display: block;
+  padding: 5px 0 5px 10px; }
+  .list15 li:before {
+    position: absolute;
+    left: 0px;
+    width: auto;
+    color: inherit;
+    content: "▪";
+    font-size: 15px; }
+  .list15 li .date {
+    display: inline-block;
+    padding-right: 15px; }
+  .list15 li .text {
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; }
+
+/* list15 end */
+/* list14 start */
+.list14 ul {
+  text-align: left; }
+
+.list14 li {
+  display: block; }
+  .list14 li:hover .info {
+    color: #218ad5; }
+  .list14 li .li_inner {
+    overflow: hidden;
+    border-bottom: 1px dotted #ddd; }
+    .list14 li .li_inner .details {
+      padding: 0 0 11px 20px;
+      font-size: 12px; }
+    .list14 li .li_inner .info {
+      padding: 11px 0 11px 0; }
+  .list14 li .text {
+    width: 80%;
+    display: block;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; }
+  .list14 li .date {
+    float: right;
+    font-size: 12px; }
+
+/* list14 end */
+/* list13 start */
+.list13 ul {
+  text-align: left; }
+
+.list13 li {
+  display: block; }
+  .list13 li:hover {
+    color: #218ad5; }
+    .list13 li:hover .text {
+      text-decoration: underline; }
+  .list13 li .inner {
+    overflow: hidden; }
+    .list13 li .inner {
+      overflow: hidden; }
+    .list13 li .inner .inner-left, .list13 li .inner .inner-right {
+      min-height: 1px; }
+    .list13 li .inner .inner-left {
+      width: 160px;
+      text-align: left;
+      height: auto; }
+    .list13 li .inner .inner-right {
+      margin-left: 160px;
+      height: auto; }
+    .list13 li .inner .title, .list13 li .inner .info {
+      padding: 11px 0 11px 0; }
+    .list13 li .inner .info {
+      padding: 11px 0 11px 22px;
+      border-bottom: 1px dotted #ddd; }
+      .list13 li .inner .info:before {
+        position: absolute;
+        left: 0px;
+        width: auto;
+        color: #555;
+        content: "•";
+        font-size: 15px; }
+  .list13 li .text {
+    width: 80%;
+    display: block;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; }
+  .list13 li .date {
+    float: right;
+    font-size: 12px; }
+
+/* list13 end */
+/* list12 start */
+.list12 .list12_left, .list12 .list12_right {
+  min-height: 1px; }
+
+.list12 .list12_left {
+  width: 70px;
+  text-align: left;
+  height: auto; }
+
+.list12 .list12_right {
+  margin-left: 70px;
+  height: auto; }
+
+.list12 ul {
+  text-align: left; }
+
+.list12 li {
+  display: block;
+  padding: 5px 0 5px 0; }
+  .list12 li:hover {
+    color: #218ad5; }
+  .list12 li .text {
+    display: block; }
+  .list12 li .g {
+    color: #999; }
+
+/* list12 end */
+/* list11 start */
+.list11 ul {
+  text-align: left; }
+
+.list11 li {
+  display: block;
+  padding: 5px 0 5px 0;
+  border-bottom: 1px dotted #ddd; }
+  .list11 li:hover {
+    color: #218ad5; }
+  .list11 li .text {
+    display: block;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; }
+
+.list11 li .date {
+  float: right;
+  font-size: 12px; }
+
+/* list11 end */
+.page4 .padding-left {
+  padding-left: 45px; }
+
+.page4 .list10 {
+  font-size: 12px; }
+
+/* list10 start */
+.list10 ul {
+  text-align: left; }
+
+.list10 .list10_left, .list10 .list10_right {
+  min-height: 1px; }
+
+.list10 .list10_left {
+  width: 20px;
+  text-align: left;
+  height: auto; }
+
+.list10 .list10_right {
+  margin-left: 20px;
+  height: auto; }
+
+.list10 li {
+  display: block;
+  height: 24px;
+  line-height: 24px; }
+  .list10 li .icon {
+    color: #1296db;
+    height: 24px;
+    overflow: hidden;
+    top: 2px; }
+  .list10 li .text {
+    padding-left: 10px; }
+
+/* list10 end */
+/* list09 start */
+.list09 ul {
+  text-align: left; }
+
+.list09 li {
+  display: block;
+  padding: 0px 15px 0px 10px;
+  overflow: hidden;
+  border-bottom: 1px dotted #ddd; }
+  .list09 li.active {
+    background: #f6f6f6; }
+  .list09 li .jobBaseInfo {
+    padding: 15px 0; }
+  .list09 li .jobInfo {
+    color: #000;
+    padding: 0 40px;
+    display: none; }
+    .list09 li .jobInfo .b {
+      color: #218ad5; }
+    .list09 li .jobInfo .p + .p {
+      padding-top: 25px; }
+    .list09 li .jobInfo .bookBtn {
+      color: #fff;
+      background: #218ad5;
+      display: inline-block;
+      padding: 5px 15px;
+      margin: 20px 0; }
+  .list09 li .icon {
+    float: left; }
+    .list09 li .icon img {
+      display: block;
+      vertical-align: middle; }
+  .list09 li .right {
+    float: right;
+    color: #218ad5; }
+    .list09 li .right .iconfont {
+      font-size: 8px;
+      margin-left: 5px; }
+  .list09 li .button {
+    margin-left: 35px; }
+  .list09 li .date {
+    color: #999999;
+    left: 6px; }
+  .list09 li .text {
+    width: 70%;
+    padding-left: 10px;
+    height: 25px;
+    line-height: 25px;
+    float: left;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; }
+
+/* list09 end */
+/* list08 start */
+.list08 ul {
+  text-align: left; }
+
+.list08 li {
+  display: block;
+  padding: 5px 0 5px 15px; }
+  .list08 li:before {
+    position: absolute;
+    left: 0px;
+    width: auto;
+    color: #555;
+    content: "•";
+    font-size: 15px; }
+  .list08 li:hover {
+    color: #218ad5; }
+  .list08 li .text {
+    display: block;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; }
+
+.list08 li .date {
+  float: right;
+  font-size: 12px; }
+
+/* list08 end */
+/* list07 start */
+.list07 ul {
+  text-align: left; }
+
+.list07 li {
+  display: block;
+  padding: 11px 0 11px 22px;
+  border-bottom: 1px dotted #ddd; }
+  .list07 li:before {
+    position: absolute;
+    left: 0px;
+    width: auto;
+    color: #555;
+    content: "•";
+    font-size: 15px; }
+  .list07 li:hover {
+    color: #218ad5; }
+    .list07 li:hover .text {
+      text-decoration: underline; }
+  .list07 li .text {
+    width: 80%;
+    display: block;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; }
+
+.list07 li .date {
+  float: right;
+  font-size: 12px; }
+
+/* list07 end */
+/* list06 start */
+.list06 ul {
+  text-align: left; }
+
+.list06 li {
+  display: block;
+  padding: 5px 0 5px 0; }
+  .list06 li:hover, .list06 li.on {
+    color: #218ad5; }
+    .list06 li:hover .iconfont, .list06 li.on .iconfont {
+      color: inherit; }
+  .list06 li .iconfont {
+    float: left;
+    color: #999; }
+  .list06 li .text {
+    width: 80%;
+    display: block;
+    float: left;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-left: 20px; }
+
+/* list06 end */
+/* list04 start */
+.list04 ul {
+  text-align: left; }
+
+.list04 li {
+  display: block;
+  padding: 8px 0;
+  overflow: hidden;
+  border-bottom: 1px dotted #ddd; }
+  .list04 li .icon {
+    float: left; }
+    .list04 li .icon img {
+      display: block;
+      vertical-align: middle; }
+  .list04 li .date {
+    float: right;
+    font-size: 12px;
+    color: #999999;
+    left: 6px; }
+  .list04 li .text {
+    width: 210px;
+    padding-left: 10px;
+    height: 25px;
+    line-height: 25px;
+    float: left;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; }
+
+/* list04 end */
+/* list03 start */
+.list03 ul {
+  text-align: left; }
+
+.list03 li {
+  display: block;
+  padding: 5px 0 5px 15px; }
+  .list03 li:before {
+    position: absolute;
+    left: 0px;
+    width: auto;
+    color: #555;
+    content: "•";
+    font-size: 15px; }
+  .list03 li:hover {
+    color: #218ad5; }
+    .list03 li:hover .text {
+      text-decoration: underline; }
+  .list03 li .text {
+    width: 80%;
+    display: block;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; }
+
+.list03 li .date {
+  float: right;
+  font-size: 12px; }
+
+/* list03 end */
+/* list01 start */
+.list01 ul {
+  text-align: left; }
+
+.list01 li {
+  display: block;
+  padding: 8px 0;
+  border-bottom: 1px dotted #ddd; }
+  .list01 li:hover, .list01 li:hover .date, .list01 li:hover .iconfont {
+    color: #218ad5; }
+  .list01 li .date {
+    float: right;
+    font-size: 12px;
+    color: #999999;
+    left: 6px; }
+
+.list01 li .text {
+  width: 290px;
+  display: block;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden; }
+
+/* list01 end */
+
+/*# sourceMappingURL=maps/clist.css.map */

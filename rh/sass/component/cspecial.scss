@@ -1,0 +1,289 @@
+@charset "utf-8";
+
+@import "../mySassWare/_variable";
+@import "../mySassWare/_mixin";
+@import "../mySassWare/_function";
+
+.avatarBgPlaceholder{
+   background:$mainBgColor; 
+}
+
+
+
+$nuheight4:6rem;
+.avatar4{
+    
+    width: $nuheight4;
+    height: $nuheight4;
+    display: inline-block;
+
+    @include radius($nuheight4);
+    @include border($color:$little-gray,$width:0.3rem);
+    background:url(../img/uploaderIcon1.png) #fff center 55% no-repeat /46px;
+    input{
+      @extend %resetInputFile-m;
+    }
+}
+.form5 .avatar4{
+    margin-top: -$nuheight4/2;
+}
+.idWrapper .avatarBgPlaceholder{
+    height: $nuheight4/2;
+    padding-top:1rem;
+}
+
+.avatar3{
+    $nuheight1:6rem;
+    width: $nuheight1;
+    height: $nuheight1;
+    display: inline-block;
+    $avatarBorder:$little-gray;
+    $avatarBW:0.3rem;
+    $caretW:1rem;
+    $caretWRate:0.65;
+    margin-bottom: 1rem;
+    @include radius($nuheight1);
+    @include border($color:$avatarBorder,$width:$avatarBW);
+    @include persudo($color:#dbdbdb,$content:"",$position:before,$bg:none){
+       left:50%;
+       top:100%;
+       margin-top: $avatarBW/2;
+       margin-left: -$caretW * $caretWRate;
+       @include isosceles_caret($color:$avatarBorder,$position:top,$width:$caretW,$rate:$caretWRate);
+    };
+    img{
+      @extend %full;
+      @include radius($nuheight1);
+      display: block;
+    }
+}
+
+.avatar2{
+    $nuheight1:8rem;
+    width: $nuheight1;
+    height: $nuheight1;
+    $avatarBorder:#9b9b9b;
+    $avatarBW:0.3rem;
+    $caretW:1rem;
+    $caretWRate:0.65;
+    margin-bottom: 1rem;
+    @include radius($nuheight1);
+    @include border($color:$avatarBorder,$width:$avatarBW);
+    @include persudo($color:#dbdbdb,$content:"",$position:before,$bg:none){
+       left:50%;
+       top:100%;
+       margin-top: $avatarBW/2;
+       margin-left: -$caretW * $caretWRate;
+       @include isosceles_caret($color:$avatarBorder,$position:top,$width:$caretW,$rate:$caretWRate);
+    };
+    img{
+      @extend %full;
+      @include radius($nuheight1);
+      display: block;
+    }
+}
+.avatar1{
+    $nuheight1:6rem;
+    width: $nuheight1;
+    height: $nuheight1;
+    display: inline-block;
+    @include radius($nuheight1);
+    @include border($color:$little-gray,$width:0.3rem);
+    img{
+      @extend %full;
+      @include radius($nuheight1);
+      display: block;
+    }
+}
+
+.abWrapper{
+    position: fixed;
+    left:0;
+    right:0;
+    bottom: 0;
+    top:0;
+    background:rgba(0,0,0,0.5);
+    z-index: 99999;
+    display: none;
+    .FloatAB { position: absolute;z-index: 999900; display: none; }  
+    .FloatAB .item { display: block; }  
+    /* a img 的组合浏览器默认下边会有几个像素的空白，这里可以消除空白*/  
+    .FloatAB .wrapper{position: relative;}
+    .FloatAB .item img { vertical-align: bottom; border:none;outline: none;}
+    .FloatAB .close{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width:25px;
+        height:25px;
+        border:none;outline: none;
+    }
+
+    .FloatAB .close .icon{
+        width:100%;
+        height:100%;
+        border:none;outline: none;
+    }
+}
+
+#solution1{
+  padding-bottom: 30px;
+}
+
+.banner1{
+  height: 548px;
+}
+
+.bg01 {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    background:rgba(0,0,0,0.5);
+    display: none;
+    .box{
+      @extend %absCenter;
+      width: 599px;
+      height: 328px;
+      z-index: 9999;
+      color:#fff;
+      .title{
+        font-size: $titleSize;
+        .iconfont{margin-right:15px}
+
+      }
+      .y{color:$yellow}
+    }
+    .slogo{
+      padding:25px 0;
+    }
+    .bgSure{
+      padding-top:45px;
+      .roundBtn02{
+        color:#fff;
+        border: 2px solid #fff;
+      }
+    }
+}
+
+
+$process_show_p:40px;
+.process_show{
+  
+  padding: 0 0 $process_show_p 0 ;
+  text-align: center;
+  .rows{
+    display:inline-block;
+    li{
+      float:left;
+      text-align:center;
+
+      &+li{
+        padding-left:145px;
+        background:url(../img/rightArrow.png) 30% 35% no-repeat;
+      }
+    }
+  }
+  .iBlock{
+    &.i1{.imgBox{background:url(#{$baseImgUrl}pb1.png) no-repeat center center;}}
+    &.i2{.imgBox{background:url(#{$baseImgUrl}pb2.png) no-repeat center center;}}
+    &.i3{.imgBox{background:url(#{$baseImgUrl}pb3.png) no-repeat center center;}}
+    &.i1.on{.imgBox{background:url(#{$baseImgUrl}pb1on.png) no-repeat center center;}}
+    &.i2.on{.imgBox{background:url(#{$baseImgUrl}pb2on.png) no-repeat center center;}}
+    &.i3.on{.imgBox{background:url(#{$baseImgUrl}pb3on.png) no-repeat center center;}}
+  }
+  .imgBox{
+    $size:70px;
+    margin:0 auto;
+    height: $size;
+    width: $size;
+    
+  }
+}
+
+.stars{
+  width:110px;
+  height: 17px;
+  background:url(../img/starBg.png);
+  position:relative;
+  &:before{
+    position: absolute;
+    left: 0px;
+    top:0;
+    bottom:0;
+    color: #dbdbdb;
+    background: url(../img/starFront.png);
+    content: " ";
+    font-size: 15px;
+  }
+  $starPoints:10;
+  @for $i from 1 through $starPoints {
+    &.star-#{$i}{
+        $rate:$i/$starPoints;   
+        @if $i % 2 !=0{
+            $rate:$rate - 1/100;
+        }
+        &:before{width:percentage($rate)}
+    }
+  }    
+}
+
+/* myScrollspy1 */
+.affix {
+  position: fixed; 
+}
+
+#myScrollspy1 {
+      position: relative;
+      z-index: 99999;
+      width: 100%;
+      
+      &.affix {
+        top: 200px;
+        position: fixed; 
+      }
+      .top{
+        position:relative;
+        img{
+          display: block;
+          margin: 0 auto;
+        }
+        .topbody{
+           text-align: center;
+           position:absolute;
+           top:60%;
+           left:0;
+           right: 0;
+           .qqbtn{
+            margin-top: 5px;
+           }
+        }
+      }
+      
+      .scrollTop {
+        cursor: pointer;
+        border: none;
+        text-align: center;
+        height: 89px; 
+        padding:0;
+        background:none;
+        .stWrapper{
+            display: inline-block;  
+        }
+      } 
+      .nav{
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: #fff; 
+        display: none;
+        @media screen and (min-width:1366px) {
+            right:-120px;
+        }
+      }
+}
+   
+   
+/* myScrollspy1 */
