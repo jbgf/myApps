@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+@import "../mySassWare/_variable";
+@import "../mySassWare/_mixin";
+@import "../mySassWare/_function";
+
+.enBtn{
+    background:$mainColor;
+    padding:1px 14px;
+    color:#fff;
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
+}
+
+.more1{
+  color:$mainColor;
+}
+

@@ -1,0 +1,259 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=1200" >
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" > -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+        
+        <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="css/frame.css">
+        <link rel="stylesheet" href="css/home.css">
+        <!-- components start -->
+        <!-- <link rel="stylesheet" type="text/css" href="css/component.css"> -->
+        <link rel="stylesheet" type="text/css" href="component/cIconGroup.css">
+        <link rel="stylesheet" type="text/css" href="component/cInput.css">
+        <link rel="stylesheet" type="text/css" href="component/cslider.css">
+        <link rel="stylesheet" type="text/css" href="component/csideBar.css">
+        <link rel="stylesheet" type="text/css" href="component/clist.css">
+        <link rel="stylesheet" type="text/css" href="component/cheader.css">
+        <link rel="stylesheet" type="text/css" href="component/cPagination.css">
+        <link rel="stylesheet" type="text/css" href="component/cPicText.css">
+        <link rel="stylesheet" type="text/css" href="component/cButton.css">
+        <link rel="stylesheet" type="text/css" href="component/cForm.css">
+        <link rel="stylesheet" type="text/css" href="component/cNavbar.css">
+        <link rel="stylesheet" type="text/css" href="component/ccontent.css">
+        <link rel="stylesheet" type="text/css" href="component/cspecial.css">
+        <!-- components end -->
+        <link href="css/video-js.css" rel="stylesheet">
+        <!-- If you'd like to support IE8 -->
+        <script src="js/videojs-ie8.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+        <script type="text/javascript" src="js/home.js"></script>
+    </head>
+    <body> 
+
+    <!-- header start -->
+        <div class="header">
+           
+           <div class="logoRow">
+                  <div class="container1200">
+                      <img src="img/logo.png">
+                      <form class="float-r clear">
+                          <div class="input-set03 ">
+                              <input class="input " type="" name="" placeholder="请输入关键字">
+                              <input class="button white" type="submit" value="">
+                          </div>
+                      </form>
+                  </div>
+           </div>
+        </div>
+    <!-- header end -->
+        
+        <div class="navBar_wrapper03 ">
+            <div class="navbar-line03 container1200 font-title clear white"> 
+                <div class="navbar-block "><a class="navLink">首页</a></div>
+                <div class="navbar-block "><a class="navLink">产品服务</a>
+                    
+                    <div class="naver_wrapper ">
+                        <div class="naver_wrapper_inner">  
+                            <ul class="naver_01">
+                                <li class="navLi nvali-l"><a>产品介绍</a></li>
+                                <li class="navLi nvali-r"><a>应用领域</a></li>
+                                <li class="navLi nvali-l"><a>产品介绍</a></li>
+                                <li class="navLi nvali-r"><a>应用领域</a></li>
+                                <li class="navLi nvali-l"><a>产品介绍</a></li>
+                                <li class="navLi nvali-r"><a>应用领域</a></li>
+                                   
+                            </ul>
+                            
+                            <div class="naver_inner naver_pics font-normal clear">
+                                <div class="naver_inner_left">
+                                     <img src="img/1.png">                         
+                                </div>
+                                <div class="naver_inner_right">
+                                     　　本报讯 5日至6日，市委书记庄稼汉深入武夷新区调研时强调:“坚持目标不变、思路不变、力度不变，坚定不移地加快新区建设步伐。...
+                                     <span class="green">【详细】</span>                         
+                                </div>
+                                
+                            </div>
+                            <div class="naver_inner naver_pics font-normal clear">
+                                2
+                            </div>
+                            
+                          
+                        </div>  
+                    </div>
+                </div>
+                <div class="navbar-block"><a class="navLink">科研成绩</a>
+                    
+                </div>
+                <div class="navbar-block "><a class="navLink">服务与支持</a>
+                    
+                </div>
+                
+                <div class="navbar-block"><a class="navLink">人力资源</a>
+                    
+                </div>
+                <div class="navbar-block"><a class="navLink">关于我们</a>
+                      <div id="" class="naver_wrapper">
+                      
+                        <div class="naver_wrapper_inner">    
+                            
+                            <div class="naver_inner naver_pics font-normal clear">
+                                <div class="naver_inner_left">
+                                     <img src="img/1.png">                         
+                                </div>
+                                <div class="naver_inner_right">
+                                     　　本报讯 5日至6日，市委书记庄稼汉深入武夷新区调研时强调:“坚持目标不变、思路不变、力度不变，坚定不移地加快新区建设步伐。...
+                                     <span class="green">【详细】</span>                         
+                                </div>
+                                
+                            </div>
+                            <div class="naver_inner naver_pics font-normal clear">
+                                2
+                            </div>
+                            <ul class="naver_01">
+                                <li class="navLi nvali-l"><a>产品介绍</a></li>
+                                <li class="navLi nvali-r"><a>应用领域</a></li>
+                                   
+                            </ul>
+                        </div> 
+                      
+                      </div>
+                        
+                      
+                      
+                </div>
+            </div>
+
+            <script type="text/javascript">
+                /*导航栏 start*/
+                var navbar = {
+                    line:$(".navbar-line03"),
+                    
+                    ini : function(){
+                          var that = this;
+                          that.line.find(".navbar-block .naver_01").width(that.line.find(".navbar-block").width());
+
+                         that.blockHover();
+                         that.itemHover();
+                          
+                    },
+                    itemHover:function(){
+                          var that = this;
+                          that.line.find(".navLi").hover(function(){
+                              var a = $(this).children("a");
+                              var choose = a.hasClass("itemChoose");
+                              if(!choose){
+                                var naver_wrapper = $(this).parents(".naver_wrapper");
+                                var index = naver_wrapper.find(".navLi").index($(this));
+                                a.addClass("itemChoose");
+                                $(this).siblings(".navLi").find("a").removeClass("itemChoose");
+                                that.showNpics(naver_wrapper,index);
+                                
+                              }
+                          });
+                    },
+                    blockHover:function(){
+                      var that = this;
+                      var st = 180;
+                      var navBlocks = this.line.find('.navbar-block'),
+                          half = navBlocks.length/2;
+                          navBlocks.each(function(i,e){
+                              var naver_wrapper = $(this).find('.naver_wrapper');
+                              if(i+1<=half){naver_wrapper.addClass("position_left")}else{
+                                  naver_wrapper.addClass("position_right")
+                              }
+                              $(e).mouseenter(function () {
+
+                                  naver_wrapper.show();
+                                  
+                                  $(this).find(".navLi:first a").addClass("itemChoose");
+                                  that.showNpics($(this).find(".naver_wrapper"),0);
+                              }).mouseleave(function () {
+                                $(this).find(".navLi a").removeClass("itemChoose");
+
+                                  naver_wrapper.hide();
+                              });
+                          })
+                    },
+                    showNpics:function(wrapper,i){
+                          var pics = wrapper.find(".naver_inner");
+                            pics.eq(i).css({display:"inline-block"}).siblings(".naver_inner").hide(); 
+                }
+                    
+                };
+                navbar.ini();
+                  /*导航栏 end*/
+
+            </script>
+              
+        </div>
+        
+        
+        
+<!-- 前端测试使用，可删除 -->
+        <div id="hiddenLinks" >
+        <?php
+            $handler = opendir('.');
+            $str="";
+            while( ($filename = readdir($handler)) !== false ) 
+            {
+             //略过linux目录的名字为'.'和‘..'的文件
+             if($filename != "." && $filename != ".." && substr(strrchr($filename, '.'), 1) == "php")
+             {  
+              //输出文件名
+                $str .= "<a href=$filename>$filename</a>";
+              }
+
+            }
+            echo $str;
+            closedir($handler);
+        ?>
+
+        </div>
+        <script type="text/javascript">
+          function testLinks(options){
+            var $hiddenLinks = $("#hiddenLinks");
+              $hiddenLinks.css({
+                position:'fixed',
+                left:0,
+                bottom:0,
+                padding:'0 10px 20px',
+                'z-index':'99999'
+              })
+              $hiddenLinks.find("a").css({
+                  background:'#fa812f',
+                  color:'#fff',
+                  display:'inline-block',
+                  'margin':'0 10px 5px 0',
+                  'border-radius':'5px',
+                  'padding':'2px 5px',
+
+              }).on("click",function(e){
+                  if(event.altKey){
+                      event.preventDefault();
+                      window.open(this.href,"_blank")
+                  }
+              })
+              if(options.code == 0){
+                $hiddenLinks.hide();
+              }else if(options.code == 1){
+                
+              }
+              
+
+              $(document).keydown(function(e){ 
+                    /*alt + s*/ 
+                    if(event.altKey && event.keyCode == 83){
+                     $("#hiddenLinks").toggle()
+                    } 
+              })
+          }
+           
+          testLinks({code:1}) 
+        </script>        
+<!-- 前端测试使用，可删除 -->

@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+@import "../mySassWare/_variable";
+@import "../mySassWare/_mixin";
+@import "../mySassWare/_function";
+
+.hr-link{
+  text-align: center;
+  color:#fff;
+  $hrl-g:0.5px;
+  @include rowBeta($num:2,$outer_gutter:$hrl-g,$plusM:true,$height:false){
+    padding-bottom:$hrl-g*2;
+  }
+  .hrl-inner{
+    height: 124px;
+    background:$gray; 
+    .text{font-size:$mediumSize;}
+    background:url(../img/hrBg.png) center center;
+    background-attachment: fixed;
+    position:relative;
+    @include persudo($color:#dbdbdb,$content:" ",$position:after,$bg:none){
+      left:0;right:0;bottom:0;top:0;
+    };
+    .middleRow{
+      z-index: 9999;
+      position: relative;
+    }
+    &.on,&:hover{
+      &:after{
+          background:#ff4a55;
+          background:rgba(255,74,86,0.8);  
+      }
+      
+    }
+  }
+}

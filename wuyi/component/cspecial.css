@@ -1,0 +1,116 @@
+@charset "UTF-8";
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.depart .depart-left {
+  float: left; }
+
+.depart:before, .depart:after {
+  content: " ";
+  display: table; }
+
+.depart:after {
+  clear: both; }
+
+.depart, .depart .depart-right {
+  position: relative; }
+
+.depart .depart-left {
+  float: left; }
+
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.depart .depart-left {
+  float: left; }
+
+.depart:before, .depart:after {
+  content: " ";
+  display: table; }
+
+.depart:after {
+  clear: both; }
+
+.depart, .depart .depart-right {
+  position: relative; }
+
+.depart .depart-left {
+  float: left; }
+
+.contactBox {
+  padding: 35px 0; }
+
+.videoBox {
+  height: 100%; }
+  .videoBox video {
+    width: 100%;
+    height: 100%; }
+
+.banner {
+  height: 260px; }
+
+.stars {
+  width: 108px;
+  height: 17px;
+  background: url(../img/starBg.png); }
+
+.depart {
+  height: 50px;
+  line-height: 50px; }
+  .depart .depart-left, .depart .depart-right {
+    min-height: 1px; }
+  .depart .depart-left {
+    width: 100px;
+    text-align: left;
+    height: 50px; }
+  .depart .depart-right {
+    margin-left: 100px;
+    height: 50px; }
+  .depart .depart-left {
+    background: #00732f;
+    color: #fff;
+    text-align: center; }
+  .depart .depart-right {
+    background: #f4f4f4; }
+    .depart .depart-right:before {
+      position: absolute;
+      left: 0px;
+      width: auto;
+      color: #dbdbdb;
+      content: "";
+      font-size: 15px;
+      top: 50%;
+      left: -8px;
+      margin-top: -8px;
+      border-top: 8px solid transparent;
+      border-right: 8px dashed #f4f4f4;
+      border-bottom: 8px solid transparent;
+      display: inline-block;
+      width: 0;
+      height: 0;
+      vertical-align: middle; }
+    .depart .depart-right li {
+      padding: 0 35px;
+      float: left; }
+      .depart .depart-right li:hover {
+        color: #00732f; }
+
+/*# sourceMappingURL=maps/cspecial.css.map */

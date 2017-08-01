@@ -164,17 +164,19 @@
                                    </div>
                                    
                                </div>
+
                                <div class="form-row">
-                                  <div class="float-r">
-                                     <div class="clear">
+                                  <div class="">
+                                     <div class="un-block-1 align-right mediumSize">
+                                       <span>手机号 </span>
+                                     </div>
+                                     <div class="un-block-3 clear">
                                          <ul>
-                                           <li class="zprow-block-3">
-                                             <span class="text">国家</span><select class=""></select>
+                                           
+                                           <li class="zprow-block-3" style="width:auto">
+                                             <select class="float-l" id="province"></select>
                                            </li>
-                                           <li class="zprow-block-3">
-                                             <span class="text">省份</span><select id="province"></select>
-                                           </li>
-                                           <li class="zprow-block-3">
+                                           <li class="zprow-block-3" style="width:auto">
                                              <span class="text">城市</span><select id="city"></select>
                                            </li>
                                          </ul> 

@@ -4,7 +4,7 @@
         <div class="header05">
             <div class="h-title01">找回密码</div>
         </div>
-        <div class="process_show ">
+        <div class="process_show">
              <ul class="rows ">
                  <li class="iBlock i1 on">
                     
@@ -72,9 +72,9 @@
                    
                </div>
                
-               <div class="form-row submit-row ">
+               <div class="form-row submit-row">
                    
-                   <div class="un-block-3 ">
+                   <div class="un-block-3" style="padding-left: 0;">
                       <button type="submit"  class="baseInput  white font-weight cursor" >
                           下一步
                       </button>
@@ -131,119 +131,123 @@
        <div class="clear"></div>
     </div>
     <script type="text/javascript">
-    $(function(){
-        /*发送验证码按钮*/
-        $("#sendCode").on("click",function(){
-            var self = this;
-              $.ajax({
-                url: "check.php",    
-                method: "POST",
-                data: { },
-                dataType: "json",
-                success:function(data){
-                    if(data){    /*发送成功，开始倒计时*/
-                        var text = $(self).text();
-                        countDown(self,text);
+        $(function(){
+            function countDown(countDownContainer,text){
+                 
+                var timeCount = 60,    /*倒计时秒数s*/
+                    i = 0,
+                    $countDown = $(countDownContainer);
+                    $countDown.text(timeCount+"秒后再发送");   /*倒计时文字*/
+
+                 var timer = setInterval(function(){
+                    i += 1;
+
+                    $countDown.text(timeCount-i+"秒后再发送");
+                    if(timeCount <= i){
+                        clearInterval(timer);
+                        $countDown.text(text)
+                        return;
                     }
-                }
-              });
-        });
-
-        function countDown(countDownContainer,text){
-             
-            var timeCount = 60,    /*倒计时秒数s*/
-                i = 0,
-                $countDown = $(countDownContainer);
-                $countDown.text(timeCount+"秒后再发送");   /*倒计时文字*/
-
-             var timer = setInterval(function(){
-                i += 1;
-
-                $countDown.text(timeCount-i+"秒后再发送");
-                if(timeCount <= i){
-                    clearInterval(timer);
-                    $countDown.text(text)
-                    return;
-                }
-            
-            },1000);
-             
-            return timer; 
-                        
-        }
-
-        $(".form3").css({
-          
-          'margin-left':($(window).width()-$(".form3").width())/2+'px'
-        })
-        $(".form3 .un-block-2").after("<div class='un-block-3'><div class='tips'></div></div>")
-
-        jQuery.validator.addMethod("isTel", function(value,element) {   
-                var length = value.length;   
-                var mobile = /^(((13[0-9]{1})|(15[0-9]{1})|(17[0-9]{1})|(18[0-9]{1}))+\d{8})$/;   
                 
-                return this.optional(element) || (length==11 && mobile.test(value));   
-            }, "请正确填写您的联系方式"); 
+                },1000);
+                 
+                return timer; 
+                            
+            }
+            var validatorForm = $(".form3");
+            validatorForm.css({
+              
+              'margin-left':($(window).width()-$(".form3").width())/2+'px'
+            })
+            $(".form3 .un-block-2").after("<div class='un-block-3'><div class='tips'></div></div>")
 
-        var validator = $(".form3").validate({
-                              rules:{
-                                   password:{
-                                      required:true
-                                   },
-                                   passAgain: {equalTo: "#password"},
-                                   username:{
-                                      required:true
-                                   },
-                                   cellphone:{
-                                      required:true,
-                                      isTel:true
-                                   },
-                                   testvalidator:{
-                                      required:true,
-                                      remote: {
-                                          /*后台  echo json_encode(true)验证通过，否则不通过*/
-                                          url: "check.php", 
-                                          type: "post",
-                                          data: {
-                                            username: function() {
-                                              /*向后台发送输入的验证码*/
-                                              return $( "#testvalidator" ).val();
-                                            }
+            jQuery.validator.addMethod("isTel", function(value,element) {   
+                    var length = value.length;   
+                    var mobile = /^(((13[0-9]{1})|(15[0-9]{1})|(17[0-9]{1})|(18[0-9]{1}))+\d{8})$/;   
+                    
+                    return this.optional(element) || (length==11 && mobile.test(value));   
+                }, "请正确填写您的联系方式"); 
+
+            validatorForm.validate({
+                                  rules:{
+                                       password:{
+                                          required:true
+                                       },
+                                       passAgain: {equalTo: "#password"},
+                                       username:{
+                                          required:true
+                                       },
+                                       cellphone:{
+                                          required:true,
+                                          isTel:true
+                                       },
+                                       testvalidator:{
+                                          required:true,
+                                          remote: {
+                                              /*后台  echo json_encode(true)验证通过，否则不通过*/
+                                              url: "check.php", 
+                                              type: "post",
+                                              data: {
+                                                username: function() {
+                                                  /*向后台发送输入的验证码*/
+                                                  return $( "#testvalidator" ).val();
+                                                }
+                                              }
                                           }
                                       }
-                                  }
 
-                              },
-                              messages:{
-                                  username:{
-                                    required:"请输入您的用户名"
                                   },
-                                  password:{
-                                    required:"请输入您的密码"
+                                  messages:{
+                                      username:{
+                                        required:"请输入您的用户名"
+                                      },
+                                      password:{
+                                        required:"请输入您的密码"
+                                      },
+                                      cellphone:{
+                                        required:"请输入您的手机号码",
+                                        isTel:"请输入正确手机号码"
+                                      },
+                                      passAgain:{
+                                         required:"请再次输入您的密码",
+                                        equalTo:"两次输入的密码不相同"
+                                      },
+                                      testvalidator:{
+                                        required:"请输入验证码",
+                                        remote:"输入验证码错误"}
                                   },
-                                  cellphone:{
-                                    required:"请输入您的手机号码",
-                                    isTel:"请输入正确手机号码"
+                                  errorPlacement: function (label, element) {
+                                        $(element).parents(".form-row").find(".tips").html("*"+label.text()).css({color:"#1296db"})
                                   },
-                                  passAgain:{
-                                     required:"请再次输入您的密码",
-                                    equalTo:"两次输入的密码不相同"
-                                  },
-                                  testvalidator:{
-                                    required:"请输入验证码",
-                                    remote:"输入验证码错误"}
-                              },
-                              errorPlacement: function (label, element) {
-                                    $(element).parents(".form-row").find(".tips").html("*"+label.text()).css({color:"#1296db"})
-                              },
-                              success:function(label,element){
-                                    
-                                    /*还原回原来的提示信息*/
-                                    $(element).parents(".form-row").find(".tips").html("");
-                              }   
-                             
-                        });
-    })
+                                  success:function(label,element){
+                                        
+                                        /*还原回原来的提示信息*/
+                                        $(element).parents(".form-row").find(".tips").html("");
+                                  }   
+                                 
+            });
+
+            /*发送验证码按钮*/
+            $("#sendCode").on("click",function(){
+                var self = this;
+               
+                if(validatorForm.find("[name=username]").valid() && validatorForm.find("[name=cellphone]").valid()){
+                    $.ajax({
+                      url: "check.php",    
+                      method: "POST",
+                      data: { },
+                      dataType: "json",
+                      success:function(data){
+                          if(data){    /*发送成功，开始倒计时*/
+                              var text = $(self).text();
+                              countDown(self,text);
+                          }
+                      }
+                    });
+                }  
+                  
+            });
+        })
       
     </script>
 <?php include 'simpleFoot.html' ?>    

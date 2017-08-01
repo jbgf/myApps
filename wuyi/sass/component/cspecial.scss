@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+@import "../mySassWare/_variable";
+@import "../mySassWare/_mixin";
+@import "../mySassWare/_function";
+
+.contactBox{
+    padding:35px 0;
+}
+
+
+.videoBox{
+        height: 100%;
+        video{width:100%;height:100%;}
+}
+
+
+.banner{
+    height: 260px;
+    
+}
+
+.stars{
+  width:108px;
+  height: 17px;
+  background:url(../img/starBg.png)
+}
+
+.depart{
+    $dHeight:50px;
+    @include f_pictext_rowNew($width:100px,$height:$dHeight,$fpos:"left",$mar-gutter:0px);
+    @include lheightM($height:$dHeight);
+    .depart-left{
+        background:$mainColor;
+        color:#fff;
+        text-align: center;
+    }
+    .depart-right{
+        $caretSize:8px;
+        background:#f4f4f4;
+        @include persudo($color:#dbdbdb,$content:"",$position:before,$bg:none){
+            top:50%;
+            left:-$caretSize;
+            margin-top: -$caretSize;
+            @include caret($color:#f4f4f4,$position:right,$width:$caretSize);
+        };
+        li{
+            padding:0 35px;
+            float:left;
+            &:hover{color:$mainColor;}
+        }
+    }
+}
