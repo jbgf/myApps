@@ -1,0 +1,32 @@
+*{/*box-sizing: border-box;*/margin:0;padding:0;}
+a{text-decoration: none;cursor: pointer;}
+/*a:visited{color:inherit;}*/
+a:link{color:inherit;}
+ul{list-style: none;}
+button{border:none;}
+button:focus{outline: none;}
+img{/*max-height:100%;会导致百度地图不能用*/max-width:100%;*height:100%;*width:100%;margin:auto;}
+ 
+body{
+	font-family: 'Microsoft YaHei',"Helvetica Neue", Helvetica, 'Hiragino Sans GB',  'WenQuanYi Micro Hei', Arial,sans-serif;
+	overflow-x: hidden;
+	font-size: 14px;
+	line-height: 22px;
+    color: #8a8484;
+    background-color: #eee;
+}
+.kent_red{color:#df0000;}
+.bg_kent_red{background-color: #df0000;}
+.font-s{font-size: 12px;}
+.font-normal{
+    color: #8a8484;
+    font-weight: 500;
+    font-size: 14px;
+}
+.font-title{
+    font-size: 15px;
+}
+.phase{text-indent: 2rem;line-height: 1.7;}
+input{border:none;}
+
+
