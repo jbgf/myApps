@@ -52,146 +52,104 @@
         </div>
     <!-- header end -->
         
-        <div class="navBar_wrapper03 ">
-            <div class="navbar-line03 container1200 font-title clear white"> 
-                <div class="navbar-block "><a class="navLink">首页</a></div>
-                <div class="navbar-block "><a class="navLink">产品服务</a>
-                    
-                    <div class="naver_wrapper ">
-                        <div class="naver_wrapper_inner">  
-                            <ul class="naver_01">
-                                <li class="navLi nvali-l"><a>产品介绍</a></li>
-                                <li class="navLi nvali-r"><a>应用领域</a></li>
-                                <li class="navLi nvali-l"><a>产品介绍</a></li>
-                                <li class="navLi nvali-r"><a>应用领域</a></li>
-                                <li class="navLi nvali-l"><a>产品介绍</a></li>
-                                <li class="navLi nvali-r"><a>应用领域</a></li>
-                                   
-                            </ul>
-                            
-                            <div class="naver_inner naver_pics font-normal clear">
-                                <div class="naver_inner_left">
-                                     <img src="img/1.png">                         
-                                </div>
-                                <div class="naver_inner_right">
-                                     　　本报讯 5日至6日，市委书记庄稼汉深入武夷新区调研时强调:“坚持目标不变、思路不变、力度不变，坚定不移地加快新区建设步伐。...
-                                     <span class="green">【详细】</span>                         
-                                </div>
-                                
-                            </div>
-                            <div class="naver_inner naver_pics font-normal clear">
-                                2
-                            </div>
-                            
-                          
-                        </div>  
-                    </div>
+        <div class="navBar_wrapper09 ">
+          <div class="navbar-line09 container-1200 font-title clear ">
+            <div class="navbar-block ">
+              <div class="nbi"><a class="navLink">首页</a></div>
+            </div>
+            <div class="navbar-block ">
+              <div class="nbi">
+                <a class="navLink">产品服务</a>
+
+                <div id="" class="naver-wrapper ">
+                  <div class="naver-wrapper-left">
+                    <div class="imgBox"><img src="/img/naver_pics01.png"></div>
+                  </div>
+                  <div class="naver-wrapper-right">
+                    <ul class="nwr-ul">
+                    <li><span class="liInner">领导关怀</span></li>
+                    <li><span class="liInner">新区要闻</span></li>
+                    <li><span class="liInner">投资动态</span></li>
+                    <li><span class="liInner">项目建设</span></li>
+                    <li><span class="liInner">领导关怀</span></li>
+                    <li><span class="liInner">新区要闻</span></li>
+                    <li><span class="liInner">投资动态</span></li>
+                    <li><span class="liInner">项目建设</span></li>
+                    </ul>
+                  </div>
                 </div>
-                <div class="navbar-block"><a class="navLink">科研成绩</a>
-                    
-                </div>
-                <div class="navbar-block "><a class="navLink">服务与支持</a>
-                    
-                </div>
-                
-                <div class="navbar-block"><a class="navLink">人力资源</a>
-                    
-                </div>
-                <div class="navbar-block"><a class="navLink">关于我们</a>
-                      <div id="" class="naver_wrapper">
-                      
-                        <div class="naver_wrapper_inner">    
-                            
-                            <div class="naver_inner naver_pics font-normal clear">
-                                <div class="naver_inner_left">
-                                     <img src="img/1.png">                         
-                                </div>
-                                <div class="naver_inner_right">
-                                     　　本报讯 5日至6日，市委书记庄稼汉深入武夷新区调研时强调:“坚持目标不变、思路不变、力度不变，坚定不移地加快新区建设步伐。...
-                                     <span class="green">【详细】</span>                         
-                                </div>
-                                
-                            </div>
-                            <div class="naver_inner naver_pics font-normal clear">
-                                2
-                            </div>
-                            <ul class="naver_01">
-                                <li class="navLi nvali-l"><a>产品介绍</a></li>
-                                <li class="navLi nvali-r"><a>应用领域</a></li>
-                                   
-                            </ul>
-                        </div> 
-                      
-                      </div>
-                        
-                      
-                      
-                </div>
+              </div>
+            </div>
+            <div class="navbar-block"><div class="nbi"><a class="navLink">科研成绩</a></div>
+
+            </div>
+            <div class="navbar-block "><div class="nbi"><a class="navLink">服务与支持</a></div>
+
             </div>
 
-            <script type="text/javascript">
-                /*导航栏 start*/
-                var navbar = {
-                    line:$(".navbar-line03"),
-                    
-                    ini : function(){
-                          var that = this;
-                          that.line.find(".navbar-block .naver_01").width(that.line.find(".navbar-block").width());
+            <div class="navbar-block"><div class="nbi"><a class="navLink">人力资源</a></div>
 
-                         that.blockHover();
-                         that.itemHover();
-                          
-                    },
-                    itemHover:function(){
-                          var that = this;
-                          that.line.find(".navLi").hover(function(){
-                              var a = $(this).children("a");
-                              var choose = a.hasClass("itemChoose");
-                              if(!choose){
-                                var naver_wrapper = $(this).parents(".naver_wrapper");
-                                var index = naver_wrapper.find(".navLi").index($(this));
-                                a.addClass("itemChoose");
-                                $(this).siblings(".navLi").find("a").removeClass("itemChoose");
-                                that.showNpics(naver_wrapper,index);
-                                
-                              }
-                          });
-                    },
-                    blockHover:function(){
-                      var that = this;
-                      var st = 180;
-                      var navBlocks = this.line.find('.navbar-block'),
-                          half = navBlocks.length/2;
-                          navBlocks.each(function(i,e){
-                              var naver_wrapper = $(this).find('.naver_wrapper');
-                              if(i+1<=half){naver_wrapper.addClass("position_left")}else{
-                                  naver_wrapper.addClass("position_right")
-                              }
-                              $(e).mouseenter(function () {
-
-                                  naver_wrapper.show();
-                                  
-                                  $(this).find(".navLi:first a").addClass("itemChoose");
-                                  that.showNpics($(this).find(".naver_wrapper"),0);
-                              }).mouseleave(function () {
-                                $(this).find(".navLi a").removeClass("itemChoose");
-
-                                  naver_wrapper.hide();
-                              });
-                          })
-                    },
-                    showNpics:function(wrapper,i){
-                          var pics = wrapper.find(".naver_inner");
-                            pics.eq(i).css({display:"inline-block"}).siblings(".naver_inner").hide(); 
-                }
-                    
-                };
-                navbar.ini();
-                  /*导航栏 end*/
-
-            </script>
-              
+            </div>
+            <div class="navbar-block">
+              <div class="nbi">
+                <a class="navLink">关于我们</a>
+                <div id="" class="naver-wrapper ">
+                  <div class="naver-wrapper-left">
+                    <div class="imgBox"><img src="/img/naver_pics01.png"></div>
+                  </div>
+                  <div class="naver-wrapper-right">
+                    <ul class="nwr-ul">
+                    <li><span class="liInner">领导关怀</span></li>
+                    <li><span class="liInner">新区要闻</span></li>
+                    <li><span class="liInner">投资动态</span></li>
+                    <li><span class="liInner">项目建设</span></li>
+                    <li><span class="liInner">领导关怀</span></li>
+                    <li><span class="liInner">新区要闻</span></li>
+                    <li><span class="liInner">投资动态</span></li>
+                    <li><span class="liInner">项目建设</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+        <script type="text/javascript">
+                  +function navbarline09() {
+
+                      var navbar = {
+                          line:$(".navbar-line09"),
+
+                          ini : function(){
+                              var that = this;
+                              that.blockHover();
+                          },
+                          blockHover:function(){
+                              var that = this;
+                              var st = 180;
+                              var navBlocks = this.line.find('.navbar-block'),
+                                  half = navBlocks.length/2;
+                              navBlocks.each(function(i,e){
+
+                                  var naver_wrapper = $(this).find('.naver-wrapper');
+                                  if(i+1<=half){naver_wrapper.addClass("position_left")}else{
+                                      naver_wrapper.addClass("position_right")
+                                  }
+                                  $(e).mouseenter(function () {
+                                      naver_wrapper.show();
+                                  }).mouseleave(function () {
+                                      naver_wrapper.hide();
+                                  });
+                              })
+                          },
+
+                      };
+                      navbar.ini();
+
+
+                  }()
+
+        </script> <!-- 导航栏 end -->
         
         
         

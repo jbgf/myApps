@@ -1,4 +1,7 @@
 <?php include 'head.html' ?>
+<script src="js/video.js"></script>
+
+
    <div class="mainBody">
    <div class=" container1200">
         <div class="mainContentBody">
@@ -306,16 +309,13 @@
                                 </div>
                                 <div class="riBlock-bottom">
                                     <div class="videoBox">
-                                         <video id="my-video" class="video-js" controls preload="auto" style="width:100%;height:100%" poster="MY_VIDEO_POSTER.jpg" data-setup="{}">                       <!-- 预览图 -->
-                                              <source src="movie.mp4" type='video/mp4'>
-                                              <source src="MY_VIDEO.webm" type='video/webm'>
-                                              <p class="vjs-no-js">
-                                                To view this video please enable JavaScript, and consider upgrading to a web browser that
-                                                <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-                                              </p>
-                                          </video>
-
-                                          <script src="js/video.js"></script>
+                                         
+                                         <!-- <video id="my-video" class="video-js" controls preload="auto" style="width:100%;height:100%" poster="MY_VIDEO_POSTER.jpg" data-setup="{}">                     
+                                              <source src="61e946d1157424b83dffe68b57accbe4.flv" >
+                                              
+                                          </video> -->
+                                          
+                                         <embed src="player.swf" allowfullscreen="true" flashvars="controlbar=over&image=preview.jpg&file=61e946d1157424b83dffe68b57accbe4.flv" width="100%" height="100%"/> 
                                     </div>
                                 </div>
                             </div>

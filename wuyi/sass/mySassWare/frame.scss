@@ -244,6 +244,10 @@ $mainRowRate:($mainLeft+$mainP) ($mainLeft+$mainP*2) ($mainRight+$mainP);
     width:1200px;margin:0 auto;
     @extend %clear;
 }
+.container-1200{
+    @extend .container1200;
+}
+
 .line{
     margin:0 -15px;
 }

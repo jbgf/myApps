@@ -3,135 +3,105 @@
 @import "../mySassWare/_mixin";
 @import "../mySassWare/_function";
  
-/* navbar start03 */
-.navBar_wrapper03 {
-    $navPt:3px;
-    $num:6;
-    background:$mainColor;
+/* navbar start09 */
+.navBar_wrapper09 {
+  $navPt:3px;
+  $num:6;
+  background:$mainColor;
 
-   
-    $navbar_to:#018336;
-    $navbar_bg:#015d27;
-    background: -webkit-gradient(linear,left top, left bottom,from($navbar_to),to($navbar_bg));
-    background: -webkit-linear-gradient($navbar_to,$navbar_bg);
-    background: -o-linear-gradient($navbar_to,$navbar_bg);
-    background: linear-gradient($navbar_to,$navbar_bg);
-    background:#{$navbar_bg}\0;
-    
 
-    padding-top: $navPt;
-    
-    .navbar-line03 .navbar-block{
-        float: left;
-        position: relative;
-        min-height: 1px;
-        cursor: pointer;
-        position: relative;
-        display: block;
-        width:percentage(1/$num);
-    }
-    .navbar-line03 .navbar-block a.navLink{
-        
-        display: block;
-        padding:13px 0px;
-        text-align: center;
+  $navbar_to:#018336;
+  $navbar_bg:#015d27;
+  background: -webkit-gradient(linear,left top, left bottom,from($navbar_to),to($navbar_bg));
+  background: -webkit-linear-gradient($navbar_to,$navbar_bg);
+  background: -o-linear-gradient($navbar_to,$navbar_bg);
+  background: linear-gradient($navbar_to,$navbar_bg);
+  background:#{$navbar_bg}\0;
+
+
+  padding-top: $navPt;
+
+  .navbar-line09 .navbar-block{
+    float: left;
+    position: relative;
+    min-height: 1px;
+    cursor: pointer;
+    position: relative;
+    display: block;
+    width:percentage(1/$num);
+    $n09innerp:15px;
+    .nbi{
+      padding:0px $n09innerp;
+      position:relative;
 
     }
-    .navbar-line03 .navbar-block.on,.navbar-block:hover{
+    .navLink{
+      display: block;
+      text-align: center;
+      padding:13px 0px;
+      color:#fff;
+    }
+    &.on,&:hover{
+      .navLink{
         background: #fff;color:$mainColor;font-weight: 700;
-        $radius03:10px;
-        -webkit-border-radius:$radius03 $radius03 0 0;
-                border-radius:$radius03 $radius03 0 0;
+        $radius09:10px;
+        -webkit-border-radius:$radius09 $radius09 0 0;
+        border-radius:$radius09 $radius09 0 0;
+      }
+
     }
+    .naver-wrapper.position_left{left: $n09innerp;}
+    .naver-wrapper.position_right{right: $n09innerp;}
+  }
 
-    .navbar-line03 .naver_wrapper{
-        
-        background-color: #fff;
-        display: none;
-        position: absolute;
-        z-index: 999;
-        padding: 20px 0;
-        
-        
-        .naver_wrapper_inner{
-            position:relative;
-            white-space: nowrap;
-            
-            .naver_inner,.naver_01 {display:inline-block;vertical-align:middle;}
-            .naver_inner {
-                 display: none;
-                 width:500px;
-                 padding-right: 5px;
-                 color:$baseFontColor;
-                 @include f_pictext_row($width:210px,$height:125px,$fpos:"left",$mar-gutter:15px);
-                 .naver_inner_left{
-                    padding-left: 10px;
-                    img{display:block;width:100%;height:100%;}
-                 }
-                 .naver_inner_right{
-                    white-space: normal;
-                    padding:0 10px;
-                 }
-            }
-            .naver_01 {
-                
-                -webkit-box-sizing: border-box;
-                        box-sizing: border-box;
-                min-height: 130px;
-               
-                .navLi{
-                    text-align: center;padding:8px 0;color:#333;
-                    .itemChoose{color:$mainColor;}
-                    a{
-                        $pl:10px;
-                        padding-left:$pl;
-                        @include persudo($color:inherit,$content:">",$position:before,$bg:none){
-                            left:-$pl;
-                        };
-                    }
-                }
-            }
 
+  .navbar-line09 .naver-wrapper{
+    $n09width:525px;
+    background-color: #fff;
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    padding: 20px 0;
+    top: 100%;
+    width:$n09width;
+    @include f_pictext_rowNew($width:280px,$height:130px,$fpos:"left",$mar-gutter:0px);
+    .naver-wrapper-left{
+      .imgBox{
+        height:100%;
+        padding:0 30px;
+        img{
+          display: block;
+          height:100%;
+          width:100%;
         }
+      }
     }
-    .navbar-line03 .naver_wrapper.position_left{left: 0;}
-    .navbar-line03 .naver_wrapper.position_right{right: 0;}
+    .naver-wrapper-right{
+      overflow: hidden;
+      .nwr-ul{
 
-    .navbar-line03 .naver_wrapper{
-        &.position_left .naver_01 {
-        border-right: 1px solid #dddcdd;}
-        &.position_right .naver_01 {
-        border-left: 1px solid #dddcdd;}
-    } 
-    
-    
-    
+      }
+      li{
+        float:left;
+        width:50%;
+        margin-bottom: 15px;
+        .liInner{
+          $pl:15px;
+          padding-left:$pl;
+          @include persudo($color:inherit,$content:">",$position:before,$bg:none){
+            left:0;
+          };
+          &:hover{
+            color:$mainColor;
+          }
+        }
 
-    .navbar-line03 .naver_wrapper .naver_pics .link-wrapper {
-        display: inline-block;
-        text-align: center;
-        width: 137px;
-        
+
+      }
+
     }
-    .navbar-line03 .naver_wrapper .naver_pics .link-wrapper img {
-        display: block;
-        width: 90%;
-    }
-    .navbar-line03 .naver_wrapper .naver_pics .link-wrapper p {
-        text-align: center;
-        /*color:#999;
-        font-size: 14px;*/
-        padding-top: 10px;
-    }
-    .navbar-line03 .naver_wrapper .naver_inner.naver_text{
-        width: 420px;
-        display: inline-block;
-        white-space: normal;
-        vertical-align: top;
-        padding: 7px 18px;
-    }
-    
-}    
-/* navbar03 end */
+  }
+}
+/* navbar09 end */
 
 
