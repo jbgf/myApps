@@ -1,0 +1,69 @@
+<html lang="ch"><head>
+    <meta charset="utf-8">
+    <title>刮刮卡</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" >
+
+
+        $(document).on("click",".checkPic",function(){
+                $(".homePoupMask02").show(0,function(){
+                			$(".picBox").css({top:($(window).height()- $(".picBox").height())/2})	
+                });
+        })
+        $(document).on("click",".window_close",function(){
+                $(".homePoupMask02").hide();
+        });
+
+    </script>
+<style type="text/css">
+    
+.homePoupMask02 {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: none;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 99999;
+}
+.homePoupMask02 .window_close {
+    top: -2rem;
+    right: -2rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 2rem;
+    /* background: #ed4d4d; */
+    font-size: 1.5rem;
+    position: absolute;}
+.absCenter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto
+}
+    </style>
+</head>
+<body>
+        <button class="checkPic">点我</button>
+        
+        <div class="homePoupMask02 " >
+                        <div id="skillSupPoup" class="homePoupInner img-center align-center ">
+                            <div class="skillSupPoup_wrapper relative" style="text-align: center;">
+                            <div class="picBox" style="display:inline-block;position:relative;">
+                            <!-- img url -->
+                                <img class="" src="../img/man1.png">
+                                <div class="window_close "><img class="img-center close" src="../img/close.png"></div>
+                            </div>    
+                            </div>
+                        </div>
+        </div>
+                <!-- 规则页 end -->
+        
+
+</body>
+</html>

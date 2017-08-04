@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/frame.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script type="text/javascript" src="js/fastclick.js"></script>
+    <script type="text/javascript" src="js/zepto.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+    	   /*fastclick start*/
+           if ('addEventListener' in document) {
+                document.addEventListener('DOMContentLoaded', function() {
+                    FastClick.attach(document.body);
+                }, false);
+            }
+          /*fontSize */
+          (function htmlFontSize (){
+                    var rate = 19;
+                    var baseFontSize;
+                    var clientWidth = document.documentElement ? document.documentElement.clientWidth : document.body.clientWidth;
+                        if(clientWidth > 640) clientWidth = 640;
+
+                        baseFontSize = clientWidth * 1/rate;
+                        document.documentElement.style.fontSize = baseFontSize+"px";
+                        /*document.body.style.fontSize = baseFontSize+"px";*/
+                        
+                        return clientWidth * 1/rate;
+          })();
+        
+    </script>
+    
+</head>
+<body>
+	
+	<div class="prePage"></div>
+	<div class="pages">
+        <!-- 背景start -->
+        <div class="frontBg">   
+                <img id="homeBg" src="img/homeBg.png">  
+        </div>
+        <!-- 背景end -->
+		<!-- 规则页面poupInfoBox start -->
+        <div id="poupInfoBox" class="poupFadIn" > 
+            <div class="poupHead">
+                <div class="poupClose"><img class="img-center" src="img/close.png" alt=""></div>
+                <div class="poupTitleBox clear">
+                    <div id="actionExpBtn" class="poupTitleMune on" >
+                        <div class="wrapper"><span class="item">活动说明</span></div>
+                    </div>
+                    
+                    <div id="prizeBtn" class="poupTitleMune" >
+                        <div class="wrapper"><span class="item">我的奖品</span></div>
+                    </div>   
+                    
+                    
+                </div>
+                
+                <div style="clear:both; height:0"></div>
+                <!--<div class="poupTitle">活动及奖品说明</div>-->
+            </div>
+            <div id="popTabBox" class="popTabBox clear" >
+                <div id="ruleBox" class="poupMain tab" >
+                <div id="awardLine" class="poupLine" data-sortkey="a">
+                        <div class="mainTitle">活动奖品</div>
+                        <div id="awardLineBox">
+                            <div class="unComfortLine awardItem "><span class="awardStyle">一等奖</span> : <span class="award">价值100元礼品</span></div>
+                            <div class="unComfortLine awardItem "><span class="awardStyle">二等奖</span> : <span class="award">价值50元礼品</span></div>
+                            <div class="unComfortLine awardItem "><span class="awardStyle">三等奖</span> : <span class="award">价值10元礼品</span></div>
+
+                        </div>  
+                        
+                </div>
+                <div id="gameDateTime" class="poupLine" data-sortkey="b">
+                        <div class="mainTitle">活动时间</div>
+                        <p><span id="startDate">2016年10月31日 16:10</span>&nbsp;-&nbsp;<span id="endDate">2016年12月31日 16:29</span></p>
+                </div>
+                <div class="hostLine poupLine" data-sortkey="c">
+                        <div class="mainTitle">主办单位</div>
+                        <p>本次活动主办单位为 <a class="hostName yellow" href="#" style="text-decoration: none;">fjlaobi</a></p>
+                        <p>主办单位在法律允许的范围内拥有活动解释权</p>
+                </div>
+                <div id="skillLine" class="skillLine poupLine" data-sortkey="d">
+                        <div class="skillCont">
+                            <div class="mainTitle">技术支持</div>
+                            <p>页面技术由 <a class="skillName yellow" href="">凡科互动</a> 提供，技术支持方仅提供页面技术，不承担由活动引起的相关法律责任</p>
+                        </div>
+                </div>
+                <div id="explainBox" class="poupLine" data-sortkey="e">
+                        <div class="mainTitle">活动及兑奖说明</div>
+                        
+                            <p id="explaiDrawInfoBox">
+                                <span id="haveScore">达到 <span id="scoreLimit" class="scoreLimit">60</span><span class="gameScoreUnit">分</span><span id="exlainDrawFont">即可获得抽奖机会，</span></span>
+                                
+                                <span id="directDrawInfoBox" class="">
+                                    每人<span class="dayFont">每日</span>有 <span id="drawTimesLimit">3</span> 次抽奖机会<span class="drawTotalFont" style="display: none;">，每人最多可抽奖 <span id="totalDrawTimeLimit">6</span> 次</span>。<br>
+                                </span> 
+                                
+                            </p>
+                               
+                        <div id="exlainInfo">获奖后凭兑奖码联系活动主办单位即可兑奖。</div>
+                </div>
+                </div>
+                
+                <div id="awardBox" class="poupMain tab hide"  >
+                    <div id="awardInfo" ><div>暂无中奖纪录</div></div>    
+                    <div class="menuBtnBox">
+                        <a class="bg-green focusUs">关注我们</a>
+                    </div>
+                </div>
+                  
+            </div>
+            <!-- 关注我们二维码 弹出窗 start -->
+            <div id="skillSupMask" class="homePoupMask hide" >
+                <div id="skillSupPoup" class="homePoupInner img-center">
+                    <img src="img/qr.jpg" >
+                </div>
+            </div>
+            <!-- 关注我们二维码 弹出窗 end -->
+        </div>
+        <!-- 规则页面poupInfoBox end -->
+        <!-- 首页front start -->
+        <div class="front">
+			<div class="ruleImg imgContainer absCenter" >
+			    <img id="ruleImg" class="slaveImg abs ruleImgAnimate" src="img/ruleImg_special.png" >
+			</div>
+            <div class="titleImg imgContainer absCenter titleDown">
+                <img id="titleImg" class="slaveImg abs" src="img/title.png" >
+            </div>
+            <div id="joinNumLine" class="joinNumLine absCenter" >
+                已有 <span id="joinNum" class="specil" >4</span> 人参加活动
+            </div>
+			<div id="startBtn" class="startBtn imgContainer absCenter" >
+                <img id="startBtnImg" class="slaveImg buttonImg" src="img/startBtn.png" >
+            </div>
+		</div>
+        <!-- 首页front end -->
+		<!-- 游戏页面 start -->
+        <div class="gameBox hide">
+            <!-- ready页面 start-->
+            <div class="poupMask">
+                    <div class="centerRow">
+                        <div class="gopng_readyTips mar-center"></div>
+                        <div class="timer gopng_3 mar-center" ></div>
+                        <div id="readBtn" class="gopng_readyBtn mar-center"></div>    
+                    </div>
+            </div>
+
+            <!-- ready页面 end-->
+            <!-- 答题页面 start -->
+            <div class="answer_wrapper">
+                <!-- 头部信息栏 start -->
+                <div id="gameTopBar" class="gameTopBar" >
+                    <div class="userInfoBox">
+                        <div class="userImgBox" style=""><img src="img/0.jpg" class="userImg "></div>
+                                    
+                            <div id="grade" class="grade"></div>
+                            
+                    </div>
+                    <div class="soundIcon soundIconPlay" ></div>
+                </div>
+                <!-- 头部信息栏 end -->
+                <div class="answer_content">
+                    <div class="answer_bg">
+                        <img src="img/paper.png" alt="">
+                    </div>
+                    <div id="txtContBox" class="txtContBox abs" style="color: rgb(114, 73, 24);">
+                        <div id="titleList" class=""></div>
+                        <div id="answerList" class="">
+                                <div class="answerItem">
+                                    <span class="gopng_circle"></span>
+                                    <div class="answerBox"><span class="answer"></span></div>
+                                </div>
+                                <div class="clear"></div>
+                                <div class="answerItem">
+                                    <span class="gopng_circle"></span>
+                                    <div class="answerBox"><span class="answer"></span></div>
+                                </div>
+                                <div class="clear"></div>
+                                <div class="answerItem">
+                                    <span class="gopng_circle"></span>
+                                    <div class="answerBox"><span class="answer"></span></div>
+                                </div>
+                                <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="nextBtn">
+                        <img id="nextBtn" class="editTarget-nextBtn buttonImg" src="img/nextBtn.png" >
+                    </div>
+                    <div class="checkBtn">
+                        <img id="checkBtn" class="editTarget-nextBtn buttonImg" src="img/checkBtn.png" >
+                    </div>
+                </div>
+            </div>                 
+            <!-- 答题页面 end -->
+        </div>
+        <!-- 游戏页面 end -->
+	</div>
+</body>
+</html>

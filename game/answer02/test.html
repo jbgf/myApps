@@ -1,0 +1,39 @@
+<html lang="ch"><head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/frame.css">
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <script type="text/javascript" src="js/fastclick.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+    <script type="text/javascript" src="js/wScratchPad.js"></script>
+</head>
+<body>
+
+            <div class="scratchPad_wrapper relative mar-center">
+                   <img class="bg" src="img/square.png">
+                        
+            </div>
+       
+        <script type="text/javascript">
+			//wScratchPad2  就是要放效果的DIV 的ID
+            $(".scratchPad_wrapper").wScratchPad({
+                width: '90%',
+                height: '90%',
+                image: 'http://www.baidu.com/img/bdlogo.gif', //刮奖结果图片
+                image2: 'img/mask.png',
+                spClass: 'absCenter',
+                scratchMove:function(e,p){
+                    var flag = p>35;        /*刮开大于40%执行*/
+                        if(flag){
+                           console.log(p)
+
+                        }
+                }
+
+            });
+        </script>
+
+</body></html>

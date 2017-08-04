@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/frame.css">
+    
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <script type="text/javascript" src="js/fastclick.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    
+    <script type="text/javascript" src="js/home.js"></script>
+    <script type="text/javascript">
+           /*fastclick start*/
+           if ('addEventListener' in document) {
+                document.addEventListener('DOMContentLoaded', function() {
+                    FastClick.attach(document.body);
+                }, false);
+            }
+          /*fontSize */
+          (function htmlFontSize (){
+                    var rate = 19;
+                    var baseFontSize;
+                    var clientWidth = document.documentElement ? document.documentElement.clientWidth : document.body.clientWidth;
+                        if(clientWidth > 640) clientWidth = 640;
+
+                        baseFontSize = clientWidth * 1/rate;
+                        document.documentElement.style.fontSize = baseFontSize+"px";
+                        /*document.body.style.fontSize = baseFontSize+"px";*/
+                        
+                        return clientWidth * 1/rate;
+          })();
+          window.onload = function(){
+                var wh = $(window).height();
+                $("#a_bg_info").css({height:"100%;"})
+                $("#info_form").animate({'margin-top':(wh-$("#info_form").height())/2-parseInt($("#info_form").css("padding")) - parseInt($("#info_form").css("border-width"))});
+                }
+    </script>
+    <style type="text/css">
+        #info_form{padding:1rem 1rem;margin-top: 38%;width:85%;display: block;}
+        #info_form label{display: block;margin-bottom: .8rem;}
+        #info_form label input{display: block;border-radius: .5rem;width: 100%;height: 1.5rem;line-height: 1.5rem;margin-top:.3rem; padding:0 .5rem;}
+        .tips{color:#de3715;font-size:.7rem;padding-top: .2rem;}
+        #info_submit{display: block;width: 80%;height: 2rem;border-radius: .5rem;
+            font-size: 1rem;font-weight: 700;
+            background:-webkit-linear-gradient(bottom,#f14f04,#fea520);
+        }
+    </style>
+</head>
+<body>
+<div class="pageWrapper">
+    <!-- 首页 start -->
+    <div class="page relative">
+        <!-- 背景 start -->
+        <div class="a_bg"><img id="a_bg_info" class="full-img" src="img/a_bg2.png"></div>
+        <!-- 背景 end -->
+        <div class="info_wrapper inner_wrapper mar-center zindex relative ">
+                <!-- <p>请先填写您的资料：</p> -->
+                <div id="info_form" class="mar-center zindex relative" style="background:rgb(255,255,255);border-radius:1rem;border:.5rem solid #ff8420;width:100%;box-shadow:0 .5rem 1rem rgba(0,0,0,.2);">
+                    <div class="gold align-center" style="padding:0.5rem 0 1rem;">长按二维码关注正统网官方微信</div>    
+                    <img src="img/longTap.gif">
+                </div>    
+        </div>                             
+    </div>
+    <!-- 首页 end -->    
+</div>
+</body>
+</html>

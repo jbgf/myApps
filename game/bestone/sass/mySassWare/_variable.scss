@@ -1,0 +1,203 @@
+@charset "UTF-8";
+/*----------------------------------------------------- */
+/* setting scss*/
+$baseLineHeight : 22px;
+$smallSize : 12px; 
+$baseSize : 14px;
+$mediumSize:$smallSize*1.3;
+$bigSize:$mediumSize*1.2;
+
+%smallSize{font-size:$smallSize}
+%baseSize{font-size:$baseSize;}
+%mediumSize{
+  font-size: $mediumSize;
+}
+%bigSize{
+  font-size: $bigSize;
+}
+%font-weight{font-weight:700;}
+%capitalize{text-transform:capitalize;} 
+%uppercase{text-transform:uppercase;} 
+%lowercase{text-transform:lowercase;} 
+%baseLineHeight{line-height:$baseLineHeight;}
+/*----------------------------------------------------- */
+
+
+/* 开关设置*/
+/*----------------------------------------------------- */
+$lte7:                  true !default; /*是否兼容ie6-7*/
+$filter:                false !default; /*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+$printStyleSwitch:      false !default; /*是否开启打印样式*/
+$container_width: 1200px!default ;
+ 
+$baseImgUrl:'../img/';
+
+$text-lr:20px;
+$text-pr:10px;
+
+%text-lr{padding-left:$text-lr;}
+%text-pr{padding-right:$text-pr;}
+ 
+/* color start */
+$white:#fff;
+$mainColor:#006acf;
+$mainBgColor:#f3f9fe;
+$contentBgColor:#f3f3f3;
+$super-gray:#f7f7f8;
+$light-gray:#f8f8f8;
+$light-gray2:#f5f5f1;
+$gray:#999;
+$green:#6eb92b;
+$green2:#6bb033;
+$light-blue:#4aadff;
+$light-blue2:#54a4d5;
+$water-blue:#59a3d6;
+$blue:#005bac;
+$blue2:#094990;
+$light-green:#4bd8a3;
+$yellow:#ffbf00;
+$orange:#efa506;
+$orange2:#ff7602;
+$orange3:#ff9235;
+$red:#ec5369;
+$baseFontColor : #666;
+$baseTitleColor:#333;
+$baseBorderColor:#ddd;
+$titleColor:darken($baseFontColor, 30%);
+$cyan:#f0f4f6;
+
+
+%content-bg{background:$contentBgColor;}
+%bg-lightGray{background:$light-gray;}
+%bg-superGray{background:$super-gray;}
+%bg-lightGreen{background:$light-green;}
+%bg-white{background:$white;}
+%bg-cyan{background:$cyan;}
+%bg-green{background:$green;}
+%bg-blue{background:$blue;}
+%bg-orange{background:$orange;}
+%bg-water-blue{background:$water-blue;}
+%water-blue{color:$water-blue;}
+%baseFontColor{color:$baseFontColor;}
+%baseTitleColor{color:$baseTitleColor}
+%titleColor{color:$titleColor;}
+%super-gray{color:$super-gray;} 
+%light-gray{color:$light-gray;}
+%light-green{color:$light-green;}
+%gray{color:$gray;}
+%orange{color:$orange;}
+%red{color:$red;}
+%iwhite{color:$white!important;}
+%white{color:$white;}
+
+
+%grayfilter{
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    
+    filter: grayscale(100%);
+  
+    -webkit-filter: gray;
+  
+            filter: gray;
+}
+/* color end */
+
+%boxflect{
+  -webkit-box-reflect: below .3rem -webkit-linear-gradient(top,rgba(250,250,250,0),rgba(250,250,250,.0) 10%,rgba(250,250,250,0.1));
+          box-reflect: below .3rem -webkit-linear-gradient(top,rgba(250,250,250,0),rgba(250,250,250,.0) 10%,rgba(250,250,250,0.1));
+ 
+}
+%iBlock{display:inline-block;}
+%block{display:block;}
+%vm{vertical-align:middle;}
+%middleTable{
+  width:100%;
+  display: table;
+  
+  .middleRow {
+      display: table-cell;
+      vertical-align: middle;
+      height: auto;
+  }
+}
+%ellipsis{
+   display: block;
+  *display: inline;
+  /*zoom: 1;
+  text-align:center;
+  max-width: 100%;
+  line-height: 100%; */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* clearfix*/
+/* 闭合子元素的浮动*/
+@mixin clearfix {
+  @if $lte7 {
+    *zoom: 1;
+  }
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+%clearfix{
+  @include clearfix;
+}
+%overflow{
+  overflow: hidden;
+}
+%float-l{
+  float:left;
+}
+
+%dropdown-backdrop{
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+} 
+
+%clear{
+  &:before,&:after{content:" ";display:table;}
+  &:after{clear:both;}
+}
+%relative{position:relative;}
+%abs{position:absolute;}
+%absfull{@extend %abs;width:100%;height:100%;top:0;right:0;bottom:0;left:0;}
+%absCenter{@extend %abs;top:0;right:0;bottom:0;left:0;margin:auto;}
+%absBottom{@extend %abs;bottom:0;left:0;right:0;}
+
+%full{display:block;width:100%;height:100%;}
+%widthfull{width:100%!important;}
+%full-height{height:100%;}
+%mar-center{margin:0 auto;}
+%align-left{text-align:left;}
+%align-center{text-align:center!important;}
+%align-right{text-align:right;}
+%float-l{float:left;}
+%float-r{float:right;}
+
+%resetTable{
+        width:100%;
+        border-spacing:0;
+        border-collapse:collapse;
+        @extend %align-center;
+        vertical-align: middle;
+        font-size: $bigSize*0.8;
+        color:$baseTitleColor;
+}
+%resetInput{
+  
+}
+

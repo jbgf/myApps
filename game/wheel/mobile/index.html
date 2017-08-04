@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+   
+</script>
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<link rel="stylesheet" type="text/css" href="css/modalBox.css">
+
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/scrollTop.js"></script>
+<script type="text/javascript" src="js/modalBox.js"></script>
+	
+
+<script type="text/javascript">
+		
+		window.onload =function(){
+			$(".wheel").css({height:$(".wheel").width()});
+			$(".gift").css({height:$(".wheel").width()});
+			/*数据测试函数*/
+			var data = {name:"jack",prize:"bigPrize",time:"昨天"};
+			for(var i = 0;i<60; i++){
+				$("#marqueebox ul").append(
+					'<li>'
+					+'<span>'+data.name+'</span>'
+					+'<span>'+data.prize+'</span>'
+					+'<span>'+data.time+'</span>'
+					+'</li>');
+			}
+
+			var liHeight =parseInt( $("#marqueebox span").height())+10 || null;
+			
+			startmarquee(liHeight,20,1500);	
+			/*弹出框判断条件*/
+			if(true){
+				
+				    $(".modalBox").modalBox({});
+				
+			}
+		} 
+		
+	
+	
+</script>
+</head>
+<body>
+	
+	<div class="main">
+
+		<div class="m_top">
+			<div class="m_title"></div>
+			<div class="m_header">
+				<img src="img/m_logo.png"/>
+			</div>
+			<div class="wheel">
+				<div class="wheel_wrapper">
+					<div id="start"><img src="img/start.png" id="startbtn"></div>
+				</div>
+			</div>
+		</div>
+		<div class="introduce">
+			<header>活动说明</header>
+			<section class="time"><span class="title">活动时间</span><div>2016年6月29日-7月5日</div></section>
+		
+			<section class="rules">
+				<span class="title">活动规则</span>
+				<ul >
+					<li>每位投票者每天均有1次抽奖机会。</li>
+					<li>通过福建自贸试验区网站或微信公众号，均可参与
+本次抽奖活动，两个平台不可重复参与。</li>
+					<li>相关奖励将在投票活动结束后的10个工作日内发放。</li>
+					<li>本活动最终解释权归福建省自贸办所有。</li>
+				</ul>
+			</section>
+			
+
+		
+			<section class="prize">
+	   				<span class="title">奖品介绍</span>
+	   				<table>
+	   					<tr><td>奖项</td><td>名额</td><td>具体奖励</td></tr>
+	   					<tr><td>一等奖</td><td>5名</td><td>100元话费</td></tr>
+	   					<tr><td>二等奖</td><td>10名</td><td>50元话费</td></tr>
+	   					<tr><td>三等奖</td><td>30名</td><td>30元话费</td></tr>
+	   					<tr><td>幸运奖</td><td>300名</td><td>10元话费</td></tr>
+	   				</table>
+			</section>
+			<section class="list">
+	   			<div style="text-align:center;"><span class="title " >中奖名单</span></div>
+	   			<div class="prize_border"></div>
+	   			<div class="list_box">
+	   				<ul class="box_header">
+	   					<li>用户名</li>
+	   					<li>获奖名称</li>
+	   					<li>中奖时间</li>
+	   				</ul>
+	   				<div style="overflow:hidden;height:90%;line-height:22px">
+							<!--调用marqueebox对象，行高22px，字体14px-->
+							<div id="marqueebox" style="height:300px;" >
+							<ul class="box_body"></ul>
+	   					
+							</div>
+						</div>
+
+	   				</div>
+
+	   				</div>
+	   			</div>
+	   		</section>	 
+	   		<div class="gift" style="display: none;"><img src="img/m_gift.png"></div>
+		</div>
+		<div class="m_footer" >——福建自贸试验区——</div>
+		<div class="modalBox fade">
+		  		<div class="modalBox-dialog" role="document">
+				    <div class="modalBox-content">
+				      <div class="modalBox-header">
+				        <button type="button" class="close" data-dismiss="modalBox" aria-label="Close">
+				          <span aria-hidden="true">&times;</span>
+				        </button>
+	<!-- 标题栏 -->			  <h4 class="modalBox-title">福建省自贸办提示您：</h4>
+				      </div>
+				      <div class="modalBox-body">
+	<!-- 提示信息-->			        <p>恭喜您获得100元话费，我们将于投票活动结束后的10个工作日内将话费充值到您的手机号码13600805100，请留意查收！明天继续参与投票，还有机会抽奖哦!
+</p>
+				      </div>
+				      
+				    </div>
+			  </div>
+		</div>
+	</div>
+	
+
+</body>
+</html>

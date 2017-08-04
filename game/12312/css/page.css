@@ -1,0 +1,436 @@
+@charset "UTF-8";
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.index-bottom .row .row-block {
+  float: left; }
+
+.index-bottom .row:before, .index-bottom .row .row-block:before, .index-bottom .row:after, .index-bottom .row .row-block:after {
+  content: " ";
+  display: table; }
+
+.index-bottom .row:after, .index-bottom .row .row-block:after {
+  clear: both; }
+
+.index-bottom .row .row-block {
+  position: relative; }
+
+.button .text, .index-bottom {
+  position: absolute; }
+
+.button .text {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+
+.index-bottom {
+  bottom: 0;
+  left: 0;
+  right: 0; }
+
+.index-bottom .row .row-block {
+  float: left; }
+
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.index-bottom .row .row-block {
+  float: left; }
+
+.index-bottom .row:before, .index-bottom .row .row-block:before, .index-bottom .row:after, .index-bottom .row .row-block:after {
+  content: " ";
+  display: table; }
+
+.index-bottom .row:after, .index-bottom .row .row-block:after {
+  clear: both; }
+
+.index-bottom .row .row-block {
+  position: relative; }
+
+.button .text, .index-bottom {
+  position: absolute; }
+
+.button .text {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+
+.index-bottom {
+  bottom: 0;
+  left: 0;
+  right: 0; }
+
+.index-bottom .row .row-block {
+  float: left; }
+
+/* prize start */
+.info_wrapper {
+  width: 90%; }
+  .info_wrapper .img-box {
+    position: relative;
+    z-index: 999; }
+    .info_wrapper .img-box img {
+      display: block; }
+  .info_wrapper #info_form {
+    width: 85%;
+    display: block;
+    margin-top: -1rem; }
+    .info_wrapper #info_form .info_form_inner {
+      padding: 1rem 1rem;
+      background: #fff;
+      -webkit-border-radius: 0 0 1rem 1rem;
+      border-radius: 0 0 1rem 1rem; }
+      .info_wrapper #info_form .info_form_inner input {
+        display: block;
+        -webkit-border-radius: .5rem;
+        border-radius: .5rem;
+        width: 100%;
+        height: 2rem;
+        background: #f9f9f9;
+        padding: 0 0.5rem;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        border: 1px solid #ddd; }
+      .info_wrapper #info_form .info_form_inner label + label input {
+        margin-top: 0.5rem; }
+      .info_wrapper #info_form .info_form_inner .ifi-title {
+        color: #5a4b31;
+        text-align: center;
+        padding: 0.45rem 0;
+        border-top: 1px solid #ddd; }
+      .info_wrapper #info_form .info_form_inner .prize-info {
+        text-align: center;
+        padding: 1rem 0; }
+        .info_wrapper #info_form .info_form_inner .prize-info .red {
+          font-weight: bold; }
+      .info_wrapper #info_form .info_form_inner #if-submit {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        opacity: 0; }
+      .info_wrapper #info_form .info_form_inner .button {
+        margin-top: 1rem; }
+    .info_wrapper #info_form .tips {
+      color: #de3715;
+      font-size: .7rem;
+      padding-top: .2rem; }
+    .info_wrapper #info_form #info_submit {
+      display: block;
+      width: 80%;
+      height: 2rem;
+      -webkit-border-radius: .5rem;
+      border-radius: .5rem;
+      font-size: 1rem;
+      font-weight: 700;
+      background: -webkit-linear-gradient(bottom, #f14f04, #fea520); }
+
+.prizeLogo {
+  width: 20%;
+  padding-bottom: 0.5rem; }
+
+/* prize end */
+/* result start */
+.homePoupMask02 {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  /* display: none; */
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 99999; }
+  .homePoupMask02 .button {
+    position: relative;
+    top: 1rem; }
+  .homePoupMask02 .img-box {
+    padding-right: 1rem;
+    padding-top: 0.5rem; }
+  .homePoupMask02 #skillSupPoup {
+    width: 85%;
+    margin-top: 1rem; }
+  .homePoupMask02 .skillSupPoup_wrapper {
+    background: #fff;
+    -webkit-border-radius: 1rem;
+    border-radius: 1rem; }
+    .homePoupMask02 .skillSupPoup_wrapper .text {
+      text-align: center;
+      background: #ffd800;
+      -webkit-border-radius: 1rem 1rem 0 0;
+      border-radius: 1rem 1rem 0 0;
+      padding: 0.5rem 0;
+      font-weight: bold; }
+    .homePoupMask02 .skillSupPoup_wrapper .tips {
+      font-size: 0.9rem;
+      font-weight: 500;
+      line-height: 1.5;
+      padding: 0.8rem 1rem; }
+      .homePoupMask02 .skillSupPoup_wrapper .tips.tips2 {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem; }
+      .homePoupMask02 .skillSupPoup_wrapper .tips .index-p-title {
+        color: #0d58b3;
+        padding-bottom: 0.2rem;
+        font-weight: bold; }
+      .homePoupMask02 .skillSupPoup_wrapper .tips .hpm02-tipsInfo {
+        text-align: center;
+        padding: 0.6rem 0; }
+      .homePoupMask02 .skillSupPoup_wrapper .tips .hpm02-guide {
+        padding: 0 1rem; }
+        .homePoupMask02 .skillSupPoup_wrapper .tips .hpm02-guide img {
+          width: 2rem;
+          vertical-align: middle;
+          margin: 0 0.2rem; }
+      .homePoupMask02 .skillSupPoup_wrapper .tips .index-p-text {
+        font-size: 0.75rem; }
+        .homePoupMask02 .skillSupPoup_wrapper .tips .index-p-text img {
+          width: 30%;
+          vertical-align: top;
+          float: left;
+          margin-right: 0.5rem; }
+  .homePoupMask02 #skillSupPoup .icon {
+    width: 65%; }
+  .homePoupMask02 #skillSupPoup .moments {
+    left: 0;
+    right: 0;
+    bottom: 0; }
+  .homePoupMask02 #skillSupPoup .moments .button {
+    -webkit-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+    transform: translateY(50%); }
+
+.window_close {
+  top: -1.5rem;
+  right: -1.8rem;
+  width: 2rem;
+  height: 2rem;
+  -webkit-border-radius: 2rem;
+  border-radius: 2rem;
+  background: rgba(255, 255, 255, 0.2);
+  font-size: 1.5rem; }
+
+.window_close img.close {
+  width: 45%;
+  display: block; }
+
+.result_score {
+  left: 0;
+  right: 0;
+  top: 2rem;
+  text-align: center;
+  color: #fff; }
+  .result_score .img-box {
+    width: 28%;
+    margin: 0 auto;
+    padding: 0.3rem 0 0; }
+  .result_score .scores {
+    font-size: 1rem;
+    color: #ffdc00;
+    font-weight: bold;
+    padding: 0.3rem 0; }
+
+.tellyou {
+  font-size: 0.6rem;
+  color: #e21000;
+  text-align: center;
+  position: relative;
+  line-height: 1.4;
+  padding-top: 0.3rem; }
+
+/* result end */
+.tableRow {
+  display: table-row; }
+  .tableRow .cell {
+    display: table-cell;
+    vertical-align: middle; }
+
+.answer_wrapper {
+  height: 100%; }
+
+.pageWrapper .button {
+  margin: 0 auto; }
+
+.gameBox .poupMask1 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.85);
+  z-index: 120;
+  display: none;
+  background: rgba(0, 0, 0, 0.85); }
+  .gameBox .poupMask1 #skillSupPoup1 {
+    width: 75%;
+    top: 15%; }
+    .gameBox .poupMask1 #skillSupPoup1 .imgBox {
+      position: relative; }
+      .gameBox .poupMask1 #skillSupPoup1 .imgBox img {
+        display: block; }
+      .gameBox .poupMask1 #skillSupPoup1 .imgBox .resultInfo {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 10%;
+        text-align: center; }
+        .gameBox .poupMask1 #skillSupPoup1 .imgBox .resultInfo .answerIs {
+          padding: 0.4rem 0;
+          font-size: 0.8rem;
+          color: #218ad5; }
+    .gameBox .poupMask1 #skillSupPoup1 .button {
+      margin-top: 0.5rem; }
+  .gameBox .poupMask1.right {
+    background: url(../img/rightLight.png) center 22.5% no-repeat rgba(0, 0, 0, 0.85); }
+
+.answer_wrapper .select {
+  -webkit-border-radius: 1rem;
+  border-radius: 1rem;
+  position: relative;
+  background: #fff;
+  height: 63%; }
+  .answer_wrapper .select .s-title-wrapper {
+    background: #ffd800;
+    -webkit-border-radius: 1rem 1rem 0 0;
+    border-radius: 1rem 1rem 0 0;
+    padding: 0.5rem 1rem; }
+  .answer_wrapper .select .txtContBox {
+    padding: 1rem; }
+
+#gameTopBar {
+  height: 100%;
+  font-size: 0.85rem;
+  padding: 0.3rem 0; }
+  #gameTopBar .userInfo {
+    height: 100%; }
+  #gameTopBar .time {
+    position: relative;
+    height: 4.4rem; }
+    #gameTopBar .time img {
+      display: block; }
+    #gameTopBar .time .indexItem {
+      padding-right: 1.5rem; }
+    #gameTopBar .time .seconds {
+      display: inline-block;
+      background: #ca6e00;
+      -webkit-border-radius: 0.5rem;
+      border-radius: 0.5rem; }
+    #gameTopBar .time .timeCount {
+      display: inline-block;
+      background: #ca6e00;
+      -webkit-border-radius: 0.1rem;
+      border-radius: 0.1rem;
+      margin: 0 0.1rem;
+      width: 1.2rem;
+      text-align: center; }
+    #gameTopBar .time .textW {
+      background: -webkit-gradient(linear, left top, left bottom, from(#ffd800), to(#ffa300));
+      background: -webkit-linear-gradient(#ffd800, #ffa300);
+      background: -o-linear-gradient(#ffd800, #ffa300);
+      background: linear-gradient(#ffd800, #ffa300);
+      text-align: center;
+      padding: 0.5rem 1rem;
+      -webkit-border-radius: 0.5rem;
+      border-radius: 0.5rem; }
+  #gameTopBar .logo {
+    width: 4.4rem; }
+  #gameTopBar .tips {
+    text-shadow: 0px 0px 11px #986933;
+    text-align: center; }
+    #gameTopBar .tips .wrapper {
+      display: inline-block; }
+
+/* 答题页 */
+/* 首页 index */
+.p-logoRow {
+  padding-top: 1rem;
+  text-align: center; }
+  .p-logoRow .img, .p-logoRow .tips {
+    float: left; }
+  .p-logoRow img {
+    width: 4.4rem;
+    display: block; }
+  .p-logoRow .tips {
+    height: 4.4rem;
+    line-height: 4.4rem;
+    margin-left: 0.5rem;
+    color: #0d58b3;
+    font-weight: bold; }
+  .p-logoRow .p-logoRow-inner {
+    display: inline-block; }
+
+.tipsBg {
+  text-align: center; }
+
+.tipsInfo {
+  line-height: 1.5;
+  font-size: 0.65rem;
+  padding: 1rem 1rem; }
+  .tipsInfo span {
+    color: #e21000; }
+
+/* 小贴士 */
+.index-bottom .row {
+  padding: 0 1rem;
+  margin-left: -15px;
+  margin-right: -15px; }
+  .index-bottom .row .row-block {
+    width: 50%;
+    min-height: 1px; }
+    .index-bottom .row .row-block .inner {
+      padding: 0 15px; }
+
+.button {
+  position: relative;
+  width: 7.5rem; }
+  .button img {
+    display: block; }
+  .button .text {
+    color: #403523;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-top: -0.2rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+
+.index-tech {
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 1rem 0;
+  position: relative; }
+
+/* 首页 index */
+
+/*# sourceMappingURL=maps/page.css.map */

@@ -1,0 +1,39 @@
+
+
+	*{box-sizing: border-box;margin:0;padding: 0;}
+	html,body{width: 100%;height:100%;background-color: rgb(228,27,71);}
+	body{font-size: 14px;color:rgb(239,231,184);}
+	
+	.main{width: 100%;margin:0 auto 0 auto;position: relative;}
+
+	.m_top{background:url(../img/mbg6.png) no-repeat;background-size: 100% 100%;padding:30px 0 50px 0;}
+	.m_header,.wheel,.introduce section{width:80%;margin:0 auto;}
+	.m_header img{width:100%;}	
+	
+	.introduce{text-align:center;position: relative;margin-top: 20px;} 
+	.introduce header{font-size: 1.7em;}
+	.introduce section{text-align: left;background-color: rgb(191,17,58);padding: 15px;border-radius: 5px;margin-top: 15px;}
+	.introduce .title{font-size: 1.4em;font-weight: 700;margin-bottom: 5px;display: block;}
+	
+	.introduce .rules li{margin-bottom: 5px;margin-left: 8px;}
+	.introduce table,.introduce td{border:1px solid #fff;border-collapse: collapse;text-align: center;}
+	.introduce table{width: 100%;}
+
+	/*中奖名单*/
+	.prize_border{height:  5px ;background-color:rgb(185,68,13);border-radius: 3px;}
+	.list_box{color: #000;padding:8px;height:380px;width:90%;background-color: #fff;margin: 0 auto;}
+	.list_box ul.box_header{display: block;width: 100%;height: 30px;list-style: none;border-bottom: 2px solid rgb(244,160,178)}
+	.list_box ul.box_header li,.list_box .box_body span{display: block;float:left;width: 33%;text-align: center;margin-bottom: 10px;}
+	.list_box .box_body{list-style: none;}
+	.list_box .wrapper{width: 100%;height: 85%;}
+	.gift{width:40%;position: absolute;right: 0;bottom: 0;}
+	.gift img{width: 100%;height: 100%;}
+
+	.m_footer{text-align: center;background-color: rgb(0,161,233);font-size: 1.5em;font-weight: 700;padding:15px;}
+
+	.wheel{background:url(../img/wheel.png);background-size: 100% 100%;display: table;}
+	.wheel_wrapper{display: table-cell;vertical-align: middle;}
+	.wheel #start{margin:0 auto;width:33%;height:auto;}
+	.wheel #start img{width:100%;height: 100%;}
+
+	.m_title{width:80%;height:24px;background:url(../img/m_title.png);background-size: 100% 100%;margin: 2% auto 10px}

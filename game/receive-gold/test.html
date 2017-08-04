@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+    var fileName = location.pathname.substr(location.pathname.lastIndexOf('/')+1);
+        fileName = fileName.substring(0,fileName.lastIndexOf("."));
+    var isNum = (/^[0-9]*$/.test(fileName));
+    
+    $.ajax({
+        url:"",
+        method:"post",
+        success:function(classid){
+            if ((navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)) && isNum) {
+                 location.replace('http://m.rsnet.com.cn/'+'e/action/ShowInfo.php?classid='+classid);
+            }
+        }
+    })
+
+            
+
+        
+    
+</script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/frame.css">
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <script type="text/javascript" src="js/fastclick.js"></script>
+    <script type="text/javascript" src="js/zepto.min.js"></script>
+    <script type="text/javascript" src="js/home.js"></script>
+    
+    <script type="text/javascript">
+           /*fastclick start*/
+           if ('addEventListener' in document) {
+                document.addEventListener('DOMContentLoaded', function() {
+                    FastClick.attach(document.body);
+                }, false);
+            }
+          /*fontSize */
+          (function htmlFontSize (){
+                    var rate = 19;
+                    var baseFontSize;
+                    var clientWidth = document.documentElement ? document.documentElement.clientWidth : document.body.clientWidth;
+                        if(clientWidth > 640) clientWidth = 640;
+
+                        baseFontSize = clientWidth * 1/rate;
+                        document.documentElement.style.fontSize = baseFontSize+"px";
+                        /*document.body.style.fontSize = baseFontSize+"px";*/
+                        
+                        return clientWidth * 1/rate;
+          })();
+          window.onload = function(){game.ready();}
+    </script>
+    
+</head>
+<body>
+<div class="pageWrapper bg_waterblue font-s">
+    
+    
+    <div class="page ">
+    <!-- wheel start -->
+        <div class="sta_wrapper mar-center inner_wrapper" style="height:100%;">
+            
+            <div class="sta_top white align-center">
+                <p>3区加油情况 </p>
+                <p>总参与人次：<span id="sta_total">2432455</span></p>
+            </div>
+            <div class="oil_drum clear">
+                <div class="can_group1 block block-3">
+                   <div class="cans_wrapper"></div>
+                    
+                </div>
+                <div class="can_group2 block block-3">
+                    <div class="cans_wrapper"></div>
+                    
+                </div>
+                <div class="can_group3 block block-3">
+                    <div class="cans_wrapper"></div>
+                    
+                </div>
+            </div>
+            <!-- 中奖名单展示 start -->
+            <div class="prize_wrapper relative">
+                <div class="star absTopCenter align-center"><img class="width50" src="img/star1.png"></div>
+                <div class="button mar-center relative width50 top50 zindex">
+                    <img class="full-img" src="img/btnbg02.png">
+                    <div class="absmiddle mar-center full-widthCenter">前50名</div>
+                </div>
+                <div class="prize_list mar-center relative" >
+                    
+                    <div class="abs full-wh">
+                        
+                        <div class="list_inner bd">
+                            <ul class="marqueebox">
+                                <li class="clear"><span class="num">1</span><span class="name">吴彦祖</span>   <span class="orange">320分</span> <img class="iconMedal"  src="img/medal1.png"></li>
+                                <li class="clear"><span class="num">2</span><span class="name">吴彦祖</span>   <span class="orange">310分</span> <img class="iconMedal"  src="img/medal2.png"></li>
+                                <li class="clear"><span class="num">3</span><span class="name">吴彦祖</span>   <span class="orange">300分</span> <img  class="iconMedal" src="img/medal3.png"></li>
+                                <li><span class="num">4</span><span class="name">吴彦祖</span>   <span class="orange">290分</span> </li>
+                                <li><span class="num">5</span><span class="name">吴彦祖</span>   <span class="orange">280分</span> </li>
+                                <li><span class="num">6</span><span class="name">吴彦祖</span>   <span class="orange">270分</span> </li>
+                            </ul>
+                        </div>
+            
+                    </div>
+                    <img class="full-wh" src="img/a_bg8.png">
+                    
+                </div>
+            <!-- 中奖名单展示 end -->
+            </div>
+
+            <div class="button cbutton wheel_prize  mar-center">
+                <img class="full-img" src="img/btnbg02.png">
+                <div class="absmiddle mar-center full-widthCenter">关注我们</div>
+            </div>
+            <div class="button cbutton return_first mar-center white">
+                <img class="full-img" src="img/btnbg03.png">
+                <div class="absmiddle mar-center full-widthCenter">返回首页</div>
+            </div>
+        </div>
+    <!-- wheel end -->
+
+    
+    </div>
+    
+</div>
+</body>
+</html>

@@ -1,0 +1,514 @@
+.frontBg {
+	overflow: hidden;
+	position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+}
+.frontBg #homeBg{
+	width: 100%;height: auto;
+}
+.ruleImg img{
+	right: .5rem;
+    width: 5rem;
+    top: .5rem;
+}
+
+
+.ruleImgAnimate {
+	-webkit-animation: awardIconTada 3s ease infinite;
+	        animation: awardIconTada 3s ease infinite;
+	border: solid 1px transparent;
+	z-index: 500
+}
+
+@-webkit-keyframes awardIconTada {
+	0% {
+		-webkit-transform: scale3d(0.86,0.86,0.86)
+	}
+
+	50% {
+		-webkit-transform: scale3d(1,1,1)
+	}
+
+	100% {
+		-webkit-transform: scale3d(0.86,0.86,0.86)
+	}
+}
+
+@keyframes awardIconTada {
+	0% {
+		-webkit-transform: scale3d(0.86,0.86,0.86)
+	}
+
+	50% {
+		-webkit-transform: scale3d(1,1,1)
+	}
+
+	100% {
+		-webkit-transform: scale3d(0.86,0.86,0.86)
+	}
+}
+
+#titleImg{top: 4rem;}
+.titleDown {
+	animation: bounceInDown 1s ease 1;
+	-webkit-animation: bounceInDown 1s ease 1;
+	-moz-animation: bounceInDown 1s ease 1;
+	-o-animation: bounceInDown 1s ease 1
+}
+
+@-webkit-keyframes bounceInDown {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(-2000px)
+	}
+
+	60% {
+		opacity: 1;
+		-webkit-transform: translateY(30px)
+	}
+
+	80% {
+		-webkit-transform: translateY(-10px)
+	}
+
+	100% {
+		-webkit-transform: translateY(0)
+	}
+}
+
+@keyframes bounceInDown {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(-2000px)
+	}
+
+	60% {
+		opacity: 1;
+		-webkit-transform: translateY(30px)
+	}
+
+	80% {
+		-webkit-transform: translateY(-10px)
+	}
+
+	100% {
+		-webkit-transform: translateY(0)
+	}
+}
+
+.joinNumLine{
+	top: 13.25rem;
+    
+    color: rgb(255, 255, 255);
+    width: 100%;
+    margin: 0;
+    padding: .15rem 0;
+    z-index: 6;
+    text-align: center;
+    font-weight: 700;
+
+    text-shadow: rgb(125, 73, 25) -1px -1px 0px, rgb(125, 73, 25) 0px -1px 0px, rgb(125, 73, 25) 1px -1px 0px, rgb(125, 73, 25) 1px 0px 0px, rgb(125, 73, 25) 1px 1px 0px, rgb(125, 73, 25) 0px 1px 0px, rgb(125, 73, 25) -1px 1px 0px, rgb(125, 73, 25) -1px 0px 0px;
+
+}
+
+.startBtn{text-align: center; top: 23.5rem;}
+.startBtn #startBtnImg {
+    z-index: 100;
+    width: 7rem;
+    height: 2.5rem;
+    left: 5rem;
+}
+.startTada {
+	animation: tada .6s ease 0s 1 forwards;
+	-webkit-animation: tada .6s ease 0s 1 forwards;
+	-moz-animation: tada .6s ease 0s 1 forwards;
+	-o-animation: tada .6s ease 0s 1 forwards
+}
+
+@-webkit-keyframes tada {
+	0% {
+		-webkit-transform: scale3d(1,1,1);
+		        transform: scale3d(1,1,1)
+	}
+
+	10%,20% {
+		-webkit-transform: scale3d(.9,.9,.9) rotate3d(0,0,1,-3deg);
+		        transform: scale3d(.9,.9,.9) rotate3d(0,0,1,-3deg)
+	}
+
+	30%,50%,70%,90% {
+		-webkit-transform: scale3d(1.1,1.1,1.1) rotate3d(0,0,1,3deg);
+		        transform: scale3d(1.1,1.1,1.1) rotate3d(0,0,1,3deg)
+	}
+
+	40%,60%,80% {
+		-webkit-transform: scale3d(1.1,1.1,1.1) rotate3d(0,0,1,-3deg);
+		        transform: scale3d(1.1,1.1,1.1) rotate3d(0,0,1,-3deg)
+	}
+
+	100% {
+		-webkit-transform: scale3d(1,1,1);
+		        transform: scale3d(1,1,1)
+	}
+}
+
+@keyframes tada {
+	0% {
+		-webkit-transform: scale3d(1,1,1);
+		        transform: scale3d(1,1,1)
+	}
+
+	10%,20% {
+		-webkit-transform: scale3d(.9,.9,.9) rotate3d(0,0,1,-3deg);
+		        transform: scale3d(.9,.9,.9) rotate3d(0,0,1,-3deg)
+	}
+
+	30%,50%,70%,90% {
+		-webkit-transform: scale3d(1.1,1.1,1.1) rotate3d(0,0,1,3deg);
+		        transform: scale3d(1.1,1.1,1.1) rotate3d(0,0,1,3deg)
+	}
+
+	40%,60%,80% {
+		-webkit-transform: scale3d(1.1,1.1,1.1) rotate3d(0,0,1,-3deg);
+		        transform: scale3d(1.1,1.1,1.1) rotate3d(0,0,1,-3deg)
+	}
+
+	100% {
+		-webkit-transform: scale3d(1,1,1);
+		        transform: scale3d(1,1,1)
+	}
+}
+
+#poupInfoBox{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    padding: .5rem 0.5rem;
+    color: #fff;
+    z-index: 1500;
+    background: rgba(0,0,0,0.8);
+    display: none;    
+}
+#poupInfoBox .poupHead{position: relative;margin-bottom: 1rem;}
+#poupInfoBox .poupTitleBox{margin-right: 2.25rem;}
+#poupInfoBox .poupTitleBox .poupTitleMune {
+    float: left;
+    
+    padding: .6rem 0;
+    text-align: center;
+    cursor: pointer;
+    width: 50%;
+}
+#poupInfoBox .poupTitleBox .poupTitleMune .wrapper{}
+#poupInfoBox .poupTitleBox .poupTitleMune+.poupTitleMune .wrapper{border-left: 1px solid #ddd;}
+#poupInfoBox .poupTitleBox .poupTitleMune .item{
+	padding-bottom: 0.6rem;
+    position: relative;
+}
+#poupInfoBox .poupTitleBox .poupTitleMune.on .item{border-bottom: 4px solid #fff;}
+#poupInfoBox .poupTitleBox .poupTitleMune.on .item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    border-left: .4rem solid transparent;
+    border-right: .4rem solid transparent;
+    border-bottom: .45rem solid #fff;
+    width: 0;
+    right: 0;
+    margin: auto;
+}
+
+#poupInfoBox .poupClose {
+    position: absolute;
+    right: 0;
+    width: 1.5rem;
+    height: 100%;    
+}
+.mainTitle {
+    font-size: .8rem;
+    line-height: 1.2rem;
+    background: #fff;
+    color: #000;
+    display: inline-block;
+    padding: 2px 7px;
+    margin-bottom: .55rem;
+}
+
+.poupLine {
+    font-size: .8rem;
+    line-height: 1.4rem;
+    padding: 2px 0;
+    margin-top: .7rem;
+    position: relative;
+}
+#poupInfoBox{
+	display: none;
+	
+}
+#poupInfoBox .popTabBox{
+	overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+}
+#poupInfoBox .poupMain {
+    height: 100%;
+    width: 100%;
+    float: left;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 0 10px;
+    position: relative;
+
+}
+.poupLine .yellow{color: #fff000; }
+
+.menuBtnBox{
+	border-radius: .2rem;
+    margin-bottom: .5rem;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+}
+.menuBtnBox a{
+	display: inline-block;
+	width: 10rem;
+    height: 2rem;
+    line-height: 2rem!important;
+    border-radius: .2rem;
+
+}    
+
+.homePoupMask {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: none;
+    background-color: rgba(0,0,0,.85);
+    z-index: 99999;
+}
+#skillSupPoup{
+	width: 80%;
+    height: 40%;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 1rem;
+}
+#skillSupPoup img{width:100%;height: 100%;}
+.attentionPoup {
+    position: relative;
+    margin: 2rem auto auto;
+    width: 80%;
+    height: 20%;
+    background: #FFF;
+    border-radius: .4rem;
+    padding: .5rem 2.5rem;
+}
+#skillSupMask{}
+
+.gopng_readyTips {
+    background: url(../img/bigImage.png) -0rem -7.65rem no-repeat;
+    background-size: 7.5rem 10rem;
+    width: 7.4rem;
+    height: 1.75rem;
+    
+}
+.gopng_readyBtn {
+    background: url(../img/bigImage.png) -0rem -5.6rem no-repeat;
+    background-size: 7.5rem 10rem;
+    width: 5.5rem;
+    height: 2.05rem;
+    top: 1rem;
+    position: relative;
+    
+}
+
+.gameBox .poupMask {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.75);
+    z-index: 120;
+}
+.gameBox .poupMask .timer{display: none;}
+.centerRow {position: relative;top: 11.05rem;text-align: center;}
+
+.gopng_3 {
+    background: url(../img/bigImage.png) -4.15rem -0rem no-repeat;
+    background-size: 7.5rem 10rem;
+    width: 2.3rem;
+    height: 2.85rem;
+}
+
+.gopng_2 {
+	background: url(../img/bigImage.png) -1.55rem -0rem no-repeat;
+	background-size: 7.5rem 10rem;
+	width: 2.6rem;
+	height: 2.95rem
+}
+
+.gopng_1 {
+	background: url(../img/bigImage.png) -0rem -0rem no-repeat;
+	background-size: 7.5rem 10rem;
+	width: 1.55rem;
+	height: 3rem
+}
+
+.gameTopBar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: .4rem 0;
+    color: #fff;
+    background-color: rgba(255,255,255,0);
+    z-index: 100;
+
+}
+.gameBox .answer{z-index: 100;position: relative;}
+.gameBox .answer_wrapper .answer_content{
+	width: 85%;
+    margin: 0 auto;
+    top: 4rem;
+    position: relative;
+}
+    
+.gameBox .answer_wrapper .answer_content .txtContBox{
+	top: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+}
+.gameBox .answer_wrapper .answer_content .txtContBox #titleList{margin-top: 1.3rem;}
+.gameBox .answer_wrapper .answer_content .txtContBox #answerList{margin-top: 3.5rem;}
+#answerList .answerItem {
+    padding-bottom: 1rem;
+    min-height: 1.2rem;
+}
+
+.answerItem .gopng_circle {
+    float: left;
+}
+.answerItem .answerBox {
+    margin-left: 1.7rem;
+    
+    width: auto;
+}
+#answerList .answerItem span {
+    display: block;
+}
+.gopng_circle {
+    background: url(../img/bigImage.png) -5.3rem -3rem no-repeat;
+    background-size: 7.5rem 10rem;
+    width: 1.3rem;
+    height: 1.3rem;
+}
+.gopng_error {
+	background: url(../img/bigImage.png) -5.33rem -4.3rem no-repeat;
+	background-size: 7.5rem 10rem;
+	width: 1.3rem;
+	height: 1.3rem
+}
+
+.gopng_right {
+	background: url(../img/bigImage.png) -5.53rem -5.6rem no-repeat;
+	background-size: 7.5rem 10rem;
+	width: 1.3rem;
+	height: 1.3rem
+}
+
+
+.gameBox .answer_wrapper .answer_content .nextBtn{text-align: center;}
+.gameBox .answer_wrapper .answer_content .nextBtn img{width: 45%;}
+
+.gameBox .answer_wrapper .answer_content .checkBtn{text-align: center;display: none;}
+.gameBox .answer_wrapper .answer_content .checkBtn img{width: 45%;}
+
+.gameBox .userInfoBox {
+    margin-left: .75rem;
+}
+.gameBox .userInfoBox .userImgBox {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: inline-block;
+    border-radius: 999px;
+    border: .1rem solid rgba(255,255,255,0.3);
+}
+.gameBox .userImgBox .userImg {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    border-radius: 999px;
+}
+.gameBox .userInfoBox .grade {
+    display: inline-block;
+    font-size: .9rem;
+    line-height: 2.6rem;
+    vertical-align: top;
+    margin-left: .3rem;
+}
+
+
+.soundIcon {
+	width: 40px;
+	height: 40px;
+	background: url('../img/musicOn.png') no-repeat;
+	background-size: 100%;
+	position: absolute;
+	top: 20px
+}
+
+.soundIconPlay {
+	animation: bgRotate 1.2s infinite linear;
+	-o-animation: bgRotate 1.2s infinite linear;
+	-moz-animation: bgRotate 1.2s infinite linear;
+	-webkit-animation: bgRotate 1.2s infinite linear
+}
+
+.soundIconOff {
+	background-image: url('../img/musicOff.png');
+	animation: initial;
+	-o-animation: initial;
+	-moz-animation: initial;
+	-webkit-animation: initial
+}
+
+.gameBox .soundIcon {
+	right: 15px
+}
+
+@-webkit-keyframes bgRotate {
+	from {
+		-webkit-transform: rotate(0deg);
+		        transform: rotate(0deg)
+	}
+
+	to {
+		-webkit-transform: rotate(360deg);
+		        transform: rotate(360deg)
+	}
+}
+
+@keyframes bgRotate {
+	from {
+		-webkit-transform: rotate(0deg);
+		        transform: rotate(0deg)
+	}
+
+	to {
+		-webkit-transform: rotate(360deg);
+		        transform: rotate(360deg)
+	}
+}
