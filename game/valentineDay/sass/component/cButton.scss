@@ -1,0 +1,187 @@
+@charset "utf-8";
+
+@import "../mySassWare/_variable";
+@import "../mySassWare/_mixin";
+@import "../mySassWare/_function";
+
+
+
+.sm-button2{
+    
+    position:relative;
+    width: 30px;
+    color:#945c00;
+    img{display:block;}
+    .text{
+        @extend %absfull;
+        
+        font-size: 0.65rem;
+        font-weight:bold; 
+        
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }   
+
+    
+}
+
+
+.sm-button1{
+    
+    position:relative;
+    width: $mainWidth1;margin:0 auto;
+    &.grayBg{
+      color:$gray;
+    }
+    &.blueBg{
+      color:#fdfffc;
+    }
+    img{display:block;}
+    .text{
+        @extend %absfull;
+        
+        font-size: 0.65rem;
+        font-weight:bold; 
+        
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }   
+
+    
+}
+
+.md-rows{
+    width:$mainWidth2;
+    margin:0 auto;
+    padding-top: 1rem;
+}
+.md-button1{
+     
+    position:relative;
+    width: $mainWidth2;margin:0 auto;
+    &.yellowBg{
+      color:#521c7c;
+    }
+    &.blueBg{
+      color:#fdfffc;
+    }
+    img{display:block;}
+    .text{
+        @extend %absfull;
+        
+        font-size: 0.85rem;
+        font-weight:bold; 
+        margin-top: -0.1rem;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }   
+
+    &+.lg-button1{
+      margin-top: 0.5rem;
+    }
+}
+
+.lg-button1{
+     
+    position:relative;
+    width: $mainWidth1;margin:0 auto;
+    &.yellowBg{
+      color:#521c7c;
+    }
+    &.blueBg{
+      color:#fdfffc;
+    }
+    img{display:block;}
+    .text{
+        @extend %absfull;
+        
+        font-size: 0.85rem;
+        font-weight:bold; 
+        margin-top: -0.1rem;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }   
+
+    &+.lg-button1{
+      margin-top: 0.5rem;
+    }
+}
+
+.rule-btn-row{width:80%;margin:0 auto;padding-top:0.5rem;}
+
+.buttonheart{
+    position:relative;
+    display: inline-block;
+    color:#fff;
+    line-height: 1.2;
+
+    &+.buttonheart{
+      margin-left: 1rem;
+    }
+    &.sm{
+      width:auto;
+      font-size: 0.8rem;
+    }
+    img{display:block;}
+    .text{
+        @extend %absfull;
+        
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }   
+
+    &+.lg-button1{
+      margin-top: 0.8rem;
+    }
+}
+

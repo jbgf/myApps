@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+@import "../mySassWare/_variable";
+@import "../mySassWare/_mixin";
+@import "../mySassWare/_function";
+
+.modal-favor{
+    img{@extend %absCenter;}
+}
+
+
+/* homePoupMask02 start */
+
+.homePoupMask02 {
+    $select-radius:0.6rem; 
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;  
+    right: 0; 
+    background-color: rgba(0,0,0,0.7);
+    z-index: $bgZindex;
+    display: none;
+    .homePoupInner{
+        width: 85%;
+        margin-top: 25%;
+        position:relative;
+
+        .modalBox_close{
+            $height:55px;
+            position:absolute;right:0;
+            top:-$height;
+            height: $height;
+        }
+        .skillSupPoup_wrapper{
+            background:url(../img/pmask02Bg_top.png) center 0 no-repeat #fff /100%;
+            -webkit-border-radius:0 0 $select-radius $select-radius;
+                    border-radius:0 0 $select-radius $select-radius;
+            font-size: 0.65rem;
+            font-weight: 500;
+            line-height: 1.5;
+            padding:$select-radius*0.8 8%;
+            .qr{
+                width:60%;
+                margin:0 auto;
+                
+                .tips{text-align:center;padding:0.5rem 0 1rem;}
+            }
+                
+        }
+        
+    }
+    .img1{
+        width:$mainWidth1;
+        margin:0 auto;
+    }
+   
+} 
+/* homePoupMask02 end */    
+            

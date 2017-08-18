@@ -41,7 +41,7 @@
             </div>
         </div>
 
-        <div id="skillSupMask" class="homePoupMask02 " >
+        <div id="skillSupMask" class="homePoupMask02 hide" >
                 <div class="img-box" style="top:0;right:0;text-align:right;height:5rem;">
                     
                 </div>
@@ -74,7 +74,7 @@
                 
         </div>
 
-        <div id="skillSupMask-validate" class="homePoupMask02 " >
+        <div id="skillSupMask-validate" class="homePoupMask02 hide" >
                 <div class="img-box" style="top:0;right:0;text-align:right;height:5rem;">
                     
                 </div>
@@ -91,7 +91,7 @@
                     
                     </div>
                 </div>
-                <div class="modalBox_close button">
+                <div class="modalBox_close button ">
                     <img src="img/buttonbg1.png">
                     <!-- <div class="text ">
                         <div class="center">邀请好友</div>

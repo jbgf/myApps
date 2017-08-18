@@ -1,0 +1,85 @@
+@charset "UTF-8";
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.modal-favor img {
+  position: absolute; }
+
+.modal-favor img {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto; }
+
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.modal-favor img {
+  position: absolute; }
+
+.modal-favor img {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto; }
+
+/* homePoupMask02 start */
+.homePoupMask02 {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 99;
+  display: none; }
+  .homePoupMask02 .homePoupInner {
+    width: 85%;
+    margin-top: 25%;
+    position: relative; }
+    .homePoupMask02 .homePoupInner .modalBox_close {
+      position: absolute;
+      right: 0;
+      top: -55px;
+      height: 55px; }
+    .homePoupMask02 .homePoupInner .skillSupPoup_wrapper {
+      background: url(../img/pmask02Bg_top.png) center 0 no-repeat #fff/100%;
+      -webkit-border-radius: 0 0 0.6rem 0.6rem;
+      border-radius: 0 0 0.6rem 0.6rem;
+      font-size: 0.65rem;
+      font-weight: 500;
+      line-height: 1.5;
+      padding: 0.48rem 8%; }
+      .homePoupMask02 .homePoupInner .skillSupPoup_wrapper .qr {
+        width: 60%;
+        margin: 0 auto; }
+        .homePoupMask02 .homePoupInner .skillSupPoup_wrapper .qr .tips {
+          text-align: center;
+          padding: 0.5rem 0 1rem; }
+  .homePoupMask02 .img1 {
+    width: 70%;
+    margin: 0 auto; }
+
+/* homePoupMask02 end */
+
+/*# sourceMappingURL=maps/cModal.css.map */

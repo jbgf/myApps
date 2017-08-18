@@ -1,0 +1,106 @@
+@charset "UTF-8";
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.header01 .text {
+  position: absolute; }
+
+.header01 .text {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.header01 .text {
+  position: absolute; }
+
+.header01 .text {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+
+.fri-ul {
+  text-align: center; }
+  .fri-ul li {
+    display: inline-block;
+    vertical-align: middle; }
+    .fri-ul li + li {
+      margin-left: 0.6rem; }
+
+.homePoupMask02 .header01 {
+  margin-top: -2rem; }
+
+.header07 {
+  padding: 4px 18px;
+  display: block;
+  height: 26px;
+  line-height: 26px;
+  position: relative;
+  background: -webkit-gradient(linear, right top, left top, from(#ba36c8), to(#8236ec));
+  background: -webkit-linear-gradient(right, #ba36c8, #8236ec);
+  background: -o-linear-gradient(right, #ba36c8, #8236ec);
+  background: linear-gradient(right, #ba36c8, #8236ec);
+  color: #fff;
+  -webkit-border-radius: 15px 15px 0 0;
+  border-radius: 15px 15px 0 0; }
+  .header07 .h-title01 {
+    font-size: 15px; }
+  .header07 .sm-button2 {
+    position: absolute;
+    right: -0.5rem;
+    top: -0.5rem; }
+
+.header01 {
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  line-height: 1.2; }
+  .header01.sm {
+    width: 6rem; }
+  .header01 img {
+    display: block; }
+  .header01 .text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+  .header01 + .lg-button1 {
+    margin-top: 0.8rem; }
+
+/*# sourceMappingURL=maps/cheader.css.map */

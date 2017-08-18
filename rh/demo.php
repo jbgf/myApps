@@ -411,12 +411,15 @@
               </div>
      </div>
      <script type="text/javascript">
-         var mySwiper1 = new Swiper('#tsSwiper',{
-                  autoplay : 1,     
-                  speed:6000,
-                  loop : true,
-                  freeMode:true
-          });
+         +function(){
+              var mySwiper1 = new Swiper('#tsSwiper',{
+                      autoplay : 1,     
+                      speed:6000,
+                      loop : true,
+                      freeMode:true
+              }); 
+         }()
+         
 
      </script>
 

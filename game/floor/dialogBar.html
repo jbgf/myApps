@@ -1,0 +1,55 @@
+
+<div class="dialogBar">
+    <form>
+    <ul>
+        <li class="block">
+            <div class="avatar1 ">
+                <img src="img/avatarMe.png">
+            </div>
+        </li>
+        <li class="block">
+            <input type="text" name="" placeholder="说点什么吧...">    
+        </li>
+        <li class="buttons block">
+            <ol>
+                <li id="barbtns" class="align-right ">
+                    
+                    <div class="btn1 show-prizeList"><img src="img/prizebtn.png" alt=""></div>
+                    <div class="btn1 show-qr"><img src="img/qrbtn.png" alt=""></div>
+                    
+                </li>
+                <li id="send" class=" hide">
+                    <button class="btn2 bg-green" type="submit">发送</button>
+                </li>
+                
+            </ol>
+        </li>
+ 
+    </ul>
+    </form>
+</div>
+<script type="text/javascript">
+    scaleImg(".dialogBar",function(){
+        var bar = $(".dialogBar");
+        var barbtns = $("#barbtns");
+        var send = $("#send");
+        $("body").css({
+            'padding-bottom':bar.outerHeight(true)
+        });
+        var buttons = bar.find(".buttons li");
+        var input = bar.find("input[type ='text']");
+            input.focus(function(){
+                barbtns.hide();
+                send.show();
+            }).on('change blur',function(){
+                var val = $(this).val() ;
+                    if(val == ""){
+                        barbtns.show();
+                        send.hide();
+                    }
+            })
+
+    })
+</script>
+    
+   

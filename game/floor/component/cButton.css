@@ -1,0 +1,43 @@
+@charset "UTF-8";
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.button.sm {
+  font-size: 0.6rem !important; }
+
+.button.lg {
+  padding: 0.6rem 0;
+  -webkit-border-radius: 0.5rem;
+  border-radius: 0.5rem; }
+
+.tagButton {
+  display: inline-block;
+  color: #fff;
+  text-align: center;
+  -webkit-border-radius: 0.3rem;
+  border-radius: 0.3rem;
+  padding: 0.2rem 0.35rem;
+  line-height: 1; }
+
+/*# sourceMappingURL=maps/cButton.css.map */

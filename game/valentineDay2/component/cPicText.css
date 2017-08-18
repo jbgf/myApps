@@ -1,0 +1,86 @@
+@charset "UTF-8";
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.gift-box .row-block {
+  float: left; }
+
+.gift-box:before, .gift-box .row-block:before, .gift-box:after, .gift-box .row-block:after {
+  content: " ";
+  display: table; }
+
+.gift-box:after, .gift-box .row-block:after {
+  clear: both; }
+
+.gift-box .row-block {
+  position: relative; }
+
+.gift-box .row-block {
+  float: left; }
+
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.gift-box .row-block {
+  float: left; }
+
+.gift-box:before, .gift-box .row-block:before, .gift-box:after, .gift-box .row-block:after {
+  content: " ";
+  display: table; }
+
+.gift-box:after, .gift-box .row-block:after {
+  clear: both; }
+
+.gift-box .row-block {
+  position: relative; }
+
+.gift-box .row-block {
+  float: left; }
+
+.gift-wrapper {
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 1rem; }
+
+.gift-box {
+  margin-left: -15px;
+  margin-right: -15px; }
+  .gift-box .row-block {
+    width: 50%;
+    min-height: 1px; }
+    .gift-box .row-block .inner {
+      padding: 0 15px; }
+  .gift-box .row-block {
+    padding-top: 0.8rem; }
+    .gift-box .row-block.on {
+      -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      transform: scale(1.1); }
+  .gift-box .inner-bottom {
+    background: #fff;
+    text-align: center;
+    -webkit-border-radius: 0 0 0.5rem 0.5rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+    border: 2px solid #521c7b; }
+    .gift-box .inner-bottom img {
+      height: 5rem; }
+
+/*# sourceMappingURL=maps/cPicText.css.map */

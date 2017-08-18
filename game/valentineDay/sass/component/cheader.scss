@@ -1,0 +1,86 @@
+@charset "utf-8";
+
+@import "../mySassWare/_variable";
+@import "../mySassWare/_mixin";
+@import "../mySassWare/_function";
+
+
+.fri-ul{
+    text-align: center;
+
+    li{
+        display:inline-block;
+        vertical-align: middle;
+        &+li{
+            margin-left: 0.6rem;
+        }
+
+    }
+}
+
+.homePoupMask02 .header01{
+    margin-top: -2rem;
+}
+
+.header07{
+  $radius07:15px;
+  padding: 4px 18px;
+  display: block;
+  height: 26px;
+  line-height: 26px;
+  position:relative;
+  $rightColor:#ba36c8;
+  $leftColor:#8236ec;
+  background: -webkit-gradient( linear,right top, left top,from($rightColor),to($leftColor));
+  background: -webkit-linear-gradient( right,$rightColor,$leftColor);
+  background: -o-linear-gradient( right,$rightColor,$leftColor);
+  background: linear-gradient( right,$rightColor,$leftColor);
+  color:#fff;
+  -webkit-border-radius: $radius07 $radius07 0 0;
+  border-radius: $radius07 $radius07 0 0;
+  .h-title01{font-size: 15px;}
+  .sm-button2{position:absolute;right:-0.5rem;top:-0.5rem;}
+
+}
+
+.header01{
+    
+    position:relative;
+    display: inline-block;
+    color:#fff;
+    line-height: 1.2;
+    
+    &.sm{
+      width:6rem;
+    }
+    img{display:block;}
+    .text{
+        @extend %absfull;
+        
+        font-size: 1.2rem;
+        font-weight: bold;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        
+                -webkit-box-align: end;
+        
+                -webkit-align-items: flex-end;
+        
+                    -ms-flex-align: end;
+        
+                        align-items: flex-end;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }    
+
+    &+.lg-button1{
+      margin-top: 0.8rem;
+    }
+}
+  
+  
+

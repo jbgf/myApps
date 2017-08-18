@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+@import "../mySassWare/_variable";
+@import "../mySassWare/_mixin";
+@import "../mySassWare/_function";
+
+
+
+/* prize start */
+.info_wrapper{
+  width:90%;
+  margin-top: $mainRadius;
+  
+  img{display:block;}
+  
+  .info_form{
+    $ptop:1.5rem;
+    width:85%;display: block;
+    .button{
+        display: block;
+        color:#fff;
+        width:100%;
+    } 
+    
+  }
+  .info_form_inner{
+     padding:0 1rem 1rem 1rem;  
+     background:#fff;
+     -webkit-border-radius:0 0 $mainRadius $mainRadius;
+             border-radius:0 0 $mainRadius $mainRadius;
+     .ab{padding:$mainPadding/2 0;}
+     .tips{
+        @include f_pictext_row_percentage($width:10,$height:auto,$fpos:"left",$mar-gutter:0);
+        font-size:$smallSize;  
+      }
+     input{
+        display: block;-webkit-border-radius: .5rem;border-radius: .5rem;width: 100%;
+        height: 2rem;
+        background:#f9f9f9;
+        padding:0 0.5rem;
+        -webkit-box-sizing:border-box;
+                box-sizing:border-box;
+        @include border();
+     } 
+     label{
+        & + label{
+          input{margin-top:$mainRadius/2; }
+        } 
+     }
+     
+  }
+       
+}
+
+/* prize end */

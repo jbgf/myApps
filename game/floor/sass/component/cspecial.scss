@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+@import "../mySassWare/_variable";
+@import "../mySassWare/_mixin";
+@import "../mySassWare/_function";
+
+.fixed{
+  overflow-y: hidden !important;
+}
+
+.opacity0{
+    opacity: 0;
+}
+.avatar1{
+    $nuheight1:6rem;
+    margin-right: 20%;
+    position:relative;
+    @include radius($nuheight1);
+    
+    img{
+      @extend %full;
+      @include radius($nuheight1);
+      display: block;
+    }
+    
+}
+ 
+
+.dialogBar{
+    $dbArr:52,240,90;
+    $mava1:15%;
+    $bheight:2rem;
+    $radius:0.3rem;
+    background:$white;
+    @include border($position:top);
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index: 10;
+    @include nth_un_width($rateArr:$dbArr,$string:".block",$blockNum:false);
+    ul{padding:0.5rem $mainPadding;@extend %clear;@extend %flexMiddle;}
+    .avatar1{}
+    .block{
+      float:left;
+
+      .btn1{
+        
+        display:inline-block;img{vertical-align:middle;}
+        &+.btn1{
+          margin-left: 1rem;
+        }
+      }
+      .btn2{
+        width:100%;
+        color:$white;
+        height: $bheight;
+        @include radius($radius);
+      }
+    }
+    input{background:$little-gray;width:90%;padding-left:5%;height:$bheight;@include radius($radius);}
+}
+

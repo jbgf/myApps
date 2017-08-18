@@ -1,0 +1,122 @@
+@charset "UTF-8";
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+.floorList .row .row-right {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.floorList .row .row-left {
+  float: left; }
+
+.floorList .row {
+  position: relative; }
+
+.floorList .row .row-left .tagButton {
+  position: absolute; }
+
+.floorList .row .row-left .tagButton {
+  bottom: 0;
+  left: 0;
+  right: 0; }
+
+.floorList .row .row-left {
+  float: left; }
+
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+.floorList .row .row-right {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.floorList .row .row-left {
+  float: left; }
+
+.floorList .row {
+  position: relative; }
+
+.floorList .row .row-left .tagButton {
+  position: absolute; }
+
+.floorList .row .row-left .tagButton {
+  bottom: 0;
+  left: 0;
+  right: 0; }
+
+.floorList .row .row-left {
+  float: left; }
+
+.floorList img {
+  display: block; }
+
+.floorList .row .rowInner {
+  padding: 0 0.6rem; }
+
+.floorList .row.main .row-right {
+  border: none; }
+
+.floorList .row {
+  overflow: hidden; }
+
+.floorList .row .row-left, .floorList .row .row-right {
+  min-height: 1px; }
+
+.floorList .row .row-left {
+  width: 15%;
+  text-align: left;
+  height: auto; }
+
+.floorList .row .row-right {
+  margin-left: 15%;
+  height: auto; }
+
+.floorList .row .row-left {
+  padding: 0.6rem 0;
+  position: relative; }
+  .floorList .row .row-left .tagButton {
+    bottom: -0.5rem; }
+
+.floorList .row .row-right {
+  padding: 0.6rem 0;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd; }
+  .floorList .row .row-right .username {
+    color: #333; }
+  .floorList .row .row-right .tips {
+    color: #ff785a; }
+
+/*# sourceMappingURL=maps/clist.css.map */

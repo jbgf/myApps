@@ -412,9 +412,9 @@ img.full-img {
   background: #fff;
   -webkit-border-radius: 1rem;
   border-radius: 1rem; }
-  .skillSupPoup .tips1 {
+  .skillSupPoup .tips01 {
     display: none; }
-    .skillSupPoup .tips1.on {
+    .skillSupPoup .tips01.on {
       display: block; }
 
 #skillSupPoup img.man {

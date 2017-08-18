@@ -1,0 +1,151 @@
+@charset "utf-8";
+
+@import "../mySassWare/_variable";
+@import "../mySassWare/_mixin";
+@import "../mySassWare/_function";
+
+
+
+.sharebird{
+    width:170px;
+    float: right;
+    margin-right: 1rem;
+}                  
+
+.tipsguide{
+    $select-radius:1rem;
+    width:$mainWidth1;
+    color:#fff;
+    margin:0 auto;
+    font-weight: bold;
+    font-weight: 500;
+    line-height: 1.5;
+    padding:$select-radius*0.8 $select-radius*1.5;
+    
+    .index-p-title{
+      color:#0d58b3;
+      padding-bottom:0.2rem;
+      font-weight:bold;
+    }
+    .hpm02-tipsInfo{
+      
+      padding: 0.6rem 0;
+    }
+    .hpm02-guide{
+     
+      img{
+        width:2rem;vertical-align:middle;
+        margin:0 0.2rem;
+      }
+    }
+    .index-p-text{
+       img{
+          width:30%;
+          vertical-align: top;
+          float:left;
+          margin-right: 0.5rem;
+      }
+      font-size:0.75rem;
+    }
+    
+}
+
+/* homePoupMask02 start */
+
+.homePoupMask02 {
+    $select-radius:0.6rem; 
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;  
+    right: 0; 
+    background-color: rgba(0,0,0,0.7);
+    z-index: $bgZindex;
+    display: none;
+    .homePoupInner{
+        width: 85%;
+        margin-top: 25%;
+        position:relative;
+        .modalBox_close{position:absolute;right:0;top:0;}
+        .skillSupPoup_wrapper{
+            background:url(../img/pmask02Bg_top.png) center 0 no-repeat #fff /100%;
+            -webkit-border-radius: $select-radius;
+                    border-radius: $select-radius;
+            font-size: 0.65rem;
+            font-weight: 500;
+            line-height: 1.5;
+            padding:$select-radius*0.8 8%;
+            .qr{
+                width:60%;
+                margin:0 auto;
+                padding-top: 25%;
+                .tips{text-align:center;padding:0.5rem 0 1rem;}
+            }
+                
+        }
+        
+    }
+    .img1{
+        width:$mainWidth1;
+        margin:0 auto;
+    }
+   
+} 
+/* homePoupMask02 end */    
+
+$p02:0.5rem;
+.ab{padding-top:$p02;}
+.content-box{
+    padding-top: $p02;
+    p{&+p{margin-top:$p02/2;}}
+} 
+
+
+
+.activitiesInfo{
+    position:absolute;
+    width:100%;
+    left:0;
+    right:0;
+    
+    img{display:inline-block;}
+    &.starting{
+        top:35%;
+        img{width:75%;}
+    }
+    &.info2{
+        top:15%;
+        img{width:75%;}
+        font-weight: bold;
+    }
+
+    &.end{
+        top:22%;
+        img{width:50%;margin-left:-0.5rem;}
+        font-weight: bold;
+        .tips1{
+            color:$yellow;
+            
+        }
+    }
+} 
+
+.brandBox{
+    .title{
+        color:$mainColor;
+        font-size: 1rem;
+        text-align: center;
+    }
+    .picText1{
+        @include f_pictext_row_percentage($height:4rem);
+
+        .picText1-right{
+            @extend %flexCenter;
+        }
+    }
+    .link{
+        color:$mainColor;
+        text-decoration: underline;
+        padding:0.5rem 0;
+    }
+}                 

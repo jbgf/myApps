@@ -94,8 +94,14 @@ $sideHeaderP:28px;
         .t01{font-size:$mediumSize;}  
     }
     .level2{
-        
-        .t01{color:$gray}     
+        &>.sideBar_a{
+            
+            &.on,&.current{
+                background-color: $green3;
+                .t01{color:#fff;  }
+            }  
+        }
+        .t01{color:$gray;font-size:$mediumSize*0.9}     
     }
     .sideBar_li{
         background:$super-gray0;

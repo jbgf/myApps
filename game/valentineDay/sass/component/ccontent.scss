@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+@import "../mySassWare/_variable";
+@import "../mySassWare/_mixin";
+@import "../mySassWare/_function";
+
+.info{
+    color:$mainColor;
+}
+
+.host-info{
+  position: absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  color:$mainColor;
+  padding:0.7rem 0;
+  font-size: 0.7rem;
+  img{vertical-align:middle;}
+}

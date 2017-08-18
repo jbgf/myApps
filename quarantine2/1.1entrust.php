@@ -4,6 +4,7 @@
 <link rel="stylesheet" type="text/css" href="css/home.css">
 <script type="text/javascript" src="js/jquery.validate.js"></script>
 <script type="text/javascript" src="js/modalBox.js"></script>
+<script type="text/javascript" src="js/layer/layer.js"></script>
 <script type="text/javascript" src="js/jquery.multiMenu.js"></script>
 <script type="text/javascript" src="js/jquery.inputHistory.js"></script>
 <script type="text/javascript" src="js/home.js"></script>
@@ -44,13 +45,13 @@
                         </tr>
                         <tr>
                             <td>样品名称 </td>
-                            <td colspan="5" class="sname inputTd"><input type="text" name="sname"></td>
+                            <td colspan="5" class="sname inputTd"><input type="text" name="sname" required="true"></td>
                         </tr>
                         <tr>
                             <td>样品标记  </td>
                             <td class="smark inputTd"><input type="text" name="smark"></td>
                             <td>样品份数 </td>
-                            <td class="sNum inputTd"><input type="text" name="sNum"></td>
+                            <td class="sNum inputTd"><input type="text" name="sNum" required="true" digits="true"></td>
                             <td>数量、重量/每份 </td>
                             <td class="sPinfo inputTd"><input type="text" name="sPinfo"></td>
                         </tr>
@@ -59,7 +60,7 @@
                                 检测项目
                                 <div class="addItemBtn tips">添加检测项目</div>
                             </td>
-                            <td colspan="3" data-history="true"><input class="choosedItem" type="hidden" name="choosedItem"></td>
+                            <td colspan="3" data-history="true"><input class="choosedItem " style="display: none;" type="" name="choosedItem" required="true"></td>
                             <td>
                                 检测依据
                                 <div class="tips">（本栏留空视为同意由
@@ -101,7 +102,7 @@
                 <div class="c_contentPart">
                     <p class="tp01 bigSize font-weight titleColor">样品信息</p>
     <!-- form start -->                
-                    <form>
+                    <form class="enform">
                         <div class="tableSection">
                             
                         </div>
@@ -463,6 +464,32 @@
         ]};
         triggerModalBox(".addItemBtn");
         tableMake(json);
+        $(".enform").validate({
+            ignore: [],
+            /*rules: {
+                  "sample[1]sname":{
+                    required:true
+                  },
+                  "sample[1]choosedItem":{
+                    required:true
+                  },
+                  "sample[1]sNum":{
+                    required:true,
+                    digits:true   
+                  }
+            },*/
+            //重写showErrors
+            showErrors:function (errorMap, errorList) {
+                var msg = "";
+                $.each(errorList, function (i, v) {
+                    
+                    layer.tips(v.message, v.element, { time: 2000 });
+                    return false;
+                });  
+            },
+            /* 失去焦点时不验证 */
+            onfocusout: false
+        })
     })
 
    

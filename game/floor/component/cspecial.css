@@ -1,0 +1,130 @@
+@charset "UTF-8";
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+.dialogBar ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.dialogBar ul:before, .dialogBar ul:after {
+  content: " ";
+  display: table; }
+
+.dialogBar ul:after {
+  clear: both; }
+
+.avatar1 img {
+  display: block;
+  width: 100%;
+  height: 100%; }
+
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+.dialogBar ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.dialogBar ul:before, .dialogBar ul:after {
+  content: " ";
+  display: table; }
+
+.dialogBar ul:after {
+  clear: both; }
+
+.avatar1 img {
+  display: block;
+  width: 100%;
+  height: 100%; }
+
+.fixed {
+  overflow-y: hidden !important; }
+
+.opacity0 {
+  opacity: 0; }
+
+.avatar1 {
+  margin-right: 20%;
+  position: relative;
+  -webkit-border-radius: 6rem;
+  border-radius: 6rem; }
+  .avatar1 img {
+    -webkit-border-radius: 6rem;
+    border-radius: 6rem;
+    display: block; }
+
+.dialogBar {
+  background: #fff;
+  border-top: 1px solid #ddd;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10; }
+  .dialogBar .block {
+    min-height: 1px; }
+    .dialogBar .block:nth-child(1) {
+      width: 13.61257%; }
+  .dialogBar .block {
+    min-height: 1px; }
+    .dialogBar .block:nth-child(2) {
+      width: 62.82723%; }
+  .dialogBar .block {
+    min-height: 1px; }
+    .dialogBar .block:nth-child(3) {
+      width: 23.56021%; }
+  .dialogBar ul {
+    padding: 0.5rem 0.6rem; }
+  .dialogBar .block {
+    float: left; }
+    .dialogBar .block .btn1 {
+      display: inline-block; }
+      .dialogBar .block .btn1 img {
+        vertical-align: middle; }
+      .dialogBar .block .btn1 + .btn1 {
+        margin-left: 1rem; }
+    .dialogBar .block .btn2 {
+      width: 100%;
+      color: #fff;
+      height: 2rem;
+      -webkit-border-radius: 0.3rem;
+      border-radius: 0.3rem; }
+  .dialogBar input {
+    background: #f0f0f0;
+    width: 90%;
+    padding-left: 5%;
+    height: 2rem;
+    -webkit-border-radius: 0.3rem;
+    border-radius: 0.3rem; }
+
+/*# sourceMappingURL=maps/cspecial.css.map */

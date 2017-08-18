@@ -159,8 +159,13 @@
         border-top: 1px solid #dcdcdc; }
     .l-sider01 .level1 .t01 {
       font-size: 15.6px; }
+  .l-sider01 .level2 > .sideBar_a.on, .l-sider01 .level2 > .sideBar_a.current {
+    background-color: #2fa689; }
+    .l-sider01 .level2 > .sideBar_a.on .t01, .l-sider01 .level2 > .sideBar_a.current .t01 {
+      color: #fff; }
   .l-sider01 .level2 .t01 {
-    color: #999; }
+    color: #999;
+    font-size: 14.04px; }
   .l-sider01 .sideBar_li {
     background: #f6f6f6; }
   .l-sider01 .border {

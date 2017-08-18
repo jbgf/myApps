@@ -1,0 +1,93 @@
+@charset "UTF-8";
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.info_wrapper .info_form_inner .tips .tips-left {
+  float: left; }
+
+.info_wrapper .info_form_inner .tips {
+  position: relative; }
+
+.info_wrapper .info_form_inner .tips .tips-left {
+  float: left; }
+
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.info_wrapper .info_form_inner .tips .tips-left {
+  float: left; }
+
+.info_wrapper .info_form_inner .tips {
+  position: relative; }
+
+.info_wrapper .info_form_inner .tips .tips-left {
+  float: left; }
+
+/* prize start */
+.info_wrapper {
+  width: 90%;
+  margin-top: 0.6rem; }
+  .info_wrapper img {
+    display: block; }
+  .info_wrapper .info_form {
+    width: 85%;
+    display: block; }
+    .info_wrapper .info_form .button {
+      display: block;
+      color: #fff;
+      width: 100%; }
+  .info_wrapper .info_form_inner {
+    padding: 0 1rem 1rem 1rem;
+    background: #fff;
+    -webkit-border-radius: 0 0 0.6rem 0.6rem;
+    border-radius: 0 0 0.6rem 0.6rem; }
+    .info_wrapper .info_form_inner .ab {
+      padding: 0.3rem 0; }
+    .info_wrapper .info_form_inner .tips {
+      font-size: 0.6rem; }
+      .info_wrapper .info_form_inner .tips {
+        overflow: hidden; }
+      .info_wrapper .info_form_inner .tips .tips-left, .info_wrapper .info_form_inner .tips .tips-right {
+        min-height: 1px; }
+      .info_wrapper .info_form_inner .tips .tips-left {
+        width: 10%;
+        text-align: left;
+        height: auto; }
+      .info_wrapper .info_form_inner .tips .tips-right {
+        margin-left: 10%;
+        height: auto; }
+    .info_wrapper .info_form_inner input {
+      display: block;
+      -webkit-border-radius: .5rem;
+      border-radius: .5rem;
+      width: 100%;
+      height: 2rem;
+      background: #f9f9f9;
+      padding: 0 0.5rem;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      border: 1px solid #ddd; }
+    .info_wrapper .info_form_inner label + label input {
+      margin-top: 0.3rem; }
+
+/* prize end */
+
+/*# sourceMappingURL=maps/cForm.css.map */

@@ -1,0 +1,100 @@
+@charset "UTF-8";
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.header .header-left ul:before, .header .header-left ul:after {
+  content: " ";
+  display: table; }
+
+.header .header-left ul:after {
+  clear: both; }
+
+.header {
+  position: relative; }
+
+.header .header-right {
+  float: right; }
+
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.header .header-left ul:before, .header .header-left ul:after {
+  content: " ";
+  display: table; }
+
+.header .header-left ul:after {
+  clear: both; }
+
+.header {
+  position: relative; }
+
+.header .header-right {
+  float: right; }
+
+.header1 {
+  background: #019bfd;
+  color: #fff;
+  -webkit-border-radius: 0.6rem 0.6rem 0 0;
+  border-radius: 0.6rem 0.6rem 0 0;
+  padding: 0.3rem 0; }
+
+.header {
+  color: #333; }
+  .header {
+    overflow: hidden; }
+  .header .header-left, .header .header-right {
+    min-height: 1px; }
+  .header .header-right {
+    width: 15%;
+    text-align: left;
+    height: auto; }
+  .header .header-left {
+    margin-right: 15%;
+    height: auto; }
+  .header .header-left {
+    text-align: center; }
+    .header .header-left .hl-inner {
+      padding-left: 8.82353%; }
+    .header .header-left ul if($margin) {
+      margin-left: -5px;
+      margin-right: -5px; }
+    .header .header-left ul li {
+      width: 33.33333%;
+      float: left;
+      min-height: 1px; }
+    .header .header-left ul .str-inner {
+      padding-left: 5px;
+      padding-right: 5px; }
+    .header .header-left ul li.on .block {
+      color: #019bfd;
+      border-bottom: 2px solid #019bfd; }
+  .header .header-right {
+    text-align: center; }
+    .header .header-right .addonImg {
+      display: inline-block; }
+      .header .header-right .addonImg img {
+        display: block; }
+  .header .block {
+    padding: 0.8rem 0;
+    font-weight: bold;
+    display: inline-block; }
+
+/*# sourceMappingURL=maps/cheader.css.map */

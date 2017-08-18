@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+@import "../mySassWare/_variable";
+@import "../mySassWare/_mixin";
+@import "../mySassWare/_function";
+
+.button{
+    &.sm{
+        font-size: $smallSize!important;
+    }
+    &.lg{
+        padding:$mainPadding 0;
+        @include radius($mainRadius/2);
+    }
+}  
+
+.tagButton{
+  display: inline-block;
+  color:#fff;
+  text-align: center;
+  @include radius(0.3rem);
+  padding:0.2rem 0.35rem;
+  line-height: 1;
+}
+

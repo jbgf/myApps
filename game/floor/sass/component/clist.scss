@@ -1,0 +1,43 @@
+@charset "utf-8";
+@import "../mySassWare/_variable";
+@import "../mySassWare/_mixin";
+@import "../mySassWare/_function";
+ 
+.floorList{ 
+    img{display:block;}
+    .row{
+        $padding:$mainPadding;
+        .rowInner{padding:0 $padding;}
+        &.main{
+            .row-right{border:none;}
+        }
+        @include f_pictext_row_percentage($width:15,$height:auto,$fpos:"left",$mar-gutter:0);
+        .row-left{
+           
+            padding:$padding 0;
+            position:relative;
+            .avatar1{
+ 
+            }
+            .tagButton{
+                    @extend %absBottom;
+                    bottom:-0.5rem;
+            }
+        }
+        .row-right{
+            padding:$padding 0;
+            @extend %flexMiddle;
+            -webkit-box-pack: justify;
+            -webkit-justify-content: space-between;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+            @include border($position:bottom);
+            .username{
+                color:$black;
+            }
+            .tips{
+                color:$orange3;
+            }
+        }
+    }
+}

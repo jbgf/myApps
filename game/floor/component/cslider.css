@@ -1,0 +1,63 @@
+@charset "UTF-8";
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+/*m-slideBox01 start*/
+#swiper-container01 .swiper-slide img {
+  display: block; }
+
+#swiper-container01 .swiper-bottom {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: 0; }
+  #swiper-container01 .swiper-bottom .bottom-text {
+    position: relative;
+    z-index: 10;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    height: 1.8rem;
+    line-height: 1.8rem; }
+    #swiper-container01 .swiper-bottom .bottom-text img {
+      vertical-align: text-bottom; }
+    #swiper-container01 .swiper-bottom .bottom-text .fnum .icon {
+      margin-right: 0.5rem; }
+    #swiper-container01 .swiper-bottom .bottom-text .inner {
+      padding: 0 0.9rem; }
+
+#swiper-container01 .swiper-pagination {
+  position: relative; }
+
+#swiper-container01 .swiper-pagination-bullet {
+  opacity: 1;
+  background: none;
+  border: 2px solid #fff; }
+  #swiper-container01 .swiper-pagination-bullet + .swiper-pagination-bullet {
+    margin-left: 15px; }
+  #swiper-container01 .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    border: 2px solid #019bfd; }
+
+/*m-slideBox01 end*/
+
+/*# sourceMappingURL=maps/cslider.css.map */

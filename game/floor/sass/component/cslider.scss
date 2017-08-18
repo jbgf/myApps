@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+@import "../mySassWare/_variable";
+@import "../mySassWare/_mixin";
+@import "../mySassWare/_function";
+
+/*m-slideBox01 start*/
+#swiper-container01{
+    .swiper-slide{
+        img{display:block;}
+    }
+    .swiper-bottom{
+        position:absolute;
+        left:0;
+        width:100%;
+        bottom:0;
+        .bottom-text{
+            $height:1.8rem;
+            position:relative;
+            z-index: 10;
+            color:#fff;
+            background:rgba(0,0,0,0.5);
+            
+            @include lheightM($height:$height);
+            img{vertical-align:text-bottom;}
+            .fnum{.icon{margin-right:0.5rem;}}
+            .inner{
+                padding:0 $height/2;
+            }
+        }
+    }
+    .swiper-pagination{position:relative;}
+    .swiper-pagination-bullet{
+        opacity: 1;
+        background:none;
+        
+        @include border($width:2px,$color:#fff);
+        & + .swiper-pagination-bullet{margin-left:15px;}
+        &.swiper-pagination-bullet-active {
+             @include border($width:2px,$color:$mainColor);
+             
+        }
+    }
+        
+}
+
+/*m-slideBox01 end*/

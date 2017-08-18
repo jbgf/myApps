@@ -1,0 +1,31 @@
+@charset "utf-8";
+@import "../mySassWare/_variable";
+@import "../mySassWare/_mixin";
+@import "../mySassWare/_function";
+
+.gift-wrapper{
+    width:$mainWidth2;
+    margin:0 auto;
+    padding-bottom: 1rem;
+}
+
+.gift-box{
+    
+    @include rowBeta($num:2,$outer_gutter:15px,$plusM:true,$height:false);
+
+    .row-block{
+        padding-top:0.8rem;
+        $scale:1.1;
+        &.on{-webkit-transform:scale($scale);-ms-transform:scale($scale);transform:scale($scale)}
+    }
+    .inner-bottom{
+        $ibR:0.5rem;
+        background: #fff;
+        text-align: center;
+        -webkit-border-radius: 0 0 $ibR $ibR;
+                border-radius: 0 0 $ibR $ibR;
+                @include border($color:$mainColor,$width:2px);
+        img{height:5rem;}
+    }
+
+}

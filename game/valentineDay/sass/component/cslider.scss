@@ -1,0 +1,141 @@
+@charset "utf-8";
+
+@import "../mySassWare/_variable";
+@import "../mySassWare/_mixin";
+@import "../mySassWare/_function";
+
+#tsSwiper{
+    background:#b2b2b2;
+    .icon{width:18px;vertical-align:middle;margin-right:0.3rem}
+    .name{color:$red;padding:0 0.3rem;}
+    .swiper-slide{
+        padding:0.6rem 0;
+        @extend %ellipsis;
+    }
+    &.swiper-container-free-mode > .swiper-wrapper {
+      -webkit-transition-timing-function: linear;    /*之前是ease-out*/
+      -moz-transition-timing-function: linear;
+      -ms-transition-timing-function: linear;
+      -o-transition-timing-function: linear;
+      transition-timing-function: linear;
+      margin: 0 auto;
+    }
+}
+
+#iSwiper{
+    margin:1rem 0;
+    .swiper-slide{
+        width:$mainWidth1;opacity:0.5;
+        &.swiper-slide-active{
+            opacity: 1;
+        }
+    } 
+    img{display:block;width:100%;}
+
+    /* reset */
+    .swiper-pagination-bullet{
+        $size:0.2rem;
+        $activep:0.1rem;
+        background:none;@include border($width:1px,$color:#fff);opacity:1;
+        width:$size;
+        height: $size;
+        &.swiper-pagination-bullet-active{
+            background:#fff;padding:0 $activep;
+            -webkit-border-radius:$activep;
+            border-radius:$activep;
+        }
+    }
+
+}
+ 
+/*slideBox02 start*/
+$color_a02:#fff,#0e9dae,rgb(255, 255, 255);
+    @include slideBox(2,$color_a02,"center",760px){
+      width: 10px;
+      height: 10px;
+      -webkit-border-radius: 10px;
+              border-radius: 10px;
+    };
+    .slideBox02{
+      ul{
+         margin-left: -250px; 
+         img{
+            height:249px;
+        }
+      }  
+    } 
+    
+
+/*slideBox02 end*/
+
+/*h_slide start*/
+
+
+    .picBtnTop{ position:relative;  overflow:hidden;  zoom:1;  }
+    .picBtnTop02{ position:relative;  overflow:hidden;  zoom:1;  background-color: #fff;padding: 25px 15px 16px;}
+    .picBtnTop02 .left_show{
+        width: 100%;
+        }
+    .picBtnTop02 .left_show .pic{
+        width: 100%;
+        height: 520px;
+        @extend %align-center;
+    }
+    .picBtnTop02 .left_show .pic img {
+        height: 100%;
+        width:780px;    
+    }
+
+    $plsw:40px;
+    .picBtnTop02 .left_show .slide_wrapper{
+        margin-top: $plsw;
+        padding: 15px $plsw - 5px;
+        position: relative;
+        background:#f3f3f3;
+    }
+    .h_slide .prev{left: $plsw/2;background: url(../img/upArrow_gray.png)no-repeat 50% 50%;}
+    .h_slide .prev:hover{background: url(../img/upArrow_red.png)no-repeat 50% 50%;}
+
+    .h_slide .next{right: $plsw/2;background: url(../img/downArrow_gray.png)no-repeat 50% 50%;}
+    .h_slide .next:hover{background: url(../img/downArrow_red.png)no-repeat 50% 50%;}
+    .h_slide{
+        width: 100%;
+    }
+    .h_slide .bd{
+        height: 100%;
+        overflow: hidden;
+        margin-left: -3px;
+        margin-right: -3px; 
+        ul{white-space: nowrap;}
+    }
+    .h_slide .prev,.h_slide .next{
+        top: 0;
+        width: 10px;
+        height: 100%;
+        display: block;
+        text-align: center;
+        position: absolute;
+    }
+
+    .h_slide .bd ul li{
+        text-align: center;
+        display: block;
+        width: percentage(1/7);
+        float: left;
+        div.inner{
+            padding:0 3px;
+            .border{
+                
+                height:78px;
+                @include border($color:$baseBorderColor);
+                img{@extend %full;display:block;}
+                &:hover{
+                     background:red; 
+                     @include border($color:red);
+                }
+            }
+        }
+    }
+
+
+/*h_slide end*/

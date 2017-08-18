@@ -1,0 +1,412 @@
+@charset "utf-8";
+
+@import "../mySassWare/_variable";
+@import "../mySassWare/_mixin";
+@import "../mySassWare/_function";
+
+#addRow{
+  $colorList:#60c0e8 #218be7 #1fd177;
+    @include rowBeta($num:3,$outer_gutter:5px,$plusM:true,$height:false){
+        
+    };
+    
+    padding-bottom:12px;
+    .border{
+      color:#fff;
+      padding:27px 20px;
+      height: 180px;
+      position:relative;
+      @include radius(5px);
+      .caret{
+        font-size: 30px;
+        margin-left: -15px;
+        position:absolute;
+        top:100%;
+        left:50%;
+        margin-top: 19px;
+      }
+      .borderinner{position:relative;@extend %full;}
+      &.border1{background:nth($colorList, 1);.caret{color:nth($colorList, 1)}}
+      &.border2{background:nth($colorList, 2);.caret{color:nth($colorList, 2)}}
+      &.border3{background:nth($colorList, 3);.caret{color:nth($colorList, 3)}}
+      .rb{
+        position:absolute;
+        right: 0;
+        bottom:0;
+        text-align: center;
+        .iconfont{
+          font-size: $titleSize*2;
+          position: relative;
+          top: 40px;
+        }
+        .makeBorder{
+           @include makeBorder($width:30px,$height:1px,$color:#fff);
+           margin:0 auto;
+        }
+      }
+      
+    }
+    .text{
+      padding:35px 0;
+      text-align:center;
+    }
+    
+}
+
+.icongrounp3{
+  @include rowBeta($num:2,$outer_gutter:0.25rem,$plusM:true,$height:false);
+  .ig1Block{
+    text-align:center;background:#fff;
+    margin-bottom: 0.5rem;
+
+    @include radius(0.5rem);
+    padding:0.6rem;
+    .name{
+      color:$orange4;
+      font-size: 1rem;
+    }
+    .caret{
+      @include isosceles_caret($color:$orange4,$position:bottom,$width:0.5rem,$rate:0.65);
+      
+    }
+    .button4{
+      margin-top: 0.6rem;
+    }
+    
+    &.on{
+      background:$orange4;
+      $onColor:#fff;
+      &,.name{color:$onColor;}
+      .caret{
+        @include isosceles_caret($color:$onColor,$position:bottom,$width:0.5rem,$rate:0.65);
+       
+      }
+      border-color:$onColor;
+      .avatar3{
+        border-color:$onColor;
+        &:before{border-top-color:$onColor}
+      }
+    }
+  }
+}
+
+
+.iconGroup02{padding:40px 0;}
+.iconGroup02{
+  .wrapper{
+      display:inline-block;
+      &+.wrapper{
+              .top{border-left:1px solid $gray;}
+      }
+      .top{
+          height:75px;text-align:center;
+          padding:0 30px;
+          .stars{
+              @include rel_ajust($value:7px);
+          }
+          .iconfont{
+              font-size:$bigSize*2;
+              @include rel_ajust($value:7px);
+          }
+      }
+      
+      .p{text-align:center;padding-top:5px;}
+  }
+}
+
+.cooperationul{
+  padding-bottom:60px;
+  .cooli{
+    display:inline-block;
+    padding-right: 80px;
+    & + .cooli{
+      padding-left: 80px;
+      @include border($position:left,$type:dashed);
+    }
+  }
+  .name{
+    font-size: $titleSize;
+  }
+}
+
+.iconGroup01{
+  .wrapper{
+      display:inline-block;
+      &+.wrapper{
+              .top{border-left:1px solid black;}
+      }
+      .top{
+          height:35px;text-align:center;
+          padding:0 30px;
+          .stars{
+              @include rel_ajust($value:7px);
+          }
+          .iconfont{
+              font-size:$bigSize*2;
+              @include rel_ajust($value:7px);
+          }
+      }
+      
+      .p{text-align:center;padding-top:5px;}
+  }
+}
+
+$colorArr03:#3fdc94 #218bd5 #f26262 #f6aa58 #cf78f3 #e882c5 #39be62 #9534bd #58cced #f6da58;
+$cal03:length($colorArr03);
+.pWrapper03{
+    padding:0 60px 0 60px;
+    .prow03{
+      @include str_width($strArr:".productDiamond",$padding:0,$block:5);
+      $index:1;
+      @each $var in $colorArr03 {
+        .productDiamond_#{$index}{
+            
+          .title{/* color:$var; */color:$blue;}
+          .text{
+            $borderColor:/* $var */$blue;
+            @include persudo($color:$borderColor,$content:"",$position:before,$bg:none){
+              top:0;
+              height:1px;
+              background:$borderColor;
+              width:100%;
+              -webkit-transform: scale(0);
+              -ms-transform: scale(0);
+              transform: scale(0);
+
+            }
+          }
+        }
+        $index: $index + 1;
+      }
+      .productDiamond{
+        padding:15px 0;
+
+        @extend %clear;
+        $time:0.5s;
+        $time2:0.2s;
+        .title{
+          overflow: hidden;
+          height: 0;
+
+          -webkit-transition:all $time ease-out;
+          -o-transition:all $time ease-out;
+          transition:all $time ease-out;
+        }
+        .pic{
+          position:relative;
+          width:80px;
+          height:80px;
+          margin:0 auto;
+          img{@extend %absCenter;}
+        }
+        .text{
+          padding:20px 0;font-size:$bigSize;color:$gray;
+          &:before{
+
+            -webkit-transition:all $time2 ease-in;
+            -o-transition:all $time2 ease-in;
+            transition:all $time2 ease-in;
+          }
+        }
+        .str-inner:hover{
+          .title{height:auto;padding:5px 0;}
+          .text{
+            padding:5px 0;
+            color:$blue;
+            &:before{
+              -webkit-transform: scale(1);
+              -ms-transform: scale(1);
+              transform: scale(1);
+            }
+          }
+        }
+        .str-inner{
+          text-align:center;
+          height: 155px;
+        }
+      }
+    }
+}
+
+$colorArr02:#3fdc94 #218bd5 #f26262 #f6aa58 #cf78f3 #e882c5 #39be62 #9534bd #58cced #f6da58;
+$cal02:length($colorArr02);
+.pWrapper02{
+    padding-top:30px;
+    .prow02{
+      @include str_width($strArr:".productDiamond",$padding:30px,$block:5);
+      
+      .productDiamond{
+        padding:15px 0;
+        @extend %clear;
+        $time:0.5s;
+        $time2:0.2s;
+        
+        .pic{
+          position:relative;
+          width:80px;
+          height: 80px;
+          margin:0 auto;
+          img{@extend %absCenter;}
+        }
+        .text{
+          padding:20px 0;font-size:$bigSize;color:$gray;
+          &:before{
+            -webkit-transition:all $time2 ease-in;
+            -o-transition:all $time2 ease-in;
+            transition:all $time2 ease-in;
+          }
+        }
+        
+        .str-inner{
+          text-align:center;
+          height: 155px;
+          &:hover{.text{color:$blue;}}
+        }
+      }
+
+    }
+}
+
+
+$colorArr01:#3fdc94 #218bd5 #f26262 #f6aa58 #cf78f3 #e882c5 #39be62 #9534bd #58cced #f6da58;
+$cal01:length($colorArr01);
+.pWrapper01{padding:0 60px 0 60px;}
+.prow01{
+  @include str_width($strArr:".productDiamond",$padding:0,$block:5);
+  $index:1;
+  @each $var in $colorArr01 {
+    .productDiamond_#{$index}{
+      .pic{background: $var;}
+      .str-inner{
+        &:hover{
+          .pic{-webkit-box-shadow:0 0 25px $var;box-shadow:0 0 25px $var}
+          .text{color:$var;}
+        }
+      }
+      .title{color:$var;}
+      .text{
+        $borderColor:$var;
+        @include persudo($color:$borderColor,$content:"",$position:before,$bg:none){
+          top:0;
+          height:1px;
+          background:$borderColor;
+          width:100%;
+          -webkit-transform: scale(0);
+          -ms-transform: scale(0);
+          transform: scale(0);
+
+        }
+      }
+    }
+    $index: $index + 1;
+  }
+  .productDiamond{
+    padding:15px 0;
+
+    @extend %clear;
+    $time:0.5s;
+    $time2:0.2s;
+    .title{
+      overflow: hidden;
+      height: 0;
+
+      -webkit-transition:all $time ease-out;
+      -o-transition:all $time ease-out;
+      transition:all $time ease-out;
+    }
+    .pic{
+      padding:12px 0;@include radius(10px);
+      width:80px;
+      margin:0 auto;
+    }
+    .text{
+      padding:20px 0;font-size:$bigSize;color:$gray;
+      &:before{
+
+        -webkit-transition:all $time2 ease-in;
+        -o-transition:all $time2 ease-in;
+        transition:all $time2 ease-in;
+      }
+    }
+    .str-inner:hover{
+      .title{height:auto;padding:5px 0;}
+      .text{
+        padding:5px 0;
+        &:before{
+          -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+          transform: scale(1);
+        }
+      }
+    }
+    .str-inner{
+      text-align:center;
+      height: 155px;
+    }
+  }
+
+}
+
+
+$colorArr:#3fdc94 #218bd5 #f26262 #f6aa58 #cf78f3 #e882c5 #39be62 #9534bd #58cced #f6da58;
+$cal:length($colorArr);
+.pWrapper{padding:0 0 0 20px;}
+.prow{
+    
+    @include str_width($strArr:".productDiamond",$padding:34px,$block:5);
+    $index:1;
+    @each $var in $colorArr {
+        .productDiamond_#{$index}{
+            .pic{background: $var;}
+            .str-inner{
+                &:hover{
+                    .pic{-webkit-box-shadow:0 0 25px $var;box-shadow:0 0 25px $var}
+                    .text{color:$var;}
+                }
+            }
+        }
+        $index: $index + 1;
+    }
+    .productDiamond{
+        padding:15px 0;
+        .str-inner{
+            text-align:center;
+            
+        }
+    }
+    .pic{padding:12px 0;@include radius(10px);}
+    .text{padding:20px 0;font-size:$bigSize;color:$gray;}
+}
+
+
+
+.hr-link{
+  text-align: center;
+  color:#fff;
+  $hrl-g:0.5px;
+  @include rowBeta($num:2,$outer_gutter:$hrl-g,$plusM:true,$height:false){
+    padding-bottom:$hrl-g*2;
+  }
+  .hrl-inner{ 
+    height: 124px;
+    background:$gray; 
+    .text{font-size:$mediumSize;}
+    background:url(../img/hrBg.png) center center;
+    background-attachment: fixed;
+    position:relative;
+    @include persudo($color:#dbdbdb,$content:" ",$position:after,$bg:none){
+      left:0;right:0;bottom:0;top:0;
+    };
+    .middleRow{
+      z-index: 9999;
+      position: relative;
+    }
+    &.on,&:hover{
+      &:after{
+          background:#ff4a55;
+          background:rgba(255,74,86,0.8);  
+      }
+      
+    }
+  }
+}

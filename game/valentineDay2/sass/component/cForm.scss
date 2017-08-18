@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+@import "../mySassWare/_variable";
+@import "../mySassWare/_mixin";
+@import "../mySassWare/_function";
+
+$select-radius:1rem;
+
+/* prize start */
+.info_wrapper{
+  width:90%;
+  .img-box{
+    position:relative;
+    z-index: 999;
+    img{display:block;}
+  }
+  #info_form{
+    $ptop:1.5rem;
+    width:85%;display: block;
+    margin-top: -$ptop;
+    .button{
+        margin-top:$select-radius;
+        display: block;
+        background: none;
+        width:$mainWidth2;
+    } 
+    .info_form_inner{
+       padding:$ptop 1rem 1rem 1rem;  
+       background:#fff;
+       -webkit-border-radius:0 0 $select-radius $select-radius;
+               border-radius:0 0 $select-radius $select-radius;
+       input{
+          display: block;-webkit-border-radius: .5rem;border-radius: .5rem;width: 100%;
+          height: 2rem;
+          background:#f9f9f9;
+          padding:0 0.5rem;
+          -webkit-box-sizing:border-box;
+                  box-sizing:border-box;
+          @include border();
+       } 
+       label{
+          &+label{
+            input{margin-top:$select-radius/2; }
+          }
+       }
+       .ifi-title{
+          color:#5a4b31;
+          text-align: center;
+          padding:$select-radius*0.45 0;
+          @include border($position:top);
+       }       
+       .prize-info{
+          text-align: center;
+          font-size: 0.8rem;
+          padding:0 0 $select-radius/2;
+          .red{font-weight:bold;}
+       }
+       #if-submit{
+          position:absolute;
+          width:1px;
+          height: 1px;
+          opacity: 0;
+       }
+       
+    }
+    
+    
+    .tips{color:#de3715;font-size:.7rem;padding-top: .2rem;}
+    #info_submit{
+          display: block;width: 80%;height: 2rem;-webkit-border-radius: .5rem;border-radius: .5rem;
+          font-size: 1rem;font-weight: 700;
+          background:-webkit-linear-gradient(bottom,#f14f04,#fea520);
+    }
+  }
+}
+.prizeLogo{
+  width:20%;
+  padding-bottom:$select-radius/2;
+}
+/* prize end */

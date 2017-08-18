@@ -1,9 +1,4 @@
 /* =============================================
- * v20160106
- * =============================================
- * Copyright 石华
- *
- * webaudio-demo
  * ============================================= */
 
 (function(e) {
@@ -48,9 +43,11 @@
       audioEngine.loadAudio(url);
     }
   }
-
+  
   audioEngine.playMusic = function(url, bLoop) {
+
     if (!bSWA) {
+
       audioEngine._playMusicByTag(url, bLoop);
       return;
     }
@@ -61,6 +58,7 @@
       audioEngine.loadAudio(url, true, bLoop);
       audioEngine['bgm'] = url;
     } else {
+      
       if (audioEngine['bgm'] == url) {
         return;
       } else if (audioEngine['bgm'] != '') {

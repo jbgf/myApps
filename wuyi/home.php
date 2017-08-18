@@ -603,11 +603,11 @@
       +function picScroll04(){//新闻图片切换
           var nrli = $(".row2 .news1-right li");
           jQuery(".slideBox03").each(function(i,e){
+              var news1 = $(e).parents(".row2 .news1").length>0,last,now;  
               $(e).slide({
                   mainCell:".bd ul",autoPlay:true,effect:"leftLoop",easing:"swing",interTime:"3500",
                   startFun:function(i,c){
-
-                          if($(e).parents(".news1").length>0){
+                          if(news1){
                               nrli.hide().eq(i).show()
                           }  
                   }

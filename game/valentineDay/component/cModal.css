@@ -1,0 +1,199 @@
+@charset "UTF-8";
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+.brandBox .picText1 .picText1-right {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.brandBox .picText1 .picText1-left {
+  float: left; }
+
+.brandBox .picText1 {
+  position: relative; }
+
+.brandBox .picText1 .picText1-left {
+  float: left; }
+
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+.brandBox .picText1 .picText1-right {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.brandBox .picText1 .picText1-left {
+  float: left; }
+
+.brandBox .picText1 {
+  position: relative; }
+
+.brandBox .picText1 .picText1-left {
+  float: left; }
+
+.sharebird {
+  width: 170px;
+  float: right;
+  margin-right: 1rem; }
+
+.tipsguide {
+  width: 70%;
+  color: #fff;
+  margin: 0 auto;
+  font-weight: bold;
+  font-weight: 500;
+  line-height: 1.5;
+  padding: 0.8rem 1.5rem; }
+  .tipsguide .index-p-title {
+    color: #0d58b3;
+    padding-bottom: 0.2rem;
+    font-weight: bold; }
+  .tipsguide .hpm02-tipsInfo {
+    padding: 0.6rem 0; }
+  .tipsguide .hpm02-guide img {
+    width: 2rem;
+    vertical-align: middle;
+    margin: 0 0.2rem; }
+  .tipsguide .index-p-text {
+    font-size: 0.75rem; }
+    .tipsguide .index-p-text img {
+      width: 30%;
+      vertical-align: top;
+      float: left;
+      margin-right: 0.5rem; }
+
+/* homePoupMask02 start */
+.homePoupMask02 {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 99;
+  display: none; }
+  .homePoupMask02 .homePoupInner {
+    width: 85%;
+    margin-top: 25%;
+    position: relative; }
+    .homePoupMask02 .homePoupInner .modalBox_close {
+      position: absolute;
+      right: 0;
+      top: 0; }
+    .homePoupMask02 .homePoupInner .skillSupPoup_wrapper {
+      background: url(../img/pmask02Bg_top.png) center 0 no-repeat #fff/100%;
+      -webkit-border-radius: 0.6rem;
+      border-radius: 0.6rem;
+      font-size: 0.65rem;
+      font-weight: 500;
+      line-height: 1.5;
+      padding: 0.48rem 8%; }
+      .homePoupMask02 .homePoupInner .skillSupPoup_wrapper .qr {
+        width: 60%;
+        margin: 0 auto;
+        padding-top: 25%; }
+        .homePoupMask02 .homePoupInner .skillSupPoup_wrapper .qr .tips {
+          text-align: center;
+          padding: 0.5rem 0 1rem; }
+  .homePoupMask02 .img1 {
+    width: 70%;
+    margin: 0 auto; }
+
+/* homePoupMask02 end */
+.ab {
+  padding-top: 0.5rem; }
+
+.content-box {
+  padding-top: 0.5rem; }
+  .content-box p + p {
+    margin-top: 0.25rem; }
+
+.activitiesInfo {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0; }
+  .activitiesInfo img {
+    display: inline-block; }
+  .activitiesInfo.starting {
+    top: 35%; }
+    .activitiesInfo.starting img {
+      width: 75%; }
+  .activitiesInfo.info2 {
+    top: 15%;
+    font-weight: bold; }
+    .activitiesInfo.info2 img {
+      width: 75%; }
+  .activitiesInfo.end {
+    top: 22%;
+    font-weight: bold; }
+    .activitiesInfo.end img {
+      width: 50%;
+      margin-left: -0.5rem; }
+    .activitiesInfo.end .tips1 {
+      color: #ffc41e; }
+
+.brandBox .title {
+  color: #521c7b;
+  font-size: 1rem;
+  text-align: center; }
+
+.brandBox .picText1 {
+  overflow: hidden; }
+
+.brandBox .picText1 .picText1-left, .brandBox .picText1 .picText1-right {
+  min-height: 1px; }
+
+.brandBox .picText1 .picText1-left {
+  width: 30%;
+  text-align: left;
+  height: 4rem; }
+
+.brandBox .picText1 .picText1-right {
+  margin-left: 30%;
+  height: 4rem; }
+
+.brandBox .link {
+  color: #521c7b;
+  text-decoration: underline;
+  padding: 0.5rem 0; }
+
+/*# sourceMappingURL=maps/cModal.css.map */

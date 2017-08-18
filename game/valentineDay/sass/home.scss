@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+@import "mySassWare/_variable";
+@import "mySassWare/_mixin";
+@import "mySassWare/_function";
+
+.a_bg{position: fixed;top: 0;left: 0;right: 0;bottom: 0;}
+.a_bg img{width: 100%;/* height: 100%; */display: block;}
+.bgUpZindex{
+  z-index: $bgUpZindex;
+}
+  
+.indexTitle{
+    width: 75%;
+    margin: 0 auto;
+}
+.indexTitle2{
+    width: 70%; 
+    margin: 0 auto;
+    img{
+        
+        display: block;
+    }
+} 
+
+.ht1Wrapper{
+    
+    margin:0 auto;
+    .helpFriends-text1{
+        color:#fff;
+        padding-left:1.5rem;
+    }
+    .ht1-arrow{position:relative;right:1rem;top:0.3rem;display:inline-block;}    
+}
+
+
+.daqiao{
+    position:relative;
+    .daqiaoTips{
+        position:absolute;
+        bottom:100%;
+        z-index: $bgUpZindex;
+        width: 100%;
+        left: 0;
+        right: 0;
+    }    
+}
+
+.rule-box{
+    color:#000;
+}
+
+.img-smbuttonheart{
+    width:80px;
+}
+
+.gift-tips{
+    font-size: 0.7rem;
+}
+
+

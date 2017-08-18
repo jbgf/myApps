@@ -1,0 +1,97 @@
+@charset "UTF-8";
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+/* prize start */
+.info_wrapper {
+  width: 90%; }
+  .info_wrapper .img-box {
+    position: relative;
+    z-index: 999; }
+    .info_wrapper .img-box img {
+      display: block; }
+  .info_wrapper #info_form {
+    width: 85%;
+    display: block;
+    margin-top: -1.5rem; }
+    .info_wrapper #info_form .button {
+      margin-top: 1rem;
+      display: block;
+      background: none;
+      width: 90%; }
+    .info_wrapper #info_form .info_form_inner {
+      padding: 1.5rem 1rem 1rem 1rem;
+      background: #fff;
+      -webkit-border-radius: 0 0 1rem 1rem;
+      border-radius: 0 0 1rem 1rem; }
+      .info_wrapper #info_form .info_form_inner input {
+        display: block;
+        -webkit-border-radius: .5rem;
+        border-radius: .5rem;
+        width: 100%;
+        height: 2rem;
+        background: #f9f9f9;
+        padding: 0 0.5rem;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        border: 1px solid #ddd; }
+      .info_wrapper #info_form .info_form_inner label + label input {
+        margin-top: 0.5rem; }
+      .info_wrapper #info_form .info_form_inner .ifi-title {
+        color: #5a4b31;
+        text-align: center;
+        padding: 0.45rem 0;
+        border-top: 1px solid #ddd; }
+      .info_wrapper #info_form .info_form_inner .prize-info {
+        text-align: center;
+        font-size: 0.8rem;
+        padding: 0 0 0.5rem; }
+        .info_wrapper #info_form .info_form_inner .prize-info .red {
+          font-weight: bold; }
+      .info_wrapper #info_form .info_form_inner #if-submit {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        opacity: 0; }
+    .info_wrapper #info_form .tips {
+      color: #de3715;
+      font-size: .7rem;
+      padding-top: .2rem; }
+    .info_wrapper #info_form #info_submit {
+      display: block;
+      width: 80%;
+      height: 2rem;
+      -webkit-border-radius: .5rem;
+      border-radius: .5rem;
+      font-size: 1rem;
+      font-weight: 700;
+      background: -webkit-linear-gradient(bottom, #f14f04, #fea520); }
+
+.prizeLogo {
+  width: 20%;
+  padding-bottom: 0.5rem; }
+
+/* prize end */
+
+/*# sourceMappingURL=maps/cForm.css.map */

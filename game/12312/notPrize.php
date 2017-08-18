@@ -15,9 +15,6 @@
                         <div class="prize-info">
                             完美避过大奖！再接再厉！
                         </div>
-                        
-                        
-                        
                         <div id="" class="button">
                             <div class="come_again">
                                 <img src="img/buttonbg1.png">
@@ -26,8 +23,6 @@
                                 </div>
                             </div>
                         </div>
-                        
-                        
                     </div>
                 </form>    
         </div>

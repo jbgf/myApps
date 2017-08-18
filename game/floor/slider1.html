@@ -1,0 +1,30 @@
+
+<div id="webBannerBox" class="webBannerBox  ">
+    <div id="swiper-container01" class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="img/banner01.png"></div>
+            <div class="swiper-slide"><img src="img/banner01.png"></div>
+            <div class="swiper-slide"><img src="img/banner01.png"></div>
+        </div>
+        
+        <div class="swiper-bottom">
+            <div id="swiper-pagination01" class="swiper-pagination"></div>
+            <div class="bottom-text">
+                <div class="inner">
+                    <div class="fnum float-r"><span class="tagButton button  bg-blue icon">关注人数</span>10</div>
+                    <div class="fnum float-l"><img class="icon scaleImg " src="img/iconMessage.png" alt="">1010</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+  var mySwiper = new Swiper ('#swiper-container01', {
+      autoplay:5000,
+      loop: true,
+      pagination: '#swiper-pagination01',
+      paginationClickable:true
+
+  })
+</script>
+<!-- swiper END-->

@@ -1,0 +1,81 @@
+@charset "UTF-8";
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.a_bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+
+.a_bg img {
+  width: 100%;
+  /* height: 100%; */
+  display: block; }
+
+.bgUpZindex {
+  z-index: 100; }
+
+.indexTitle {
+  width: 75%;
+  margin: 0 auto; }
+
+.indexTitle2 {
+  width: 70%;
+  margin: 0 auto; }
+  .indexTitle2 img {
+    display: block; }
+
+.ht1Wrapper {
+  margin: 0 auto; }
+  .ht1Wrapper .helpFriends-text1 {
+    color: #fff;
+    padding-left: 1.5rem; }
+  .ht1Wrapper .ht1-arrow {
+    position: relative;
+    right: 1rem;
+    top: 0.3rem;
+    display: inline-block; }
+
+.daqiao {
+  position: relative; }
+  .daqiao .daqiaoTips {
+    position: absolute;
+    bottom: 100%;
+    z-index: 100;
+    width: 100%;
+    left: 0;
+    right: 0; }
+
+.rule-box {
+  color: #000; }
+
+.img-smbuttonheart {
+  width: 80px; }
+
+.gift-tips {
+  font-size: 0.7rem; }
+
+/*# sourceMappingURL=maps/home.css.map */
