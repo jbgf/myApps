@@ -22,7 +22,7 @@
             background:rgba(0,0,0,0.5);
             
             @include lheightM($height:$height);
-            img{vertical-align:text-bottom;}
+            img{vertical-align:baseline;}
             .fnum{.icon{margin-right:0.5rem;}}
             .inner{
                 padding:0 $height/2;

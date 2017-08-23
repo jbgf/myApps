@@ -9,9 +9,10 @@ $mainWidth1:70%;
 $mainWidth2:90%;
 
 $baseLineHeight : 1.6;
-$smallSize : 0.6rem; 
+
 $baseSize : 0.9rem;
-$mediumSize:$smallSize*1.3;
+$smallSize : $baseSize * 0.8; 
+$mediumSize:$baseSize*1.2;
 $bigSize:$mediumSize*1.2;
 $titleSize:$bigSize*1.2;
 $bigTitle:$smallSize*2.3;

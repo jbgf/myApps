@@ -26,6 +26,9 @@
 .mainContent {
   border-top: 0.3rem solid #ddd; }
 
+.tips-content {
+  padding-top: 10%; }
+
 .a_bg {
   position: fixed;
   top: 0;

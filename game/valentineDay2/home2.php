@@ -196,12 +196,14 @@
              </div>
          </div>  <!-- 活动已经结束弹窗 end -->
     </div>
+
+    
     <script type="text/javascript">
         
 
         
             
-        +function bridgeCanvas(){
+        function bridgeCanvas(){
             var box = $(".bridge-box2");
             var boxwidth = box.width();
             var manCanvasHeight = wh/2.1;
@@ -258,24 +260,40 @@
             var man = new bridge(manoptions2)._createman();
             
             $(manoptions1.wrapper).css({"height":manoptions1.height});
-        }()    
+        }   
 
         /*背景音乐*/
        
-        var flag = 1;
-        var mp3 = "bgmusic04H.mp3";
-        audioEngine.init([mp3]);    
-        audioEngine.playMusic(mp3,true);     /*播放背景音乐*/
-        $("#bgMusic").on("touchend",function(){
-            $(this).toggleClass("off")
-            if(flag){
-                flag = 0;
-                audioEngine.stopMusic()
-            }else{
-                flag = 1;
-                audioEngine.playMusic(mp3, false);
-            }
-        })
+
+        document.addEventListener("WeixinJSBridgeReady", function () { 
+        
+            var audio = document.createElement("audio");
+            var flag = 1;
+            audio.src = "bgmusic04H.mp3";
+            audio.addEventListener("canplaythrough",
+            function(){
+            　　bridgeCanvas();
+                audio.play();
+            },
+            false);
+            audio.load();
+
+            
+            $("#bgMusic").on("touchend",function(){
+                $(this).toggleClass("off")
+                if(flag){
+                    flag = 0;
+                    audio.pause()
+                }else{
+                    flag = 1;
+                    audio.play();
+                }
+            })
+        }, false);
+        /*webaudio暂时有bug =_= 
+        init_call([mp3],function(){
+            bgMusic()
+        })*/
         
         setModal(".modal-rule",".show-rule")  /*规则弹窗*/
         setModal(".modal-prize",".show-prize")  /*奖金弹窗*/

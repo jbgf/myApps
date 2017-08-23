@@ -47,6 +47,50 @@
     }
   }
   
+  audioEngine.loadAudio_call = function(url,resolve) {
+    if (!/\.(mp3|wav|ogg)$/.test(url)) {
+      console.error('error type of media, only support mp3|wav|ogg files');
+      return;
+    }
+    var request = new XMLHttpRequest();
+    request.open('GET', url, true);
+    request.responseType = 'arraybuffer';
+    request.onload = function() {
+      audioEngine['_context']['decodeAudioData'](request.response, function(buffer) {
+        audioEngine['oBuffer'][url] = buffer;
+
+        resolve(1);
+
+
+      });
+    };
+    request.send();
+  }
+
+  audioEngine.init_call = function(aList,callBack) {
+    var count = 0;
+    if (typeof aList == 'undefined' || (!(aList instanceof Array) && !(typeof aList == 'string'))) {
+      return;
+    }
+    if (!(aList instanceof Array) && typeof aList == 'string') {
+      aList = [aList];
+    }
+    for (var i = 0; i < aList.length; i++) {
+      var url = aList[i];
+      var p = new Promise(function(resolve, reject){ 
+          audioEngine.loadAudio_call(url,resolve);
+      })
+      p.then(function(data){
+        if(data){
+          count++
+          if(count == aList.length){
+              callBack && typeof(callBack) == "function" && callBack();
+          }
+        }
+      })
+    }
+  }
+
   audioEngine.playMusic = function(url, bLoop) {
 
     if (!bSWA) {

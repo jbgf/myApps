@@ -82,8 +82,12 @@
                            <div class="un-block-2">
                            <input class="baseInput" name="identify" type="text" required="" aria-required="true"></div>
                            <div class="tips un-block-3 smallSize gray">
+                               
+                               <img class="float-l" src="img/vcode.png" alt="验证码" height="35">
                                <span class="red">*</span>
-                               <span> 请输入您预留手机号接收到的短信验证码</span>
+                               <span>
+                                  请输入图中验证码
+                               </span>
                            </div>
                        </div>
                        <div class="form-row">
@@ -107,6 +111,10 @@
 
        <div class="btnRow">
            <div class="align-center">
+                <a><div class="roundBtn02" style="background:#218ad5;color:#fff;margin-right:20px">
+                  提交申请
+                </div></a>
+
                 <a><div class="roundBtn02">
                   提交申请
                 </div></a>

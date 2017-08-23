@@ -131,8 +131,7 @@
   @include persudo($color:#dbdbdb,$content:" ",$position:before,$bg:none){
       left:50%;
       top:50%;
-      right:0;
-      bottom:0;
+      
       z-index: -1;
       -webkit-transform: translateX(-50%) translateY(-50%);
           -ms-transform: translateX(-50%) translateY(-50%);

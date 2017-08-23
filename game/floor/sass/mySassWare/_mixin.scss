@@ -253,7 +253,7 @@
     }
 }
 
-@mixin nth_un_width($rateArr:"1,2,3",$string:"td",$blockNum:false) {
+@mixin nth_un_width($rateArr:"1,2,3",$string:"td",$blockNum:false){
     $sum:0;
     $index:0;
     @each $i in $rateArr{

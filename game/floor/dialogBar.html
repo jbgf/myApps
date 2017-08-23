@@ -29,6 +29,7 @@
     </form>
 </div>
 <script type="text/javascript">
+    var isIos = navigator.userAgent.indexOf('iPhone') > -1; /*发送信息栏 若采用fixed定位，ios则软键盘弹出时会失效，*/
     scaleImg(".dialogBar",function(){
         var bar = $(".dialogBar");
         var barbtns = $("#barbtns");
@@ -36,17 +37,30 @@
         $("body").css({
             'padding-bottom':bar.outerHeight(true)
         });
+        
         var buttons = bar.find(".buttons li");
         var input = bar.find("input[type ='text']");
+        var bfscrolltop;
+       
             input.focus(function(){
+                bfscrolltop = document.body.scrollTop;//获取软键盘唤起前浏览器滚动部分的高度
                 barbtns.hide();
                 send.show();
+                
+                isIos && (
+                    interval = setInterval(function(){//设置一个计时器，时间设置与软键盘弹出所需时间相近
+                        document.body.scrollTop = document.body.scrollHeight;//获取焦点后将浏览器内所有内容高度赋给浏览器滚动部分高度
+                    },100)
+                )
             }).on('change blur',function(){
                 var val = $(this).val() ;
                     if(val == ""){
                         barbtns.show();
                         send.hide();
+
                     }
+               interval && clearInterval(interval);//清除计时器
+               document.body.scrollTop = bfscrolltop;
             })
 
     })

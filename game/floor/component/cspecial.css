@@ -74,7 +74,6 @@
   opacity: 0; }
 
 .avatar1 {
-  margin-right: 20%;
   position: relative;
   -webkit-border-radius: 6rem;
   border-radius: 6rem; }
@@ -87,6 +86,7 @@
   background: #fff;
   border-top: 1px solid #ddd;
   position: fixed;
+  /* position:absolute; */
   bottom: 0;
   left: 0;
   right: 0;

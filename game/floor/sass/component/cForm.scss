@@ -33,7 +33,7 @@
         @include f_pictext_row_percentage($width:10,$height:auto,$fpos:"left",$mar-gutter:0);
         font-size:$smallSize;  
       }
-     input{
+     input,select{
         display: block;-webkit-border-radius: .5rem;border-radius: .5rem;width: 100%;
         height: 2rem;
         background:#f9f9f9;
@@ -41,10 +41,20 @@
         -webkit-box-sizing:border-box;
                 box-sizing:border-box;
         @include border();
-     } 
+     }
+     select{} 
      label{
+
+        display: block;
+        margin-left: -$mainPadding;
+        padding-left:$mainPadding;
+        &.required{
+          background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAA3klEQVRYhe3SIW4CQRTG8THzDc0iKiDZUObbEUgO0AP0MByht6hA9gAVlRWIigrEigoEmeW9cABEj4DYmoUb7JI275eMGPX+M3nOGWOM+ct2yd3nVJQ3C5AKG2HY3i4g+i8h9oMNzKkoNaJWhtcmYqkV3qTCJs/DQqNfC/F9SKPUW4DO3EQYtkK03TkJw48QZyHOGlEfH+7mvQVc5FSUEv2qG9weiOc8dePeB18Dpm6sEbUQ+24PToO8/ELpP4VoG46emuQfu5/YDRYgxLvQv1zv0a+U+BgswBhjzL/yCxATSyiwYZ2SAAAAAElFTkSuQmCC");
+          background-position:-$mainPadding center;
+          background-repeat:no-repeat;
+        }
         & + label{
-          input{margin-top:$mainRadius/2; }
+          input,select{margin-top:$mainRadius/2; }
         } 
      }
      

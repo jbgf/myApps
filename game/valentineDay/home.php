@@ -303,18 +303,33 @@
         }else{
 
         }
-        setModal(".modal-rule",".show-rule")  /*规则弹窗*/
-        
+
+
         +function prizeModal(){
             var link = $(".modal-prize .ab a");
             var href = link.attr("href");
             link.removeAttr("href");
 
-            
             var prizeModal = setModal(".modal-prize",".show-prize",function(){
-                setTimeout(function(){link.attr("href",href)},1000);
+                var timer = setTimeout(function(){link.attr("href",href)},1500);
                 prizeModal.one("close",function(){
+                    clearTimeout(timer);
                     link.removeAttr("href");
+                    
+                })
+            })   /*规则弹窗*/
+        }()
+        +function ruleModal(){
+            var link = $(".modal-rule .ab a");
+            var href = link.attr("href");
+            link.removeAttr("href");
+
+            var prizeModal = setModal(".modal-rule",".show-rule",function(){
+                var timer = setTimeout(function(){link.attr("href",href)},1500);
+                prizeModal.one("close",function(){
+                    clearTimeout(timer);
+                    link.removeAttr("href");
+                    
                 })
             })  /*奖品弹窗*/
         }()

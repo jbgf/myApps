@@ -134,6 +134,9 @@ body {
   color: #8f8f8f;
   background: #fff; }
 
+select:focus, select:active {
+  outline: none; }
+
 a {
   text-decoration: none;
   cursor: pointer; }
@@ -212,13 +215,13 @@ img {
   line-height: 1.7; }
 
 .smallSize {
-  font-size: 0.6rem; }
+  font-size: 0.72rem; }
 
 .mediumSize {
-  font-size: 0.78rem !important; }
+  font-size: 1.08rem !important; }
 
 .bigSize {
-  font-size: 0.936rem !important; }
+  font-size: 1.296rem !important; }
 
 /*color*/
 .titleColor {
@@ -258,7 +261,7 @@ img {
   background: #f0f0f0; }
 
 .bg-gray {
-  background: #e1e9f6; }
+  background: #bababa; }
 
 .bg-orange {
   background: #f5a623 !important; }

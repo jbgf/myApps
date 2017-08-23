@@ -10,11 +10,21 @@
 
 .host-info{
   position: absolute;
-  bottom:0;
+  bottom:0; 
   left:0;
   right:0;
   color:$mainColor;
   padding:0.7rem 0;
   font-size: 0.7rem;
   img{vertical-align:middle;}
+}
+
+.text-row{
+    padding-top:$mainPadding;
+    .p{font-size:$smallSize;}
+}
+
+.qaZone{
+  padding-bottom:20%;
+  .p{font-size:$smallSize}
 }

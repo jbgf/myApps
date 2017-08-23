@@ -40,7 +40,7 @@
     height: 1.8rem;
     line-height: 1.8rem; }
     #swiper-container01 .swiper-bottom .bottom-text img {
-      vertical-align: text-bottom; }
+      vertical-align: baseline; }
     #swiper-container01 .swiper-bottom .bottom-text .fnum .icon {
       margin-right: 0.5rem; }
     #swiper-container01 .swiper-bottom .bottom-text .inner {

@@ -1,5 +1,6 @@
 <?php include './head.html' ?>
-
+<script type="text/javascript" src="js/layer/layer.js"></script>
+<style type="text/css"></style>
 <!-- 地区选择插件 -->
 <link rel="stylesheet" type="text/css" href="css/mobile-select-area.css">
 <link rel="stylesheet" type="text/css" href="css/dialog.css">
@@ -13,7 +14,7 @@
         <li class="row main">
             <div class="rowInner">
                 <div class="row-left">
-                    <div class="avatar1 ">
+                    <div class="avatar1">
                         <img src="img/icon1.png">
                         <span class="tagButton button sm bg-blue icon">楼主</span>
                     </div>
@@ -36,7 +37,7 @@
         <div id="flistOutput" class="mainContent"></div>              
     </ul>
 
-    <?php include './dialogBar.html' ?>   <!-- 发送信息栏 -->
+      
 
     <div class="modalX">
          <div class="modal-favor homePoupMask02">
@@ -44,21 +45,22 @@
          </div>  <!-- 点赞弹窗 end -->
 
          <div class="modal-form homePoupMask02 ">
-              <div class="info_wrapper  mar-center zindex relative ">
+                <div class="info_wrapper  mar-center zindex relative ">
                         
                         <!-- <p>请先填写您的资料：</p> -->
-                        <form  class="info_form mar-center zindex relative" style="">
+                        <form class="info_form mar-center zindex relative" style="">
                             <div class="header1 align-center">
                                      请填写您的兑奖信息
                             </div>
                             <div class="info_form_inner">
                                 <div class="ab"><img src="img/banner02.png" alt=""></div>
                                 
-                                <label><input type="text" name="" placeholder="姓名 "></label>
+                                <label class="required"><input id="trueName" type="text" name="" placeholder="姓名 "></label>
                                 <label>
-                                    <input type="text" name="" placeholder="联系方式">
+                                    <input id="tel" type="text" name="" placeholder="联系方式">
                                     
                                 </label>
+                                
                                 <label><input id="adr" type="text" name="" placeholder="联系地址 "></label>
                                  <label><input id="adr_details" type="text" name="" placeholder="详细地址 "></label>
                                  <label><input id="adr_add" type="text" name="" placeholder="地址备注 "></label>
@@ -67,7 +69,7 @@
                                     <div class="tips-left red">注：</div>
                                     <div class="tips-right">以上均为必填，否则兑奖无效本期礼品由太阳城独家提供</div>
                                 </div>
-                                <button class="button lg bg-blue" type="submit">
+                                <button id="submitBtn" class="button lg bg-blue" type="submit">
                                     <a>提交</a>
                                 </button>
                                 
@@ -75,36 +77,138 @@
                             
                         </form> 
                         <script>
+                            
                             var selectArea = new MobileSelectArea();
                             selectArea.init({trigger:$('#adr'),value:'',data:'data.json',position:'bottom'});
                         </script>   
                 </div>
          </div>  <!-- 表格弹窗 end -->
+         <script type="text/javascript">
+             
+            //表单校验
+                        
+            $("#submitBtn").click(function(){
+                        
+                  var trueName = $("#trueName").val();
+                  var tel = $("#tel").val();
+                  var area = $("#adr").val();
+                  var address = $("#adr_details").val();
+                  var mobile = /^(13[0-9]{9})|(18[0-9]{9})|(14[0-9]{9})|(17[0-9]{9})|(15[0-9]{9})$/;
+                  if(trueName==''){
+                    layer.tips('请输入用户名', '#trueName', {
+                      tips: [1, '#3595CC'],
+                      time: 4000
+                    });
+                    return false;
+                  }else if(tel==''){
+                     layer.tips('请输入手机号', '#tel', {
+                      tips: [1, '#3595CC'],
+                      time: 4000
+                    });
+                    return false;
+                  }else if(!mobile.test(tel)){
+                     layer.tips('请输入合法的手机号', '#tel', {
+                      tips: [1, '#3595CC'],
+                      time: 4000
+                    });
+                     return false;
+                  }else if(area==''){
+                     layer.tips('请选择地区', '#adr', {
+                      tips: [1, '#3595CC'],
+                      time: 4000
+                    });
+                     return false;
+                  }
+                  else if(address==''){
+                     layer.tips('请输入详细地址', '#adr_details', {
+                      tips: [1, '#3595CC'],
+                      time: 4000
+                    });
+                     return false;
+                  }
+                            
+            });
+            
 
-         <div class="modal-prizeList homePoupMask02 " ><!-- style="display: block" -->
+         </script>
+         
+         <textarea id="plistta" style="display:none;">
+                <li>
+                    <div class="block">
+                        <div class="avatar1 ">
+                            <img src=$avatar$>
+                        </div>                                           
+                        $userName$
+                    </div>
+                    <div class="block">
+                    <span class="tagButton button  bg-orange icon">第$PrizefloorNum$层</span>
+                    </div>   
+                </li> 
+         </textarea>
+
+
+         <div class="modal-prizeList homePoupMask02 " ><!--style="display: block"  -->
               <div class="homePoupInner info_wrapper mar-center zindex relative ">
                         
                         <form  class=" mar-center zindex relative" style="">
                             <div class="header1 align-center">
                                      中奖名单
                             </div>
+                            <ul class="pl-first">
+                                <div class="block">用户名</div>
+                                <div class="block">中奖楼层</div>
+                            </ul>
                             <div class="info_form_inner">
-                                <ul>
-                                    <li></li>
-                                    <div>
-                                        <li></li>
-                                        <li></li>
-                                    </div>
+                                
+                                <ul class="hpm02_mainHeight">
+                                   
+                                    <div id="plistOutput"></div>
                                 </ul>
-                                
-                                
-                                
+
                                 <div class="ab"><img src="img/banner02.png" alt=""></div>
                                 
                             </div>
                             
                         </form> 
-                         
+                        <script type="text/javascript">
+                            +function(){
+                                /*前端测试使用*/
+                                var data1 = [
+                                    {
+                                        avatar: "img/icon1.png",         /*头像*/
+                                        userName:"小幺",/*用户名*/
+                                        PrizefloorNum:1,       /*所在楼层数*/
+                                    },
+                                    {
+                                        avatar: "img/icon1.png",         /*头像*/
+                                        userName:"小幺",/*用户名*/
+                                        PrizefloorNum:1,       /*所在楼层数*/
+                                    },
+                                    {
+                                        avatar: "img/icon1.png",         /*头像*/
+                                        userName:"小幺",/*用户名*/
+                                        PrizefloorNum:1,       /*所在楼层数*/
+                                    },
+                                    {
+                                        avatar: "img/icon1.png",         /*头像*/
+                                        userName:"小幺",/*用户名*/
+                                        PrizefloorNum:1,       /*所在楼层数*/
+                                    },
+                                    {
+                                        avatar: "img/icon1.png",         /*头像*/
+                                        userName:"小幺",/*用户名*/
+                                        PrizefloorNum:1,       /*所在楼层数*/
+                                    },
+                                    {
+                                        avatar: "img/icon1.png",         /*头像*/
+                                        userName:"小幺",/*用户名*/
+                                        PrizefloorNum:1,       /*所在楼层数*/
+                                    }
+                                ];
+                                /*前端测试使用*/
+                                jsonTemplate("#plistta",data1,"#plistOutput");
+                            }();
+                        </script> 
                 </div>
          </div>  <!-- 获奖名单弹窗 end -->
 
@@ -152,7 +256,8 @@
         </li>
     </textarea>
     <script type="text/javascript">
-        
+            
+
             +function(){
                 /*前端测试使用*/
                 var data1 = [
@@ -235,15 +340,59 @@
 
 
             /*表格弹窗*/
-            if(0){
+            if(1){
                 setModal(".modal-form")
             }
+
+            if(1){
+                var offsettop = $('.floorList li:last-child').offset().top; 
+                $('html,body').animate({scrollTop:offsettop});
+            }
+
         })
         
 
+    //获取滚动条当前的位置 
+    function getScrollTop() { 
+        var scrollTop = 0; 
+        if (document.documentElement && document.documentElement.scrollTop) { 
+        scrollTop = document.documentElement.scrollTop; 
+        } 
+        else if (document.body) { 
+        scrollTop = document.body.scrollTop; 
+        } 
+        return scrollTop; 
+    } 
+
+    //获取当前可视范围的高度 
+    function getClientHeight() { 
+        var clientHeight = 0; 
+        if (document.body.clientHeight && document.documentElement.clientHeight) { 
+        clientHeight = Math.min(document.body.clientHeight, document.documentElement.clientHeight); 
+        } 
+        else { 
+        clientHeight = Math.max(document.body.clientHeight, document.documentElement.clientHeight); 
+        } 
+        return clientHeight; 
+    } 
+
+    //获取文档完整的高度 
+    function getScrollHeight() { 
+        return Math.max(document.body.scrollHeight, document.documentElement.scrollHeight); 
+    } 
+    window.onscroll = function () { 
+        //ajax从这里开始
+        if (getScrollTop() + getClientHeight() == getScrollHeight()) {
+                           
+                
+        }
+    } 
+    
+      
     </script>
 
 </div>
+<?php include './dialogBar.html' ?>   
 <?php include './foot.html' ?>
 
 

@@ -2,9 +2,27 @@
 @import "../mySassWare/_variable";
 @import "../mySassWare/_mixin";
 @import "../mySassWare/_function";
+
+.r-list{
+    $rarr:300,260,140;
+    @include nth_un_width($rateArr:$rarr,$string:".block",$blockNum:false);
+    li{overflow:hidden;@extend %flexMiddle;@include border($position:bottom);padding:$mainPadding 0;}
+    .block{
+        float:left;
+        @extend %flexMiddle;
+        img{margin:0}
+        &:nth-child(3){
+            -webkit-box-pack:justify;
+            -webkit-justify-content:space-between;
+                -ms-flex-pack:justify;
+                    justify-content:space-between;
+        }
+    }
+}
  
 .floorList{ 
     img{display:block;}
+
     .row{
         $padding:$mainPadding;
         .rowInner{padding:0 $padding;}
@@ -17,7 +35,7 @@
             padding:$padding 0;
             position:relative;
             .avatar1{
- 
+                margin-right: 20%;
             }
             .tagButton{
                     @extend %absBottom;

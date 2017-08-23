@@ -9,8 +9,29 @@
 /*是否开启打印样式*/
 /* color start */
 /* color end */
+.modal-prizeList li, .modal-prizeList li .block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
 /* clearfix*/
 /* 闭合子元素的浮动*/
+.modal-prizeList:before, .modal-prizeList:after {
+  content: " ";
+  display: table; }
+
+.modal-prizeList:after {
+  clear: both; }
+
 .modal-favor img {
   position: absolute; }
 
@@ -31,8 +52,29 @@
 /*是否开启打印样式*/
 /* color start */
 /* color end */
+.modal-prizeList li, .modal-prizeList li .block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
 /* clearfix*/
 /* 闭合子元素的浮动*/
+.modal-prizeList:before, .modal-prizeList:after {
+  content: " ";
+  display: table; }
+
+.modal-prizeList:after {
+  clear: both; }
+
 .modal-favor img {
   position: absolute; }
 
@@ -42,6 +84,28 @@
   bottom: 0;
   left: 0;
   margin: auto; }
+
+.modal-prizeList if($margin) {
+  margin-left: 0;
+  margin-right: 0; }
+
+.modal-prizeList .block {
+  width: 50%;
+  float: left;
+  min-height: 1px; }
+
+.modal-prizeList .str-inner {
+  padding-left: 0;
+  padding-right: 0; }
+
+.modal-prizeList li {
+  overflow: hidden;
+  padding: 0.3rem 0; }
+
+.modal-prizeList .avatar1 {
+  width: 2rem;
+  display: inline-block;
+  margin-right: 0.3rem; }
 
 /* homePoupMask02 start */
 .homePoupMask02 {

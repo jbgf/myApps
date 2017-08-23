@@ -118,6 +118,16 @@ String.prototype.temp = function(obj) {
     });
 };
 
+function isWorkTime(){      /*是否工作时间*/
+    var date = new Date();
+    var days = date.getDay();
+    var hours = date.getHours();
+    var isWorkDay = (days != 0 && days != 6);
+    var isWorkingTime = ( 8 <= hours  && hours < 18 );
+    var status = isWorkDay && isWorkingTime;
+    return status;
+}
+
 function jsonTemplate(template,json,output){
     var htmlList = '',
         htmlTemp = $(template).val();

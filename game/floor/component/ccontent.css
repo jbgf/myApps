@@ -24,17 +24,27 @@
 /* clearfix*/
 /* 闭合子元素的浮动*/
 .info {
-  color: #521c7b; }
+  color: #019bfd; }
 
 .host-info {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  color: #521c7b;
+  color: #019bfd;
   padding: 0.7rem 0;
   font-size: 0.7rem; }
   .host-info img {
     vertical-align: middle; }
+
+.text-row {
+  padding-top: 0.6rem; }
+  .text-row .p {
+    font-size: 0.72rem; }
+
+.qaZone {
+  padding-bottom: 20%; }
+  .qaZone .p {
+    font-size: 0.72rem; }
 
 /*# sourceMappingURL=maps/ccontent.css.map */

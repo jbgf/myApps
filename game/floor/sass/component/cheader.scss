@@ -4,6 +4,43 @@
 @import "../mySassWare/_mixin";
 @import "../mySassWare/_function";
 
+.i-header{
+    padding:$mainPadding 0;
+    @include border($position:bottom);
+    .i-title{
+      color:$black;
+      font-size: $mediumSize;  
+      .button{margin-left:$mainPadding/2;}
+      .icon{margin-right:$mainPadding/2;}
+      @extend %flexMiddle;
+    }  
+}
+
+
+.pl-first{
+  color:$mainColor;font-size:$smallSize;text-align:center;
+  overflow: hidden;
+  background:#e5f2fd;
+  padding:$mainPadding/3 0;
+}
+
+.header4{
+  color:#e7585a;
+  font-size: $mediumSize;
+  padding:$mainPadding/2 0;
+  
+}
+
+.header3{
+  color:$mainColor;
+  font-size: $mediumSize;
+  padding:$mainPadding/2 0;
+}
+
+.header2{
+  img{vertical-align:middle;margin-right:$mainPadding/3;}
+}
+
 .header1{
   background:$mainColor;
   color:$white;
@@ -22,11 +59,15 @@
       ul{
           @include str_width($str:"li",$num:3,$padding:5px,$margin:false); 
           li{
+            $borderWidth:2px;
+            .block{
+              border-bottom:$borderWidth solid transparent;
+              border-top:$borderWidth solid transparent;
+            }
             &.on{
               .block{
                 color:$mainColor;
-
-                @include border($position:bottom,$width:2px,$color:$mainColor);
+                @include border($position:bottom,$width:$borderWidth,$color:$mainColor);
               }
             } 
           }
@@ -40,7 +81,7 @@
       }  
     }
     
-    .block{padding:0.8rem 0;font-weight:bold;display: inline-block;} 
+    .block{padding:$mainPadding/1.5 0;font-weight:bold;display: inline-block;} 
 }
   
   

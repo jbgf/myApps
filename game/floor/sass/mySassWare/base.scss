@@ -9,7 +9,10 @@ body{
     line-height: $baseLineHeight;
     color: $baseFontColor;  
     background:$mainBgColor;   
-}  
+} 
+select{
+    &:focus,&:active{outline:none}
+} 
 a{text-decoration: none;cursor: pointer;}
 a[href].white{@extend %white;}
 a:visited{color:inherit;}
@@ -104,7 +107,7 @@ img{margin:auto;max-width:100%;max-height:100%;};
 .bg-lightGray{@extend %bg-lightGray;}
 .bg-light-gray02{background: $little-gray;}
 .bg-superGray{@extend %bg-superGray;}
-.bg-gray{background:#e1e9f6;}
+.bg-gray{background:#bababa;}
 .bg-orange{background:$orange4!important;}
 .bg-l-blue{background: $light-blue;}
 .bg-l-green{@extend %bg-lightGreen;}

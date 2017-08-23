@@ -1,5 +1,8 @@
 @import "_variable";
-
+.pageWrapper{
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;   
+}
 .pageWrapper-bg{
     position:relative;
 }
@@ -7,6 +10,9 @@
 .pageMain{
     position: relative;
     padding-bottom: 15%;
+}
+.content-body{
+    padding:0 $mainPadding
 }
 
 .full-width{width:100%;}

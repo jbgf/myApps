@@ -27,12 +27,19 @@
 .row-block-1, .row-1-block, .row-block-2, .row-2-block, .row-block-3, .row-3-block, .row-block-4, .row-4-block, .row-block-5, .row-5-block, .row-block-6, .row-6-block, .row-block-7, .row-7-block, .row-block-8, .row-8-block, .row-block-9, .row-9-block, .row-block-10, .row-10-block, .row-block-11, .row-11-block, .row-block-12, .row-12-block {
   float: left; }
 
+.pageWrapper {
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch; }
+
 .pageWrapper-bg {
   position: relative; }
 
 .pageMain {
   position: relative;
   padding-bottom: 15%; }
+
+.content-body {
+  padding: 0 0.6rem; }
 
 .full-width {
   width: 100%; }

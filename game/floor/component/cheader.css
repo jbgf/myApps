@@ -9,6 +9,16 @@
 /*是否开启打印样式*/
 /* color start */
 /* color end */
+.i-header .i-title {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
 /* clearfix*/
 /* 闭合子元素的浮动*/
 .header .header-left ul:before, .header .header-left ul:after {
@@ -34,6 +44,16 @@
 /*是否开启打印样式*/
 /* color start */
 /* color end */
+.i-header .i-title {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
 /* clearfix*/
 /* 闭合子元素的浮动*/
 .header .header-left ul:before, .header .header-left ul:after {
@@ -48,6 +68,39 @@
 
 .header .header-right {
   float: right; }
+
+.i-header {
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #ddd; }
+  .i-header .i-title {
+    color: #333;
+    font-size: 1.08rem; }
+    .i-header .i-title .button {
+      margin-left: 0.3rem; }
+    .i-header .i-title .icon {
+      margin-right: 0.3rem; }
+
+.pl-first {
+  color: #019bfd;
+  font-size: 0.72rem;
+  text-align: center;
+  overflow: hidden;
+  background: #e5f2fd;
+  padding: 0.2rem 0; }
+
+.header4 {
+  color: #e7585a;
+  font-size: 1.08rem;
+  padding: 0.3rem 0; }
+
+.header3 {
+  color: #019bfd;
+  font-size: 1.08rem;
+  padding: 0.3rem 0; }
+
+.header2 img {
+  vertical-align: middle;
+  margin-right: 0.2rem; }
 
 .header1 {
   background: #019bfd;
@@ -83,6 +136,9 @@
     .header .header-left ul .str-inner {
       padding-left: 5px;
       padding-right: 5px; }
+    .header .header-left ul li .block {
+      border-bottom: 2px solid transparent;
+      border-top: 2px solid transparent; }
     .header .header-left ul li.on .block {
       color: #019bfd;
       border-bottom: 2px solid #019bfd; }
@@ -93,7 +149,7 @@
       .header .header-right .addonImg img {
         display: block; }
   .header .block {
-    padding: 0.8rem 0;
+    padding: 0.4rem 0;
     font-weight: bold;
     display: inline-block; }
 

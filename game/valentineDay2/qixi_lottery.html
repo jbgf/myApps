@@ -1,0 +1,101 @@
+{template qixi_header}
+<script type="text/javascript" src="{SITE_THEME}js/jquery.rotate.min.js"></script>
+<div class="pageWrapper-bg">
+    <!-- 背景 start -->
+    <div class="a_bg"><img src="{SITE_THEME}img/mainBg.jpg" alt="bg"></div>
+    <!-- 背景 end -->
+    <div class="pageMain">
+        <div class="indexTitle" style="position: relative;top:1rem;"><img src="{SITE_THEME}img/indexTitle7.png"></div>
+        <div class="wheel">
+            <img src="{SITE_THEME}img/wheel.png" alt="">
+            <img id="rotaryArrow" class="start" src="{SITE_THEME}img/start.png" alt="">
+        </div>
+        <p class="info align-center">
+            礼品由正统商城提供
+        </p>
+
+        <div class="rule-btn-row" >
+            <div class="align-center">
+                <div class="show-rule buttonheart sm">
+                    <a><img class="img-smbuttonheart" src="{SITE_THEME}img/smbuttonheart.png">
+                    <div class="text">
+                        <div class="center">活动<br>规则</div>
+                    </div></a>
+                </div>
+                <div class="show-prize buttonheart sm">
+                    <a><img class="img-smbuttonheart" src="{SITE_THEME}img/smbuttonheart.png">
+                    <div class="text">
+                        <div class="center">我的<br>奖品</div>
+                    </div></a>
+                </div>
+            </div>   
+        </div>
+    </div>
+    {template logo_foot}
+</div>
+
+<div class="modalZone">
+    {template active_com}
+    <div class="modal-notPrized homePoupMask02 "  style="">
+         <div class="activitiesInfo info2 align-center white">
+            <img src="{SITE_THEME}img/indexTitle8.png">
+         </div>
+     </div>  <!-- 活动已经结束弹窗 end -->
+</div>
+<script type="text/javascript">
+    $(function(){
+        $("#rotaryArrow").click(function(){ 
+            var flag;
+            flag = {$flag}; /*是否 有机会抽奖*/
+            if(flag==1){
+                lottery();
+            }else if(flag==2){
+                alert('已经抽过奖了');
+            }else{
+                alert('您没有发起搭桥，没机会参与抽奖哦');
+            }   
+        });
+    })
+    function lottery(){ 
+        $.ajax({ 
+            type: 'POST', 
+            url: '<?php echo url("lottery/lucky"); ?>', 
+            dataType: 'json', 
+            cache: false, 
+            error: function(){ 
+                alert('出错了！'); 
+                return false; 
+            }, 
+            success:function(json){ 
+                var a = json.angle; //角度 
+                var p = json.msg; //奖项 
+                $("#rotaryArrow").rotate({ 
+                    duration:3000, //转动时间 
+                    angle: 0, 
+                    animateTo:1800+a, //转动角度 
+                    easing: $.easing.easeOutSine, 
+                    callback: function(){ 
+                        alert(json.prize);
+                        if(!json.status && json.prize=='谢谢参与'){
+                            setModal(".modal-notPrized"); 
+                            setTimeout(function(){
+                                location.href = "./index.php?c=lottery&a=index";
+                            },1000)
+                        }else{
+                            location.href = "./index.php?c=lottery&a=result&status="+json.status+"&prize="+json.prize;
+                        }
+                    } 
+                }); 
+            } 
+        }); 
+    }
+
+    setModal(".modal-rule",".show-rule")  /*规则弹窗*/
+    setModal(".modal-prize",".show-prize")  /*规则弹窗*/
+    /*若未中奖
+    if(0){
+        setModal(".modal-notPrized");
+    }else{}*/
+</script>
+</body>
+</html>  

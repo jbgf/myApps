@@ -9,7 +9,7 @@
 /*是否开启打印样式*/
 /* color start */
 /* color end */
-.floorList .row .row-right {
+.r-list li, .r-list .block, .floorList .row .row-right {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -48,7 +48,7 @@
 /*是否开启打印样式*/
 /* color start */
 /* color end */
-.floorList .row .row-right {
+.r-list li, .r-list .block, .floorList .row .row-right {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -77,6 +77,36 @@
 .floorList .row .row-left {
   float: left; }
 
+.r-list .block {
+  min-height: 1px; }
+  .r-list .block:nth-child(1) {
+    width: 42.85714%; }
+
+.r-list .block {
+  min-height: 1px; }
+  .r-list .block:nth-child(2) {
+    width: 37.14286%; }
+
+.r-list .block {
+  min-height: 1px; }
+  .r-list .block:nth-child(3) {
+    width: 20%; }
+
+.r-list li {
+  overflow: hidden;
+  border-bottom: 1px solid #ddd;
+  padding: 0.6rem 0; }
+
+.r-list .block {
+  float: left; }
+  .r-list .block img {
+    margin: 0; }
+  .r-list .block:nth-child(3) {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+
 .floorList img {
   display: block; }
 
@@ -104,6 +134,8 @@
 .floorList .row .row-left {
   padding: 0.6rem 0;
   position: relative; }
+  .floorList .row .row-left .avatar1 {
+    margin-right: 20%; }
   .floorList .row .row-left .tagButton {
     bottom: -0.5rem; }
 

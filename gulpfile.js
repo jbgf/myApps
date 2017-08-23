@@ -60,7 +60,8 @@ var urlArr = [
 				]
 			},
 			{id:15,url:'rh'},
-			{id:16,url:'wuyi'}
+			{id:16,url:'wuyi'},
+			{id:17,url:'wuyi-m'}
 		];
 		var baseSass = 'mySassWare';
         var baseComponent = 'component';
@@ -86,7 +87,7 @@ var urlArr = [
 		};
  
 var	newest = urlArr.length-1,
-	arr = /*getSub(5);*/
+	arr = /*getSub(17);*/
 		  	getSub(1)[5];
 var baseDir = arr.url;
 

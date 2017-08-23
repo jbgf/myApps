@@ -740,9 +740,9 @@ function scaleImg(wrapper){
                 e.src = "";
                 e.src = src;
                 e.onload = function(){
-                    console.log(e.width)
+                    
                     e.width = e.width/2;
-                    console.log(e.width)
+                    
                 }
                
         })

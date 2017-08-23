@@ -8,6 +8,18 @@
     img{@extend %absCenter;}
 }
 
+.modal-prizeList{
+    @include str_width($str:".block",$num:2,$padding:0,$margin:false);
+    li{
+        overflow:hidden;
+        padding:$mainPadding/2 0;
+        @extend %flexCenter;
+        .block{
+            @extend %flexCenter;
+        }
+    }
+    .avatar1 {width:2rem;display:inline-block;margin-right:$mainPadding/2}
+}
 
 /* homePoupMask02 start */
 

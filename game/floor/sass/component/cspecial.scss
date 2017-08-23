@@ -4,6 +4,8 @@
 @import "../mySassWare/_mixin";
 @import "../mySassWare/_function";
 
+
+
 .fixed{
   overflow-y: hidden !important;
 }
@@ -13,7 +15,7 @@
 }
 .avatar1{
     $nuheight1:6rem;
-    margin-right: 20%;
+    
     position:relative;
     @include radius($nuheight1);
     
@@ -34,6 +36,7 @@
     background:$white;
     @include border($position:top);
     position:fixed;
+    /* position:absolute; */
     bottom:0;
     left:0;
     right:0;

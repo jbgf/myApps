@@ -276,7 +276,7 @@
                     if(1)$(trigger).addClass("hide").siblings(".help2").removeClass("hide")   
                 }); 
                 
-              setModal(".modal-fulled")
+                if(0)setModal(".modal-fulled");
                 $("#bridge").on("click",function(){
                       brand.birds(birdOption);
                 })
