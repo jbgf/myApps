@@ -2,6 +2,7 @@
 <link rel="stylesheet" type="text/css" href="iconfont/iconfont.css">
 <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 <link rel="stylesheet" type="text/css" href="css/home.css">
+<script type="text/javascript" src="js/jsel.js"></script>
 <script type="text/javascript" src="js/jquery.validate.js"></script>
 <script type="text/javascript" src="js/modalBox.js"></script>
 <script type="text/javascript" src="js/layer/layer.js"></script>
@@ -36,66 +37,73 @@
     <!-- template01 start-->            
                 <textarea id="template01" style="display:none">
                     <div class="tableWrapper01">
-                    <table>
-                        <tr>
-                            <td colspan="6">
-                                <span class="titleName">样品1</span>
-                                <i class="fa fa-trash-o " aria-hidden="true"></i>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>样品名称 </td>
-                            <td colspan="5" class="sname inputTd"><input type="text" name="sname" required="true"></td>
-                        </tr>
-                        <tr>
-                            <td>样品标记  </td>
-                            <td class="smark inputTd"><input type="text" name="smark"></td>
-                            <td>样品份数 </td>
-                            <td class="sNum inputTd"><input type="text" name="sNum" required="true" digits="true"></td>
-                            <td>数量、重量/每份 </td>
-                            <td class="sPinfo inputTd"><input type="text" name="sPinfo"></td>
-                        </tr>
-                        <tr>
-                            <td >
-                                检测项目
-                                <div class="addItemBtn tips">添加检测项目</div>
-                            </td>
-                            <td colspan="3" data-history="true"><input class="choosedItem " style="display: none;" type="" name="choosedItem" required="true"></td>
-                            <td>
-                                检测依据
-                                <div class="tips">（本栏留空视为同意由
-                                <br/> 本中心选定依据）</div>
-                            </td>
-                            <td class="sGist inputTd">
-                                <textarea type="text" name="sGist"/>
-                            </td>
-                        </tr>
-                    </table>
+                        <table>
+                            <tr>
+                                <td colspan="6">
+                                    <span class="titleName">样品1</span>
+                                    <i class="fa fa-trash-o " aria-hidden="true"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>样品名称 </td>
+                                <td colspan="5" class="sname inputTd"><input type="text" name="sname" required="true"></td>
+                            </tr>
+                            <tr>
+                                <td>样品标记  </td>
+                                <td class="smark inputTd"><input type="text" name="smark"></td>
+                                <td>样品份数 </td>
+                                <td class="sNum inputTd"><input type="text" name="sNum" required="true" digits="true"></td>
+                                <td>数量、重量/每份 </td>
+                                <td class="sPinfo inputTd"><input type="text" name="sPinfo"></td>
+                            </tr>
+                            <tr>
+                                <td >
+                                    检测项目
+                                    <div class="addItemBtn tips">添加检测项目</div>
+                                </td>
+                                <td colspan="3" data-history="true"><input class="choosedItem " style="display: none;" type="" name="choosedItem" required="true"></td>
+                                <td>
+                                    检测依据
+                                    <div class="tips">（本栏留空视为同意由
+                                    <br/> 本中心选定依据）</div>
+                                </td>
+                                <td class="sGist inputTd">
+                                    <textarea type="text" name="sGist"/>
+                                </td>
+                            </tr>
+                        </table>
 
-                    <div  class="modalBox fade modalBox01">
-                            <div class="modalBox-dialog" role="document">
-                                <div class="modalBox-content">
-                                  <div class="modalBox-header">
-                                        <button type="button" class="close" data-dismiss="modalBox" aria-label="Close">
-                                          <span aria-hidden="true">×</span>
-                                        </button>
-                                        <p class="modalBox-title">选择检测项目</p>
-                                  </div>
-                                  <div class="modalBox-body nopadding">
-                                        <div class="chooseZone"></div>
-                                      
-                                  </div>
-                                  <div class="modalBox-header">
-                                        
-                                        <p class="modalBox-title">已选择检测项目</p>
-                                  </div>
-                                  <div class="modalBox-body">
-                                        <div class="choosedZone"></div>
-                                        <div class="sampleBtn"><span>确定</span></div>
-                                  </div>
-                                </div>
-                          </div>
-                    </div>
+                        <div  class="modalBox fade modalBox01">
+                                <div class="modalBox-dialog">
+                                    <div class="modalBox-content">
+                                      <div class="modalBox-header">
+                                            <button type="button" class="close" data-dismiss="modalBox" aria-label="Close">
+                                              <span aria-hidden="true">×</span>
+                                            </button>
+                                            <p class="modalBox-title">选择检测项目</p>
+                                      </div>
+                                      <div class="modalBox-body nopadding">
+                                            <div class="searchRow" style="">
+                                            
+                                            <div class="input-set0 input-set0-l">
+                                                <input class="input searchInputText" type="text" name="" placeholder="输入搜索关键词">
+                                                <input class="button search white" type="button" class="addon" value="搜 索">
+                                            </div>  <!-- 搜索框 -->
+                                            </div>
+                                            <div class="chooseZone"></div>
+                                          
+                                      </div>
+                                      <div class="modalBox-header">
+                                            
+                                            <p class="modalBox-title">已选择检测项目</p>
+                                      </div>
+                                      <div class="modalBox-body">
+                                            <div class="choosedZone"></div>
+                                            <div class="sampleBtn"><span>确定</span></div>
+                                      </div>
+                                    </div>
+                              </div>
+                        </div>
                     </div>
                 </textarea>
     <!-- template01 end -->
@@ -110,10 +118,6 @@
                             <div id="addSample" class="sampleBtn"><span>新增样品</span></div>
                         </div>
                        
-                            
-
-                        
-
                         <p class="tp01 bigSize font-weight titleColor">其他信息</p>
                         <div class="othertable">
                             <table>
@@ -300,7 +304,26 @@
                         name:"食品",
                         sub:[
                                 {
-                                    name:"动物源性滋补品"
+                                    name:"动物源性滋补品",
+                                    keyword:"非发酵",
+                                    final:1,
+                                    sub:[
+                                        {
+                                            name:"鱼翅DNA鉴定",
+                                            
+                                        },
+                                        {
+                                            name:"花胶DNA鉴定",
+                                            
+                                        },
+                                        {
+                                            name:"燕窝DNA鉴定",
+                                            
+                                        },
+                                        {
+                                            name:"鹿茸DNA鉴定",
+                                        }
+                                    ]
                                 },
                                 {
                                     name:"果蔬及其制品"
@@ -361,6 +384,7 @@
                                         },
                                         {
                                             name:"非发酵性豆制品",
+                                            keyword:"非发酵",
                                             final:1,
                                             sub:[
                                                 {
@@ -466,18 +490,7 @@
         tableMake(json);
         $(".enform").validate({
             ignore: [],
-            /*rules: {
-                  "sample[1]sname":{
-                    required:true
-                  },
-                  "sample[1]choosedItem":{
-                    required:true
-                  },
-                  "sample[1]sNum":{
-                    required:true,
-                    digits:true   
-                  }
-            },*/
+            
             //重写showErrors
             showErrors:function (errorMap, errorList) {
                 var msg = "";

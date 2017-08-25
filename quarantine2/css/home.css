@@ -3183,7 +3183,8 @@ ul.multi-ul {
 
 .chooseZone {
   height: 410px;
-  overflow: auto; }
+  overflow: auto;
+  border-top: 2px solid #d3ecf9; }
 
 /* multiMenu end */
 /* modalBox start */
@@ -3673,5 +3674,44 @@ ul.multi-ul {
   .cBrand .t {
     font-size: 16.848px;
     color: #333; }
+
+#show_newsTW table .twoCol .disabled {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.searchRow {
+  width: 50%;
+  margin: 0 auto;
+  padding: 13px 0; }
+  .searchRow input:focus {
+    outline: none; }
+
+/*input-set0 start*/
+.input-set0 {
+  height: 40px; }
+  .input-set0 input {
+    display: inline-block;
+    float: left;
+    height: 100%;
+    font-size: 16px;
+    font-weight: 500; }
+  .input-set0 input.input {
+    width: 72%;
+    padding-left: 10px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #ddd; }
+  .input-set0 input.button {
+    width: 28%;
+    background: #54a4d5; }
+
+/*input-set0 end*/
 
 /*# sourceMappingURL=maps/home.css.map */

@@ -5,7 +5,9 @@
           this.$body = $(document.body)
           this.$element = $(element)
           this.options  = $.extend({}, multiMenu.DEFAULTS, options)
-          this.$wrapper = this.$element.parents(".modalBox")
+          this.$wrapper = this.$element.parents(".modalBox");  /*弹窗*/
+          this.searchBtn = this.$wrapper.find(this.options.searchBtn);/*搜索按钮*/
+          this.searchInput = this.$wrapper.find(this.options.searchInput);/*搜索输入框*/
           this.$chooseZone = this.$wrapper.find(".chooseZone");
           this.outer = this.$element.parents(this.options.outer);
           this.allData = this.deepCopy(this.options.allData);//使用深拷贝否则数据被修改，用于下一个实例
@@ -39,8 +41,10 @@
           this.unique = this.options.uniqueTest;  
           this.unique_Arr = {a:[],b:[]};
           
-          this.ini(this.allData);
-          
+          this.ini(this.allData);       /*初始化构建*/
+          this.sure();                  /*确定选择*/
+          this.options.enableKeyWordSearch && this.iniSearch();   /*初始化搜索*/
+          this.iniHistory();            /*初始化历史记录*/
         }
  
         multiMenu.VERSION  = '1.0'
@@ -49,28 +53,31 @@
           class:"multi-li",
           mcClass:"mc-li",
           activeClass:"active",
-          uniqueTest:['id']
+          uniqueTest:['id'],
+          enableKeyWordSearch:false         /*默认不开启关键词搜索*/
         }
 
         multiMenu.prototype.ini = function () {
           var that = this;
               that.createlevel();
-
-              /*多选结果区*/
-              var length = that.$wrapper.find(".choosedZone ul").length;
-
-              if(length==0){
-                  that.$wrapper.find(".choosedZone").append("<ul></ul>");                          
-                  that.$choosedZoneUl = that.$wrapper.find(".choosedZone ul");  
-              }
-
+              
               that.operate_stack(0,"root");
               that.choose();
-             
-              that.sure();
-              that.iniHistory();
+              
               
         }  
+
+        multiMenu.prototype.iniSearch= function() { 
+              var that = this;
+              var dom = jsel(that.allData);
+                  that.searchBtn.on("click",function(){
+                      var searchText = that.searchInput.val();
+                      
+                      var result = dom.selectAll("//*[@keyword='"+searchText+"']");
+                      /*获取搜索到的数据*/
+                      console.log(result)
+                  })
+        }
 
         multiMenu.prototype.deepCopy= function(source) { 
           var that = this;
@@ -90,7 +97,7 @@
           $(document).on("click.multiMenu",'.'+that.mainClass+'')
           导致多个实例绑定事件的触发
           */    
-              that.$chooseZone.on("click.multiMenu","li"/*'.'+that.mainClass+''*/,function(){
+              that.$chooseZone.on("click.multiMenu","li",function(){
                   
                   if(that.hasSub() && $(this).hasClass(that.activeClass)){return}
                   var uls = that.$element.find("ul");
@@ -350,7 +357,6 @@
               }
         }
 
-
         multiMenu.prototype.getUniqueString = function (item) {
           var stringArr = this.unique,
               uniqueString = '',
@@ -372,8 +378,6 @@
               
           return uniqueString;
         }
-       
-
 
         multiMenu.prototype.isFinalLevel = function (index) {
             var that = this;
@@ -386,10 +390,6 @@
             }
             return status;
         }
-
-        
-
-                
 
         multiMenu.prototype.getPopNum = function(ul,index_ul){
           var that = this;
@@ -407,7 +407,14 @@
                   string +='<li class='+that.mainClass+'>'+e.name+'</li>'
               })
                   string +="</ul>";
-                  that.$element.append(string);
+                  that.$element.append(string);      /*添加多层级选择列表*/
+
+              /*!多选结果区!*/
+              var length = that.$wrapper.find(".choosedZone ul").length;
+              if(length == 0){
+                  that.$wrapper.find(".choosedZone").append("<ul></ul>");                           
+                  that.$choosedZoneUl = that.$wrapper.find(".choosedZone ul");  
+              }
         }
 
 

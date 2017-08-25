@@ -11,7 +11,6 @@
           this.create();  
           this.$element.on('mouseenter.bs.hover_window', $.proxy(this.show, this))
           this.$element.on('mouseleave.bs.hover_window', $.proxy(this.hide, this))
-          
         }
 
         hover_window.VERSION  = '1.0'
@@ -296,13 +295,14 @@ function triggerModalBox(trigger){
               targetInput:".choosedItem",
               enableAddToOuter:1,
               uniqueEnable:true,
+              enableKeyWordSearch:true,
+              searchInput:".searchInputText",
+              searchBtn:".search",       /*搜索按钮selector*/
               uniqueTest:["id","mod"],  /*唯一性验证方式为 id&&mod */
               success:function(arr,menu){
-                      var targetInput = menu.targetInput;
-                          menu.updateTargetInput(arr);
-                          menu.addToOuterResult(arr);
-                          
-                          
+                    var targetInput = menu.targetInput;
+                        menu.updateTargetInput(arr);
+                        menu.addToOuterResult(arr);
               }
         })
     }

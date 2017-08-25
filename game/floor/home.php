@@ -44,7 +44,7 @@
               <img src="img/favor.gif" class="" width="210" alt="">
          </div>  <!-- 点赞弹窗 end -->
 
-         <div class="modal-form homePoupMask02 ">
+         <div class="modal-form homePoupMask02">
                 <div class="info_wrapper  mar-center zindex relative ">
                         
                         <!-- <p>请先填写您的资料：</p> -->
@@ -340,12 +340,12 @@
 
 
             /*表格弹窗*/
-            if(1){
+            if(0){
                 setModal(".modal-form")
             }
 
             if(1){
-                var offsettop = $('.floorList li:last-child').offset().top; 
+                var offsettop = $('.floorList li:last').offset().top; 
                 $('html,body').animate({scrollTop:offsettop});
             }
 
