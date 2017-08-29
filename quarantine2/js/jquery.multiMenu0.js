@@ -82,32 +82,18 @@
               var that = this;
               var dom = jsel(that.allData);   /*jsel 插件：使用xpath语法查询*/
               var $clearbtn = that.searchInput.parent('div').find(".clearInput");
-              var onSearch = false;
-              var result;
                   that.searchBtn.on("click",function(){
                       var searchText = that.searchInput.val();
-                      result = dom.selectAll("//*[@keyword='"+searchText+"']");   /*返回一个数组*/
+                      
+                      var result = dom.selectAll("//*[@keyword='"+searchText+"']");   /*返回一个数组*/
                       /*获取搜索到的数据*/
+                      
                       if(result.length>0){
-                          that.snapShot();     /*记录快照*/
-                          that.$chooseZone.empty();
-                          layer.load(1, {
-                            shade: [0.1,'#fff'], //0.1透明度的白色背景
-                            end: function(){
-                                /*初始化列表及数据*/
-                                that.ini({sub:result});   
-                                onSearch = true;      
-                            },
-                            time: 1000
-                          });
+                          that.snapShot();
+                          that.ini({sub:result});
                           
                       }else{
-                        layer.msg('查询无结果',{
-                          
-                          time: 1000 //
-                        }, function(){
-                          
-                        });
+                        alert('无结果')
                       }
                   })
                   that.searchInput.on("change",function(){
@@ -118,32 +104,33 @@
                   $clearbtn.on("click",function(){        /*清除输入按钮*/
                       $(this).hide();
                       that.searchInput.val('');
-                      if(onSearch){
-                        that.resetSnapShot()   /*恢复快照*/
-                        onSearch = false;
-                      }
+                      that.tempSnapShot && that.resetSnapShot()   /*恢复快照*/
                   })
         }
 
         multiMenu.prototype.snapShot = function(){
             var that = this;
             var html = that.$chooseZone.html();
-            that.tempSnapShot = {html:html,data:{stack:that.stack,curObj:that.curObj,arrToChoose:that.arrToChoose}};    
             
+            
+
+            that.tempSnapShot = {html:html,data:{stack:that.stack,curObj:that.curObj,arrToChoose:that.arrToChoose}};    
+            that.$chooseZone.empty();
+
         }
 
         multiMenu.prototype.resetSnapShot = function(){
             var that = this;
-            var snap = that.tempSnapShot,
-                data = snap.data;
+            var snap = that.tempSnapShot,data = snap.data;
                 that.$chooseZone.html(snap.html);
                 that.$multiChooseZone = that.$element.find(".multiChooseZone");      /*重新更新多选待选区容器*/
+
                 that.stack = data.stack;                              /*记录当前节点位置的栈*/
                 that.curObj = data.curObj;                   /*当前所在的数据节点*/
                 that.arrToChoose = data.arrToChoose;           /*当前待选的数组*/
-
-                that.resetMultiChooseZone();                
         }
+
+        
 
         multiMenu.prototype.operate_stack = function(popNum,index){
           var that = this;
@@ -308,6 +295,7 @@
                                 historyTemp:that.historyTemp_stack.slice(0),
                                 uniqueString:uniqueString
                             }
+
                             /*添加临时数组*/
                             that.updateCoreData(2,false,false,tempOptions);
                           
@@ -533,11 +521,37 @@
                   that.resetTempResult(0);
                   that.updateCoreData(4);
                   that.$wrapper.find(".close").trigger("click");
-                  
+                  /*记录历史，修改todo：应在add里直接纪录历史*/
+                  that.recordHistory();
+
                 })
+                
         }
 
-        multiMenu.prototype.add = function (item,ele,historyTemp) {
+         multiMenu.prototype.recordHistory = function (){
+            var that = this;
+
+            for (var i = 0; i < that.history_allTemp_stack.length; i++) {
+                
+                  var indexarr = that.history_allTemp_stack[i];
+                  var string = indexarr.join(",");
+
+                  if(string.length>0 && that.historyIndexChain.indexOf(string) == -1){
+                          /*通过index链确定位置*/
+                          that.locateByIndexChain(indexarr,that.stack[0],function(index,arrTypedObj){
+                              
+                              var arrToPut = arrTypedObj[indexarr[index]];
+                                  that.historyIndexChain.push(string);
+                                  that.historyStack.push(arrToPut);
+                          }) 
+                       
+                  }
+                
+            }
+
+        }
+
+         multiMenu.prototype.add = function (item,ele,historyTemp) {
               var that = this;
               var ca_index = that.choosed_arr.length,maptaIndex;
               var $ele1 = ele.ele1;
@@ -569,96 +583,26 @@
                   /*将临时结果添加到历史数组*/
                   that.history_allTemp_stack.push(historyTemp);
 
-                  /*记录历史*/  
-                  that.recordHistory(item);      
-
                   that.updateCoreData(0,item);
                   
+        } 
+        
+        multiMenu.prototype.locateByIndexChain = function (indexarr,arrTypedObj,callBack){
+            /*eg:indexarr = that.historyIndexChain[ul_index].split(",")*/
+            /*eg:arrTypedObj = that.stack[0];*/
+            var index = 0;
+            (function loop(){
+              /*通过index chain获取当前的item*/                            
+                      if(index < indexarr.length -1){
+                          arrTypedObj = arrTypedObj[indexarr[index]]['sub'];
+                          index += 1;
+                          loop();
+                      }else{
+                          callBack(index,arrTypedObj);
+                          
+                      }
+           })(); 
         }
-
-        multiMenu.prototype.recordHistory = function (item){
-            var that = this;
-                if(that.historyStack.indexOf(item) == -1){
-                    that.historyStack.push(item);  
-                }
-                
-        }
-
-        multiMenu.prototype.chooseFromHistory = function (){
-            var that = this;
-                that.historyUl = that.historyUl.on("click","li",function(){
-                    var ul_index = $(this).attr("data-order"),/*第几条历史纪录*/
-                        item = that.historyStack[ul_index];
-                        if(that.choosed_arr.indexOf(item) == -1){
-                                that.addToMenuFromHistory(item,ul_index);
-                                that.updateTargetInput(that.choosed_arr);  
-                        };
-                        
-                })
-        }  
-
-        multiMenu.prototype.addToMenuFromHistory = function (item,ul_index){
-            var that = this;
-            
-            //  添加到多选结果区    
-            
-                /*若已经临时选中*/
-                if(item['tempChoosed']){
-                    $.each(that.tempResultStorage,function(i,e){
-                        if(e['item'] == item){
-                            that.add.call(that,item,e.element,e.historyTemp);
-                            /*去除临时选择集合中的某项*/
-                            that.updateCoreData(3,false,i,false);
-                        }
-                    })
-                }else{
-                    /*若未临时选中*/
-                    //添加item
-                    that.updateCoreData(0,item);
-
-                    var ca_index = that.choosed_arr.length-1,
-                    cli = $("<li class='choosed_li' data-cindex="+ca_index+">"+item.name+"</li>");
-                    cli.appendTo(that.$choosedZoneUl).on("click",function(){
-                            ca_index = $(this).attr("data-cindex");
-                            that.cancel(item,ca_index);
-                    });
-
-                    that.set_recognitionState(2,item,ca_index)
-                    
-                    that.resetMultiChooseZone();
-                  
-                }
-                that.addToOuterResult()
-        }
-        multiMenu.prototype.resetMultiChooseZone = function (){
-            var that = this;
-                if (that.hasSub()) {     /*非最后一级*/  /*设置可识别状态后，重新建立多选待选区*/
-                    if( that.isFinalLevel()){   /*倒二级*/
-
-                        $.each(that.curObj['sub'],function(i,e){
-                            if(that.uniqueValidate(e,0) == 'map'){
-                            }
-                        })
-                        that.$multiChooseZone.empty();
-                        that.createMultiChoose();  
-                    }
-                      
-                }else{                    /*最后一级*/
-                    that.uniqueValidate(that.curObj,0);
-                    that.$multiChooseZone.empty();
-                    that.createMultiChoose();
-                }
-        }
-        multiMenu.prototype.iniHistory = function (){
-            var that = this;
-            var ul = "<ul class='multiMenu_history' style=''></ul>";
-                that.background();
-                that.historyUl = $(ul).appendTo(that.historyZone.css("position","relative"));
-                that.showHistory();
-                that.chooseFromHistory();
-        }
-
-       
         /*重置临时存储结果*/
         multiMenu.prototype.resetTempResult = function (mode){
             var that = this;
@@ -703,7 +647,15 @@
                               })
         }
 
-        
+        multiMenu.prototype.iniHistory = function (){
+            var that = this;
+                
+            var ul = "<ul class='multiMenu_history' style=''></ul>";
+                that.background();
+                that.historyUl = $(ul).appendTo(that.historyZone.css("position","relative"));
+                that.showHistory();
+                that.chooseFromHistory();
+        }
 
         multiMenu.prototype.hasSub = function (index) {
             var that = this;
@@ -716,7 +668,32 @@
             }
             return status;
         }
-      
+
+        
+
+        
+
+        multiMenu.prototype.chooseFromHistory = function (){
+            var that = this;
+                that.historyUl = that.historyUl.on("click","li",function(){
+                    var ul_index = $(this).attr("data-order"),/*第几条历史纪录*/
+                        item,
+                        /*item = that.historyStack[ul_index],*/
+                        indexarr = that.historyIndexChain[ul_index].split(",");
+
+                    var arr = that.stack[0];
+                        that.locateByIndexChain(indexarr,arr,function(_index,_arr){
+                            item = _arr[indexarr[_index]];
+                            if(that.choosed_arr.indexOf(item) == -1){
+                                that.addToMenuFromHistory(item,ul_index);
+                                
+                               
+                                that.updateTargetInput(that.choosed_arr);  
+                            };
+                        })
+                         
+                })
+        }        
         
 
        
@@ -737,11 +714,6 @@
                  }else if(mode == 1){
                     /*删除*/
                        that.choosed_arr.splice(indexToDelete,1);
-                       $.each(that.choosed_arr,function(i,e){
-                          if(i>=indexToDelete){
-                              e['cindex']--;                            
-                          }
-                       })
                        that.unique_Arr['a'].splice(indexToDelete,1);
                  }else if(mode == 2){
                     /*临时增加*/
@@ -750,12 +722,6 @@
                  }else if(mode == 3){
                     /*临时删除*/
                        that.tempResultStorage.splice(indexToDelete,1);
-                       $.each(that.tempResultStorage,function(i,e){
-                          if(i>=indexToDelete){
-                              e['tindex']--;                            
-                          }
-                       })
-
                        that.unique_Arr['b'].splice(indexToDelete,1);
                  }else if(mode == 4){
                        that.tempResultStorage.length = 0;
@@ -786,7 +752,66 @@
                     .before(ul);
         } 
 
-        
+        multiMenu.prototype.addToMenuFromHistory = function (item,ul_index){
+            var that = this;
+            var indexarr = [],lastIndex;
+            
+                $.each(historyIndexChain[ul_index].split(","),function(i,e){
+                      indexarr.push(parseInt(e));                
+                })
+                lastIndex = indexarr[indexarr.length-1];
+            /*indexChain 的集合
+              加入该条indexChain  */  
+                that.history_allTemp_stack.push(indexarr);
+            //  添加到多选结果区    
+            
+                /*若已经临时选中*/
+                if(item['tempChoosed']){
+                    
+                    $.each(that.tempResultStorage,function(i,e){
+                        if(e['item'] == item){
+
+                            that.add.call(that,item,e.element,e.historyTemp);
+                            /*去除临时选择集合中的某项*/
+                            that.updateCoreData(3,false,i,false);
+                        }
+                    })
+                    
+                }else{
+                    /*若未临时选中*/
+                    //添加item
+                    that.updateCoreData(0,item);
+
+                    var ca_index = that.choosed_arr.length-1,
+                    cli = $("<li class='choosed_li' data-cindex="+ca_index+">"+item.name+"</li>");
+                    cli.appendTo(that.$choosedZoneUl).on("click",function(){
+                            ca_index = $(this).attr("data-cindex");
+                            that.cancel(item,ca_index);
+                    });
+
+                    that.set_recognitionState(2,item,ca_index)
+                    
+                    if (that.hasSub()) {     /*非最后一级*/  /*设置可识别状态后，重新建立多选待选区*/
+                        if( that.isFinalLevel()){   /*倒二级*/
+
+                            $.each(that.curObj['sub'],function(i,e){
+                                if(that.uniqueValidate(e,0) == 'map'){
+                                }
+                            })
+                            that.$multiChooseZone.empty();
+                            that.createMultiChoose();  
+                        }
+                          
+                    }else{                    /*最后一级*/
+                        that.uniqueValidate(that.curObj,0);
+                        that.$multiChooseZone.empty();
+                        that.createMultiChoose();
+                    }
+                  
+                }
+                that.addToOuterResult()
+        }
+
         
          /* 设置数据data可识别状态*/
         multiMenu.prototype.set_recognitionState = function (mode,item,index){

@@ -86,7 +86,10 @@
                                             <div class="searchRow" style="">
                                             
                                             <div class="input-set0 input-set0-l">
-                                                <input class="input searchInputText" type="text" name="" placeholder="输入搜索关键词">
+                                                <div class="inputWrapper">
+                                                    <input class="input searchInputText" type="text" name="" placeholder="输入搜索关键词">
+                                                    <i class="clearInput fa fa-times" aria-hidden="true"></i>
+                                                </div>
                                                 <input class="button search white" type="button" class="addon" value="搜 索">
                                             </div>  <!-- 搜索框 -->
                                             </div>

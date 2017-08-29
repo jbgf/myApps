@@ -2063,15 +2063,33 @@ $pwr2:70,370,370;
     input:focus{outline:none;}
 }
 /*input-set0 start*/
-    .input-set0{
+.input-set0{
         $height:40px;
-        input{display: inline-block;float:left;height: 100%;font-size: 16px;font-weight: 500;}
+        $padding:10px;
+        input{display: inline-block;height: 100%;font-size: 16px;font-weight: 500;}
+        .inputWrapper{
+            height: 100%;
+            width:72%;
+            float:left;
+            position:relative;
+            .clearInput{
+                position:absolute;
+                right:$padding;
+                top: 27%;
+                font-size: 20px;
+                display: none;
+                cursor: pointer;        
+            }
+        }
         input.input{
-            width:72%;padding-left:10px;-webkit-box-sizing: border-box;box-sizing: border-box;
+            width:100%;
+            padding-left:$padding;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
             @include border();
         }
-        input.button{width:28%;background:#54a4d5;}
+        input.button{width:28%;background:#54a4d5;float:left;}
         height: $height;
-    }
+}
 /*input-set0 end*/
  

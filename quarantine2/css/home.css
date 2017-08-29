@@ -3698,19 +3698,31 @@ ul.multi-ul {
   height: 40px; }
   .input-set0 input {
     display: inline-block;
-    float: left;
     height: 100%;
     font-size: 16px;
     font-weight: 500; }
-  .input-set0 input.input {
+  .input-set0 .inputWrapper {
+    height: 100%;
     width: 72%;
+    float: left;
+    position: relative; }
+    .input-set0 .inputWrapper .clearInput {
+      position: absolute;
+      right: 10px;
+      top: 27%;
+      font-size: 20px;
+      display: none;
+      cursor: pointer; }
+  .input-set0 input.input {
+    width: 100%;
     padding-left: 10px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border: 1px solid #ddd; }
   .input-set0 input.button {
     width: 28%;
-    background: #54a4d5; }
+    background: #54a4d5;
+    float: left; }
 
 /*input-set0 end*/
 

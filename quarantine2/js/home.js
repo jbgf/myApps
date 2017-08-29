@@ -353,6 +353,7 @@ function tableMake(json){
                               indexToD = $allTable.index($tableToD),
                               updateTable($allTable,indexToD),
                               $tableToD.parents(".tableWrapper01").animate({"opacity":0,"height":"toggle"},function(){
+                                    $(this).find(".chooseZone").off();
                                     $(this).remove();
                                 })
                               )
