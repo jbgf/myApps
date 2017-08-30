@@ -1,0 +1,39 @@
+@charset "utf-8";
+@import "../mySassWare/_variable";
+@import "../mySassWare/_mixin";
+@import "../mySassWare/_function";
+/*picText3 start*/
+.picText3{
+  @include rowBeta($num:2,$outer_gutter:5px,$plusM:true,$height:false){
+    padding-top:10px;
+    padding-bottom:10px;
+  };
+  .wrap{
+    
+  }
+  .p{
+    height:150px;
+    position:relative;
+    img{@extend %full;}
+  }
+  .t{
+    @include lheightM($height:30px);
+    
+    @extend %ellipsis;
+    font-size: $mediumSize;
+    color:$black;
+  }
+}
+/*picText3 end*/
+
+.enRow{
+    text-align: center;
+    padding:$mainPadding 0 $mainPadding/2;
+    li{
+        display:inline-block;
+        img{display:block;}
+        &+li{
+            margin-left: $mainPadding/3;
+        }
+    }
+}

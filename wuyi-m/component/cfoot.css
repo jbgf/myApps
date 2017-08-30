@@ -1,0 +1,90 @@
+@charset "UTF-8";
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.webFooterBox {
+  position: absolute; }
+
+.webFooterBox {
+  bottom: 0;
+  left: 0;
+  right: 0; }
+
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.webFooterBox {
+  position: absolute; }
+
+.webFooterBox {
+  bottom: 0;
+  left: 0;
+  right: 0; }
+
+.webFooterBox .bottomdiv .bottom {
+  background: #00732e;
+  height: 1.4rem; }
+
+.webFooterBox .bottomdiv .bottom .backtop {
+  line-height: 1.4rem;
+  font-size: 0.7rem;
+  font-weight: bold; }
+
+.webFooterBox {
+  margin: 0 auto;
+  background: #fff; }
+
+.webFooterBox .bottomdiv {
+  height: 1.75rem; }
+
+.webFooterBox .bottomdiv .bottom {
+  position: relative;
+  height: 1.5rem; }
+
+.webFooterBox .bottomdiv .bottom .backtop {
+  width: 2rem;
+  float: right;
+  color: #fff;
+  position: relative;
+  text-transform: capitalize;
+  text-align: right;
+  padding-right: 1rem;
+  line-height: 1.5rem;
+  -o-transition: all 350ms;
+  transition: all 350ms;
+  -webkit-transition: all 350ms;
+  font-family: verdana;
+  font-weight: bold;
+  cursor: pointer; }
+
+.webFooterBox .bottomdiv .bottom .backtop:active {
+  background: rgba(0, 0, 0, 0.5); }
+
+.webFooterBox .bottomdiv .bottom .backtop b {
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: .5rem;
+  right: .35rem;
+  border: .2rem transparent solid;
+  border-bottom-color: #fff; }
+
+/*# sourceMappingURL=maps/cfoot.css.map */

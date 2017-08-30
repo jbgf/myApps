@@ -1,0 +1,279 @@
+@charset "UTF-8";
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.webHeaderBox {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  -webkit-backface-visibility: hidden;
+  position: fixed;
+  top: 0rem;
+  height: 2.25rem;
+  z-index: 2; }
+
+.webHeaderBg {
+  background-color: #00732e;
+  -webkit-background-size: cover;
+  background-size: cover;
+  height: 2.25rem;
+  line-height: 2.25rem;
+  border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  -ms-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  -o-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2); }
+
+.header {
+  text-align: center;
+  position: relative; }
+
+.header .pageTitle {
+  height: 2.4rem;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 2.4rem;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 76.56125%;
+  display: inline-block;
+  color: #fff;
+  vertical-align: top;
+  padding-right: .25rem;
+  padding-left: .25rem;
+  clear: both;
+  position: relative;
+  z-index: 80; }
+
+.header .pageLogo {
+  display: inline-block;
+  height: 100%;
+  width: 2.25rem;
+  vertical-align: top;
+  margin-right: .25rem;
+  margin-left: .25rem;
+  margin-top: .25rem;
+  margin-bottom: .25rem;
+  position: relative;
+  z-index: 99; }
+
+.header .pageLogo .logoImg {
+  height: 100%;
+  width: 100%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-image: url(url(/image/default/1.png?v=201412151729)); }
+
+.header .cusLogo {
+  max-width: 1.7rem;
+  max-height: 1.7rem; }
+
+.header img {
+  height: 2.25rem;
+  vertical-align: top;
+  width: 3rem; }
+
+.header .pageLogo.right {
+  float: right; }
+
+.navBaseIcon .navItemIcon {
+  background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  -webkit-background-size: 90% 90% !important;
+  background-size: 90% !important;
+  width: 2rem;
+  height: 2rem;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: .5rem; }
+
+.navBaseIcon .navItem a {
+  line-height: 2.75rem;
+  text-align: left; }
+
+.navButton {
+  position: absolute;
+  right: 0;
+  height: 2.25rem;
+  width: 2.5rem;
+  z-index: 100;
+  float: left; }
+
+.navButton .menuNav .menuNavTip {
+  width: 2rem;
+  height: 2rem;
+  float: left;
+  margin: .15rem 0rem .25rem .5rem; }
+
+.navbar {
+  background: #fff;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  visibility: hidden;
+  display: block;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-overflow-scrolling: touch; }
+  .navbar.open {
+    visibility: visible;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; }
+
+.navButton .menuNav .icon-menuNavTip:before {
+  font-size: 2.25rem;
+  margin-left: -0.3rem;
+  margin-top: -0.15rem;
+  content: "\e6b0";
+  color: #fff;
+  display: block;
+  position: relative;
+  z-index: 3; }
+
+.webTop {
+  margin-top: 2.25rem;
+  position: fixed;
+  top: 0;
+  z-index: 90;
+  -webkit-backface-visibility: hidden;
+  width: 100%;
+  max-width: 640px;
+  height: 0;
+  -webkit-transition: all .4s;
+  -o-transition: all .4s;
+  transition: all .4s; }
+
+.navbar.open .navItem {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0); }
+
+.navbar .navItem {
+  position: relative;
+  background: #fff;
+  border-bottom: 1px solid #ececec;
+  opacity: 0;
+  -webkit-transition: all .4s;
+  -o-transition: all .4s;
+  transition: all .4s;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0); }
+
+.navbar.open .navItem a {
+  visibility: visible; }
+
+.navBaseIcon .navItem a {
+  line-height: 2.75rem;
+  text-align: left; }
+
+.navbar .navItem a {
+  overflow: hidden;
+  font-size: .75rem;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  padding: 0 .5rem;
+  word-break: keep-all;
+  white-space: nowrap;
+  width: auto;
+  min-width: 3rem;
+  max-width: none;
+  font-family: "\5FAE\8F6F\96C5\9ED1", Helvetica, "黑体", Arial, Tahoma;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  height: 2.9rem;
+  color: #333;
+  line-height: 2.9rem;
+  text-align: left;
+  display: block;
+  font-size: .7rem;
+  color: #333;
+  text-decoration: none;
+  font-weight: normal;
+  border-bottom: 0;
+  visibility: hidden; }
+
+.navbar .itemSelected .icon-navItemIcon:before {
+  color: #00732e; }
+
+.navBaseIcon .icon-navItemIcon:before {
+  font-size: 2rem;
+  color: #666; }
+
+.navItem.itemSelected .navItemName {
+  color: #00732e; }
+
+.navBaseIcon .navItem .navItemName {
+  vertical-align: middle; }
+
+.navItem .navItemName {
+  margin: 0 0 0 1rem; }
+
+.navbar .itemSelected:after {
+  color: #bb140d; }
+
+.navbar .navItem:after {
+  content: "\e672";
+  font-size: .9rem;
+  position: absolute;
+  right: .9rem;
+  top: 1rem;
+  color: #666; }
+
+.open .navItem:nth-child(2) {
+  -webkit-transition-delay: 160ms;
+  -o-transition-delay: 160ms;
+  transition-delay: 160ms; }
+
+.open .navItem:nth-child(4) {
+  -webkit-transition-delay: 240ms;
+  -o-transition-delay: 240ms;
+  transition-delay: 240ms; }
+
+.open .navItem:nth-child(6) {
+  -webkit-transition-delay: 320ms;
+  -o-transition-delay: 320ms;
+  transition-delay: 320ms; }
+
+.open .navItem:nth-child(8) {
+  -webkit-transition-delay: 400ms;
+  -o-transition-delay: 400ms;
+  transition-delay: 400ms; }
+
+.open .navItem:nth-child(10) {
+  -webkit-transition-delay: 480ms;
+  -o-transition-delay: 480ms;
+  transition-delay: 480ms; }
+
+/*# sourceMappingURL=maps/cNavBar.css.map */

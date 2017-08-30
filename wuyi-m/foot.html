@@ -1,0 +1,27 @@
+<script type="text/javascript">
+    
+    
+    window.onload = function(){
+        var foot = $("#webFooterBox");
+        if($("body").outerHeight(true) < wh){
+            foot.css({"position":"fixed"})
+        }
+        $("body").css({'padding-bottom':foot.outerHeight(true),position:'relative'})
+    }
+</script>
+
+<div id="webFooterBox" class="webFooterBox  ">
+            
+    <div id='webFooter' class='webFooter'>
+    <div id='footer'  class='footer'><div class='bottomdiv'><div class='bottom'><div class='backtop' onclick='scrollToTop()'>top<b></b></div></div></div>
+        <div class=''>
+            <div class='technicalSupport'>
+                <font face='Arial'>&copy;</font>2017 福建省南平市武夷新区管委会 版权所有      
+            </div>
+            <div class='technicalSupport'>
+                <a href="#">技术支持<span class='faisco-icons-logo'></span>福建润商</a>       
+            </div>
+        </div>
+    </div>
+    </div>
+</div>

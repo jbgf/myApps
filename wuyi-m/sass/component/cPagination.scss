@@ -1,0 +1,18 @@
+@charset "utf-8";
+@import "../mySassWare/_variable";
+@import "../mySassWare/_mixin";
+@import "../mySassWare/_function";
+
+.prow{padding:$mainPadding 0;}
+.pagination{
+    color:$mainColor;
+    font-size: $mediumSize;
+    li{
+        display: inline-block;
+        padding:$mainPadding/4 $mainPadding/2; 
+        @include border($color:$mainColor,$width:2px);
+        & + li{
+            margin-left: 0.5rem;
+        }
+    }
+}

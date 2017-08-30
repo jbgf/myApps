@@ -1,0 +1,397 @@
+@charset "utf-8";
+
+@import "../mySassWare/_variable";
+@import "../mySassWare/_mixin";
+@import "../mySassWare/_function";
+
+.formrow1{
+
+    @include f_pictext_rowNew($width:6rem,$height:auto,$fpos:"left",$mar-gutter:0.5rem);
+    select{width:100%;padding:0 0.5rem;}
+    .formrow1-left,select{
+      padding-top:0.5rem;padding-bottom:0.5rem;
+      -webkit-box-sizing:border-box;
+              box-sizing:border-box;
+    }
+}
+  
+
+.formBanner .form3 .formInner{
+  display: none;
+  &.active{
+    display: inline-block;
+  }
+}
+.formBanner .news_h03{
+  padding-top:75px;
+  margin-bottom: 75px;
+}
+.formBanner .btnRow{
+  padding:60px 0;
+}
+
+.form6{
+  input{
+    @include border();width:100%;@include radius(1rem);padding:0.5rem 1rem;box-sizing:border-box;
+    margin-top: 0.6rem;
+  }
+  .adr{
+    background:url(../img/ba1.png) 95% center no-repeat;
+    background-size:13px;
+  }
+}
+
+.form5{
+        $sf_w:auto;
+        $sf_h:23px;
+        $sf_arr:260px,485px;
+        $sf_p:6px;
+        $get_input_w:0.5;
+        li{@include un_width($rateArr:$sf_arr,$string:"un-block");}
+        textarea,input[type='text']{
+          border:none;
+          width:100%;
+          background:inherit;
+        }
+        
+        .form-row{
+          padding:0.9rem 0.5rem;
+          line-height:1;
+          .specialInfo{
+            height: 2rem;
+            color:$red;
+          }
+          & + .form-row{
+            @include border($position:top);
+          } 
+          &:last-child{
+            @include border($position:bottom);
+          }
+        }
+        .designTypeRow{
+          label{
+            margin-bottom: 0.5rem;
+            margin-right: 0.5rem;
+            display: inline-block;
+          }
+        }
+        .designTypeRow2{
+          label{
+            
+            margin-right: 0.5rem;
+            display: inline-block;
+          }
+        }
+        .uploadBlock{
+          @include rowBeta($num:2,$outer_gutter:10px,$plusM:true,$height:false);
+        } 
+        .un-block-1{
+          color:#000;
+          @include lheightM($height:$sf_h);
+          vertical-align: middle;
+        }
+        .un-block-2{
+          input[type='text']{
+            height: $sf_h;
+            font-size: inherit;
+            vertical-align: middle;
+
+          }
+        }
+        
+}
+
+
+.form4{margin:50px 0}
+.form4{
+        $sf_w:auto;
+        $sf_h:35px;
+        $sf_arr:90px,320px,775px;
+        $sf_p:6px;
+        $get_input_w:0.5;
+        background:#fff;
+        width:$sf_w;
+        
+        text-align: center;
+        .zprow-block-2{
+          width:50%;
+          float: left;
+          .halfWrapper{display:inline-block;}
+        }
+        .zprow-block-3{
+          float: left;
+          width:percentage(1/3);
+          select{
+            width:228px;
+            height: 33px;
+          }
+          .text{
+            width:46px;
+            display: inline-block;
+            text-align: center;
+          }
+        }
+        .formInner{ 
+          display: inline-block;
+          padding: $sf_h*2 0; 
+        }
+        .err-row{
+              height: 35px;
+              margin-left: nth($sf_arr, 1) + $sf_p;
+              text-align: left;
+              color:$red;
+        }
+        .roundBtn02{
+              margin-top:30px;
+        }
+        .form-row{
+          & + .form-row{margin-top:30px;} 
+          @include form_row($widthArr:$sf_arr,$height:$sf_h);
+          
+          &.submit-row{
+            @include form_row($widthArr:$sf_arr,$height:$sf_h + 10px);
+            .baseInput{
+              background:$water-blue;
+              border:none!important;
+              width: nth($sf_arr, 1) + nth($sf_arr, 2)!important;
+            }   
+            a{
+              @extend %align-center;
+            }
+          } 
+        } 
+        input{@extend %mediumSize;}
+        .un-block-1{
+         
+          text-align: right;
+        }
+        .un-block-2,
+        .un-block-3{padding-left:$sf_p;}
+        
+      
+  }
+
+.form3{
+        $sf_w:auto;
+        $sf_h:35px;
+        $sf_arr:90px,225px,auto;
+        $sf_p:6px;
+        $get_input_w:0.5;
+        width:$sf_w;
+        
+        text-align: center;
+        .formInner{ 
+          display: inline-block;
+          padding-bottom: $sf_h*2; 
+        }
+        .err-row{
+              height: 35px;
+              margin-left: nth($sf_arr, 1) + $sf_p;
+              text-align: left;
+              color:$red;
+        }
+        .form-row{
+          & + .form-row{margin-top:30px;} 
+          @include form_row($widthArr:$sf_arr,$height:$sf_h);
+          
+          &.submit-row{
+            @include form_row($widthArr:$sf_arr,$height:$sf_h + 10px);
+            .baseInput{
+              background:$water-blue;
+              border:none!important;
+              width: nth($sf_arr, 1) + nth($sf_arr, 2)!important;
+            }   
+            a{
+              @extend %align-center;
+            }
+          } 
+        } 
+        input{@extend %mediumSize;}
+        .un-block-1{
+         
+          text-align: right;
+        }
+        .un-block-2,
+        .un-block-3{padding-left:$sf_p;}
+        .un-block-3{color:$water-blue;.red{color:$water-blue}}
+        .get_ic{
+          @include row($num:auto,$outer_gutter:5px,$plusM:true);
+          .row,.row-block,.inner{height:100%;}
+          .row-block.input{width:percentage($get_input_w)}
+          .row-block.btn{width:percentage(1-$get_input_w);
+            .ic_btn{
+              @include radius(5px)
+              background:#86c6e7;
+          
+            }
+          }
+        }
+        .successInfo{
+          color:$water-blue;
+          .title{
+            font-size: $bigSize;
+            .iconfont{
+              margin-right: 10px;
+              font-size: $titleSize;
+            }
+          }
+          .o{color:$orange;}
+        }
+  }
+
+.login_banner{
+    width:100%;height:534px;
+    margin-bottom:60px;
+    .loginZone{
+          .loginInner{padding:40px 15px;}      
+          width:365px;left: 50%;margin-left:150px;
+          height: 100%;
+          position: relative;
+          -webkit-box-shadow: #ddd 0px 0px 10px;
+                box-shadow: #ddd 0px 0px 10px;
+          -webkit-border-radius:20px;
+                  border-radius:20px;
+          @include border();
+          $title_h:50px;
+          $login-form-row-m:15px;
+          $login-form-row-h:35px;
+          
+          .logoZone{
+            text-align: center;
+          }
+         
+          .login-form {
+              .form-row{
+                  &+.form-row{margin-top: $login-form-row-m;}
+                  @extend %clear;
+                  input.input-base{
+                     @include baseInput($height:$login-form-row-h);
+                     @include radius(5px); 
+                  }
+                  &.auto-login-row{line-height:15px;}
+                  
+                  .check{margin-right:3px;}
+                    
+              }
+              .err-row{
+                padding:3px 12px;
+                font-size: $smallSize;
+                padding-top:40px;
+                height: 20px;
+                color:$red; 
+              }
+              .quick_sign_up{
+                  color:$water-blue;
+                  padding:5px 0;
+                  font-size: $smallSize;
+              }
+              .login.button {
+                  display: block;
+                  width: 100%; 
+                  @extend %mar-center;
+                  margin-top: $login-form-row-m;
+                  background: $water-blue;
+                  border-color: rgb(26, 123, 185);
+                  color: rgb(255, 255, 255);
+                  height:($login-form-row-h)+10;
+                  @include radius(5px);
+                  font-size: $mediumSize;
+                  font-weight: 700;
+              }
+          } 
+    }
+} 
+
+.form2{ 
+    $sf_arr2:185px,730px,auto;
+    $sf_h2:30px;
+    font-size: $mediumSize;
+    color:#000;
+    padding-top:45px;
+    .form-row{
+      &+ .form-row{margin-top:20px; }
+      @include form_row($widthArr:$sf_arr2,$height:$sf_h2);
+      &.h-auto{
+        height: auto;  
+        .un-block-1,.un-block-2,.un-block-3{
+            line-height:1;
+            
+        }
+        
+      }
+      .un-block-1{
+        text-align: right;
+        padding-right: 15px;
+      }      
+    }
+    input[type=submit]{
+      background:$blue;
+      color:#fff;
+      height: 40px;
+      width:340px;
+      font-weight: bold;  
+      font-size: inherit;
+    }
+   
+}
+
+$sf_arr:400px,340px,auto;
+$sf_h:35px;
+.form1{ 
+    
+    font-size: $mediumSize;
+    color:#000;
+    .form-row{
+      &+ .form-row{margin-top:20px; }
+      @include form_row($widthArr:$sf_arr,$height:$sf_h);
+      &.h-auto{
+        height: auto;  
+        .un-block-1,.un-block-2,.un-block-3{
+            line-height:1;
+            
+        }
+        
+      } 
+      .un-block-1{
+        text-align: right;
+        padding-right: 15px;
+      }      
+    }
+    input[type=submit]{
+      background:$blue;
+      color:#fff;
+      height: 40px;
+      width:100%;
+    }
+    #checkWrapper{
+      font-size: $mediumSize*0.9;
+      label{
+        margin-bottom: 10px;
+        display: inline-block;
+        width:125px;
+        input{
+          vertical-align: top;
+        }
+      }
+    }
+}
+
+
+
+.ca_table{
+  $rateArr:135,940;
+  $strArr:".one" ".two";
+  @extend %resetTable;
+  @include str_un_widthNew($rateArr,$strArr,$padding:5px);
+  margin-bottom: 150px;
+  td{
+    @include border();
+    padding:18px 20px;
+  }
+  .one{
+    text-align: center;
+    background:#fcfcfc;
+    color:$blue;
+    vertical-align: middle;
+  }
+}

@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+@import "../mySassWare/_variable";
+@import "../mySassWare/_mixin";
+@import "../mySassWare/_function";
+
+$contentSize:0.7rem;
+$contentrp:0.5rem;
+
+.titleInfo{
+  text-align: center;
+  font-size: $mediumSize;
+  @include border($position:bottom);
+  padding-bottom:$mainPadding/3;
+  .sp{
+      &+.sp{margin-left:0.5rem;}
+  }
+}
+
+.mainContent{
+  padding:0 $mainPadding/3;
+}
+
+.content1{
+    font-size: $mediumSize;
+    color:$black;
+    padding-bottom:$mainPadding/2;
+}

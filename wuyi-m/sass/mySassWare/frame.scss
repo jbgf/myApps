@@ -1,0 +1,117 @@
+@import "_variable";
+
+.mainBody{
+    padding-top:$navbarHeight;
+}
+
+.webContainerBox {
+     z-index: 0;
+     display: block;
+     position: relative;
+  
+     
+     margin: 0 auto;
+     -webkit-backface-visibility: hidden
+ }
+
+
+.column{float:left;}
+
+.width66{width:66%;}
+.block{
+    padding-left:15px;padding-right: 15px;float: left;position: relative;
+    min-height: 1px;
+}
+.block-1{width:100%;}
+.block-2{width:50%;}
+.block-3{width:33.3333333333%;}
+.block-4{width:25%;}
+
+
+.container-auto:before,.container-auto:after,
+.container1200:before,.container1200:after,
+.column:before,.column:after,
+.line:before,.line:after,
+.block:before,.block:after{
+    content:" ";display:table;  
+}
+
+.container-auto:after,
+.column:after,
+.line:after,
+.block:after{
+    clear:both;
+}
+
+.centerBg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(#{$baseImgUrl}background.jpg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    
+    overflow: hidden;
+}
+
+.input-base{
+    background-color: #FFF;
+    background-image: none;
+    border: 1px solid #e5e6e7;
+    -webkit-border-radius: 1px;
+            border-radius: 1px;
+    color: inherit;
+    display: block;
+    padding: 6px 12px;
+    -webkit-transition:border-color .15s ease-in-out 0s,-webkit-box-shadow .15s ease-in-out 0s;
+    transition:border-color .15s ease-in-out 0s,-webkit-box-shadow .15s ease-in-out 0s;
+    -o-transition:border-color .15s ease-in-out 0s,box-shadow .15s ease-in-out 0s;
+    transition:border-color .15s ease-in-out 0s,box-shadow .15s ease-in-out 0s;
+    transition: border-color .15s ease-in-out 0s,box-shadow .15s ease-in-out 0s,-webkit-box-shadow .15s ease-in-out 0s;
+    width: 150px;
+    font-size: 14px;
+}
+
+.full-width{width:100%;}
+.extend-width{margin: 0 -9999px;padding: 0 9999px;}
+.mar-center{margin:0 auto;}
+
+.hide{display: none;}
+
+.over-flow {overflow: auto;zoom: 1;}
+.clear:before,.clear:after{content:" ";display:table;}
+.clear:after{clear:both;}
+
+$rowNum:12;
+$row_gutter:15px;
+.rows{
+    &.minusM{margin:{left:-$row_gutter;right:-$row_gutter;}}
+    .innerBlock{padding:{left:$row_gutter;right:$row_gutter;}}
+    @extend %clear;
+}   
+@for $i from 1 through $rowNum {
+        .row-block-#{$i},.row-#{$i}-block{
+            min-height: 1px;
+            @extend %float-l;
+            @extend %relative;
+            @extend %clear;
+        }   
+        .row-block-#{$i}{
+            width:percentage($i/$rowNum); /* eg:1除以12 */
+        }
+        .block-pull-l-#{$i}{
+            margin-left: percentage($i/$rowNum);
+        }
+        .block-pull-r-#{$i}{
+            margin-right: percentage($i/$rowNum);
+        }
+        .row-#{$i}-block{
+            width:percentage(1/$i);    /* eg:十分之一 */
+        }          
+}   
+
+
+
+

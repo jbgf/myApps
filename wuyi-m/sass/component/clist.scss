@@ -1,0 +1,146 @@
+@charset "utf-8";
+@import "../mySassWare/_variable";
+@import "../mySassWare/_mixin";
+@import "../mySassWare/_function";
+
+.contactInfo{
+    
+    .iconfont{color:$mainColor;font-size:$bigSize;vertical-align:middle;margin-right:5px}
+    .ciBlock{
+        background: $super-gray0;
+        padding:3px $mainPadding/3;
+        margin-bottom: 12px; 
+        font-size: $mediumSize;
+        @include f_pictext_row_percentage($width:10,$height:auto,$fpos:"left",$mar-gutter:0);
+    }
+}
+
+.form .formMiddle {
+    overflow: hidden;
+    background: #fff;
+    padding-bottom: 0rem;
+}
+
+.formMiddle {
+    overflow: hidden;
+    padding-bottom: .25rem;
+    table-layout: fixed;
+    border-spacing: 0;
+}
+
+.formMiddle {
+    width: 100%;
+}
+
+
+.newsList{ 
+    .line{
+        padding-left: 1.3rem;
+        clear: both;
+        position: relative;
+        background-repeat: no-repeat;
+        background-position: .25rem 1rem;
+        color:$black;
+        &:before {
+                content: "";
+                position: absolute;
+                width: .2rem;
+                height: .2rem;
+                top: 1rem;
+                left: .75rem;
+                background: #666;
+                -webkit-border-radius: 100%;
+                border-radius: 100%;
+        }
+        &:after {
+            content: "\e672";
+            font-size: .8rem;
+            color: inherit;
+            position: absolute;
+            top: .6rem;
+            right: .4rem;
+        }
+        a {
+            height: auto;
+            line-height: 1rem;
+            word-break: break-all;
+            white-space: normal;
+            text-overflow: clip;
+            -o-text-overflow: clip;
+           
+            display: inline-block;
+            max-width: 100%;
+            text-decoration: none;
+            outline: 0;
+            word-break: keep-all;
+            -o-text-overflow: ellipsis;
+           
+            font-size: .7rem;
+            font-weight: normal;
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .lineBody {
+            padding-top: .6rem;
+            padding-bottom: .4rem;
+        }
+    }
+} 
+
+.newsList1{ 
+    .line{
+        padding:0.6rem 1.3rem 0.7rem 1.3rem;
+        clear: both;
+        position: relative;
+        background-repeat: no-repeat;
+        background-position: .25rem 1rem;
+        font-size: 0.7rem;
+        @include border($position:bottom);
+        &:before {
+                content: "";
+                position: absolute;
+                width: .2rem;
+                height: .2rem;
+                top: 1rem;
+                left: .75rem;
+                background: #666;
+                -webkit-border-radius: 100%;
+                border-radius: 100%;
+        }
+       
+        a {
+            height: auto;
+            line-height: 1rem;
+            word-break: break-all;
+            white-space: normal;
+            text-overflow: clip;
+            -o-text-overflow: clip;
+           
+            display: inline-block;
+            max-width: 100%;
+            text-decoration: none;
+            outline: 0;
+            word-break: keep-all;
+            -o-text-overflow: ellipsis;
+           
+            
+            font-weight: normal;
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .lineBody {
+            
+            
+            color:$black;
+        }
+        .linkText{
+            padding-top:0.2rem;
+            
+            font-size: 0.8em;
+        }
+    }
+} 

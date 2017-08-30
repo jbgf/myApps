@@ -87,8 +87,8 @@ var urlArr = [
 		};
  
 var	newest = urlArr.length-1,
-	arr = /*getSub(17);*/
-		  	getSub(1)[5];
+	arr = getSub(17);
+		  	/*getSub(1)[5];*/
 var baseDir = arr.url;
 
 function getSub(id){

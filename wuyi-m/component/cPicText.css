@@ -1,0 +1,123 @@
+@charset "UTF-8";
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+.picText3 .t {
+  display: block;
+  *display: inline;
+  /*zoom: 1;
+  text-align:center;
+  max-width: 100%;
+  line-height: 100%; */
+  overflow: hidden;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis; }
+
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.picText3 .row-block {
+  float: left; }
+
+.picText3:before, .picText3 .row-block:before, .picText3:after, .picText3 .row-block:after {
+  content: " ";
+  display: table; }
+
+.picText3:after, .picText3 .row-block:after {
+  clear: both; }
+
+.picText3 .row-block {
+  position: relative; }
+
+.picText3 .p img {
+  display: block;
+  width: 100%;
+  height: 100%; }
+
+.picText3 .row-block {
+  float: left; }
+
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+.picText3 .t {
+  display: block;
+  *display: inline;
+  /*zoom: 1;
+  text-align:center;
+  max-width: 100%;
+  line-height: 100%; */
+  overflow: hidden;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis; }
+
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.picText3 .row-block {
+  float: left; }
+
+.picText3:before, .picText3 .row-block:before, .picText3:after, .picText3 .row-block:after {
+  content: " ";
+  display: table; }
+
+.picText3:after, .picText3 .row-block:after {
+  clear: both; }
+
+.picText3 .row-block {
+  position: relative; }
+
+.picText3 .p img {
+  display: block;
+  width: 100%;
+  height: 100%; }
+
+.picText3 .row-block {
+  float: left; }
+
+/*picText3 start*/
+.picText3 {
+  margin-left: -5px;
+  margin-right: -5px; }
+  .picText3 .row-block {
+    width: 50%;
+    min-height: 1px; }
+    .picText3 .row-block .inner {
+      padding: 0 5px;
+      padding-top: 10px;
+      padding-bottom: 10px; }
+  .picText3 .p {
+    height: 150px;
+    position: relative; }
+  .picText3 .t {
+    height: 30px;
+    line-height: 30px;
+    font-size: 15.6px;
+    color: #000; }
+
+/*picText3 end*/
+.enRow {
+  text-align: center;
+  padding: 1rem 0 0.5rem; }
+  .enRow li {
+    display: inline-block; }
+    .enRow li img {
+      display: block; }
+    .enRow li + li {
+      margin-left: 0.33333rem; }
+
+/*# sourceMappingURL=maps/cPicText.css.map */

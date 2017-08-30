@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+@import "../mySassWare/_variable";
+@import "../mySassWare/_mixin";
+@import "../mySassWare/_function";
+
+.button{
+    &.sm{
+        font-size: $smallSize!important;
+    }
+    &.lg{
+        padding:$mainPadding 0;
+        @include radius($mainRadius/2);
+    }
+}
+ 
+.enBtn{
+    background:$mainColor;
+    padding:1px 14px;
+    color:#fff;
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
+}

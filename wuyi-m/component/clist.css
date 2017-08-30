@@ -1,0 +1,170 @@
+@charset "UTF-8";
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.contactInfo .ciBlock .ciBlock-left {
+  float: left; }
+
+.contactInfo .ciBlock {
+  position: relative; }
+
+.contactInfo .ciBlock .ciBlock-left {
+  float: left; }
+
+/*----------------------------------------------------- */
+/* setting scss*/
+/*----------------------------------------------------- */
+/* 开关设置*/
+/*----------------------------------------------------- */
+/*是否兼容ie6-7*/
+/*是否为ie6-8开启css3滤镜兼容，常用于渐变背景 */
+/*是否开启打印样式*/
+/* color start */
+/* color end */
+/* clearfix*/
+/* 闭合子元素的浮动*/
+.contactInfo .ciBlock .ciBlock-left {
+  float: left; }
+
+.contactInfo .ciBlock {
+  position: relative; }
+
+.contactInfo .ciBlock .ciBlock-left {
+  float: left; }
+
+.contactInfo .iconfont {
+  color: #00732e;
+  font-size: 18.72px;
+  vertical-align: middle;
+  margin-right: 5px; }
+
+.contactInfo .ciBlock {
+  background: #f6f6f6;
+  padding: 3px 0.33333rem;
+  margin-bottom: 12px;
+  font-size: 15.6px; }
+  .contactInfo .ciBlock {
+    overflow: hidden; }
+  .contactInfo .ciBlock .ciBlock-left, .contactInfo .ciBlock .ciBlock-right {
+    min-height: 1px; }
+  .contactInfo .ciBlock .ciBlock-left {
+    width: 10%;
+    text-align: left;
+    height: auto; }
+  .contactInfo .ciBlock .ciBlock-right {
+    margin-left: 10%;
+    height: auto; }
+
+.form .formMiddle {
+  overflow: hidden;
+  background: #fff;
+  padding-bottom: 0rem; }
+
+.formMiddle {
+  overflow: hidden;
+  padding-bottom: .25rem;
+  table-layout: fixed;
+  border-spacing: 0; }
+
+.formMiddle {
+  width: 100%; }
+
+.newsList .line {
+  padding-left: 1.3rem;
+  clear: both;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: .25rem 1rem;
+  color: #000; }
+  .newsList .line:before {
+    content: "";
+    position: absolute;
+    width: .2rem;
+    height: .2rem;
+    top: 1rem;
+    left: .75rem;
+    background: #666;
+    -webkit-border-radius: 100%;
+    border-radius: 100%; }
+  .newsList .line:after {
+    content: "\e672";
+    font-size: .8rem;
+    color: inherit;
+    position: absolute;
+    top: .6rem;
+    right: .4rem; }
+  .newsList .line a {
+    height: auto;
+    line-height: 1rem;
+    word-break: break-all;
+    white-space: normal;
+    text-overflow: clip;
+    -o-text-overflow: clip;
+    display: inline-block;
+    max-width: 100%;
+    text-decoration: none;
+    outline: 0;
+    word-break: keep-all;
+    -o-text-overflow: ellipsis;
+    font-size: .7rem;
+    font-weight: normal;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+  .newsList .line .lineBody {
+    padding-top: .6rem;
+    padding-bottom: .4rem; }
+
+.newsList1 .line {
+  padding: 0.6rem 1.3rem 0.7rem 1.3rem;
+  clear: both;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: .25rem 1rem;
+  font-size: 0.7rem;
+  border-bottom: 1px solid #ddd; }
+  .newsList1 .line:before {
+    content: "";
+    position: absolute;
+    width: .2rem;
+    height: .2rem;
+    top: 1rem;
+    left: .75rem;
+    background: #666;
+    -webkit-border-radius: 100%;
+    border-radius: 100%; }
+  .newsList1 .line a {
+    height: auto;
+    line-height: 1rem;
+    word-break: break-all;
+    white-space: normal;
+    text-overflow: clip;
+    -o-text-overflow: clip;
+    display: inline-block;
+    max-width: 100%;
+    text-decoration: none;
+    outline: 0;
+    word-break: keep-all;
+    -o-text-overflow: ellipsis;
+    font-weight: normal;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+  .newsList1 .line .lineBody {
+    color: #000; }
+  .newsList1 .line .linkText {
+    padding-top: 0.2rem;
+    font-size: 0.8em; }
+
+/*# sourceMappingURL=maps/clist.css.map */
