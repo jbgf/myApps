@@ -82,14 +82,19 @@
               var that = this;
               var dom = jsel(that.allData);   /*jsel 插件：使用xpath语法查询*/
               var $clearbtn = that.searchInput.parent('div').find(".clearInput");
-              var onSearch = false;
+              var onSearch = false;          /*是否正在搜索状态*/
               var result;
                   that.searchBtn.on("click",function(){
                       var searchText = that.searchInput.val();
-                      result = dom.selectAll("//*[@keyword='"+searchText+"']");   /*返回一个数组*/
+                      /*返回一个数组*/
+                      /*完全匹配 
+                        "//*[@keyword='"+searchText+"']" 
+                        模糊匹配：见下方
+                      */
+                      result = dom.selectAll("//*[contains(@keyword,'"+searchText+"')]");   
                       /*获取搜索到的数据*/
-                      if(result.length>0){
-                          that.snapShot();     /*记录快照*/
+                      if(searchText !='' && result.length>0){
+                          !that.tempSnapShot['snaped'] && that.snapShot();     /*未记录快照时，记录快照*/
                           that.$chooseZone.empty();
                           layer.load(1, {
                             shade: [0.1,'#fff'], //0.1透明度的白色背景
@@ -118,6 +123,7 @@
                   $clearbtn.on("click",function(){        /*清除输入按钮*/
                       $(this).hide();
                       that.searchInput.val('');
+
                       if(onSearch){
                         that.resetSnapShot()   /*恢复快照*/
                         onSearch = false;
@@ -128,7 +134,7 @@
         multiMenu.prototype.snapShot = function(){
             var that = this;
             var html = that.$chooseZone.html();
-            that.tempSnapShot = {html:html,data:{stack:that.stack,curObj:that.curObj,arrToChoose:that.arrToChoose}};    
+            that.tempSnapShot = {snaped:true,html:html,data:{stack:that.stack,curObj:that.curObj,arrToChoose:that.arrToChoose}};    
             
         }
 
@@ -142,7 +148,8 @@
                 that.curObj = data.curObj;                   /*当前所在的数据节点*/
                 that.arrToChoose = data.arrToChoose;           /*当前待选的数组*/
 
-                that.resetMultiChooseZone();                
+                that.resetMultiChooseZone();   
+                snap['snaped'] = false;                      /*记录状态为未设置快照*/
         }
 
         multiMenu.prototype.operate_stack = function(popNum,index){
@@ -226,6 +233,7 @@
                                          that.cancel(item,dindex);
                                           
                                   }else if(item['tempChoosed']){
+
                                       that.tempResult(true,item,this);        
                                   }else{
                                   
@@ -409,7 +417,9 @@
 
         }
 
-        /*唯一标识验证，建立映射
+        /*唯一标识验证，
+          通过唯一标识验证，检查当前传入的item是否是已经选中的或临时选中的，
+          若是，则同时建立映射；
           1、choosed_arr unique_Arr['a'] 通过updateCoreData 建立顺序一一对应关系；
           2、tempResultStorage unique_Arr['b'] 通过updateCoreData 为顺序一一对应关系
           3、多选区构建时触发*/
@@ -752,7 +762,7 @@
                        that.tempResultStorage.splice(indexToDelete,1);
                        $.each(that.tempResultStorage,function(i,e){
                           if(i>=indexToDelete){
-                              e['tindex']--;                            
+                              e['item']['tindex']--;                            
                           }
                        })
 

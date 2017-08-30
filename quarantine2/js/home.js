@@ -295,10 +295,11 @@ function triggerModalBox(trigger){
               targetInput:".choosedItem",
               enableAddToOuter:1,
               uniqueEnable:true,
+              uniqueTest:["id","mod"],  /*唯一性验证方式为 id&&mod */
               enableKeyWordSearch:true,
               searchInput:".searchInputText",
               searchBtn:".search",       /*搜索按钮selector*/
-              uniqueTest:["id","mod"],  /*唯一性验证方式为 id&&mod */
+              
               success:function(arr,menu){
                     var targetInput = menu.targetInput;
                         menu.updateTargetInput(arr);

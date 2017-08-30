@@ -180,7 +180,7 @@ function setModal(modalSelector,triggerSelector,callBack){
     var close = $(modalSelector).find(".modalBox_close");
     	
         modal.on("close",function(){
-            modal.hide();
+            modal.fadeOut(500);
             /*去除背景固定*/
             $("body").removeClass("fixed");
         });

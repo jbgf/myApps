@@ -52,8 +52,6 @@
                         <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=bT5d3SyGp0VfmwROzCumXsl551zI7WcD"></script>
                           <script type="text/javascript">
                             var map;
-                            
-                                
                             var ll_arr = [
                                             {x:118.107726,y:27.373567}
                                          ];
