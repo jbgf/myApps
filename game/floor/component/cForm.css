@@ -59,10 +59,15 @@
     background: #fff;
     -webkit-border-radius: 0 0 0.6rem 0.6rem;
     border-radius: 0 0 0.6rem 0.6rem; }
+    .info_wrapper .info_form_inner.type2 {
+      padding-left: 0;
+      padding-right: 0; }
+      .info_wrapper .info_form_inner.type2 .ab {
+        padding: 0.3rem 0.6rem; }
     .info_wrapper .info_form_inner .ab {
       padding: 0.3rem 0; }
     .info_wrapper .info_form_inner .tips {
-      font-size: 0.72rem; }
+      font-size: 0.64rem; }
       .info_wrapper .info_form_inner .tips {
         overflow: hidden; }
       .info_wrapper .info_form_inner .tips .tips-left, .info_wrapper .info_form_inner .tips .tips-right {

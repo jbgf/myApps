@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+<title>中秋博饼</title>
+
+<style>
+* { margin: 0;  padding: 0;font-family:'微软雅黑', '华文细黑', Arial; }
+#tu { width:100%; margin-top:85%;}
+#tu img { margin-left:4%; width:12%; float:left}
+#share img {margin-left:10%; width:35%; float:left }
+</style>
+
+</head>
+
+<body style="background:url(images/bg.jpg); width:100%; background-repeat:no-repeat; background-size:cover;">
+
+	<div id="tu">
+		<img src="images/1.png" />
+		<img src="images/2.png" /> 
+		<img src="images/3.png" /> 
+		<img src="images/4.png" /> 
+		<img src="images/5.png" /> 
+		<img src="images/6.png" />  
+	</div>
+	<div style="clear:both"></div>
+	<div id="start" style="text-align:center; display:block; margin-top:30px">
+		<img src="images/start.png" style="width:30% ; margin:0 auto" />
+	</div>
+	<div id="share" style="display:none; width:100%; margin-top:30px">
+		<img id="restart" src="images/btn1.png" />
+		<img id="fenxiang" src="images/btn2.png" />
+	</div>
+	<div id="fuceng" style="display:none;width: 100%; height: 100%; position: fixed; z-index: 90; top: 0px; left: 0px; background-color:#000; filter:alpha(opacity=70); opacity:0.7;text-align:center;">
+	</div>
+	<div id="tishi" style="width: 100%; height: 172px; position: fixed; z-index: 90; top: 100px; left: 0px; text-align:center;display:none; color:#fff">点击右上角分享到朋友圈</div>
+	
+<script type="text/javascript">
+var obj=[
+	{"guan":"秀才","shuo":"一秀","number":"436253"},
+	{"guan":"举人","shuo":"二举","number":"434265"},
+	{"guan":"进士","shuo":"四进","number":"242261"},
+	{"guan":"探花","shuo":"三红","number":"441246"},
+	{"guan":"榜眼","shuo":"对堂","number":"431256"},
+	{"guan":"状元","shuo":"四红","number":"144443"},
+	{"guan":"状元","shuo":"五子","number":"444344"},
+	{"guan":"状元","shuo":"五红","number":"666656"},
+	{"guan":"状元","shuo":"黑六勃","number":"222222"},
+	{"guan":"状元","shuo":"遍地锦","number":"111111"},
+	{"guan":"状元","shuo":"红六勃","number":"444444"},
+	{"guan":"状元","shuo":"插金花","number":"144414"},
+]
+
+var res=Math.round(12*(Math.random()));
+var oDiv=document.getElementById('tu');
+var aDiv=oDiv.getElementsByTagName('img');
+var timer='';
+var temp=0;
+
+var start=document.getElementById('start');
+var share=document.getElementById('share');
+var restart=document.getElementById('restart');
+var fenxiang=document.getElementById('fenxiang');
+var fuceng=document.getElementById('fuceng');
+
+start.onclick=function(){
+		clearInterval(timer);
+		timer=setInterval(function(){
+			for( var i=0; i<6; i++)
+				{
+					var a='';
+					a+=Math.ceil(Math.random()*6);
+					aDiv[i].src="images/"+a+".png"
+					
+					}
+		
+			temp++;
+			if (temp>50)
+			{
+				clearInterval(timer);
+				var s=obj[res].number.toString();
+				var arr=s.split('');
+				for(var i=0; i<aDiv.length; i++)
+				{
+			aDiv[i].src="images/"+arr[i]+".png"
+				}
+			var contant='<p style="color:#fff; font-size:16px; margin-top:30px">恭喜您获得了';
+			contant+= '<span style="color:red; font-size:20px">'
+			contant+=obj[res].guan+":"+obj[res].shuo;
+			contant+='</span></p>';
+			start.innerHTML=contant
+			share.style.display="block"
+			}
+		restart.onclick=function(){
+			window.location.reload();
+			}
+		fenxiang.onclick=function(){
+			fuceng.style.display="block";
+			tishi.style.display="block";
+			}
+		fuceng.onclick=function(){
+			fuceng.style.display="none";
+			tishi.style.display="none";
+			}
+		tishi.onclick=function(){
+			fuceng.style.display="none";
+			tishi.style.display="none";
+			}
+	},30)
+	
+}
+
+function WeiXinShareBtn() {
+	WeixinJSBridge.invoke('shareTimeline', {
+		"title": "亲戚买房",
+		"desc": "关注亲戚买房，中秋博饼玩不停",
+		"img_url": "images/logo.jpg"
+	});
+}
+</script>
+
+</body>
+</html>

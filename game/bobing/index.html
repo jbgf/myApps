@@ -1,0 +1,507 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>中秋博饼活动【演示】</title>
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" type="text/css" href="/demo_mdlbobing/Public/Css/layout.css">
+<script type="text/javascript" src="/demo_mdlbobing/Public/Js/jquery-1.5.1.min.js"></script>
+<script>
+var img_dir = "/demo_mdlbobing/Public/Images";
+var app_dir = "/demo_mdlbobing/index.php";
+</script>
+<script type="text/javascript" src="/demo_mdlbobing/Public/Js/rolls.js?" +math.random()=""></script>
+<!-- <script type="text/javascript" src="/demo_mdlbobing/Public/Js/wxShare.js"></script> -->
+<script type="text/javascript">
+    
+    
+    function doNotice()
+    {   
+       $(".notice").css("display","none");
+        $(".reg").css("display","none");
+        
+    }
+    
+    function reg()
+    {
+           $(".reg").css("display","block");
+     }
+     
+    
+function game()
+{
+    //这边最好做ajax判断
+
+    var tel = $("#phone").val();
+    var name = $("#name").val();
+    
+    var survey_result = "";
+    
+    var prize_zone = "";
+    
+
+    var err_msg = "";
+    var reg_tel=new RegExp("^1[3,5,4,7,8]{1}[0-9]{9}$");
+    var reg_name = new RegExp("^[\\u4e00-\\u9fa5]{2,6}$"); 
+
+    if (name == '') {
+        alert("姓名不能为空!");
+        $("#name").focus();
+        return;
+    }else if(!reg_name.test(name)){
+        alert("姓名请输入2-6个中文");
+        $("#name").focus();
+        return;
+    }
+    
+    if (tel == '') {
+        alert("手机不能为空!");
+        $("#phone").focus();
+        return;
+    } else if(!reg_tel.test(tel)){
+        alert("请输入正确的手机号码!");
+        $("#phone").focus();
+        return;
+    }
+
+
+        $.ajax({
+        url : '/demo_mdlbobing/index.php/Index/doReg',
+        data : {
+                username : name,
+                userphone : tel
+            },
+        type : 'post',
+        dataType : "json",
+        async : false,
+        error : function(ret, error) {
+            alert(ret.responseText);
+        },
+        success : function(ret) {
+            
+            if(ret.status=='ok'){
+                //注册成功，需要重新设置值给体验次数
+                location.reload(); 
+                //$("#left_times").val(ret.left_times);
+                // $("#uid").val(ret.uid);
+                
+                // $("#id_leftcount").html(ret.left_times);
+                // $("#current_username").html(ret.user_name);
+                // $("#id_gamecoin").html(0);
+                // $('.homePageClass').hide();
+                // $('.bobingPageClass').show();
+                
+            }else{
+                alert(ret.message);
+                
+                return;
+                
+            }
+        }
+        });
+    }
+
+    var setFlag = false;
+        $(document).ready(function() {
+            $("#bom").click(function() {
+                $(".panel").slideToggle(1000);
+                
+                if(setFlag){
+                    
+                    setTimeout(aaaaa,1000);
+                    
+                    setFlag = false;
+                }else{
+                    $(".bbbb").css("z-index","5");
+                    setFlag = true;
+                }
+                
+            });
+            
+            $("#panel").click(function() {
+                $(".panel").slideToggle(1000);
+                
+                if(setFlag){
+                    
+                    setTimeout(aaaaa,1000);
+                    
+                    setFlag = false;
+                }else{
+                    $(".bbbb").css("z-index","5");
+                    setFlag = true;
+                }
+                
+            });
+        });
+            
+            
+    $(function() {
+        $('#startButton').click(function() {
+            
+            if(document.getElementById("game_finish").value){
+                alert(document.getElementById("game_finish").value);
+                return false;
+            }
+            
+            var need_login = '0';
+            //判断玩得次数是否达到
+            //var left_times = document.getElementById("left_times").value;
+            var bbCount = parseInt($("#id_leftcount").html());
+            
+            if(need_login==0 && bbCount<=0){
+                alert("官人，很遗憾的告诉你，您今日博饼机会已用完。客官表伤心，转发活动至朋友圈就可额外获得50分哦，通知小伙伴们一起玩耍吧！");
+                return false;
+            }else if(need_login==0 && bbCount>0){
+                //进入主页面
+                $('.homePageClass').hide();
+                $('.bobingPageClass').show();
+                flag=1; //开启博饼标识    
+            }else if(need_login==1){
+                reg();//注册框
+                
+            }
+            
+        });
+        
+        //$('.ruleDiv').on("click", function() {
+        //  $(this).hide();
+        //});
+        
+        $('#gameRule').click(function() {
+            
+            //$('.hdgz-layout').show();
+            $('.notice').show();
+        });
+        
+        $('#rank').click(function() {
+            window.location.href="/demo_mdlbobing/index.php/Index/topN.html";
+        });
+        
+        
+
+    });
+    
+            
+            function aaaaa(){
+                $(".bbbb").css("z-index","2000");
+                
+            }
+        </script>
+<style type="text/css">
+
+.ruleDiv {
+    position:absolute;left:0;top:0;width:100%;height:100%;background:url(/demo_mdlbobing/Public/Images/rules.jpg) no-repeat;z-index:9;background-size:100% 100%;display:none;
+}
+
+.flipd {
+    width: 50%;
+}
+p {
+    margin: 0;
+    padding: 0;
+}
+img {
+    margin: 0;
+    border: 0;
+    display: block;
+}
+.aaaa {
+    z-index: 1000;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    _position: absolute;
+ _top: expression(document.documentElement.clientHeight + document.documentElement.scrollTop - this.offsetHeight);
+}
+.bbbb {
+    z-index: 2001;
+    position: fixed;
+    left: 49.5%;
+    bottom: 0px;
+    _position: absolute;
+ _top: expression(document.documentElement.clientHeight + document.documentElement.scrollTop - this.offsetHeight);
+}
+div.panel, p.flip {
+    margin: 0px;
+    text-align: center;
+    background: #ea5514;
+}
+div.panel {
+    display: none;
+}
+#bom {
+    width: 100%;
+}
+
+.homePageClass {
+    position:absolute;
+    left:0;top:0;
+    width:100%;
+    height:100%;
+    background: rgba(0, 0, 0, .8)
+        url(/demo_mdlbobing/Public/Uploads/55bc663d72f12.jpg) right top no-repeat;
+    background-size: 100% 100%;
+    z-index:2;
+}
+
+.bobingPageClass {
+    position:absolute;
+    left:0;top:0;
+    width:100%;
+    height:100%;
+    
+    background-size: 100% 100%;
+    
+    display:none;
+}
+
+.notice,.reg,.gamedone{background:#fff; width:90%; height:490px; position:absolute; z-index:2; left:5%; top:28%; line-height:22px; font-size:14px; border-radius:5px;  color:#CB7B03;display:none}
+.notice span,.reg span,.gamedone span{ display:block; height:25px; line-height:25px; text-align:center; background:#00C; color:#FFF; border-radius:2px; }
+.notice a,.reg a{ float:right; margin-top:-5px;}
+
+.content{ position:absolute;bottom:10%; width:100%; padding:5%,5%;  text-align:center}
+.content img{ height:40px;}
+.reg{ height:200px; }
+.reg input{ width:100%; height:30px; line-height:30px; font-size:16px; margin-top:10px;}
+.submit, .txtbtn{ width:100%; height:40px; line-height:40px; border-radius:5px; background:#090; color:#FFF; margin-top:20px; text-align:center; font-size:16px; font-weight:bolder;letter-spacing:5px}
+
+
+
+#mcover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    z-index: 20000;
+}
+
+</style>
+</head>
+<body>
+<input type="hidden" id="is_share" value="0">
+<input type="hidden" id="uid" value="117">
+ <input type="hidden" id="game_finish" value="">
+<input type="hidden" id="wx_share_title" value="博饼活动开始啦">
+<input type="hidden" id="wx_share_desc" value="">
+<input type="hidden" id="wx_share_pic" value="http://demo.wayhu.cc/demo_mdlbobing/Public/Uploads/55b72fae6b31e.png">
+<input type="hidden" id="wx_share_url" value="http://demo.wayhu.cc/demo_mdlbobing/index.php/Index/index.html">
+<div id="mcover" onclick="$(this).hide()">
+    <img src="/demo_mdlbobing/Public/Images/guide.png">
+</div>
+
+
+<div class="homePageClass" style="display: none;">
+<!-- <img  id="startButton"  style="z-index:2;left:24%;width:52%;bottom:40%;position: absolute;" src="/demo_mdlbobing/Public/Images/startbtn.png"/> -->
+<img id="startButton" style="top: 60%;left: 30%;width:45%;font-size:20px;position: absolute;cursor:pointer;" src="/demo_mdlbobing/Public/Images/startbtn.png">
+<img id="gameRule" style="top: 71%;left: 30%;width:45%;font-size:20px;position: absolute;cursor:pointer;" src="/demo_mdlbobing/Public/Images/rulebtn.png">
+<img id="rank" style="top: 81%;left: 30%;width:45%;font-size:20px;position: absolute;cursor:pointer;" src="/demo_mdlbobing/Public/Images/rankbtn.png">
+
+
+<div class="notice" id="ruleDiv" style="height:auto;">
+<div style="padding:10px;line-height:20px;">
+   <span>规则说明</span>
+
+    <div style="font-size:15px;margin-top:29px;line-height:25px">1.每人每天可以博饼10次；<br>
+2.第一次分享朋友或者朋友圈可以额外活动50积分；<br>
+3.按照最终的排名给予奖励；<br>
+4.活动时间2015-09-01至2015-11-01；<br>
+5.本次活动的解释权归XXX所有。<br>
+</div>
+<div class="submit" onclick="doNotice()">关闭</div>
+  </div>
+</div> 
+
+<!-- rule -->
+<!-- <div class="ruleDiv"></div> -->
+<div class="reg">
+<div style="padding:10px;">
+ <span>为确保顺利领奖,请填写真实信息</span>
+    <input type="text" id="name" placeholder="请输入您的姓名" value="" maxlength="11">
+    <input type="tel" id="phone" placeholder="请输入您的手机号码" value="" maxlength="11">
+   <div class="txtbtn" style="width:40%;float:left;margin-bottom:5px;margin-left:6%" onclick="game()">确定</div>
+   <div class="txtbtn" style="width:40%;float:left;margin-bottom:5px;margin-left:6%" onclick="doNotice()">关闭</div>
+</div>
+</div>
+    
+
+</div>
+<div class="bobingPageClass" style="display: block;">
+<form name="form1" method="post" action="" id="form1">
+<div id="getScoreValue"></div>
+  <div style="margin:5px auto 60px  auto;">
+    <div style=" height:60px; width:320px; margin:0 auto;"><!-- <img src="/demo_mdlbobing/Public/Images/wenzi.png" width="50%" align="left" /><img src="/demo_mdlbobing/Public/Images/biaoyu.png"  height="30%"align="right" /> -->
+    
+      <div class="note" style="width:95%; background:none; float:left; padding:2px; margin:10px 0 0 0;"> <span id="current_username"> 往往</span>，您还有 <span id="id_leftcount" style="font-weight: bold;">9969</span> 次博饼机会，累计积分: <span id="id_gamecoin" style="font-weight: bold;">330</span> 分 </div>
+    </div>
+    
+   <div class="bowl">
+     <div class="note" id="txt" style="position: absolute; top: 30%; font-weight: normal; width: 100%; height: 28px; line-height: 28px; font-size: 15px; margin: 0px auto; background: rgba(0, 0, 0, 0.419608); border-radius: 17px; color: white; z-index: 999; text-align: center; display: block;">啥也没有，再来一次（0分）</div>
+        <img src="/demo_mdlbobing/Public/Images/wan.png" alt="">
+        <div class="logo" style="top:30px;"> <img src="/demo_mdlbobing/Public/Images/logo.png" width="100%"> </div>
+     
+        <em class="dice dice1 active" style="display: inline;"><img src="/demo_mdlbobing/Public/Images/dian1.png" alt=""></em>
+        <em class="dice dice2" style="top: 45%; left: 55%; display: inline;"><img src="/demo_mdlbobing/Public/Images/dian5.png" alt=""></em>
+        <em class="dice dice3" style="top: 54%; left: 45%; display: inline;"><img src="/demo_mdlbobing/Public/Images/dian3.png" alt=""></em>
+        <em class="dice dice4" style="top: 41%; left: 40%; display: inline;"><img src="/demo_mdlbobing/Public/Images/dian1.png" alt=""></em>
+        <em class="dice dice5" style="top: 58%; left: 60%; display: inline;"><img src="/demo_mdlbobing/Public/Images/dian6.png" alt=""></em>
+        <em class="dice dice6" style="top: 62%; left: 35%; display: inline;"><img src="/demo_mdlbobing/Public/Images/dian2.png" alt=""></em>
+        
+    </div>
+    <div style="margin: 7% auto 0px auto;" align="center"> <span onclick="begin_func()" class="startRoll"><img src="/demo_mdlbobing/Public/Images/dianji.png" width="200" height="35"></span></div>
+    
+    <div style="margin: 9% auto 0px auto;" align="center">
+                <!-- <p>微信每天分享到朋友圈可额外获得50积分</p> -->
+            <span class="boyiba" style="font-weight: normal;" onclick="window.location.reload();">返回首页</span> <span class="boyiba" style="font-weight: normal;" onclick="addOne()">马上分享</span>
+            
+        </div>
+  </div>
+  <!-- <span style="position: absolute;left: 33%;font-size: 12px;color: gray;text-align: center;">技术支持：威虎科技</span> -->
+</form>
+</div>
+
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js?"></script>
+
+<script language="javascript">
+wx.config({
+    debug: false,
+    appId: 'wxaab7dd3516ed449e',
+    timestamp: '1504143819',
+    nonceStr: 'pVpNDRypSOvIs1Tv',
+    signature: '2de668347ddd7ea01aae2557b63e2c1135c82e9e',
+      jsApiList: [
+        'onMenuShareTimeline',
+        'onMenuShareAppMessage',
+        'hideMenuItems'
+        ]
+  });
+  wx.ready(function () {
+    // 在这里调用 API
+    wx.hideMenuItems({
+      menuList: [
+        'menuItem:copyUrl',
+        'menuItem:openWithQQBrowser',
+        'menuItem:share:email',
+        'menuItem:openWithSafari',
+         "menuItem:share:qq"
+      ],
+      success: function (res) {
+      },
+      fail: function (res) {
+      }
+    });
+    shareFn();
+
+    
+  });
+  
+  wx.error(function (res) {
+    
+    alert(res.errMsg);
+});
+
+function setShareCount() {
+    $.ajax({
+        url : "/demo_mdlbobing/index.php/Index/setShareCount",
+        data : {},
+        dataType : "json",
+        type : "post",
+        success : function(data) {
+            //alert(data.msg);
+        }
+        
+    });
+    
+}
+
+function addScore(){
+     $.ajax({
+                url : '/demo_mdlbobing/index.php/Index/doScoreAdd',
+                data : {
+                        //score : score
+                    },
+                type : 'post',
+                dataType : "json",
+                async : false,
+                error : function(ret, error) {
+                    alert(ret.responseText);
+                },
+                success : function(ret) {
+                    if(ret.status=='ok'){
+                        
+                        alert("分享成功，获赠50积分！");
+                        location.reload(); 
+                    }else{
+                        //alert(ret.message);
+                        //location.reload(); 
+                    }
+                }
+        });
+}
+function shareFn() {
+        wx.onMenuShareAppMessage({
+      title: document.getElementById("wx_share_title").value,
+      desc: document.getElementById("wx_share_desc").value,
+      link: document.getElementById("wx_share_url").value,
+      imgUrl: document.getElementById("wx_share_pic").value,
+      trigger: function (res) {
+        //alert(document.getElementById("wx_share_desc").value);
+        //$("#wx_share_desc").val(ret.wx_share_msg);
+       // alert('用户点击发送给朋友');
+      },
+      success: function (res) {
+        setShareCount();
+       var uid = document.getElementById("uid").value;
+      
+       if(uid){
+           if($("#id_leftcount").html()==0 && document.getElementById("is_share").value==0){
+            
+             addScore();
+           }
+       }
+       
+      
+      },
+      cancel: function (res) {
+       // alert('已取消');
+      },
+      fail: function (res) {
+       // alert(JSON.stringify(res));
+      }
+    });
+    
+    wx.onMenuShareTimeline({
+     title: document.getElementById("wx_share_desc").value,
+      link: document.getElementById("wx_share_url").value,
+      imgUrl: document.getElementById("wx_share_pic").value,
+      
+      trigger: function (res) {
+       // alert('用户点击分享到朋友圈');
+      },
+      success: function (res) {
+      setShareCount();
+       var uid = document.getElementById("uid").value;
+      
+       if(uid){
+           if($("#id_leftcount").html()==0 && document.getElementById("is_share").value==0){
+            
+             addScore();
+           }
+       }
+      },
+      cancel: function (res) {
+       // alert('已取消');
+      },
+      fail: function (res) {
+        //alert(JSON.stringify(res));
+      }
+    });
+        
+    }
+</script>
+
+</body><iframe id="ping_iframe" src=" weixinping://iframe " style="display: none;"></iframe><iframe id="__WeixinJSBridgeIframe_SetResult" src="weixin://private/setresult/SCENE_HANDLEMSGFROMWX&amp;eyJfX2Vycl9jb2RlIjoiZXY0MDQifQ==" style="display: none;"></iframe><iframe id="__WeixinJSBridgeIframe" src="weixin://dispatch_message/" style="display: none;"></iframe></html>

@@ -17,6 +17,9 @@
         .block{
             @extend %flexCenter;
         }
+       &:nth-child(even){
+            background:#f7f7f7;
+       }
     }
     .avatar1 {width:2rem;display:inline-block;margin-right:$mainPadding/2}
 }

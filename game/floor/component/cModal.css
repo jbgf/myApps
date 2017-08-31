@@ -101,6 +101,8 @@
 .modal-prizeList li {
   overflow: hidden;
   padding: 0.3rem 0; }
+  .modal-prizeList li:nth-child(even) {
+    background: #f7f7f7; }
 
 .modal-prizeList .avatar1 {
   width: 2rem;

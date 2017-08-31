@@ -73,6 +73,8 @@ img{margin:auto;max-width:100%;};
     line-height: 1.7;
 }
 .font-weight{@extend %font-weight;}
+
+
 .smallSize{font-size:$smallSize;}
 .baseSize{@extend %baseSize;}
 .mediumSize{font-size: $mediumSize!important;}

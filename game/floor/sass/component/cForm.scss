@@ -24,6 +24,11 @@
     
   }
   .info_form_inner{
+     &.type2{
+      padding-left:0;
+      padding-right: 0;
+      .ab{padding:$mainPadding/2 $mainPadding;}
+     }
      padding:0 1rem 1rem 1rem;  
      background:#fff;
      -webkit-border-radius:0 0 $mainRadius $mainRadius;

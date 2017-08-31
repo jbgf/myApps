@@ -9,7 +9,9 @@
 <script type="text/javascript" src="js/jquery.multiMenu.js"></script>
 <script type="text/javascript" src="js/jquery.inputHistory.js"></script>
 <script type="text/javascript" src="js/home.js"></script>
+<script type="text/javascript">
     
+</script>    
      <div class="centerMiddle content-bg ">
         <div class="centerWrapper container1000 ">
             <div class="commonWrapper">

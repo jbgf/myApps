@@ -4,7 +4,9 @@
 @import "../mySassWare/_mixin";
 @import "../mySassWare/_function";
 
-
+.scaleImg{
+  visibility: hidden;
+}
 
 .fixed{
   overflow-y: hidden !important;
@@ -36,7 +38,6 @@
     background:$white;
     @include border($position:top);
     position:fixed;
-    /* position:absolute; */
     bottom:0;
     left:0;
     right:0;
@@ -46,9 +47,7 @@
     .avatar1{}
     .block{
       float:left;
-
       .btn1{
-        
         display:inline-block;img{vertical-align:middle;}
         &+.btn1{
           margin-left: 1rem;
@@ -61,6 +60,6 @@
         @include radius($radius);
       }
     }
-    input{background:$little-gray;width:90%;padding-left:5%;height:$bheight;@include radius($radius);}
+    input{background:$little-gray;width:90%;padding-left:5%;margin-left:5%;height:$bheight;@include radius($radius);}
 }
 

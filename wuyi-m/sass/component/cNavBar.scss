@@ -95,17 +95,21 @@
  }        
 
  .navBaseIcon .navItemIcon {
+    $fontsize:1.5rem;
     background-repeat: no-repeat;
     background-repeat: no-repeat;
     -webkit-background-size: 90% 90%!important;
             background-size: 90%!important;
     width: 2rem;
-    height: 2rem;
+    height: $fontsize;
     display: inline-block;
     vertical-align: middle;
-    margin-left: .5rem
+    margin-left: .5rem;
+    &.icon-navItemIcon:before {
+        font-size: $fontsize;
+        color: #666;
+    }
 }
-
 .navBaseIcon .navItem a {
     line-height: 2.75rem;
     text-align: left
@@ -239,12 +243,10 @@
 
 .navbar .itemSelected .icon-navItemIcon:before {
     color: $mainColor;
+
 }
 
-.navBaseIcon .icon-navItemIcon:before {
-    font-size: 2rem;
-    color: #666;
-}
+
 
 .navItem.itemSelected .navItemName {
     color: $mainColor;

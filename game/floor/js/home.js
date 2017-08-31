@@ -294,15 +294,15 @@ function scaleImg2(imgSelector){
     var imgs = $(imgSelector),length = imgs.length;
         imgs.each(function(i,e){
             var src = e.src;
-                e.src = "";
+                $(e).removeAttr("src");
                 e.src = src;
                 e.onload = function(){
-                    
                     e.width = e.width/2;
-                    
+                    $(e).css({'visibility':'visible'});
                 }
                
         })
-        setTimeout(function(){$(imgSelector).show()},500);
+        
+        //setTimeout(function(){$(imgSelector).show()},500);
 }
 

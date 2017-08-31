@@ -61,7 +61,7 @@
                                     
                                 </label>
                                 
-                                <label><input id="adr" type="text" name="" placeholder="联系地址 "></label>
+                                <label><input id="adr" type="text" name="" placeholder="联系地址" readonly="true"></label>
                                  <label><input id="adr_details" type="text" name="" placeholder="详细地址 "></label>
                                  <label><input id="adr_add" type="text" name="" placeholder="地址备注 "></label>
                                 
@@ -158,7 +158,7 @@
                                 <div class="block">用户名</div>
                                 <div class="block">中奖楼层</div>
                             </ul>
-                            <div class="info_form_inner">
+                            <div class="info_form_inner type2">
                                 
                                 <ul class="hpm02_mainHeight">
                                    
@@ -329,7 +329,8 @@
             var favorsrc =  favorImg.attr("src");          
             modalf.on("close",function(){
 
-                favorImg.attr('src','');
+                /*favorImg.attr('src','');*/
+                favorImg.removeAttr('src');
             })
             modalf.on("show",function(){
                 favorImg.attr('src',favorsrc);
@@ -344,7 +345,7 @@
                 setModal(".modal-form")
             }
 
-            if(1){
+            if(0){
                 var offsettop = $('.floorList li:last').offset().top; 
                 $('html,body').animate({scrollTop:offsettop});
             }

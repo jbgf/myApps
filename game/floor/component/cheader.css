@@ -28,7 +28,7 @@
 .header .header-left ul:after {
   clear: both; }
 
-.header {
+.header, .header .header-right .addonImg {
   position: relative; }
 
 .header .header-right {
@@ -63,7 +63,7 @@
 .header .header-left ul:after {
   clear: both; }
 
-.header {
+.header, .header .header-right .addonImg {
   position: relative; }
 
 .header .header-right {
@@ -74,7 +74,7 @@
   border-bottom: 1px solid #ddd; }
   .i-header .i-title {
     color: #333;
-    font-size: 1.08rem; }
+    font-size: 0.96rem; }
     .i-header .i-title .button {
       margin-left: 0.3rem; }
     .i-header .i-title .icon {
@@ -82,7 +82,7 @@
 
 .pl-first {
   color: #019bfd;
-  font-size: 0.72rem;
+  font-size: 0.64rem;
   text-align: center;
   overflow: hidden;
   background: #e5f2fd;
@@ -90,12 +90,12 @@
 
 .header4 {
   color: #e7585a;
-  font-size: 1.08rem;
+  font-size: 0.96rem;
   padding: 0.3rem 0; }
 
 .header3 {
   color: #019bfd;
-  font-size: 1.08rem;
+  font-size: 0.96rem;
   padding: 0.3rem 0; }
 
 .header2 img {
@@ -145,9 +145,21 @@
   .header .header-right {
     text-align: center; }
     .header .header-right .addonImg {
-      display: inline-block; }
+      display: inline-block;
+      vertical-align: middle; }
       .header .header-right .addonImg img {
         display: block; }
+      .header .header-right .addonImg:after {
+        position: absolute;
+        right: 0px;
+        width: auto;
+        color: #e21939;
+        content: "●";
+        font-size: 15px;
+        right: -0.21333rem;
+        top: 0;
+        font-size: 0.64rem;
+        line-height: 1px; }
   .header .block {
     padding: 0.4rem 0;
     font-weight: bold;

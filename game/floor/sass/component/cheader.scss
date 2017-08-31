@@ -74,10 +74,16 @@
       }
     }
     .header-right{
-      text-align: center;
+      text-align:center;
       .addonImg{
         display: inline-block;
+        vertical-align: middle;
         img{display:block;}
+        @include persudo($color:$red,$content:"●",$position:after,$bg:none){
+          right:-$smallSize/3;
+          top:0; 
+          font-size: $smallSize;
+        };
       }  
     }
     

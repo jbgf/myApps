@@ -4,6 +4,8 @@
 	<title></title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/layer/layer.js"></script>
 	<style type="text/css">
 		.link{
 			width:670px;
@@ -36,5 +38,17 @@
 			<a href="introduce.html"></a>
 		</div>
 	</div>
+	<script type="text/javascript">
+		$(function(){
+
+			layindex = layer.load(1, {
+	                            shade: [1,'#fff'] //0.1透明度的白色背景
+	                            
+	        });
+		})
+		window.onload = function(){
+			layer.close(layindex);
+		}
+	</script>
 </body>
 </html>

@@ -6,6 +6,7 @@ var gulp=require('gulp'),
 	gulpif=require('gulp-if'),
 	plumber = require('gulp-plumber'),
 	uglify=require('gulp-uglify'),
+	cleanCSS = require('gulp-clean-css'),
     concat = require('gulp-concat'),
     sourcemaps = require('gulp-sourcemaps'),
 	connect = require('gulp-connect-php'),
@@ -87,8 +88,8 @@ var urlArr = [
 		};
  
 var	newest = urlArr.length-1,
-	arr = getSub(17);
-		  	/*getSub(1)[5];*/
+	arr = /*getSub(17);*/
+		  	getSub(1)[5];
 var baseDir = arr.url;
 
 function getSub(id){
@@ -124,23 +125,24 @@ gulp.task('sass-component',function(){
 			     
 });
 
-gulp.task('concat', function() {                                //- 创建一个名为 concat 的 task
+gulp.task('concatComponents', function() {                                //- 创建一个名为 concat 的 task
     gulp.src([''+baseDir+'/'+baseComponent+'/*.css'])    //- 需要处理的css文件，放到一个字符串数组里
         .pipe(concat('component.css'))                            //- 合并后的文件名
         .pipe(gulp.dest(''+baseDir+'/css/'))                               //- 输出文件本地
 
 });
+
+gulp.task('minify-css', () => {
+  return gulp.src(''+baseDir+'/css/*.css')
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(gulp.dest(''+baseDir+'/dist/css/'));
+});
+
 /*优化线路*/
 gulp.task('build',function(callback){
-	runSequence('concat',callback);
+	runSequence(['concatComponents','minify-css'],callback);
 })
-/*
-gulp.task('build',function(callback){
-	runSequence('clean:dest',
-		['sass','useref','images','fonts'],
-		callback)
-})
-*/
+
 /*开发线路*/
 gulp.task('default',function(callback){
 	runSequence(['browserSync','watch'],
@@ -153,11 +155,10 @@ gulp.task('browserSync',function(){
         }
     });*/
 	browserSync({
-
 		proxy: "localhost:8001"			//处理php文件，gulp-connect-php默认监听8000，直接设置port：8000会发生占用，启用8001；
 	})
 });
-gulp.task('watch',[/*'browserSync',*/'connectPhp'],function(){
+gulp.task('watch',['connectPhp'],function(){
 	 gulp.watch(['./'+baseDir+'/**/*.html','./'+baseDir+'/**/*.js','./'+baseDir+'/**/*.css','./'+baseDir+'/**/*.php'],browserSync.reload);	 
 	 gulp.watch(watchSassArr,['sass']);
 });

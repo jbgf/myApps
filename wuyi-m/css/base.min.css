@@ -3237,51 +3237,6 @@
      vertical-align: middle
  }
 
- .navBaseIcon .icon-navItemIcon:before {
-     content: "\e6df";
-     font-size: 1.5rem;
-     color: #fff
- }
-
- .navItem_3 .icon-navItemIcon:before {
-     content: "\e686"
- }
-
- .navItem_6 .icon-navItemIcon:before {
-     content: "\e6ac"
- }
-
- .navItem_7 .icon-navItemIcon:before {
-     content: "\e669"
- }
-
- .navItem_9 .icon-navItemIcon:before {
-     content: "\e6b6"
- }
-
- .navItem_10 .icon-navItemIcon:before {
-     content: "\e640"
- }
-
- .navItem_11 .icon-navItemIcon:before {
-     content: "\e65d"
- }
-
- .navItem_12 .icon-navItemIcon:before {
-     content: "\e726"
- }
-
- .navItem_101 .icon-navItemIcon:before {
-     content: "\e6a8"
- }
-
- .navItem_102 .icon-navItemIcon:before {
-     content: "\e667"
- }
-
- .navItem_103 .icon-navItemIcon:before {
-     content: "\e640"
- }
 
  .faisco-icons-contact1:before {
      content: "\e640"
@@ -14566,9 +14521,8 @@
  }
 
  .fkarea-ui-scroller-mask .ui-scroller dd {
-     padding;
-     0;
-     margin: 0;
+     padding:0;
+     margin:0;
      overflow: hidden;
      -o-text-overflow: ellipsis;
         text-overflow: ellipsis;
