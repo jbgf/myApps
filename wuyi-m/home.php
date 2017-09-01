@@ -16,7 +16,7 @@
                         <a class='cubeLink_a ' href='#'  target='_self' id='cubeLink_a1_cubeNav306' >
                             <div class='cubeLink_bg'></div>
                             <div class='cubeLink_curtain'></div>
-                            <div class='cubeLink_ico icon-cube iconfont icon-shanshui'></div>
+                            <div class='cubeLink_ico icon-cube iconfont '></div>
                             <div class='cubeLink_text g_link'>
                                 <div class='cubeLink_text_p '>走进新区<p class='cubeLink_subText_p'></p>
                                 </div>
@@ -27,7 +27,7 @@
                         <a class='cubeLink_a ' href='#'  target='_self' id='cubeLink_a1_cubeNav306' >
                             <div class='cubeLink_bg'></div>
                             <div class='cubeLink_curtain'></div>
-                            <div class='cubeLink_ico icon-cube iconfont icon-xinwenzhongxin'></div>
+                            <div class='cubeLink_ico icon-cube iconfont '></div>
                             <div class='cubeLink_text g_link'>
                                 <div class='cubeLink_text_p '>新闻中心<p class='cubeLink_subText_p'></p>
                                 </div>
@@ -39,7 +39,7 @@
                         <a class='cubeLink_a ' href='#'  target='_self' id='cubeLink_a1_cubeNav306' >
                             <div class='cubeLink_bg'></div>
                             <div class='cubeLink_curtain'></div>
-                            <div class='cubeLink_ico icon-cube iconfont icon-chanyejidi'></div>
+                            <div class='cubeLink_ico icon-cube iconfont '></div>
                             <div class='cubeLink_text g_link'>
                                 <div class='cubeLink_text_p '>产业发展<p class='cubeLink_subText_p'></p>
                                 </div>
@@ -50,7 +50,7 @@
                         <a class='cubeLink_a ' href='#'  target='_self' id='cubeLink_a1_cubeNav306' >
                             <div class='cubeLink_bg'></div>
                             <div class='cubeLink_curtain'></div>
-                            <div class='cubeLink_ico icon-cube iconfont icon-0lvsefazhan'></div>
+                            <div class='cubeLink_ico icon-cube iconfont '></div>
                             <div class='cubeLink_text g_link'>
                                 <div class='cubeLink_text_p '>绿色新区<p class='cubeLink_subText_p'></p>
                                 </div>
@@ -62,7 +62,7 @@
                         <a class='cubeLink_a ' href='#'  target='_self' id='cubeLink_a1_cubeNav306' >
                             <div class='cubeLink_bg'></div>
                             <div class='cubeLink_curtain'></div>
-                            <div class='cubeLink_ico icon-cube iconfont icon-zhengwu'></div>
+                            <div class='cubeLink_ico icon-cube iconfont '></div>
                             <div class='cubeLink_text g_link'>
                                 <div class='cubeLink_text_p '>政务发展<p class='cubeLink_subText_p'></p>
                                 </div>
@@ -74,9 +74,9 @@
                         <a class='cubeLink_a ' href='#'  target='_self' id='cubeLink_a1_cubeNav306' >
                             <div class='cubeLink_bg'></div>
                             <div class='cubeLink_curtain'></div>
-                            <div class='cubeLink_ico icon-cube iconfont icon-jigou'></div>
+                            <div class='cubeLink_ico icon-cube iconfont '></div>
                             <div class='cubeLink_text g_link'>
-                                <div class='cubeLink_text_p '>内设机构<p class='cubeLink_subText_p'></p>
+                                <div class='cubeLink_text_p '>联系我们<p class='cubeLink_subText_p'></p>
                                 </div>
                             </div>
                         </a>

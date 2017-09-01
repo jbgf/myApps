@@ -179,7 +179,7 @@
 .navbar{
      &.open{
         .navItem{
-            opacity: 1;
+            opacity:1;
             -webkit-transform: translateY(0);
             -ms-transform: translateY(0);
             transform: translateY(0);
@@ -196,6 +196,15 @@
         -webkit-transform: translateY(0);
         -ms-transform: translateY(0);
         transform: translateY(0);
+        $contentArr:"\e623" "\e60f" "\e70d" "\e82b" "\e604" "\e639";
+        @for $i from 1 through 6{
+            &.navItem_#{$i - 1}{
+              .icon-navItemIcon:before{
+                content:nth($contentArr,$i);
+              } 
+
+            } 
+        }
     }
 }
 

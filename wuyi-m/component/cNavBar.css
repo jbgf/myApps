@@ -190,6 +190,18 @@
   -webkit-transform: translateY(0);
   -ms-transform: translateY(0);
   transform: translateY(0); }
+  .navbar .navItem.navItem_0 .icon-navItemIcon:before {
+    content: ""; }
+  .navbar .navItem.navItem_1 .icon-navItemIcon:before {
+    content: ""; }
+  .navbar .navItem.navItem_2 .icon-navItemIcon:before {
+    content: ""; }
+  .navbar .navItem.navItem_3 .icon-navItemIcon:before {
+    content: ""; }
+  .navbar .navItem.navItem_4 .icon-navItemIcon:before {
+    content: ""; }
+  .navbar .navItem.navItem_5 .icon-navItemIcon:before {
+    content: ""; }
 
 .navbar.open .navItem a {
   visibility: visible; }
